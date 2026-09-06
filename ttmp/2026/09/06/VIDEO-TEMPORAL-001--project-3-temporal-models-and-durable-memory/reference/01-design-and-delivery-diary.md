@@ -24,8 +24,14 @@ RelatedFiles:
       Note: Train-only baseline and development selection (0d47851)
     - Path: repo://workbench/src/video_workbench/temporal/data.py
       Note: Sequence masks clocks and trailing windows
+    - Path: repo://workbench/src/video_workbench/temporal/duration.py
+      Note: Offline duration decoder
     - Path: repo://workbench/src/video_workbench/temporal/encode.py
       Note: Actual pooled extraction and source audit (0d47851)
+    - Path: repo://workbench/src/video_workbench/temporal/hmm.py
+      Note: Classical scored inference and prefix filter
+    - Path: repo://workbench/src/video_workbench/temporal/hysteresis.py
+      Note: Timestamp persistence and gap reset
     - Path: repo://workbench/src/video_workbench/temporal/linear.py
       Note: Independent frozen-feature ridge baseline
     - Path: repo://workbench/src/video_workbench/temporal/prepare.py
@@ -36,6 +42,7 @@ LastUpdated: 2026-09-06T13:13:51.534537-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -310,3 +317,58 @@ Start with `prepare.prepare`, `encode.encode`, and `benchmark.run`. Inspect the 
 - Actual cache: `output/temporal-v1/pooled-features`; measured baseline: `output/temporal-v1/linear-v1`.
 - Model: `output/models/qwen3-vl-embedding-2b-4bit`, existing pooled-image environment. The repaired native-video runtime remains separate.
 - Source horizon is offline availability; production latency must be added by streaming producers.
+
+## Step 6: Verify classical decoders and expose constrained-path fabrication
+
+Adapted the ticket's teaching HMM and HSMM functions into workbench modules, added normalized prefix filtering and timestamp-based categorical hysteresis, and checked the dynamic programs against exhaustive tiny path enumeration. The implementation explicitly distinguishes prefix-causal filtering from full-sequence smoothing and decoding.
+
+A saved numerical comparison demonstrates why the procedure graph must remain an ablation: its OPEN-WALK-CLOSE cycle inserts CLOSE into an omission fixture. Unconstrained scored decoders preserve the omission and all repeated OPEN events. These checks establish numerical behavior, not real-video temporal performance; T2 remains open for that comparison and fuller metrics.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 4)
+
+**Assistant interpretation:** Implement temporal models with evidence that they preserve procedural errors rather than enforcing a normal sequence.
+
+**Inferred user intent:** Build trustworthy temporal inputs for later rule evaluation and memory.
+
+**Commit (code):** `cf153c1` — Add classical temporal decoders and exhaustive oracle checks.
+
+### What I did
+- Read the complete `sources/procedural_video_labs/sequence_lab.py` in COSMOS-VIDEO-001.
+- Adapted log-space forward, smoothing, Viterbi and explicit-duration Viterbi, retaining finite/-infinity validation and completed-final-segment semantics.
+- Added normalized prefix filtering with impossible-prefix rejection.
+- Added timestamp hysteresis: startup persistence, delayed switches, cancellation on missing evidence, and restart after excessive sample gaps.
+- Added exhaustive HMM partition/marginal/best-path and HSMM segmentation checks plus filtering future-perturbation and irregular-time persistence tests.
+- Saved seven-method numerical prediction traces in `various/classical-oracle-v1.json` via `scripts/03-classical-oracle.py`.
+
+### Why
+The decoder's transition graph can manufacture a missing procedural step. An unconstrained observation stream must remain available for rules to compare against expected procedures. Explicit duration scores count samples and cannot be reported directly as seconds on irregular grids.
+
+### What worked
+- Nine temporal tests passed in 0.06 seconds across data and classical modules.
+- HMM partition sum, every smoothed marginal, and optimal path match all enumerated four-step two-state paths.
+- HSMM optimal segmentation and score match exhaustive five-step two-state sequences with maximum duration three.
+- Unconstrained linear/filter/smooth/Viterbi/HSMM classify every valid numerical fixture sample correctly; missing intervals remain -1 because inference restarts on valid runs.
+- Constrained omission accuracy is 15/16 but omission preservation fails: an invented CLOSE appears. The unconstrained omission remains 16/16 without CLOSE.
+- Hysteresis delays transitions: normal 14/20, omission 11/16, repetition 19/28, gap 12/16. It retains repeated OPEN runs but cannot be described as cost-free denoising.
+
+### What didn't work
+The staged whitespace check reported `workbench/src/video_workbench/temporal/duration.py:64: new blank line at EOF.` The initial local commit occurred despite that check; removed the trailing blank line, confirmed a clean staged check, and amended the just-created commit before recording its final hash. No numerical test failed. Printing remains paused under the earlier external-egress approval rejection.
+
+### What I learned
+High frame accuracy can coexist with a procedurally false event: only one changed sample was needed to fabricate CLOSE. The numerical unconstrained comparison uses flat transition/duration potentials as a controlled observation-preservation check; it does not test whether learned temporal priors improve video predictions.
+
+### What was tricky to build
+Missing evidence cannot silently become a model prediction. The numerical adapter splits valid runs and restarts each decoder, retaining -1 in gaps. The HSMM excludes same-state adjacent segments so a duration cap cannot be bypassed by repeatedly assigning the same state. Filtering normalizes each prefix independently and rejects impossible prefixes instead of producing NaNs.
+
+### What warrants a second pair of eyes
+The current emissions are ridge discriminative scores, not calibrated generative likelihoods. Whole-run Viterbi, smoothing, and HSMM are offline. HSMM has a completed-final-segment assumption. Production wrappers still need explicit availability metadata, source-time mapping of output segments, and per-method capability reporting.
+
+### What should be done in the future
+Finish T2 with development-selected real-feature comparisons, segment/edit/short-action metrics on numerical truth, and a reviewed figure of omission/repetition outputs. Keep exact-boundary metrics disabled on weak corpus labels. Continue causal learned heads and durable memory afterward.
+
+### Code review instructions
+Read `hmm.py`, `duration.py`, `hysteresis.py`, then `test_temporal_classical.py`. Run `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_temporal_classical.py workbench/tests/test_temporal_data.py -q`. Reproduce the numerical report with the ticket's `scripts/03-classical-oracle.py` under the same PYTHONPATH.
+
+### Technical details
+Numerical fixture seeds remain train 1 and evaluation 2; three observed event classes. Unconstrained transition and initial potentials are zero. The constrained matrix permits self-loops and the 0→1→2→0 cycle only. HSMM duration potentials are flat through 32 samples. Hysteresis persistence is 300000 microseconds with a 500000-microsecond maximum gap. Startup requires persistence; missing labels cancel history.

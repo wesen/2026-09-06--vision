@@ -20,3 +20,7 @@ Step 4: Implemented sequence timing/mask contracts and numerical omission/repeti
 ## 2026-09-06
 
 Step 5: Dense 792-window pooled feature extraction, native timestamp audit, weak-label linear baseline and reviewed timeline figure (commit 0d47851).
+
+## 2026-09-06
+
+Step 6: Classical decoder numerical checks and constrained omission failure captured (commit cf153c1); real-feature T2 comparison still pending.

@@ -1,0 +1,54 @@
+{
+  "source": "Successful printer CLI responses observed during resumed work",
+  "receipts": [
+    {
+      "phase": "plan",
+      "rendered_at": "2026-09-06T20:07:29Z",
+      "layout": "resume-plan.yaml",
+      "ok": true,
+      "printed": true
+    },
+    {
+      "phase": "P3 start",
+      "rendered_at": "2026-09-06T20:08:49Z",
+      "layout": "p3-resume-start.yaml",
+      "ok": true,
+      "printed": true
+    },
+    {
+      "phase": "P3 done",
+      "rendered_at": "2026-09-06T20:17:06Z",
+      "layout": "p3-resume-done.yaml",
+      "ok": true,
+      "printed": true
+    },
+    {
+      "phase": "P4 start",
+      "rendered_at": "2026-09-06T20:17:12Z",
+      "layout": "p4-start.yaml",
+      "ok": true,
+      "printed": true
+    },
+    {
+      "phase": "P4 done",
+      "rendered_at": "2026-09-06T20:26:31Z",
+      "layout": "p4-done.yaml",
+      "ok": true,
+      "printed": true
+    },
+    {
+      "phase": "P5 start",
+      "rendered_at": "2026-09-06T20:26:34Z",
+      "layout": "p5-start.yaml",
+      "ok": true,
+      "printed": true
+    },
+    {
+      "phase": "P5 done",
+      "rendered_at": "2026-09-06T20:45:28Z",
+      "layout": "p5-done.yaml",
+      "ok": true,
+      "printed": true
+    }
+  ]
+}

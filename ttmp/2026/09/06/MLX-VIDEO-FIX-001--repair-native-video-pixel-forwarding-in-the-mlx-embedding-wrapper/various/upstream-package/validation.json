@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-09-06T20:43:37.185715+00:00",
+  "base": "d5064772dcd1e31704604f93a873323505ae70d5",
+  "head": "6452614f6de04694d1e34fd13abaca11f6ffb994",
+  "replayed_tree_equal": true,
+  "replay_head": "291b83ea8d226c45ab8161510b4d42f188393262",
+  "patches": {
+    "0003-fix-qwen3-vl-embedding-isolate-embedding-position-st.patch": "d333dfd5132db031944ac0e9f893ef618ee0caaafa956f7cca345ce9cef17989",
+    "0001-test-qwen3-vl-embedding-reproduce-dropped-video-pixe.patch": "2b0e500ad32c0416f03f9911768dc06d3fe8f2004c1d1a39cbc6f3deab219aff",
+    "0002-fix-qwen3-vl-embedding-forward-native-video-pixels.patch": "5b2fca009bab8c08d289f10d3f3750bb8fbee5cd36e7f800e2d6f02eb3bb8efe"
+  },
+  "tests": {
+    "passed": 34,
+    "deselected": 426,
+    "subtests_passed": 4,
+    "seconds": 3.9
+  },
+  "fork_push": "Everything up-to-date",
+  "public_submission": "none; user requested fork push only"
+}

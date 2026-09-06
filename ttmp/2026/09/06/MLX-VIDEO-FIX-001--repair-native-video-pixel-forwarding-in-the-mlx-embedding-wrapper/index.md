@@ -1,7 +1,7 @@
 ---
 Title: Repair native video pixel forwarding in the MLX embedding wrapper
 Ticket: MLX-VIDEO-FIX-001
-Status: active
+Status: complete
 Topics:
     - video
     - embeddings
@@ -12,16 +12,17 @@ Owners: []
 RelatedFiles: []
 ExternalSources: []
 Summary: ""
-LastUpdated: 2026-09-06T14:00:19.916299-04:00
+LastUpdated: 2026-09-06T16:45:24.141013-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Repair native video forwarding in MLX embeddings
 
 The installed MLX-VLM embedding wrapper omits video pixels when calling its hidden-state helper, although the shared backbone has a separate video branch. This ticket specifies reproduction, a minimal repair, request-isolation tests, numerical validation, and integration under a new feature-space identity.
 
-**Current state (2026-09-06):** P0–P4 complete. Isolated fork repair is `6452614`; eight FP32 reference gates pass. Explicit workbench `native_video` uses official FP32 weights and pinned official preprocessing, with a separate feature/cache identity. Nine development clips passed encoding/reuse. Quantized native video remains unaccepted. P5 contribution packaging is next.
+**Current state (2026-09-06):** P0–P5 complete for the accepted official-FP32 native-video configuration. Repair fork head `6452614` is pushed; workbench integration is `127921a`; eight FP32 parity gates, 34 final upstream tests, and nine development clips passed. The detailed go-go-parc article is pushed at `02925f6`. No PR/issue was created. Quantized rollout and semantic-quality evaluation remain separate future research.
 
 - [Intern guide](design-doc/01-intern-guide-to-diagnosing-repairing-and-validating-native-mlx-video-embeddings.md)
 - [Phased implementation tasks](tasks.md)
@@ -42,3 +43,10 @@ Uploaded the reviewed 12-page guide to `/ai/2026/09/06/MLX-VIDEO-FIX-001/MLX-VID
 
 - [PDF validation and preview paths](various/pdf-validation.json)
 - [Upload receipt](various/remarkable-upload.json)
+
+## Final review and knowledge delivery
+
+- [Root cause and review handoff](reference/03-root-cause-and-review-handoff.md)
+- [Reference parity findings](reference/02-parity-findings.md)
+- [Portable fork review package](various/upstream-package/README.md)
+- [Vault push receipt](various/vault-push.json)

@@ -648,3 +648,96 @@ The first real smoke exactly matched the accepted video vector and matched mixed
 P4 completion evidence: final artifact/source-gated adapter matched video/single/odd references exactly and text within 2.98e-8. Final source identity is `2610572d944abb10b0366c2b00aaf87e701b6f6bb6656b022eca66dd230edecd`; nine fresh development clips and nine reused clips passed. Final fresh-process timing was slower (load 6.562 s, cold inference 2.578 s, warm 0.318–0.371 s) than the first run (load 5.435 s, cold 0.324 s, warm 0.207–0.209 s). Both reports are retained. The machine runs concurrent work; no causal attribution or isolated latency guarantee is made. Final MLX peak 9,539,472,908 bytes; RSS high-water 4,842,110,976 bytes.
 
 The dependency lock resolved mutually exclusive runtimes successfully. `uv pip check --python output/mlx-video-fix/.venv/bin/python` reports all 73 installed packages compatible. Sixteen focused tests passed in both the untouched pooled baseline interpreter and isolated native interpreter. Docmgr doctor passed. Workbench baseline source `embedding.py` is unchanged, and no baseline environment sync occurred.
+
+
+## Step 10: Package the repair and deliver the textbook-style vault report
+
+Prepared a portable three-patch upstream review package and replayed it onto an isolated worktree of the recorded upstream base. Its complete source tree matches the repaired head. The final targeted upstream selection passed 34 tests and four subtests. Pushed only the existing repair branch to the user's fork; no PR, issue, comment or review request was created.
+
+The user added a detailed technical blog report request and explicitly requested rebasing the vault first. Rebased the clean go-go-parc checkout onto `origin/main` at `d8c9cc6`, wrote a 6,805-word article with four Mermaid diagrams, two data-driven plots, a reviewed contact sheet and six JSON evidence files, validated it without Obsidian, then committed and pushed it as `02925f6`.
+
+### Prompt Context
+
+**User prompt (verbatim):** "don't create a PR. just push."
+
+**User prompt (verbatim):** "(to my fork). I need to review all this myself."
+
+**User prompt (verbatim):** "write a detailed project report for the obsidian vault as a deep dive technical analysis blog post using a textbook writing style (no analogies, see skill).      
+ Commit and push the bsidian vault when done (go-go-parc vault)."
+
+**User prompt (verbatim):** "no need to do obsidian validation with obsidian itself"
+
+**User prompt (verbatim):** "make sure to rebase the repo first though"
+
+**Assistant interpretation:** Complete the local review package; push the repair branch only to the fork; rebase the vault before adding a detailed teaching article, then commit and push the article/assets with static validation.
+
+**Inferred user intent:** Review the code personally while preserving a rigorous, self-contained explanation in the knowledge vault.
+
+**Commit (code):** `127921a` — `feat(workbench): add isolated validated FP32 native-video mode`
+
+**Commit (vault):** `02925f6b52e2db2568422276d93e6e0e7298625d` — `docs(mlx-video): explain pixel forwarding, reference parity and native integration`
+
+### What I did
+
+- Verified current upstream main still resolves to `d5064772dcd1e31704604f93a873323505ae70d5`; the fork branch resolves to `6452614f6de04694d1e34fd13abaca11f6ffb994`.
+- Ran the explicit fork push; Git reported `Everything up-to-date`.
+- Generated three mail patches and applied them with `git am` in `output/mlx-video-fix/package-check`; compared complete tree hashes.
+- Ran `PYTHONPATH=output/mlx-video-fix/package-check output/mlx-video-fix/.venv/bin/python -m pytest output/mlx-video-fix/package-check/mlx_vlm/tests/test_qwen3_vl_embedding_video.py output/mlx-video-fix/package-check/mlx_vlm/tests/test_models.py -k 'qwen3_vl or qwen3_embedding or video' -q`: 34 passed, 426 deselected, four subtests passed in 3.90 s.
+- Wrote the root-cause handoff, local review package, textbook report, and repeatable figure/copy/validation scripts 12–14.
+- Rebased go-go-parc before writing; staged only the report and nine intended assets; checked the remote again before push.
+- Verified the pushed vault HEAD equals origin/main and preserved source/copy/push receipts in the ticket.
+
+### Why
+
+- A portable synthetic patch package separates the upstream defect from corpus-specific experiments and application integration.
+- The article teaches the causal reasoning, contracts and limits rather than reducing the project to a change log.
+- Rebase and scoped staging preserve remote additions and unrelated Obsidian files.
+
+### What worked
+
+- Patch replay reproduced the repaired tree; final upstream tests passed.
+- Report checks passed: YAML properties, Markdown fences, Pandoc parsing, local figures/JSON, existing vault wikilinks, and source/destination hashes.
+- Plots derive directly from measured JSON; their legends were moved outside the data area and visually reviewed.
+- Vault push succeeded from `d8c9cc6` to `02925f6`; vault was clean afterward.
+
+### What didn't work
+
+- The Obsidian executable did not return CLI help; it launched the desktop process and emitted automatic-update logs. No report validation was performed with it. The user then explicitly removed Obsidian-app validation from scope; all remaining checks were static.
+- Initial Matplotlib startup emitted `Fontconfig error: No writable cache directories`; figures still rendered. Subsequent rendering set workspace-safe temporary Matplotlib/XDG caches.
+- The skill's Linux vault path did not apply to this Mac. Located the clean vault at `/Users/manuel/code/wesen/go-go-golems/go-go-parc` and used existing dated article conventions.
+
+### What I learned
+
+- The processor token intervention changes vector direction far more than the tested resize-kernel intervention; a textbook explanation benefits from showing those effects separately.
+- Exact wrapper parity, valid cache publication and semantic retrieval quality require separate claims and evidence.
+
+### What was tricky to build
+
+- Keep historical reports and the existing pooled-image article intact while adding a clearly dated account of the accepted native configuration.
+- Preserve timing variance and the diagnostic query/visible-action mismatch instead of turning them into an unsupported quality claim.
+
+### What warrants a second pair of eyes
+
+- The user should review the fork's two changed files and the application runtime/identity contract before proposing upstream changes.
+- Quantized native rollout and corpus semantic quality remain explicitly unaccepted follow-up research, not hidden completion criteria.
+
+### What should be done in the future
+
+- Human code review; any public contribution requires a separate user decision.
+- Future native-versus-pooled semantic evaluation and precision changes need their own frozen protocols and feature identities.
+
+### Code review instructions
+
+- Read `reference/03-root-cause-and-review-handoff.md` and `various/upstream-package/README.md`.
+- Read the vault article in `Projects/2026/09/06/ARTICLE - Native Video Embeddings in MLX - Repairing Pixel Forwarding and Establishing Reference Parity.md`.
+- Inspect `various/upstream-package/validation.json`, `vault-report-validation.json`, and `vault-push.json`.
+
+### Technical details
+
+- Report SHA-256: `39e0cd339e379a44658f5526e06eb5e657a20e03a0c4acaa080af593b7f2c484`.
+- Report assets are colocated under the vault date's `_assets` directory and mirrored in the ticket's `various/vault-report/` source archive.
+- P4 completion printed at 20:26:31Z; P5 start printed at 20:26:34Z. P5 final receipt follows after ticket completion.
+
+Final documentation check found `frontmatter delimiters '---' not found` in the new portable package README. Added proper docmgr metadata and reran the ticket doctor. The diary preserves trailing spaces in the user's exact quoted report request intentionally; unrelated whitespace warnings in concurrent tickets were left untouched.
+
+P5 completion slip printed successfully at `2026-09-06T20:45:28Z`, with a QR for pushed vault commit `02925f6`. Ticket closed as complete for the accepted official-FP32 scope. Final docmgr doctor has no errors; its sole warning is the conventional portable-package `README.md` lacking a numerical prefix.

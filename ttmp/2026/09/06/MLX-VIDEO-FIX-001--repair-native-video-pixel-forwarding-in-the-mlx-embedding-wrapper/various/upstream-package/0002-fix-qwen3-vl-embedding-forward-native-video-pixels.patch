@@ -1,0 +1,71 @@
+From d26804d289ecc3f9cc29a1f37690eea2e6faa4c6 Mon Sep 17 00:00:00 2001
+From: Manuel Odendahl <wesen@ruinwesen.com>
+Date: Sun, 6 Sep 2026 14:35:24 -0400
+Subject: [PATCH 2/3] fix(qwen3-vl-embedding): forward native video pixels
+
+---
+ .../models/qwen3_vl_embedding/qwen3_vl_embedding.py   | 11 +++++++++++
+ mlx_vlm/tests/test_qwen3_vl_embedding_video.py        | 11 +++++++++++
+ 2 files changed, 22 insertions(+)
+
+diff --git a/mlx_vlm/models/qwen3_vl_embedding/qwen3_vl_embedding.py b/mlx_vlm/models/qwen3_vl_embedding/qwen3_vl_embedding.py
+index bcd93b5..c94ee2b 100644
+--- a/mlx_vlm/models/qwen3_vl_embedding/qwen3_vl_embedding.py
++++ b/mlx_vlm/models/qwen3_vl_embedding/qwen3_vl_embedding.py
+@@ -34,10 +34,19 @@ class Model(Qwen3VLModel):
+         pixel_values: Optional[mx.array] = None,
+         image_grid_thw: Optional[mx.array] = None,
+         video_grid_thw: Optional[mx.array] = None,
++        pixel_values_videos: Optional[mx.array] = None,
+     ) -> mx.array:
++        for name, pixels, grid in (
++            ("image", pixel_values, image_grid_thw),
++            ("video", pixel_values_videos, video_grid_thw),
++        ):
++            if (pixels is None) != (grid is None):
++                raise ValueError(f"{name} pixels and grid must be supplied together")
++
+         features = self.get_input_embeddings(
+             input_ids=input_ids,
+             pixel_values=pixel_values,
++            pixel_values_videos=pixel_values_videos,
+             image_grid_thw=image_grid_thw,
+             video_grid_thw=video_grid_thw,
+             mask=attention_mask,
+@@ -97,12 +106,14 @@ class Model(Qwen3VLModel):
+         pixel_values: Optional[mx.array] = None,
+         image_grid_thw: Optional[mx.array] = None,
+         video_grid_thw: Optional[mx.array] = None,
++        pixel_values_videos: Optional[mx.array] = None,
+         **kwargs,
+     ) -> EmbeddingOutput:
+         hidden_states = self._last_hidden_state(
+             input_ids,
+             attention_mask=attention_mask,
+             pixel_values=pixel_values,
++            pixel_values_videos=pixel_values_videos,
+             image_grid_thw=image_grid_thw,
+             video_grid_thw=video_grid_thw,
+         )
+diff --git a/mlx_vlm/tests/test_qwen3_vl_embedding_video.py b/mlx_vlm/tests/test_qwen3_vl_embedding_video.py
+index 779bc45..f417035 100644
+--- a/mlx_vlm/tests/test_qwen3_vl_embedding_video.py
++++ b/mlx_vlm/tests/test_qwen3_vl_embedding_video.py
+@@ -69,3 +69,14 @@ def test_hidden_state_forwards_video_pixels_and_preserves_visual_features():
+     assert decoder.call_args.kwargs["visual_pos_masks"] is features.visual_pos_masks
+     assert decoder.call_args.kwargs["deepstack_visual_embeds"] is features.deepstack_visual_embeds
+     assert decoder.call_args.kwargs["cache"] is None
++
++
++@pytest.mark.parametrize("kwargs", [
++    {"pixel_values_videos": mx.ones((2, 12))},
++    {"video_grid_thw": mx.array([[1, 2, 2]])},
++    {"pixel_values": mx.ones((2, 12))},
++    {"image_grid_thw": mx.array([[1, 2, 2]])},
++])
++def test_incomplete_visual_input_is_rejected(kwargs):
++    with pytest.raises(ValueError, match="pixels and grid must be supplied together"):
++        Model._last_hidden_state(SimpleNamespace(), mx.array([[1, 2]]), **kwargs)
+-- 
+2.55.0
+

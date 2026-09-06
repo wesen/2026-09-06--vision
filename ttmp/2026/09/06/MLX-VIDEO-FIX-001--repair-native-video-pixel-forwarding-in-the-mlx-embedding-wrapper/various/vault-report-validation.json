@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-09-06T20:46:41.667297+00:00",
+  "report": "/Users/manuel/code/wesen/go-go-golems/go-go-parc/Projects/2026/09/06/ARTICLE - Native Video Embeddings in MLX - Repairing Pixel Forwarding and Establishing Reference Parity.md",
+  "sha256": "39e0cd339e379a44658f5526e06eb5e657a20e03a0c4acaa080af593b7f2c484",
+  "words": 6805,
+  "mermaid_diagrams": 4,
+  "figures": 3,
+  "vault_links": [
+    "ARTICLE - Timestamped Video Search - From Verified Pixels to Frozen Evaluation",
+    "ARTICLE - VirtualHome on Apple Silicon - Simulator Setup and Audited Video Corpus",
+    "ARTICLE - VirtualHome Corpus Expansion - Scenario Diversity Provenance and Visual Labels"
+  ],
+  "assets": [
+    {
+      "path": "_assets/mlx-video-fix-preprocessing.png",
+      "sha256": "876566731216d14a9d8360f99b1015014d0ad21912801e11efd3b7cfdf481390",
+      "bytes": 61268
+    },
+    {
+      "path": "_assets/mlx-video-fix-fixture-contact.jpg",
+      "sha256": "48ad7260cc811526893f6aebf6290118987a760ab29e6b073ae8749a13881331",
+      "bytes": 84638
+    },
+    {
+      "path": "_assets/mlx-video-fix-precision.png",
+      "sha256": "f4b48b3439f7dddd66662205835fcbc98cc1bce56994cf027dc5c7ecbe8c1497",
+      "bytes": 62292
+    },
+    {
+      "path": "_assets/mlx-video-fix-audit-policy.json",
+      "sha256": "e5d5b205759ca06b946765a2cb6905a1ef32579ab9114a171a7ac595474a8793",
+      "bytes": 2062
+    },
+    {
+      "path": "_assets/mlx-video-fix-audit-comparison.json",
+      "sha256": "843dc0a1be075a460ccd4ced3bb184852f86b209af8fde5ce417b4ad18e28c88",
+      "bytes": 50287
+    },
+    {
+      "path": "_assets/mlx-video-fix-audit-gates.json",
+      "sha256": "c199099a05cd55684246a6d3bb5c3fe1070097af11262d8d8d9fdf31740ada8a",
+      "bytes": 4912
+    },
+    {
+      "path": "_assets/mlx-video-fix-audit-provenance.json",
+      "sha256": "3a617063b9ee314d352281181937fa814bfa2928708ada739705e6bc8e617819",
+      "bytes": 2839
+    },
+    {
+      "path": "_assets/mlx-video-fix-native-integration.json",
+      "sha256": "9b26b6717647de947edf4524435c3c43a4de1926b999f89c1c36a6a81015c79b",
+      "bytes": 3440
+    },
+    {
+      "path": "_assets/mlx-video-fix-native-integration-first.json",
+      "sha256": "687ea32dd25521d8744312db4008b81a2052af3138e0f9dae4a56db227be79c4",
+      "bytes": 3442
+    }
+  ],
+  "validation": "Frontmatter, fences, local assets, JSON parsing, wikilink resolution, direct technical style scan; plots visually inspected. No Obsidian validation requested."
+}

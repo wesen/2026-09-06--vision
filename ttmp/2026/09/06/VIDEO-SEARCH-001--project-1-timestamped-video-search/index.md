@@ -49,3 +49,10 @@ Selected configuration: 10-second windows at 1 FPS. Held-out Success@5: 75%; ran
 ## Vault deep dive
 
 Published a 6,247-word textbook-style technical article with three Mermaid diagrams and four screenshots in go-go-parc. Vault commit `8e8a874` is pushed to main. [Delivery validation](various/vault-article-validation.json).
+
+
+## Native-video repair handoff — 2026-09-06
+
+MLX-VIDEO-FIX-001 completed the wrapper repair and explicit FP32 native mode. The repair is pushed to `wesen/mlx-vlm` at `6452614`; workbench integration is commit `127921a`. Eight official-reference FP32 cases and a nine-clip development build/reuse passed. Native uses its own runtime, processor/PTS contract and clip-cache identity. The existing pooled-image baseline and environment remain available; quantized native rollout and semantic superiority are not accepted claims.
+
+See [the root-cause and review handoff](../MLX-VIDEO-FIX-001--repair-native-video-pixel-forwarding-in-the-mlx-embedding-wrapper/reference/03-root-cause-and-review-handoff.md). The 6,805-word textbook report is committed and pushed in go-go-parc at `02925f6`. No public PR or issue was created; the user is reviewing the fork personally.

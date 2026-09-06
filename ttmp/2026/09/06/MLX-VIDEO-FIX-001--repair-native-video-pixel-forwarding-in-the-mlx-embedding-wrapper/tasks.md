@@ -55,7 +55,9 @@
 
 ## P5 Handoff
 
-- [ ] Write root-cause report with reproduction, patch, evidence, and limits.
-- [ ] Prepare minimal upstream issue/PR package for separate submission.
-- [ ] Relate implementation files and commits; update embedding/search handoff.
-- [ ] Close only when native-video correctness and integration gates pass.
+- [x] Write root-cause report with reproduction, patch, evidence, and limits.
+- [x] Prepare portable patches and local review package; push to personal fork only (no PR/issue, per user).
+- [x] Relate implementation files and commits; update embedding/search handoff.
+- [x] Close only when native-video correctness and integration gates pass.
+
+- [x] Rebase go-go-parc, write detailed textbook-style article without analogies, validate statically, commit and push vault.

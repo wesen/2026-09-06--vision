@@ -1,0 +1,10 @@
+{
+  "verified_at": "2026-09-06T20:43:37.219329+00:00",
+  "vault": "/Users/manuel/code/wesen/go-go-golems/go-go-parc",
+  "commit": "02925f6b52e2db2568422276d93e6e0e7298625d",
+  "origin_main": "02925f6b52e2db2568422276d93e6e0e7298625d",
+  "push_verified": true,
+  "rebased_before_writing": true,
+  "rebase_base": "d8c9cc6",
+  "validation": "Static Markdown/links/JSON and visually reviewed plots; Obsidian app not used for validation."
+}

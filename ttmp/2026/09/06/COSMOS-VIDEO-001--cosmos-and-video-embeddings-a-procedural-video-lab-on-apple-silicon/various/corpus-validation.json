@@ -1,0 +1,42 @@
+{
+  "deep_validation": {
+    "name": "virtualhome-household-v1",
+    "planned": 24,
+    "complete": 24,
+    "failed": 0,
+    "frames": 4261,
+    "seconds": 426.09999999999997,
+    "by_split": {
+      "train": 12,
+      "development": 6,
+      "test": 6
+    },
+    "by_family": {
+      "fridge": 12,
+      "microwave": 12
+    },
+    "by_variant": {
+      "closed_before_leaving": 8,
+      "closure_omitted": 8,
+      "reopened_before_leaving": 8
+    },
+    "failure_ids": [],
+    "within_scene_split_only": true,
+    "precise_boundary_supervision_allowed": false,
+    "dense_visual_state_supervision_allowed": false
+  },
+  "mp4_decode": {
+    "decoded_videos": 24,
+    "failures": 0
+  },
+  "resume": {
+    "complete": 24,
+    "new_attempts": 0,
+    "manifest_hashes_and_mtimes_unchanged": true,
+    "no_render_events": true
+  },
+  "unit_tests": {
+    "passed": 10,
+    "command": "PYTHONPATH=src output/virtualhome-install/.venv/bin/python -m unittest discover -s tests -v"
+  }
+}

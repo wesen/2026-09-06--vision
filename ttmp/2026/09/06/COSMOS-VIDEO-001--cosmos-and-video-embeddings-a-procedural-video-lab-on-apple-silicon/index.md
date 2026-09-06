@@ -21,8 +21,10 @@ WhenToUse: ""
 
 Explore how video embeddings, temporal models, and Cosmos verification can support procedural understanding on this M1 Max / 64 GB Mac.
 
-Source import and initial analysis are complete. Implementation and runtime benchmarks remain open.
+Source import, analysis, intern guide, and a validated 24-episode VirtualHome household corpus are complete. Embedding/model implementation and benchmarks remain open.
 
+- [Household corpus design and generation report](design-doc/03-virtualhome-household-corpus-design-and-generation-report.md)
+- [Corpus implementation diary](reference/02-virtualhome-corpus-implementation-diary.md)
 - [Intern implementation guide](design-doc/02-intern-guide-to-the-procedural-video-workbench.md)
 - [Source analysis and project roadmap](design-doc/01-source-analysis-and-mac-project-roadmap.md)
 - [Original textbook](sources/video_understanding_for_procedural_work.md)

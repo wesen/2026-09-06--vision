@@ -20,12 +20,17 @@ RelatedFiles:
       Note: Rendering and integrity checks
     - Path: repo://tests/test_virtualhome_corpus.py
       Note: Ten contract tests
+    - Path: repo://ttmp/2026/09/06/COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-procedural-video-lab-on-apple-silicon/scripts/10-build-corpus-gallery.py
+      Note: Local visual inspection gallery
+    - Path: repo://ttmp/2026/09/06/COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-procedural-video-lab-on-apple-silicon/scripts/11-audit-corpus.py
+      Note: Independent plan and metadata audit
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T12:33:35.392573-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 # Diary
@@ -173,6 +178,8 @@ Started the full 24-episode run after printing C2 completion and C3 start slips.
 
 **Inferred user intent:** Have a usable corpus on this Mac, with evidence beyond successful simulator commands.
 
+**Commit (code):** `b63965f` — `feat(corpus): add inspection gallery and record completed renders`
+
 ### What I did
 - Started `PYTHONPATH=src output/virtualhome-install/.venv/bin/python -m virtualhome_corpus generate --port 18081 --output output/virtualhome-corpus/home-v1`.
 - Added `scripts/10-build-corpus-gallery.py` for local video playback and grouped contact-sheet review.
@@ -210,3 +217,66 @@ Started the full 24-episode run after printing C2 completion and C3 start slips.
 ### Completed render and visual inspection
 
 All 24 episodes completed on the first attempt with zero failures: 4,261 RGB/graph frame pairs, 426.1 seconds of video, 12 training / 6 development / 6 test episodes. Inspected contact sheets for all four groups (six episodes each); no gross camera failures were observed. Sampled final door geometry agrees with intended variants. This is sampled visual inspection, not exhaustive playback or a dense-label certification. Review notes and sheet hashes are in `various/corpus-visual-review.json`.
+
+## Step 4: Validate the complete corpus and publish its local inventory
+
+Validated all generated assets and audited their metadata against the configured plan. All 24 videos decode successfully, all 4,261 source images and graph exports pass deep validation, and an independent audit confirms input/label separation, provenance, endpoint truth, and exported state rows. A resume run skipped all completed episodes without changing manifest hashes or modification times and created no new attempts.
+
+The final corpus is a small within-scene dataset for coarse action retrieval and pipeline development. It contains eight normal endpoints and sixteen violations. It is not a calibrated dense-state or exact-boundary benchmark. The detailed design explains these limitations and gives downstream feature-loading pseudocode.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1)
+
+**Assistant interpretation:** Finish verification, preserve reproducible evidence, and make the result easy to use.
+
+**Inferred user intent:** Receive a committed implementation and trustworthy local training assets with an honest account of their limits.
+
+### What I did
+- Ran `PYTHONPATH=src output/virtualhome-install/.venv/bin/python -m virtualhome_corpus validate --output output/virtualhome-corpus/home-v1 --deep`: passed for all 24 episodes.
+- Decoded every MP4 with `ffmpeg -v error -xerror -i VIDEO -f null -`: all 24 passed.
+- Ran the ticket's `scripts/11-audit-corpus.py` with `PYTHONPATH=src` and the installed venv Python: passed.
+- Repeated generation with the same configuration, output, and port: no render events, unchanged 24 manifest hashes/mtimes, exactly 24 attempt directories.
+- Stored compact inventory, validation results, runtime versions, visual-review notes, and source hashes in ticket `various/`.
+- Verified the owned simulator PID 73855 command line and sent SIGTERM after all checks completed.
+
+### Why
+- Per-episode success alone cannot catch missing planned cases, corrupted encoded media, or metadata/index inconsistencies.
+- Keeping raw output outside Git avoids a 2.5 GB repository addition while the committed inventory identifies every video by hash.
+
+### What worked
+- 24/24 episodes, zero failures, 4,261 frames, 426.1 seconds; splits 12 train / 6 development / 6 test.
+- Total per-episode render/export time was 600.735 seconds; MP4s total 7,661,124 bytes.
+- Oracle endpoint distribution: 8 PASS / 16 VIOLATION.
+- All four grouped contact sheets were inspected; sampled endpoints visually agree with variants.
+- Ten contract tests passed at C2; unchanged generator code was exercised by the full integration and resume runs.
+
+### What didn't work
+- Sandboxed `ps -p 73855 -o pid=,command=` returned `zsh:14: operation not permitted: ps`. Repeated with approved escalation, confirmed the exact owned app/port/log command line, then stopped only that PID.
+- No full-corpus generation, deep-validation, decode, metadata-audit, or resume failure occurred.
+
+### What I learned
+- Runtime rendering is approximately 1.41 wall seconds per recorded video second for this configuration; this is a run observation, not a general performance claim.
+- Final-state labels are straightforward to verify against world graphs, but their visual/timing semantics require separate calibration.
+
+### What was tricky to build
+- Preserving index consistency and proving resume without rerendering required snapshots of both manifest content and modification times, plus an attempt-directory count.
+- The corpus is intentionally not deterministic across fresh runs: group initial placement and complete pose are not fully seeded by the action seed. Actual positions and provenance are saved.
+
+### What warrants a second pair of eyes
+- Dataset shortcuts from action count, duration, actor overlap, and a single apartment/character.
+- Any downstream attempt to treat simulator graph states or guarded action interiors as pixel-perfect labels.
+
+### What should be done in the future
+- Use the corpus for the first video-embedding/retrieval baseline, keeping evaluator labels out of inference.
+- Calibrate action/graph/RGB alignment and add independent homes before making temporal-generalization claims.
+
+### Code review instructions
+- Read the corpus design/report, then the corpus playbook, `core.py`, and `runner.py`.
+- Open `output/virtualhome-corpus/home-v1/gallery.html` to inspect individual recordings.
+- Compare `various/corpus-result-inventory.json`, `corpus-validation.json`, and `corpus-visual-review.json` against local outputs.
+
+### Technical details
+- Corpus root: `output/virtualhome-corpus/home-v1`.
+- Model inputs: `inputs.jsonl`; evaluator labels: `labels.jsonl`; weak query intervals: `retrieval-queries.json`.
+- Implementation commit `c6dc24a`; rendering/gallery milestone `b63965f`; initial simulator probe milestone `d005b3f`.
+- Printed C3 DONE at 17:02:19 UTC and C4 START at 17:02:36 UTC; service responses reported `printed: true`.

@@ -33,3 +33,12 @@ C2: implemented and smoke-tested grouped household corpus generation, immutable 
 
 - /Users/manuel/code/wesen/2026-09-06--vision/src/virtualhome_corpus/runner.py — Corpus generation and validation
 
+
+## 2026-09-06
+
+C3/C4: rendered and visually sampled all 24 household episodes (4261 frames, 426.1 seconds); deep validation, full MP4 decode, metadata audit, and no-op resume passed. Gallery/tools milestone b63965f; final evidence recorded in ticket.
+
+### Related Files
+
+- /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-procedural-video-lab-on-apple-silicon/various/corpus-result-inventory.json — Complete video hashes and counts
+

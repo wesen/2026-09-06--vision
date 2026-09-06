@@ -33,4 +33,4 @@
 - [x] C1: verify installed simulator, household actions, and fixed camera.
 - [x] C2: implement resumable generator, weak annotation contracts, tests, and smoke recording.
 - [x] C3: render 24 episodes and inspect group contact sheets.
-- [ ] C4: deep-validate assets, audit resume, document results, and commit.
+- [x] C4: deep-validate assets, audit resume, document results, and commit.

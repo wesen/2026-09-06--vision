@@ -1,0 +1,595 @@
+{
+  "checks": [
+    "plan membership",
+    "provenance",
+    "model-input separation",
+    "label consistency",
+    "endpoint verdicts",
+    "world-frame alignment by export index"
+  ],
+  "config_hash": "da29d6e35a5b2c716c1a7e868b56a1cc9b349fd3ea3ed8fe4cff09ebdf4d6360",
+  "episodes": [
+    {
+      "elapsed_s": 23.967,
+      "episode_id": "ep-34efcd7e3f0dcbb3",
+      "family": "fridge",
+      "frame_count": 169,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "CLOSED"
+        ],
+        "verdict": "PASS"
+      },
+      "split": "train",
+      "split_group": "g01",
+      "variant": "closed_before_leaving",
+      "video": "episodes/ep-34efcd7e3f0dcbb3/attempt-0001/video.mp4",
+      "video_sha256": "521a357c859bfaa40bc748524792850b7e8a23c65e73160b1555ca9d3e8af3f5"
+    },
+    {
+      "elapsed_s": 20.444,
+      "episode_id": "ep-6f34785036ca14be",
+      "family": "fridge",
+      "frame_count": 143,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "train",
+      "split_group": "g01",
+      "variant": "closure_omitted",
+      "video": "episodes/ep-6f34785036ca14be/attempt-0001/video.mp4",
+      "video_sha256": "aed4c902cdf0cf7efa59b8de95f6b4a8c52b4af096399e4db581e2d34b3651b0"
+    },
+    {
+      "elapsed_s": 34.86,
+      "episode_id": "ep-ccb9e4016de3b2ca",
+      "family": "fridge",
+      "frame_count": 247,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "train",
+      "split_group": "g01",
+      "variant": "reopened_before_leaving",
+      "video": "episodes/ep-ccb9e4016de3b2ca/attempt-0001/video.mp4",
+      "video_sha256": "b0fa51d0d2fae2aabdbaa954bd98e699ced87b45e1789b4beba673ffc5b14047"
+    },
+    {
+      "elapsed_s": 25.692,
+      "episode_id": "ep-26448333df96e9bc",
+      "family": "microwave",
+      "frame_count": 181,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "CLOSED",
+          "OFF"
+        ],
+        "verdict": "PASS"
+      },
+      "split": "train",
+      "split_group": "g01",
+      "variant": "closed_before_leaving",
+      "video": "episodes/ep-26448333df96e9bc/attempt-0001/video.mp4",
+      "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02"
+    },
+    {
+      "elapsed_s": 18.567,
+      "episode_id": "ep-2a420ff714f0a8e5",
+      "family": "microwave",
+      "frame_count": 129,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OFF",
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "train",
+      "split_group": "g01",
+      "variant": "closure_omitted",
+      "video": "episodes/ep-2a420ff714f0a8e5/attempt-0001/video.mp4",
+      "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96"
+    },
+    {
+      "elapsed_s": 28.328,
+      "episode_id": "ep-1779083be6e7d3b2",
+      "family": "microwave",
+      "frame_count": 201,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OFF",
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "train",
+      "split_group": "g01",
+      "variant": "reopened_before_leaving",
+      "video": "episodes/ep-1779083be6e7d3b2/attempt-0001/video.mp4",
+      "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9"
+    },
+    {
+      "elapsed_s": 26.719,
+      "episode_id": "ep-365c6e6c4ad14360",
+      "family": "fridge",
+      "frame_count": 190,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "CLOSED"
+        ],
+        "verdict": "PASS"
+      },
+      "split": "train",
+      "split_group": "g02",
+      "variant": "closed_before_leaving",
+      "video": "episodes/ep-365c6e6c4ad14360/attempt-0001/video.mp4",
+      "video_sha256": "a489dd365f783861e0b97d2413422f66073ca268a5e4f547009d71bf30ab8044"
+    },
+    {
+      "elapsed_s": 16.503,
+      "episode_id": "ep-b493c4709a26f92e",
+      "family": "fridge",
+      "frame_count": 115,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "train",
+      "split_group": "g02",
+      "variant": "closure_omitted",
+      "video": "episodes/ep-b493c4709a26f92e/attempt-0001/video.mp4",
+      "video_sha256": "282dff69aa2c54e4d34609738e8109f908bc534a40038c16d118e84c6667b1e5"
+    },
+    {
+      "elapsed_s": 27.843,
+      "episode_id": "ep-5d33c14367639439",
+      "family": "fridge",
+      "frame_count": 199,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "train",
+      "split_group": "g02",
+      "variant": "reopened_before_leaving",
+      "video": "episodes/ep-5d33c14367639439/attempt-0001/video.mp4",
+      "video_sha256": "de11e81827c0c973f8c3c502e7720200bc6e53afcd78e792b402295f9c4b4e36"
+    },
+    {
+      "elapsed_s": 25.223,
+      "episode_id": "ep-33fbcce3c63f4265",
+      "family": "microwave",
+      "frame_count": 179,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "CLOSED",
+          "OFF"
+        ],
+        "verdict": "PASS"
+      },
+      "split": "train",
+      "split_group": "g02",
+      "variant": "closed_before_leaving",
+      "video": "episodes/ep-33fbcce3c63f4265/attempt-0001/video.mp4",
+      "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc"
+    },
+    {
+      "elapsed_s": 19.584,
+      "episode_id": "ep-3fc2ecf3a1ed6d99",
+      "family": "microwave",
+      "frame_count": 138,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OFF",
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "train",
+      "split_group": "g02",
+      "variant": "closure_omitted",
+      "video": "episodes/ep-3fc2ecf3a1ed6d99/attempt-0001/video.mp4",
+      "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5"
+    },
+    {
+      "elapsed_s": 32.896,
+      "episode_id": "ep-b3f1b6687fc723ca",
+      "family": "microwave",
+      "frame_count": 236,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OFF",
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "train",
+      "split_group": "g02",
+      "variant": "reopened_before_leaving",
+      "video": "episodes/ep-b3f1b6687fc723ca/attempt-0001/video.mp4",
+      "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06"
+    },
+    {
+      "elapsed_s": 25.261,
+      "episode_id": "ep-368d6331fc690a2c",
+      "family": "fridge",
+      "frame_count": 180,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "CLOSED"
+        ],
+        "verdict": "PASS"
+      },
+      "split": "development",
+      "split_group": "g03",
+      "variant": "closed_before_leaving",
+      "video": "episodes/ep-368d6331fc690a2c/attempt-0001/video.mp4",
+      "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+    },
+    {
+      "elapsed_s": 17.97,
+      "episode_id": "ep-1ba09e07399f4a30",
+      "family": "fridge",
+      "frame_count": 126,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "development",
+      "split_group": "g03",
+      "variant": "closure_omitted",
+      "video": "episodes/ep-1ba09e07399f4a30/attempt-0001/video.mp4",
+      "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+    },
+    {
+      "elapsed_s": 29.69,
+      "episode_id": "ep-e9c9ef6801285914",
+      "family": "fridge",
+      "frame_count": 213,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "development",
+      "split_group": "g03",
+      "variant": "reopened_before_leaving",
+      "video": "episodes/ep-e9c9ef6801285914/attempt-0001/video.mp4",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    },
+    {
+      "elapsed_s": 24.651,
+      "episode_id": "ep-c2ad5c5f7b67a9a8",
+      "family": "microwave",
+      "frame_count": 175,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "CLOSED",
+          "OFF"
+        ],
+        "verdict": "PASS"
+      },
+      "split": "development",
+      "split_group": "g03",
+      "variant": "closed_before_leaving",
+      "video": "episodes/ep-c2ad5c5f7b67a9a8/attempt-0001/video.mp4",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+    },
+    {
+      "elapsed_s": 18.132,
+      "episode_id": "ep-97a1a39b2e9490b6",
+      "family": "microwave",
+      "frame_count": 128,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OFF",
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "development",
+      "split_group": "g03",
+      "variant": "closure_omitted",
+      "video": "episodes/ep-97a1a39b2e9490b6/attempt-0001/video.mp4",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+    },
+    {
+      "elapsed_s": 31.837,
+      "episode_id": "ep-327429c08d46e616",
+      "family": "microwave",
+      "frame_count": 229,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OFF",
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "development",
+      "split_group": "g03",
+      "variant": "reopened_before_leaving",
+      "video": "episodes/ep-327429c08d46e616/attempt-0001/video.mp4",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "elapsed_s": 26.18,
+      "episode_id": "ep-205a311600c89bf7",
+      "family": "fridge",
+      "frame_count": 186,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "CLOSED"
+        ],
+        "verdict": "PASS"
+      },
+      "split": "test",
+      "split_group": "g04",
+      "variant": "closed_before_leaving",
+      "video": "episodes/ep-205a311600c89bf7/attempt-0001/video.mp4",
+      "video_sha256": "b71ff87f8ae2005bd86d560af40f9850abbe367def574d9d178dce1ca7ebb081"
+    },
+    {
+      "elapsed_s": 20.18,
+      "episode_id": "ep-7d3106fb1cac9776",
+      "family": "fridge",
+      "frame_count": 142,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "test",
+      "split_group": "g04",
+      "variant": "closure_omitted",
+      "video": "episodes/ep-7d3106fb1cac9776/attempt-0001/video.mp4",
+      "video_sha256": "e9f68c403ce40bbe5e1ae609e48587e6f3a7675570cddc55fbcef57690ad41c6"
+    },
+    {
+      "elapsed_s": 33.588,
+      "episode_id": "ep-d9e2a612fb2342e2",
+      "family": "fridge",
+      "frame_count": 240,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "test",
+      "split_group": "g04",
+      "variant": "reopened_before_leaving",
+      "video": "episodes/ep-d9e2a612fb2342e2/attempt-0001/video.mp4",
+      "video_sha256": "c446e7c01c1f6bee451675bffc06b4c2c91aa7e35a1baccd03f66a984f28d304"
+    },
+    {
+      "elapsed_s": 23.975,
+      "episode_id": "ep-e614ca27a15019cd",
+      "family": "microwave",
+      "frame_count": 169,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "CLOSED",
+          "OFF"
+        ],
+        "verdict": "PASS"
+      },
+      "split": "test",
+      "split_group": "g04",
+      "variant": "closed_before_leaving",
+      "video": "episodes/ep-e614ca27a15019cd/attempt-0001/video.mp4",
+      "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce"
+    },
+    {
+      "elapsed_s": 19.386,
+      "episode_id": "ep-c1c313b64f579794",
+      "family": "microwave",
+      "frame_count": 137,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OFF",
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "test",
+      "split_group": "g04",
+      "variant": "closure_omitted",
+      "video": "episodes/ep-c1c313b64f579794/attempt-0001/video.mp4",
+      "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42"
+    },
+    {
+      "elapsed_s": 29.259,
+      "episode_id": "ep-37909e041bc956c8",
+      "family": "microwave",
+      "frame_count": 209,
+      "rule_truth": {
+        "destination_reached": true,
+        "exact_departure_time_verified": false,
+        "pixel_observability": "unverified",
+        "rule": "close_target_before_departure",
+        "scope": "episode_endpoint_world_truth",
+        "target_states": [
+          "OFF",
+          "OPEN"
+        ],
+        "verdict": "VIOLATION"
+      },
+      "split": "test",
+      "split_group": "g04",
+      "variant": "reopened_before_leaving",
+      "video": "episodes/ep-37909e041bc956c8/attempt-0001/video.mp4",
+      "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983"
+    }
+  ],
+  "index_hashes": {
+    "inputs.jsonl": "8e68e3ba40da1f5fefdc643ca027fda3983afad5f0616338429fcc6ac7670d25",
+    "labels.jsonl": "d6eb9fa03d59833394b6c0483c865ad2bbafcabe85210c39354ea08fbbd83742",
+    "retrieval-queries.json": "958f93c343e46253b8eb12043e7260f48e57e61c3814f5341030b4191d24031a"
+  },
+  "producer": {
+    "core_sha256": "5922327d94232aece9b163b05346ccb90e42448ae3016a90770c6a91daa22a39",
+    "runner_sha256": "92c57747741273d360b0a2a4bfd35ab6723707af23ef38c6ed2b292df2aaab0e"
+  },
+  "render_seconds": 600.735,
+  "root": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/home-v1",
+  "summary": {
+    "by_family": {
+      "fridge": 12,
+      "microwave": 12
+    },
+    "by_split": {
+      "development": 6,
+      "test": 6,
+      "train": 12
+    },
+    "by_variant": {
+      "closed_before_leaving": 8,
+      "closure_omitted": 8,
+      "reopened_before_leaving": 8
+    },
+    "complete": 24,
+    "dense_visual_state_supervision_allowed": false,
+    "failed": 0,
+    "failure_ids": [],
+    "frames": 4261,
+    "name": "virtualhome-household-v1",
+    "planned": 24,
+    "precise_boundary_supervision_allowed": false,
+    "seconds": 426.09999999999997,
+    "within_scene_split_only": true
+  },
+  "verdict_counts": {
+    "PASS": 8,
+    "VIOLATION": 16
+  },
+  "video_bytes": 7661124
+}

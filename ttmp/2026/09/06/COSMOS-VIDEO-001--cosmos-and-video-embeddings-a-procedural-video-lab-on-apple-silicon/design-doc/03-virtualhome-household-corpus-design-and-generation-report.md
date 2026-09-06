@@ -30,7 +30,7 @@ WhenToUse: ""
 
 # VirtualHome household corpus design and generation report
 
-The corpus generator turns household action programs into RGB videos, raw simulator exports, and explicitly qualified training labels. The initial configuration produces 24 episodes in one apartment: fridge and microwave routines, each with normal closure, omitted closure, and reopening before departure. Four initialization/camera groups provide 12 training, six development, and six test episodes. Full generation and final validation are pending at this implementation milestone.
+The corpus generator turns household action programs into RGB videos, raw simulator exports, and explicitly qualified training labels. The initial configuration produces 24 episodes in one apartment: fridge and microwave routines, each with normal closure, omitted closure, and reopening before departure. Four initialization/camera groups provide 12 training, six development, and six test episodes. Generation and validation are complete: 4,261 frames, 426.1 seconds of video, and zero failed episodes.
 
 ## Architecture and data flow
 
@@ -122,3 +122,15 @@ Episode-level normal-versus-violation classification is an easy pipeline sanity 
 The installed communication implementation is `output/virtualhome-install/virtualhome-aist/simulation/unity_simulator/comm_unity.py`: character insertion at line 121, fixed camera insertion at 175, reset at 214, camera count at 231, graph retrieval at 291, and recording at 332. These are references to the recorded checkout, not promises about another VirtualHome version. The project package imports this class through `simulation.unity_simulator`.
 
 The generator depends on Python 3.11, Pillow for image validation, the installed VirtualHome communication dependencies, and FFmpeg/ffprobe on PATH. Actual versions are recorded in `../various/corpus-runtime-versions.json`. The existing environment was installed without pip; `importlib.metadata` was used to inventory it without changing the environment.
+
+## Final generation results
+
+The completed run is at `output/virtualhome-corpus/home-v1`. Open `gallery.html` there for local playback and contact sheets. All 24 episodes succeeded on the first attempt: 12 fridge and 12 microwave episodes; eight normal, eight omission, and eight reopening cases. The partition is 12 training / 6 development / 6 test. The videos contain 4,261 frames at 10 FPS (426.1 seconds, or 7 minutes 6.1 seconds) and 640x480 resolution.
+
+The run spent 600.735 seconds in per-episode generation/export. MP4s total 7,661,124 bytes; all raw frames, graph exports, and inspection artifacts occupy approximately 2.5 GB. Generated assets stay in the ignored output directory. The [tracked inventory](../various/corpus-result-inventory.json) records all episode paths, video hashes, counts, endpoint verdicts, and producer hashes. [Runtime versions](../various/corpus-runtime-versions.json), [validation results](../various/corpus-validation.json), and [visual review](../various/corpus-visual-review.json) preserve the supporting evidence.
+
+Deep validation loaded every source image and graph, checked media metadata and hashes, and verified action exports. All MP4s decoded completely without errors. The independent audit matched plans, provenance, input/label indices, final graph verdicts, and world-state rows. Resume produced no render events, left manifest hashes and modification times unchanged, and created no additional attempt directories. There are eight PASS and sixteen VIOLATION endpoint verdicts.
+
+Sampled contact sheets for all 24 episodes were inspected. The camera keeps both appliances in view; sampled normal endpoints appear closed, and omission/reopening endpoints appear open. The actor can briefly occlude the microwave during manipulation. This review does not certify all frames or exact boundaries; dense visual-state and precise-boundary supervision remain disabled. Each original manifest retains `visual_review: pending` from generation; the later scoped review is recorded separately in the linked review file rather than rewriting provenance.
+
+The owned simulator was stopped after validation. Follow the playbook to launch a new owned instance before another generation/resume command. Pure validation and the gallery do not require a running simulator.

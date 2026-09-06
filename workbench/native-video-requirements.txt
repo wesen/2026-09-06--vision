@@ -1,0 +1,10 @@
+# Install only into output/mlx-video-fix/.venv (or another separate native venv).
+mlx-vlm @ git+https://github.com/wesen/mlx-vlm.git@6452614f6de04694d1e34fd13abaca11f6ffb994
+mlx==0.32.2
+mlx-metal==0.32.2
+transformers==5.16.1
+torch==2.14.0
+torchvision==0.29.0
+numpy==2.4.6
+pillow==12.3.0
+av==17.1.0

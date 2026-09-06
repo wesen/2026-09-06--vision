@@ -7,7 +7,7 @@ Local search over the 24-video VirtualHome household corpus. The implementation 
 Run commands from the repository root on Apple Silicon. This package has its own Python environment; it does not alter the simulator environment.
 
 ```sh
-uv sync --project workbench --extra dev --locked
+uv sync --project workbench --extra pooled-images --extra dev --locked
 workbench/.venv/bin/python ttmp/2026/09/06/COSMOS-EMBED-001--embedding-runtime-baseline-on-mlx/scripts/03-download-pinned-model.py
 workbench/.venv/bin/video-workbench ingest output/virtualhome-corpus/home-v1/inputs.jsonl
 workbench/.venv/bin/video-workbench inspect
@@ -61,3 +61,26 @@ python -m video_workbench.predicates serve --run output/state-workbench/run-v2 -
 ```
 
 The first run is an exploratory negative result, with source-reviewed unknowns and apartment-separated data. See the [implementation and evidence report](../ttmp/2026/09/06/VIDEO-STATE-001--project-2-observable-state-recognition/reference/03-observable-state-baseline-implementation-and-evidence-report.md) for reproduction, exact metrics, screenshots, and the handoff to object detection/tracking/crops. Model predictions do not use reviewed visibility as an inference gate.
+
+
+## Opt-in native video (MLX-VIDEO-FIX-001)
+
+Native video uses the repaired fork at `6452614f6de04694d1e34fd13abaca11f6ffb994`, official Qwen weights at `9f2f7e710d6d81056aa5c0a4f04764fec6bb7bda`, FP32 inference, and pinned official Transformers preprocessing. It has a different feature space and clip cache. The community 4-bit checkpoint has not passed native-video acceptance.
+
+Keep `workbench/.venv` for the existing pooled-image baseline. Install native requirements in a separate environment; never sync both runtime extras into one environment. The existing isolated repair environment is `output/mlx-video-fix/.venv`. For a fresh environment:
+
+```sh
+uv venv output/mlx-video-fix/.venv --python 3.11
+uv pip install --python output/mlx-video-fix/.venv/bin/python -r workbench/native-video-requirements.txt -e 'workbench[native-video]'
+```
+
+The audited checkout may instead be installed editable with `uv pip install --python output/mlx-video-fix/.venv/bin/python --no-deps -e output/mlx-video-fix/mlx-vlm -e workbench` after installing the pinned runtime. Startup verifies the wrapper source hash and runtime versions; the feature identity includes the entire MLX Python source digest and model artifact hashes.
+
+```sh
+output/mlx-video-fix/.venv/bin/video-workbench index --mode native_video --splits development --seconds 2 --fps 2
+output/mlx-video-fix/.venv/bin/video-workbench search --mode native_video 'A person closing the fridge door.' --manifest output/video-workbench-native/indices/INDEX_ID/manifest.json --split development
+```
+
+`--model` defaults to `output/mlx-video-fix/models/official` for native mode. Download exactly the official revision above if absent. Native defaults to `output/video-workbench-native`; pooled mode retains `output/video-workbench`. Actual selected PTS, relative to each clip, determine video timestamps. Single/odd inputs repeat the last frame and PTS; clips exceeding 32 selected frames fail clearly. Reduce FPS or window duration if needed.
+
+Rollback is explicit: run `workbench/.venv/bin/video-workbench search --mode pooled_images ... --manifest OLD_POOLED_MANIFEST`. Existing indices and the baseline environment are retained. Loading a pooled index with the native query encoder, or vice versa, raises an incompatible-feature-space error. No native failure falls back to pooled images. The development smoke encoded nine clips from one episode and verified full cache reuse; this is not a corpus retrieval-quality acceptance.

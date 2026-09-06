@@ -42,7 +42,23 @@ def main():
     evaluate.add_argument(
         "--report-dir", default="output/video-workbench/evaluation-v1"
     )
+    for command in (index, search, serve):
+        command.add_argument(
+            "--mode", choices=["pooled_images", "native_video"], default="pooled_images"
+        )
+        command.set_defaults(model=None)
+    index.set_defaults(root=None)
     args = p.parse_args()
+
+    def encoder():
+        if args.mode == "native_video":
+            from .native_video import NativeVideoEmbedder, DEFAULT_MODEL
+
+            return NativeVideoEmbedder(args.model or DEFAULT_MODEL)
+        from .embedding import QwenEmbedder
+
+        return QwenEmbedder(args.model or "output/models/qwen3-vl-embedding-2b-4bit")
+
     registry = Registry(args.db)
     try:
         if args.command == "evaluate-retrieval":
@@ -59,9 +75,7 @@ def main():
                 args.report_dir,
             )
         elif args.command in ("search", "serve"):
-            from .embedding import QwenEmbedder
-
-            e = QwenEmbedder(args.model)
+            e = encoder()
             if args.command == "serve":
                 import uvicorn
                 from .api import create_app
@@ -78,13 +92,19 @@ def main():
                 e.text(args.query), e.space.id, args.top_k, args.split
             )
         elif args.command == "index":
-            from .embedding import QwenEmbedder
             from .index import build
 
+            if args.mode == "native_video":
+                from .native_index import build_native as build
             result = build(
                 registry,
-                QwenEmbedder(args.model),
-                args.root,
+                encoder(),
+                args.root
+                or (
+                    "output/video-workbench-native"
+                    if args.mode == "native_video"
+                    else "output/video-workbench"
+                ),
                 args.seconds,
                 args.fps,
                 args.splits,

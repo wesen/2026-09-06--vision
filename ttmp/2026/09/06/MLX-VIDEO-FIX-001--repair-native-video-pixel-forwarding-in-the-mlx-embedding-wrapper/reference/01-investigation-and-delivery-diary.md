@@ -16,12 +16,17 @@ RelatedFiles:
       Note: Raster review and page-count evidence
     - Path: repo://ttmp/2026/09/06/MLX-VIDEO-FIX-001--repair-native-video-pixel-forwarding-in-the-mlx-embedding-wrapper/various/pdf-validation.json
       Note: Reviewed guide identity and preview archive
+    - Path: repo://workbench/src/video_workbench/native_index.py
+      Note: Native clip cache and publication
+    - Path: repo://workbench/src/video_workbench/native_video.py
+      Note: Audited native adapter and feature-space identity
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T14:00:28.695667-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 # Investigation and delivery diary
@@ -573,3 +578,73 @@ Added an enumerated, process-isolated audit that compares official and MLX proce
 
 - Runtime versions: MLX/Metal 0.32.2; Transformers 5.16.1; Torch 2.14.0; Torchvision 0.29.0; NumPy 2.4.6; Pillow 12.3.0.
 - Original/black FP32 cosine 0.429234; original/reverse 0.969836 under official preprocessing.
+
+
+## Step 9: Integrate explicit native video with separate runtime and clip cache
+
+Added an opt-in native adapter using official FP32 weights and the audited official processor. Native indexing encodes complete sampled clips and preserves actual selected PTS; the existing pooled-image adapter and frame-cache default remain unchanged. Native startup checks the repaired wrapper hash, runtime versions, and official artifact identity.
+
+The first real smoke exactly matched the accepted video vector and matched mixed-order text/single/odd references within 2.98e-8. It encoded nine clips from one development episode into a separate output root, then reused all nine. The parent registry was opened with SQLite `mode=ro`.
+
+### Prompt Context
+
+**User prompt (verbatim):** (see Step 7)
+
+**Assistant interpretation:** Integrate the accepted configuration with an explicit mode, reproducible runtime, and incompatible cache identity.
+
+**Inferred user intent:** Make repaired native video usable without disrupting the pooled baseline or concurrent corpus work.
+
+### What I did
+
+- Added `native_video.py`, `native_index.py`, runtime requirements, CLI mode selection, and clip-cache namespace support.
+- Added contract tests for PTS padding, cache separation/reuse, old-index rejection, and inference failure before publication.
+- Installed only the isolated repair environment's editable checkout/workbench packages. Baseline `workbench/.venv` was not synced or changed.
+- Ran 16 focused workbench tests; all passed. Real adapter cold first inference including preprocessing took 0.3243 seconds, warm calls about 0.208 seconds.
+- Printed P3 completion at 20:17:06Z and P4 start at 20:17:12Z; P3 commit is `1effb65`.
+
+### Why
+
+- Native temporal features cannot reuse cached unit frame vectors. Artifact, source, processor, runtime, pooling and timestamp policy must distinguish the space.
+
+### What worked
+
+- Exact accepted fixture parity, stable mixed-order calls, successful development-only build, and full cache reuse.
+- Failed inference leaves no feature row, manifest, or latest-build publication.
+
+### What didn't work
+
+- Installing the repaired checkout exposed its actual distribution version `0.7.0rc0`; prior audit imports intentionally used the checkout through PYTHONPATH while distribution metadata still read `0.6.17`.
+- The original workbench unconditional `mlx-vlm==0.6.17` dependency conflicts with the repaired distribution. Moved runtime dependencies to mutually exclusive `pooled-images` and `native-video` extras; baseline installation now explicitly selects `pooled-images`. Existing baseline environment is untouched.
+
+### What I learned
+
+- A source commit/hash is necessary: installed distribution metadata alone did not identify code imported through PYTHONPATH.
+- Timestamp metadata can represent integer microsecond ticks at a one-million-ticks-per-second rate with sampling disabled, preserving VFR timing exactly.
+
+### What was tricky to build
+
+- Official processor construction must precede MLX auto-registration, and startup rejects accidentally substituted MLX processors.
+- Index publication happens only after all clip inference succeeds; prior successful clip cache entries are valid reusable work if a later request fails.
+
+### What warrants a second pair of eyes
+
+- The dependency extras and baseline lock preservation; native artifact/source checks and microsecond timestamp encoding.
+- The maximum 32 selected frames is a resource limit, not a demonstrated quality optimum.
+
+### What should be done in the future
+
+- Finish dependency-lock validation, record final smoke identity after formatting/source changes, then prepare P5 root-cause and upstream package.
+
+### Code review instructions
+
+- Start with `NativeVideoEmbedder`, `prepare_video`, and `build_native`; inspect the CLI's explicit mode switch.
+- Run the focused native/index/embedding/registry/API tests and ticket script 11 in the isolated environment.
+
+### Technical details
+
+- Smoke output: `output/mlx-video-fix/workbench-native-smoke`; episode `ep-368d6331fc690a2c`; two-second windows at 2 FPS.
+- Initial space ID `d20bfb5f21da822c544cc6d12f8c72ed4e921ae9cb4e4d6c13d93217a88bb60e`.
+
+P4 completion evidence: final artifact/source-gated adapter matched video/single/odd references exactly and text within 2.98e-8. Final source identity is `2610572d944abb10b0366c2b00aaf87e701b6f6bb6656b022eca66dd230edecd`; nine fresh development clips and nine reused clips passed. Final fresh-process timing was slower (load 6.562 s, cold inference 2.578 s, warm 0.318–0.371 s) than the first run (load 5.435 s, cold 0.324 s, warm 0.207–0.209 s). Both reports are retained. The machine runs concurrent work; no causal attribution or isolated latency guarantee is made. Final MLX peak 9,539,472,908 bytes; RSS high-water 4,842,110,976 bytes.
+
+The dependency lock resolved mutually exclusive runtimes successfully. `uv pip check --python output/mlx-video-fix/.venv/bin/python` reports all 73 installed packages compatible. Sixteen focused tests passed in both the untouched pooled baseline interpreter and isolated native interpreter. Docmgr doctor passed. Workbench baseline source `embedding.py` is unchanged, and no baseline environment sync occurred.

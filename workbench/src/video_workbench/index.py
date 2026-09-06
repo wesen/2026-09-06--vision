@@ -61,8 +61,8 @@ def writer_lock(root):
 class FrameCache:
     """One writer; SQLite row is authoritative only after array publication."""
 
-    def __init__(self, root, space):
-        self.root = Path(root) / "frames" / space.id
+    def __init__(self, root, space, namespace="frames"):
+        self.root = Path(root) / namespace / space.id
         self.root.mkdir(parents=True, exist_ok=True)
         self.space = space
         self.db = sqlite3.connect(self.root / "metadata.sqlite")

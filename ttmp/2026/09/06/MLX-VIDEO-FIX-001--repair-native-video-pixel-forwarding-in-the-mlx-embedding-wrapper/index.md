@@ -21,7 +21,7 @@ WhenToUse: ""
 
 The installed MLX-VLM embedding wrapper omits video pixels when calling its hidden-state helper, although the shared backbone has a separate video branch. This ticket specifies reproduction, a minimal repair, request-isolation tests, numerical validation, and integration under a new feature-space identity.
 
-**Current state (fresh audit, 2026-09-06):** P0–P2 are implemented in the clean isolated fork checkout at `6452614` on `fix/qwen3-vl-video-embeddings`. A fresh targeted run passed all 15 tests. P3 is active: existing 14:46–14:51 parity evidence is partial, including independent-processor token/pixel differences. P4 and P5 remain gated on correctness. See the diary for current findings.
+**Current state (2026-09-06):** P0–P4 complete. Isolated fork repair is `6452614`; eight FP32 reference gates pass. Explicit workbench `native_video` uses official FP32 weights and pinned official preprocessing, with a separate feature/cache identity. Nine development clips passed encoding/reuse. Quantized native video remains unaccepted. P5 contribution packaging is next.
 
 - [Intern guide](design-doc/01-intern-guide-to-diagnosing-repairing-and-validating-native-mlx-video-embeddings.md)
 - [Phased implementation tasks](tasks.md)

@@ -78,3 +78,8 @@ Units above are decimal GB. Each warm median uses three materialized calls. Load
 ## Accepted integration boundary
 
 Use official FP32 weights and the exact pinned official processor, explicitly materialize MLX outputs, preserve last-token pooling, and normalize stored output as FP32. Give native video its own adapter/runtime/temporal-policy identity and clip cache. Preserve the pooled-image baseline and its environment. Quantized native mode requires a future separate acceptance decision.
+
+
+## P4 fresh-process measurement supplement
+
+The completed native adapter exactly matches the accepted video/single/odd vectors; text differs only by 2.98e-8 after the workbench's final FP32 normalization. Two fresh-process runs are retained: `native-integration-first.json` and `native-integration.json`. The first measured cold inference including preprocessing at 0.324 s and warm at 0.207–0.209 s; the final source-gated run measured 2.578 s cold and 0.318–0.371 s warm. Both use warm filesystem caches on a machine with concurrent work. No load-isolated performance guarantee or causal explanation of variance is asserted. The final run has 9.539 GB MLX allocator peak and 4.842 GB RSS high-water, including the nine-clip development build.

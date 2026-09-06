@@ -47,11 +47,11 @@
 
 ## P4 Workbench integration
 
-- [ ] Pin repaired dependency or a reviewable isolated patch.
-- [ ] Add native-video adapter after required capability gates pass.
-- [ ] Define new feature-space identity including runtime and temporal policy.
-- [ ] Test old pooled-image cache rejection and failed-inference publication.
-- [ ] Re-encode a development subset and document explicit rollback selection.
+- [x] Pin repaired dependency or a reviewable isolated patch.
+- [x] Add native-video adapter after required capability gates pass.
+- [x] Define new feature-space identity including runtime and temporal policy.
+- [x] Test old pooled-image cache rejection and failed-inference publication.
+- [x] Re-encode a development subset and document explicit rollback selection.
 
 ## P5 Handoff
 

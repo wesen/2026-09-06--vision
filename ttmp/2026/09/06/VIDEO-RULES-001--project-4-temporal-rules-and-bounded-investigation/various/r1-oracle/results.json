@@ -1,0 +1,311 @@
+{
+  "kind": "hand-derived numerical household oracle; no video quality claim",
+  "cases": [
+    {
+      "case": "missing departure does not pass",
+      "expected": "UNKNOWN",
+      "result": {
+        "rule_id": "closed-at-observed-departure",
+        "rule_sha256": "c2ed27dd5a5647b1d19688bb0405533cd93f3c989e393fc62c95d0d9f96c218c",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 13000000,
+        "status": "UNKNOWN",
+        "reason": "trigger_not_observed",
+        "applicability": "not_observed",
+        "evidence_ids": [],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "0dbc4b9da2b99b0a3a2c7d99d18bdd64e4f37e6fb1ab817363d6223fcd95e1f0"
+      }
+    },
+    {
+      "case": "closed sample at exact departure",
+      "expected": "PASS",
+      "result": {
+        "rule_id": "closed-at-observed-departure",
+        "rule_sha256": "c2ed27dd5a5647b1d19688bb0405533cd93f3c989e393fc62c95d0d9f96c218c",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 8000000,
+        "status": "PASS",
+        "reason": "observed_state_match",
+        "applicability": "observed",
+        "evidence_ids": [
+          "closed-frame",
+          "departure"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "bc0c7490be549caac3b255e5c41680c48ab75f43e15c5dbcbcfba697fa195ce7"
+      }
+    },
+    {
+      "case": "state has not committed yet",
+      "expected": "UNKNOWN",
+      "result": {
+        "rule_id": "closed-at-observed-departure",
+        "rule_sha256": "c2ed27dd5a5647b1d19688bb0405533cd93f3c989e393fc62c95d0d9f96c218c",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 7200000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "departure"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "9ee54fdacf3b88977bd5845108c528f2a5d6be3935025c73c6c099e1a72a596c"
+      }
+    },
+    {
+      "case": "wrong appliance cannot satisfy rule",
+      "expected": "UNKNOWN",
+      "result": {
+        "rule_id": "closed-at-observed-departure",
+        "rule_sha256": "c2ed27dd5a5647b1d19688bb0405533cd93f3c989e393fc62c95d0d9f96c218c",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 8000000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "departure"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "13afdcabb8a96d0509abdd345e2324f505a53ebed65527f86cacc89133caf978"
+      }
+    },
+    {
+      "case": "observed open at departure",
+      "expected": "VIOLATION",
+      "result": {
+        "rule_id": "closed-at-observed-departure",
+        "rule_sha256": "c2ed27dd5a5647b1d19688bb0405533cd93f3c989e393fc62c95d0d9f96c218c",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 8000000,
+        "status": "VIOLATION",
+        "reason": "observed_state_mismatch",
+        "applicability": "observed",
+        "evidence_ids": [
+          "closed-frame",
+          "departure"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "2634e33521cb6c2f974ee75d2adc4ac18e309a05c9a15d7940add7acaf7dc75c"
+      }
+    },
+    {
+      "case": "uncertain departure cannot use nearby frame",
+      "expected": "UNKNOWN",
+      "result": {
+        "rule_id": "closed-at-observed-departure",
+        "rule_sha256": "c2ed27dd5a5647b1d19688bb0405533cd93f3c989e393fc62c95d0d9f96c218c",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 8000000,
+        "status": "UNKNOWN",
+        "reason": "uncertain_trigger_requires_interval_evidence",
+        "applicability": "observed",
+        "evidence_ids": [
+          "departure"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "ceac64984974f2cb9aea4d6e344e51e9c631c2af6e9196577b0f86dd3812713c"
+      }
+    },
+    {
+      "case": "close strictly before departure",
+      "expected": "PASS",
+      "result": {
+        "rule_id": "close-before-departure",
+        "rule_sha256": "2762918da154f0bcd7b527f18822d0e261f8ff5feb723551ba931f8ae04785a7",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 8000000,
+        "status": "PASS",
+        "reason": "strictly_before",
+        "applicability": "observed",
+        "evidence_ids": [
+          "close",
+          "departure"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "f0f847844f436eea8a22e1aa0356024b89e99043e8e33c21cc82b95ef38b7182"
+      }
+    },
+    {
+      "case": "equal timestamps are not before",
+      "expected": "VIOLATION",
+      "result": {
+        "rule_id": "close-before-departure",
+        "rule_sha256": "2762918da154f0bcd7b527f18822d0e261f8ff5feb723551ba931f8ae04785a7",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 8000000,
+        "status": "VIOLATION",
+        "reason": "not_strictly_before",
+        "applicability": "observed",
+        "evidence_ids": [
+          "close",
+          "departure"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "3f1e0e0ba7efc7e799a1ecd49142fd29d99c0e97a8ca0b1750289c5f0a036800"
+      }
+    },
+    {
+      "case": "overlapping uncertainty stays unknown",
+      "expected": "UNKNOWN",
+      "result": {
+        "rule_id": "close-before-departure",
+        "rule_sha256": "2762918da154f0bcd7b527f18822d0e261f8ff5feb723551ba931f8ae04785a7",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 8000000,
+        "status": "UNKNOWN",
+        "reason": "overlapping_event_uncertainty",
+        "applicability": "observed",
+        "evidence_ids": [
+          "close",
+          "departure"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "3ea73fecca4de62b8169b7c2b55fd58d04fa76cb463887296bb32b5cfd2b5553"
+      }
+    },
+    {
+      "case": "absence without coverage is unknown",
+      "expected": "UNKNOWN",
+      "result": {
+        "rule_id": "no-reopen-in-reviewed-interval",
+        "rule_sha256": "c387fc8cf9486bdbf995694b6dc9321bab92266fc50e381379b02a809cb432b9",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 13000000,
+        "status": "UNKNOWN",
+        "reason": "event_coverage_gap",
+        "applicability": "observed",
+        "evidence_ids": [],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "de4e51a9b04da7ad5ba15b1201c5243eddac8b2e4facedca8ebec69d6fc0093e"
+      }
+    },
+    {
+      "case": "covered absence passes",
+      "expected": "PASS",
+      "result": {
+        "rule_id": "no-reopen-in-reviewed-interval",
+        "rule_sha256": "c387fc8cf9486bdbf995694b6dc9321bab92266fc50e381379b02a809cb432b9",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 13000000,
+        "status": "PASS",
+        "reason": "covered_event_absence",
+        "applicability": "observed",
+        "evidence_ids": [
+          "coverage"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "ed73ca05d72aac8a6cb5e0e6992c9e04ef9b7fd304657b430bb3b109796d7a91"
+      }
+    },
+    {
+      "case": "future interval cannot pass",
+      "expected": "UNKNOWN",
+      "result": {
+        "rule_id": "no-reopen-in-reviewed-interval",
+        "rule_sha256": "c387fc8cf9486bdbf995694b6dc9321bab92266fc50e381379b02a809cb432b9",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 10000000,
+        "status": "UNKNOWN",
+        "reason": "interval_not_finished",
+        "applicability": "observed",
+        "evidence_ids": [],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "fce7dee292e10983a21489c9d9b521a081c6a28264b17ac60d70b8214a92b5d5"
+      }
+    },
+    {
+      "case": "coverage gap prevents absence",
+      "expected": "UNKNOWN",
+      "result": {
+        "rule_id": "no-reopen-in-reviewed-interval",
+        "rule_sha256": "c387fc8cf9486bdbf995694b6dc9321bab92266fc50e381379b02a809cb432b9",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 13000000,
+        "status": "UNKNOWN",
+        "reason": "event_coverage_gap",
+        "applicability": "observed",
+        "evidence_ids": [
+          "coverage",
+          "coverage2"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "c0b0abd2fde015ccaaaff3e776fbb72d84efbe9136b2351f7377b5ed8a6c6428"
+      }
+    },
+    {
+      "case": "observed reopening violates despite gaps",
+      "expected": "VIOLATION",
+      "result": {
+        "rule_id": "no-reopen-in-reviewed-interval",
+        "rule_sha256": "c387fc8cf9486bdbf995694b6dc9321bab92266fc50e381379b02a809cb432b9",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 11000000,
+        "status": "VIOLATION",
+        "reason": "prohibited_event_observed",
+        "applicability": "observed",
+        "evidence_ids": [
+          "reopen"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "e982e2a7fab4c40d9fc1ed4091f7ac982002e1356915019aedc9ac761a81cfda"
+      }
+    },
+    {
+      "case": "event at half-open end is outside",
+      "expected": "PASS",
+      "result": {
+        "rule_id": "no-reopen-in-reviewed-interval",
+        "rule_sha256": "c387fc8cf9486bdbf995694b6dc9321bab92266fc50e381379b02a809cb432b9",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 13000000,
+        "status": "PASS",
+        "reason": "covered_event_absence",
+        "applicability": "observed",
+        "evidence_ids": [
+          "coverage"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "ed73ca05d72aac8a6cb5e0e6992c9e04ef9b7fd304657b430bb3b109796d7a91"
+      }
+    },
+    {
+      "case": "uncertain boundary event prevents pass",
+      "expected": "UNKNOWN",
+      "result": {
+        "rule_id": "no-reopen-in-reviewed-interval",
+        "rule_sha256": "c387fc8cf9486bdbf995694b6dc9321bab92266fc50e381379b02a809cb432b9",
+        "episode_id": "episode",
+        "entity_id": "microwave",
+        "as_of_us": 13000000,
+        "status": "UNKNOWN",
+        "reason": "event_overlaps_interval_boundary",
+        "applicability": "observed",
+        "evidence_ids": [
+          "reopen"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "2b6cdadfd3c6428b27d5b671fb928e5027396ae0a5a6d4ef0dca1f3f78b2d9b7"
+      }
+    }
+  ],
+  "schema_rejections": 3,
+  "passed": true
+}

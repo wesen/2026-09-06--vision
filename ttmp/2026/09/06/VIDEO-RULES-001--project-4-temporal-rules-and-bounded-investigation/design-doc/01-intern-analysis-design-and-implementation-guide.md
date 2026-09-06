@@ -28,6 +28,26 @@ WhenToUse: ""
 
 # Project 4 - Temporal rules and bounded investigation
 
+## Implementation scope update
+
+The current implementation plan replaces the original general rule language and revision-based investigator. The first feature supports three flat JSON templates: `state_at_event`, strict `before`, and `no_event_in`. Entity IDs, source streams, integer microseconds, evidence availability, and explicit UNKNOWN remain required. Recursive `all`/`any`/`not`, generic role registries, arbitrary continuous-state inference, and incident lifecycle machinery are deferred until concrete examples require them.
+
+VIDEO-TEMPORAL-001 supplies immutable sampled observations and exact-sample as-of queries. It does not supply revisions, supersession, expiry, or continuous coverage. New verifier answers will be separate immutable observations; a new evaluation records the evidence snapshot and result without replacing an older evaluation. Additional evidence is not automatically a correction: contradictory usable evidence remains unknown under a declared policy. If a real correction workflow later requires invalidation, add a narrowly scoped replacement link then.
+
+R1 implements the flat templates with hand-derived household fixtures. R2 connects the sampled observation store, reports missing triggers and missing exact samples, and keeps interval coverage as a separately supplied oracle/reviewed claim. A sparse frame stream cannot manufacture coverage. R3 emits at most one focused verifier request per unknown evaluation and validates an injected response; no autonomous retrieval/resampling loop is needed. Runtime execution, token/frame limits, and termination belong to COSMOS-VERIFY-001. R4 measures oracle and predicted/no-verifier behavior first. Actual Qwen/Cosmos comparisons remain a named integration follow-up after that runtime ticket supplies accepted adapters; they are not silently replaced by mock-model results.
+
+The original sections below retain the conceptual explanation of the broader design, but this scope update supersedes references to recursive AST composition, revision chains, a multi-step planner, and mandatory live Qwen/Cosmos execution in the initial RULES delivery. The prior reMarkable receipt identifies the original edition; it does not certify this updated source.
+
+### First-rule contracts
+
+- `state_at_event` requires an observed trigger bound to the requested episode/entity. With the current sampled store, a trigger with uncertain time cannot be evaluated using a nearby sample; it returns UNKNOWN. An exact trigger requires a state observation at the same timestamp.
+- `before` compares two observed event time bounds. It passes only when the latest possible first event is strictly earlier than the earliest possible second event. Equality is not before; overlapping bounds remain UNKNOWN.
+- `no_event_in` uses a half-open interval. A fully contained prohibited event establishes VIOLATION. Absence establishes PASS only when the interval has finished under the as-of horizon and explicit event-detection coverage spans it. Boundary-overlapping uncertain events prevent PASS.
+
+### Present necessity versus deferred infrastructure
+
+Unknown logic, correct entity bindings, bounded intervals, availability filtering, and coverage checks prevent false claims on the existing data. A recursive expression language, generic investigator scheduler, incident lifecycle, and correction graph add independent state and policy surfaces before there is a consumer. The first implementation uses a small schema, a deterministic evaluator, and immutable evaluation records with content-derived IDs.
+
 ## What a rule engine adds
 
 A search hit says that an interval resembles a query. A state observation says that a property appears true or false at a time. A temporal rule combines facts into a precisely defined procedural conclusion. This project builds that deterministic layer and a bounded investigator that can request additional visual evidence when a conclusion is uncertain.
@@ -38,7 +58,7 @@ Start with household rules: the target is closed at an observed departure, it re
 
 ## Current evidence and dependencies
 
-VIDEO-TEMPORAL-001 supplies an as-of fact store and immutable revisions. VIDEO-STATE-001 supplies observations with unknown handling. COSMOS-VERIFY-001 supplies the evidence-bounded verifier. The evaluator can be implemented before those systems using hand-authored oracle facts. Current VirtualHome endpoint labels are useful for a narrowly named endpoint diagnostic; VIDEO-CORPUS-001 is needed for reviewed temporal/visibility labels.
+VIDEO-TEMPORAL-001 supplies an exact-sample as-of observation store; general revisions were deferred. VIDEO-STATE-001 supplies observations with unknown handling. COSMOS-VERIFY-001 supplies the evidence-bounded verifier. The evaluator can be implemented before those systems using hand-authored oracle facts. Current VirtualHome endpoint labels are useful for a narrowly named endpoint diagnostic; VIDEO-CORPUS-001 is needed for reviewed temporal/visibility labels.
 
 Existing `core.py:167` checks actual final graph state and actor destination. It returns PASS for normal closure and VIOLATION for the two open-ended variants, with `scope: episode_endpoint_world_truth`. This is a concrete example of narrow semantics. The new rule engine must retain that precision rather than expanding a convenient label into a claim it never measured.
 
@@ -84,7 +104,7 @@ validated rule + entity bindings + as-of horizon
                          |
                validated fact proposal
                          |
-             append revision -> reevaluate
+             append observation -> evaluate again
 ```
 
 The evaluator is a pure function of a rule, a fact-view snapshot, and a policy version. It must not load a model or inspect the filesystem. The investigator owns the budget and evidence requests. The fact store owns reconciliation and audit history. The verifier proposes observations; it cannot overwrite the rule or declare its own answer authoritative.
@@ -152,7 +172,7 @@ while decision.needs_refinement and budget.remaining_calls > 0:
     result = executor.run(request, deadline=budget.deadline)
     attempted.add(request.fingerprint)
     if result.valid:
-        facts.append_revision(result.proposal)
+        facts.append_observation(result.proposal)
     decision = evaluate(rule, bindings, facts, clock.now_us())
 return decision.with_budget_usage(budget)
 ```

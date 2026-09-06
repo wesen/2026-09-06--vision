@@ -36,6 +36,14 @@ The output is a runtime capability report, a common verifier adapter, an evidenc
 
 The ticket can begin independently of the temporal models using manually selected training/development clips and oracle request fixtures. VIDEO-RULES-001 later integrates the adapter with candidate detection. No local model performance or conversion fidelity is claimed by this document.
 
+## Immutable answers and repeated rule evaluations
+
+The agreed initial integration does not require a revision/supersession subsystem. Each accepted VerifyResult is an immutable answer with request identity, cited evidence, producer/prompt identity, and result availability. RULES may append that evidence and run a new evaluation while preserving earlier evaluations. The verifier does not withdraw or replace an earlier observation, and it never emits an authoritative final rule verdict. If answers disagree, the caller's declared evidence policy decides whether the result remains unknown; later arrival alone does not establish correctness.
+
+A future explicit correction workflow may justify `supersedes_id`, but it is not required by this runtime ticket. Do not add revision storage, branching reconciliation, or incident lifecycle APIs to the verifier adapter. Existing frame/token/deadline limits and strict citation validation remain necessary because they bound actual model execution and evidence access.
+
+The prior reMarkable receipt identifies the original edition, before this integration clarification.
+
 ## Evidence and candidate selection
 
 The official [Cosmos Reason2-2B card](https://huggingface.co/nvidia/Cosmos-Reason2-2B) identifies the model and its Qwen3-VL-2B-Instruct base. The [community MLX conversion card](https://huggingface.co/hzang/Cosmos-Reason2-2B-8bit) publishes an 8-bit candidate and an image-generation usage example. That example does not prove native video handling or numerical fidelity on this Mac. Keep the conversion author, source revision, quantization details, and runtime revision in the experiment manifest.

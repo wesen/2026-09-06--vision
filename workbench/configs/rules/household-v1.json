@@ -1,0 +1,8 @@
+{
+  "description": "Flat household examples; event/entity bindings are supplied by the caller, never inferred from endpoint labels.",
+  "rules": [
+    {"schema_version": 1, "rule_id": "closed-at-observed-departure", "op": "state_at_event", "event_stream": "reviewed-events", "event_id": "departure", "state_stream": "state/F__linear_head", "property": "door_open", "expected": false},
+    {"schema_version": 1, "rule_id": "close-before-departure", "op": "before", "event_stream": "reviewed-events", "first_event_id": "close", "second_event_id": "departure"},
+    {"schema_version": 1, "rule_id": "no-reopen-in-reviewed-interval", "op": "no_event_in", "event_stream": "reviewed-events", "event_name": "OPEN", "start_us": 8000000, "end_us": 12000000}
+  ]
+}

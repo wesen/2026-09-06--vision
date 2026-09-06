@@ -1,0 +1,24 @@
+{
+  "class_map": {
+    "bed": "bed",
+    "book": "book",
+    "fridge": "refrigerator",
+    "microwave": "microwave",
+    "mug": "cup",
+    "plate": null,
+    "sofa": "couch",
+    "tablelamp": null,
+    "tv": "tv"
+  },
+  "duplicates": 6,
+  "input_references": 168,
+  "input_sha256": {
+    "ttmp/2026/09/06/VIDEO-PERCEPTION-001--object-detection-tracking-and-visual-evidence-selection-for-vlms/various/pilot-samples.json": "76d3ca1ed9dc834b0c40a21fd1d2be8355badeee2fee17e1b25cecf02da06cb1",
+    "ttmp/2026/09/06/VIDEO-STATE-001--project-2-observable-state-recognition/various/samples-v2.json": "cc5571e0e6d75a35bd694158dc8de243897948d88ac9636d8852020694e3fbae"
+  },
+  "pilot_references": 24,
+  "sample_sha256": "d7b69896ef643e4bc067311e2f20865743ed4ccaee26d742a890e4c794e6540c",
+  "state_references": 144,
+  "status": "source frozen; annotation pending",
+  "unique_targets": 162
+}

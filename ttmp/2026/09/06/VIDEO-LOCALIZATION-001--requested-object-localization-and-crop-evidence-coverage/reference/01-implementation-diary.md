@@ -8,13 +8,28 @@ Topics:
 DocType: reference
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://workbench/src/video_workbench/localization/__main__.py
+      Note: Prepare and review CLI
+    - Path: repo://workbench/src/video_workbench/localization/annotations.py
+      Note: Visibility and geometry contracts
+    - Path: repo://workbench/src/video_workbench/localization/data.py
+      Note: Source-hash audit and requested-target deduplication
+    - Path: repo://workbench/src/video_workbench/localization/evaluate.py
+      Note: Best-overlap recall versus unique binding
+    - Path: repo://workbench/src/video_workbench/perception/contracts.py
+      Note: Shared half-open geometry
+    - Path: repo://workbench/src/video_workbench/predicates/regions.py
+      Note: Existing production requested-class binder
+    - Path: repo://workbench/tests/test_localization_contracts.py
+      Note: Hand-computed metric and review checks
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T17:01:56.371871-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Implementation diary
 
@@ -110,3 +125,56 @@ Inspect the delivered guides and receipts, `configs/virtualhome-paired-actions-v
 
 ### Technical details
 Owned simulator port: 18084. Corpus destination: `output/virtualhome-corpus/paired-actions-v1`. Simulator log: `output/action-benchmark-v1/unity.log`.
+
+## Step 3: Freeze localization sources and separate recall from usable binding
+
+Started the localization implementation after the action benchmark report. The inventory joins all 144 state samples and 24 pilot references by source video hash, exact frame, and requested entity. Six pilot references duplicate existing state targets, leaving 162 unique annotation units. Every imported image and video hash was checked. Source-only review sheets contain no detector predictions or state labels.
+
+Implemented explicit visibility/geometry validation and pure target matching under the frozen confidence policies. Best-overlap localization can succeed while multiple requested-class boxes make production binding ambiguous. These outcomes remain separate. Started source annotation with six draft rectangles on the first temporal sheet; 156 targets remain unreviewed, so no measured localization recall is published yet.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1).
+
+**Assistant interpretation:** Continue the full requested three-ticket implementation with localization source review, tests, diary, and evidence.
+
+**Inferred user intent:** Determine whether detector localization or downstream state recognition causes missing and incorrect object evidence.
+
+**Commit (code):** `6cf3cc2` — Add deduplicated localization source inventory and target matching contracts.
+
+### What I did
+- Read the localization design, previous state sample schema, detector records, and pilot rectangle conventions.
+- Added `localization/data.py` and CLI commands to verify hashes, deduplicate requested entities, retain original aliases, and render native source review sheets.
+- Added separate class-support and visibility fields with finite half-open rectangle validation.
+- Added confidence-policy target matching, wrong-class overlap, best IoU, unique binding, size strata, and null zero-denominator summaries.
+- Generated 42 source sheets for 162 targets; preserved the inventory, sheet index, initial source sheet, and in-progress review in the ticket.
+- Saved a local phase-plan layout with `--no-print`. It has not been printed; the prior Almanach destination approval remains pending.
+
+### Why
+The same source frame must not count twice because it appears in two earlier experiments. Requested class, reviewed visibility, detector vocabulary support, best matching box, and uniquely usable evidence answer different questions and require separate fields.
+
+### What worked
+- Source inventory: 168 references, 162 unique requested targets, six duplicates, all 144 state references preserved.
+- All source image and video hashes matched after resolving the actual successful attempt path.
+- New geometry tests verify exact IoU 0.5, ambiguous two-instance binding, wrong-class overlap, unsupported categories, null empty denominators, and review identity rejection.
+- Combined corpus/action/localization contract run: 27 tests passed and five subtests passed.
+
+### What didn't work
+The initial pilot importer assumed `attempt-0001/video.mp4`. It failed with `FileNotFoundError: [Errno 2] No such file or directory: 'output/virtualhome-corpus/diversity-v2/episodes/dv-673fa0ed90d3c06a/attempt-0001/video.mp4'`. The completed episode manifest identifies `attempt-0002`. Changed the importer to follow that manifest and reran successfully. The failed import published no dataset directory.
+
+### What I learned
+Numbered attempts are authoritative provenance, not a cosmetic filename convention. Source duplication must include requested entity identity as well as frame identity because one image could support multiple independent target questions.
+
+### What was tricky to build
+Visibility and detector class support are independent axes. An unsupported plate can still have a visible rectangle; a supported microwave can be unobservable. Similarly, a unique wrong-location class detection is a binding output but not correct localization. The metrics retain each distinction rather than equating a nonempty box list with successful evidence.
+
+### What warrants a second pair of eyes
+The first six rectangles are draft single-reviewer visible extents and use temporal contact-sheet context. Overlay review is still required. No previous pilot rectangle has been silently accepted as a fresh annotation. The detector-source loader and measured matching pass remain to be implemented after source review.
+
+### What should be done in the future
+Complete the remaining 156 source annotations, validate all rectangles and overlays, run the confidence sweep, materialize identical D/O crop geometry, execute all F/D/O and fusion state conditions, and publish the localization report and temporal handoff. Then implement the complete temporal ticket.
+
+### Code review instructions
+Start at `localization/data.py:prepare`, then `annotations.py:validate_review` and `evaluate.py:match`. Run `workbench/tests/test_localization_contracts.py`. Inspect `various/source-audit-v1/manifest.json` and all original aliases before interpreting the unique-target count.
+
+### Technical details
+Dataset: `output/localization-v1/dataset`. Source sheets: `output/localization-v1/source-review`. Tracked draft annotations: `various/source-audit-v1/reviews-in-progress.json`. No GPU job or measured localization run was started in this step.

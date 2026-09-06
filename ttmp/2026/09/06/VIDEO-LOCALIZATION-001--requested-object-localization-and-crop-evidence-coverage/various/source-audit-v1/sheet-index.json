@@ -1,0 +1,416 @@
+[
+  {
+    "episode_id": "dv-008b5e55af631629",
+    "sample_ids": [
+      "5d4a12e0982680b61cf08bd5",
+      "bc0911c401e7875e91061344",
+      "2841eff78a84b90fb1a90ad2",
+      "32b949b927976f14871a6f02",
+      "23116bd1d1ff93b8716d67d3",
+      "b2c68887030d7a09aaafa1f9"
+    ],
+    "sheet": "output/localization-v1/source-review/source-00.jpg"
+  },
+  {
+    "episode_id": "dv-03c8a2dbcd624cf8",
+    "sample_ids": [
+      "658f5ade547abb730e9cf865",
+      "5278d1c22a221bc6ca33fe22",
+      "b7bb24e901de4432deeefd01",
+      "dfcda5cba4ef1d8c23d87686",
+      "58306fa83d57fee4c0ab0fc4",
+      "a42f25cd4a4cad6e58a9af3e"
+    ],
+    "sheet": "output/localization-v1/source-review/source-01.jpg"
+  },
+  {
+    "episode_id": "dv-22a313084fd800ca",
+    "sample_ids": [
+      "4e27c53c195306dcabdd374b",
+      "b4a1d964581da99460a23ad5",
+      "0ad6a710abdd47d925e880d0",
+      "844d965997898af8a409fa4c",
+      "399a6eb792e95fbc25c95376",
+      "56ec727fc14cbfb94a633f12"
+    ],
+    "sheet": "output/localization-v1/source-review/source-02.jpg"
+  },
+  {
+    "episode_id": "dv-7726ded72630455a",
+    "sample_ids": [
+      "5ac2776b925d5d8c78bc72b9",
+      "0c027d158de634992a8a41e2",
+      "e0967efec912b7b757170438",
+      "2c2ee9c630f66900b0f80a3b",
+      "cc3f88e1646ce25dd75fe530",
+      "10c040c6e7f67f99cc95cb08"
+    ],
+    "sheet": "output/localization-v1/source-review/source-03.jpg"
+  },
+  {
+    "episode_id": "dv-af669d3e3a486780",
+    "sample_ids": [
+      "d83a66c6b218c8b7e32dc0e9",
+      "46c6c0b8d402977e56e70144",
+      "532173a7365c82cc5f6faed9",
+      "a363454de88fb5a3eaa54131",
+      "ea2dcc6c9bc681384e0da4f5",
+      "6a32a0db3b675000dddf892d"
+    ],
+    "sheet": "output/localization-v1/source-review/source-04.jpg"
+  },
+  {
+    "episode_id": "dv-b78c9de6650abd04",
+    "sample_ids": [
+      "3f4d44342189a43768d92d59",
+      "b4fbe73942ac92a22661ae5e",
+      "c5d2593331f86462235ce292",
+      "4304f3085c6a18a17fad92dc",
+      "c79572bede497bb2ec4dfb12",
+      "fd114f383992cbb0e68133e2"
+    ],
+    "sheet": "output/localization-v1/source-review/source-05.jpg"
+  },
+  {
+    "episode_id": "dv-bc11642e2c451020",
+    "sample_ids": [
+      "7c667d4f1f7033bb7a4913d7",
+      "629e05faac902f1d5be0038e",
+      "321b9a6091109e903a8b371c",
+      "5fed5c25e8982b6db6cd1be8",
+      "f60ed7aab4920dcd820f3f74",
+      "0726333fb1c323b244a29349"
+    ],
+    "sheet": "output/localization-v1/source-review/source-06.jpg"
+  },
+  {
+    "episode_id": "dv-d6a1fa73f031c686",
+    "sample_ids": [
+      "efe7e7e79d3f586f701a878c",
+      "90bd8110771d05fc9085c451",
+      "837a31d9a3d631c411ee1394",
+      "f0aed7bffd7fcffe2c38664c",
+      "59e7b08c3f81f0148ee87ecb",
+      "9b4169dd4eb02e2879e4a67a"
+    ],
+    "sheet": "output/localization-v1/source-review/source-07.jpg"
+  },
+  {
+    "episode_id": "dv-ddf28e0a6b4c30db",
+    "sample_ids": [
+      "9ba062c5589e2eb7baa3a320",
+      "7c241b70b7baef5862a3b237",
+      "9827a2eaa464499674f0d252",
+      "985403b6bce498d9ebaa68ce",
+      "6dbc5909141e7ef233eb9ee8",
+      "09ef1d8cf98e52db8ba6f3d0"
+    ],
+    "sheet": "output/localization-v1/source-review/source-08.jpg"
+  },
+  {
+    "episode_id": "dv-e1975790e6ee831e",
+    "sample_ids": [
+      "e4a829e3e877ba63082d37e5",
+      "7c911cd5d0195c74153ebf85",
+      "b6368a94a4f342ec739b7b97",
+      "16d0458bc01bef27ccfb2594",
+      "f1a8f4dae38967dcb48a799c",
+      "fe13f5ff537f0e4293cbb917"
+    ],
+    "sheet": "output/localization-v1/source-review/source-09.jpg"
+  },
+  {
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "sample_ids": [
+      "2e7c40339a3efc2254bde76e",
+      "98e5665dbe96722796e60fcf",
+      "d4ec382c122af4393488253b",
+      "467c549cb03ca8fa06f83717",
+      "d2b1418591ee1040368ae835",
+      "0c1c46be91ff4304157cb815"
+    ],
+    "sheet": "output/localization-v1/source-review/source-10.jpg"
+  },
+  {
+    "episode_id": "dv-fff8ee5abe309115",
+    "sample_ids": [
+      "80e5d4d85cb7650064db9277",
+      "4b22336a5650d857866aff2c",
+      "31655798773582082e2b7205",
+      "8ef09a47749adf6c04ad6c96",
+      "e1d2668d7bba742ebe199d63",
+      "9c2567ab120ee8966997ce5b"
+    ],
+    "sheet": "output/localization-v1/source-review/source-11.jpg"
+  },
+  {
+    "episode_id": "ep-1779083be6e7d3b2",
+    "sample_ids": [
+      "6bac8f6ec4f4a469f1614bb3",
+      "671365a716a08b58d0ec839a",
+      "b824f435eb7e25f69dbbaf17",
+      "1efd984ddb584a579ab8acb3",
+      "3402af426322e3ef67204966",
+      "14f85f2d234a53c550c152cf"
+    ],
+    "sheet": "output/localization-v1/source-review/source-12.jpg"
+  },
+  {
+    "episode_id": "ep-26448333df96e9bc",
+    "sample_ids": [
+      "6397f4f77b3772a7c7ce2ba3",
+      "76f7cd1324d153f29d6fa4ac",
+      "e009bb95e5d0e2ec8e33e1da",
+      "fd529a87289f190fdef8966b",
+      "aa395bab8a25c698e657a6f9",
+      "b344b499e3fe5c2c717a4739"
+    ],
+    "sheet": "output/localization-v1/source-review/source-13.jpg"
+  },
+  {
+    "episode_id": "ep-2a420ff714f0a8e5",
+    "sample_ids": [
+      "b7ffe0b0443a833c9d0f3fc1",
+      "eae8a8ab9c4b38391c1bac94",
+      "88ef3dcb2f37bf07588b6433",
+      "baaa70ffd85c13f77fae5bef",
+      "42ad3495178619e8b7ca942f",
+      "220b17f56906dc3e5ad2dc82"
+    ],
+    "sheet": "output/localization-v1/source-review/source-14.jpg"
+  },
+  {
+    "episode_id": "ep-327429c08d46e616",
+    "sample_ids": [
+      "ad37e3eaeb651a0772a1d3f3",
+      "ae6bb8596737d5b1e68b9c37",
+      "86c6b26990ac1375ce8949dc",
+      "13a8aea687fae1603a1c0d39",
+      "9f5c79ae2f428a8ba360368f",
+      "f1f93cd70ee05f0a2acd6448"
+    ],
+    "sheet": "output/localization-v1/source-review/source-15.jpg"
+  },
+  {
+    "episode_id": "ep-33fbcce3c63f4265",
+    "sample_ids": [
+      "4fe6fc6759fe4e3a46621649",
+      "7c2147aea32f803d7e17db0f",
+      "2e4bbb82ae86df81b798662d",
+      "334f6cadd26301c2265e1897",
+      "e9e2383194d293ec5684f34b",
+      "14879494434b1f0706fdc1bf"
+    ],
+    "sheet": "output/localization-v1/source-review/source-16.jpg"
+  },
+  {
+    "episode_id": "ep-37909e041bc956c8",
+    "sample_ids": [
+      "55be7f60ad771686525e7607",
+      "4e18998c5864714847a86dde",
+      "8e7d76409c9324b521c561e0",
+      "1db3092e6283fd0cb460b70d",
+      "a242b40e77ff2f1c0f51cd93",
+      "cf87bf9d0f0fb086c6db0761"
+    ],
+    "sheet": "output/localization-v1/source-review/source-17.jpg"
+  },
+  {
+    "episode_id": "ep-3fc2ecf3a1ed6d99",
+    "sample_ids": [
+      "bfd9a66a662902c3b3a146e0",
+      "9ebc6dd50d1027317ad37b00",
+      "0057070d1de3f0082e1959f8",
+      "cb7857069591922935fec44a",
+      "287638a858ec049934b4d9ba",
+      "116100e571bfba8d49d74393"
+    ],
+    "sheet": "output/localization-v1/source-review/source-18.jpg"
+  },
+  {
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "sample_ids": [
+      "e91455d1eaf3f4628af54a4d",
+      "a19e997abe0988bfff2a4efd",
+      "71ac220e52193adb25d24b7e",
+      "52018da30b8135314a7094e9",
+      "fdf8c4f873e577aa1b93c215",
+      "141446c788b9316034c634f6"
+    ],
+    "sheet": "output/localization-v1/source-review/source-19.jpg"
+  },
+  {
+    "episode_id": "ep-b3f1b6687fc723ca",
+    "sample_ids": [
+      "2e67556006d32e03d2474011",
+      "e2763752d32fdac945c10dec",
+      "9721de47f7714257e00a867a",
+      "bb4510f4c57fd6c227253068",
+      "333e06ac9a09c30f29b6e93c",
+      "55511d75f8fc8d2a5a75bfbe"
+    ],
+    "sheet": "output/localization-v1/source-review/source-20.jpg"
+  },
+  {
+    "episode_id": "ep-c1c313b64f579794",
+    "sample_ids": [
+      "dbdf83069399aecfc36a86dc",
+      "57e85d63627fad7c3303a020",
+      "11ac9626034d472fc09e52ae",
+      "be607800e5bac284719d1ed0",
+      "140440af992a9c5e942834a6",
+      "2ba86756722e977e9136f5ec"
+    ],
+    "sheet": "output/localization-v1/source-review/source-21.jpg"
+  },
+  {
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "sample_ids": [
+      "921e31ffe36166dcac848fd4",
+      "514424972b48b0b3ffbace84",
+      "9cbf08cde155468dee424887",
+      "7cfa5227ba88850ae7ff4f6c",
+      "4b02546f2a4a11b8a8b0174a",
+      "d69a96fa3f322425dd9b79ad"
+    ],
+    "sheet": "output/localization-v1/source-review/source-22.jpg"
+  },
+  {
+    "episode_id": "ep-e614ca27a15019cd",
+    "sample_ids": [
+      "e132ec0b0278c278ea0bc32a",
+      "9d30132b7c1ec85c1aeedc53",
+      "9519979e31f9717d2ed1f28f",
+      "774479e98326aac5a8dcc6c0",
+      "b5a74e5542601273a5ecbc15",
+      "b856445a9a937c993fc2e3e7"
+    ],
+    "sheet": "output/localization-v1/source-review/source-23.jpg"
+  },
+  {
+    "episode_id": "dv-077a07eb73fdb91b",
+    "sample_ids": [
+      "5051c9dd9adc497c72618757"
+    ],
+    "sheet": "output/localization-v1/source-review/source-24.jpg"
+  },
+  {
+    "episode_id": "dv-122c74a567057f0f",
+    "sample_ids": [
+      "a20428c1990cd523cdd89ca6"
+    ],
+    "sheet": "output/localization-v1/source-review/source-25.jpg"
+  },
+  {
+    "episode_id": "dv-13cb7ede57cfce80",
+    "sample_ids": [
+      "4f9ef36f6df40878add6ed00"
+    ],
+    "sheet": "output/localization-v1/source-review/source-26.jpg"
+  },
+  {
+    "episode_id": "dv-2ce2e6667c4b4d0a",
+    "sample_ids": [
+      "f2e70d5828f7c4586f3de8ac"
+    ],
+    "sheet": "output/localization-v1/source-review/source-27.jpg"
+  },
+  {
+    "episode_id": "dv-358dc094893009b1",
+    "sample_ids": [
+      "5af0f23f519851cb0de3e566"
+    ],
+    "sheet": "output/localization-v1/source-review/source-28.jpg"
+  },
+  {
+    "episode_id": "dv-5379eae9425594a5",
+    "sample_ids": [
+      "a1f47aa734c874a507daca68"
+    ],
+    "sheet": "output/localization-v1/source-review/source-29.jpg"
+  },
+  {
+    "episode_id": "dv-633a68f3856a13b9",
+    "sample_ids": [
+      "8575af3e1c36c9e08a75ea4b"
+    ],
+    "sheet": "output/localization-v1/source-review/source-30.jpg"
+  },
+  {
+    "episode_id": "dv-673fa0ed90d3c06a",
+    "sample_ids": [
+      "94dbe5a2e2f303940c1a6c61"
+    ],
+    "sheet": "output/localization-v1/source-review/source-31.jpg"
+  },
+  {
+    "episode_id": "dv-8a5eba2e07a4edba",
+    "sample_ids": [
+      "2f87117862b56a30f2d0d7a2"
+    ],
+    "sheet": "output/localization-v1/source-review/source-32.jpg"
+  },
+  {
+    "episode_id": "dv-8e6a48b09752b418",
+    "sample_ids": [
+      "574adb306d856e5601a31e0e"
+    ],
+    "sheet": "output/localization-v1/source-review/source-33.jpg"
+  },
+  {
+    "episode_id": "dv-9532099dbadcd75d",
+    "sample_ids": [
+      "d5a579ab97334d0767adf376"
+    ],
+    "sheet": "output/localization-v1/source-review/source-34.jpg"
+  },
+  {
+    "episode_id": "dv-b1efcf310ae19cba",
+    "sample_ids": [
+      "d5197860444d78672aab0395"
+    ],
+    "sheet": "output/localization-v1/source-review/source-35.jpg"
+  },
+  {
+    "episode_id": "dv-b80308c130c7003b",
+    "sample_ids": [
+      "f360e8598daa5120dce54e3a"
+    ],
+    "sheet": "output/localization-v1/source-review/source-36.jpg"
+  },
+  {
+    "episode_id": "dv-b860109d640354aa",
+    "sample_ids": [
+      "30a155b90fa32fec92232c46"
+    ],
+    "sheet": "output/localization-v1/source-review/source-37.jpg"
+  },
+  {
+    "episode_id": "dv-d6ae3400348a5fe9",
+    "sample_ids": [
+      "4955efe61728f4cdcfb0e745"
+    ],
+    "sheet": "output/localization-v1/source-review/source-38.jpg"
+  },
+  {
+    "episode_id": "dv-e8d0b4406873fe07",
+    "sample_ids": [
+      "32851e9f486bf2649557e1ca"
+    ],
+    "sheet": "output/localization-v1/source-review/source-39.jpg"
+  },
+  {
+    "episode_id": "dv-f5d425826f4d5906",
+    "sample_ids": [
+      "12900d2233da1d43cb91acff"
+    ],
+    "sheet": "output/localization-v1/source-review/source-40.jpg"
+  },
+  {
+    "episode_id": "dv-fecbdda0db4c76e8",
+    "sample_ids": [
+      "125637b0e61e8c47da9ce086"
+    ],
+    "sheet": "output/localization-v1/source-review/source-41.jpg"
+  }
+]

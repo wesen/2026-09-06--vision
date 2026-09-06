@@ -1,0 +1,4076 @@
+[
+  {
+    "aliases": [
+      {
+        "id": "7f1ae70888f44c1635be",
+        "kind": "state"
+      },
+      {
+        "id": "0",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-008b5e55af631629",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/7f1ae70888f44c1635be.png",
+    "image_sha256": "6236bb5878b9e161565e95f95ea9242b6c6f90ad6b9feea37450d4db7094df5a",
+    "manifest_sha256": "04783eedb35e6d9f2e4049c86b5251ad4fcee93f9daf74f747808edf90b3ba1a",
+    "mapped_class": "refrigerator",
+    "pts_us": 0,
+    "requested_class": "fridge",
+    "requested_entity": "dv-008b5e55af631629:object-308",
+    "sample_id": "5d4a12e0982680b61cf08bd5",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-008b5e55af631629/attempt-0001/video.mp4",
+    "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "2f135f655694d5340186",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-008b5e55af631629",
+    "frame_index": 14,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/2f135f655694d5340186.png",
+    "image_sha256": "cc1c538107f953c5f885cfc103fa8697c84bbef88dc27819c8b60026d424d504",
+    "manifest_sha256": "04783eedb35e6d9f2e4049c86b5251ad4fcee93f9daf74f747808edf90b3ba1a",
+    "mapped_class": "refrigerator",
+    "pts_us": 1400000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-008b5e55af631629:object-308",
+    "sample_id": "bc0911c401e7875e91061344",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-008b5e55af631629/attempt-0001/video.mp4",
+    "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "dc4b9a695b5c78073a7e",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-008b5e55af631629",
+    "frame_index": 28,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/dc4b9a695b5c78073a7e.png",
+    "image_sha256": "a567f3609089777138884f8386e4e97f2f00051ad1ad146552f55515f55c8ccf",
+    "manifest_sha256": "04783eedb35e6d9f2e4049c86b5251ad4fcee93f9daf74f747808edf90b3ba1a",
+    "mapped_class": "refrigerator",
+    "pts_us": 2800000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-008b5e55af631629:object-308",
+    "sample_id": "2841eff78a84b90fb1a90ad2",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-008b5e55af631629/attempt-0001/video.mp4",
+    "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "5334b8cb3384c60aba0f",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-008b5e55af631629",
+    "frame_index": 41,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/5334b8cb3384c60aba0f.png",
+    "image_sha256": "a7658dc2ef282d5182b92a3b9f6f97f13376117200bc5443e8647615498b4a1d",
+    "manifest_sha256": "04783eedb35e6d9f2e4049c86b5251ad4fcee93f9daf74f747808edf90b3ba1a",
+    "mapped_class": "refrigerator",
+    "pts_us": 4100000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-008b5e55af631629:object-308",
+    "sample_id": "32b949b927976f14871a6f02",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-008b5e55af631629/attempt-0001/video.mp4",
+    "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "751121bf00d29dc96926",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-008b5e55af631629",
+    "frame_index": 55,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/751121bf00d29dc96926.png",
+    "image_sha256": "68400eee901371bdc6540839e15475801a567ab3b73a05fcdaa8f8061fcb6099",
+    "manifest_sha256": "04783eedb35e6d9f2e4049c86b5251ad4fcee93f9daf74f747808edf90b3ba1a",
+    "mapped_class": "refrigerator",
+    "pts_us": 5500000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-008b5e55af631629:object-308",
+    "sample_id": "23116bd1d1ff93b8716d67d3",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-008b5e55af631629/attempt-0001/video.mp4",
+    "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "6a5bb4beddd18654115c",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-008b5e55af631629",
+    "frame_index": 69,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/6a5bb4beddd18654115c.png",
+    "image_sha256": "095955f102309ec2993d528c9b2fb986c36e6512f44ed29e647602ef4a4900e0",
+    "manifest_sha256": "04783eedb35e6d9f2e4049c86b5251ad4fcee93f9daf74f747808edf90b3ba1a",
+    "mapped_class": "refrigerator",
+    "pts_us": 6900000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-008b5e55af631629:object-308",
+    "sample_id": "b2c68887030d7a09aaafa1f9",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-008b5e55af631629/attempt-0001/video.mp4",
+    "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "dec431f9f42e59573a62",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-03c8a2dbcd624cf8",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/dec431f9f42e59573a62.png",
+    "image_sha256": "b7b6385815e5eff127942fd083cb15ff7b767a8a91e9d1396428bd552c336ffb",
+    "manifest_sha256": "9a378ca208803a0b0405f2bce9e48f7387dc1928511a330f3a969b0f3897c679",
+    "mapped_class": "refrigerator",
+    "pts_us": 0,
+    "requested_class": "fridge",
+    "requested_entity": "dv-03c8a2dbcd624cf8:object-308",
+    "sample_id": "658f5ade547abb730e9cf865",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-03c8a2dbcd624cf8/attempt-0001/video.mp4",
+    "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "0121af99108f5833aa25",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-03c8a2dbcd624cf8",
+    "frame_index": 7,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/0121af99108f5833aa25.png",
+    "image_sha256": "9f4f7a6fdec90a8d5204405ba4ce3a4838872b9c8cb0ead942fca010f7c21fdd",
+    "manifest_sha256": "9a378ca208803a0b0405f2bce9e48f7387dc1928511a330f3a969b0f3897c679",
+    "mapped_class": "refrigerator",
+    "pts_us": 700000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-03c8a2dbcd624cf8:object-308",
+    "sample_id": "5278d1c22a221bc6ca33fe22",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-03c8a2dbcd624cf8/attempt-0001/video.mp4",
+    "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "e8ba9ffda316a3f866ea",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-03c8a2dbcd624cf8",
+    "frame_index": 14,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/e8ba9ffda316a3f866ea.png",
+    "image_sha256": "30f57ebdf63892abb290d5e2043965e1cbb23af948d33217367ebffaef8f5e48",
+    "manifest_sha256": "9a378ca208803a0b0405f2bce9e48f7387dc1928511a330f3a969b0f3897c679",
+    "mapped_class": "refrigerator",
+    "pts_us": 1400000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-03c8a2dbcd624cf8:object-308",
+    "sample_id": "b7bb24e901de4432deeefd01",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-03c8a2dbcd624cf8/attempt-0001/video.mp4",
+    "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "818a1f998294896693c6",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-03c8a2dbcd624cf8",
+    "frame_index": 21,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/818a1f998294896693c6.png",
+    "image_sha256": "12ebfd066076549217562636a5be005fb94024ad37695de3cb8a7ef6e4ece18e",
+    "manifest_sha256": "9a378ca208803a0b0405f2bce9e48f7387dc1928511a330f3a969b0f3897c679",
+    "mapped_class": "refrigerator",
+    "pts_us": 2100000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-03c8a2dbcd624cf8:object-308",
+    "sample_id": "dfcda5cba4ef1d8c23d87686",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-03c8a2dbcd624cf8/attempt-0001/video.mp4",
+    "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "720fdeea729ce4af8829",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-03c8a2dbcd624cf8",
+    "frame_index": 28,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/720fdeea729ce4af8829.png",
+    "image_sha256": "90f1742193e97c329a0b04666df4bc0c66e86588857773a003f0e6b84c4c3794",
+    "manifest_sha256": "9a378ca208803a0b0405f2bce9e48f7387dc1928511a330f3a969b0f3897c679",
+    "mapped_class": "refrigerator",
+    "pts_us": 2800000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-03c8a2dbcd624cf8:object-308",
+    "sample_id": "58306fa83d57fee4c0ab0fc4",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-03c8a2dbcd624cf8/attempt-0001/video.mp4",
+    "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "ab23cdee0841547a5be3",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-03c8a2dbcd624cf8",
+    "frame_index": 35,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/ab23cdee0841547a5be3.png",
+    "image_sha256": "263cdd22f7cfac26166739889477fc28b4262d9f01d711265cb2f0420cba69d8",
+    "manifest_sha256": "9a378ca208803a0b0405f2bce9e48f7387dc1928511a330f3a969b0f3897c679",
+    "mapped_class": "refrigerator",
+    "pts_us": 3500000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-03c8a2dbcd624cf8:object-308",
+    "sample_id": "a42f25cd4a4cad6e58a9af3e",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-03c8a2dbcd624cf8/attempt-0001/video.mp4",
+    "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "979332678203cc020cdb",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-22a313084fd800ca",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/979332678203cc020cdb.png",
+    "image_sha256": "4cd6a973882d733d6637e9f91dcdefc99f76ffa72edf596d3ea59b16e10f72f0",
+    "manifest_sha256": "3ff5de5f8c7705ad571e77cfaeda3849f2d0a0ea0898411939bd55187b753cda",
+    "mapped_class": "refrigerator",
+    "pts_us": 0,
+    "requested_class": "fridge",
+    "requested_entity": "dv-22a313084fd800ca:object-155",
+    "sample_id": "4e27c53c195306dcabdd374b",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-22a313084fd800ca/attempt-0001/video.mp4",
+    "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "ea921f01daddff9c3dd3",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-22a313084fd800ca",
+    "frame_index": 7,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/ea921f01daddff9c3dd3.png",
+    "image_sha256": "e97144c34242ffed73db6f32b7ff2d34ff3e6e1ab4013b98b853708b9934855b",
+    "manifest_sha256": "3ff5de5f8c7705ad571e77cfaeda3849f2d0a0ea0898411939bd55187b753cda",
+    "mapped_class": "refrigerator",
+    "pts_us": 700000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-22a313084fd800ca:object-155",
+    "sample_id": "b4a1d964581da99460a23ad5",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-22a313084fd800ca/attempt-0001/video.mp4",
+    "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "0f4a6097570b8d780d58",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-22a313084fd800ca",
+    "frame_index": 14,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/0f4a6097570b8d780d58.png",
+    "image_sha256": "f6345ee179876f988bfea93b6bd2df78c33789a01ee4e28af2d6ef79608cacd8",
+    "manifest_sha256": "3ff5de5f8c7705ad571e77cfaeda3849f2d0a0ea0898411939bd55187b753cda",
+    "mapped_class": "refrigerator",
+    "pts_us": 1400000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-22a313084fd800ca:object-155",
+    "sample_id": "0ad6a710abdd47d925e880d0",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-22a313084fd800ca/attempt-0001/video.mp4",
+    "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "a07cb01407069a7a9b47",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-22a313084fd800ca",
+    "frame_index": 21,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/a07cb01407069a7a9b47.png",
+    "image_sha256": "d4fd3f338fb26e13cad180a679b4987ad6fc26a91a701e0f0be23df5f2f1436f",
+    "manifest_sha256": "3ff5de5f8c7705ad571e77cfaeda3849f2d0a0ea0898411939bd55187b753cda",
+    "mapped_class": "refrigerator",
+    "pts_us": 2100000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-22a313084fd800ca:object-155",
+    "sample_id": "844d965997898af8a409fa4c",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-22a313084fd800ca/attempt-0001/video.mp4",
+    "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "6544361b41bb5ab255ec",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-22a313084fd800ca",
+    "frame_index": 28,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/6544361b41bb5ab255ec.png",
+    "image_sha256": "713244807ca0cc5ff9853aaa424e761a6ed76701882df7d4a29b5aa0200322db",
+    "manifest_sha256": "3ff5de5f8c7705ad571e77cfaeda3849f2d0a0ea0898411939bd55187b753cda",
+    "mapped_class": "refrigerator",
+    "pts_us": 2800000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-22a313084fd800ca:object-155",
+    "sample_id": "399a6eb792e95fbc25c95376",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-22a313084fd800ca/attempt-0001/video.mp4",
+    "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "e20b92b0bd2ef88d9ff1",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-22a313084fd800ca",
+    "frame_index": 35,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/e20b92b0bd2ef88d9ff1.png",
+    "image_sha256": "e42adee6000b862e335cfe6ecb24510c374a3e1ad88389cf302d5da311a60068",
+    "manifest_sha256": "3ff5de5f8c7705ad571e77cfaeda3849f2d0a0ea0898411939bd55187b753cda",
+    "mapped_class": "refrigerator",
+    "pts_us": 3500000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-22a313084fd800ca:object-155",
+    "sample_id": "56ec727fc14cbfb94a633f12",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-22a313084fd800ca/attempt-0001/video.mp4",
+    "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "c08d61d9b4fd1c5147e2",
+        "kind": "state"
+      },
+      {
+        "id": "9",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-7726ded72630455a",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/c08d61d9b4fd1c5147e2.png",
+    "image_sha256": "ee569fbb2e1347438f29bdc0b364001779a5a32baccb7165c2f3252cc33068f6",
+    "manifest_sha256": "345fbfe420cd4eb565d282a5ad28fe20fe7548f23297fdb38a2e45ee662b24a0",
+    "mapped_class": "refrigerator",
+    "pts_us": 0,
+    "requested_class": "fridge",
+    "requested_entity": "dv-7726ded72630455a:object-308",
+    "sample_id": "5ac2776b925d5d8c78bc72b9",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-7726ded72630455a/attempt-0001/video.mp4",
+    "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "76a76a16c16b6fc73a38",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-7726ded72630455a",
+    "frame_index": 14,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/76a76a16c16b6fc73a38.png",
+    "image_sha256": "31381295db5ecb7068ef4fbd3cd2ae59715f7c4449a544198ef21207a5d696a5",
+    "manifest_sha256": "345fbfe420cd4eb565d282a5ad28fe20fe7548f23297fdb38a2e45ee662b24a0",
+    "mapped_class": "refrigerator",
+    "pts_us": 1400000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-7726ded72630455a:object-308",
+    "sample_id": "0c027d158de634992a8a41e2",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-7726ded72630455a/attempt-0001/video.mp4",
+    "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "d0359ddc5d37b5f4e561",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-7726ded72630455a",
+    "frame_index": 27,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/d0359ddc5d37b5f4e561.png",
+    "image_sha256": "96bf8494047bb668abfdbf6e4748c3f72da4eee3105a034faeec47d9c7b161c0",
+    "manifest_sha256": "345fbfe420cd4eb565d282a5ad28fe20fe7548f23297fdb38a2e45ee662b24a0",
+    "mapped_class": "refrigerator",
+    "pts_us": 2700000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-7726ded72630455a:object-308",
+    "sample_id": "e0967efec912b7b757170438",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-7726ded72630455a/attempt-0001/video.mp4",
+    "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "904a4f91bd6ffe0b73af",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-7726ded72630455a",
+    "frame_index": 41,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/904a4f91bd6ffe0b73af.png",
+    "image_sha256": "063262846da75d87035026dfe90ebe57bc77177a02045f4adcda0617acd09c6f",
+    "manifest_sha256": "345fbfe420cd4eb565d282a5ad28fe20fe7548f23297fdb38a2e45ee662b24a0",
+    "mapped_class": "refrigerator",
+    "pts_us": 4100000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-7726ded72630455a:object-308",
+    "sample_id": "2c2ee9c630f66900b0f80a3b",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-7726ded72630455a/attempt-0001/video.mp4",
+    "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "0f41e8aef778f50b7efa",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-7726ded72630455a",
+    "frame_index": 54,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/0f41e8aef778f50b7efa.png",
+    "image_sha256": "e66f60a1c6a2b2bcb2a9f686c89da9254777bd91e18ba54714fc674d7aba85b1",
+    "manifest_sha256": "345fbfe420cd4eb565d282a5ad28fe20fe7548f23297fdb38a2e45ee662b24a0",
+    "mapped_class": "refrigerator",
+    "pts_us": 5400000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-7726ded72630455a:object-308",
+    "sample_id": "cc3f88e1646ce25dd75fe530",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-7726ded72630455a/attempt-0001/video.mp4",
+    "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "14d6452de4baa5781df7",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-7726ded72630455a",
+    "frame_index": 68,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/14d6452de4baa5781df7.png",
+    "image_sha256": "a3e0b5896d2da098b14dba08a96e4aa59c6359ea5abdb48ba5b34f199302f36b",
+    "manifest_sha256": "345fbfe420cd4eb565d282a5ad28fe20fe7548f23297fdb38a2e45ee662b24a0",
+    "mapped_class": "refrigerator",
+    "pts_us": 6800000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-7726ded72630455a:object-308",
+    "sample_id": "10c040c6e7f67f99cc95cb08",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-7726ded72630455a/attempt-0001/video.mp4",
+    "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "368fad1a2a15f4d014dd",
+        "kind": "state"
+      },
+      {
+        "id": "13",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-af669d3e3a486780",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/368fad1a2a15f4d014dd.png",
+    "image_sha256": "d25071c715e652c283c0b7b51b511c012306a466f5aaad9fad43f7b63e087e34",
+    "manifest_sha256": "7435478512c2b01e2698d811d13538cc48af2e8f6d42c6f51a97243257c40d85",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "dv-af669d3e3a486780:object-174",
+    "sample_id": "d83a66c6b218c8b7e32dc0e9",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-af669d3e3a486780/attempt-0001/video.mp4",
+    "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "f3d36b8d9db5ad18729b",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-af669d3e3a486780",
+    "frame_index": 14,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/f3d36b8d9db5ad18729b.png",
+    "image_sha256": "6ba2c45d1bc951e40736919a8609a67d3b0e17896cfd54ade2c5f230e978c008",
+    "manifest_sha256": "7435478512c2b01e2698d811d13538cc48af2e8f6d42c6f51a97243257c40d85",
+    "mapped_class": "microwave",
+    "pts_us": 1400000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-af669d3e3a486780:object-174",
+    "sample_id": "46c6c0b8d402977e56e70144",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-af669d3e3a486780/attempt-0001/video.mp4",
+    "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "00f9f41f212c8c4f4dad",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-af669d3e3a486780",
+    "frame_index": 29,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/00f9f41f212c8c4f4dad.png",
+    "image_sha256": "2e7a10ae8710b795bb2d13084c31bf9f57afdb7ed0db9c899c3ba19dd0240307",
+    "manifest_sha256": "7435478512c2b01e2698d811d13538cc48af2e8f6d42c6f51a97243257c40d85",
+    "mapped_class": "microwave",
+    "pts_us": 2900000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-af669d3e3a486780:object-174",
+    "sample_id": "532173a7365c82cc5f6faed9",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-af669d3e3a486780/attempt-0001/video.mp4",
+    "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "6841f9b19a46a0b2fbcf",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-af669d3e3a486780",
+    "frame_index": 43,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/6841f9b19a46a0b2fbcf.png",
+    "image_sha256": "3311f024048ee8c0fc535e4380fc7a2f54ab0535ce8fdd39a9b8d63df83d657a",
+    "manifest_sha256": "7435478512c2b01e2698d811d13538cc48af2e8f6d42c6f51a97243257c40d85",
+    "mapped_class": "microwave",
+    "pts_us": 4300000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-af669d3e3a486780:object-174",
+    "sample_id": "a363454de88fb5a3eaa54131",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-af669d3e3a486780/attempt-0001/video.mp4",
+    "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "d8b07f0b431364d449be",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-af669d3e3a486780",
+    "frame_index": 58,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/d8b07f0b431364d449be.png",
+    "image_sha256": "ca0cd5d1467cbcdbff147590ecca3901da1cd4fdaee4d88c0fed07226760e625",
+    "manifest_sha256": "7435478512c2b01e2698d811d13538cc48af2e8f6d42c6f51a97243257c40d85",
+    "mapped_class": "microwave",
+    "pts_us": 5800000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-af669d3e3a486780:object-174",
+    "sample_id": "ea2dcc6c9bc681384e0da4f5",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-af669d3e3a486780/attempt-0001/video.mp4",
+    "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "3b2d8850f23d8ee56164",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-af669d3e3a486780",
+    "frame_index": 72,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/3b2d8850f23d8ee56164.png",
+    "image_sha256": "0f6b52fddf16550634142a30cc933d34394d8db6dfcee3f022c02f2cfc7f91f2",
+    "manifest_sha256": "7435478512c2b01e2698d811d13538cc48af2e8f6d42c6f51a97243257c40d85",
+    "mapped_class": "microwave",
+    "pts_us": 7200000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-af669d3e3a486780:object-174",
+    "sample_id": "6a32a0db3b675000dddf892d",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-af669d3e3a486780/attempt-0001/video.mp4",
+    "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "547dc79a1570dba9aa12",
+        "kind": "state"
+      },
+      {
+        "id": "15",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-b78c9de6650abd04",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/547dc79a1570dba9aa12.png",
+    "image_sha256": "3efb51792827ad5316e0edbe9f99ce4657154524eb624e0b463c2f4c05c3368e",
+    "manifest_sha256": "91399b5e6104ba740646dfdfab42e5b0b77db99c341fd6002e944f5ff2cf569f",
+    "mapped_class": "refrigerator",
+    "pts_us": 0,
+    "requested_class": "fridge",
+    "requested_entity": "dv-b78c9de6650abd04:object-155",
+    "sample_id": "3f4d44342189a43768d92d59",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-b78c9de6650abd04/attempt-0001/video.mp4",
+    "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "54740488f75e8af943e5",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-b78c9de6650abd04",
+    "frame_index": 17,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/54740488f75e8af943e5.png",
+    "image_sha256": "cc1f66bea6440884074f5923ce467d426ef338cece1bc11ae162a027cc7558ef",
+    "manifest_sha256": "91399b5e6104ba740646dfdfab42e5b0b77db99c341fd6002e944f5ff2cf569f",
+    "mapped_class": "refrigerator",
+    "pts_us": 1700000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-b78c9de6650abd04:object-155",
+    "sample_id": "b4fbe73942ac92a22661ae5e",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-b78c9de6650abd04/attempt-0001/video.mp4",
+    "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "b7d18aa39daa1c8332b5",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-b78c9de6650abd04",
+    "frame_index": 34,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/b7d18aa39daa1c8332b5.png",
+    "image_sha256": "0dc992d90e18b200f22ac59eb32925f0dcf6aa0b394ede532f541cd4ccf89c83",
+    "manifest_sha256": "91399b5e6104ba740646dfdfab42e5b0b77db99c341fd6002e944f5ff2cf569f",
+    "mapped_class": "refrigerator",
+    "pts_us": 3400000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-b78c9de6650abd04:object-155",
+    "sample_id": "c5d2593331f86462235ce292",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-b78c9de6650abd04/attempt-0001/video.mp4",
+    "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "7107c552a41f6a280732",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-b78c9de6650abd04",
+    "frame_index": 51,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/7107c552a41f6a280732.png",
+    "image_sha256": "f4b7baa8cd9d8ad5e18eda3b23f950c06f87158b2cde5dd9146741d94e9b3cdd",
+    "manifest_sha256": "91399b5e6104ba740646dfdfab42e5b0b77db99c341fd6002e944f5ff2cf569f",
+    "mapped_class": "refrigerator",
+    "pts_us": 5100000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-b78c9de6650abd04:object-155",
+    "sample_id": "4304f3085c6a18a17fad92dc",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-b78c9de6650abd04/attempt-0001/video.mp4",
+    "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "f6fde327f1e1c9a270a3",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-b78c9de6650abd04",
+    "frame_index": 68,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/f6fde327f1e1c9a270a3.png",
+    "image_sha256": "698c309e13db7d561774262067a0075e4630872c7c5326f5dad145c9c3260997",
+    "manifest_sha256": "91399b5e6104ba740646dfdfab42e5b0b77db99c341fd6002e944f5ff2cf569f",
+    "mapped_class": "refrigerator",
+    "pts_us": 6800000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-b78c9de6650abd04:object-155",
+    "sample_id": "c79572bede497bb2ec4dfb12",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-b78c9de6650abd04/attempt-0001/video.mp4",
+    "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "a13df5791fefc26e7932",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-b78c9de6650abd04",
+    "frame_index": 85,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/a13df5791fefc26e7932.png",
+    "image_sha256": "685fbb5f5de0f359713b31c595fe34ee1a6f75c68fe4e8e3855715cafabf72f3",
+    "manifest_sha256": "91399b5e6104ba740646dfdfab42e5b0b77db99c341fd6002e944f5ff2cf569f",
+    "mapped_class": "refrigerator",
+    "pts_us": 8500000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-b78c9de6650abd04:object-155",
+    "sample_id": "fd114f383992cbb0e68133e2",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-b78c9de6650abd04/attempt-0001/video.mp4",
+    "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "fde11c7c74b32842849e",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-bc11642e2c451020",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/fde11c7c74b32842849e.png",
+    "image_sha256": "0b1b399f3584f166e61244280d06c99f0c7eb7bf39f026ac91b19594a209410d",
+    "manifest_sha256": "56305f657a43a309ebebe07a44976e9d53a0840da891409cfeb80396d68542f0",
+    "mapped_class": "refrigerator",
+    "pts_us": 0,
+    "requested_class": "fridge",
+    "requested_entity": "dv-bc11642e2c451020:object-155",
+    "sample_id": "7c667d4f1f7033bb7a4913d7",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-bc11642e2c451020/attempt-0001/video.mp4",
+    "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "b689185f1f8fba76434b",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-bc11642e2c451020",
+    "frame_index": 7,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/b689185f1f8fba76434b.png",
+    "image_sha256": "f08732e06988adade880c0bff55594b1ea1a14b38dbe2dc8faafdbe23432702f",
+    "manifest_sha256": "56305f657a43a309ebebe07a44976e9d53a0840da891409cfeb80396d68542f0",
+    "mapped_class": "refrigerator",
+    "pts_us": 700000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-bc11642e2c451020:object-155",
+    "sample_id": "629e05faac902f1d5be0038e",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-bc11642e2c451020/attempt-0001/video.mp4",
+    "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "257a74975dffeb6d7438",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-bc11642e2c451020",
+    "frame_index": 14,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/257a74975dffeb6d7438.png",
+    "image_sha256": "83364b67503994f063300232f81c5df17cab8216728e750249e0c6e75c4141f5",
+    "manifest_sha256": "56305f657a43a309ebebe07a44976e9d53a0840da891409cfeb80396d68542f0",
+    "mapped_class": "refrigerator",
+    "pts_us": 1400000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-bc11642e2c451020:object-155",
+    "sample_id": "321b9a6091109e903a8b371c",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-bc11642e2c451020/attempt-0001/video.mp4",
+    "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "718d974ce7dff4fb5822",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-bc11642e2c451020",
+    "frame_index": 21,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/718d974ce7dff4fb5822.png",
+    "image_sha256": "488990467500872d7708237bdfec710d6848f4774b7fab3e85c804105cd80e13",
+    "manifest_sha256": "56305f657a43a309ebebe07a44976e9d53a0840da891409cfeb80396d68542f0",
+    "mapped_class": "refrigerator",
+    "pts_us": 2100000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-bc11642e2c451020:object-155",
+    "sample_id": "5fed5c25e8982b6db6cd1be8",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-bc11642e2c451020/attempt-0001/video.mp4",
+    "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "3b61e5cba11acd80d8f9",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-bc11642e2c451020",
+    "frame_index": 28,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/3b61e5cba11acd80d8f9.png",
+    "image_sha256": "9c024e51b2e3ecb5475d0030e5a2ea97ca8c68fdf40455224f04af2437366b88",
+    "manifest_sha256": "56305f657a43a309ebebe07a44976e9d53a0840da891409cfeb80396d68542f0",
+    "mapped_class": "refrigerator",
+    "pts_us": 2800000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-bc11642e2c451020:object-155",
+    "sample_id": "f60ed7aab4920dcd820f3f74",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-bc11642e2c451020/attempt-0001/video.mp4",
+    "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "27dc166feea1d5e31445",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-bc11642e2c451020",
+    "frame_index": 35,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/27dc166feea1d5e31445.png",
+    "image_sha256": "84e37bf231fd3aafd20ef48bebe5d289a00dc0fda6a0dcdab3ea31bdb102faa1",
+    "manifest_sha256": "56305f657a43a309ebebe07a44976e9d53a0840da891409cfeb80396d68542f0",
+    "mapped_class": "refrigerator",
+    "pts_us": 3500000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-bc11642e2c451020:object-155",
+    "sample_id": "0726333fb1c323b244a29349",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-bc11642e2c451020/attempt-0001/video.mp4",
+    "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "325160a04f6eb536fba3",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-d6a1fa73f031c686",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/325160a04f6eb536fba3.png",
+    "image_sha256": "958f63334440e397cc0cdd1a23e9443e6ac140e3f491fe5f4a602f5857ce14a6",
+    "manifest_sha256": "4896238552308fe84c87d71b5b6653f1dc1ee5f4975881c97db8eea8584e96ea",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "dv-d6a1fa73f031c686:object-174",
+    "sample_id": "efe7e7e79d3f586f701a878c",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-d6a1fa73f031c686/attempt-0001/video.mp4",
+    "video_sha256": "6767224ac7249441acf0814e61fbcd31263e3a89a09c4dbc418ac1b6fa885c0a",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "79c26846e9cc2fd6d3da",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-d6a1fa73f031c686",
+    "frame_index": 8,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/79c26846e9cc2fd6d3da.png",
+    "image_sha256": "0f369ed94a7c80cfaf8dd88c7b4c1c3494c8f90d321c28eb304ce6fa565588da",
+    "manifest_sha256": "4896238552308fe84c87d71b5b6653f1dc1ee5f4975881c97db8eea8584e96ea",
+    "mapped_class": "microwave",
+    "pts_us": 800000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-d6a1fa73f031c686:object-174",
+    "sample_id": "90bd8110771d05fc9085c451",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-d6a1fa73f031c686/attempt-0001/video.mp4",
+    "video_sha256": "6767224ac7249441acf0814e61fbcd31263e3a89a09c4dbc418ac1b6fa885c0a",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "aa8858ceb4bb02f0c1f7",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-d6a1fa73f031c686",
+    "frame_index": 15,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/aa8858ceb4bb02f0c1f7.png",
+    "image_sha256": "e752041fd0c21c55d770f8f81552859245d79280ec1d4cabd9355d596f48bc62",
+    "manifest_sha256": "4896238552308fe84c87d71b5b6653f1dc1ee5f4975881c97db8eea8584e96ea",
+    "mapped_class": "microwave",
+    "pts_us": 1500000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-d6a1fa73f031c686:object-174",
+    "sample_id": "837a31d9a3d631c411ee1394",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-d6a1fa73f031c686/attempt-0001/video.mp4",
+    "video_sha256": "6767224ac7249441acf0814e61fbcd31263e3a89a09c4dbc418ac1b6fa885c0a",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "e64b72c881b1ab686b0b",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-d6a1fa73f031c686",
+    "frame_index": 23,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/e64b72c881b1ab686b0b.png",
+    "image_sha256": "51a948046edd0134d923f26375c05ce2c277eea7436c6fbba30c91713b975118",
+    "manifest_sha256": "4896238552308fe84c87d71b5b6653f1dc1ee5f4975881c97db8eea8584e96ea",
+    "mapped_class": "microwave",
+    "pts_us": 2300000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-d6a1fa73f031c686:object-174",
+    "sample_id": "f0aed7bffd7fcffe2c38664c",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-d6a1fa73f031c686/attempt-0001/video.mp4",
+    "video_sha256": "6767224ac7249441acf0814e61fbcd31263e3a89a09c4dbc418ac1b6fa885c0a",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "f29f72f1b843b07e3f76",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-d6a1fa73f031c686",
+    "frame_index": 30,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/f29f72f1b843b07e3f76.png",
+    "image_sha256": "ea21e5d33a617dceea118dad17f597aafccde24c8f8d492ca3f9abdaaac56f1b",
+    "manifest_sha256": "4896238552308fe84c87d71b5b6653f1dc1ee5f4975881c97db8eea8584e96ea",
+    "mapped_class": "microwave",
+    "pts_us": 3000000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-d6a1fa73f031c686:object-174",
+    "sample_id": "59e7b08c3f81f0148ee87ecb",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-d6a1fa73f031c686/attempt-0001/video.mp4",
+    "video_sha256": "6767224ac7249441acf0814e61fbcd31263e3a89a09c4dbc418ac1b6fa885c0a",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "8f9344968d1c0a03f3a4",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-d6a1fa73f031c686",
+    "frame_index": 38,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/8f9344968d1c0a03f3a4.png",
+    "image_sha256": "0fa6f2f8312a1613123ee86daf1c301d4f6619748e44ab3cf1504b6579907f9d",
+    "manifest_sha256": "4896238552308fe84c87d71b5b6653f1dc1ee5f4975881c97db8eea8584e96ea",
+    "mapped_class": "microwave",
+    "pts_us": 3800000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-d6a1fa73f031c686:object-174",
+    "sample_id": "9b4169dd4eb02e2879e4a67a",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-d6a1fa73f031c686/attempt-0001/video.mp4",
+    "video_sha256": "6767224ac7249441acf0814e61fbcd31263e3a89a09c4dbc418ac1b6fa885c0a",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "20b49477bb37c4d77b2e",
+        "kind": "state"
+      },
+      {
+        "id": "19",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-ddf28e0a6b4c30db",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/20b49477bb37c4d77b2e.png",
+    "image_sha256": "20c9259077a3aa9bca323c1087ff6a8a64ea0b5dcaf0808c7b24951383970c93",
+    "manifest_sha256": "6d4d76be37e8b947693e23fa2a7c74665f336dd2eb7c17413f369d868250c0e2",
+    "mapped_class": "refrigerator",
+    "pts_us": 0,
+    "requested_class": "fridge",
+    "requested_entity": "dv-ddf28e0a6b4c30db:object-155",
+    "sample_id": "9ba062c5589e2eb7baa3a320",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-ddf28e0a6b4c30db/attempt-0001/video.mp4",
+    "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "8fc3c8b53d01f9835c9b",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-ddf28e0a6b4c30db",
+    "frame_index": 17,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/8fc3c8b53d01f9835c9b.png",
+    "image_sha256": "213d7f9f91fe01ead7214704bae05043dff51f693c8a3e2cb099f1a7368b956f",
+    "manifest_sha256": "6d4d76be37e8b947693e23fa2a7c74665f336dd2eb7c17413f369d868250c0e2",
+    "mapped_class": "refrigerator",
+    "pts_us": 1700000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-ddf28e0a6b4c30db:object-155",
+    "sample_id": "7c241b70b7baef5862a3b237",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-ddf28e0a6b4c30db/attempt-0001/video.mp4",
+    "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "45df4e9daa253a8186e2",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-ddf28e0a6b4c30db",
+    "frame_index": 33,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/45df4e9daa253a8186e2.png",
+    "image_sha256": "65c86aabf541f41de3981ba6535fc20b348ca3fc0b818354e571c8518954c05f",
+    "manifest_sha256": "6d4d76be37e8b947693e23fa2a7c74665f336dd2eb7c17413f369d868250c0e2",
+    "mapped_class": "refrigerator",
+    "pts_us": 3300000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-ddf28e0a6b4c30db:object-155",
+    "sample_id": "9827a2eaa464499674f0d252",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-ddf28e0a6b4c30db/attempt-0001/video.mp4",
+    "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "fce806b627123fa16e23",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-ddf28e0a6b4c30db",
+    "frame_index": 50,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/fce806b627123fa16e23.png",
+    "image_sha256": "2eb7b129c9613c807dec3cd7822f0f484cd5b5157910003899e34a0b79dd6023",
+    "manifest_sha256": "6d4d76be37e8b947693e23fa2a7c74665f336dd2eb7c17413f369d868250c0e2",
+    "mapped_class": "refrigerator",
+    "pts_us": 5000000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-ddf28e0a6b4c30db:object-155",
+    "sample_id": "985403b6bce498d9ebaa68ce",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-ddf28e0a6b4c30db/attempt-0001/video.mp4",
+    "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "e7a35e506e70e5e76205",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-ddf28e0a6b4c30db",
+    "frame_index": 66,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/e7a35e506e70e5e76205.png",
+    "image_sha256": "17b26a94ba8f120db951b81ded1367cd4204afb188245803b8051fbd0bb298cb",
+    "manifest_sha256": "6d4d76be37e8b947693e23fa2a7c74665f336dd2eb7c17413f369d868250c0e2",
+    "mapped_class": "refrigerator",
+    "pts_us": 6600000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-ddf28e0a6b4c30db:object-155",
+    "sample_id": "6dbc5909141e7ef233eb9ee8",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-ddf28e0a6b4c30db/attempt-0001/video.mp4",
+    "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "ddbbec0b75cf70c367d2",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-ddf28e0a6b4c30db",
+    "frame_index": 83,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/ddbbec0b75cf70c367d2.png",
+    "image_sha256": "aeee89b57a0294f4d324290c47cbdfc12a4d0883bac016fbc60271288ae27708",
+    "manifest_sha256": "6d4d76be37e8b947693e23fa2a7c74665f336dd2eb7c17413f369d868250c0e2",
+    "mapped_class": "refrigerator",
+    "pts_us": 8300000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-ddf28e0a6b4c30db:object-155",
+    "sample_id": "09ef1d8cf98e52db8ba6f3d0",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-ddf28e0a6b4c30db/attempt-0001/video.mp4",
+    "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "48140edf80ae694779b0",
+        "kind": "state"
+      },
+      {
+        "id": "20",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e1975790e6ee831e",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/48140edf80ae694779b0.png",
+    "image_sha256": "9dc78f3e30f47307b7bbfbea665d4a87e4485ac087b121ce7bc2a273d0776b1c",
+    "manifest_sha256": "00efc8f0cc0d01921ba12eed8623427cb20f31428209d0209c4280f6bea75e7d",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "dv-e1975790e6ee831e:object-174",
+    "sample_id": "e4a829e3e877ba63082d37e5",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e1975790e6ee831e/attempt-0001/video.mp4",
+    "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "d51b6da035bc72efb9e3",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e1975790e6ee831e",
+    "frame_index": 14,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/d51b6da035bc72efb9e3.png",
+    "image_sha256": "571d76ab7172a97af17cb48de0354d18b61abe88595fd1dfc7146bcd851be37c",
+    "manifest_sha256": "00efc8f0cc0d01921ba12eed8623427cb20f31428209d0209c4280f6bea75e7d",
+    "mapped_class": "microwave",
+    "pts_us": 1400000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-e1975790e6ee831e:object-174",
+    "sample_id": "7c911cd5d0195c74153ebf85",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e1975790e6ee831e/attempt-0001/video.mp4",
+    "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "325e171c971f4e451886",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e1975790e6ee831e",
+    "frame_index": 29,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/325e171c971f4e451886.png",
+    "image_sha256": "22f268707eec1577e066052596620809e95f9a6d05130e598ca990d55193c670",
+    "manifest_sha256": "00efc8f0cc0d01921ba12eed8623427cb20f31428209d0209c4280f6bea75e7d",
+    "mapped_class": "microwave",
+    "pts_us": 2900000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-e1975790e6ee831e:object-174",
+    "sample_id": "b6368a94a4f342ec739b7b97",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e1975790e6ee831e/attempt-0001/video.mp4",
+    "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "39256b36b90054852ffc",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e1975790e6ee831e",
+    "frame_index": 43,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/39256b36b90054852ffc.png",
+    "image_sha256": "8bdfc25c03a9a91bacce01a0f28d2374b48315d2e1de5940331144f31033578c",
+    "manifest_sha256": "00efc8f0cc0d01921ba12eed8623427cb20f31428209d0209c4280f6bea75e7d",
+    "mapped_class": "microwave",
+    "pts_us": 4300000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-e1975790e6ee831e:object-174",
+    "sample_id": "16d0458bc01bef27ccfb2594",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e1975790e6ee831e/attempt-0001/video.mp4",
+    "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "26b3d6c18008f285898f",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e1975790e6ee831e",
+    "frame_index": 58,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/26b3d6c18008f285898f.png",
+    "image_sha256": "d6f6795e04c5426444cc07bfca1e98be9590e12099b59cfc5df0e42fdae50802",
+    "manifest_sha256": "00efc8f0cc0d01921ba12eed8623427cb20f31428209d0209c4280f6bea75e7d",
+    "mapped_class": "microwave",
+    "pts_us": 5800000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-e1975790e6ee831e:object-174",
+    "sample_id": "f1a8f4dae38967dcb48a799c",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e1975790e6ee831e/attempt-0001/video.mp4",
+    "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "f9d1139afbf1b488a8ba",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e1975790e6ee831e",
+    "frame_index": 72,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/f9d1139afbf1b488a8ba.png",
+    "image_sha256": "520a433e1f31c74e93cc3d42a3cf664d4c5770fee0a7dbdbe6fd2b62846b571a",
+    "manifest_sha256": "00efc8f0cc0d01921ba12eed8623427cb20f31428209d0209c4280f6bea75e7d",
+    "mapped_class": "microwave",
+    "pts_us": 7200000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-e1975790e6ee831e:object-174",
+    "sample_id": "fe13f5ff537f0e4293cbb917",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e1975790e6ee831e/attempt-0001/video.mp4",
+    "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "1bd7e6615b89580c9999",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/1bd7e6615b89580c9999.png",
+    "image_sha256": "acaf034199af4f77fedb17b2a16c52b31196540c5149d95ec8048476e96f9893",
+    "manifest_sha256": "744096d2cb7b05a2c9609a8f483b93f20aac77cfae18c24efa327b86fb1eb57b",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "dv-e2244cb1a1000aeb:object-174",
+    "sample_id": "2e7c40339a3efc2254bde76e",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e2244cb1a1000aeb/attempt-0001/video.mp4",
+    "video_sha256": "1fbd5e71f6853da6f1db0ef4bf6e930c65b0dd69627571ada462aaa59747d625",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "cdda3b070fbff50974e4",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "frame_index": 8,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/cdda3b070fbff50974e4.png",
+    "image_sha256": "62afebb844f6dcb4ec7f82b99379b2a77585e8ec8c0f31f8f9d59a15a752a07b",
+    "manifest_sha256": "744096d2cb7b05a2c9609a8f483b93f20aac77cfae18c24efa327b86fb1eb57b",
+    "mapped_class": "microwave",
+    "pts_us": 800000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-e2244cb1a1000aeb:object-174",
+    "sample_id": "98e5665dbe96722796e60fcf",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e2244cb1a1000aeb/attempt-0001/video.mp4",
+    "video_sha256": "1fbd5e71f6853da6f1db0ef4bf6e930c65b0dd69627571ada462aaa59747d625",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "f64bc31c1fc0326c5bc8",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "frame_index": 15,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/f64bc31c1fc0326c5bc8.png",
+    "image_sha256": "3ab9d2cabc47f7e9a574627dff5f37f3cbda89484e7abc9f244fa0ccc2271009",
+    "manifest_sha256": "744096d2cb7b05a2c9609a8f483b93f20aac77cfae18c24efa327b86fb1eb57b",
+    "mapped_class": "microwave",
+    "pts_us": 1500000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-e2244cb1a1000aeb:object-174",
+    "sample_id": "d4ec382c122af4393488253b",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e2244cb1a1000aeb/attempt-0001/video.mp4",
+    "video_sha256": "1fbd5e71f6853da6f1db0ef4bf6e930c65b0dd69627571ada462aaa59747d625",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "dc24c549ddf6f2a2e66a",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "frame_index": 23,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/dc24c549ddf6f2a2e66a.png",
+    "image_sha256": "c03efc1c1fa8e6a10973a46401bb8010330707fe6da812f41ecfd48f5c0a6fc5",
+    "manifest_sha256": "744096d2cb7b05a2c9609a8f483b93f20aac77cfae18c24efa327b86fb1eb57b",
+    "mapped_class": "microwave",
+    "pts_us": 2300000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-e2244cb1a1000aeb:object-174",
+    "sample_id": "467c549cb03ca8fa06f83717",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e2244cb1a1000aeb/attempt-0001/video.mp4",
+    "video_sha256": "1fbd5e71f6853da6f1db0ef4bf6e930c65b0dd69627571ada462aaa59747d625",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "ebf05194ed012d99b16a",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "frame_index": 30,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/ebf05194ed012d99b16a.png",
+    "image_sha256": "1b52e5541426dd6f3c159b8c960c035fb3a25df131691ccbc0f365bbb0a28525",
+    "manifest_sha256": "744096d2cb7b05a2c9609a8f483b93f20aac77cfae18c24efa327b86fb1eb57b",
+    "mapped_class": "microwave",
+    "pts_us": 3000000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-e2244cb1a1000aeb:object-174",
+    "sample_id": "d2b1418591ee1040368ae835",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e2244cb1a1000aeb/attempt-0001/video.mp4",
+    "video_sha256": "1fbd5e71f6853da6f1db0ef4bf6e930c65b0dd69627571ada462aaa59747d625",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "98f88d29e38ab6467e53",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "frame_index": 38,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/98f88d29e38ab6467e53.png",
+    "image_sha256": "0b4b990bc1a0cfceff2bc1945d455d12999173d1090c4179f99a07f78d89004b",
+    "manifest_sha256": "744096d2cb7b05a2c9609a8f483b93f20aac77cfae18c24efa327b86fb1eb57b",
+    "mapped_class": "microwave",
+    "pts_us": 3800000,
+    "requested_class": "microwave",
+    "requested_entity": "dv-e2244cb1a1000aeb:object-174",
+    "sample_id": "0c1c46be91ff4304157cb815",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e2244cb1a1000aeb/attempt-0001/video.mp4",
+    "video_sha256": "1fbd5e71f6853da6f1db0ef4bf6e930c65b0dd69627571ada462aaa59747d625",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "6ddd132fba7487389e98",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-fff8ee5abe309115",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/6ddd132fba7487389e98.png",
+    "image_sha256": "4db618dc73ddc6e5f58bef96f16b1e96dcad254b6c0086e13ba7e732a5cb3361",
+    "manifest_sha256": "b676ffaa76c4832bb91175a5de3de01b76ce7163b17644326efa7ec20f399053",
+    "mapped_class": "refrigerator",
+    "pts_us": 0,
+    "requested_class": "fridge",
+    "requested_entity": "dv-fff8ee5abe309115:object-308",
+    "sample_id": "80e5d4d85cb7650064db9277",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-fff8ee5abe309115/attempt-0001/video.mp4",
+    "video_sha256": "dd43d48a0404c071622e3f44d378b646cc3e9a0cbd80718ef028d530fa9a08d0",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "e974f694eaade3626fd1",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-fff8ee5abe309115",
+    "frame_index": 7,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/e974f694eaade3626fd1.png",
+    "image_sha256": "c167210401a53c4016148f2c90c022443663cefa21b757eac416f18a9487b933",
+    "manifest_sha256": "b676ffaa76c4832bb91175a5de3de01b76ce7163b17644326efa7ec20f399053",
+    "mapped_class": "refrigerator",
+    "pts_us": 700000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-fff8ee5abe309115:object-308",
+    "sample_id": "4b22336a5650d857866aff2c",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-fff8ee5abe309115/attempt-0001/video.mp4",
+    "video_sha256": "dd43d48a0404c071622e3f44d378b646cc3e9a0cbd80718ef028d530fa9a08d0",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "9b77d2897fc47f7d54fd",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-fff8ee5abe309115",
+    "frame_index": 14,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/9b77d2897fc47f7d54fd.png",
+    "image_sha256": "1886d01ff6c2ba00203f3a82ebd2ad64f2612f8df69c58ef613d89fa35973e96",
+    "manifest_sha256": "b676ffaa76c4832bb91175a5de3de01b76ce7163b17644326efa7ec20f399053",
+    "mapped_class": "refrigerator",
+    "pts_us": 1400000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-fff8ee5abe309115:object-308",
+    "sample_id": "31655798773582082e2b7205",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-fff8ee5abe309115/attempt-0001/video.mp4",
+    "video_sha256": "dd43d48a0404c071622e3f44d378b646cc3e9a0cbd80718ef028d530fa9a08d0",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "e9ef76ecc8ce998cfd75",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-fff8ee5abe309115",
+    "frame_index": 21,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/e9ef76ecc8ce998cfd75.png",
+    "image_sha256": "35942fdfd567528ea3148e98ee775e4772a7401a7fddec27b8ca7d812801d9b0",
+    "manifest_sha256": "b676ffaa76c4832bb91175a5de3de01b76ce7163b17644326efa7ec20f399053",
+    "mapped_class": "refrigerator",
+    "pts_us": 2100000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-fff8ee5abe309115:object-308",
+    "sample_id": "8ef09a47749adf6c04ad6c96",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-fff8ee5abe309115/attempt-0001/video.mp4",
+    "video_sha256": "dd43d48a0404c071622e3f44d378b646cc3e9a0cbd80718ef028d530fa9a08d0",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "390e7a5585aad6fa0ee5",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-fff8ee5abe309115",
+    "frame_index": 28,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/390e7a5585aad6fa0ee5.png",
+    "image_sha256": "90fad1fa69738c68305fc68b3710d18566b0010d5cc436d64b68c1522278fe24",
+    "manifest_sha256": "b676ffaa76c4832bb91175a5de3de01b76ce7163b17644326efa7ec20f399053",
+    "mapped_class": "refrigerator",
+    "pts_us": 2800000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-fff8ee5abe309115:object-308",
+    "sample_id": "e1d2668d7bba742ebe199d63",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-fff8ee5abe309115/attempt-0001/video.mp4",
+    "video_sha256": "dd43d48a0404c071622e3f44d378b646cc3e9a0cbd80718ef028d530fa9a08d0",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "eec964e944474ac98069",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-fff8ee5abe309115",
+    "frame_index": 35,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/eec964e944474ac98069.png",
+    "image_sha256": "dd0567c0d72f7cbbd78485db92d9b302b16a2cabef89f044d9e104d9b5949003",
+    "manifest_sha256": "b676ffaa76c4832bb91175a5de3de01b76ce7163b17644326efa7ec20f399053",
+    "mapped_class": "refrigerator",
+    "pts_us": 3500000,
+    "requested_class": "fridge",
+    "requested_entity": "dv-fff8ee5abe309115:object-308",
+    "sample_id": "9c2567ab120ee8966997ce5b",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-fff8ee5abe309115/attempt-0001/video.mp4",
+    "video_sha256": "dd43d48a0404c071622e3f44d378b646cc3e9a0cbd80718ef028d530fa9a08d0",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "7a9d99d16d95ad0c1e82",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-1779083be6e7d3b2",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/7a9d99d16d95ad0c1e82.png",
+    "image_sha256": "3a9b19c6566c835545eb224f6d293fc4245bff6b96744183304f44372b51deaa",
+    "manifest_sha256": "a28d8536eefdb869f17640088ffd623b96a3b1d1eaf6901cfa974dbf13d905aa",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "ep-1779083be6e7d3b2:object-316",
+    "sample_id": "6bac8f6ec4f4a469f1614bb3",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-1779083be6e7d3b2/attempt-0001/video.mp4",
+    "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "8974906d6410486cdaa2",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-1779083be6e7d3b2",
+    "frame_index": 40,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/8974906d6410486cdaa2.png",
+    "image_sha256": "be8bcfd5187324798628340396b55079d25081966f44e53fd75925c080e1a1a2",
+    "manifest_sha256": "a28d8536eefdb869f17640088ffd623b96a3b1d1eaf6901cfa974dbf13d905aa",
+    "mapped_class": "microwave",
+    "pts_us": 4000000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-1779083be6e7d3b2:object-316",
+    "sample_id": "671365a716a08b58d0ec839a",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-1779083be6e7d3b2/attempt-0001/video.mp4",
+    "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "2b0d5ae8a78b38751ebe",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-1779083be6e7d3b2",
+    "frame_index": 80,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/2b0d5ae8a78b38751ebe.png",
+    "image_sha256": "9bdd0cbc0d99333c47c8182976ce83f27e40f11832ca133856fa17477d23c04c",
+    "manifest_sha256": "a28d8536eefdb869f17640088ffd623b96a3b1d1eaf6901cfa974dbf13d905aa",
+    "mapped_class": "microwave",
+    "pts_us": 8000000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-1779083be6e7d3b2:object-316",
+    "sample_id": "b824f435eb7e25f69dbbaf17",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-1779083be6e7d3b2/attempt-0001/video.mp4",
+    "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "9bf33f1f2ee9b4bde125",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-1779083be6e7d3b2",
+    "frame_index": 120,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/9bf33f1f2ee9b4bde125.png",
+    "image_sha256": "b9933b1b67dc6a69faa024a68c45ca99b95253c0c4e078ef20692592bda8cbce",
+    "manifest_sha256": "a28d8536eefdb869f17640088ffd623b96a3b1d1eaf6901cfa974dbf13d905aa",
+    "mapped_class": "microwave",
+    "pts_us": 12000000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-1779083be6e7d3b2:object-316",
+    "sample_id": "1efd984ddb584a579ab8acb3",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-1779083be6e7d3b2/attempt-0001/video.mp4",
+    "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "a2aa1aa0413d470c5c10",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-1779083be6e7d3b2",
+    "frame_index": 160,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/a2aa1aa0413d470c5c10.png",
+    "image_sha256": "b7a5f522854aa5d99602e65eddb6210e0ec3b498feb236919ea39af77ec0cc9a",
+    "manifest_sha256": "a28d8536eefdb869f17640088ffd623b96a3b1d1eaf6901cfa974dbf13d905aa",
+    "mapped_class": "microwave",
+    "pts_us": 16000000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-1779083be6e7d3b2:object-316",
+    "sample_id": "3402af426322e3ef67204966",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-1779083be6e7d3b2/attempt-0001/video.mp4",
+    "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "9cbfb8552eb2752402fa",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-1779083be6e7d3b2",
+    "frame_index": 200,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/9cbfb8552eb2752402fa.png",
+    "image_sha256": "e0d37906f093406ef37e4f5e9214d449026700994f8990816006af94d2a2af0f",
+    "manifest_sha256": "a28d8536eefdb869f17640088ffd623b96a3b1d1eaf6901cfa974dbf13d905aa",
+    "mapped_class": "microwave",
+    "pts_us": 20000000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-1779083be6e7d3b2:object-316",
+    "sample_id": "14f85f2d234a53c550c152cf",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-1779083be6e7d3b2/attempt-0001/video.mp4",
+    "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "e3a8214b07071aa9f63b",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-26448333df96e9bc",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/e3a8214b07071aa9f63b.png",
+    "image_sha256": "0415f6d79d6118ff92eabbec24c9fb34df06406ce507126a0b371e6bca2ddfe1",
+    "manifest_sha256": "200232ba02353b7bee5bb22cadb7436af680b286f5f9b1a7cadc1fccd43adff1",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "ep-26448333df96e9bc:object-316",
+    "sample_id": "6397f4f77b3772a7c7ce2ba3",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-26448333df96e9bc/attempt-0001/video.mp4",
+    "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "0388478d57dc6961ab34",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-26448333df96e9bc",
+    "frame_index": 36,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/0388478d57dc6961ab34.png",
+    "image_sha256": "44c4fddce32e5aca3709539022a9ac851cf472fabc1f58f35117d9e877a37a76",
+    "manifest_sha256": "200232ba02353b7bee5bb22cadb7436af680b286f5f9b1a7cadc1fccd43adff1",
+    "mapped_class": "microwave",
+    "pts_us": 3600000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-26448333df96e9bc:object-316",
+    "sample_id": "76f7cd1324d153f29d6fa4ac",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-26448333df96e9bc/attempt-0001/video.mp4",
+    "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "d8e1ea4f2df522577143",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-26448333df96e9bc",
+    "frame_index": 72,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/d8e1ea4f2df522577143.png",
+    "image_sha256": "1ffba10e77eebbfc01c00e003849c2e33062e7b098d828da1c57a112624443a0",
+    "manifest_sha256": "200232ba02353b7bee5bb22cadb7436af680b286f5f9b1a7cadc1fccd43adff1",
+    "mapped_class": "microwave",
+    "pts_us": 7200000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-26448333df96e9bc:object-316",
+    "sample_id": "e009bb95e5d0e2ec8e33e1da",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-26448333df96e9bc/attempt-0001/video.mp4",
+    "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "e7cf115774f508b74dc2",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-26448333df96e9bc",
+    "frame_index": 108,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/e7cf115774f508b74dc2.png",
+    "image_sha256": "31f5064276d3cfdea0d0e6e9810834d4724f56b83997efb466639aa41f2aa80e",
+    "manifest_sha256": "200232ba02353b7bee5bb22cadb7436af680b286f5f9b1a7cadc1fccd43adff1",
+    "mapped_class": "microwave",
+    "pts_us": 10800000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-26448333df96e9bc:object-316",
+    "sample_id": "fd529a87289f190fdef8966b",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-26448333df96e9bc/attempt-0001/video.mp4",
+    "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "612da9e6382a949b94d9",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-26448333df96e9bc",
+    "frame_index": 144,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/612da9e6382a949b94d9.png",
+    "image_sha256": "cdebef6024d0f2b17f74a6f6317260f54f99b59e4252751ec1c8be70531b9cfe",
+    "manifest_sha256": "200232ba02353b7bee5bb22cadb7436af680b286f5f9b1a7cadc1fccd43adff1",
+    "mapped_class": "microwave",
+    "pts_us": 14400000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-26448333df96e9bc:object-316",
+    "sample_id": "aa395bab8a25c698e657a6f9",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-26448333df96e9bc/attempt-0001/video.mp4",
+    "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "ae691d34c3024d2a64d5",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-26448333df96e9bc",
+    "frame_index": 180,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/ae691d34c3024d2a64d5.png",
+    "image_sha256": "4bc08b298dc5b9984c534e9eacfcbeb44ed0bb214365f67a1d9ba70cb24bb949",
+    "manifest_sha256": "200232ba02353b7bee5bb22cadb7436af680b286f5f9b1a7cadc1fccd43adff1",
+    "mapped_class": "microwave",
+    "pts_us": 18000000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-26448333df96e9bc:object-316",
+    "sample_id": "b344b499e3fe5c2c717a4739",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-26448333df96e9bc/attempt-0001/video.mp4",
+    "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "63aa440a081caa7d6d89",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-2a420ff714f0a8e5",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/63aa440a081caa7d6d89.png",
+    "image_sha256": "cc1be79c2ad6d0d12d9cc002e75894752b3d937b4413ce4570299bf8e5fc4212",
+    "manifest_sha256": "e60ab47577a9d72bae00109d5869229beeb22fd49db521d50151238688f3bd75",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "ep-2a420ff714f0a8e5:object-316",
+    "sample_id": "b7ffe0b0443a833c9d0f3fc1",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-2a420ff714f0a8e5/attempt-0001/video.mp4",
+    "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "89bfb29f6dd7af4a51c3",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-2a420ff714f0a8e5",
+    "frame_index": 26,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/89bfb29f6dd7af4a51c3.png",
+    "image_sha256": "0888472cb5fb9b88bfc34ba108db3273b193709aee41afb4d844e959b66929b2",
+    "manifest_sha256": "e60ab47577a9d72bae00109d5869229beeb22fd49db521d50151238688f3bd75",
+    "mapped_class": "microwave",
+    "pts_us": 2600000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-2a420ff714f0a8e5:object-316",
+    "sample_id": "eae8a8ab9c4b38391c1bac94",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-2a420ff714f0a8e5/attempt-0001/video.mp4",
+    "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "b8e61217e4a904ed8980",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-2a420ff714f0a8e5",
+    "frame_index": 51,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/b8e61217e4a904ed8980.png",
+    "image_sha256": "2cc87dbe6a8dfad5bf31172406b2f2ae3bd15f70ac9b4ae3a4eabe0c383b678c",
+    "manifest_sha256": "e60ab47577a9d72bae00109d5869229beeb22fd49db521d50151238688f3bd75",
+    "mapped_class": "microwave",
+    "pts_us": 5100000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-2a420ff714f0a8e5:object-316",
+    "sample_id": "88ef3dcb2f37bf07588b6433",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-2a420ff714f0a8e5/attempt-0001/video.mp4",
+    "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "a36102f68a9bdd640786",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-2a420ff714f0a8e5",
+    "frame_index": 77,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/a36102f68a9bdd640786.png",
+    "image_sha256": "66b6c89a281d0595d5806d8e69bb0da1ea3e20f45b2c78166ea42ca967d56122",
+    "manifest_sha256": "e60ab47577a9d72bae00109d5869229beeb22fd49db521d50151238688f3bd75",
+    "mapped_class": "microwave",
+    "pts_us": 7700000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-2a420ff714f0a8e5:object-316",
+    "sample_id": "baaa70ffd85c13f77fae5bef",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-2a420ff714f0a8e5/attempt-0001/video.mp4",
+    "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "a3a4ed623a954c350f9a",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-2a420ff714f0a8e5",
+    "frame_index": 102,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/a3a4ed623a954c350f9a.png",
+    "image_sha256": "ea248abe8d0dd793863af4ba40be043ebd0046a27917ef2d1ce72d06ffaef765",
+    "manifest_sha256": "e60ab47577a9d72bae00109d5869229beeb22fd49db521d50151238688f3bd75",
+    "mapped_class": "microwave",
+    "pts_us": 10200000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-2a420ff714f0a8e5:object-316",
+    "sample_id": "42ad3495178619e8b7ca942f",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-2a420ff714f0a8e5/attempt-0001/video.mp4",
+    "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "a121cd95e9f84e66890d",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-2a420ff714f0a8e5",
+    "frame_index": 128,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/a121cd95e9f84e66890d.png",
+    "image_sha256": "d11a5a2e64dae6e0c7a570e781b3f09a776ed85d9110fc865db78ab9d25c56c3",
+    "manifest_sha256": "e60ab47577a9d72bae00109d5869229beeb22fd49db521d50151238688f3bd75",
+    "mapped_class": "microwave",
+    "pts_us": 12800000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-2a420ff714f0a8e5:object-316",
+    "sample_id": "220b17f56906dc3e5ad2dc82",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-2a420ff714f0a8e5/attempt-0001/video.mp4",
+    "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+    "view": "0.0",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "49cd8b1fb5df92ed3363",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-327429c08d46e616",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/49cd8b1fb5df92ed3363.png",
+    "image_sha256": "55b2c42c7fd93537e65bbc8f1e590c5d27e7d8866c830062af520c956c7c19fc",
+    "manifest_sha256": "dddacf6557351cebbfd4cb5786415a75f0707628e36fbee3871f2695665568c5",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "ep-327429c08d46e616:object-316",
+    "sample_id": "ad37e3eaeb651a0772a1d3f3",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-327429c08d46e616/attempt-0001/video.mp4",
+    "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "95e7689388bd9cba5e9e",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-327429c08d46e616",
+    "frame_index": 46,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/95e7689388bd9cba5e9e.png",
+    "image_sha256": "5fdfbe9cd7d036b3973c51b0dbb220eae9a047aaca94eed20b0e0c9621f73700",
+    "manifest_sha256": "dddacf6557351cebbfd4cb5786415a75f0707628e36fbee3871f2695665568c5",
+    "mapped_class": "microwave",
+    "pts_us": 4600000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-327429c08d46e616:object-316",
+    "sample_id": "ae6bb8596737d5b1e68b9c37",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-327429c08d46e616/attempt-0001/video.mp4",
+    "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "f6dfff91883c848bec04",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-327429c08d46e616",
+    "frame_index": 91,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/f6dfff91883c848bec04.png",
+    "image_sha256": "24fe8ab507f1efb776e0f5d3754d9db6b8ee28c6c760d6eee58cac6d166f5cf1",
+    "manifest_sha256": "dddacf6557351cebbfd4cb5786415a75f0707628e36fbee3871f2695665568c5",
+    "mapped_class": "microwave",
+    "pts_us": 9100000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-327429c08d46e616:object-316",
+    "sample_id": "86c6b26990ac1375ce8949dc",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-327429c08d46e616/attempt-0001/video.mp4",
+    "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "eb622dd7e51d5e36975a",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-327429c08d46e616",
+    "frame_index": 137,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/eb622dd7e51d5e36975a.png",
+    "image_sha256": "29e54ee337e9d438dfe12dbeeb28b1a431558f5b4d718bed6038863f34c10ad5",
+    "manifest_sha256": "dddacf6557351cebbfd4cb5786415a75f0707628e36fbee3871f2695665568c5",
+    "mapped_class": "microwave",
+    "pts_us": 13700000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-327429c08d46e616:object-316",
+    "sample_id": "13a8aea687fae1603a1c0d39",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-327429c08d46e616/attempt-0001/video.mp4",
+    "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "c72b67756777c84b22b6",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-327429c08d46e616",
+    "frame_index": 182,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/c72b67756777c84b22b6.png",
+    "image_sha256": "460ce61e574c0486b1f6d48a4b10cea5307815b0b1ae0702836be32a65b683e8",
+    "manifest_sha256": "dddacf6557351cebbfd4cb5786415a75f0707628e36fbee3871f2695665568c5",
+    "mapped_class": "microwave",
+    "pts_us": 18200000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-327429c08d46e616:object-316",
+    "sample_id": "9f5c79ae2f428a8ba360368f",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-327429c08d46e616/attempt-0001/video.mp4",
+    "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "10d84923c896c1bf9155",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-327429c08d46e616",
+    "frame_index": 228,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/10d84923c896c1bf9155.png",
+    "image_sha256": "6a5d644ebcba23f7ff6583c9017267f521c94c6c4bdb05761308581e2f602545",
+    "manifest_sha256": "dddacf6557351cebbfd4cb5786415a75f0707628e36fbee3871f2695665568c5",
+    "mapped_class": "microwave",
+    "pts_us": 22800000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-327429c08d46e616:object-316",
+    "sample_id": "f1f93cd70ee05f0a2acd6448",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-327429c08d46e616/attempt-0001/video.mp4",
+    "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "5b6404c7a3c12def1e40",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-33fbcce3c63f4265",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/5b6404c7a3c12def1e40.png",
+    "image_sha256": "b37e0a6ea371c06f9ff1f112ace4dcd55b655d92e0de2ef82acdf77c18f96627",
+    "manifest_sha256": "9300a80ae4ae1f6690c725ecba56c600afcbfeb20bf8facc03445f34458d0163",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "ep-33fbcce3c63f4265:object-316",
+    "sample_id": "4fe6fc6759fe4e3a46621649",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-33fbcce3c63f4265/attempt-0001/video.mp4",
+    "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "05e2d0f965ed46b976a7",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-33fbcce3c63f4265",
+    "frame_index": 36,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/05e2d0f965ed46b976a7.png",
+    "image_sha256": "925b104ee8b7c718967ff13d5a050292ad58118a5bbefe24179492db870a9232",
+    "manifest_sha256": "9300a80ae4ae1f6690c725ecba56c600afcbfeb20bf8facc03445f34458d0163",
+    "mapped_class": "microwave",
+    "pts_us": 3600000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-33fbcce3c63f4265:object-316",
+    "sample_id": "7c2147aea32f803d7e17db0f",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-33fbcce3c63f4265/attempt-0001/video.mp4",
+    "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "6e64fec0c347712ffe1b",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-33fbcce3c63f4265",
+    "frame_index": 71,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/6e64fec0c347712ffe1b.png",
+    "image_sha256": "6a73cf65bc7763b872e941c5abc2a5cc84cfdc25f5ec37d531b2cb447081a25c",
+    "manifest_sha256": "9300a80ae4ae1f6690c725ecba56c600afcbfeb20bf8facc03445f34458d0163",
+    "mapped_class": "microwave",
+    "pts_us": 7100000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-33fbcce3c63f4265:object-316",
+    "sample_id": "2e4bbb82ae86df81b798662d",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-33fbcce3c63f4265/attempt-0001/video.mp4",
+    "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "857d5369628390c112a3",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-33fbcce3c63f4265",
+    "frame_index": 107,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/857d5369628390c112a3.png",
+    "image_sha256": "196211f47eb8c6bccf6c2acfb47eaa62e2230b8fc6f3c296c7598dfea46c0a7f",
+    "manifest_sha256": "9300a80ae4ae1f6690c725ecba56c600afcbfeb20bf8facc03445f34458d0163",
+    "mapped_class": "microwave",
+    "pts_us": 10700000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-33fbcce3c63f4265:object-316",
+    "sample_id": "334f6cadd26301c2265e1897",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-33fbcce3c63f4265/attempt-0001/video.mp4",
+    "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "76ac38688033df960b24",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-33fbcce3c63f4265",
+    "frame_index": 142,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/76ac38688033df960b24.png",
+    "image_sha256": "bb168373b550e85b949258a26e7130724778f584cddb46a76fca5fa888ad8fb6",
+    "manifest_sha256": "9300a80ae4ae1f6690c725ecba56c600afcbfeb20bf8facc03445f34458d0163",
+    "mapped_class": "microwave",
+    "pts_us": 14200000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-33fbcce3c63f4265:object-316",
+    "sample_id": "e9e2383194d293ec5684f34b",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-33fbcce3c63f4265/attempt-0001/video.mp4",
+    "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "72ebcb97610be8f31942",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-33fbcce3c63f4265",
+    "frame_index": 178,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/72ebcb97610be8f31942.png",
+    "image_sha256": "320e5c3656ad574de6c5b0152138783fbdfe0cbf8aa6c436762ecf94d0f48d3b",
+    "manifest_sha256": "9300a80ae4ae1f6690c725ecba56c600afcbfeb20bf8facc03445f34458d0163",
+    "mapped_class": "microwave",
+    "pts_us": 17800000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-33fbcce3c63f4265:object-316",
+    "sample_id": "14879494434b1f0706fdc1bf",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-33fbcce3c63f4265/attempt-0001/video.mp4",
+    "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "f37cdd018f32efca3a45",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-37909e041bc956c8",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/f37cdd018f32efca3a45.png",
+    "image_sha256": "6741745e94efe9763b46ea98812757ac896b6c192953eae85e43beb37dc0b2a8",
+    "manifest_sha256": "1e9a4e08f515341c0ae6af8b5ad01d55ff5de6190112781894d8e7894fdbc602",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "ep-37909e041bc956c8:object-316",
+    "sample_id": "55be7f60ad771686525e7607",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-37909e041bc956c8/attempt-0001/video.mp4",
+    "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "fc9513dfe1746f76d7e4",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-37909e041bc956c8",
+    "frame_index": 42,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/fc9513dfe1746f76d7e4.png",
+    "image_sha256": "7d24a37c62d632e989e5eff2b6840bc043348735149abc31161bdb52786c0722",
+    "manifest_sha256": "1e9a4e08f515341c0ae6af8b5ad01d55ff5de6190112781894d8e7894fdbc602",
+    "mapped_class": "microwave",
+    "pts_us": 4200000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-37909e041bc956c8:object-316",
+    "sample_id": "4e18998c5864714847a86dde",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-37909e041bc956c8/attempt-0001/video.mp4",
+    "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "481a44433018af60c66a",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-37909e041bc956c8",
+    "frame_index": 83,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/481a44433018af60c66a.png",
+    "image_sha256": "a5c71d5271fa0ff5a84964e3bf092c064f7875cd4bfcbdf0050a23eff1f5690e",
+    "manifest_sha256": "1e9a4e08f515341c0ae6af8b5ad01d55ff5de6190112781894d8e7894fdbc602",
+    "mapped_class": "microwave",
+    "pts_us": 8300000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-37909e041bc956c8:object-316",
+    "sample_id": "8e7d76409c9324b521c561e0",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-37909e041bc956c8/attempt-0001/video.mp4",
+    "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "2c9b6fbf28a2f38b5cbe",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-37909e041bc956c8",
+    "frame_index": 125,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/2c9b6fbf28a2f38b5cbe.png",
+    "image_sha256": "392a50fe8349ce31768204df6060bbbba684319995e219def2326641e3130bef",
+    "manifest_sha256": "1e9a4e08f515341c0ae6af8b5ad01d55ff5de6190112781894d8e7894fdbc602",
+    "mapped_class": "microwave",
+    "pts_us": 12500000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-37909e041bc956c8:object-316",
+    "sample_id": "1db3092e6283fd0cb460b70d",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-37909e041bc956c8/attempt-0001/video.mp4",
+    "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "8b245e3606fed398cd23",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-37909e041bc956c8",
+    "frame_index": 166,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/8b245e3606fed398cd23.png",
+    "image_sha256": "9cb82d2efceb246a8d3275d18c6cbaaa9f279ce18c51d111e09504511f97601a",
+    "manifest_sha256": "1e9a4e08f515341c0ae6af8b5ad01d55ff5de6190112781894d8e7894fdbc602",
+    "mapped_class": "microwave",
+    "pts_us": 16600000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-37909e041bc956c8:object-316",
+    "sample_id": "a242b40e77ff2f1c0f51cd93",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-37909e041bc956c8/attempt-0001/video.mp4",
+    "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "0263534fc32ef9dd11e7",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-37909e041bc956c8",
+    "frame_index": 208,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/0263534fc32ef9dd11e7.png",
+    "image_sha256": "48057d7b93a0ff5054143ca73d6742059cfe857d894a519c4a0a8cbc2e3b5d1f",
+    "manifest_sha256": "1e9a4e08f515341c0ae6af8b5ad01d55ff5de6190112781894d8e7894fdbc602",
+    "mapped_class": "microwave",
+    "pts_us": 20800000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-37909e041bc956c8:object-316",
+    "sample_id": "cf87bf9d0f0fb086c6db0761",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-37909e041bc956c8/attempt-0001/video.mp4",
+    "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "ec66e049a7f2ab47427b",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-3fc2ecf3a1ed6d99",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/ec66e049a7f2ab47427b.png",
+    "image_sha256": "b3946b4921b83a8241fb97c5df05293601501a969c9052850b651f4d13d2c9f2",
+    "manifest_sha256": "16beb493f1e5ae08a1ad77338fc3ac80cd77865da778e7d8f9b7f9fc7a0010f0",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "ep-3fc2ecf3a1ed6d99:object-316",
+    "sample_id": "bfd9a66a662902c3b3a146e0",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-3fc2ecf3a1ed6d99/attempt-0001/video.mp4",
+    "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "5fd318abfff04c8be902",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-3fc2ecf3a1ed6d99",
+    "frame_index": 27,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/5fd318abfff04c8be902.png",
+    "image_sha256": "11f2e756caa6f0c4716858d6daa6a4b9371fa12693fccb04d709f03c77080940",
+    "manifest_sha256": "16beb493f1e5ae08a1ad77338fc3ac80cd77865da778e7d8f9b7f9fc7a0010f0",
+    "mapped_class": "microwave",
+    "pts_us": 2700000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-3fc2ecf3a1ed6d99:object-316",
+    "sample_id": "9ebc6dd50d1027317ad37b00",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-3fc2ecf3a1ed6d99/attempt-0001/video.mp4",
+    "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "6c51fd08ac4d7e976cb7",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-3fc2ecf3a1ed6d99",
+    "frame_index": 55,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/6c51fd08ac4d7e976cb7.png",
+    "image_sha256": "8aed3a3fcaf60bc225641736f9c24fb708f77e77263d60d61e9962c1072e56f4",
+    "manifest_sha256": "16beb493f1e5ae08a1ad77338fc3ac80cd77865da778e7d8f9b7f9fc7a0010f0",
+    "mapped_class": "microwave",
+    "pts_us": 5500000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-3fc2ecf3a1ed6d99:object-316",
+    "sample_id": "0057070d1de3f0082e1959f8",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-3fc2ecf3a1ed6d99/attempt-0001/video.mp4",
+    "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "639d68fe07189c854f06",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-3fc2ecf3a1ed6d99",
+    "frame_index": 82,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/639d68fe07189c854f06.png",
+    "image_sha256": "4903f153e0cb75c7a2cf228fca2bc9a3f88cedf8e188700d0e0d25591091081c",
+    "manifest_sha256": "16beb493f1e5ae08a1ad77338fc3ac80cd77865da778e7d8f9b7f9fc7a0010f0",
+    "mapped_class": "microwave",
+    "pts_us": 8200000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-3fc2ecf3a1ed6d99:object-316",
+    "sample_id": "cb7857069591922935fec44a",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-3fc2ecf3a1ed6d99/attempt-0001/video.mp4",
+    "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "80722b132b8a3ecdd4a9",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-3fc2ecf3a1ed6d99",
+    "frame_index": 110,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/80722b132b8a3ecdd4a9.png",
+    "image_sha256": "9c1a987eed18f2dc259e91a75d58d46bb733d901d7a51296bd2fc91d83c72444",
+    "manifest_sha256": "16beb493f1e5ae08a1ad77338fc3ac80cd77865da778e7d8f9b7f9fc7a0010f0",
+    "mapped_class": "microwave",
+    "pts_us": 11000000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-3fc2ecf3a1ed6d99:object-316",
+    "sample_id": "287638a858ec049934b4d9ba",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-3fc2ecf3a1ed6d99/attempt-0001/video.mp4",
+    "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "9f252e9d3a8906d4a527",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-3fc2ecf3a1ed6d99",
+    "frame_index": 137,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/9f252e9d3a8906d4a527.png",
+    "image_sha256": "a61652d5fb9af9f6dbcdb1a20552967daf6d788a1e554238aca3f3bb77939624",
+    "manifest_sha256": "16beb493f1e5ae08a1ad77338fc3ac80cd77865da778e7d8f9b7f9fc7a0010f0",
+    "mapped_class": "microwave",
+    "pts_us": 13700000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-3fc2ecf3a1ed6d99:object-316",
+    "sample_id": "116100e571bfba8d49d74393",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-3fc2ecf3a1ed6d99/attempt-0001/video.mp4",
+    "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "f58918dba779a9e08a50",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/f58918dba779a9e08a50.png",
+    "image_sha256": "8ee9cc6915bbee72334df2f780490c9812dcfb7834d9960e2fccfa425479ca27",
+    "manifest_sha256": "942d82d5e82898272a6afd5211674b7a00be72a5ce38f7dedb03a1128b6c04fe",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "ep-97a1a39b2e9490b6:object-316",
+    "sample_id": "e91455d1eaf3f4628af54a4d",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-97a1a39b2e9490b6/attempt-0001/video.mp4",
+    "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "d162eae088fefbb4fe52",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "frame_index": 25,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/d162eae088fefbb4fe52.png",
+    "image_sha256": "c6ca2cc7dea5b21d1af775e85e930c035c9a15496578c2b0dad1ecc914328d04",
+    "manifest_sha256": "942d82d5e82898272a6afd5211674b7a00be72a5ce38f7dedb03a1128b6c04fe",
+    "mapped_class": "microwave",
+    "pts_us": 2500000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-97a1a39b2e9490b6:object-316",
+    "sample_id": "a19e997abe0988bfff2a4efd",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-97a1a39b2e9490b6/attempt-0001/video.mp4",
+    "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "77462200587a6d23368b",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "frame_index": 51,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/77462200587a6d23368b.png",
+    "image_sha256": "f8c58098f76556ac0ffd3368442fdc5cbb6c3c0242ac86987bd4e13dd5b20efe",
+    "manifest_sha256": "942d82d5e82898272a6afd5211674b7a00be72a5ce38f7dedb03a1128b6c04fe",
+    "mapped_class": "microwave",
+    "pts_us": 5100000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-97a1a39b2e9490b6:object-316",
+    "sample_id": "71ac220e52193adb25d24b7e",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-97a1a39b2e9490b6/attempt-0001/video.mp4",
+    "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "91d9f797ead94b8b028f",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "frame_index": 76,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/91d9f797ead94b8b028f.png",
+    "image_sha256": "213877807123156c3253372ee3c5cc6841166a7c624994895bdbc80cd9301007",
+    "manifest_sha256": "942d82d5e82898272a6afd5211674b7a00be72a5ce38f7dedb03a1128b6c04fe",
+    "mapped_class": "microwave",
+    "pts_us": 7600000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-97a1a39b2e9490b6:object-316",
+    "sample_id": "52018da30b8135314a7094e9",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-97a1a39b2e9490b6/attempt-0001/video.mp4",
+    "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "02fbdafff74cd1aa3ef0",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "frame_index": 102,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/02fbdafff74cd1aa3ef0.png",
+    "image_sha256": "b270f6754131105c6c1c6f4eb794bc4a7357ce56f84adb353f8fa5d3e486ab1b",
+    "manifest_sha256": "942d82d5e82898272a6afd5211674b7a00be72a5ce38f7dedb03a1128b6c04fe",
+    "mapped_class": "microwave",
+    "pts_us": 10200000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-97a1a39b2e9490b6:object-316",
+    "sample_id": "fdf8c4f873e577aa1b93c215",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-97a1a39b2e9490b6/attempt-0001/video.mp4",
+    "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "f261c12adc490418a32a",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "frame_index": 127,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/f261c12adc490418a32a.png",
+    "image_sha256": "276c6b3a765b60c7e5301ee881b6150b69cd8df5c0ea56db2fa75a74e0e7c970",
+    "manifest_sha256": "942d82d5e82898272a6afd5211674b7a00be72a5ce38f7dedb03a1128b6c04fe",
+    "mapped_class": "microwave",
+    "pts_us": 12700000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-97a1a39b2e9490b6:object-316",
+    "sample_id": "141446c788b9316034c634f6",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-97a1a39b2e9490b6/attempt-0001/video.mp4",
+    "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "ca9dad927160cc34d983",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-b3f1b6687fc723ca",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/ca9dad927160cc34d983.png",
+    "image_sha256": "10acf90fb066a1559be9a48efd9294538274f106aefe44ba1947c2a235006ee1",
+    "manifest_sha256": "3da98de97dc3353193cb3935bda20d7d5b0bb022e8775ebc10fd3e07fd5dc3cc",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "ep-b3f1b6687fc723ca:object-316",
+    "sample_id": "2e67556006d32e03d2474011",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-b3f1b6687fc723ca/attempt-0001/video.mp4",
+    "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "3251f1b7b01cad24c368",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-b3f1b6687fc723ca",
+    "frame_index": 47,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/3251f1b7b01cad24c368.png",
+    "image_sha256": "cb387e151732e41195c7135d8b7834fbce834b081bcc4940615d7b6b6adbb472",
+    "manifest_sha256": "3da98de97dc3353193cb3935bda20d7d5b0bb022e8775ebc10fd3e07fd5dc3cc",
+    "mapped_class": "microwave",
+    "pts_us": 4700000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-b3f1b6687fc723ca:object-316",
+    "sample_id": "e2763752d32fdac945c10dec",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-b3f1b6687fc723ca/attempt-0001/video.mp4",
+    "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "dd7d4dc3eeef20d0a56a",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-b3f1b6687fc723ca",
+    "frame_index": 94,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/dd7d4dc3eeef20d0a56a.png",
+    "image_sha256": "b6257778b2f5ab87773c71afbad9ff8c6dd4477e1cf87f6af11e64dcf9535e31",
+    "manifest_sha256": "3da98de97dc3353193cb3935bda20d7d5b0bb022e8775ebc10fd3e07fd5dc3cc",
+    "mapped_class": "microwave",
+    "pts_us": 9400000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-b3f1b6687fc723ca:object-316",
+    "sample_id": "9721de47f7714257e00a867a",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-b3f1b6687fc723ca/attempt-0001/video.mp4",
+    "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "b0f082457b874a17c970",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-b3f1b6687fc723ca",
+    "frame_index": 141,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/b0f082457b874a17c970.png",
+    "image_sha256": "c5653ed3888cae237f76995580170ad936fcc9debbbe4f1d395e79970d78522e",
+    "manifest_sha256": "3da98de97dc3353193cb3935bda20d7d5b0bb022e8775ebc10fd3e07fd5dc3cc",
+    "mapped_class": "microwave",
+    "pts_us": 14100000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-b3f1b6687fc723ca:object-316",
+    "sample_id": "bb4510f4c57fd6c227253068",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-b3f1b6687fc723ca/attempt-0001/video.mp4",
+    "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "9a182bc921b61fba8177",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-b3f1b6687fc723ca",
+    "frame_index": 188,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/9a182bc921b61fba8177.png",
+    "image_sha256": "df08a805db666a04d782889a2c25dbe8eff2ea42f39fb0acdd7cf3267ee8b82a",
+    "manifest_sha256": "3da98de97dc3353193cb3935bda20d7d5b0bb022e8775ebc10fd3e07fd5dc3cc",
+    "mapped_class": "microwave",
+    "pts_us": 18800000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-b3f1b6687fc723ca:object-316",
+    "sample_id": "333e06ac9a09c30f29b6e93c",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-b3f1b6687fc723ca/attempt-0001/video.mp4",
+    "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "a90bae54d96af102a838",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-b3f1b6687fc723ca",
+    "frame_index": 235,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/a90bae54d96af102a838.png",
+    "image_sha256": "1a3d74e639c04110ff3693bd174afdffe6ccf81509aae296594ce45f31b0880a",
+    "manifest_sha256": "3da98de97dc3353193cb3935bda20d7d5b0bb022e8775ebc10fd3e07fd5dc3cc",
+    "mapped_class": "microwave",
+    "pts_us": 23500000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-b3f1b6687fc723ca:object-316",
+    "sample_id": "55511d75f8fc8d2a5a75bfbe",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-b3f1b6687fc723ca/attempt-0001/video.mp4",
+    "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+    "view": "0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "846a07852f2b8620ad9f",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-c1c313b64f579794",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/846a07852f2b8620ad9f.png",
+    "image_sha256": "be1b395a1479a514cfdf56c260bfa39744badd4334aaa81f9d968a8d466bf90c",
+    "manifest_sha256": "29d1207c2e924419459960a844717bf25eb835f8eaca264a310cd8ed8fbf2e9f",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "ep-c1c313b64f579794:object-316",
+    "sample_id": "dbdf83069399aecfc36a86dc",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-c1c313b64f579794/attempt-0001/video.mp4",
+    "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "dce7c76797b725b83241",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-c1c313b64f579794",
+    "frame_index": 27,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/dce7c76797b725b83241.png",
+    "image_sha256": "2d447b9fe0db9e97f638085407d8a173d581325d44e4e037c4854666f62d3b8b",
+    "manifest_sha256": "29d1207c2e924419459960a844717bf25eb835f8eaca264a310cd8ed8fbf2e9f",
+    "mapped_class": "microwave",
+    "pts_us": 2700000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-c1c313b64f579794:object-316",
+    "sample_id": "57e85d63627fad7c3303a020",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-c1c313b64f579794/attempt-0001/video.mp4",
+    "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "ec87f0b5ff9244ac0ac6",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-c1c313b64f579794",
+    "frame_index": 54,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/ec87f0b5ff9244ac0ac6.png",
+    "image_sha256": "b792d80b765e70f1363b55f58b006c06343d2cf9a3c1fe71e6e53f0e7bd89ad9",
+    "manifest_sha256": "29d1207c2e924419459960a844717bf25eb835f8eaca264a310cd8ed8fbf2e9f",
+    "mapped_class": "microwave",
+    "pts_us": 5400000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-c1c313b64f579794:object-316",
+    "sample_id": "11ac9626034d472fc09e52ae",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-c1c313b64f579794/attempt-0001/video.mp4",
+    "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "2072981e284caf125d35",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-c1c313b64f579794",
+    "frame_index": 82,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/2072981e284caf125d35.png",
+    "image_sha256": "ed928d74d6c4fbcf319e539650a00b88e23517d93b062c66a07f6ed5f25d774b",
+    "manifest_sha256": "29d1207c2e924419459960a844717bf25eb835f8eaca264a310cd8ed8fbf2e9f",
+    "mapped_class": "microwave",
+    "pts_us": 8200000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-c1c313b64f579794:object-316",
+    "sample_id": "be607800e5bac284719d1ed0",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-c1c313b64f579794/attempt-0001/video.mp4",
+    "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "88d8e848b9496c6201b2",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-c1c313b64f579794",
+    "frame_index": 109,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/88d8e848b9496c6201b2.png",
+    "image_sha256": "da7b0720103e77ef96c994cb878c1de18d14750bb19fd97fded12317183aa21a",
+    "manifest_sha256": "29d1207c2e924419459960a844717bf25eb835f8eaca264a310cd8ed8fbf2e9f",
+    "mapped_class": "microwave",
+    "pts_us": 10900000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-c1c313b64f579794:object-316",
+    "sample_id": "140440af992a9c5e942834a6",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-c1c313b64f579794/attempt-0001/video.mp4",
+    "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "edd83f0be6d1c91f3928",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-c1c313b64f579794",
+    "frame_index": 136,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/edd83f0be6d1c91f3928.png",
+    "image_sha256": "95cd79ac3c931ea11447d6d78cbae781c615608cea43b0e79c6a19abec26f639",
+    "manifest_sha256": "29d1207c2e924419459960a844717bf25eb835f8eaca264a310cd8ed8fbf2e9f",
+    "mapped_class": "microwave",
+    "pts_us": 13600000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-c1c313b64f579794:object-316",
+    "sample_id": "2ba86756722e977e9136f5ec",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-c1c313b64f579794/attempt-0001/video.mp4",
+    "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "79af8669313c04ae7467",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/79af8669313c04ae7467.png",
+    "image_sha256": "00ba3b01f01713efe62fb0b558bbc84b4dde08afbfbe6f7c93287656dda03fb9",
+    "manifest_sha256": "cf1f9b2c22d3e96a8007926be50c10f9e3d30fd4b90d669c7c8d98c912ef8ef4",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "ep-c2ad5c5f7b67a9a8:object-316",
+    "sample_id": "921e31ffe36166dcac848fd4",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-c2ad5c5f7b67a9a8/attempt-0001/video.mp4",
+    "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "70945a2c7d5062f8c2f2",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "frame_index": 35,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/70945a2c7d5062f8c2f2.png",
+    "image_sha256": "7cca9ffc97fe916d10cc3b727ca0b48483795266ebed038a8042b631d21357ec",
+    "manifest_sha256": "cf1f9b2c22d3e96a8007926be50c10f9e3d30fd4b90d669c7c8d98c912ef8ef4",
+    "mapped_class": "microwave",
+    "pts_us": 3500000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-c2ad5c5f7b67a9a8:object-316",
+    "sample_id": "514424972b48b0b3ffbace84",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-c2ad5c5f7b67a9a8/attempt-0001/video.mp4",
+    "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "e6c4ef61b658c58ecac8",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "frame_index": 70,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/e6c4ef61b658c58ecac8.png",
+    "image_sha256": "890c292c1e0d8d69b9b19603c989e536d654ae56f992c9c5153ac7e81b113951",
+    "manifest_sha256": "cf1f9b2c22d3e96a8007926be50c10f9e3d30fd4b90d669c7c8d98c912ef8ef4",
+    "mapped_class": "microwave",
+    "pts_us": 7000000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-c2ad5c5f7b67a9a8:object-316",
+    "sample_id": "9cbf08cde155468dee424887",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-c2ad5c5f7b67a9a8/attempt-0001/video.mp4",
+    "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "77beafb3eb06acf73212",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "frame_index": 104,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/77beafb3eb06acf73212.png",
+    "image_sha256": "3544220def4a1aadb0f159bd6714711c081f05a18b911dbddb2cae1fb99afa92",
+    "manifest_sha256": "cf1f9b2c22d3e96a8007926be50c10f9e3d30fd4b90d669c7c8d98c912ef8ef4",
+    "mapped_class": "microwave",
+    "pts_us": 10400000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-c2ad5c5f7b67a9a8:object-316",
+    "sample_id": "7cfa5227ba88850ae7ff4f6c",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-c2ad5c5f7b67a9a8/attempt-0001/video.mp4",
+    "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "291a769cc28b8520527f",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "frame_index": 139,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/291a769cc28b8520527f.png",
+    "image_sha256": "dd26fbf3492473d6e5817346bf699355707f33883a574cfbef5b20e73bfbd4b6",
+    "manifest_sha256": "cf1f9b2c22d3e96a8007926be50c10f9e3d30fd4b90d669c7c8d98c912ef8ef4",
+    "mapped_class": "microwave",
+    "pts_us": 13900000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-c2ad5c5f7b67a9a8:object-316",
+    "sample_id": "4b02546f2a4a11b8a8b0174a",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-c2ad5c5f7b67a9a8/attempt-0001/video.mp4",
+    "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "1e710ab4b57e0b424ce5",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "frame_index": 174,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/1e710ab4b57e0b424ce5.png",
+    "image_sha256": "fbf0295478fc32b1ecdf1d7f0fa4fa2ff362b9805e09999e45ede790aae6dfa0",
+    "manifest_sha256": "cf1f9b2c22d3e96a8007926be50c10f9e3d30fd4b90d669c7c8d98c912ef8ef4",
+    "mapped_class": "microwave",
+    "pts_us": 17400000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-c2ad5c5f7b67a9a8:object-316",
+    "sample_id": "d69a96fa3f322425dd9b79ad",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-c2ad5c5f7b67a9a8/attempt-0001/video.mp4",
+    "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758",
+    "view": "-0.15",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "5e1ff86cbeff4eb940e3",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-e614ca27a15019cd",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/5e1ff86cbeff4eb940e3.png",
+    "image_sha256": "6105b9b69c43fc5b4b35598a68698dc28793a13d007674245a7d64dbd8979592",
+    "manifest_sha256": "5aeb137cf7e060f5ddb1f1b0e63a08cc9f49b6b4b501f9d0ec532212e1585781",
+    "mapped_class": "microwave",
+    "pts_us": 0,
+    "requested_class": "microwave",
+    "requested_entity": "ep-e614ca27a15019cd:object-316",
+    "sample_id": "e132ec0b0278c278ea0bc32a",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-e614ca27a15019cd/attempt-0001/video.mp4",
+    "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "8d8d40891305f65df55b",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-e614ca27a15019cd",
+    "frame_index": 34,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/8d8d40891305f65df55b.png",
+    "image_sha256": "cbbf0fd9d215817acf47908b462d758ea7b1eac1b3ddd9ea6e02afd34b403d01",
+    "manifest_sha256": "5aeb137cf7e060f5ddb1f1b0e63a08cc9f49b6b4b501f9d0ec532212e1585781",
+    "mapped_class": "microwave",
+    "pts_us": 3400000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-e614ca27a15019cd:object-316",
+    "sample_id": "9d30132b7c1ec85c1aeedc53",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-e614ca27a15019cd/attempt-0001/video.mp4",
+    "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "6b7463467c7ad036e74a",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-e614ca27a15019cd",
+    "frame_index": 67,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/6b7463467c7ad036e74a.png",
+    "image_sha256": "b1ee4b768d47831dc7ea45fa17b7c73512458be9ae0bb3116dfe838ce79909fb",
+    "manifest_sha256": "5aeb137cf7e060f5ddb1f1b0e63a08cc9f49b6b4b501f9d0ec532212e1585781",
+    "mapped_class": "microwave",
+    "pts_us": 6700000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-e614ca27a15019cd:object-316",
+    "sample_id": "9519979e31f9717d2ed1f28f",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-e614ca27a15019cd/attempt-0001/video.mp4",
+    "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "d5521376d973188d9fe6",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-e614ca27a15019cd",
+    "frame_index": 101,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/d5521376d973188d9fe6.png",
+    "image_sha256": "ccbe0d2c7d8d97fd35aebb9eb3010bd8b637835432ac48e012e2e63575c1c5e6",
+    "manifest_sha256": "5aeb137cf7e060f5ddb1f1b0e63a08cc9f49b6b4b501f9d0ec532212e1585781",
+    "mapped_class": "microwave",
+    "pts_us": 10100000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-e614ca27a15019cd:object-316",
+    "sample_id": "774479e98326aac5a8dcc6c0",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-e614ca27a15019cd/attempt-0001/video.mp4",
+    "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "ccabb25211b5da5ed423",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-e614ca27a15019cd",
+    "frame_index": 134,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/ccabb25211b5da5ed423.png",
+    "image_sha256": "07368bc3682c3f2cb25ccc55a418e22e2de390c0e31a0576f6e9ca6ab2aeead9",
+    "manifest_sha256": "5aeb137cf7e060f5ddb1f1b0e63a08cc9f49b6b4b501f9d0ec532212e1585781",
+    "mapped_class": "microwave",
+    "pts_us": 13400000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-e614ca27a15019cd:object-316",
+    "sample_id": "b5a74e5542601273a5ecbc15",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-e614ca27a15019cd/attempt-0001/video.mp4",
+    "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "b1afa1572d756138b2da",
+        "kind": "state"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "ep-e614ca27a15019cd",
+    "frame_index": 168,
+    "height": 480,
+    "image": "output/state-workbench/review-v2/b1afa1572d756138b2da.png",
+    "image_sha256": "66fc582dc4600ae513a82691b4bae1b274aa4ef52ad1f17bdfccf5da8525c0a0",
+    "manifest_sha256": "5aeb137cf7e060f5ddb1f1b0e63a08cc9f49b6b4b501f9d0ec532212e1585781",
+    "mapped_class": "microwave",
+    "pts_us": 16800000,
+    "requested_class": "microwave",
+    "requested_entity": "ep-e614ca27a15019cd:object-316",
+    "sample_id": "b856445a9a937c993fc2e3e7",
+    "split": "train",
+    "video": "output/virtualhome-corpus/home-v1/episodes/ep-e614ca27a15019cd/attempt-0001/video.mp4",
+    "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+    "view": "0.3",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "1",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-077a07eb73fdb91b",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-01.png",
+    "image_sha256": "dc1a84700303cac8a408c784f3d1ce726b871143d7e7a3f1066e1f467ea1501b",
+    "manifest_sha256": "785f3015f5a715b8477dd7ba36646aaa94ddd122c2aa6cc6d6e44fcab68760e0",
+    "mapped_class": null,
+    "pts_us": 0,
+    "requested_class": "tablelamp",
+    "requested_entity": "dv-077a07eb73fdb91b:object-268",
+    "sample_id": "5051c9dd9adc497c72618757",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-077a07eb73fdb91b/attempt-0001/video.mp4",
+    "video_sha256": "2019ec628d27d1e1198d14e0f0947aed884471ced35c930573b790a7dbdd5452",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "2",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-122c74a567057f0f",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-02.png",
+    "image_sha256": "d424cfab8b5452745f027f1992eb418584bd28ce880db443fcbe5df45974034a",
+    "manifest_sha256": "0fbbe22898443592814c17635a534a73898e0b99d736c4ce3104b5276ef639b8",
+    "mapped_class": "book",
+    "pts_us": 0,
+    "requested_class": "book",
+    "requested_entity": "dv-122c74a567057f0f:object-332",
+    "sample_id": "a20428c1990cd523cdd89ca6",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-122c74a567057f0f/attempt-0001/video.mp4",
+    "video_sha256": "c5a9c97d169248b7bb4eb104ca6894b11124454ab750988129e1478856167aa1",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "3",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-13cb7ede57cfce80",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-03.png",
+    "image_sha256": "d22b2c4ed4b4ef65f6b9e7893afb6b77f2ab0f8220f640940e11d6e344ba8c7f",
+    "manifest_sha256": "9f5bcee9777f625ad040874207a91b9cb11774323e4b1c6350981f1ed73ed2ea",
+    "mapped_class": "tv",
+    "pts_us": 0,
+    "requested_class": "tv",
+    "requested_entity": "dv-13cb7ede57cfce80:object-313",
+    "sample_id": "4f9ef36f6df40878add6ed00",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-13cb7ede57cfce80/attempt-0001/video.mp4",
+    "video_sha256": "96777d7c3b629ecc90489e8460ae492be9423511d58eea3b5c66e5274d13ef7e",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "4",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-2ce2e6667c4b4d0a",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-04.png",
+    "image_sha256": "5110d04328d024c2004ba677a27f328d0612bd188c38483e1c54835d7142df51",
+    "manifest_sha256": "cc4c06dedbab4d6f766536255e62cf0a5739c34f1484692c244f8e5d4439fd42",
+    "mapped_class": "tv",
+    "pts_us": 0,
+    "requested_class": "tv",
+    "requested_entity": "dv-2ce2e6667c4b4d0a:object-313",
+    "sample_id": "f2e70d5828f7c4586f3de8ac",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-2ce2e6667c4b4d0a/attempt-0001/video.mp4",
+    "video_sha256": "e41c927e64f9e5a2f52c0ffc2e0745788e685b464e96e7f1df48ea0bd59f7d75",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "5",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-358dc094893009b1",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-05.png",
+    "image_sha256": "c28e4952053b4b8c4655b446c176bb6905e0263cc46d5d11c36bd9f6c0667668",
+    "manifest_sha256": "bbba2d09da784ca6f6a663ddd027c3469e5bd68acc02badbfcade8ff9ec8036f",
+    "mapped_class": "tv",
+    "pts_us": 0,
+    "requested_class": "tv",
+    "requested_entity": "dv-358dc094893009b1:object-433",
+    "sample_id": "5af0f23f519851cb0de3e566",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-358dc094893009b1/attempt-0001/video.mp4",
+    "video_sha256": "f08ce8f42cc41774068f247c2f3a36782aa440f1371913c3beca9fbf81bcde1a",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "6",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-5379eae9425594a5",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-06.png",
+    "image_sha256": "7bf15e1e08cbe5428a0221876498611389e341ef93f905eeb066c3f0853568bb",
+    "manifest_sha256": "51d5bc227f6ebfbf889af11c22e8a6bf0276b7b73ea40beebf6719b7898ec7d1",
+    "mapped_class": "book",
+    "pts_us": 0,
+    "requested_class": "book",
+    "requested_entity": "dv-5379eae9425594a5:object-332",
+    "sample_id": "a1f47aa734c874a507daca68",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-5379eae9425594a5/attempt-0001/video.mp4",
+    "video_sha256": "018b15364b51396f5724bb3bd6f62de68f273143c48ac02bffa419993985019d",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "7",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-633a68f3856a13b9",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-07.png",
+    "image_sha256": "f4c3ef387ccba0bd7f3661edec84b123809b7177509d78de1ec192cbf520ea97",
+    "manifest_sha256": "f7267cd80e495f549c759d0b1320f2edc226f414d52b2eea08369372ca15c411",
+    "mapped_class": "cup",
+    "pts_us": 0,
+    "requested_class": "mug",
+    "requested_entity": "dv-633a68f3856a13b9:object-454",
+    "sample_id": "8575af3e1c36c9e08a75ea4b",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-633a68f3856a13b9/attempt-0001/video.mp4",
+    "video_sha256": "1412921ec137f82433053f4023485178c05307c6b7c968a4c19f1123145c104b",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "8",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-673fa0ed90d3c06a",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-08.png",
+    "image_sha256": "3e4a82cebf3e67107575cd8899fbc502d4181b3b1efe0a9467111e11f3ff80fa",
+    "manifest_sha256": "47a318a2fd3bdaff26e30f65e525360d3dbbae5eb3476953333a48179f607edf",
+    "mapped_class": "bed",
+    "pts_us": 0,
+    "requested_class": "bed",
+    "requested_entity": "dv-673fa0ed90d3c06a:object-296",
+    "sample_id": "94dbe5a2e2f303940c1a6c61",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-673fa0ed90d3c06a/attempt-0002/video.mp4",
+    "video_sha256": "9b8c137fb3b8fa01e80d6bb7d6702a46b4450cb7f7c6a6701282a584ca7c99c3",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "10",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-8a5eba2e07a4edba",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-10.png",
+    "image_sha256": "ab35429bb591c43e2dde3c521ae53dd1ec5a29becdc5af288ea97220be458839",
+    "manifest_sha256": "edb334f589bd0e7bae5351cd8713834a5113eb8c5030ad6d2333cca53fd14abe",
+    "mapped_class": "bed",
+    "pts_us": 0,
+    "requested_class": "bed",
+    "requested_entity": "dv-8a5eba2e07a4edba:object-296",
+    "sample_id": "2f87117862b56a30f2d0d7a2",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-8a5eba2e07a4edba/attempt-0001/video.mp4",
+    "video_sha256": "274b5301b6d4d754c66f1d367e5dabbd380934af1455459367cd9a7bc761b4a1",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "11",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-8e6a48b09752b418",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-11.png",
+    "image_sha256": "ffdcb79c7d4f1179199a9189c632c4146fac25ce2ba6ad2e9918c5e2ba0fdbcf",
+    "manifest_sha256": "09b9fc7b61eb60c8a43d941e7c72322bb8b62f9eac7773d11e7ad87b34efec0d",
+    "mapped_class": null,
+    "pts_us": 0,
+    "requested_class": "plate",
+    "requested_entity": "dv-8e6a48b09752b418:object-67",
+    "sample_id": "574adb306d856e5601a31e0e",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-8e6a48b09752b418/attempt-0001/video.mp4",
+    "video_sha256": "f42fad1913a1aed1199133bf1b335a9b2bfaa5d6ab00fea0fc416774b9cb43c7",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "12",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-9532099dbadcd75d",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-12.png",
+    "image_sha256": "fa11ef1174d17676c70800dcd037497b9feeeb98c5370ed98b8750b208c9d8b6",
+    "manifest_sha256": "0ab8a4bdf171e7d210693a61897d98a4bad55bf6895eeaac308f4e7fbe3ad335",
+    "mapped_class": "tv",
+    "pts_us": 0,
+    "requested_class": "tv",
+    "requested_entity": "dv-9532099dbadcd75d:object-433",
+    "sample_id": "d5a579ab97334d0767adf376",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-9532099dbadcd75d/attempt-0001/video.mp4",
+    "video_sha256": "67e14afab0d0faf90a8542670d363603d378c761fb746262cdf0ef1dc4542fdd",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "14",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-b1efcf310ae19cba",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-14.png",
+    "image_sha256": "e59fda6c22aa789925bbc1bcef14393096b16bd0063f3e128f78b853665f274f",
+    "manifest_sha256": "e81eb69bb6dab0a46b9a5492424cac8a3f52f0a93e2b62e211c92a48d081aea1",
+    "mapped_class": "cup",
+    "pts_us": 0,
+    "requested_class": "mug",
+    "requested_entity": "dv-b1efcf310ae19cba:object-454",
+    "sample_id": "d5197860444d78672aab0395",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-b1efcf310ae19cba/attempt-0001/video.mp4",
+    "video_sha256": "e9be4a76c5755e35aa70a670f3fe0a5916a3be21c2151d171788baa68ad4c931",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "16",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-b80308c130c7003b",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-16.png",
+    "image_sha256": "d54d88da2a4421e6e3febe83df4342d14bb6d1431aec1de8c5005d1e9df3a469",
+    "manifest_sha256": "67def6c1a5a9ecd9a21cead6d0604d069c19b65137f0a9fef876651f26ce2e4f",
+    "mapped_class": "couch",
+    "pts_us": 0,
+    "requested_class": "sofa",
+    "requested_entity": "dv-b80308c130c7003b:object-375",
+    "sample_id": "f360e8598daa5120dce54e3a",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-b80308c130c7003b/attempt-0001/video.mp4",
+    "video_sha256": "2cf15dc7b558905d058860f88819297bcabfba0a2b67e566d91fe7c989199b19",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "17",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-b860109d640354aa",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-17.png",
+    "image_sha256": "466068ca4b5ecdd5742a0ec94cfb1d095ef89bd8d10ed199e75e5fd31f9db7dd",
+    "manifest_sha256": "ad62536e024bcbfba5e8bfb4e2a2d8725d379c24a3e3c7aa8a1c3fd4b899d668",
+    "mapped_class": "couch",
+    "pts_us": 0,
+    "requested_class": "sofa",
+    "requested_entity": "dv-b860109d640354aa:object-301",
+    "sample_id": "30a155b90fa32fec92232c46",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-b860109d640354aa/attempt-0001/video.mp4",
+    "video_sha256": "48675861d2a6ed287e1f230991c2c1cc00f7d34bf957c7f16f351b288cd54f13",
+    "view": "left",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "18",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-1",
+    "episode_id": "dv-d6ae3400348a5fe9",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-18.png",
+    "image_sha256": "a9a1829e45e6a1338ec7bd0eb8989e6c35120270ae15228ff78745b6fef7693b",
+    "manifest_sha256": "982e92491198f0cef7e80d962087b465c374e0a346c483d8d5dba13bd734e182",
+    "mapped_class": "couch",
+    "pts_us": 0,
+    "requested_class": "sofa",
+    "requested_entity": "dv-d6ae3400348a5fe9:object-301",
+    "sample_id": "4955efe61728f4cdcfb0e745",
+    "split": "development",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-d6ae3400348a5fe9/attempt-0001/video.mp4",
+    "video_sha256": "5e164d9d412687ec2ee7c1c58ec2ad7685e681edb49c3a47e68cb35e99b1d33f",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "21",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-e8d0b4406873fe07",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-21.png",
+    "image_sha256": "1d00c1346b048c202ad8668323cea372368fbd47ca6d9cdd5bd3a3706b7dbe2f",
+    "manifest_sha256": "9d0c8f7f50360edd621a4b61ca1bbeb9cd7a6129c3e1b50756aeb1f452d8d128",
+    "mapped_class": null,
+    "pts_us": 0,
+    "requested_class": "tablelamp",
+    "requested_entity": "dv-e8d0b4406873fe07:object-268",
+    "sample_id": "32851e9f486bf2649557e1ca",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-e8d0b4406873fe07/attempt-0001/video.mp4",
+    "video_sha256": "c326c1c2b1b3b2fd7cbca0cafba40b1c5417822e14025037e98bd7d35033618d",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "22",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-0",
+    "episode_id": "dv-f5d425826f4d5906",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-22.png",
+    "image_sha256": "1f23650ec5bdd750237660703d6c39ca4dbaa05aff26746eff671df00bdabed0",
+    "manifest_sha256": "907cdedc3df6d453f35da311684dc5b1dd62f202671ba392493955a0dd5421d5",
+    "mapped_class": "couch",
+    "pts_us": 0,
+    "requested_class": "sofa",
+    "requested_entity": "dv-f5d425826f4d5906:object-375",
+    "sample_id": "12900d2233da1d43cb91acff",
+    "split": "train",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-f5d425826f4d5906/attempt-0001/video.mp4",
+    "video_sha256": "8b8f0a299fbdcd92d94e0268d917555e7df266b3aaf3a9c3ba1e832e3f886b82",
+    "view": "right",
+    "width": 640
+  },
+  {
+    "aliases": [
+      {
+        "id": "23",
+        "kind": "pilot"
+      }
+    ],
+    "apartment": "apartment-2",
+    "episode_id": "dv-fecbdda0db4c76e8",
+    "frame_index": 0,
+    "height": 480,
+    "image": "output/video-perception/review-v1/pilot-23.png",
+    "image_sha256": "ce8e6ac51c4e9846194c0da2fb9cc2ee34252e78367e90db7bd519a617621bd5",
+    "manifest_sha256": "c5955f722fb0ca2f82b991ec19b6f8724b4410febf3af7c83bdbc1b369069a2a",
+    "mapped_class": null,
+    "pts_us": 0,
+    "requested_class": "plate",
+    "requested_entity": "dv-fecbdda0db4c76e8:object-67",
+    "sample_id": "125637b0e61e8c47da9ce086",
+    "split": "test",
+    "video": "output/virtualhome-corpus/diversity-v2/episodes/dv-fecbdda0db4c76e8/attempt-0001/video.mp4",
+    "video_sha256": "474c10adfcce78bdce582d7aa3a71f7b7878f5f0e5472a92e076f71ad7da6525",
+    "view": "right",
+    "width": 640
+  }
+]

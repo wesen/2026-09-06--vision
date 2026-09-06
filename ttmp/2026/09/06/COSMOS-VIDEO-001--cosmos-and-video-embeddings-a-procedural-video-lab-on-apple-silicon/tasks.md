@@ -27,3 +27,10 @@
 - [x] Render and visually inspect the PDF.
 - [x] Upload the guide to reMarkable and record the result.
 - [x] Print remaining phase slips and commit final diary.
+
+## VirtualHome household corpus
+
+- [x] C1: verify installed simulator, household actions, and fixed camera.
+- [x] C2: implement resumable generator, weak annotation contracts, tests, and smoke recording.
+- [x] C3: render 24 episodes and inspect group contact sheets.
+- [ ] C4: deep-validate assets, audit resume, document results, and commit.

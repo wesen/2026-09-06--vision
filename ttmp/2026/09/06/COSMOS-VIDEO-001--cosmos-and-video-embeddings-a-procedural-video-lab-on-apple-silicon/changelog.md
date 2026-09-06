@@ -24,3 +24,12 @@ Guide milestone 411c3cc validated and delivered as a visually reviewed 22-page P
 
 C1: verified local VirtualHome pilots; chose fridge/microwave routines and a fixed camera after finding AUTO visibility and action-export limitations.
 
+
+## 2026-09-06
+
+C2: implemented and smoke-tested grouped household corpus generation, immutable provenance, weak annotations and validation (commit c6dc24a; ten tests passed).
+
+### Related Files
+
+- /Users/manuel/code/wesen/2026-09-06--vision/src/virtualhome_corpus/runner.py — Corpus generation and validation
+

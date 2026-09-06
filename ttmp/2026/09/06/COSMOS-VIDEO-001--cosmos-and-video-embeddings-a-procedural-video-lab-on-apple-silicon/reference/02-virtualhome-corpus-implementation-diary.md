@@ -9,13 +9,24 @@ Topics:
 DocType: reference
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://configs/virtualhome-household-v1.json
+      Note: Household experiment definition
+    - Path: repo://docs/playbook/virtualhome-corpus.md
+      Note: Generation and resume commands
+    - Path: repo://src/virtualhome_corpus/core.py
+      Note: Episode and label contracts
+    - Path: repo://src/virtualhome_corpus/runner.py
+      Note: Rendering and integrity checks
+    - Path: repo://tests/test_virtualhome_corpus.py
+      Note: Ten contract tests
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T12:33:35.392573-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Diary
 
@@ -109,6 +120,8 @@ Implemented the configured 24-episode household corpus as a Python package with 
 
 **Inferred user intent:** Obtain usable local training assets and a clear implementation trail.
 
+**Commit (code):** `c6dc24a` — `feat(corpus): generate and validate grouped household videos`
+
 ### What I did
 - Added `configs/virtualhome-household-v1.json`, `src/virtualhome_corpus`, ten unit tests, and the corpus playbook.
 - Ran `PYTHONPATH=src output/virtualhome-install/.venv/bin/python -m unittest discover -s tests -v`: all ten passed.
@@ -148,3 +161,52 @@ Implemented the configured 24-episode household corpus as a Python package with 
 - Configuration SHA-256: `da29d6e35a5b2c716c1a7e868b56a1cc9b349fd3ea3ed8fe4cff09ebdf4d6360`.
 - Smoke video SHA-256: `404bead46cb4bc3b3b6379ca4e4ffd7546261b07b8ac64f35606b7d59892d416`.
 - Prior C1 implementation commit: `d005b3f`.
+
+## Step 3: Render and inspect the household corpus
+
+Started the full 24-episode run after printing C2 completion and C3 start slips. Each episode records into a new attempt directory, and the generator updates a durable summary after completion. Added a local evaluator gallery builder to make videos and contact sheets easy to inspect without exposing label-bearing files as model inputs.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1)
+
+**Assistant interpretation:** Produce the actual training assets and inspect the resulting footage.
+
+**Inferred user intent:** Have a usable corpus on this Mac, with evidence beyond successful simulator commands.
+
+### What I did
+- Started `PYTHONPATH=src output/virtualhome-install/.venv/bin/python -m virtualhome_corpus generate --port 18081 --output output/virtualhome-corpus/home-v1`.
+- Added `scripts/10-build-corpus-gallery.py` for local video playback and grouped contact-sheet review.
+- Captured installed package and FFmpeg versions in `various/corpus-runtime-versions.json`.
+
+### Why
+- Successful execution does not establish visual observability. Group sheets allow comparing intended counterfactuals against actual pixels.
+
+### What worked
+- The first three fridge variants completed with endpoint checks passing. Full-run outcome is recorded below after completion.
+
+### What didn't work
+- `output/virtualhome-install/.venv/bin/python -m pip freeze` returned `No module named pip`. Used standard-library `importlib.metadata.distributions()` to capture installed versions without modifying the working environment.
+
+### What I learned
+- A fresh run can have a different initial random actor position and episode duration even with the same configured action seed. Stored group positions and source hashes preserve the actual run evidence; determinism remains unverified.
+
+### What was tricky to build
+- Related variants must reuse initial position while each episode resets world state. The runner persists group initialization independently of episode attempts.
+
+### What warrants a second pair of eyes
+- Microwave door motion is smaller than fridge door motion at this camera distance. Review the raw 640x480 images before applying pixel-state supervision.
+
+### What should be done in the future
+- Complete rendering and deep validation, then retain a compact tracked result inventory.
+
+### Code review instructions
+- Inspect `scripts/10-build-corpus-gallery.py` and open `output/virtualhome-corpus/home-v1/gallery.html` after generation.
+- Compare normal, omission, and reopened variants within each group.
+
+### Technical details
+- Full run output: `output/virtualhome-corpus/home-v1` (ignored generated assets).
+- Rendering uses the owned simulator on port 18081; no other simulator is reset.
+
+### Completed render and visual inspection
+
+All 24 episodes completed on the first attempt with zero failures: 4,261 RGB/graph frame pairs, 426.1 seconds of video, 12 training / 6 development / 6 test episodes. Inspected contact sheets for all four groups (six episodes each); no gross camera failures were observed. Sampled final door geometry agrees with intended variants. This is sampled visual inspection, not exhaustive playback or a dense-label certification. Review notes and sheet hashes are in `various/corpus-visual-review.json`.

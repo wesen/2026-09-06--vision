@@ -1,0 +1,31 @@
+{
+  "reviewer": "coding assistant visual inspection",
+  "scope": "sampled contact-sheet frames, not exhaustive video playback or timing certification",
+  "dense_visual_state_supervision_allowed": false,
+  "groups": {
+    "g01": {
+      "episodes": 6,
+      "sheet": "inspection-g01.jpg",
+      "sheet_sha256": "43a9c6a596d95101fae97aeb6157850a6c6daf46ea0d7486deb3452c179abe54",
+      "observations": "Both appliances and actor visible. Normal final door closed; omitted/reopened final door open. Sampled detours show open state. Microwave door is small; hand motion can occlude it. No gross camera failures in these samples."
+    },
+    "g02": {
+      "episodes": 6,
+      "sheet": "inspection-g02.jpg",
+      "sheet_sha256": "43abc4d14fd3424ce0e31a7d36f9cac474ab63809a9acd4d6c5d1922e4cbd599",
+      "observations": "All six sampled sequences show the target and actor. Normal endpoints appear closed; omitted/reopened endpoints appear open. Appliance geometry remains visible at the shifted camera position. No gross camera failures observed."
+    },
+    "g03": {
+      "episodes": 6,
+      "sheet": "inspection-g03.jpg",
+      "sheet_sha256": "c3df3aa2c85fe25d100cc3502ddd85492db59d2e8bfb715d4544b94aae4adb12",
+      "observations": "Development group retains clear target framing. Sampled door states agree with normal versus open-ended variants. Actor occasionally overlaps microwave during manipulation, but detour and final frames expose the door. No gross camera failures observed."
+    },
+    "g04": {
+      "episodes": 6,
+      "sheet": "inspection-g04.jpg",
+      "sheet_sha256": "544f532d8ee5e3e6e61ea8d054d7285f06f575510de8a81eb17b571e9b75be71",
+      "observations": "All test sequences keep target appliances in frame. Sampled normal final doors closed, omission/reopening final doors open. Detour exposes open doors after actor moves away. No gross camera failures observed; exact transition timing remains uncertified."
+    }
+  }
+}

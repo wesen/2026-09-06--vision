@@ -61,3 +61,15 @@ VirtualHome may insert WALK rows and repeat a source-program index. The parser k
 Per-frame graphs are preserved as simulator world-state exports. Their capture phase relative to RGB is unverified, and an initial fridge pilot showed no intermediate OPEN state in a complete open-close sequence. Consequently, precise boundary supervision and dense visual state supervision are disabled in the annotations. Endpoint verdicts are checked against the final graph and actor destination, not inferred solely from the intended program.
 
 Use this first corpus for coarse action recognition, retrieval, pipeline development, and oracle episode-rule tests. Inspect contact sheets and the actual video before accepting individual clips as visually labeled training data. Exact transition timing and automatic visibility labels require a separate calibration task.
+
+## Browse recordings
+
+Build the evaluator gallery after generation:
+
+```sh
+output/virtualhome-install/.venv/bin/python \
+  ttmp/2026/09/06/COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-procedural-video-lab-on-apple-silicon/scripts/10-build-corpus-gallery.py
+open output/virtualhome-corpus/home-v1/gallery.html
+```
+
+The page uses local relative video/image links and makes no network requests. Its labels are for inspection; do not use the gallery as model input.

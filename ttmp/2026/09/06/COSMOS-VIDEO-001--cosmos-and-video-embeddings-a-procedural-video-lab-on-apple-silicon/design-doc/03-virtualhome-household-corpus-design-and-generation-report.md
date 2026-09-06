@@ -9,13 +9,24 @@ Topics:
 DocType: design-doc
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://configs/virtualhome-household-v1.json
+      Note: 24 episode design
+    - Path: repo://docs/playbook/virtualhome-corpus.md
+      Note: Operational commands
+    - Path: repo://src/virtualhome_corpus/core.py
+      Note: Planning and label contracts
+    - Path: repo://src/virtualhome_corpus/runner.py
+      Note: Generation and verification
+    - Path: repo://tests/test_virtualhome_corpus.py
+      Note: Contract regression tests
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T12:33:35.456201-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # VirtualHome household corpus design and generation report
 
@@ -81,3 +92,33 @@ Validation checks continuity and RGB/graph pairing, image decoding and dimension
 ## Validation at the implementation milestone
 
 Ten unit tests passed. The full simulator smoke produced 183 frames and an 18.3-second video in 25.809 seconds. The inspected sheet shows the fridge open during the detour and closed at the end; final graph validation confirms the actor reached the living room. Full-corpus results will be appended after rendering.
+
+## Consuming the corpus
+
+Start with coarse retrieval: read only the desired split from `inputs.jsonl`, decode the MP4 frames, and compute embeddings without loading labels. Persist features by episode ID, frame index, and presentation timestamp. Only the evaluation stage joins against `labels.jsonl` and `retrieval-queries.json`. This separation prevents programs, variant names, or final simulator states from entering model inference.
+
+```python
+# Pseudocode: decoder and encoder are deliberately downstream choices.
+inputs = read_jsonl(root / "inputs.jsonl")
+for episode in inputs:
+    if episode["split"] != desired_split:
+        continue
+    for frame_index, rgb in decode_video(root / episode["video"]):
+        features.write(episode["episode_id"], frame_index,
+                       frame_index * 100_000, encoder(rgb))
+
+# Evaluation is a separate pass, after inference has completed.
+for query in read_json(root / "retrieval-queries.json"):
+    candidates = rank_features(query["query"], desired_split)
+    evaluate_weak_interval_retrieval(candidates, query["relevant_interiors"])
+```
+
+A half-open interior `[start_frame, end_frame_exclusive)` includes its first frame and excludes its last numeric endpoint. At 10 FPS, frame 52 has presentation time 5.2 seconds. These are MP4 presentation times, not wall-clock render times. Train/development/test selection must be applied to both candidates and relevant intervals; training on all query relevance entries would leak held-out labels.
+
+Episode-level normal-versus-violation classification is an easy pipeline sanity check but is vulnerable to shortcuts: variants differ in duration and action count, and final door state often determines the result. Do not interpret high accuracy as proof of temporal reasoning. Reopened variants provide an initial challenge for systems that remember only that a close action happened; a meaningful temporal benchmark still needs matched-duration distractors and independent homes.
+
+## Source-level API navigation
+
+The installed communication implementation is `output/virtualhome-install/virtualhome-aist/simulation/unity_simulator/comm_unity.py`: character insertion at line 121, fixed camera insertion at 175, reset at 214, camera count at 231, graph retrieval at 291, and recording at 332. These are references to the recorded checkout, not promises about another VirtualHome version. The project package imports this class through `simulation.unity_simulator`.
+
+The generator depends on Python 3.11, Pillow for image validation, the installed VirtualHome communication dependencies, and FFmpeg/ffprobe on PATH. Actual versions are recorded in `../various/corpus-runtime-versions.json`. The existing environment was installed without pip; `importlib.metadata` was used to inventory it without changing the environment.

@@ -8,19 +8,29 @@ from .data import Sequence
 from .linear import fit,predict
 
 
-def run(dataset,features,destination):
-    root=Path(dataset);cache=Path(features);dest=Path(destination)
-    if dest.exists():raise ValueError('new baseline destination required')
+def load_sequences(dataset,features):
+    root=Path(dataset);cache=Path(features)
     manifest=json.loads((root/'manifest.json').read_text());fm=json.loads((cache/'manifest.json').read_text())
     if file_hash(root/'inputs.json')!=manifest['inputs_sha256'] or file_hash(root/'weak-labels.json')!=manifest['labels_sha256'] or fm['spec']['inputs_sha256']!=manifest['inputs_sha256'] or file_hash(cache/'features.npz')!=fm['features_sha256']:raise ValueError('sequence artifact mismatch')
     rows=json.loads((root/'inputs.json').read_text());labels=json.loads((root/'weak-labels.json').read_text());by_label={l['sample_id']:l for l in labels}
     if fm['sample_ids']!=[r['sample_id'] for r in rows] or set(by_label)!=set(fm['sample_ids']):raise ValueError('sequence row identity mismatch')
-    classes=manifest['classes'];archive=np.load(cache/'features.npz');groups={}
+    if len(by_label)!=len(labels) or len(set(fm['sample_ids']))!=len(rows):raise ValueError('duplicate sample identity')
+    classes=manifest['classes']
+    with np.load(cache/'features.npz') as archive:
+        feature_values=archive['features'];valid_values=archive['valid']
+    groups={}
     for i,r in enumerate(rows):groups.setdefault((r['episode_id'],r['split']),[]).append(i)
     sequences=[]
     for (eid,split),indices in groups.items():
         rr=[rows[i] for i in indices];ll=[by_label[r['sample_id']] for r in rr]
-        s=Sequence(eid,fm['space_id'],archive['features'][indices],np.array([r['start_us'] for r in rr]),np.array([r['end_us'] for r in rr]),np.array([r['available_us'] for r in rr]),archive['valid'][indices],np.array([l['label_mask'] for l in ll]),np.array([classes.index(l['action']) if l['label_mask'] else -1 for l in ll]),[(r['sample_id'],) for r in rr]).validate(len(classes));sequences.append((split,s))
+        s=Sequence(eid,fm['space_id'],feature_values[indices],np.array([r['start_us'] for r in rr]),np.array([r['end_us'] for r in rr]),np.array([r['available_us'] for r in rr]),valid_values[indices],np.array([l['label_mask'] for l in ll]),np.array([classes.index(l['action']) if l['label_mask'] else -1 for l in ll]),[(r['sample_id'],) for r in rr]).validate(len(classes));sequences.append((split,s))
+    return classes,sequences,manifest,fm
+
+
+def run(dataset,features,destination):
+    dest=Path(destination);cache=Path(features)
+    if dest.exists():raise ValueError('new baseline destination required')
+    classes,sequences,manifest,fm=load_sequences(dataset,features)
     def evaluate(model,split):
         pairs=[];episodes={}
         for part,s in sequences:

@@ -65,3 +65,32 @@ def test_unconstrained_oracle_preserves_omission_and_repeated_open():
         assert np.array_equal(p,s.targets)
         if name=='omission':assert 2 not in p
         else:assert sum(k==0 for start,end,k in runs(p))==3
+
+
+def test_adapter_clocks_dependencies_and_gaps():
+    from video_workbench.temporal.fixtures import oracle_sequences
+    from video_workbench.temporal.classical import decode
+    s=oracle_sequences(2)['gap'];scores=s.features[:,:3]
+    s.available_us[1]=s.end_us[-1]+10
+    a=np.zeros((3,3));pi=np.zeros(3)
+    f=decode(s,scores,'filter',a,pi)
+    offline=decode(s,scores,'smooth',a,pi)
+    assert f['available_us'][0]==s.available_us[0]
+    assert f['available_us'][1]==s.available_us[1]
+    assert offline['available_us'][0]==s.available_us[1]
+    assert f['dependency_evidence_ids'][0]==list(s.evidence_ids[0])
+    assert set(offline['dependency_evidence_ids'][0])>set(f['dependency_evidence_ids'][0])
+    assert all(p==-1 for p,v in zip(f['predictions'],s.valid) if not v)
+    assert all(ids==[] for ids,v in zip(f['dependency_evidence_ids'],s.valid) if not v)
+
+
+def test_segment_metrics_one_to_one_and_missing_gap():
+    from video_workbench.temporal.metrics import segment_metrics
+    # Two predicted OPEN events against one true OPEN: one false positive.
+    m=segment_metrics([0,-1,0],[0,0,0],[True]*3,[0,1,2],[1,2,3],threshold=.3)
+    assert (m['tp'],m['fp'],m['fn'])==(1,1,0)
+    assert m['segment_f1']==pytest.approx(2/3)
+    gap=segment_metrics([0,-1,0],[0,0,0],[True,False,True],[0,1,2],[1,2,3])
+    assert len(gap['truth_segments'])==2 and gap['segment_f1']==1
+    missing=segment_metrics([-1]*3,[0]*3,[True]*3,[0,1,2],[1,2,3])
+    assert missing['fn']==1 and missing['short_action_recall']==0

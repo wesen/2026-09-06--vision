@@ -1,0 +1,5643 @@
+{
+  "kind": "numerical exact intervals only; not weak video boundaries",
+  "episodes": {
+    "normal": {
+      "linear": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "filter": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "smooth": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "viterbi": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "hsmm": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "procedure_viterbi": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "hysteresis": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              200000,
+              1500000,
+              0
+            ],
+            [
+              1500000,
+              2900000,
+              1
+            ],
+            [
+              2900000,
+              3800000,
+              2
+            ],
+            [
+              3800000,
+              5100000,
+              0
+            ],
+            [
+              5100000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              200000,
+              1500000,
+              0
+            ],
+            [
+              1500000,
+              2900000,
+              1
+            ],
+            [
+              2900000,
+              3800000,
+              2
+            ],
+            [
+              3800000,
+              5100000,
+              0
+            ],
+            [
+              5100000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 5,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              200000,
+              1500000,
+              0
+            ],
+            [
+              1500000,
+              2900000,
+              1
+            ],
+            [
+              2900000,
+              3800000,
+              2
+            ],
+            [
+              3800000,
+              5100000,
+              0
+            ],
+            [
+              5100000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      }
+    },
+    "omission": {
+      "linear": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "filter": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "smooth": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "viterbi": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "hsmm": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "procedure_viterbi": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "segment_f1": 0.8888888888888888,
+          "normalized_edit_score": 0.8,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2000000,
+              1
+            ],
+            [
+              2000000,
+              2400000,
+              2
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "segment_f1": 0.8888888888888888,
+          "normalized_edit_score": 0.8,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2000000,
+              1
+            ],
+            [
+              2000000,
+              2400000,
+              2
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "segment_f1": 0.8888888888888888,
+          "normalized_edit_score": 0.8,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2000000,
+              1
+            ],
+            [
+              2000000,
+              2400000,
+              2
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "hysteresis": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              200000,
+              1500000,
+              0
+            ],
+            [
+              1500000,
+              2900000,
+              1
+            ],
+            [
+              2900000,
+              3800000,
+              0
+            ],
+            [
+              3800000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              200000,
+              1500000,
+              0
+            ],
+            [
+              1500000,
+              2900000,
+              1
+            ],
+            [
+              2900000,
+              3800000,
+              0
+            ],
+            [
+              3800000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              0
+            ],
+            [
+              3600000,
+              4700000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              200000,
+              1500000,
+              0
+            ],
+            [
+              1500000,
+              2900000,
+              1
+            ],
+            [
+              2900000,
+              3800000,
+              0
+            ],
+            [
+              3800000,
+              4700000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      }
+    },
+    "repetition": {
+      "linear": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "filter": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "smooth": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "viterbi": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "hsmm": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "procedure_viterbi": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 7,
+          "fp": 1,
+          "fn": 0,
+          "segment_f1": 0.9333333333333333,
+          "normalized_edit_score": 0.875,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              6300000,
+              2
+            ],
+            [
+              6300000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 7,
+          "fp": 1,
+          "fn": 0,
+          "segment_f1": 0.9333333333333333,
+          "normalized_edit_score": 0.875,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              6300000,
+              2
+            ],
+            [
+              6300000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 7,
+          "fp": 1,
+          "fn": 0,
+          "segment_f1": 0.9333333333333333,
+          "normalized_edit_score": 0.875,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              6300000,
+              2
+            ],
+            [
+              6300000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "hysteresis": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              200000,
+              1500000,
+              0
+            ],
+            [
+              1500000,
+              2900000,
+              1
+            ],
+            [
+              2900000,
+              3800000,
+              2
+            ],
+            [
+              3800000,
+              5100000,
+              0
+            ],
+            [
+              5100000,
+              6500000,
+              1
+            ],
+            [
+              6500000,
+              7400000,
+              0
+            ],
+            [
+              7400000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              200000,
+              1500000,
+              0
+            ],
+            [
+              1500000,
+              2900000,
+              1
+            ],
+            [
+              2900000,
+              3800000,
+              2
+            ],
+            [
+              3800000,
+              5100000,
+              0
+            ],
+            [
+              5100000,
+              6500000,
+              1
+            ],
+            [
+              6500000,
+              7400000,
+              0
+            ],
+            [
+              7400000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 7,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              2400000,
+              3600000,
+              2
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ],
+            [
+              6000000,
+              7200000,
+              0
+            ],
+            [
+              7200000,
+              8300000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              200000,
+              1500000,
+              0
+            ],
+            [
+              1500000,
+              2900000,
+              1
+            ],
+            [
+              2900000,
+              3800000,
+              2
+            ],
+            [
+              3800000,
+              5100000,
+              0
+            ],
+            [
+              5100000,
+              6500000,
+              1
+            ],
+            [
+              6500000,
+              7400000,
+              0
+            ],
+            [
+              7400000,
+              8300000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      }
+    },
+    "gap": {
+      "linear": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "filter": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "smooth": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "viterbi": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "hsmm": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "procedure_viterbi": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      },
+      "hysteresis": {
+        "0.1": {
+          "iou_threshold": 0.1,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              200000,
+              1500000,
+              0
+            ],
+            [
+              1500000,
+              2400000,
+              1
+            ],
+            [
+              3800000,
+              5100000,
+              0
+            ],
+            [
+              5100000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.25": {
+          "iou_threshold": 0.25,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              200000,
+              1500000,
+              0
+            ],
+            [
+              1500000,
+              2400000,
+              1
+            ],
+            [
+              3800000,
+              5100000,
+              0
+            ],
+            [
+              5100000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        },
+        "0.5": {
+          "iou_threshold": 0.5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "segment_f1": 1.0,
+          "normalized_edit_score": 1.0,
+          "short_action_max_us": 1500000,
+          "short_action_count": 4,
+          "short_action_recall": 1.0,
+          "truth_segments": [
+            [
+              0,
+              1100000,
+              0
+            ],
+            [
+              1100000,
+              2400000,
+              1
+            ],
+            [
+              3600000,
+              4700000,
+              0
+            ],
+            [
+              4700000,
+              6000000,
+              1
+            ]
+          ],
+          "prediction_segments": [
+            [
+              200000,
+              1500000,
+              0
+            ],
+            [
+              1500000,
+              2400000,
+              1
+            ],
+            [
+              3800000,
+              5100000,
+              0
+            ],
+            [
+              5100000,
+              6000000,
+              1
+            ]
+          ],
+          "matching": "temporal-order greedy maximum IoU; one-to-one; negative labels excluded; validity gaps retained"
+        }
+      }
+    }
+  }
+}

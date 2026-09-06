@@ -28,3 +28,7 @@ Step 6: Classical decoder numerical checks and constrained omission failure capt
 ## 2026-09-06
 
 Step 7: Complete T2 measured classical comparison, capability/evidence clocks, numerical segment metrics and reviewed figure (commit 3be2278).
+
+## 2026-09-06
+
+Step 8: Complete T3 causal TCN training, seed comparison, trained-weight streaming/causality checks and reviewed evidence (commit fd405d3).

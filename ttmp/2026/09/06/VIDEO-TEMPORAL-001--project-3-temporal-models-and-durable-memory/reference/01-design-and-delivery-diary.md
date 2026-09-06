@@ -426,3 +426,61 @@ Read `temporal/classical.py`, `classical_benchmark.py`, and `metrics.py`, then t
 
 ### Technical details
 Transition strengths: 0/0.25/1; persistence: 0/500000/1000000 microseconds; HSMM mean preferences: 2/4/8 samples. Selection uses development macro recall and first-candidate tie breaking. Short-action threshold is 1500000 microseconds. Actual accepted comparison: `output/temporal-v1/classical-v2`; tracked copies under `various/classical-comparison-v2`. No exact-boundary metrics were computed on the weak video labels.
+
+## Step 8: Train causal heads and verify actual checkpoint streaming
+
+Completed T3 with six actual CPU training runs on the frozen 792-window feature matrix, development-only checkpoint/architecture selection, three selected seed evaluations, and checkpoint hashes. Added a bounded-history streaming wrapper and an availability-ordered sequence adapter, then checked actual trained weights for future leakage and one-cell/full-sequence equivalence.
+
+The selected TCN mean test macro recall is 18.63%, below the linear baseline's 21.16%. This is a completed negative experiment, not a claim that temporal learning improved action recognition. Saved and visually reviewed the seed figure and wrote a technical report including architecture, training, memory, latency, and clock limitations.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 4)
+
+**Assistant interpretation:** Implement, train, and measure causal learned temporal heads while retaining evidence and detailed checkpoints.
+
+**Inferred user intent:** Test learned temporal context rigorously before using its outputs in procedural memory and rules.
+
+**Commit (code):** `fd405d3` — Train causal TCN seeds and verify bounded-history streaming.
+
+### What I did
+- Read the complete imported `neural_lab.py` and adapted its two-stage causal residual network into `temporal/tcn.py`.
+- Added train-only normalization buffers, independent validity/label masking, class-weighted loss, finite-history chunk prediction, and ordered feature-availability buffering.
+- Implemented the `python -m video_workbench.temporal.train` CLI with 80-epoch Adam training, seeds 7/17/27, one-/two-block candidates, development checkpoint selection, and saved inference checkpoints.
+- Trained all six candidates on CPU in PyTorch 2.14.0 with two threads and deterministic algorithms; selected one block per stage by mean development macro recall.
+- Verified trained test outputs against single-cell streaming and future perturbation, then measured head-only streaming latency.
+- Saved `various/tcn-v1` results, latency metadata, and reviewed seed figure; wrote `reference/03-causal-tcn-training-and-streaming-results.md`.
+- Marked the three T3 tasks complete.
+
+### Why
+A causal architecture alone does not guarantee causal feature availability. Streaming requires finite context and explicit handling of delayed inputs. Multiple seeds and development-only selection expose whether a promising development result transfers to held-out episodes.
+
+### What worked
+- Fourteen temporal tests passed across data, classical, and TCN modules.
+- Actual selected test macro recall: seed 7 17.82%, seed 17 19.72%, seed 27 18.35%; mean 18.63%, population seed standard deviation 0.80 percentage points.
+- Future perturbation changed earlier trained logits by zero. Maximum full-versus-streamed logit discrepancy was 1.15e-5, below the declared 1e-4 trained-check tolerance.
+- Arbitrary chunk tests cover a two-block/two-stage receptive field of 13; selected training architecture has a five-sample receptive field.
+- Invalid feature value changes do not affect masked model outputs; masked target changes do not affect loss or gradients.
+- A delayed second feature blocks later inputs until available; future feature changes cannot alter earlier emitted observations.
+- Median measured CPU head push was 0.199–0.203 ms, p95 0.313–0.325 ms over 356 test cells per selected seed.
+- Opened the saved figure: development/test bars and architecture/weak-label caveats are readable.
+
+### What didn't work
+No test, training, checkpoint reload, or measured streaming check failed. Test macro recall did not improve despite higher development recall. This is recorded as the result, not treated as a reason to select a test-favored seed. Printing remains paused under the previously recorded automatic approval rejection for external Almanach egress.
+
+### What I learned
+The small trained heads fit quickly, but added temporal capacity does not overcome the current representation and weak-data limitations. Causality and reproducibility can pass while predictive value remains inferior to the simpler baseline.
+
+### What was tricky to build
+The multi-stage receptive field accumulates context across stages. Bounded chunk inference therefore retains raw context for the sum of all causal layers, not only the last stage. Train normalization must be stored with the weights and applied before masking so missing storage values do not become normalized pseudo-observations. The availability adapter enforces ordered buffering rather than silently skipping delayed inputs.
+
+### What warrants a second pair of eyes
+Missing cells mask activations but do not reset the TCN's historical receptive field, unlike the classical run-reset adapter. The checkpoints support inference, not exact optimizer resume. Reported head latency excludes tensor construction, decoding, embedding, transport, and persistence. Three seed measurements do not establish confidence intervals or broad generalization.
+
+### What should be done in the future
+Implement T4 append-only facts, supersession/retraction, conflict/coverage/expiry queries, late evidence and restart tests, and separate offline/causal rule handoffs. Carry actual availability and producer identity into stored observations.
+
+### Code review instructions
+Read `temporal/tcn.py`, `train.py`, and `test_temporal_tcn.py`, then the measured report. Run `PYTHONPATH=workbench/src workbench/perception-env/.venv/bin/python -m pytest workbench/tests/test_temporal_data.py workbench/tests/test_temporal_classical.py workbench/tests/test_temporal_tcn.py -q`. Reproduce training with the CLI and a fresh destination. `scripts/05-tcn-evidence.py` reloads the selected actual checkpoints and rebuilds the latency/figure artifacts.
+
+### Technical details
+Selected architecture: input 2048, ten classes, 16 channels, one dilation-one residual block per stage, two stages, 35412 trainable parameters. Parameter/normalization buffer storage is 158032 bytes; batch-one retained raw history is 32772 bytes excluding temporary activations. Process peak RSS on macOS was 401342464 bytes. Adam learning rate 0.003, dropout 0.1, smoothness loss zero, inverse training-frequency weights normalized to mean one. Checkpoints and hashes live under `output/temporal-v1/tcn-v1` and tracked result metadata respectively.

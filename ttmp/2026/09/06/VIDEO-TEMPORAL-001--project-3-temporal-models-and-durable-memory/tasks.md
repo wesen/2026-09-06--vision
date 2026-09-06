@@ -21,9 +21,9 @@
 
 ## T3 Causal TCN
 
-- [ ] Implement small frozen-feature TCN and training/checkpoint metadata.
-- [ ] Test future perturbation, chunk equivalence, masking, and feature availability.
-- [ ] Compare seed runs and development-selected settings against linear baseline.
+- [x] Implement small frozen-feature TCN and training/checkpoint metadata.
+- [x] Test future perturbation, chunk equivalence, masking, and feature availability.
+- [x] Compare seed runs and development-selected settings against linear baseline.
 
 ## T4 Memory
 

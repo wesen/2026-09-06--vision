@@ -9,13 +9,20 @@ Topics:
 DocType: reference
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://workbench/src/video_workbench/temporal/tcn.py
+      Note: Causal network and bounded available streaming
+    - Path: repo://workbench/src/video_workbench/temporal/train.py
+      Note: Seed training and development-only checkpoint selection
+    - Path: repo://workbench/tests/test_temporal_tcn.py
+      Note: Causality chunk equivalence and masking tests
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T18:58:24.078542-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Causal TCN training and streaming results
 

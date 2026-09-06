@@ -41,8 +41,8 @@ class StateObservation:
     available_us: int
     availability_source: str
     value: bool | None
-    raw_score: float
-    calibrated_probability: float
+    raw_score: float | None
+    calibrated_probability: float | None
     unknown_reason: str | None
     evidence_ids: tuple[str, ...]
     feature_space_id: str
@@ -56,7 +56,10 @@ class StateObservation:
             raise ValueError('invalid state value')
         if (self.value is None) != bool(self.unknown_reason):
             raise ValueError('unknown requires reason')
-        if not math.isfinite(self.raw_score) or not 0 <= self.calibrated_probability <= 1:
+        if self.raw_score is None or self.calibrated_probability is None:
+            if self.value is not None or self.raw_score is not None or self.calibrated_probability is not None:
+                raise ValueError('missing evidence requires paired null scores and unknown value')
+        elif not math.isfinite(self.raw_score) or not 0 <= self.calibrated_probability <= 1:
             raise ValueError('invalid score or probability')
         if not self.evidence_ids or not self.feature_space_id or not self.producer_id:
             raise ValueError('evidence and producer required')

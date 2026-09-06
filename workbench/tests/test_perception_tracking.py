@@ -33,3 +33,11 @@ def test_two_similar_objects_and_prefix_replay():
     prefix=TrackerSession('run','ep')
     for i in range(3):prefix.update(frame(i),[detection(i,20+i),dict(detection(i,160-i),detection_id=f'b{i}')])
     assert prefix.update(frame(3),[detection(3,23),dict(detection(3,157),detection_id='b3')])==a[3]
+
+
+def test_hand_computed_identity_switches_and_fragmentation():
+    from video_workbench.perception.evaluation import identity_counts
+    ids=['a','a',None,'b','a']
+    m=identity_counts([{'visible':True,'observed_track_id':i} for i in ids])
+    assert m['id_switches']==2 and m['fragmentations']==1
+    assert m['matched_rows']==4 and m['visible_coverage']==.8

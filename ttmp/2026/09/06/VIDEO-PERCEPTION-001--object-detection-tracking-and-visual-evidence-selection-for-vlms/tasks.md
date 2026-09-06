@@ -21,20 +21,20 @@
 - [x] Test episode/shot resets, gaps, ID switches, predicted versus observed locations, and prefix replay.
 - [x] Implement contextual target/person crops and invertible transforms.
 - [x] Add crop-specific evidence/cache identities and source-hash validation.
-- [ ] Review contiguous identity-labeled spans and save failure/success screenshots.
+- [x] Review contiguous identity-labeled spans and save failure/success screenshots.
 
 ## D3 Proposals and evidence packets
 
 - [x] Implement uniform full-scene scheduling and logged proposal budgets.
 - [x] Add measured proximity/movement/change cues with approach-only controls.
 - [x] Export bounded verifier packets with citation, source, and availability checks.
-- [ ] Measure coverage versus calls/pixels and complete short-action misses.
+- [x] Measure coverage versus calls/pixels and complete misses of reviewed transition brackets; document that other short-action labels are unavailable.
 - [x] Verify causal future-perturbation behavior separately from offline selection.
 
 ## D4 Recognition and replay
 
-- [ ] Integrate read-only perception overlays with registered video playback.
-- [ ] Freeze F/C/FC/FCH/FCW/H evidence ablations and grouped train/development/test policy.
-- [ ] Run fixed-interval representation comparisons separately from proposal-selection comparisons.
-- [ ] Publish per-group detection/tracking/recognition metrics, raw counts, timings, and failure gallery.
-- [ ] Write final implementation report and identify evidence-based mask/pose/Core ML/fine-tuning follow-ups.
+- [x] Integrate read-only perception overlays with registered video playback.
+- [x] Freeze F/C/FC/FCH/FCW/H evidence ablations and grouped train/development/test policy.
+- [x] Run fixed-interval representation comparisons separately from proposal-selection comparisons.
+- [x] Publish per-group detection/tracking/recognition metrics, raw counts, timings, and failure gallery.
+- [x] Write final implementation report and identify evidence-based mask/pose/Core ML/fine-tuning follow-ups.

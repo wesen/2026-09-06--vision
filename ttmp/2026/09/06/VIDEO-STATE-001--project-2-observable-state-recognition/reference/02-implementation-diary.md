@@ -342,3 +342,101 @@ The ticket's implementation tasks are complete, with an explicitly negative reco
 - Final implementation/report checkpoint: `0d56480` — Publish state baseline evidence timeline and negative-result report.
 - Completion slip confirmed `printed: true`, HTTP 200, at `2026-09-06T19:55:53Z`; layout archived as `various/work-slips/state-complete.yaml`.
 - Ticket closed after P1–P4 completion; final browser reload has zero console errors/warnings. No root push was requested; unrelated untracked work remains untouched.
+
+## Step 7: Reopen state recognition for source-bound YOLO evidence ablations
+
+After implementing the perception pipeline, reopened this ticket for the requested downstream comparison. Froze full-frame, crop-only, combined, predicted-hint, wrong-hint, and hints-only representations on the same 144 source samples. Crop selection reads no state labels and accepts exactly one matching detector category; missing or ambiguous crops remain explicit.
+
+### Prompt Context
+**User prompt (verbatim):** "Do the whole yolo thing and then continue with the state ticket"
+
+**Assistant interpretation:** Apply completed perception artifacts to the state task and measure the resulting behavior.
+
+**Inferred user intent:** Determine whether object-focused evidence solves the previous state-recognition failures.
+
+### What I did
+- Added hashed region manifests binding sample/entity/source identity to exact crop records and a frozen selection policy.
+- Prepared 69 uniquely bound crops, 74 missing requested-category detections, and one ambiguous class binding.
+- Encoded F/C/FC/FCH/FCW/H with the existing local Qwen model; F reuses the original frozen image cache exactly.
+- Implemented text-margin and ridge-head experiments for each representation, with training and calibration restricted to their original partitions.
+- Extended StateObservation to allow paired null scores for unavailable evidence, avoiding fabricated confidence on a missing crop.
+
+### Why
+- Cropping is only useful when the requested object is actually localized. Missing crops must affect coverage rather than disappear from the evaluation denominator.
+
+### What worked
+- Joint two-image-plus-text encoding completed, with both correct machine hints and deliberately wrong bicycle/dog hints preserved.
+- Full-frame text and ridge results reproduce the previous run exactly.
+
+### What didn't work
+- All 24 held-out microwave frames lack an accepted requested-class crop. Crop-only conditions therefore produce unknown with null scores for every test sample; this is detector failure, not successful state abstention.
+- Initial null-score test expected `paired null` but received `unknown requires reason`, because the fixture retained an unknown reason after changing its value to false. Fixed the fixture to remove the reason so it reaches the intended null-score invariant.
+
+### What I learned
+- The state pipeline now exposes its localization dependency directly. Full-frame fallback prevents missing data from becoming absence, but does not improve recognition by itself.
+
+### What was tricky to build
+- Mixed conditions receive different pixel budgets and encoders: FC fuses separately encoded vectors; FCH/FCW jointly encode the available images and hints. Metadata records these distinctions rather than treating all improvements as crop effects.
+- Previously inspected test scenes are reused for this exploratory follow-up. The report must not call this a fresh blind benchmark.
+
+### What warrants a second pair of eyes
+- Correct detector hints can still contain false TVs/persons; they are machine estimates, not ground truth.
+- Conditional crop F1 is undefined when there are no test crops; correct/all-known and missing counts remain the useful denominators.
+
+### What should be done in the future
+- Complete report/screenshots and handoff. Improve localization coverage on reviewed training/development examples before making another held-out crop-quality claim.
+
+### Code review instructions
+- Read `predicates/regions.py`, `region_experiment.py`, and `various/region-evidence-v1.json`; inspect null-score observations in the region run.
+
+### Technical details
+- New outputs: `output/state-workbench/region-features-v1` and `region-run-v1`.
+- Original `run-v2` remains unchanged. Perception implementation checkpoint: `dda2aa6`.
+
+## Step 8: Finish the region comparison with explicit localization failures
+
+The fixed experiment evaluated twelve conditions over 144 samples. The report and dashboard preserve the central negative result: no held-out requested-object crop was available, and combined representations did not improve recognition.
+
+### Prompt Context
+**User prompt (verbatim):** "Do the whole yolo thing and then continue with the state ticket"
+
+**Assistant interpretation:** Finish D1–D4, preserve the negative results, and complete the crop/hint state follow-up.
+
+**Inferred user intent:** An implemented, tested, reviewable system with screenshots and honest comparisons.
+
+**Commit (code):** Initial pipeline `dda2aa6`; the next commit contains replay, masks, and the state comparison.
+
+### What I did
+- Added read-only perception and state review applications, source-hash checks, actual mask polygons, crop display, and missing-evidence presentation.
+- Archived 1,728 state observations, feature metadata, and the six-condition/two-classifier result.
+- Captured and visually inspected browser screenshots, including the held-out missing crop and development refrigerator crop.
+- Wrote the detailed implementation report and a focused state comparison report.
+
+### Why
+The downstream comparison must account for missing localization and uneven evidence budgets before claiming any benefit from crops.
+
+### What worked
+Main tests: `workbench/.venv/bin/python -m pytest workbench/tests -q` → 34 passed, one skipped, two existing dependency warnings. Isolated perception tests → eight passed. Twelve live HTTP checks passed, including byte-range video (206), exact frame/crop retrieval, and unknown/missing evidence (404).
+
+### What didn't work
+The detector-to-review slip failed with `context deadline exceeded (Client.Timeout exceeded while awaiting headers)` from `https://almanach.crib.scapegoat.dev/api/render-and-print`; the print outcome is uncertain and was not retried immediately. The initial plan and state-region start slips returned HTTP 200 with `printed: true` at 19:59:43Z and 20:28:06Z respectively.
+
+All 24 test state frames lacked an accepted microwave crop. Crop-only zero errors represent zero coverage. Full-frame and combined image conditions answered all seven visually unknown samples.
+
+### What I learned
+The current limiting factor is requested-object evidence availability. Development success does not establish held-out state transfer.
+
+### What was tricky to build
+Paired null raw/probability scores distinguish unexecuted crop inference from model abstention. The paired crop test subset is empty and its metric must remain null. A missing crop file now produces a source-change response rather than an unhandled file exception.
+
+### What warrants a second pair of eyes
+Single-reviewer box extents, short actor spans, apartment/class confounding, and the exploratory reuse of a previously inspected test partition. No dense mask quality or generative-verifier quality was measured.
+
+### What should be done in the future
+Annotate requested objects at actual state times; add visible positive states and independent scenes; test an oracle crop diagnostic; repair and remeasure final-bin proposal coverage.
+
+### Code review instructions
+Start with the two reports, then inspect `regions.py`, `region_experiment.py`, `perception/proposals.py`, `perception/tracking.py`, the JSON result archives, and screenshot captions.
+
+### Technical details
+Perception UI: http://127.0.0.1:8773/. State region UI: http://127.0.0.1:8774/. Live checks are preserved in `various/api-review-checks.json`. Output weights/features/videos remain ignored; result identities and selected evidence are committed.

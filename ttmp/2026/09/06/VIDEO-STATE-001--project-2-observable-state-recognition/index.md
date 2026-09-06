@@ -1,7 +1,7 @@
 ---
 Title: Project 2 - Observable state recognition
 Ticket: VIDEO-STATE-001
-Status: complete
+Status: active
 Topics:
     - video
     - embeddings
@@ -9,13 +9,21 @@ Topics:
 DocType: index
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://workbench/src/video_workbench/predicates/region_app.py
+      Note: Evidence review API
+    - Path: repo://workbench/src/video_workbench/predicates/region_experiment.py
+      Note: Coverage-aware evaluation
+    - Path: repo://workbench/src/video_workbench/predicates/regions.py
+      Note: Source-bound crop and hint policies
 ExternalSources: []
 Summary: ""
-LastUpdated: 2026-09-06T15:55:49.214649-04:00
+LastUpdated: 2026-09-06T16:23:51.617928-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
+
 
 
 # Project 2 - Observable state recognition
@@ -35,7 +43,13 @@ Implementation and evaluation are complete. Five frozen baselines were evaluated
 - [Frozen predictions](various/run-v2/observations.jsonl)
 - [Results and producer configuration](various/run-v2/results.json)
 
-The evidence timeline runs at `http://127.0.0.1:8772/`. Next recommended work: VIDEO-PERCEPTION-001 D1–D2 (detection, tracking, and contextual crops), followed by a fixed-interval representation comparison before temporal memory.
+The evidence timeline runs at `http://127.0.0.1:8772/`. The YOLO follow-up is now complete: six representations and two classifiers on the same fixed samples. No held-out microwave crop was accepted. Prioritize localization and observability data before temporal memory.
+
+- [YOLO region comparison and failure analysis](reference/04-yolo-region-evidence-state-comparison-and-failure-analysis.md)
+- [Region results](various/region-run-v1/results.json)
+- [Region observations](various/region-run-v1/observations.jsonl)
+
+Region comparison UI: `http://127.0.0.1:8774/`.
 
 ## Guide delivery
 

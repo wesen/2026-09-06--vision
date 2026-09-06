@@ -1,0 +1,1314 @@
+[
+  {
+    "span": 0,
+    "episode_id": "dv-008b5e55af631629",
+    "split": "train",
+    "target": "fridge",
+    "samples": [
+      {
+        "frame_index": 32,
+        "frame_id": "522cabc9be243f4ecef8cfe8",
+        "pts_us": 3200000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-008b5e55af631629:s0:c0:t1",
+            "frame_id": "522cabc9be243f4ecef8cfe8",
+            "pts_us": 3200000,
+            "xyxy": [
+              112.11959838867188,
+              128.70953369140625,
+              217.37252807617188,
+              423.1614990234375
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "a71856069ac13ebcf04b8a54",
+            "score": 0.9033291339874268,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3212932
+          }
+        ]
+      },
+      {
+        "frame_index": 33,
+        "frame_id": "cf7f3d82333d88bed91d4fc8",
+        "pts_us": 3300000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-008b5e55af631629:s0:c0:t1",
+            "frame_id": "cf7f3d82333d88bed91d4fc8",
+            "pts_us": 3300000,
+            "xyxy": [
+              111.95531463623047,
+              127.3501205444336,
+              215.31622314453125,
+              422.391357421875
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "ecd75c79a621d03f324dd078",
+            "score": 0.9031557440757751,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3314073
+          }
+        ]
+      },
+      {
+        "frame_index": 34,
+        "frame_id": "39fb3abce4f152be01f4d32d",
+        "pts_us": 3400000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-008b5e55af631629:s0:c0:t1",
+            "frame_id": "39fb3abce4f152be01f4d32d",
+            "pts_us": 3400000,
+            "xyxy": [
+              111.87833404541016,
+              126.00248718261719,
+              213.8963623046875,
+              422.8519287109375
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "6c564b42ef9f40fda70c694e",
+            "score": 0.9008991718292236,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3414220
+          }
+        ]
+      },
+      {
+        "frame_index": 35,
+        "frame_id": "4b224e900937e7746af5a437",
+        "pts_us": 3500000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-008b5e55af631629:s0:c0:t1",
+            "frame_id": "4b224e900937e7746af5a437",
+            "pts_us": 3500000,
+            "xyxy": [
+              110.83616638183594,
+              125.45166015625,
+              211.61639404296875,
+              423.3879089355469
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "98640e029a53f75d3fe14a0f",
+            "score": 0.9122521281242371,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3514889
+          }
+        ]
+      },
+      {
+        "frame_index": 36,
+        "frame_id": "53d2805edfe3411f8aaa124f",
+        "pts_us": 3600000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-008b5e55af631629:s0:c0:t1",
+            "frame_id": "53d2805edfe3411f8aaa124f",
+            "pts_us": 3600000,
+            "xyxy": [
+              124.25860595703125,
+              128.63845825195312,
+              223.96221923828125,
+              422.4328308105469
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "dad0f71b164c7f1cb7eb3ad9",
+            "score": 0.9263125061988831,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3614700
+          }
+        ]
+      },
+      {
+        "frame_index": 37,
+        "frame_id": "49008d3432b73a5dc1c0eb0d",
+        "pts_us": 3700000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-008b5e55af631629:s0:c0:t1",
+            "frame_id": "49008d3432b73a5dc1c0eb0d",
+            "pts_us": 3700000,
+            "xyxy": [
+              139.23635864257812,
+              134.9738006591797,
+              238.7972412109375,
+              422.996826171875
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "30500a9d6d4986d23bb335a1",
+            "score": 0.9027270078659058,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3715712
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "span": 1,
+    "episode_id": "dv-13cb7ede57cfce80",
+    "split": "development",
+    "target": "tv",
+    "samples": [
+      {
+        "frame_index": 31,
+        "frame_id": "9944c501290da2f2572d377c",
+        "pts_us": 3100000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t1",
+            "frame_id": "9944c501290da2f2572d377c",
+            "pts_us": 3100000,
+            "xyxy": [
+              320.18463134765625,
+              144.3839569091797,
+              441.764892578125,
+              308.59942626953125
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "12f6942844fc707bb6c240ba",
+            "score": 0.7882566452026367,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3112834
+          },
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t3",
+            "frame_id": "9944c501290da2f2572d377c",
+            "pts_us": 3100000,
+            "xyxy": [
+              425.2471618652344,
+              135.08035278320312,
+              535.3907470703125,
+              477.6419677734375
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "2641d7ea2a9c1734e9b39132",
+            "score": 0.9158480167388916,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3112834
+          },
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t2",
+            "frame_id": "9944c501290da2f2572d377c",
+            "pts_us": 3100000,
+            "xyxy": [
+              571.627317698898,
+              420.8441162109375,
+              639.703492847977,
+              478.88623046875
+            ],
+            "class_id": 0,
+            "status": "predicted",
+            "detection_id": null,
+            "score": 0.3627329468727112,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3112834
+          }
+        ]
+      },
+      {
+        "frame_index": 32,
+        "frame_id": "812e0ffefef2118035ed480a",
+        "pts_us": 3200000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t1",
+            "frame_id": "812e0ffefef2118035ed480a",
+            "pts_us": 3200000,
+            "xyxy": [
+              319.9134521484375,
+              144.681640625,
+              440.7647705078125,
+              307.6722412109375
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "87d51a65116e00df1681cac8",
+            "score": 0.784519612789154,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3212521
+          },
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t3",
+            "frame_id": "812e0ffefef2118035ed480a",
+            "pts_us": 3200000,
+            "xyxy": [
+              427.08984375,
+              134.22084045410156,
+              537.5869140625,
+              477.7578430175781
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "67d5e10465339c9838d1f0f2",
+            "score": 0.9122085571289062,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3212521
+          },
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t2",
+            "frame_id": "812e0ffefef2118035ed480a",
+            "pts_us": 3200000,
+            "xyxy": [
+              571.627317698898,
+              420.8441162109375,
+              639.703492847977,
+              478.88623046875
+            ],
+            "class_id": 0,
+            "status": "predicted",
+            "detection_id": null,
+            "score": 0.3627329468727112,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3212521
+          }
+        ]
+      },
+      {
+        "frame_index": 33,
+        "frame_id": "1b01c7b1f1e37b1022d883a1",
+        "pts_us": 3300000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t1",
+            "frame_id": "1b01c7b1f1e37b1022d883a1",
+            "pts_us": 3300000,
+            "xyxy": [
+              320.2254943847656,
+              145.24119567871094,
+              440.7549133300781,
+              307.41717529296875
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "9bb6326d2a9ed38b5eaa21ad",
+            "score": 0.78544682264328,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3312649
+          },
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t3",
+            "frame_id": "1b01c7b1f1e37b1022d883a1",
+            "pts_us": 3300000,
+            "xyxy": [
+              427.5599060058594,
+              135.30624389648438,
+              537.9351196289062,
+              477.8130798339844
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "ad5de15ab1c5ba53987f4cd5",
+            "score": 0.9090510606765747,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3312649
+          },
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t2",
+            "frame_id": "1b01c7b1f1e37b1022d883a1",
+            "pts_us": 3300000,
+            "xyxy": [
+              571.627317698898,
+              420.8441162109375,
+              639.703492847977,
+              478.88623046875
+            ],
+            "class_id": 0,
+            "status": "predicted",
+            "detection_id": null,
+            "score": 0.3627329468727112,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3312649
+          }
+        ]
+      },
+      {
+        "frame_index": 34,
+        "frame_id": "7572ec66b5f6e1fdac3bba21",
+        "pts_us": 3400000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t1",
+            "frame_id": "7572ec66b5f6e1fdac3bba21",
+            "pts_us": 3400000,
+            "xyxy": [
+              324.4530029296875,
+              153.63900756835938,
+              439.2165832519531,
+              306.7149353027344
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "15ad9f1d56252e387c447733",
+            "score": 0.7588117122650146,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3413438
+          },
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t3",
+            "frame_id": "7572ec66b5f6e1fdac3bba21",
+            "pts_us": 3400000,
+            "xyxy": [
+              421.29473876953125,
+              148.24896240234375,
+              527.4668579101562,
+              478.34228515625
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "76a2ae3a3e614dc4008ea589",
+            "score": 0.9279517531394958,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3413438
+          },
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t2",
+            "frame_id": "7572ec66b5f6e1fdac3bba21",
+            "pts_us": 3400000,
+            "xyxy": [
+              571.627317698898,
+              420.8441162109375,
+              639.703492847977,
+              478.88623046875
+            ],
+            "class_id": 0,
+            "status": "predicted",
+            "detection_id": null,
+            "score": 0.3627329468727112,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3413438
+          }
+        ]
+      },
+      {
+        "frame_index": 35,
+        "frame_id": "be4d6a5ddac3bb1c391c8955",
+        "pts_us": 3500000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t1",
+            "frame_id": "be4d6a5ddac3bb1c391c8955",
+            "pts_us": 3500000,
+            "xyxy": [
+              327.99310302734375,
+              165.5747528076172,
+              434.3360595703125,
+              305.4103698730469
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "0f4f2bf8cdc9cb6c32337c4d",
+            "score": 0.6411364674568176,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3516007
+          },
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t3",
+            "frame_id": "be4d6a5ddac3bb1c391c8955",
+            "pts_us": 3500000,
+            "xyxy": [
+              415.9198303222656,
+              162.7347869873047,
+              517.1966552734375,
+              478.49163818359375
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "acbe24e9da8f10aff31bd377",
+            "score": 0.9232227802276611,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3516007
+          },
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t2",
+            "frame_id": "be4d6a5ddac3bb1c391c8955",
+            "pts_us": 3500000,
+            "xyxy": [
+              571.627317698898,
+              420.8441162109375,
+              639.703492847977,
+              478.88623046875
+            ],
+            "class_id": 0,
+            "status": "predicted",
+            "detection_id": null,
+            "score": 0.3627329468727112,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3516007
+          }
+        ]
+      },
+      {
+        "frame_index": 36,
+        "frame_id": "44fdc6cb00c6a85e6b3f13b5",
+        "pts_us": 3600000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t1",
+            "frame_id": "44fdc6cb00c6a85e6b3f13b5",
+            "pts_us": 3600000,
+            "xyxy": [
+              329.9100341796875,
+              176.56185913085938,
+              429.05645751953125,
+              304.7154235839844
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "bf3effb5be7441bb5d2151cc",
+            "score": 0.6474568843841553,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3619099
+          },
+          {
+            "track_id": "b4c508901276:dv-13cb7ede57cfce80:s0:c0:t3",
+            "frame_id": "44fdc6cb00c6a85e6b3f13b5",
+            "pts_us": 3600000,
+            "xyxy": [
+              413.48236083984375,
+              175.27407836914062,
+              510.63677978515625,
+              478.1976623535156
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "7b688b7ad067fb2f97462d4f",
+            "score": 0.920628011226654,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3619099
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "span": 2,
+    "episode_id": "dv-5379eae9425594a5",
+    "split": "development",
+    "target": "book",
+    "samples": [
+      {
+        "frame_index": 45,
+        "frame_id": "1820a34e84aecee4b89a17b3",
+        "pts_us": 4500000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-5379eae9425594a5:s0:c0:t3",
+            "frame_id": "1820a34e84aecee4b89a17b3",
+            "pts_us": 4500000,
+            "xyxy": [
+              366.8492431640625,
+              124.94234466552734,
+              470.75543212890625,
+              411.962158203125
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "65d42c3ddcbd1622e653926f",
+            "score": 0.8937627673149109,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 4513214
+          }
+        ]
+      },
+      {
+        "frame_index": 46,
+        "frame_id": "b433559fd0e8ac72569a99e2",
+        "pts_us": 4600000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-5379eae9425594a5:s0:c0:t3",
+            "frame_id": "b433559fd0e8ac72569a99e2",
+            "pts_us": 4600000,
+            "xyxy": [
+              367.8140869140625,
+              124.26615905761719,
+              469.9275817871094,
+              411.99578857421875
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "ca4425c11f09d16eedca4ad6",
+            "score": 0.8922575116157532,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 4612437
+          }
+        ]
+      },
+      {
+        "frame_index": 47,
+        "frame_id": "a7922e8e48f422668922a9f6",
+        "pts_us": 4700000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-5379eae9425594a5:s0:c0:t3",
+            "frame_id": "a7922e8e48f422668922a9f6",
+            "pts_us": 4700000,
+            "xyxy": [
+              368.4985656738281,
+              124.03784942626953,
+              468.8522033691406,
+              412.2501525878906
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "d71b05bca339312f44321eea",
+            "score": 0.8945171236991882,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 4712269
+          }
+        ]
+      },
+      {
+        "frame_index": 48,
+        "frame_id": "7567921a45a0de8590160fb4",
+        "pts_us": 4800000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-5379eae9425594a5:s0:c0:t3",
+            "frame_id": "7567921a45a0de8590160fb4",
+            "pts_us": 4800000,
+            "xyxy": [
+              369.11175537109375,
+              124.14002990722656,
+              467.77471923828125,
+              412.4870910644531
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "a33db215967b5fa650e40e3f",
+            "score": 0.8901309967041016,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 4813478
+          }
+        ]
+      },
+      {
+        "frame_index": 49,
+        "frame_id": "7fc422b1dd610c4db0f745c4",
+        "pts_us": 4900000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-5379eae9425594a5:s0:c0:t3",
+            "frame_id": "7fc422b1dd610c4db0f745c4",
+            "pts_us": 4900000,
+            "xyxy": [
+              369.9484558105469,
+              124.19983673095703,
+              467.3523864746094,
+              413.1513671875
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "ad011b984c229095443ee87a",
+            "score": 0.8927883505821228,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 4915474
+          }
+        ]
+      },
+      {
+        "frame_index": 50,
+        "frame_id": "3ffdb7763ba7ffddc3c2764a",
+        "pts_us": 5000000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-5379eae9425594a5:s0:c0:t3",
+            "frame_id": "3ffdb7763ba7ffddc3c2764a",
+            "pts_us": 5000000,
+            "xyxy": [
+              370.54217529296875,
+              124.21459197998047,
+              466.6288757324219,
+              413.032958984375
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "8c56e572f5a2369b8a626e0c",
+            "score": 0.8877396583557129,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 5016776
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "span": 3,
+    "episode_id": "dv-633a68f3856a13b9",
+    "split": "train",
+    "target": "mug",
+    "samples": [
+      {
+        "frame_index": 54,
+        "frame_id": "1e5f6c2f2627244160d68dd6",
+        "pts_us": 5400000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-633a68f3856a13b9:s0:c0:t2",
+            "frame_id": "1e5f6c2f2627244160d68dd6",
+            "pts_us": 5400000,
+            "xyxy": [
+              383.5362548828125,
+              139.4555206298828,
+              449.09295654296875,
+              384.02899169921875
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "660af0a84e2cc091f97d406d",
+            "score": 0.754751980304718,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 5415256
+          }
+        ]
+      },
+      {
+        "frame_index": 55,
+        "frame_id": "c149273f4314129c174bb0f4",
+        "pts_us": 5500000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-633a68f3856a13b9:s0:c0:t2",
+            "frame_id": "c149273f4314129c174bb0f4",
+            "pts_us": 5500000,
+            "xyxy": [
+              386.28179931640625,
+              141.40567016601562,
+              452.39825439453125,
+              385.7368469238281
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "dc222103b40fe922cc0dc372",
+            "score": 0.8493881225585938,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 5515694
+          }
+        ]
+      },
+      {
+        "frame_index": 56,
+        "frame_id": "1fd285bb4d16e6ad401f6c3c",
+        "pts_us": 5600000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-633a68f3856a13b9:s0:c0:t2",
+            "frame_id": "1fd285bb4d16e6ad401f6c3c",
+            "pts_us": 5600000,
+            "xyxy": [
+              386.2453918457031,
+              140.52505493164062,
+              454.40789794921875,
+              387.5436096191406
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "35eafe555b61711e85ba5abe",
+            "score": 0.8845728039741516,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 5616667
+          }
+        ]
+      },
+      {
+        "frame_index": 57,
+        "frame_id": "f75f0a86f1eb574ae55fcec7",
+        "pts_us": 5700000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-633a68f3856a13b9:s0:c0:t2",
+            "frame_id": "f75f0a86f1eb574ae55fcec7",
+            "pts_us": 5700000,
+            "xyxy": [
+              382.77703857421875,
+              137.43173217773438,
+              454.4203186035156,
+              386.9188537597656
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "fd0fb898f8ff169c2cda6d16",
+            "score": 0.8984398245811462,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 5718355
+          }
+        ]
+      },
+      {
+        "frame_index": 58,
+        "frame_id": "b76c7fcc78a19a9f85d5113f",
+        "pts_us": 5800000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-633a68f3856a13b9:s0:c0:t2",
+            "frame_id": "b76c7fcc78a19a9f85d5113f",
+            "pts_us": 5800000,
+            "xyxy": [
+              377.02410888671875,
+              134.76910400390625,
+              452.4622497558594,
+              388.698974609375
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "cdfbd8218c18893fc52ac781",
+            "score": 0.919373631477356,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 5812341
+          }
+        ]
+      },
+      {
+        "frame_index": 59,
+        "frame_id": "ede119bd5cd1724bcd321bd8",
+        "pts_us": 5900000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-633a68f3856a13b9:s0:c0:t2",
+            "frame_id": "ede119bd5cd1724bcd321bd8",
+            "pts_us": 5900000,
+            "xyxy": [
+              372.62890625,
+              133.4282989501953,
+              450.55322265625,
+              389.82867431640625
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "13ef93bc6546bf5983d84e42",
+            "score": 0.9077854156494141,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 5912973
+          },
+          {
+            "track_id": "b4c508901276:dv-633a68f3856a13b9:s0:c0:t8",
+            "frame_id": "ede119bd5cd1724bcd321bd8",
+            "pts_us": 5900000,
+            "xyxy": [
+              324.7821350097656,
+              134.0821075439453,
+              389.1643371582031,
+              250.58843994140625
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "1afdce277831c41f9f8dd51b",
+            "score": 0.533547580242157,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 5912973
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "span": 4,
+    "episode_id": "dv-673fa0ed90d3c06a",
+    "split": "test",
+    "target": "bed",
+    "samples": [
+      {
+        "frame_index": 63,
+        "frame_id": "701d4ca7f2f5478f37f28ab5",
+        "pts_us": 6300000,
+        "actor_tracks": []
+      },
+      {
+        "frame_index": 64,
+        "frame_id": "c19688d45715cb1a760d6a32",
+        "pts_us": 6400000,
+        "actor_tracks": []
+      },
+      {
+        "frame_index": 65,
+        "frame_id": "63f6b961879fd27173ca2615",
+        "pts_us": 6500000,
+        "actor_tracks": []
+      },
+      {
+        "frame_index": 66,
+        "frame_id": "47eaab1980240b4aa329ef2b",
+        "pts_us": 6600000,
+        "actor_tracks": []
+      },
+      {
+        "frame_index": 67,
+        "frame_id": "7712886242cd675b703dfc4c",
+        "pts_us": 6700000,
+        "actor_tracks": []
+      },
+      {
+        "frame_index": 68,
+        "frame_id": "7e9f64b97e3067c1a6dc4b84",
+        "pts_us": 6800000,
+        "actor_tracks": []
+      }
+    ]
+  },
+  {
+    "span": 5,
+    "episode_id": "dv-af669d3e3a486780",
+    "split": "test",
+    "target": "microwave",
+    "samples": [
+      {
+        "frame_index": 33,
+        "frame_id": "e90e2c4e8230e4ee24cb739a",
+        "pts_us": 3300000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-af669d3e3a486780:s0:c0:t1",
+            "frame_id": "e90e2c4e8230e4ee24cb739a",
+            "pts_us": 3300000,
+            "xyxy": [
+              153.6429901123047,
+              144.63211059570312,
+              243.835693359375,
+              442.8273620605469
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "4bf25658b90431a1b2541bbe",
+            "score": 0.905661404132843,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3313109
+          }
+        ]
+      },
+      {
+        "frame_index": 34,
+        "frame_id": "ff77395883b41fbc488343ca",
+        "pts_us": 3400000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-af669d3e3a486780:s0:c0:t1",
+            "frame_id": "ff77395883b41fbc488343ca",
+            "pts_us": 3400000,
+            "xyxy": [
+              156.58900451660156,
+              143.84559631347656,
+              245.98277282714844,
+              442.27227783203125
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "bb2c07276de22087fb46f559",
+            "score": 0.8900308012962341,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3415873
+          }
+        ]
+      },
+      {
+        "frame_index": 35,
+        "frame_id": "4f40b5bf5084ffbb5bc5bb1f",
+        "pts_us": 3500000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-af669d3e3a486780:s0:c0:t1",
+            "frame_id": "4f40b5bf5084ffbb5bc5bb1f",
+            "pts_us": 3500000,
+            "xyxy": [
+              158.5201416015625,
+              142.97166442871094,
+              247.38058471679688,
+              443.294677734375
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "09684fb579521fbcc1694290",
+            "score": 0.8884754776954651,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3519564
+          }
+        ]
+      },
+      {
+        "frame_index": 36,
+        "frame_id": "50aac07519fdcf14e0c4d1b2",
+        "pts_us": 3600000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-af669d3e3a486780:s0:c0:t1",
+            "frame_id": "50aac07519fdcf14e0c4d1b2",
+            "pts_us": 3600000,
+            "xyxy": [
+              159.4962158203125,
+              142.49609375,
+              247.5512237548828,
+              444.3387145996094
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "18147ea37c58719a98985906",
+            "score": 0.8714491724967957,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3612911
+          }
+        ]
+      },
+      {
+        "frame_index": 37,
+        "frame_id": "f610ac4f3a0667a0d33b0c42",
+        "pts_us": 3700000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-af669d3e3a486780:s0:c0:t1",
+            "frame_id": "f610ac4f3a0667a0d33b0c42",
+            "pts_us": 3700000,
+            "xyxy": [
+              159.7557830810547,
+              142.48617553710938,
+              246.92173767089844,
+              444.9021911621094
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "9f47c323b683eefcd16154df",
+            "score": 0.866537868976593,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3710822
+          }
+        ]
+      },
+      {
+        "frame_index": 38,
+        "frame_id": "8f7b49fa0abc8d8f3ae395fe",
+        "pts_us": 3800000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-af669d3e3a486780:s0:c0:t1",
+            "frame_id": "8f7b49fa0abc8d8f3ae395fe",
+            "pts_us": 3800000,
+            "xyxy": [
+              159.41339111328125,
+              142.08758544921875,
+              245.8791046142578,
+              445.3937072753906
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "3724025e60637dc1666ca6bc",
+            "score": 0.879483163356781,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3810873
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "span": 6,
+    "episode_id": "dv-b78c9de6650abd04",
+    "split": "development",
+    "target": "fridge",
+    "samples": [
+      {
+        "frame_index": 40,
+        "frame_id": "d6ea56b47d0717899a81b574",
+        "pts_us": 4000000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-b78c9de6650abd04:s0:c0:t5",
+            "frame_id": "d6ea56b47d0717899a81b574",
+            "pts_us": 4000000,
+            "xyxy": [
+              136.63031005859375,
+              127.49513244628906,
+              253.26161193847656,
+              476.86358642578125
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "d94b834e07ed3132dc684d27",
+            "score": 0.9452382922172546,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 4011294
+          }
+        ]
+      },
+      {
+        "frame_index": 41,
+        "frame_id": "7e4caaea547d2798f273cc19",
+        "pts_us": 4100000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-b78c9de6650abd04:s0:c0:t5",
+            "frame_id": "7e4caaea547d2798f273cc19",
+            "pts_us": 4100000,
+            "xyxy": [
+              136.29931640625,
+              127.6934814453125,
+              254.17967224121094,
+              476.7667236328125
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "841e5c64b5cd228790dddb5c",
+            "score": 0.9459023475646973,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 4112512
+          }
+        ]
+      },
+      {
+        "frame_index": 42,
+        "frame_id": "f215adbe8f553af53e6b2de1",
+        "pts_us": 4200000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-b78c9de6650abd04:s0:c0:t5",
+            "frame_id": "f215adbe8f553af53e6b2de1",
+            "pts_us": 4200000,
+            "xyxy": [
+              135.79739379882812,
+              127.46907043457031,
+              254.986572265625,
+              476.7690734863281
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "38348a34e7b14e6fc75546b6",
+            "score": 0.9449596405029297,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 4214314
+          }
+        ]
+      },
+      {
+        "frame_index": 43,
+        "frame_id": "f4648cfe8de67a2a12d16598",
+        "pts_us": 4300000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-b78c9de6650abd04:s0:c0:t5",
+            "frame_id": "f4648cfe8de67a2a12d16598",
+            "pts_us": 4300000,
+            "xyxy": [
+              135.71401977539062,
+              127.29864501953125,
+              256.1163024902344,
+              476.8088684082031
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "79b76b1e912b53aa95203712",
+            "score": 0.9442272186279297,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 4315939
+          }
+        ]
+      },
+      {
+        "frame_index": 44,
+        "frame_id": "4c093cb251d7b35bddfeef92",
+        "pts_us": 4400000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-b78c9de6650abd04:s0:c0:t5",
+            "frame_id": "4c093cb251d7b35bddfeef92",
+            "pts_us": 4400000,
+            "xyxy": [
+              136.57131958007812,
+              127.1064224243164,
+              258.0112609863281,
+              476.5915222167969
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "d0265370f3e5c3dc4c5f89e4",
+            "score": 0.9422597885131836,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 4416518
+          }
+        ]
+      },
+      {
+        "frame_index": 45,
+        "frame_id": "e4a8455a6e307c0f78b19b18",
+        "pts_us": 4500000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-b78c9de6650abd04:s0:c0:t5",
+            "frame_id": "e4a8455a6e307c0f78b19b18",
+            "pts_us": 4500000,
+            "xyxy": [
+              138.15176391601562,
+              126.24249267578125,
+              260.7975769042969,
+              476.5972595214844
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "e99bc79cd05990823d4d2916",
+            "score": 0.9407158493995667,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 4514893
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "span": 7,
+    "episode_id": "dv-b80308c130c7003b",
+    "split": "train",
+    "target": "sofa",
+    "samples": [
+      {
+        "frame_index": 33,
+        "frame_id": "b9668606fb46e2e622408607",
+        "pts_us": 3300000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-b80308c130c7003b:s0:c0:t1",
+            "frame_id": "b9668606fb46e2e622408607",
+            "pts_us": 3300000,
+            "xyxy": [
+              266.62255859375,
+              99.26350402832031,
+              336.7868957519531,
+              360.28631591796875
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "72c3ddde5c01f1ee41651112",
+            "score": 0.892035186290741,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3312173
+          }
+        ]
+      },
+      {
+        "frame_index": 34,
+        "frame_id": "9f5b4aaa50d25ce8a561e753",
+        "pts_us": 3400000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-b80308c130c7003b:s0:c0:t1",
+            "frame_id": "9f5b4aaa50d25ce8a561e753",
+            "pts_us": 3400000,
+            "xyxy": [
+              266.614013671875,
+              99.2008285522461,
+              335.8427734375,
+              360.26885986328125
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "516e2a03adaca9de666254d3",
+            "score": 0.8853502869606018,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3412353
+          }
+        ]
+      },
+      {
+        "frame_index": 35,
+        "frame_id": "d629216283295b34ba8acbf7",
+        "pts_us": 3500000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-b80308c130c7003b:s0:c0:t1",
+            "frame_id": "d629216283295b34ba8acbf7",
+            "pts_us": 3500000,
+            "xyxy": [
+              266.5241394042969,
+              99.0805892944336,
+              335.06744384765625,
+              360.329345703125
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "87e4600ce9b0a88a2d799460",
+            "score": 0.8817045092582703,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3514138
+          }
+        ]
+      },
+      {
+        "frame_index": 36,
+        "frame_id": "4e1bc59b57fade6d18432b8b",
+        "pts_us": 3600000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-b80308c130c7003b:s0:c0:t1",
+            "frame_id": "4e1bc59b57fade6d18432b8b",
+            "pts_us": 3600000,
+            "xyxy": [
+              266.20733642578125,
+              98.96305847167969,
+              334.3121337890625,
+              360.3808288574219
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "fa6db1246b5bc29a356b1e9c",
+            "score": 0.8748073577880859,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3616423
+          }
+        ]
+      },
+      {
+        "frame_index": 37,
+        "frame_id": "f1a4ff297dc23eae6942a098",
+        "pts_us": 3700000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-b80308c130c7003b:s0:c0:t1",
+            "frame_id": "f1a4ff297dc23eae6942a098",
+            "pts_us": 3700000,
+            "xyxy": [
+              266.36187744140625,
+              99.08586883544922,
+              334.1551208496094,
+              359.54071044921875
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "e9f5d7ad484679141b1db9fd",
+            "score": 0.8701248168945312,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3716177
+          }
+        ]
+      },
+      {
+        "frame_index": 38,
+        "frame_id": "c3998bc2a84bb66efdf67e48",
+        "pts_us": 3800000,
+        "actor_tracks": [
+          {
+            "track_id": "b4c508901276:dv-b80308c130c7003b:s0:c0:t1",
+            "frame_id": "c3998bc2a84bb66efdf67e48",
+            "pts_us": 3800000,
+            "xyxy": [
+              265.4825134277344,
+              99.23629760742188,
+              333.0189514160156,
+              360.7768859863281
+            ],
+            "class_id": 0,
+            "status": "observed",
+            "detection_id": "ea2fc6227c5d24c33e48239e",
+            "score": 0.873867392539978,
+            "producer_id": "df735e5b86ddde79e5dfc6a1fa42bdc768cc9bb183721af9010fad471f3dd7a6",
+            "available_at_us": 3819118
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -55,3 +55,10 @@ def test_observation_rejects_time_reversal_and_unexplained_unknown():
         StateObservation(**dict(kwargs,available_us=9))
     with pytest.raises(ValueError,match='reason'):
         StateObservation(**dict(kwargs,unknown_reason=None))
+
+
+def test_missing_evidence_can_export_unknown_without_fabricated_scores():
+    kwargs=dict(sample_id='a',episode_id='ep',entity_id='ep:1',property='door_open',sample_us=0,available_us=0,availability_source='offline',value=None,raw_score=None,calibrated_probability=None,unknown_reason='missing_crop',evidence_ids=('a',),feature_space_id='s',producer_id='p')
+    StateObservation(**kwargs)
+    with pytest.raises(ValueError,match='paired null'):
+        StateObservation(**dict(kwargs,value=False,unknown_reason=None))

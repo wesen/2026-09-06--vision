@@ -31,3 +31,6 @@
 - [x] Export StateObservation contract for temporal memory.
 - [x] Report transition metrics only if reviewed boundary labels are available.
 - [x] Publish ablation table and supported/unsupported state distinctions.
+- [x] Freeze source-bound YOLO crop evidence and F/C/FC/FCH/FCW/H representation policies. <!-- t:xk05 -->
+- [x] Encode and evaluate text margins and ridge heads on fixed samples; preserve missing crops and test-reuse limitations. <!-- t:63es -->
+- [x] Publish region comparison report, predictions, screenshots, and perception handoff. <!-- t:plzw -->

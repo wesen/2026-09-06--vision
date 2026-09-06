@@ -1,0 +1,3539 @@
+{
+  "policy": {
+    "requested_class": {
+      "fridge": "refrigerator",
+      "microwave": "microwave"
+    },
+    "binding": "exactly-one-accepted-requested-class-box-per-frame",
+    "crop_kind": "target",
+    "score_floor": 0.25,
+    "fusion": "FC=unit(mean(unit-full,unit-crop)); FCH/FCW=joint-images-and-hint",
+    "hints": "Predicted objects: {classes}. These are machine estimates.",
+    "wrong_hints": "Predicted objects: bicycle, dog. These are machine estimates.",
+    "missing_crop": "C unavailable; FC uses full frame; FCH/FCW keep full frame and explicit detector hint",
+    "budgets": {
+      "F": 76800,
+      "C": 76800,
+      "FC": 153600,
+      "FCH": 153600,
+      "FCW": 153600,
+      "H": 0
+    },
+    "test_reuse": "Previously inspected test partition; exploratory follow-up, not a fresh untouched benchmark."
+  },
+  "source_run_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+  "source_manifest_sha256": "252eeb8563d5d6a189a89f3ab9eb782435710a255bf0a4f01015dfd8e00f1c7e",
+  "samples": [
+    {
+      "sample_id": "7f1ae70888f44c1635be",
+      "entity_id": "dv-008b5e55af631629:object-308",
+      "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+      "image_sha256": "6236bb5878b9e161565e95f95ea9242b6c6f90ad6b9feea37450d4db7094df5a",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "2f135f655694d5340186",
+      "entity_id": "dv-008b5e55af631629:object-308",
+      "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+      "image_sha256": "cc1c538107f953c5f885cfc103fa8697c84bbef88dc27819c8b60026d424d504",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "dc4b9a695b5c78073a7e",
+      "entity_id": "dv-008b5e55af631629:object-308",
+      "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+      "image_sha256": "a567f3609089777138884f8386e4e97f2f00051ad1ad146552f55515f55c8ccf",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "5334b8cb3384c60aba0f",
+      "entity_id": "dv-008b5e55af631629:object-308",
+      "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+      "image_sha256": "a7658dc2ef282d5182b92a3b9f6f97f13376117200bc5443e8647615498b4a1d",
+      "crop": {
+        "frame_id": "a78a2a3a232ff4f58a638835",
+        "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+        "rect": [
+          157.0,
+          0.0,
+          445.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "beb2592c4980e65e390bd237"
+        ],
+        "evidence_id": "108fd48fc533a8c4d0b3136f",
+        "source_min_extent": 288.0,
+        "episode_id": "dv-008b5e55af631629",
+        "pts_us": 4100000,
+        "frame_index": 41,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.606498658657074,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-008b5e55af631629/108fd48fc533a8c4d0b3136f.png",
+        "image_sha256": "214eb1c1b3efc0370a7f02d55221f2cbc9479bf052887f54df3b2898afc62ed8"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: person, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "751121bf00d29dc96926",
+      "entity_id": "dv-008b5e55af631629:object-308",
+      "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+      "image_sha256": "68400eee901371bdc6540839e15475801a567ab3b73a05fcdaa8f8061fcb6099",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "6a5bb4beddd18654115c",
+      "entity_id": "dv-008b5e55af631629:object-308",
+      "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+      "image_sha256": "095955f102309ec2993d528c9b2fb986c36e6512f44ed29e647602ef4a4900e0",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: microwave, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "dec431f9f42e59573a62",
+      "entity_id": "dv-03c8a2dbcd624cf8:object-308",
+      "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+      "image_sha256": "b7b6385815e5eff127942fd083cb15ff7b767a8a91e9d1396428bd552c336ffb",
+      "crop": {
+        "frame_id": "bb8adc0ed27af0bce6710df3",
+        "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+        "rect": [
+          206.0,
+          0.0,
+          429.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "b044f75661dcd42c46e93805"
+        ],
+        "evidence_id": "e74695b536b16a798f9d3b96",
+        "source_min_extent": 223.0,
+        "episode_id": "dv-03c8a2dbcd624cf8",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.8808169960975647,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-03c8a2dbcd624cf8/e74695b536b16a798f9d3b96.png",
+        "image_sha256": "0b7322cd501e0cfae3f15713090c57d8d62f938dbfa3a489c6e7c249caa53a0b"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: refrigerator, toilet. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "0121af99108f5833aa25",
+      "entity_id": "dv-03c8a2dbcd624cf8:object-308",
+      "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+      "image_sha256": "9f4f7a6fdec90a8d5204405ba4ce3a4838872b9c8cb0ead942fca010f7c21fdd",
+      "crop": {
+        "frame_id": "423c13a3abea9e2726ea42f7",
+        "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+        "rect": [
+          206.0,
+          0.0,
+          429.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "2ea9c2e6a15f060485d45e99"
+        ],
+        "evidence_id": "83a66c74b45fe73f414d884e",
+        "source_min_extent": 223.0,
+        "episode_id": "dv-03c8a2dbcd624cf8",
+        "pts_us": 700000,
+        "frame_index": 7,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.8847506046295166,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-03c8a2dbcd624cf8/83a66c74b45fe73f414d884e.png",
+        "image_sha256": "10e41a17060cac3a054e10e326b9ed2edf8bacbc44dacc5e1d8d46ba52992f8d"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: refrigerator, toilet. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "e8ba9ffda316a3f866ea",
+      "entity_id": "dv-03c8a2dbcd624cf8:object-308",
+      "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+      "image_sha256": "30f57ebdf63892abb290d5e2043965e1cbb23af948d33217367ebffaef8f5e48",
+      "crop": {
+        "frame_id": "0dc3780c17336e439cded2b2",
+        "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+        "rect": [
+          206.0,
+          0.0,
+          429.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "c1966353bcfc9a71d8315919"
+        ],
+        "evidence_id": "94b7e79236225a61e83e8273",
+        "source_min_extent": 223.0,
+        "episode_id": "dv-03c8a2dbcd624cf8",
+        "pts_us": 1400000,
+        "frame_index": 14,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.886540949344635,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-03c8a2dbcd624cf8/94b7e79236225a61e83e8273.png",
+        "image_sha256": "bbc4f0f251d19f992dcdbbe38a6e72bbd3dc51ad0ae2be986e75e2b78d1903cb"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: refrigerator, toilet. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "818a1f998294896693c6",
+      "entity_id": "dv-03c8a2dbcd624cf8:object-308",
+      "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+      "image_sha256": "12ebfd066076549217562636a5be005fb94024ad37695de3cb8a7ef6e4ece18e",
+      "crop": {
+        "frame_id": "23006316a651aa11f43a0ae4",
+        "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+        "rect": [
+          205.0,
+          0.0,
+          431.0,
+          479.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "fc856920879f1ac1e4571563"
+        ],
+        "evidence_id": "84b2d72058e5341d2bb52520",
+        "source_min_extent": 226.0,
+        "episode_id": "dv-03c8a2dbcd624cf8",
+        "pts_us": 2100000,
+        "frame_index": 21,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.3203863203525543,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-03c8a2dbcd624cf8/84b2d72058e5341d2bb52520.png",
+        "image_sha256": "fbacf233cbc598efad6f4a11c9a2492198b1c147de326f2cffadece58552c0a5"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "720fdeea729ce4af8829",
+      "entity_id": "dv-03c8a2dbcd624cf8:object-308",
+      "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+      "image_sha256": "90f1742193e97c329a0b04666df4bc0c66e86588857773a003f0e6b84c4c3794",
+      "crop": {
+        "frame_id": "72582e2cf755cfe47e96903e",
+        "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+        "rect": [
+          205.0,
+          0.0,
+          429.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "913167c2f59edcddd2c8e783"
+        ],
+        "evidence_id": "dea9cc1d2a44bcb17d65012d",
+        "source_min_extent": 224.0,
+        "episode_id": "dv-03c8a2dbcd624cf8",
+        "pts_us": 2800000,
+        "frame_index": 28,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.6116166710853577,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-03c8a2dbcd624cf8/dea9cc1d2a44bcb17d65012d.png",
+        "image_sha256": "1436858b2972e6b8faf0558c4bb199412da8d32bc50f454d6b5f163e7e4e7ad2"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: couch, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "ab23cdee0841547a5be3",
+      "entity_id": "dv-03c8a2dbcd624cf8:object-308",
+      "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+      "image_sha256": "263cdd22f7cfac26166739889477fc28b4262d9f01d711265cb2f0420cba69d8",
+      "crop": {
+        "frame_id": "abc0a5546dac9e482f317ef1",
+        "video_sha256": "c3e10bf591f4f229260f0606b9ab42c2d6c96fd6c5ee2adad89b5a6e2ac08349",
+        "rect": [
+          204.0,
+          0.0,
+          431.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "41e497629035209fba19ee8e"
+        ],
+        "evidence_id": "75bc29b4ad2eda64a30f1c83",
+        "source_min_extent": 227.0,
+        "episode_id": "dv-03c8a2dbcd624cf8",
+        "pts_us": 3500000,
+        "frame_index": 35,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.5899021029472351,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-03c8a2dbcd624cf8/75bc29b4ad2eda64a30f1c83.png",
+        "image_sha256": "20c61dc6656183225c9f8f9abe060772d9e57d542e6e321ee830c29dc27512b6"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: couch, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "979332678203cc020cdb",
+      "entity_id": "dv-22a313084fd800ca:object-155",
+      "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+      "image_sha256": "4cd6a973882d733d6637e9f91dcdefc99f76ffa72edf596d3ea59b16e10f72f0",
+      "crop": {
+        "frame_id": "9b3ae56a5e4c9cc161a8a1ba",
+        "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+        "rect": [
+          198.0,
+          0.0,
+          427.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "35d00a17298e0b34dbe953d4"
+        ],
+        "evidence_id": "01f90acf4dd1d215aeb415bb",
+        "source_min_extent": 229.0,
+        "episode_id": "dv-22a313084fd800ca",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.963650643825531,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-22a313084fd800ca/01f90acf4dd1d215aeb415bb.png",
+        "image_sha256": "9a833e4ac466e7d2bc38541f47e3f2a4db10f24c77b6a5878c984aa0b7a393a5"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "ea921f01daddff9c3dd3",
+      "entity_id": "dv-22a313084fd800ca:object-155",
+      "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+      "image_sha256": "e97144c34242ffed73db6f32b7ff2d34ff3e6e1ab4013b98b853708b9934855b",
+      "crop": {
+        "frame_id": "d2cc0c4b27bd773cb8e24d63",
+        "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+        "rect": [
+          198.0,
+          0.0,
+          427.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "c5a67334e2b8e63c483b3129"
+        ],
+        "evidence_id": "32adbf2d4719edeb35c924d3",
+        "source_min_extent": 229.0,
+        "episode_id": "dv-22a313084fd800ca",
+        "pts_us": 700000,
+        "frame_index": 7,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9636489152908325,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-22a313084fd800ca/32adbf2d4719edeb35c924d3.png",
+        "image_sha256": "daa332c474c2ea6d81c55e73362ffc7f6a14f54f60b53667f420bbdbf868cf53"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "0f4a6097570b8d780d58",
+      "entity_id": "dv-22a313084fd800ca:object-155",
+      "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+      "image_sha256": "f6345ee179876f988bfea93b6bd2df78c33789a01ee4e28af2d6ef79608cacd8",
+      "crop": {
+        "frame_id": "4d72cd4e06bc79c74a97ac4d",
+        "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+        "rect": [
+          198.0,
+          0.0,
+          427.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "c2a6103fe89221902adacfad"
+        ],
+        "evidence_id": "dfaf26c9af49b60ab972ecf1",
+        "source_min_extent": 229.0,
+        "episode_id": "dv-22a313084fd800ca",
+        "pts_us": 1400000,
+        "frame_index": 14,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9637085795402527,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-22a313084fd800ca/dfaf26c9af49b60ab972ecf1.png",
+        "image_sha256": "ce75de4967d278db44781e4e2e77bf11c9c2793f16bf2c35ef18301226906ebb"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "a07cb01407069a7a9b47",
+      "entity_id": "dv-22a313084fd800ca:object-155",
+      "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+      "image_sha256": "d4fd3f338fb26e13cad180a679b4987ad6fc26a91a701e0f0be23df5f2f1436f",
+      "crop": {
+        "frame_id": "475a5389bd633e0f01d646f6",
+        "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+        "rect": [
+          198.0,
+          0.0,
+          428.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "7c5bf7dbb754d397d58952e3"
+        ],
+        "evidence_id": "989ba4db08e7f08c0696ed08",
+        "source_min_extent": 230.0,
+        "episode_id": "dv-22a313084fd800ca",
+        "pts_us": 2100000,
+        "frame_index": 21,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9168444871902466,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-22a313084fd800ca/989ba4db08e7f08c0696ed08.png",
+        "image_sha256": "95727f02d78a26e787c020c886649c10f39c4ec8bf864abac05b3e1daeac272b"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "6544361b41bb5ab255ec",
+      "entity_id": "dv-22a313084fd800ca:object-155",
+      "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+      "image_sha256": "713244807ca0cc5ff9853aaa424e761a6ed76701882df7d4a29b5aa0200322db",
+      "crop": {
+        "frame_id": "c81d2f93bc01dfc42fa7362f",
+        "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+        "rect": [
+          194.0,
+          0.0,
+          429.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "3eb2b48f32a432e5bdb24534"
+        ],
+        "evidence_id": "4c372d659d0296ec2d9989af",
+        "source_min_extent": 235.0,
+        "episode_id": "dv-22a313084fd800ca",
+        "pts_us": 2800000,
+        "frame_index": 28,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9180341958999634,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-22a313084fd800ca/4c372d659d0296ec2d9989af.png",
+        "image_sha256": "dc7ebadfee2165303c2ffbfe8d477f6bcce83f93799e66f5815d0ec06aad2cf5"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bird, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "e20b92b0bd2ef88d9ff1",
+      "entity_id": "dv-22a313084fd800ca:object-155",
+      "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+      "image_sha256": "e42adee6000b862e335cfe6ecb24510c374a3e1ad88389cf302d5da311a60068",
+      "crop": {
+        "frame_id": "66df5bf95ca54d2858fbf64d",
+        "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+        "rect": [
+          193.0,
+          0.0,
+          429.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "40f95e25d91eef6a1b15d98c"
+        ],
+        "evidence_id": "36c88e96c8194bdb86680b7a",
+        "source_min_extent": 236.0,
+        "episode_id": "dv-22a313084fd800ca",
+        "pts_us": 3500000,
+        "frame_index": 35,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9341819286346436,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-22a313084fd800ca/36c88e96c8194bdb86680b7a.png",
+        "image_sha256": "5f4344e7fc7399d12b40b108cf2e50d6af25835a311baac5c250c4e9e5680271"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bird, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "c08d61d9b4fd1c5147e2",
+      "entity_id": "dv-7726ded72630455a:object-308",
+      "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+      "image_sha256": "ee569fbb2e1347438f29bdc0b364001779a5a32baccb7165c2f3252cc33068f6",
+      "crop": {
+        "frame_id": "e107ab2628c14a535a7ef8bd",
+        "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+        "rect": [
+          206.0,
+          0.0,
+          429.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "05c008a3491909941a1f9083"
+        ],
+        "evidence_id": "41478cf98d8dd350d1135f54",
+        "source_min_extent": 223.0,
+        "episode_id": "dv-7726ded72630455a",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.8729361891746521,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-7726ded72630455a/41478cf98d8dd350d1135f54.png",
+        "image_sha256": "80d9a8a54e5f05709a6af116a02590be82baad38e111468e4370172618eb4630"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "76a76a16c16b6fc73a38",
+      "entity_id": "dv-7726ded72630455a:object-308",
+      "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+      "image_sha256": "31381295db5ecb7068ef4fbd3cd2ae59715f7c4449a544198ef21207a5d696a5",
+      "crop": {
+        "frame_id": "054e72fd7e4b4edc17f8b0bb",
+        "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+        "rect": [
+          205.0,
+          0.0,
+          429.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "2adf2c14a4aafd7be52e4b3b"
+        ],
+        "evidence_id": "3628697f03e1c92ba63532e6",
+        "source_min_extent": 224.0,
+        "episode_id": "dv-7726ded72630455a",
+        "pts_us": 1400000,
+        "frame_index": 14,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.8816860318183899,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-7726ded72630455a/3628697f03e1c92ba63532e6.png",
+        "image_sha256": "c17b5ccf4515c7dceec898a40779a145c6f70f3be6cbe6e9b9ab367934e5bde8"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "d0359ddc5d37b5f4e561",
+      "entity_id": "dv-7726ded72630455a:object-308",
+      "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+      "image_sha256": "96bf8494047bb668abfdbf6e4748c3f72da4eee3105a034faeec47d9c7b161c0",
+      "crop": {
+        "frame_id": "32e53cfc47a3264d4ee4ba9d",
+        "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+        "rect": [
+          204.0,
+          0.0,
+          430.0,
+          479.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "b3b97491022cf2f0a6236722"
+        ],
+        "evidence_id": "836a47aba6b30091bc359264",
+        "source_min_extent": 226.0,
+        "episode_id": "dv-7726ded72630455a",
+        "pts_us": 2700000,
+        "frame_index": 27,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.5384687185287476,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-7726ded72630455a/836a47aba6b30091bc359264.png",
+        "image_sha256": "fad1ed25d47bc587184cb35b9f99aa9f823954257d498e646ab3e86fe9bafe82"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: couch, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "904a4f91bd6ffe0b73af",
+      "entity_id": "dv-7726ded72630455a:object-308",
+      "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+      "image_sha256": "063262846da75d87035026dfe90ebe57bc77177a02045f4adcda0617acd09c6f",
+      "crop": {
+        "frame_id": "7286f4d13f4ca9d1f5ebed5e",
+        "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+        "rect": [
+          203.0,
+          0.0,
+          434.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "59146dcd608c260607146a76"
+        ],
+        "evidence_id": "080c8da5f2164a7798c82a34",
+        "source_min_extent": 231.0,
+        "episode_id": "dv-7726ded72630455a",
+        "pts_us": 4100000,
+        "frame_index": 41,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.42781174182891846,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-7726ded72630455a/080c8da5f2164a7798c82a34.png",
+        "image_sha256": "3b3f92e27df8a2995b52c0fd545cc3d5573e5716c56c6c0490732d05dda473d0"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "0f41e8aef778f50b7efa",
+      "entity_id": "dv-7726ded72630455a:object-308",
+      "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+      "image_sha256": "e66f60a1c6a2b2bcb2a9f686c89da9254777bd91e18ba54714fc674d7aba85b1",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person, surfboard. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "14d6452de4baa5781df7",
+      "entity_id": "dv-7726ded72630455a:object-308",
+      "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+      "image_sha256": "a3e0b5896d2da098b14dba08a96e4aa59c6359ea5abdb48ba5b34f199302f36b",
+      "crop": {
+        "frame_id": "34d548c85c030ccbdd75b63e",
+        "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+        "rect": [
+          205.0,
+          0.0,
+          430.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "d9b585f25eb6468a9e217a69"
+        ],
+        "evidence_id": "46fdcb0f1be40c476b70063f",
+        "source_min_extent": 225.0,
+        "episode_id": "dv-7726ded72630455a",
+        "pts_us": 6800000,
+        "frame_index": 68,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.588920533657074,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-7726ded72630455a/46fdcb0f1be40c476b70063f.png",
+        "image_sha256": "5023a14c9f0c223800783cb4af967327207b4fe152bb970f72fee94598ae088b"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "368fad1a2a15f4d014dd",
+      "entity_id": "dv-af669d3e3a486780:object-174",
+      "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+      "image_sha256": "d25071c715e652c283c0b7b51b511c012306a466f5aaad9fad43f7b63e087e34",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, bowl, cup. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "f3d36b8d9db5ad18729b",
+      "entity_id": "dv-af669d3e3a486780:object-174",
+      "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+      "image_sha256": "6ba2c45d1bc951e40736919a8609a67d3b0e17896cfd54ade2c5f230e978c008",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, bowl, cup. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "00f9f41f212c8c4f4dad",
+      "entity_id": "dv-af669d3e3a486780:object-174",
+      "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+      "image_sha256": "2e7a10ae8710b795bb2d13084c31bf9f57afdb7ed0db9c899c3ba19dd0240307",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, bowl, person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "6841f9b19a46a0b2fbcf",
+      "entity_id": "dv-af669d3e3a486780:object-174",
+      "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+      "image_sha256": "3311f024048ee8c0fc535e4380fc7a2f54ab0535ce8fdd39a9b8d63df83d657a",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, bowl, person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "d8b07f0b431364d449be",
+      "entity_id": "dv-af669d3e3a486780:object-174",
+      "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+      "image_sha256": "ca0cd5d1467cbcdbff147590ecca3901da1cd4fdaee4d88c0fed07226760e625",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, bowl, person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "3b2d8850f23d8ee56164",
+      "entity_id": "dv-af669d3e3a486780:object-174",
+      "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+      "image_sha256": "0f6b52fddf16550634142a30cc933d34394d8db6dfcee3f022c02f2cfc7f91f2",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, bowl, person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "547dc79a1570dba9aa12",
+      "entity_id": "dv-b78c9de6650abd04:object-155",
+      "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+      "image_sha256": "3efb51792827ad5316e0edbe9f99ce4657154524eb624e0b463c2f4c05c3368e",
+      "crop": {
+        "frame_id": "33a1f73a8857f1e3bd8513c8",
+        "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+        "rect": [
+          198.0,
+          0.0,
+          427.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "3b1067ae0e7793f5535323c5"
+        ],
+        "evidence_id": "1a3c15c17267822006630ef3",
+        "source_min_extent": 229.0,
+        "episode_id": "dv-b78c9de6650abd04",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9598159193992615,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-b78c9de6650abd04/1a3c15c17267822006630ef3.png",
+        "image_sha256": "4dd057072a6f59dc60ad2907f344a27431bcc98fd840f37d8055cb7879339750"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "54740488f75e8af943e5",
+      "entity_id": "dv-b78c9de6650abd04:object-155",
+      "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+      "image_sha256": "cc1f66bea6440884074f5923ce467d426ef338cece1bc11ae162a027cc7558ef",
+      "crop": {
+        "frame_id": "62bc809a5d0c916fc0874cec",
+        "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+        "rect": [
+          198.0,
+          0.0,
+          427.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "3ed15f5c2676387b9271f7d0"
+        ],
+        "evidence_id": "395b2972029f17aa645d9ee8",
+        "source_min_extent": 229.0,
+        "episode_id": "dv-b78c9de6650abd04",
+        "pts_us": 1700000,
+        "frame_index": 17,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9606677889823914,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-b78c9de6650abd04/395b2972029f17aa645d9ee8.png",
+        "image_sha256": "2e62deb7f7d773135ff3cd5da96654d765191afac94b5582d41aae401ce4ef37"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "b7d18aa39daa1c8332b5",
+      "entity_id": "dv-b78c9de6650abd04:object-155",
+      "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+      "image_sha256": "0dc992d90e18b200f22ac59eb32925f0dcf6aa0b394ede532f541cd4ccf89c83",
+      "crop": {
+        "frame_id": "af3fdf896f7be2bc0c9cab67",
+        "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+        "rect": [
+          193.0,
+          0.0,
+          429.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "82946923bb585f505656ed3d"
+        ],
+        "evidence_id": "35f97315298cf4f0ff7b2461",
+        "source_min_extent": 236.0,
+        "episode_id": "dv-b78c9de6650abd04",
+        "pts_us": 3400000,
+        "frame_index": 34,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9357866644859314,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-b78c9de6650abd04/35f97315298cf4f0ff7b2461.png",
+        "image_sha256": "3ec3bc01f7af64b408fa9ae4bdf3634ed8584b83368c3cff07a936d74ec31f71"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bird, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "7107c552a41f6a280732",
+      "entity_id": "dv-b78c9de6650abd04:object-155",
+      "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+      "image_sha256": "f4b7baa8cd9d8ad5e18eda3b23f950c06f87158b2cde5dd9146741d94e9b3cdd",
+      "crop": {
+        "frame_id": "3df032bce6f0a16c71f63947",
+        "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+        "rect": [
+          194.0,
+          0.0,
+          429.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "fa4ea032518f6df24d6799c7"
+        ],
+        "evidence_id": "5bdd970ab5fc163482cbd3b5",
+        "source_min_extent": 235.0,
+        "episode_id": "dv-b78c9de6650abd04",
+        "pts_us": 5100000,
+        "frame_index": 51,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9178050756454468,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-b78c9de6650abd04/5bdd970ab5fc163482cbd3b5.png",
+        "image_sha256": "dec8f7092b07c6a54f2425837e3497f6d2ce7cc2b267addcfb375d4e0fef2e5a"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bird, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "f6fde327f1e1c9a270a3",
+      "entity_id": "dv-b78c9de6650abd04:object-155",
+      "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+      "image_sha256": "698c309e13db7d561774262067a0075e4630872c7c5326f5dad145c9c3260997",
+      "crop": {
+        "frame_id": "59d703e7ec64bd3769aba573",
+        "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+        "rect": [
+          194.0,
+          0.0,
+          433.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "04f03cc8f4f58103a1c39ae9"
+        ],
+        "evidence_id": "0735527a0ecc5b0aae0ec5b8",
+        "source_min_extent": 239.0,
+        "episode_id": "dv-b78c9de6650abd04",
+        "pts_us": 6800000,
+        "frame_index": 68,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.4407407343387604,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-b78c9de6650abd04/0735527a0ecc5b0aae0ec5b8.png",
+        "image_sha256": "74bd5be2f6550eb015f3beed00ea8804a6150b1555b0c3f68125a31ad756e016"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bird, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "a13df5791fefc26e7932",
+      "entity_id": "dv-b78c9de6650abd04:object-155",
+      "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+      "image_sha256": "685fbb5f5de0f359713b31c595fe34ee1a6f75c68fe4e8e3855715cafabf72f3",
+      "crop": {
+        "frame_id": "16ab3fc208075d888201c426",
+        "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+        "rect": [
+          194.0,
+          0.0,
+          428.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "60d644acb0932ec4ea8c0bad"
+        ],
+        "evidence_id": "82091b9fbb8cb2353933252e",
+        "source_min_extent": 234.0,
+        "episode_id": "dv-b78c9de6650abd04",
+        "pts_us": 8500000,
+        "frame_index": 85,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9491430521011353,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-b78c9de6650abd04/82091b9fbb8cb2353933252e.png",
+        "image_sha256": "12503e79fe32da16b5500a288552690aac265e15d218a075226406338f1b1c68"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bird, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "fde11c7c74b32842849e",
+      "entity_id": "dv-bc11642e2c451020:object-155",
+      "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+      "image_sha256": "0b1b399f3584f166e61244280d06c99f0c7eb7bf39f026ac91b19594a209410d",
+      "crop": {
+        "frame_id": "9104d7081ce1a565bafa1a99",
+        "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+        "rect": [
+          187.0,
+          0.0,
+          456.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "ba13b5ef85460336a85e668b"
+        ],
+        "evidence_id": "1a8fc6df929f9b58077b321c",
+        "source_min_extent": 269.0,
+        "episode_id": "dv-bc11642e2c451020",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9580612182617188,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-bc11642e2c451020/1a8fc6df929f9b58077b321c.png",
+        "image_sha256": "0146e29a081976b6d60567cb319b88d79583f652bc20747915eb82772d9e97d8"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bed, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "b689185f1f8fba76434b",
+      "entity_id": "dv-bc11642e2c451020:object-155",
+      "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+      "image_sha256": "f08732e06988adade880c0bff55594b1ea1a14b38dbe2dc8faafdbe23432702f",
+      "crop": {
+        "frame_id": "0c55a1064ac62103ee264017",
+        "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+        "rect": [
+          187.0,
+          0.0,
+          456.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "58facfb1d62c242cbe5c8923"
+        ],
+        "evidence_id": "afe8afd9af8ebdf3a0c6d4ef",
+        "source_min_extent": 269.0,
+        "episode_id": "dv-bc11642e2c451020",
+        "pts_us": 700000,
+        "frame_index": 7,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9579092860221863,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-bc11642e2c451020/afe8afd9af8ebdf3a0c6d4ef.png",
+        "image_sha256": "d2244a1357bb204452eada0446eba279faa32e2837d23eb03255510b48a8f9d9"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bed, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "257a74975dffeb6d7438",
+      "entity_id": "dv-bc11642e2c451020:object-155",
+      "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+      "image_sha256": "83364b67503994f063300232f81c5df17cab8216728e750249e0c6e75c4141f5",
+      "crop": {
+        "frame_id": "dc341a54f62c0137b6649978",
+        "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+        "rect": [
+          187.0,
+          0.0,
+          456.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "19620c43581b2847a224a262"
+        ],
+        "evidence_id": "0d430d1613babfb6b7b15773",
+        "source_min_extent": 269.0,
+        "episode_id": "dv-bc11642e2c451020",
+        "pts_us": 1400000,
+        "frame_index": 14,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9582968950271606,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-bc11642e2c451020/0d430d1613babfb6b7b15773.png",
+        "image_sha256": "a06dda055429c20866d60eb6f46e522f4d42a2a955a112c6ad689558617e54ee"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bed, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "718d974ce7dff4fb5822",
+      "entity_id": "dv-bc11642e2c451020:object-155",
+      "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+      "image_sha256": "488990467500872d7708237bdfec710d6848f4774b7fab3e85c804105cd80e13",
+      "crop": {
+        "frame_id": "47004df9f8b92f2b93e4920b",
+        "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+        "rect": [
+          186.0,
+          0.0,
+          458.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "9cef3948e3ec2711cd201556"
+        ],
+        "evidence_id": "2fd1be4f784252103b267f20",
+        "source_min_extent": 272.0,
+        "episode_id": "dv-bc11642e2c451020",
+        "pts_us": 2100000,
+        "frame_index": 21,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.8914807438850403,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-bc11642e2c451020/2fd1be4f784252103b267f20.png",
+        "image_sha256": "c040b897ed840b45454b0f2f83d5c03911a84f1cf71a312f29ed48a58d8a6d33"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bed, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "3b61e5cba11acd80d8f9",
+      "entity_id": "dv-bc11642e2c451020:object-155",
+      "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+      "image_sha256": "9c024e51b2e3ecb5475d0030e5a2ea97ca8c68fdf40455224f04af2437366b88",
+      "crop": {
+        "frame_id": "84cdfa908be87dd7f82b017c",
+        "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+        "rect": [
+          187.0,
+          0.0,
+          457.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "5d4510569a8b1a9867af3663"
+        ],
+        "evidence_id": "66610216272e3137013719b2",
+        "source_min_extent": 270.0,
+        "episode_id": "dv-bc11642e2c451020",
+        "pts_us": 2800000,
+        "frame_index": 28,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9531419277191162,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-bc11642e2c451020/66610216272e3137013719b2.png",
+        "image_sha256": "93d3552ea192338f05087cb639f258da8ae299f55454374d69c1bd2ee73db872"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bed, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "27dc166feea1d5e31445",
+      "entity_id": "dv-bc11642e2c451020:object-155",
+      "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+      "image_sha256": "84e37bf231fd3aafd20ef48bebe5d289a00dc0fda6a0dcdab3ea31bdb102faa1",
+      "crop": {
+        "frame_id": "abeb32b289e8a551425afac1",
+        "video_sha256": "48963af88b16d2560a262e1f73e7c8a58ac868807d187ffc5db8f91a7b4786e8",
+        "rect": [
+          187.0,
+          0.0,
+          457.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "aed901b509fe5936d48ada48"
+        ],
+        "evidence_id": "01b7e6a347d7db4251e4abbd",
+        "source_min_extent": 270.0,
+        "episode_id": "dv-bc11642e2c451020",
+        "pts_us": 3500000,
+        "frame_index": 35,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9540958404541016,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-bc11642e2c451020/01b7e6a347d7db4251e4abbd.png",
+        "image_sha256": "e138be078a82725b0b8f7961d555215e4ffb65f9b607ac99114ca988b98ecd73"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bed, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "325160a04f6eb536fba3",
+      "entity_id": "dv-d6a1fa73f031c686:object-174",
+      "video_sha256": "6767224ac7249441acf0814e61fbcd31263e3a89a09c4dbc418ac1b6fa885c0a",
+      "image_sha256": "958f63334440e397cc0cdd1a23e9443e6ac140e3f491fe5f4a602f5857ce14a6",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, bowl, cup, sink. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "79c26846e9cc2fd6d3da",
+      "entity_id": "dv-d6a1fa73f031c686:object-174",
+      "video_sha256": "6767224ac7249441acf0814e61fbcd31263e3a89a09c4dbc418ac1b6fa885c0a",
+      "image_sha256": "0f369ed94a7c80cfaf8dd88c7b4c1c3494c8f90d321c28eb304ce6fa565588da",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, bowl, cup, sink. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "aa8858ceb4bb02f0c1f7",
+      "entity_id": "dv-d6a1fa73f031c686:object-174",
+      "video_sha256": "6767224ac7249441acf0814e61fbcd31263e3a89a09c4dbc418ac1b6fa885c0a",
+      "image_sha256": "e752041fd0c21c55d770f8f81552859245d79280ec1d4cabd9355d596f48bc62",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, bowl, cup, sink. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "e64b72c881b1ab686b0b",
+      "entity_id": "dv-d6a1fa73f031c686:object-174",
+      "video_sha256": "6767224ac7249441acf0814e61fbcd31263e3a89a09c4dbc418ac1b6fa885c0a",
+      "image_sha256": "51a948046edd0134d923f26375c05ce2c277eea7436c6fbba30c91713b975118",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, bowl, cup, person, sink. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "f29f72f1b843b07e3f76",
+      "entity_id": "dv-d6a1fa73f031c686:object-174",
+      "video_sha256": "6767224ac7249441acf0814e61fbcd31263e3a89a09c4dbc418ac1b6fa885c0a",
+      "image_sha256": "ea21e5d33a617dceea118dad17f597aafccde24c8f8d492ca3f9abdaaac56f1b",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, bowl, person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "8f9344968d1c0a03f3a4",
+      "entity_id": "dv-d6a1fa73f031c686:object-174",
+      "video_sha256": "6767224ac7249441acf0814e61fbcd31263e3a89a09c4dbc418ac1b6fa885c0a",
+      "image_sha256": "0fa6f2f8312a1613123ee86daf1c301d4f6619748e44ab3cf1504b6579907f9d",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, bowl, person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "20b49477bb37c4d77b2e",
+      "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+      "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+      "image_sha256": "20c9259077a3aa9bca323c1087ff6a8a64ea0b5dcaf0808c7b24951383970c93",
+      "crop": {
+        "frame_id": "ea2fac25e5bf038dbdc9abf7",
+        "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+        "rect": [
+          187.0,
+          0.0,
+          456.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "053640cb1684f8c8e617ce48"
+        ],
+        "evidence_id": "ace66861781d15d766019c58",
+        "source_min_extent": 269.0,
+        "episode_id": "dv-ddf28e0a6b4c30db",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9604262709617615,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-ddf28e0a6b4c30db/ace66861781d15d766019c58.png",
+        "image_sha256": "b4443d1cbc8c44c9aa8808b04f15021cc51544e0d25c2aa77ac111fe7c836312"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bed, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "8fc3c8b53d01f9835c9b",
+      "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+      "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+      "image_sha256": "213d7f9f91fe01ead7214704bae05043dff51f693c8a3e2cb099f1a7368b956f",
+      "crop": {
+        "frame_id": "bc79a64b518fcd4f38cdccd8",
+        "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+        "rect": [
+          186.0,
+          0.0,
+          458.0,
+          473.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "05886ada99149b6cb38b06b2"
+        ],
+        "evidence_id": "9c4aad386fdec1840a59c270",
+        "source_min_extent": 272.0,
+        "episode_id": "dv-ddf28e0a6b4c30db",
+        "pts_us": 1700000,
+        "frame_index": 17,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.36838528513908386,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-ddf28e0a6b4c30db/9c4aad386fdec1840a59c270.png",
+        "image_sha256": "b2559b0081752fea61867bee256fab2858dcdc4d93f22525bd709b95440a39f0"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bed, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "45df4e9daa253a8186e2",
+      "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+      "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+      "image_sha256": "65c86aabf541f41de3981ba6535fc20b348ca3fc0b818354e571c8518954c05f",
+      "crop": {
+        "frame_id": "8992b018bdbcfac0d3e02609",
+        "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+        "rect": [
+          187.0,
+          0.0,
+          456.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "4285c931ba7f83e022d13563"
+        ],
+        "evidence_id": "6220032c249f4a9430ea6aa4",
+        "source_min_extent": 269.0,
+        "episode_id": "dv-ddf28e0a6b4c30db",
+        "pts_us": 3300000,
+        "frame_index": 33,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.954535722732544,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-ddf28e0a6b4c30db/6220032c249f4a9430ea6aa4.png",
+        "image_sha256": "4014f99c84ae3c80a946913e094a4bf019c2c41ffae4d0eef420dcef1b480ab7"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bed, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "fce806b627123fa16e23",
+      "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+      "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+      "image_sha256": "2eb7b129c9613c807dec3cd7822f0f484cd5b5157910003899e34a0b79dd6023",
+      "crop": {
+        "frame_id": "a7ff9b382abdef9bebe2667c",
+        "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+        "rect": [
+          187.0,
+          0.0,
+          458.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "edef32b2b917f7dcff75f8a9"
+        ],
+        "evidence_id": "88e3a00b190e78a181189b0d",
+        "source_min_extent": 271.0,
+        "episode_id": "dv-ddf28e0a6b4c30db",
+        "pts_us": 5000000,
+        "frame_index": 50,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9467854499816895,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-ddf28e0a6b4c30db/88e3a00b190e78a181189b0d.png",
+        "image_sha256": "a47500746f8991cf4d2444b40af39a10b585147860603aba966cf2bd0abe1437"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bed, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "e7a35e506e70e5e76205",
+      "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+      "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+      "image_sha256": "17b26a94ba8f120db951b81ded1367cd4204afb188245803b8051fbd0bb298cb",
+      "crop": null,
+      "binding_status": "ambiguous_class_instances",
+      "hint": "Predicted objects: bed, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "ddbbec0b75cf70c367d2",
+      "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+      "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+      "image_sha256": "aeee89b57a0294f4d324290c47cbdfc12a4d0883bac016fbc60271288ae27708",
+      "crop": {
+        "frame_id": "3e27dd7c2571d5ecf984d6e6",
+        "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+        "rect": [
+          188.0,
+          0.0,
+          456.0,
+          480.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "1c56e3e30021344695091220"
+        ],
+        "evidence_id": "1e56dc83b336b50188ab2375",
+        "source_min_extent": 268.0,
+        "episode_id": "dv-ddf28e0a6b4c30db",
+        "pts_us": 8300000,
+        "frame_index": 83,
+        "class_id": 72,
+        "class_name": "refrigerator",
+        "score": 0.9573564529418945,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/dv-ddf28e0a6b4c30db/1e56dc83b336b50188ab2375.png",
+        "image_sha256": "939a14818ea2eb0f710bf547dc379d4b8cd29dd64747984af2ebacdd160c1790"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bed, person, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "48140edf80ae694779b0",
+      "entity_id": "dv-e1975790e6ee831e:object-174",
+      "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+      "image_sha256": "9dc78f3e30f47307b7bbfbea665d4a87e4485ac087b121ce7bc2a273d0776b1c",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, oven. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "d51b6da035bc72efb9e3",
+      "entity_id": "dv-e1975790e6ee831e:object-174",
+      "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+      "image_sha256": "571d76ab7172a97af17cb48de0354d18b61abe88595fd1dfc7146bcd851be37c",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, oven. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "325e171c971f4e451886",
+      "entity_id": "dv-e1975790e6ee831e:object-174",
+      "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+      "image_sha256": "22f268707eec1577e066052596620809e95f9a6d05130e598ca990d55193c670",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, sink. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "39256b36b90054852ffc",
+      "entity_id": "dv-e1975790e6ee831e:object-174",
+      "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+      "image_sha256": "8bdfc25c03a9a91bacce01a0f28d2374b48315d2e1de5940331144f31033578c",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, sink. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "26b3d6c18008f285898f",
+      "entity_id": "dv-e1975790e6ee831e:object-174",
+      "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+      "image_sha256": "d6f6795e04c5426444cc07bfca1e98be9590e12099b59cfc5df0e42fdae50802",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, sink. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "f9d1139afbf1b488a8ba",
+      "entity_id": "dv-e1975790e6ee831e:object-174",
+      "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+      "image_sha256": "520a433e1f31c74e93cc3d42a3cf664d4c5770fee0a7dbdbe6fd2b62846b571a",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, sink. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "1bd7e6615b89580c9999",
+      "entity_id": "dv-e2244cb1a1000aeb:object-174",
+      "video_sha256": "1fbd5e71f6853da6f1db0ef4bf6e930c65b0dd69627571ada462aaa59747d625",
+      "image_sha256": "acaf034199af4f77fedb17b2a16c52b31196540c5149d95ec8048476e96f9893",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, oven. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "cdda3b070fbff50974e4",
+      "entity_id": "dv-e2244cb1a1000aeb:object-174",
+      "video_sha256": "1fbd5e71f6853da6f1db0ef4bf6e930c65b0dd69627571ada462aaa59747d625",
+      "image_sha256": "62afebb844f6dcb4ec7f82b99379b2a77585e8ec8c0f31f8f9d59a15a752a07b",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, oven. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "f64bc31c1fc0326c5bc8",
+      "entity_id": "dv-e2244cb1a1000aeb:object-174",
+      "video_sha256": "1fbd5e71f6853da6f1db0ef4bf6e930c65b0dd69627571ada462aaa59747d625",
+      "image_sha256": "3ab9d2cabc47f7e9a574627dff5f37f3cbda89484e7abc9f244fa0ccc2271009",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, oven. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "dc24c549ddf6f2a2e66a",
+      "entity_id": "dv-e2244cb1a1000aeb:object-174",
+      "video_sha256": "1fbd5e71f6853da6f1db0ef4bf6e930c65b0dd69627571ada462aaa59747d625",
+      "image_sha256": "c03efc1c1fa8e6a10973a46401bb8010330707fe6da812f41ecfd48f5c0a6fc5",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, oven, person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "ebf05194ed012d99b16a",
+      "entity_id": "dv-e2244cb1a1000aeb:object-174",
+      "video_sha256": "1fbd5e71f6853da6f1db0ef4bf6e930c65b0dd69627571ada462aaa59747d625",
+      "image_sha256": "1b52e5541426dd6f3c159b8c960c035fb3a25df131691ccbc0f365bbb0a28525",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, sink. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "98f88d29e38ab6467e53",
+      "entity_id": "dv-e2244cb1a1000aeb:object-174",
+      "video_sha256": "1fbd5e71f6853da6f1db0ef4bf6e930c65b0dd69627571ada462aaa59747d625",
+      "image_sha256": "0b4b990bc1a0cfceff2bc1945d455d12999173d1090c4179f99a07f78d89004b",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, sink. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "6ddd132fba7487389e98",
+      "entity_id": "dv-fff8ee5abe309115:object-308",
+      "video_sha256": "dd43d48a0404c071622e3f44d378b646cc3e9a0cbd80718ef028d530fa9a08d0",
+      "image_sha256": "4db618dc73ddc6e5f58bef96f16b1e96dcad254b6c0086e13ba7e732a5cb3361",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "e974f694eaade3626fd1",
+      "entity_id": "dv-fff8ee5abe309115:object-308",
+      "video_sha256": "dd43d48a0404c071622e3f44d378b646cc3e9a0cbd80718ef028d530fa9a08d0",
+      "image_sha256": "c167210401a53c4016148f2c90c022443663cefa21b757eac416f18a9487b933",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "9b77d2897fc47f7d54fd",
+      "entity_id": "dv-fff8ee5abe309115:object-308",
+      "video_sha256": "dd43d48a0404c071622e3f44d378b646cc3e9a0cbd80718ef028d530fa9a08d0",
+      "image_sha256": "1886d01ff6c2ba00203f3a82ebd2ad64f2612f8df69c58ef613d89fa35973e96",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "e9ef76ecc8ce998cfd75",
+      "entity_id": "dv-fff8ee5abe309115:object-308",
+      "video_sha256": "dd43d48a0404c071622e3f44d378b646cc3e9a0cbd80718ef028d530fa9a08d0",
+      "image_sha256": "35942fdfd567528ea3148e98ee775e4772a7401a7fddec27b8ca7d812801d9b0",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "390e7a5585aad6fa0ee5",
+      "entity_id": "dv-fff8ee5abe309115:object-308",
+      "video_sha256": "dd43d48a0404c071622e3f44d378b646cc3e9a0cbd80718ef028d530fa9a08d0",
+      "image_sha256": "90fad1fa69738c68305fc68b3710d18566b0010d5cc436d64b68c1522278fe24",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "eec964e944474ac98069",
+      "entity_id": "dv-fff8ee5abe309115:object-308",
+      "video_sha256": "dd43d48a0404c071622e3f44d378b646cc3e9a0cbd80718ef028d530fa9a08d0",
+      "image_sha256": "dd0567c0d72f7cbbd78485db92d9b302b16a2cabef89f044d9e104d9b5949003",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "7a9d99d16d95ad0c1e82",
+      "entity_id": "ep-1779083be6e7d3b2:object-316",
+      "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+      "image_sha256": "3a9b19c6566c835545eb224f6d293fc4245bff6b96744183304f44372b51deaa",
+      "crop": {
+        "frame_id": "2d6f02b5d906cf95de4929b0",
+        "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+        "rect": [
+          268.0,
+          185.0,
+          389.0,
+          261.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "f1adea8691a3e4721d4b885c"
+        ],
+        "evidence_id": "79de7cf3e1795e82c8ffac1c",
+        "source_min_extent": 76.0,
+        "episode_id": "ep-1779083be6e7d3b2",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.44813093543052673,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-1779083be6e7d3b2/79de7cf3e1795e82c8ffac1c.png",
+        "image_sha256": "ceda234320a33ed812dcafebbc9cb798e15ee583a7e764f1086a8d76e89a7aaf"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bottle, microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "8974906d6410486cdaa2",
+      "entity_id": "ep-1779083be6e7d3b2:object-316",
+      "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+      "image_sha256": "be8bcfd5187324798628340396b55079d25081966f44e53fd75925c080e1a1a2",
+      "crop": {
+        "frame_id": "b8be1d8d749f194c2b1971c1",
+        "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+        "rect": [
+          267.0,
+          185.0,
+          388.0,
+          261.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "25524762cf62906a35aeb74e"
+        ],
+        "evidence_id": "bba8af2ea008d4e539f9df77",
+        "source_min_extent": 76.0,
+        "episode_id": "ep-1779083be6e7d3b2",
+        "pts_us": 4000000,
+        "frame_index": 40,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.3835914433002472,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-1779083be6e7d3b2/bba8af2ea008d4e539f9df77.png",
+        "image_sha256": "fd79129c196e67dbfa64952bc39200c0176ae867d1309885b7f6ba68b715a0a7"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bottle, microwave, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "2b0d5ae8a78b38751ebe",
+      "entity_id": "ep-1779083be6e7d3b2:object-316",
+      "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+      "image_sha256": "9bdd0cbc0d99333c47c8182976ce83f27e40f11832ca133856fa17477d23c04c",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "9bf33f1f2ee9b4bde125",
+      "entity_id": "ep-1779083be6e7d3b2:object-316",
+      "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+      "image_sha256": "b9933b1b67dc6a69faa024a68c45ca99b95253c0c4e078ef20692592bda8cbce",
+      "crop": {
+        "frame_id": "560a6531df666b650e0ade0c",
+        "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+        "rect": [
+          268.0,
+          185.0,
+          389.0,
+          262.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "2c707dfcee7e0ab3da622e54"
+        ],
+        "evidence_id": "6c8ea9c7fd51253634cb258c",
+        "source_min_extent": 77.0,
+        "episode_id": "ep-1779083be6e7d3b2",
+        "pts_us": 12000000,
+        "frame_index": 120,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.29303547739982605,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-1779083be6e7d3b2/6c8ea9c7fd51253634cb258c.png",
+        "image_sha256": "ec77d86f029747b5e51310a397bb7536bab2523e402513719360ec7d20d935e2"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bottle, microwave, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "a2aa1aa0413d470c5c10",
+      "entity_id": "ep-1779083be6e7d3b2:object-316",
+      "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+      "image_sha256": "b7a5f522854aa5d99602e65eddb6210e0ec3b498feb236919ea39af77ec0cc9a",
+      "crop": {
+        "frame_id": "818ccd31a1c66ce91f201304",
+        "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+        "rect": [
+          267.0,
+          185.0,
+          389.0,
+          262.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "2e592fb428bffeeaa1896141"
+        ],
+        "evidence_id": "dd185d57a17c96ddc37d8f9d",
+        "source_min_extent": 77.0,
+        "episode_id": "ep-1779083be6e7d3b2",
+        "pts_us": 16000000,
+        "frame_index": 160,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.4381026029586792,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-1779083be6e7d3b2/dd185d57a17c96ddc37d8f9d.png",
+        "image_sha256": "3da30a1573b211cdc53e8827fc44eb4dacad62c6c2baf39e2a4b60f2f3c788e3"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bottle, microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "9cbfb8552eb2752402fa",
+      "entity_id": "ep-1779083be6e7d3b2:object-316",
+      "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+      "image_sha256": "e0d37906f093406ef37e4f5e9214d449026700994f8990816006af94d2a2af0f",
+      "crop": {
+        "frame_id": "a78d8f2486020a6700b1cf3a",
+        "video_sha256": "0ea6209654e85d281c713d3d8e0850f62d423e32607aefeba8d526ec4bf624f9",
+        "rect": [
+          267.0,
+          185.0,
+          389.0,
+          262.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "d2da062eb58cba8b588996ce"
+        ],
+        "evidence_id": "8ee0fce5346c7681b3940e7a",
+        "source_min_extent": 77.0,
+        "episode_id": "ep-1779083be6e7d3b2",
+        "pts_us": 20000000,
+        "frame_index": 200,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.4335689842700958,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-1779083be6e7d3b2/8ee0fce5346c7681b3940e7a.png",
+        "image_sha256": "53f6be6097c968638eee7c0bd2e93e5990f66a9f84a5b640bebb9b89bfd6f68e"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bottle, microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "e3a8214b07071aa9f63b",
+      "entity_id": "ep-26448333df96e9bc:object-316",
+      "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+      "image_sha256": "0415f6d79d6118ff92eabbec24c9fb34df06406ce507126a0b371e6bca2ddfe1",
+      "crop": {
+        "frame_id": "0eb6565031b9bbee00e94c5b",
+        "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+        "rect": [
+          268.0,
+          185.0,
+          389.0,
+          261.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "2be0f065aec3a63722fafffb"
+        ],
+        "evidence_id": "0bc7a13af4612cb35c04086b",
+        "source_min_extent": 76.0,
+        "episode_id": "ep-26448333df96e9bc",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.4627905488014221,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-26448333df96e9bc/0bc7a13af4612cb35c04086b.png",
+        "image_sha256": "7cbb28a38e723013a3f928905fe0e910adf485b43fc1423b931975e74b2786f2"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bottle, microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "0388478d57dc6961ab34",
+      "entity_id": "ep-26448333df96e9bc:object-316",
+      "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+      "image_sha256": "44c4fddce32e5aca3709539022a9ac851cf472fabc1f58f35117d9e877a37a76",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "d8e1ea4f2df522577143",
+      "entity_id": "ep-26448333df96e9bc:object-316",
+      "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+      "image_sha256": "1ffba10e77eebbfc01c00e003849c2e33062e7b098d828da1c57a112624443a0",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "e7cf115774f508b74dc2",
+      "entity_id": "ep-26448333df96e9bc:object-316",
+      "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+      "image_sha256": "31f5064276d3cfdea0d0e6e9810834d4724f56b83997efb466639aa41f2aa80e",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "612da9e6382a949b94d9",
+      "entity_id": "ep-26448333df96e9bc:object-316",
+      "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+      "image_sha256": "cdebef6024d0f2b17f74a6f6317260f54f99b59e4252751ec1c8be70531b9cfe",
+      "crop": {
+        "frame_id": "34ab1fc2089b936ec0057e0b",
+        "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+        "rect": [
+          268.0,
+          185.0,
+          389.0,
+          262.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "575c97012c4d60121a009f53"
+        ],
+        "evidence_id": "533e0a708b0bcf2f8b6d0cf5",
+        "source_min_extent": 77.0,
+        "episode_id": "ep-26448333df96e9bc",
+        "pts_us": 14400000,
+        "frame_index": 144,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.5271613001823425,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-26448333df96e9bc/533e0a708b0bcf2f8b6d0cf5.png",
+        "image_sha256": "6fdd8ba555321142567becbc84cba0c0b067b74dc2759b579ec4d6fba99266cd"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bottle, microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "ae691d34c3024d2a64d5",
+      "entity_id": "ep-26448333df96e9bc:object-316",
+      "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+      "image_sha256": "4bc08b298dc5b9984c534e9eacfcbeb44ed0bb214365f67a1d9ba70cb24bb949",
+      "crop": {
+        "frame_id": "fedf2d87ac80ed38feb26f9d",
+        "video_sha256": "93c02110e80b076a0186288118635f5c034ae837a7fbee29a4b647594ca2bc02",
+        "rect": [
+          268.0,
+          185.0,
+          389.0,
+          262.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "d21fc1c869d9c28bca5cd103"
+        ],
+        "evidence_id": "a27a85ccc0ae92aecab4a2e2",
+        "source_min_extent": 77.0,
+        "episode_id": "ep-26448333df96e9bc",
+        "pts_us": 18000000,
+        "frame_index": 180,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.534356951713562,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-26448333df96e9bc/a27a85ccc0ae92aecab4a2e2.png",
+        "image_sha256": "21effd93a75201ea8073f2b8633e6a9fb97d122419c3591238c659f1d7d6c50b"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bottle, microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "63aa440a081caa7d6d89",
+      "entity_id": "ep-2a420ff714f0a8e5:object-316",
+      "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+      "image_sha256": "cc1be79c2ad6d0d12d9cc002e75894752b3d937b4413ce4570299bf8e5fc4212",
+      "crop": {
+        "frame_id": "b3c0af7effc2a597af2b6a0e",
+        "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+        "rect": [
+          267.0,
+          185.0,
+          389.0,
+          261.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "2a9a95e2b4171e1f0a5c708b"
+        ],
+        "evidence_id": "41781f683471e0066686d284",
+        "source_min_extent": 76.0,
+        "episode_id": "ep-2a420ff714f0a8e5",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.47941794991493225,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-2a420ff714f0a8e5/41781f683471e0066686d284.png",
+        "image_sha256": "1ca3480df2cb05931483de24c4401d99bd7f1b452c3e6bc37f1166578765cc0e"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bottle, microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "89bfb29f6dd7af4a51c3",
+      "entity_id": "ep-2a420ff714f0a8e5:object-316",
+      "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+      "image_sha256": "0888472cb5fb9b88bfc34ba108db3273b193709aee41afb4d844e959b66929b2",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "b8e61217e4a904ed8980",
+      "entity_id": "ep-2a420ff714f0a8e5:object-316",
+      "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+      "image_sha256": "2cc87dbe6a8dfad5bf31172406b2f2ae3bd15f70ac9b4ae3a4eabe0c383b678c",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "a36102f68a9bdd640786",
+      "entity_id": "ep-2a420ff714f0a8e5:object-316",
+      "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+      "image_sha256": "66b6c89a281d0595d5806d8e69bb0da1ea3e20f45b2c78166ea42ca967d56122",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tie, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "a3a4ed623a954c350f9a",
+      "entity_id": "ep-2a420ff714f0a8e5:object-316",
+      "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+      "image_sha256": "ea248abe8d0dd793863af4ba40be043ebd0046a27917ef2d1ce72d06ffaef765",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "a121cd95e9f84e66890d",
+      "entity_id": "ep-2a420ff714f0a8e5:object-316",
+      "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+      "image_sha256": "d11a5a2e64dae6e0c7a570e781b3f09a776ed85d9110fc865db78ab9d25c56c3",
+      "crop": {
+        "frame_id": "b7fbd5a71ff96206e56256e0",
+        "video_sha256": "5934a1aa2a9d8f34df050d744ea2e6c5ad6661b754636706b1d15a929e42bd96",
+        "rect": [
+          234.0,
+          184.0,
+          392.0,
+          261.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "bbf0874c19038da24e80789c"
+        ],
+        "evidence_id": "7becf47b836bb74ff0092327",
+        "source_min_extent": 77.0,
+        "episode_id": "ep-2a420ff714f0a8e5",
+        "pts_us": 12800000,
+        "frame_index": 128,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.2506866455078125,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-2a420ff714f0a8e5/7becf47b836bb74ff0092327.png",
+        "image_sha256": "f40f2871fafac9371253e200d409056df6549baddbf5cd43f23853dd4e7f1dae"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: bottle, microwave, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "49cd8b1fb5df92ed3363",
+      "entity_id": "ep-327429c08d46e616:object-316",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a",
+      "image_sha256": "55b2c42c7fd93537e65bbc8f1e590c5d27e7d8866c830062af520c956c7c19fc",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "95e7689388bd9cba5e9e",
+      "entity_id": "ep-327429c08d46e616:object-316",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a",
+      "image_sha256": "5fdfbe9cd7d036b3973c51b0dbb220eae9a047aaca94eed20b0e0c9621f73700",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "f6dfff91883c848bec04",
+      "entity_id": "ep-327429c08d46e616:object-316",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a",
+      "image_sha256": "24fe8ab507f1efb776e0f5d3754d9db6b8ee28c6c760d6eee58cac6d166f5cf1",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "eb622dd7e51d5e36975a",
+      "entity_id": "ep-327429c08d46e616:object-316",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a",
+      "image_sha256": "29e54ee337e9d438dfe12dbeeb28b1a431558f5b4d718bed6038863f34c10ad5",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "c72b67756777c84b22b6",
+      "entity_id": "ep-327429c08d46e616:object-316",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a",
+      "image_sha256": "460ce61e574c0486b1f6d48a4b10cea5307815b0b1ae0702836be32a65b683e8",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, refrigerator, tie, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "10d84923c896c1bf9155",
+      "entity_id": "ep-327429c08d46e616:object-316",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a",
+      "image_sha256": "6a5d644ebcba23f7ff6583c9017267f521c94c6c4bdb05761308581e2f602545",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "5b6404c7a3c12def1e40",
+      "entity_id": "ep-33fbcce3c63f4265:object-316",
+      "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+      "image_sha256": "b37e0a6ea371c06f9ff1f112ace4dcd55b655d92e0de2ef82acdf77c18f96627",
+      "crop": {
+        "frame_id": "4ba6c82d0def636d59bdfe11",
+        "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+        "rect": [
+          268.0,
+          186.0,
+          387.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "c3a0a091f21b579233c85d55"
+        ],
+        "evidence_id": "b00e9fd1364c91d46175cff5",
+        "source_min_extent": 74.0,
+        "episode_id": "ep-33fbcce3c63f4265",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.45687639713287354,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-33fbcce3c63f4265/b00e9fd1364c91d46175cff5.png",
+        "image_sha256": "85aed47c15d9f82cf41fe8d44285ad6b59ccb3676705482c8f9b318dd41961a3"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "05e2d0f965ed46b976a7",
+      "entity_id": "ep-33fbcce3c63f4265:object-316",
+      "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+      "image_sha256": "925b104ee8b7c718967ff13d5a050292ad58118a5bbefe24179492db870a9232",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "6e64fec0c347712ffe1b",
+      "entity_id": "ep-33fbcce3c63f4265:object-316",
+      "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+      "image_sha256": "6a73cf65bc7763b872e941c5abc2a5cc84cfdc25f5ec37d531b2cb447081a25c",
+      "crop": {
+        "frame_id": "a827c4f317acabdfcfbd1454",
+        "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+        "rect": [
+          233.0,
+          187.0,
+          391.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "d36de9f840fcf520c1c4ddeb"
+        ],
+        "evidence_id": "90e549c1bb65568a7967c4c8",
+        "source_min_extent": 73.0,
+        "episode_id": "ep-33fbcce3c63f4265",
+        "pts_us": 7100000,
+        "frame_index": 71,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.3021059036254883,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-33fbcce3c63f4265/90e549c1bb65568a7967c4c8.png",
+        "image_sha256": "85e751816c8d74eb8202e9d7ef7066930efe2f9c4d30c49d3bf07a62dd63b257"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "857d5369628390c112a3",
+      "entity_id": "ep-33fbcce3c63f4265:object-316",
+      "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+      "image_sha256": "196211f47eb8c6bccf6c2acfb47eaa62e2230b8fc6f3c296c7598dfea46c0a7f",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "76ac38688033df960b24",
+      "entity_id": "ep-33fbcce3c63f4265:object-316",
+      "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+      "image_sha256": "bb168373b550e85b949258a26e7130724778f584cddb46a76fca5fa888ad8fb6",
+      "crop": {
+        "frame_id": "14a89b56f1e7dc148cbbd00e",
+        "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+        "rect": [
+          268.0,
+          186.0,
+          386.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "cc816165a2b9dea97ddcc2b2"
+        ],
+        "evidence_id": "14beb6bf363c2d3255d70f47",
+        "source_min_extent": 74.0,
+        "episode_id": "ep-33fbcce3c63f4265",
+        "pts_us": 14200000,
+        "frame_index": 142,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.4551418423652649,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-33fbcce3c63f4265/14beb6bf363c2d3255d70f47.png",
+        "image_sha256": "80288d2c4ee35e2ce1e8f52dba09d9e900c78be88193d252200eb22d00c24e91"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "72ebcb97610be8f31942",
+      "entity_id": "ep-33fbcce3c63f4265:object-316",
+      "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+      "image_sha256": "320e5c3656ad574de6c5b0152138783fbdfe0cbf8aa6c436762ecf94d0f48d3b",
+      "crop": {
+        "frame_id": "48c86192d3df72fc57638b55",
+        "video_sha256": "b64157fddb85076b4451be1c8856718bb86aab85836e7188b2d0e9694b15d3dc",
+        "rect": [
+          268.0,
+          186.0,
+          386.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "7cad80d0b92afa3163102ac6"
+        ],
+        "evidence_id": "c7f6046ddb7668d43f57c2b6",
+        "source_min_extent": 74.0,
+        "episode_id": "ep-33fbcce3c63f4265",
+        "pts_us": 17800000,
+        "frame_index": 178,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.44736266136169434,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-33fbcce3c63f4265/c7f6046ddb7668d43f57c2b6.png",
+        "image_sha256": "b48698ecaf40db4bb33b9cbafc78a7ae35658663dad4511d69e739dbe160ffbf"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "f37cdd018f32efca3a45",
+      "entity_id": "ep-37909e041bc956c8:object-316",
+      "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+      "image_sha256": "6741745e94efe9763b46ea98812757ac896b6c192953eae85e43beb37dc0b2a8",
+      "crop": {
+        "frame_id": "8cae68bdeafaf36ba9ff057b",
+        "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+        "rect": [
+          270.0,
+          191.0,
+          379.0,
+          258.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "3221b24fba4382c69b6b4b72"
+        ],
+        "evidence_id": "a4c1dbad718347fd8f42ddab",
+        "source_min_extent": 67.0,
+        "episode_id": "ep-37909e041bc956c8",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.455240935087204,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-37909e041bc956c8/a4c1dbad718347fd8f42ddab.png",
+        "image_sha256": "30e11dc9bbdbfddf970f7710dea16846a1e173469f24f588c67f537e44c8d5ca"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "fc9513dfe1746f76d7e4",
+      "entity_id": "ep-37909e041bc956c8:object-316",
+      "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+      "image_sha256": "7d24a37c62d632e989e5eff2b6840bc043348735149abc31161bdb52786c0722",
+      "crop": {
+        "frame_id": "31631659f0b42fe1e1866576",
+        "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+        "rect": [
+          270.0,
+          190.0,
+          380.0,
+          259.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "7549101ee91eeb9dcb450b47"
+        ],
+        "evidence_id": "49688295bc3231b460abbb24",
+        "source_min_extent": 69.0,
+        "episode_id": "ep-37909e041bc956c8",
+        "pts_us": 4200000,
+        "frame_index": 42,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.3970421850681305,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-37909e041bc956c8/49688295bc3231b460abbb24.png",
+        "image_sha256": "838ac1a7029a202342eafc289399674fab3fa36fd4e9e3a717bed2f797a530c3"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "481a44433018af60c66a",
+      "entity_id": "ep-37909e041bc956c8:object-316",
+      "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+      "image_sha256": "a5c71d5271fa0ff5a84964e3bf092c064f7875cd4bfcbdf0050a23eff1f5690e",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "2c9b6fbf28a2f38b5cbe",
+      "entity_id": "ep-37909e041bc956c8:object-316",
+      "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+      "image_sha256": "392a50fe8349ce31768204df6060bbbba684319995e219def2326641e3130bef",
+      "crop": {
+        "frame_id": "1458ecf79e5615ca71dcd0e9",
+        "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+        "rect": [
+          268.0,
+          192.0,
+          381.0,
+          259.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "320b0e6c53960dfd68342987"
+        ],
+        "evidence_id": "e23e7a34b6a55338ddb6b354",
+        "source_min_extent": 67.0,
+        "episode_id": "ep-37909e041bc956c8",
+        "pts_us": 12500000,
+        "frame_index": 125,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.2901816964149475,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-37909e041bc956c8/e23e7a34b6a55338ddb6b354.png",
+        "image_sha256": "0bce4fe305f17bfb8f6b91904102d6d7bd6e6e462e3558bf2da83e4751cc1270"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "8b245e3606fed398cd23",
+      "entity_id": "ep-37909e041bc956c8:object-316",
+      "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+      "image_sha256": "9cb82d2efceb246a8d3275d18c6cbaaa9f279ce18c51d111e09504511f97601a",
+      "crop": {
+        "frame_id": "fd543b8a4405cc20a0b67ca6",
+        "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+        "rect": [
+          270.0,
+          191.0,
+          379.0,
+          259.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "468fba3c8a0f117b61ccb0bc"
+        ],
+        "evidence_id": "449a7f0211d38d478c211242",
+        "source_min_extent": 68.0,
+        "episode_id": "ep-37909e041bc956c8",
+        "pts_us": 16600000,
+        "frame_index": 166,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.526888370513916,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-37909e041bc956c8/449a7f0211d38d478c211242.png",
+        "image_sha256": "71569fff8ffefb83151d7da5f737b6e806657c1c0b7975095ec582356713c145"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "0263534fc32ef9dd11e7",
+      "entity_id": "ep-37909e041bc956c8:object-316",
+      "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+      "image_sha256": "48057d7b93a0ff5054143ca73d6742059cfe857d894a519c4a0a8cbc2e3b5d1f",
+      "crop": {
+        "frame_id": "0be6e8f24420dca867689269",
+        "video_sha256": "6bda38bb5e324181b6e4c26cb776a07a93b86bdd6bb5d369541de05bb0e01983",
+        "rect": [
+          270.0,
+          191.0,
+          379.0,
+          258.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "a3559e3f677b9afaf7b4ed06"
+        ],
+        "evidence_id": "8a5e33ebf9946a0378e4a5d7",
+        "source_min_extent": 67.0,
+        "episode_id": "ep-37909e041bc956c8",
+        "pts_us": 20800000,
+        "frame_index": 208,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.5286726951599121,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-37909e041bc956c8/8a5e33ebf9946a0378e4a5d7.png",
+        "image_sha256": "456a0baeb77dc29833c7cba8f31b1c9098c80f459818f30d5228d16fbc571c90"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "ec66e049a7f2ab47427b",
+      "entity_id": "ep-3fc2ecf3a1ed6d99:object-316",
+      "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+      "image_sha256": "b3946b4921b83a8241fb97c5df05293601501a969c9052850b651f4d13d2c9f2",
+      "crop": {
+        "frame_id": "ee38ad9340232531b02a4224",
+        "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+        "rect": [
+          268.0,
+          187.0,
+          387.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "1939f33cfdd6e95213c78799"
+        ],
+        "evidence_id": "6e6cb90be8db1869db697472",
+        "source_min_extent": 73.0,
+        "episode_id": "ep-3fc2ecf3a1ed6d99",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.38478073477745056,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-3fc2ecf3a1ed6d99/6e6cb90be8db1869db697472.png",
+        "image_sha256": "fd2568a101116230954cd75935b208e49664c8fcca78117df1587af902a91227"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "5fd318abfff04c8be902",
+      "entity_id": "ep-3fc2ecf3a1ed6d99:object-316",
+      "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+      "image_sha256": "11f2e756caa6f0c4716858d6daa6a4b9371fa12693fccb04d709f03c77080940",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "6c51fd08ac4d7e976cb7",
+      "entity_id": "ep-3fc2ecf3a1ed6d99:object-316",
+      "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+      "image_sha256": "8aed3a3fcaf60bc225641736f9c24fb708f77e77263d60d61e9962c1072e56f4",
+      "crop": {
+        "frame_id": "52113bd71cafb3621bd6b3c1",
+        "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+        "rect": [
+          233.0,
+          187.0,
+          390.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "083f620e74d1d75ccd329e18"
+        ],
+        "evidence_id": "40cad3cdae213f6d4d22cbd2",
+        "source_min_extent": 73.0,
+        "episode_id": "ep-3fc2ecf3a1ed6d99",
+        "pts_us": 5500000,
+        "frame_index": 55,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.28038638830184937,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-3fc2ecf3a1ed6d99/40cad3cdae213f6d4d22cbd2.png",
+        "image_sha256": "821f6813421793fa988d437d716020888a707e27a9e09ea326747b2b2cd3177f"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: couch, microwave, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "639d68fe07189c854f06",
+      "entity_id": "ep-3fc2ecf3a1ed6d99:object-316",
+      "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+      "image_sha256": "4903f153e0cb75c7a2cf228fca2bc9a3f88cedf8e188700d0e0d25591091081c",
+      "crop": {
+        "frame_id": "c161d57179a9cd481e6cd964",
+        "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+        "rect": [
+          233.0,
+          187.0,
+          391.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "5174c951a329d9dd97d90d21"
+        ],
+        "evidence_id": "1c1328011655de3c3808e797",
+        "source_min_extent": 73.0,
+        "episode_id": "ep-3fc2ecf3a1ed6d99",
+        "pts_us": 8200000,
+        "frame_index": 82,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.3106323182582855,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-3fc2ecf3a1ed6d99/1c1328011655de3c3808e797.png",
+        "image_sha256": "7aca22dbf4bf8e6502ecb8335d22bcf06bc71acafa8b1284e643aec4e5fffdc0"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, person, tie, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "80722b132b8a3ecdd4a9",
+      "entity_id": "ep-3fc2ecf3a1ed6d99:object-316",
+      "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+      "image_sha256": "9c1a987eed18f2dc259e91a75d58d46bb733d901d7a51296bd2fc91d83c72444",
+      "crop": {
+        "frame_id": "830afbbe41c0d29653dc4f19",
+        "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+        "rect": [
+          233.0,
+          187.0,
+          390.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "819ee37127ebe8684a9cb047"
+        ],
+        "evidence_id": "7f57b8196d0851ec32f878f6",
+        "source_min_extent": 73.0,
+        "episode_id": "ep-3fc2ecf3a1ed6d99",
+        "pts_us": 11000000,
+        "frame_index": 110,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.34380975365638733,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-3fc2ecf3a1ed6d99/7f57b8196d0851ec32f878f6.png",
+        "image_sha256": "68be4ad1916d4009013b3ffefea2b7fa01d964a90410e3c4826895a174939775"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "9f252e9d3a8906d4a527",
+      "entity_id": "ep-3fc2ecf3a1ed6d99:object-316",
+      "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+      "image_sha256": "a61652d5fb9af9f6dbcdb1a20552967daf6d788a1e554238aca3f3bb77939624",
+      "crop": {
+        "frame_id": "dc8f07b158fe4eb1c1fd3a9f",
+        "video_sha256": "e6c01bfa16bdca251c2e104122ff8daabad59fbdd4dee7ee47765c0a548063a5",
+        "rect": [
+          233.0,
+          187.0,
+          390.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "31798e065846fd35a625c4ed"
+        ],
+        "evidence_id": "e8e1e5c3535865905d49ba39",
+        "source_min_extent": 73.0,
+        "episode_id": "ep-3fc2ecf3a1ed6d99",
+        "pts_us": 13700000,
+        "frame_index": 137,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.3503803610801697,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-3fc2ecf3a1ed6d99/e8e1e5c3535865905d49ba39.png",
+        "image_sha256": "7d55602aabbe320ef56bf5b2f6c00b1f9eee6d25333ee4509141a41d60c6e859"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "f58918dba779a9e08a50",
+      "entity_id": "ep-97a1a39b2e9490b6:object-316",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7",
+      "image_sha256": "8ee9cc6915bbee72334df2f780490c9812dcfb7834d9960e2fccfa425479ca27",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "d162eae088fefbb4fe52",
+      "entity_id": "ep-97a1a39b2e9490b6:object-316",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7",
+      "image_sha256": "c6ca2cc7dea5b21d1af775e85e930c035c9a15496578c2b0dad1ecc914328d04",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "77462200587a6d23368b",
+      "entity_id": "ep-97a1a39b2e9490b6:object-316",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7",
+      "image_sha256": "f8c58098f76556ac0ffd3368442fdc5cbb6c3c0242ac86987bd4e13dd5b20efe",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "91d9f797ead94b8b028f",
+      "entity_id": "ep-97a1a39b2e9490b6:object-316",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7",
+      "image_sha256": "213877807123156c3253372ee3c5cc6841166a7c624994895bdbc80cd9301007",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tie, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "02fbdafff74cd1aa3ef0",
+      "entity_id": "ep-97a1a39b2e9490b6:object-316",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7",
+      "image_sha256": "b270f6754131105c6c1c6f4eb794bc4a7357ce56f84adb353f8fa5d3e486ab1b",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "f261c12adc490418a32a",
+      "entity_id": "ep-97a1a39b2e9490b6:object-316",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7",
+      "image_sha256": "276c6b3a765b60c7e5301ee881b6150b69cd8df5c0ea56db2fa75a74e0e7c970",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "ca9dad927160cc34d983",
+      "entity_id": "ep-b3f1b6687fc723ca:object-316",
+      "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+      "image_sha256": "10acf90fb066a1559be9a48efd9294538274f106aefe44ba1947c2a235006ee1",
+      "crop": {
+        "frame_id": "e23675683a12ea6c173f492c",
+        "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+        "rect": [
+          268.0,
+          186.0,
+          387.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "78a704045e3be97ccf6539ba"
+        ],
+        "evidence_id": "c59f7a2f55dd062034d34f5f",
+        "source_min_extent": 74.0,
+        "episode_id": "ep-b3f1b6687fc723ca",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.464507520198822,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-b3f1b6687fc723ca/c59f7a2f55dd062034d34f5f.png",
+        "image_sha256": "54c81bb9ab11449ad68f60859f27271f7223dfba99063047c3ccb888f7a87468"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "3251f1b7b01cad24c368",
+      "entity_id": "ep-b3f1b6687fc723ca:object-316",
+      "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+      "image_sha256": "cb387e151732e41195c7135d8b7834fbce834b081bcc4940615d7b6b6adbb472",
+      "crop": {
+        "frame_id": "99c3f95be74cea9d802acfcd",
+        "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+        "rect": [
+          233.0,
+          187.0,
+          392.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "abbc14fdb087a4b16c778c10"
+        ],
+        "evidence_id": "6e908620b79b2f51d6c74e72",
+        "source_min_extent": 73.0,
+        "episode_id": "ep-b3f1b6687fc723ca",
+        "pts_us": 4700000,
+        "frame_index": 47,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.2666091322898865,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-b3f1b6687fc723ca/6e908620b79b2f51d6c74e72.png",
+        "image_sha256": "cde925e431ef152cc17c52ee49c9c54d34cb380c75a76dd7a69d139cdd051716"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "dd7d4dc3eeef20d0a56a",
+      "entity_id": "ep-b3f1b6687fc723ca:object-316",
+      "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+      "image_sha256": "b6257778b2f5ab87773c71afbad9ff8c6dd4477e1cf87f6af11e64dcf9535e31",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "b0f082457b874a17c970",
+      "entity_id": "ep-b3f1b6687fc723ca:object-316",
+      "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+      "image_sha256": "c5653ed3888cae237f76995580170ad936fcc9debbbe4f1d395e79970d78522e",
+      "crop": {
+        "frame_id": "bc5ae5b5264a46eee7b2d86e",
+        "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+        "rect": [
+          268.0,
+          187.0,
+          387.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "2c16d7ba82d3f6a69dca8f5d"
+        ],
+        "evidence_id": "4fcdd1215e8caf757eadf6aa",
+        "source_min_extent": 73.0,
+        "episode_id": "ep-b3f1b6687fc723ca",
+        "pts_us": 14100000,
+        "frame_index": 141,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.3334680199623108,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-b3f1b6687fc723ca/4fcdd1215e8caf757eadf6aa.png",
+        "image_sha256": "57a796b519c779745fe7f8b28ae293cb1eacf65081c3009a66e73e4735122a49"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "9a182bc921b61fba8177",
+      "entity_id": "ep-b3f1b6687fc723ca:object-316",
+      "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+      "image_sha256": "df08a805db666a04d782889a2c25dbe8eff2ea42f39fb0acdd7cf3267ee8b82a",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: book, person, tie, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "a90bae54d96af102a838",
+      "entity_id": "ep-b3f1b6687fc723ca:object-316",
+      "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+      "image_sha256": "1a3d74e639c04110ff3693bd174afdffe6ccf81509aae296594ce45f31b0880a",
+      "crop": {
+        "frame_id": "b85b711f186b3306c6b7b318",
+        "video_sha256": "2325dcdc29faa51048d1c950212be79127d8d9f0f2c8343462d7aff2d5289a06",
+        "rect": [
+          268.0,
+          186.0,
+          387.0,
+          260.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "35558ccd2422b5bfd64ef5bd"
+        ],
+        "evidence_id": "faf9dbece129148eb3515e9c",
+        "source_min_extent": 74.0,
+        "episode_id": "ep-b3f1b6687fc723ca",
+        "pts_us": 23500000,
+        "frame_index": 235,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.451741486787796,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-b3f1b6687fc723ca/faf9dbece129148eb3515e9c.png",
+        "image_sha256": "06d411b5eb0832171258211a0af9abff36df87ba4f93959ea1a7b84033baf65a"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "846a07852f2b8620ad9f",
+      "entity_id": "ep-c1c313b64f579794:object-316",
+      "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+      "image_sha256": "be1b395a1479a514cfdf56c260bfa39744badd4334aaa81f9d968a8d466bf90c",
+      "crop": {
+        "frame_id": "ff1e915087b28e7dc824b8c3",
+        "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+        "rect": [
+          270.0,
+          191.0,
+          379.0,
+          258.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "d4ba281c1de90dcb2b060519"
+        ],
+        "evidence_id": "83c44ca0bd52a93462b09903",
+        "source_min_extent": 67.0,
+        "episode_id": "ep-c1c313b64f579794",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.4223655164241791,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-c1c313b64f579794/83c44ca0bd52a93462b09903.png",
+        "image_sha256": "53bc6c44339dfea0157a4e61a190574a2330fb2f8fb43630688f608b7e56ed4b"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "dce7c76797b725b83241",
+      "entity_id": "ep-c1c313b64f579794:object-316",
+      "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+      "image_sha256": "2d447b9fe0db9e97f638085407d8a173d581325d44e4e037c4854666f62d3b8b",
+      "crop": {
+        "frame_id": "933d9fcc1e5e0e8745138148",
+        "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+        "rect": [
+          270.0,
+          191.0,
+          379.0,
+          258.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "fa87ef7bb014bacb146e78eb"
+        ],
+        "evidence_id": "506a20bc7dc375a367d95f35",
+        "source_min_extent": 67.0,
+        "episode_id": "ep-c1c313b64f579794",
+        "pts_us": 2700000,
+        "frame_index": 27,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.2863143980503082,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-c1c313b64f579794/506a20bc7dc375a367d95f35.png",
+        "image_sha256": "fe5bb588ec864b10f2ede3f6c6247e4fbcd5a3558be7349069f4d1e9b582ff38"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "ec87f0b5ff9244ac0ac6",
+      "entity_id": "ep-c1c313b64f579794:object-316",
+      "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+      "image_sha256": "b792d80b765e70f1363b55f58b006c06343d2cf9a3c1fe71e6e53f0e7bd89ad9",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "2072981e284caf125d35",
+      "entity_id": "ep-c1c313b64f579794:object-316",
+      "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+      "image_sha256": "ed928d74d6c4fbcf319e539650a00b88e23517d93b062c66a07f6ed5f25d774b",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person, tie. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "88d8e848b9496c6201b2",
+      "entity_id": "ep-c1c313b64f579794:object-316",
+      "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+      "image_sha256": "da7b0720103e77ef96c994cb878c1de18d14750bb19fd97fded12317183aa21a",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: none accepted. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "edd83f0be6d1c91f3928",
+      "entity_id": "ep-c1c313b64f579794:object-316",
+      "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+      "image_sha256": "95cd79ac3c931ea11447d6d78cbae781c615608cea43b0e79c6a19abec26f639",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: none accepted. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "79af8669313c04ae7467",
+      "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758",
+      "image_sha256": "00ba3b01f01713efe62fb0b558bbc84b4dde08afbfbe6f7c93287656dda03fb9",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "70945a2c7d5062f8c2f2",
+      "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758",
+      "image_sha256": "7cca9ffc97fe916d10cc3b727ca0b48483795266ebed038a8042b631d21357ec",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "e6c4ef61b658c58ecac8",
+      "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758",
+      "image_sha256": "890c292c1e0d8d69b9b19603c989e536d654ae56f992c9c5153ac7e81b113951",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "77beafb3eb06acf73212",
+      "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758",
+      "image_sha256": "3544220def4a1aadb0f159bd6714711c081f05a18b911dbddb2cae1fb99afa92",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, person, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "291a769cc28b8520527f",
+      "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758",
+      "image_sha256": "dd26fbf3492473d6e5817346bf699355707f33883a574cfbef5b20e73bfbd4b6",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "1e710ab4b57e0b424ce5",
+      "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758",
+      "image_sha256": "fbf0295478fc32b1ecdf1d7f0fa4fa2ff362b9805e09999e45ede790aae6dfa0",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: bottle, refrigerator, tv. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "5e1ff86cbeff4eb940e3",
+      "entity_id": "ep-e614ca27a15019cd:object-316",
+      "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+      "image_sha256": "6105b9b69c43fc5b4b35598a68698dc28793a13d007674245a7d64dbd8979592",
+      "crop": {
+        "frame_id": "dc78e95c08563fe922658d52",
+        "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+        "rect": [
+          270.0,
+          191.0,
+          379.0,
+          258.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "8d5e840c7e2a62ad6d99a687"
+        ],
+        "evidence_id": "d6a61b488a0152304c3dbbe8",
+        "source_min_extent": 67.0,
+        "episode_id": "ep-e614ca27a15019cd",
+        "pts_us": 0,
+        "frame_index": 0,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.4985363483428955,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-e614ca27a15019cd/d6a61b488a0152304c3dbbe8.png",
+        "image_sha256": "cfd0fb10b26bc480b36d6362a79dc29a39514f0bfec1d7a015a931310aa4b587"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "8d8d40891305f65df55b",
+      "entity_id": "ep-e614ca27a15019cd:object-316",
+      "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+      "image_sha256": "cbbf0fd9d215817acf47908b462d758ea7b1eac1b3ddd9ea6e02afd34b403d01",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "6b7463467c7ad036e74a",
+      "entity_id": "ep-e614ca27a15019cd:object-316",
+      "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+      "image_sha256": "b1ee4b768d47831dc7ea45fa17b7c73512458be9ae0bb3116dfe838ce79909fb",
+      "crop": null,
+      "binding_status": "no_accepted_requested_class",
+      "hint": "Predicted objects: person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "d5521376d973188d9fe6",
+      "entity_id": "ep-e614ca27a15019cd:object-316",
+      "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+      "image_sha256": "ccbe0d2c7d8d97fd35aebb9eb3010bd8b637835432ac48e012e2e63575c1c5e6",
+      "crop": {
+        "frame_id": "9ba0ab35bc7ce2f1daa0dea2",
+        "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+        "rect": [
+          266.0,
+          189.0,
+          379.0,
+          259.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "c2515ac58486a68044018ff4"
+        ],
+        "evidence_id": "06423346f9ad6442291ea36d",
+        "source_min_extent": 70.0,
+        "episode_id": "ep-e614ca27a15019cd",
+        "pts_us": 10100000,
+        "frame_index": 101,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.6597039103507996,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-e614ca27a15019cd/06423346f9ad6442291ea36d.png",
+        "image_sha256": "ff0173e289acb3263d0e46acd7b926d4967aa71095f3bc7356e5abdde65f6d84"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, person. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "ccabb25211b5da5ed423",
+      "entity_id": "ep-e614ca27a15019cd:object-316",
+      "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+      "image_sha256": "07368bc3682c3f2cb25ccc55a418e22e2de390c0e31a0576f6e9ca6ab2aeead9",
+      "crop": {
+        "frame_id": "0652cf794fe354682ad5979d",
+        "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+        "rect": [
+          270.0,
+          191.0,
+          379.0,
+          258.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "bf648f91c0afc2e1900697ed"
+        ],
+        "evidence_id": "d5a22450ee41038373fa8436",
+        "source_min_extent": 67.0,
+        "episode_id": "ep-e614ca27a15019cd",
+        "pts_us": 13400000,
+        "frame_index": 134,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.5209351778030396,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-e614ca27a15019cd/d5a22450ee41038373fa8436.png",
+        "image_sha256": "189e542c26b4dff5ea52a139638035300d5b942141eed62b784562d8ffe164d2"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    },
+    {
+      "sample_id": "b1afa1572d756138b2da",
+      "entity_id": "ep-e614ca27a15019cd:object-316",
+      "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+      "image_sha256": "66fc582dc4600ae513a82691b4bae1b274aa4ef52ad1f17bdfccf5da8525c0a0",
+      "crop": {
+        "frame_id": "7fbfc8b8d691db36489bac8c",
+        "video_sha256": "bd46dcbb616da649d23bd38f4c399846e77e122fbf393d89f8bcd868f313edce",
+        "rect": [
+          270.0,
+          191.0,
+          379.0,
+          258.0
+        ],
+        "output_size": [
+          320,
+          240
+        ],
+        "interpolation": "PIL-bicubic",
+        "producer_id": "b4c508901276f7e81ac0c2ad41df833dc851aeac94ef3827209587e3b4235020",
+        "kind": "target",
+        "detection_ids": [
+          "307e186482be3fd47a2c304f"
+        ],
+        "evidence_id": "63f848a449614fdaa47de5ab",
+        "source_min_extent": 67.0,
+        "episode_id": "ep-e614ca27a15019cd",
+        "pts_us": 16800000,
+        "frame_index": 168,
+        "class_id": 68,
+        "class_name": "microwave",
+        "score": 0.5248579978942871,
+        "status": "usable",
+        "image": "output/video-perception/derived-v1/episodes/ep-e614ca27a15019cd/63f848a449614fdaa47de5ab.png",
+        "image_sha256": "41fe563f005e79e9da1b75d2d78275cf731c31d1aa4b65f2b0f9545a33f089e1"
+      },
+      "binding_status": "single_requested_class",
+      "hint": "Predicted objects: microwave, refrigerator. These are machine estimates.",
+      "wrong_hint": "Predicted objects: bicycle, dog. These are machine estimates."
+    }
+  ],
+  "id": "50a78d36e826b4bbb4ffca134f3d73875ed129f32c0ba5ab6135d900babf9990"
+}

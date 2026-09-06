@@ -240,3 +240,108 @@ Installed the isolated lock and ran identical training pixels on CPU and MPS. Bo
 ### Technical details
 - Detector floor 0.10, reporting/new-track threshold 0.25, NMS IoU 0.70, fixed 640×640 letterbox input. PIL supplies RGB; returned coordinates are validated in 640×480 source pixels.
 - Tracker buffer is ten native 10 Hz updates (one second). Excessive gaps reset; unsupported variable cadence rejects.
+
+## Step 5: Review masks, identity spans, and the proposal selector's misses
+
+The full run produced 5,793 native frames, 22,459 track observations, and 4,472 contextual crops. Reviewed a source-first box pilot, eight short identity spans, and a separate 24-frame instance-mask probe. Built a read-only browser replay with source-coordinate SVG overlays, exact RGB, source video, crops, and accepted/rejected packet bins.
+
+The fixed cue policy reduces calls but loses important evidence: 368 selected calls versus 543 uniform calls, with six complete misses among nine conservative reviewed transition brackets. This is a negative selector result, not a quality-preserving speedup. State recognition will use fixed reviewed timestamps independently of proposal selection.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 3)
+
+**Assistant interpretation:** Complete perception evaluation and visual review before applying crops to state recognition.
+
+**Inferred user intent:** See detections, masks, tracking behavior, and concrete failures, then measure downstream benefit.
+
+**Commit (code):** `dda2aa6` — Implement pinned YOLO detection, ByteTrack, crops and causal evidence packets.
+
+### What I did
+- Measured native detector service time: 71.137 seconds across 5,793 frames, excluding registration/decode/overlay work.
+- Reviewed 24 fixed initial frames: 11 localized, eight missed, four unsupported categories, one unreviewable target.
+- Preserved 24 reviewed box overlays and source contact sheets; all three small reviewed targets were missed.
+- Ran YOLO11n-seg on the same 24 pilot frames, saving 148 raw instance masks and 24 overlays. Masks use a separate checkpoint/producer and have no mask-accuracy claim.
+- Reviewed eight six-frame contiguous identity spans. The same physical actor is tracked in 42/42 visible rows with zero within-span ID switches; six bed-span rows are visually unobservable. Seven extra observed person-track rows correspond to non-actor image content.
+- Evaluated proposal calls/pixels and bracket coverage using evaluator-only corpus joins after inference.
+
+### Why
+- Detector recall, tracker identity stability, mask output, and action-evidence selection are different measurements. Aggregate speed cannot substitute for reviewed evidence coverage.
+
+### What worked
+- Source-aligned browser replay displays model boxes, dashed predicted tracks, actual mask polygons, and hashed crop images.
+- Complete native-cadence processing and crop artifacts finished without a runtime failure.
+- Session-local ByteTrack IDs retain the reviewed actor through short visible spans.
+
+### What didn't work
+- Framed portraits and actor shadows/reflections produce false TV/person detections.
+- Plate and tablelamp are unsupported in the selected vocabulary; a hidden book cannot be scored as a visible target.
+- The proposal budget can be spent before a door transition, causing six bracket misses. No test-driven retuning was performed.
+
+### What I learned
+- Static appliance boxes and proximity do not establish door motion. Detector-only scheduling is insufficient for this task.
+
+### What was tricky to build
+- Track correspondence review distinguishes physical actors from portraits/shadows; automatic largest-person matching would not establish this truth.
+- Final unclosed bins remain outside causal output. Their time is retained in the total-duration denominator instead of hiding the tail.
+
+### What warrants a second pair of eyes
+- Box annotations are a single assistant's approximate visible extents, and identity review covers short spans only. Neither establishes full detection AP or long-term tracking quality.
+
+### What should be done in the future
+- Complete fixed-interval F/C/FC/FCH/FCW/H state ablations, API tests, screenshots, and the final report. Keep the poor proposal selector as an evaluated baseline.
+
+### Code review instructions
+- Inspect `detection-pilot-results.json`, `identity-review-results.json`, `pipeline-evaluation.json`, and their corresponding screenshots.
+
+### Technical details
+- Detector run: `output/video-perception/detect-v1`; derived run: `output/video-perception/derived-v1`; mask probe: `output/video-perception/masks-v1`.
+- Live replay: `http://127.0.0.1:8773/`.
+- Concurrent MLX parity commits were observed and left untouched.
+
+## Step 6: Complete replay, fixed-source comparison, and evidence reporting
+
+Completed the perception handoff into state recognition and retained both successful evidence paths and missing-target failures. The report explains the complete system from source geometry through evaluation denominators.
+
+### Prompt Context
+**User prompt (verbatim):** "Do the whole yolo thing and then continue with the state ticket"
+
+**Assistant interpretation:** Finish D1–D4, preserve the negative results, and complete the crop/hint state follow-up.
+
+**Inferred user intent:** An implemented, tested, reviewable system with screenshots and honest comparisons.
+
+**Commit (code):** Initial pipeline `dda2aa6`; the next commit contains replay, masks, and the state comparison.
+
+### What I did
+- Added read-only perception and state review applications, source-hash checks, actual mask polygons, crop display, and missing-evidence presentation.
+- Archived 1,728 state observations, feature metadata, and the six-condition/two-classifier result.
+- Captured and visually inspected browser screenshots, including the held-out missing crop and development refrigerator crop.
+- Wrote the detailed implementation report and a focused state comparison report.
+
+### Why
+The downstream comparison must account for missing localization and uneven evidence budgets before claiming any benefit from crops.
+
+### What worked
+Main tests: `workbench/.venv/bin/python -m pytest workbench/tests -q` → 34 passed, one skipped, two existing dependency warnings. Isolated perception tests → eight passed. Twelve live HTTP checks passed, including byte-range video (206), exact frame/crop retrieval, and unknown/missing evidence (404).
+
+### What didn't work
+The detector-to-review slip failed with `context deadline exceeded (Client.Timeout exceeded while awaiting headers)` from `https://almanach.crib.scapegoat.dev/api/render-and-print`; the print outcome is uncertain and was not retried immediately. The initial plan and state-region start slips returned HTTP 200 with `printed: true` at 19:59:43Z and 20:28:06Z respectively.
+
+All 24 test state frames lacked an accepted microwave crop. Crop-only zero errors represent zero coverage. Full-frame and combined image conditions answered all seven visually unknown samples.
+
+### What I learned
+The current limiting factor is requested-object evidence availability. Development success does not establish held-out state transfer.
+
+### What was tricky to build
+Paired null raw/probability scores distinguish unexecuted crop inference from model abstention. The paired crop test subset is empty and its metric must remain null. A missing crop file now produces a source-change response rather than an unhandled file exception.
+
+### What warrants a second pair of eyes
+Single-reviewer box extents, short actor spans, apartment/class confounding, and the exploratory reuse of a previously inspected test partition. No dense mask quality or generative-verifier quality was measured.
+
+### What should be done in the future
+Annotate requested objects at actual state times; add visible positive states and independent scenes; test an oracle crop diagnostic; repair and remeasure final-bin proposal coverage.
+
+### Code review instructions
+Start with the two reports, then inspect `regions.py`, `region_experiment.py`, `perception/proposals.py`, `perception/tracking.py`, the JSON result archives, and screenshot captions.
+
+### Technical details
+Perception UI: http://127.0.0.1:8773/. State region UI: http://127.0.0.1:8774/. Live checks are preserved in `various/api-review-checks.json`. Output weights/features/videos remain ignored; result identities and selected evidence are committed.

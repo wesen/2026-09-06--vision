@@ -8,13 +8,20 @@ Topics:
 DocType: index
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://workbench/src/video_workbench/perception/app.py
+      Note: Read-only source-aligned replay
+    - Path: repo://workbench/src/video_workbench/perception/proposals.py
+      Note: Causal proposal policy and budgets
+    - Path: repo://workbench/src/video_workbench/predicates/regions.py
+      Note: Fixed region evidence comparison
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T14:52:49.80359-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Object detection, tracking, and visual evidence selection
 
@@ -30,3 +37,13 @@ The design is complete; implementation is planned. No detector packages were ins
 Dependencies: VIDEO-SEARCH-001, VIDEO-CORPUS-001, VIDEO-STATE-001, VIDEO-TEMPORAL-001, COSMOS-VERIFY-001, and VIDEO-REPLAY-001. This is a separate perception project; it does not replace temporal action segmentation.
 
 Delivery receipts and PDF validation are retained under `various/`.
+
+## Implemented and evaluated
+
+D1–D4 are implemented. The 60-video run, reviewed pilot, short identity spans, fixed mask probe, causal proposals, and twelve-condition state comparison are complete. Quality limitations remain explicit: six of nine transition brackets were missed by proposals and no held-out microwave crop was accepted.
+
+- [Implementation and measured evidence report](reference/02-yolo-perception-implementation-and-measured-evidence-report.md)
+- [Implementation diary](reference/01-investigation-diary.md)
+- [Pipeline counts and proposal evaluation](various/pipeline-evaluation.json)
+
+Replay: `http://127.0.0.1:8773/`.

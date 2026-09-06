@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "name": "virtualhome-household-v1",
+  "scene_index": 0,
+  "families": ["fridge", "microwave"],
+  "variants": ["closed_before_leaving", "closure_omitted", "reopened_before_leaving"],
+  "groups": [
+    {"id": "g01", "split": "train", "seed": 101, "camera_dx": 0.0},
+    {"id": "g02", "split": "train", "seed": 202, "camera_dx": 0.15},
+    {"id": "g03", "split": "development", "seed": 303, "camera_dx": -0.15},
+    {"id": "g04", "split": "test", "seed": 404, "camera_dx": 0.3}
+  ],
+  "initial_room": "kitchen",
+  "destination_room": "livingroom",
+  "character": "Chars/Male1",
+  "fps": 10,
+  "width": 640,
+  "height": 480,
+  "boundary_guard_frames": 2,
+  "camera": {"position": [-0.3, 1.65, -4.8], "look_at": [-3.0, 1.0, -2.0]},
+  "annotation_policy": "weak_action_interiors_and_endpoint_world_truth"
+}

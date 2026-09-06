@@ -97,3 +97,54 @@ Automatic cameras and raw action exports exposed limitations that materially cha
 - Installation client revision: 122d3b0aee04768d988e02929f6eeeb38f2f28a8.
 - Simulator release: Door_Modified_Build_2023_0404.
 - RGB: 640 x 480, 10 FPS, paired graph export per frame.
+
+## Step 2: Implement a resumable corpus exporter
+
+Implemented the configured 24-episode household corpus as a Python package with explicit simulator ownership, immutable run provenance, separate model inputs and evaluator labels, and validation of every recording. A one-episode integration run produced 183 matching RGB/graph frames and an 18.3-second MP4; visual inspection of its contact sheet shows the fridge opening, remaining open during a detour, and closing before departure.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1)
+
+**Assistant interpretation:** Turn the tested household routines into a reproducible, inspectable generation workflow.
+
+**Inferred user intent:** Obtain usable local training assets and a clear implementation trail.
+
+### What I did
+- Added `configs/virtualhome-household-v1.json`, `src/virtualhome_corpus`, ten unit tests, and the corpus playbook.
+- Ran `PYTHONPATH=src output/virtualhome-install/.venv/bin/python -m unittest discover -s tests -v`: all ten passed.
+- Ran `PYTHONPATH=src output/virtualhome-install/.venv/bin/python -m virtualhome_corpus generate --port 18081 --output output/virtualhome-corpus/generator-smoke --limit 1`: completed in 25.809 seconds.
+- Inspected the resulting contact sheet; door and actor are visible with the fixed camera.
+
+### Why
+- Retained failed attempts and immutable provenance make reruns auditable; split groups keep related variants together.
+- Opaque video paths and separate label files avoid giving the model intended outcomes through filenames.
+
+### What worked
+- Fixed camera ID 103 rendered stream 0 successfully; all 183 images had corresponding graphs.
+- Final graph confirms CLOSED and actor arrival in the living room.
+
+### What didn't work
+- No implementation test or integration failure occurred in this step. After context recovery, polling the finished tool session returned `write_stdin failed: Unknown process id 37448`; the persisted complete manifest supplied the result.
+
+### What I learned
+- The neighboring-appliance detour makes intermediate door state visibly persist in sampled frames.
+
+### What was tricky to build
+- Unity inserts WALK rows and repeats program indices. The parser preserves them and validates frame bounds rather than assuming one row per source instruction.
+- Exported action endpoints and graph capture phase are unverified. Two-frame interior trimming is only weak supervision; precise timing and dense visual-state supervision remain disabled.
+
+### What warrants a second pair of eyes
+- Whether these weak action interiors are suitable for a particular downstream loss function.
+- Camera visibility across every remaining variant; the smoke only establishes one case.
+
+### What should be done in the future
+- Render all 24 episodes, inspect representative action/final frames, and run deep validation.
+
+### Code review instructions
+- Start with `core.py` program construction, interval parsing, and endpoint rule; then inspect `runner.py` provenance, attempt lifecycle, and input/label separation.
+- Run the test command above; follow `docs/playbook/virtualhome-corpus.md` for generation.
+
+### Technical details
+- Configuration SHA-256: `da29d6e35a5b2c716c1a7e868b56a1cc9b349fd3ea3ed8fe4cff09ebdf4d6360`.
+- Smoke video SHA-256: `404bead46cb4bc3b3b6379ca4e4ffd7546261b07b8ac64f35606b7d59892d416`.
+- Prior C1 implementation commit: `d005b3f`.

@@ -1,0 +1,31 @@
+{
+  "captured_on": "2026-09-06",
+  "scope": "Source inspection and existing image smoke; not a native-video reproduction",
+  "files": [
+    {
+      "file": "mlx-vlm-0.6.17-embedding.py",
+      "copied_from": "/Users/manuel/code/wesen/2026-09-06--vision/workbench/.venv/lib/python3.11/site-packages/mlx_vlm/models/qwen3_vl_embedding/qwen3_vl_embedding.py",
+      "sha256": "d4ed96b0dd649c525b75212eb24901b2822a444088ff7730d5c237c88f869f03"
+    },
+    {
+      "file": "mlx-vlm-0.6.17-backbone.py",
+      "copied_from": "/Users/manuel/code/wesen/2026-09-06--vision/workbench/.venv/lib/python3.11/site-packages/mlx_vlm/models/qwen3_vl/qwen3_vl.py",
+      "sha256": "12f0393421918eb1cbaa6daa447d93a405762e997f688676688e5c71d987d3ee"
+    },
+    {
+      "file": "mlx-vlm-0.6.17-encoder-loader.py",
+      "copied_from": "/Users/manuel/code/wesen/2026-09-06--vision/workbench/.venv/lib/python3.11/site-packages/mlx_vlm/encoder_loader.py",
+      "sha256": "916be7ff7232d498341d3e7063bd203cab5052e6dfddb18fb4867522bbdb7298"
+    },
+    {
+      "file": "official-qwen-reference.py",
+      "copied_from": "/Users/manuel/code/wesen/2026-09-06--vision/output/search-runtime/official-qwen3-vl-embedding.py",
+      "sha256": "8ffa74a1a6bb759610c57865ea416fd4daf9936cb787520e1112a3e1d547f36a"
+    },
+    {
+      "file": "existing-runtime-smoke.json",
+      "copied_from": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-EMBED-001--embedding-runtime-baseline-on-mlx/various/runtime-smoke.json",
+      "sha256": "48874772145d8ccad2fdf8a76cb1d0eae884c924c9327ee882c56eb889737471"
+    }
+  ]
+}

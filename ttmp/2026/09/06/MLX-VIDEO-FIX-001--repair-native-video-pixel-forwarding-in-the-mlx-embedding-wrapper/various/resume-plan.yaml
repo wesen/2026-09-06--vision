@@ -1,0 +1,62 @@
+almanach_studio_version: 1
+theme: brutalist
+paperWidth: 384
+bodyScale: 1
+feedLines: 8
+blocks:
+- id: head
+  type: row
+  data:
+    cols:
+    - w: 1fr
+      text: MLX-VIDEO-FIX-001
+      preset: micro
+    - w: 1fr
+      text: STATUS
+      preset: micro
+      align: right
+- id: r1
+  type: rule
+  data:
+    weight: heavy
+- id: gap1
+  type: space
+  data:
+    size: s
+- id: title
+  type: text
+  data:
+    text: Native Video Repair
+    preset: h1
+    lines: 3
+- id: gap3
+  type: space
+  data:
+    size: m
+- id: planhead
+  type: text
+  data:
+    text: PLAN
+    preset: h2
+- id: plan
+  type: checks
+  data:
+    items:
+    - P0 reproduce and pin - complete
+    - P1 forward pixels - complete
+    - P2 request isolation - complete
+    - P3 reference parity and measurement
+    - P4 isolated workbench integration
+    - P5 root cause and upstream package
+- id: r2
+  type: rule
+  data:
+    weight: hair
+- id: facts
+  type: kv
+  data:
+    items:
+    - - PHASES
+      - '6'
+    - - NEXT
+      - P3 fresh audit and parity

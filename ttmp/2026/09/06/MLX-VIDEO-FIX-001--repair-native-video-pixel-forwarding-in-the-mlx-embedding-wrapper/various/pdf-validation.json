@@ -1,0 +1,18 @@
+{
+  "pdf": "/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/MLX-VIDEO-FIX-001/MLX-VIDEO-FIX-001_Intern_Guide.pdf",
+  "pages": 12,
+  "source_sha256": "5da06ed3aaffe661b1531f61b652a2bf273dca9a00f778e6bf13c2b4a3eb123a",
+  "pdf_sha256": "de3c554baf24f49fc39d9d1a6806162a7ef258095cd11f40449bdee87406388f",
+  "contact_sheets": [
+    "/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/MLX-VIDEO-FIX-001/qa/contact-1.jpg",
+    "/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/MLX-VIDEO-FIX-001/qa/contact-2.jpg"
+  ],
+  "visual_review": "passed",
+  "scope": "PDF layout review, not runtime validation",
+  "notes": "Reviewed all 12 pages as contact sheets and page 6 at full size after replacing overlapping file table.",
+  "archived_previews": [
+    "ttmp/2026/09/06/MLX-VIDEO-FIX-001--repair-native-video-pixel-forwarding-in-the-mlx-embedding-wrapper/various/pdf-review/contact-1.jpg",
+    "ttmp/2026/09/06/MLX-VIDEO-FIX-001--repair-native-video-pixel-forwarding-in-the-mlx-embedding-wrapper/various/pdf-review/contact-2.jpg",
+    "ttmp/2026/09/06/MLX-VIDEO-FIX-001--repair-native-video-pixel-forwarding-in-the-mlx-embedding-wrapper/various/pdf-review/page-006.png"
+  ]
+}

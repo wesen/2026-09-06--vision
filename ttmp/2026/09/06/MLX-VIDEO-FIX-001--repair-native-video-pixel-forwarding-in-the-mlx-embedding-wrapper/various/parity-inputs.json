@@ -1,0 +1,176 @@
+[
+  {
+    "case": "text",
+    "shapes": {
+      "input_ids": [
+        1,
+        26
+      ],
+      "attention_mask": [
+        1,
+        26
+      ]
+    },
+    "tensor_hashes": {
+      "input_ids": "605339dd73b21cc8064842a654d2e5c831fedc5c8d9fe36ace57b8fc713bd495",
+      "attention_mask": "854840d54cbb22fb0bae5e9a6f70b7a846e6dd02e72d059c10f953eac71edba3"
+    },
+    "prompt": "<|im_start|>system\nRepresent the user's input.<|im_end|>\n<|im_start|>user\nA person closing the fridge door.<|im_end|>\n<|im_start|>assistant\n",
+    "decoded_tokens": "<|im_start|>system\nRepresent the user's input.<|im_end|>\n<|im_start|>user\nA person closing the fridge door.<|im_end|>\n<|im_start|>assistant\n"
+  },
+  {
+    "case": "image",
+    "shapes": {
+      "attention_mask": [
+        1,
+        102
+      ],
+      "input_ids": [
+        1,
+        102
+      ],
+      "pixel_values": [
+        320,
+        1536
+      ],
+      "image_grid_thw": [
+        1,
+        3
+      ]
+    },
+    "tensor_hashes": {
+      "attention_mask": "37611d27f79518e501d2639c031c11b50a8a23a12bf632c89f007c327af72487",
+      "input_ids": "47839a88e700b8f2320e3ee2f302d59efc4c639b0480b8ccf17b91b773acd813",
+      "pixel_values": "b80c8525f1c9e2a4f79a0103f5c298d3df9b4034aa9c3ddc2706db6c444c47ed",
+      "image_grid_thw": "62ab45c5deaaea64b40e38c48f540fbdfb6235ee5d28cc2630dc82c526d25329"
+    },
+    "prompt": "<|im_start|>system\nRepresent the user's input.<|im_end|>\n<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|><|im_end|>\n<|im_start|>assistant\n",
+    "decoded_tokens": "<|im_start|>system\nRepresent the user's input.<|im_end|>\n<|im_start|>user\n<|vision_start|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|vision_end|><|im_end|>\n<|im_start|>assistant\n<|endoftext|>"
+  },
+  {
+    "case": "video",
+    "shapes": {
+      "attention_mask": [
+        1,
+        196
+      ],
+      "input_ids": [
+        1,
+        196
+      ],
+      "pixel_values_videos": [
+        640,
+        1536
+      ],
+      "video_grid_thw": [
+        1,
+        3
+      ]
+    },
+    "tensor_hashes": {
+      "attention_mask": "fb17ce2f7bdcf782890c18ff78b3ddd679e5c795cf1ba3c947cccb96184a9069",
+      "input_ids": "d1d5d4f00080641cebb41c3160cf98bb37bb2b1ce36a80a0e4981e719b00aebe",
+      "pixel_values_videos": "1d61460ba5e1e8f3ae9d0953c398bb5196c34a75b0d4f0ae57f29c977b72b0cb",
+      "video_grid_thw": "1021913eca912aaed2fbe08cb917c351acdc2627b46655e809a9b8646c42a4c9"
+    },
+    "prompt": "<|im_start|>system\nRepresent the user's input.<|im_end|>\n<|im_start|>user\n<|vision_start|><|video_pad|><|vision_end|><|im_end|>\n<|im_start|>assistant\n",
+    "decoded_tokens": "<|im_start|>system\nRepresent the user's input.<|im_end|>\n<|im_start|>user\n<0.2 seconds><|vision_start|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|vision_end|><1.2 seconds><|vision_start|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|vision_end|><|im_end|>\n<|im_start|>assistant\n<|endoftext|>"
+  },
+  {
+    "case": "black",
+    "shapes": {
+      "attention_mask": [
+        1,
+        196
+      ],
+      "input_ids": [
+        1,
+        196
+      ],
+      "pixel_values_videos": [
+        640,
+        1536
+      ],
+      "video_grid_thw": [
+        1,
+        3
+      ]
+    },
+    "tensor_hashes": {
+      "attention_mask": "fb17ce2f7bdcf782890c18ff78b3ddd679e5c795cf1ba3c947cccb96184a9069",
+      "input_ids": "d1d5d4f00080641cebb41c3160cf98bb37bb2b1ce36a80a0e4981e719b00aebe",
+      "pixel_values_videos": "28ef62a5e65500fbef56f36676bcd59bb2564caa1e2e9b60ac7a9808769d7b01",
+      "video_grid_thw": "1021913eca912aaed2fbe08cb917c351acdc2627b46655e809a9b8646c42a4c9"
+    },
+    "prompt": "<|im_start|>system\nRepresent the user's input.<|im_end|>\n<|im_start|>user\n<|vision_start|><|video_pad|><|vision_end|><|im_end|>\n<|im_start|>assistant\n",
+    "decoded_tokens": "<|im_start|>system\nRepresent the user's input.<|im_end|>\n<|im_start|>user\n<0.2 seconds><|vision_start|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|vision_end|><1.2 seconds><|vision_start|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|vision_end|><|im_end|>\n<|im_start|>assistant\n<|endoftext|>"
+  },
+  {
+    "case": "reverse",
+    "shapes": {
+      "attention_mask": [
+        1,
+        196
+      ],
+      "input_ids": [
+        1,
+        196
+      ],
+      "pixel_values_videos": [
+        640,
+        1536
+      ],
+      "video_grid_thw": [
+        1,
+        3
+      ]
+    },
+    "tensor_hashes": {
+      "attention_mask": "fb17ce2f7bdcf782890c18ff78b3ddd679e5c795cf1ba3c947cccb96184a9069",
+      "input_ids": "d1d5d4f00080641cebb41c3160cf98bb37bb2b1ce36a80a0e4981e719b00aebe",
+      "pixel_values_videos": "0b66adc6ef44db1fce96b8b9a56777952493c618136425c2eafae8143627ae8a",
+      "video_grid_thw": "1021913eca912aaed2fbe08cb917c351acdc2627b46655e809a9b8646c42a4c9"
+    },
+    "prompt": "<|im_start|>system\nRepresent the user's input.<|im_end|>\n<|im_start|>user\n<|vision_start|><|video_pad|><|vision_end|><|im_end|>\n<|im_start|>assistant\n",
+    "decoded_tokens": "<|im_start|>system\nRepresent the user's input.<|im_end|>\n<|im_start|>user\n<0.2 seconds><|vision_start|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|vision_end|><1.2 seconds><|vision_start|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|vision_end|><|im_end|>\n<|im_start|>assistant\n<|endoftext|>"
+  },
+  {
+    "case": "mixed",
+    "shapes": {
+      "attention_mask": [
+        1,
+        278
+      ],
+      "input_ids": [
+        1,
+        278
+      ],
+      "pixel_values": [
+        320,
+        1536
+      ],
+      "image_grid_thw": [
+        1,
+        3
+      ],
+      "pixel_values_videos": [
+        640,
+        1536
+      ],
+      "video_grid_thw": [
+        1,
+        3
+      ]
+    },
+    "tensor_hashes": {
+      "attention_mask": "467a80a455535d2031af7127ad3b7605e8deacc59636aefd9e09fb7ff7f66891",
+      "input_ids": "44266b60d221f628c5d5aa78a09492739630dd71028a7ae692567e431dc95fc1",
+      "pixel_values": "b80c8525f1c9e2a4f79a0103f5c298d3df9b4034aa9c3ddc2706db6c444c47ed",
+      "image_grid_thw": "62ab45c5deaaea64b40e38c48f540fbdfb6235ee5d28cc2630dc82c526d25329",
+      "pixel_values_videos": "1d61460ba5e1e8f3ae9d0953c398bb5196c34a75b0d4f0ae57f29c977b72b0cb",
+      "video_grid_thw": "1021913eca912aaed2fbe08cb917c351acdc2627b46655e809a9b8646c42a4c9"
+    },
+    "prompt": "<|im_start|>system\nRepresent the user's input.<|im_end|>\n<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|><|vision_start|><|video_pad|><|vision_end|><|im_end|>\n<|im_start|>assistant\n",
+    "decoded_tokens": "<|im_start|>system\nRepresent the user's input.<|im_end|>\n<|im_start|>user\n<|vision_start|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|vision_end|><0.2 seconds><|vision_start|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|vision_end|><1.2 seconds><|vision_start|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|video_pad|><|vision_end|><|im_end|>\n<|im_start|>assistant\n<|endoftext|>"
+  }
+]

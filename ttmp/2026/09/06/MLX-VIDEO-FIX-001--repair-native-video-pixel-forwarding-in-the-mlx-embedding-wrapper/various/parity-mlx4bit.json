@@ -1,0 +1,69 @@
+{
+  "backend": "MLX",
+  "dtype": "checkpoint-native",
+  "conversion": "pinned community 4-bit artifact",
+  "load_seconds": 0.3173095411621034,
+  "cases": [
+    {
+      "case": "black-hf",
+      "seconds": 0.3528301250189543,
+      "norm": 1.0017815828323364
+    },
+    {
+      "case": "black",
+      "seconds": 0.3099754999857396,
+      "norm": 0.9997037053108215
+    },
+    {
+      "case": "image-hf",
+      "seconds": 0.1928261669818312,
+      "norm": 0.9999939203262329
+    },
+    {
+      "case": "image",
+      "seconds": 0.19181004096753895,
+      "norm": 1.0015511512756348
+    },
+    {
+      "case": "mixed-hf",
+      "seconds": 0.46017766604200006,
+      "norm": 0.9989168643951416
+    },
+    {
+      "case": "mixed",
+      "seconds": 0.4577636669855565,
+      "norm": 0.9995630383491516
+    },
+    {
+      "case": "reverse-hf",
+      "seconds": 0.3100709170103073,
+      "norm": 0.9980173707008362
+    },
+    {
+      "case": "reverse",
+      "seconds": 0.3096341248601675,
+      "norm": 0.9999077320098877
+    },
+    {
+      "case": "text-hf",
+      "seconds": 0.03054074989631772,
+      "norm": 0.9986453056335449
+    },
+    {
+      "case": "text",
+      "seconds": 0.029634250095114112,
+      "norm": 0.9986453056335449
+    },
+    {
+      "case": "video-hf",
+      "seconds": 0.3113241249229759,
+      "norm": 1.0011842250823975
+    },
+    {
+      "case": "video",
+      "seconds": 0.30951095814816654,
+      "norm": 0.9972822666168213
+    }
+  ],
+  "peak_bytes": 3183412028
+}

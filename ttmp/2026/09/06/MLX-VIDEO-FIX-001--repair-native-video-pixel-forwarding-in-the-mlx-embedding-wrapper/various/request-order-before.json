@@ -1,0 +1,117 @@
+{
+  "label": "before",
+  "errors": {},
+  "cases": [
+    {
+      "case": "video4",
+      "max_abs_vs_fresh": 0.0,
+      "cosine_vs_fresh": 1.0000001192092896,
+      "seconds": 0.23628687509335577,
+      "shape": [
+        1,
+        2048
+      ]
+    },
+    {
+      "case": "text",
+      "max_abs_vs_fresh": 0.23828125,
+      "cosine_vs_fresh": 0.7220362424850464,
+      "seconds": 0.033874457934871316,
+      "shape": [
+        1,
+        2048
+      ]
+    },
+    {
+      "case": "video2",
+      "max_abs_vs_fresh": 0.0,
+      "cosine_vs_fresh": 1.0000001192092896,
+      "seconds": 0.13284741714596748,
+      "shape": [
+        1,
+        2048
+      ]
+    },
+    {
+      "case": "image",
+      "max_abs_vs_fresh": 0.0,
+      "cosine_vs_fresh": 1.0000001192092896,
+      "seconds": 0.18866020906716585,
+      "shape": [
+        1,
+        2048
+      ]
+    },
+    {
+      "case": "video4",
+      "max_abs_vs_fresh": 0.0,
+      "cosine_vs_fresh": 1.0000001192092896,
+      "seconds": 0.21756737516261637,
+      "shape": [
+        1,
+        2048
+      ]
+    },
+    {
+      "case": "text",
+      "max_abs_vs_fresh": 0.23828125,
+      "cosine_vs_fresh": 0.7220362424850464,
+      "seconds": 0.027805541874840856,
+      "shape": [
+        1,
+        2048
+      ]
+    },
+    {
+      "case": "video1",
+      "max_abs_vs_fresh": 0.0,
+      "cosine_vs_fresh": 1.0000001192092896,
+      "seconds": 0.13093958282843232,
+      "shape": [
+        1,
+        2048
+      ]
+    },
+    {
+      "case": "video3",
+      "max_abs_vs_fresh": 0.0,
+      "cosine_vs_fresh": 1.0000001192092896,
+      "seconds": 0.2140292909462005,
+      "shape": [
+        1,
+        2048
+      ]
+    },
+    {
+      "case": "mixed",
+      "max_abs_vs_fresh": 0.0,
+      "cosine_vs_fresh": 1.0000001192092896,
+      "seconds": 0.30576258315704763,
+      "shape": [
+        1,
+        2048
+      ]
+    },
+    {
+      "case": "text",
+      "max_abs_vs_fresh": 0.35791015625,
+      "cosine_vs_fresh": 0.615845263004303,
+      "seconds": 0.027525875018909574,
+      "shape": [
+        1,
+        2048
+      ]
+    },
+    {
+      "case": "video4",
+      "max_abs_vs_fresh": 0.0355224609375,
+      "cosine_vs_fresh": 0.9623079895973206,
+      "seconds": 0.21694666612893343,
+      "shape": [
+        1,
+        2048
+      ]
+    }
+  ],
+  "all_exact": false
+}

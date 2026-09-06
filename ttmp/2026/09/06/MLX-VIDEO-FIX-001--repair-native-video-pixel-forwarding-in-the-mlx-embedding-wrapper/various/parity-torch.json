@@ -1,0 +1,43 @@
+{
+  "backend": "PyTorch CPU",
+  "dtype": "float32",
+  "load_seconds": 0.6434925829526037,
+  "loading": {
+    "missing_keys": "set()",
+    "unexpected_keys": "set()",
+    "mismatched_keys": "set()",
+    "error_msgs": []
+  },
+  "cases": [
+    {
+      "case": "black",
+      "seconds": 1.912918166955933,
+      "norm": 1.0000001192092896
+    },
+    {
+      "case": "image",
+      "seconds": 1.145113332895562,
+      "norm": 1.0000001192092896
+    },
+    {
+      "case": "mixed",
+      "seconds": 2.537159207975492,
+      "norm": 0.9999999403953552
+    },
+    {
+      "case": "reverse",
+      "seconds": 1.8313771251123399,
+      "norm": 0.9999999403953552
+    },
+    {
+      "case": "text",
+      "seconds": 0.3008322920650244,
+      "norm": 0.9999999403953552
+    },
+    {
+      "case": "video",
+      "seconds": 1.7332048329990357,
+      "norm": 0.9999997615814209
+    }
+  ]
+}

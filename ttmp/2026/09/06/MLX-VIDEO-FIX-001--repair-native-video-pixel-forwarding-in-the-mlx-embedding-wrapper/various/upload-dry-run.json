@@ -1,0 +1,7 @@
+{
+  "mode": "dry-run",
+  "returncode": 0,
+  "source_sha256": "5da06ed3aaffe661b1531f61b652a2bf273dca9a00f778e6bf13c2b4a3eb123a",
+  "remote_dir": "/ai/2026/09/06/MLX-VIDEO-FIX-001",
+  "output": "DRY: layout=default\nDRY: remote-dir=/ai/2026/09/06/MLX-VIDEO-FIX-001\nDRY: workers=1\nDRY: pandoc /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/MLX-VIDEO-FIX-001--repair-native-video-pixel-forwarding-in-the-mlx-embedding-wrapper/design-doc/01-intern-guide-to-diagnosing-repairing-and-validating-native-mlx-video-embeddings.md -> <tmp>/MLX-VIDEO-FIX-001 Intern Guide.pdf\nDRY: upload MLX-VIDEO-FIX-001 Intern Guide.pdf -> /ai/2026/09/06/MLX-VIDEO-FIX-001\n"
+}

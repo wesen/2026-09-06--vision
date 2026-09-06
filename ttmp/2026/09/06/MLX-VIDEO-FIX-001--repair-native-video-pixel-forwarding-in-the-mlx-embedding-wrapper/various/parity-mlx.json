@@ -1,0 +1,39 @@
+{
+  "backend": "MLX",
+  "dtype": "float32",
+  "conversion": "official weights through strict MLX loader sanitization, cast to FP32, no quantization",
+  "load_seconds": 3.8010217919945717,
+  "cases": [
+    {
+      "case": "black",
+      "seconds": 0.9028354999609292,
+      "norm": 1.0
+    },
+    {
+      "case": "image",
+      "seconds": 0.2175817908719182,
+      "norm": 1.0
+    },
+    {
+      "case": "mixed",
+      "seconds": 0.43840820901095867,
+      "norm": 1.0
+    },
+    {
+      "case": "reverse",
+      "seconds": 0.2962989159859717,
+      "norm": 1.0
+    },
+    {
+      "case": "text",
+      "seconds": 0.09312387485988438,
+      "norm": 0.9999999403953552
+    },
+    {
+      "case": "video",
+      "seconds": 0.2879531669896096,
+      "norm": 1.0
+    }
+  ],
+  "peak_bytes": 9611490824
+}

@@ -57,7 +57,7 @@ def audit(root, cfg):
             indices=set()
             for a in annotations['actions']:
                 if a['action'] in ('OPEN','CLOSE'):
-                    for endpoint in (a['raw_start'],a['raw_end']):indices.update(range(max(0,endpoint-3),min(len(images),endpoint+4)))
+                    indices.update(range(max(0,a['raw_start']-3),min(len(images),a['raw_end']+4)))
             for run in signatures[1:]:indices.update(range(max(0,run['start_frame']-3),min(len(images),run['start_frame']+4)))
             frames=[{'frame':i,'seconds':i/cfg['fps'],'image':str(images[i].relative_to(root)),'graph':str(graphs[i].relative_to(root))} for i in sorted(indices)]
             calibration.append({'episode_id':m['episode_id'],'target':m['scenario']['target_class'],'view':m['view'],'actions':annotations['actions'],'world_runs':signatures,'frames':frames,'reviewer':None,'visibility':'pending','visual_uncertainty_bounds':None,'precise_boundary_supervision_allowed':False,'dense_visual_state_supervision_allowed':False})

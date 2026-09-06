@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 from collections import Counter
 import json
+import math
 from pathlib import Path
 import subprocess
 import time
@@ -15,6 +16,15 @@ from .runner import require, now, corpus_lock, export_annotations, check_video, 
 
 def producer():
     return {Path(m.__file__).name: file_hash(m.__file__) for m in (core, diversity, runner)} | {'diversity_runner.py': file_hash(__file__)}
+
+
+def placement_room(initial, actor, requested):
+    room_ids={n['id'] for n in initial['nodes'] if n.get('category')=='Rooms'}
+    initial_rooms=sorted({e['to_id'] for e in initial['edges'] if e['from_id']==actor['id'] and e['relation_type']=='INSIDE' and e['to_id'] in room_ids})
+    require(len(initial_rooms)==1, 'Actor initial room is ambiguous')
+    actual=actor['obj_transform']['position']
+    require(math.hypot(actual[0]-requested[0],actual[2]-requested[2])<0.25, 'Actor placement differs from requested coordinates')
+    return initial_rooms[0]
 
 
 def generate(comm, root, cfg, item, installation, code):
@@ -49,10 +59,13 @@ def generate(comm, root, cfg, item, installation, code):
         actors = [n for n in initial['nodes'] if n['class_name'] == 'character']
         require(len(actors) == 1, 'Expected one actor')
         actor = actors[0]
-        require(any(e['from_id'] == actor['id'] and e['to_id'] == room['id'] and e['relation_type'] == 'INSIDE' for e in initial['edges']), 'Actor placed in wrong room')
+        save_json(attempt / 'graph-initial.json', initial)
+        initial_room=placement_room(initial,actor,item['scenario']['initial_position'])
+        manifest['initial_room_id']=initial_room
+        manifest['target_room_id']=room['id']
         if not initialization.exists():
             initialization.parent.mkdir(exist_ok=True)
-            save_json(initialization, {'position': actor['obj_transform']['position'], 'transform': actor['obj_transform'], 'room_id': room['id'], 'seed': item['seed'], 'pose_determinism_verified': False})
+            save_json(initialization, {'position': actor['obj_transform']['position'], 'transform': actor['obj_transform'], 'room_id': initial_room, 'target_room_id': room['id'], 'seed': item['seed'], 'pose_determinism_verified': False})
         save_json(attempt / 'graph-initial.json', initial)
         camera = camera_for(target, room, item['view'])
         ok, camera_id = comm.camera_count(); require(ok, 'Camera count failed')

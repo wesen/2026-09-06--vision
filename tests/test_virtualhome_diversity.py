@@ -48,3 +48,14 @@ class DiversityContracts(unittest.TestCase):
         self.assertIn('[Sit]',program_for('posture',target,None,'interaction')[-1])
 
 if __name__=='__main__':unittest.main()
+
+class PlacementContracts(unittest.TestCase):
+    def test_cross_room_start_is_valid_but_coordinate_drift_is_not(self):
+        from virtualhome_corpus.diversity_runner import placement_room
+        actor={'id':9,'obj_transform':{'position':[2,1.25,3]}}
+        graph={'nodes':[actor,{'id':1,'category':'Rooms'},{'id':2,'category':'Rooms'}],
+               'edges':[{'from_id':9,'to_id':2,'relation_type':'INSIDE'}]}
+        self.assertEqual(placement_room(graph,actor,[2,1.25,3]),2)
+        with self.assertRaisesRegex(RuntimeError,'coordinates'):placement_room(graph,actor,[3,1.25,3])
+        graph['edges'].append({'from_id':9,'to_id':1,'relation_type':'INSIDE'})
+        with self.assertRaisesRegex(RuntimeError,'ambiguous'):placement_room(graph,actor,[2,1.25,3])

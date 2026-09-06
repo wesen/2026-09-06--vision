@@ -14,6 +14,10 @@ RelatedFiles:
       Note: Proposed bindings awaiting capability validation
     - Path: repo://src/virtualhome_corpus/diversity.py
       Note: Matched scenario planner and typed action programs
+    - Path: repo://src/virtualhome_corpus/diversity_review.py
+      Note: Native transition evidence, world-state runs and split/duration diagnostics
+    - Path: repo://src/virtualhome_corpus/diversity_runner.py
+      Note: Attempt-preserving generator and media/source validation, commit 5867103
     - Path: repo://ttmp/2026/09/06/VIDEO-CORPUS-001--virtualhome-corpus-expansion-and-label-calibration/various/probe-gallery.html
       Note: Visual evidence from successful and failed probes
 ExternalSources: []
@@ -22,6 +26,7 @@ LastUpdated: 2026-09-06T14:38:18.621682-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 # Implementation diary
@@ -229,3 +234,107 @@ The third recorded sweep completed all twelve minimal programs. Camera review th
 - Planned factors: 3 apartments × 4 families × 2 conditions × 2 views = 48 episodes.
 - Partition assignment: scene 0 train, scene 1 development, scene 2 test. This is a small scene-held-out experiment, not a broad generalization benchmark.
 - Recording: 640×480 at 10 FPS. Full trajectory durations are retained and are not matched between conditions.
+
+## Step 5: Verify RGB/graph disagreement during the release
+
+The first two encoded fridge videos passed full decoding and per-frame source-hash validation. Native image inspection shows an open door during both trajectories, while every exported graph labels the target CLOSED. This confirms that the graph stream cannot supply dense visual door-state labels for this subset. Continued generation with the existing conservative annotation policy and expanded calibration review to include each entire action interval with neighboring frames.
+
+### Prompt Context
+**User prompt (verbatim):** (see Steps 1–2)
+
+**Assistant interpretation:** Preserve technical findings and screenshots while completing the varied corpus.
+
+**Inferred user intent:** Support an accurate future report and avoid training on incorrect automatic labels.
+
+**Commit (code):** `5867103` — "Corpus: validate diverse household scenarios and add provenance-preserving exporter"
+
+### What I did
+- Validated both initial MP4s using full FFmpeg decoding and raw PNG/graph/source hashes.
+- Inspected both fridge contact sheets and matched training-apartment pickup, sitting, and switching sheets.
+- Saved matched comparison sheets under `various/screenshots/`.
+- Added `docs/playbook/virtualhome-diversity.md` with commands, artifact contracts, observed exclusions, and evaluation limits.
+- Started the remaining release recordings using the committed producer.
+
+### Why
+- More action diversity is useful only if metadata quality and nuisance factors are explicit.
+
+### What worked
+- RGB shows actual door opening/closing and terminal seated poses.
+- All completed release recordings have passed export-time media checks.
+
+### What didn't work
+- Both first fridge graph streams contain only CLOSED despite visible opening. No graph transition exists from which to estimate a timing offset.
+- The historical prompt referred to `docs/playbooks/*`; `rg --files docs/playbooks` returned `No such file or directory`. The actual directory is `docs/playbook/`, and the new playbook uses that location.
+- `cat README.md` found no root README; the existing simulator/corpus playbooks are the entry points.
+
+### What I learned
+- A raw action interval can include preparatory pose or waiting, and a program's LOOKAT can export as TURNTO. Preserve raw rows rather than rename them to the intended verb.
+
+### What was tricky to build
+- A neighborhood around just the action endpoints can miss the visually informative movement. The review exporter now retains the complete OPEN/CLOSE interval and three neighboring frames on each side, at native resolution.
+
+### What warrants a second pair of eyes
+- Pickup props are small; TV screen state differs in observability by view. Dense state supervision remains disabled even where gross actor movement is visible.
+
+### What should be done in the future
+- Complete all apartments, audit duration confounds and source compatibility, then sign the per-subset visual review separately from raw exports.
+
+### Code review instructions
+- Compare `world-state-runs.json` with the fridge OPEN/CLOSE contact-sheet frames.
+- Read the playbook's interpretation limits and inspect the matched review sheets.
+
+### Technical details
+- Initial fridge trajectories: 69 and 70 frames at 10 FPS.
+- Annotations retain `precise_boundary_supervision_allowed: false` and `dense_visual_state_supervision_allowed: false`.
+
+## Step 6: Preserve cross-bedroom scenarios and remove the duration shortcut
+
+The first 40 recordings completed, then the exporter rejected the scene-2 bed scenario with `RuntimeError: Actor placed in wrong room`. Inspection showed that the actor was at the configured coordinates, in bedroom 358, while bed 296 is in bedroom 253. This was the exact successful probe start: the program legitimately walks between bedrooms. Replaced the overly strict same-room assumption with coordinate validation and explicit starting/target room metadata.
+
+The full trajectories also have an obvious duration confound: interaction programs contain more actions than their controls. Added a separate two-second window exporter that retains the original videos and lineage. It selects the first target action, the terminal sitting interval, or the terminal control interval, with no padding and no split reassignment. These are weak program-conditioned windows, not exact visual action segments.
+
+### Prompt Context
+**User prompt (verbatim):** (see Steps 1–2)
+
+**Assistant interpretation:** Complete varied situations, including legitimate travel between rooms, and provide a usable comparison set without length alone identifying the condition.
+
+**Inferred user intent:** Improve discrimination of actions, props, and locations while keeping the corpus reproducible.
+
+### What I did
+- Preserved failed attempt 0001 for `dv-673fa0ed90d3c06a`, including a post-failure graph snapshot.
+- Checked actual actor coordinates against the configured start; they differ only at floating-point precision.
+- Added `placement_room`, requiring one initial room and horizontal coordinate error below 0.25 m.
+- Added regression coverage for cross-room starts, coordinate drift, ambiguous room edges, window clamping, terminal SIT selection, and rejection of short sources rather than padding.
+- All 18 corpus tests passed.
+
+### Why
+- Same-room insertion was an implementation assumption, not a requirement of the scenario. Changing the established configuration would invalidate the release identity; preserving the verified starting coordinates maintains the intended scenario.
+
+### What worked
+- Existing 40 videos remain immutable and valid.
+- Placement checks now distinguish a legitimate different room from an actual incorrect insertion.
+
+### What didn't work
+- `PYTHONPATH=src output/virtualhome-install/.venv/bin/python -m virtualhome_corpus.diversity_runner generate` stopped at the same-room assertion after 40 successful episodes.
+- The original inventory/probe recorded the target room but did not separately assert the actor's starting room. The release gate exposed that omission.
+
+### What I learned
+- Duplicate room class names require exact room IDs and coordinates. A route across rooms is useful variation when represented honestly.
+
+### What was tricky to build
+- The first 40 recordings use the earlier exporter hash; the remaining recordings will use the corrected placement validator. Every attempt retains its own exact producer hashes. The audit must report this producer split rather than claim a single identical exporter for all episodes.
+
+### What warrants a second pair of eyes
+- Compare actual start transforms across matched conditions, verify windows contain informative movement, and avoid treating program-conditioned crop selection as a natural untrimmed benchmark.
+
+### What should be done in the future
+- Resume the final eight recordings, build fixed-duration windows, and audit both datasets together.
+
+### Code review instructions
+- Review `placement_room` and its regression test, then `diversity_windows.select_window` and source hash checks.
+- Failed attempt evidence lives under the original episode directory; no successful artifact was rewritten to conceal the failure.
+
+### Technical details
+- Configured bed-scenario start: `[1.98290539, 1.25, 1.5227592]`; observed: `[1.9829042, 1.25, 1.52275848]`.
+- Starting room: 358; target room: 253.
+- Fixed windows: 20 frames at 10 FPS, sourced directly from hashed PNGs.

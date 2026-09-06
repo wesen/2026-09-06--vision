@@ -1,0 +1,17 @@
+{
+  "imported_on": "2026-09-06",
+  "files": [
+    {
+      "original_path": "/Users/manuel/code/wesen/2026-09-06--vision/video_understanding_for_procedural_work.md",
+      "imported_path": "sources/video_understanding_for_procedural_work.md",
+      "bytes": 286730,
+      "sha256": "7f6050a9cf9ad7fac0e37d37410978602a7f7eab4fcfe734f4380eced89f9c09"
+    },
+    {
+      "original_path": "/tmp/cosmos-random-notes.txt",
+      "imported_path": "sources/cosmos-random-notes.txt",
+      "bytes": 44112,
+      "sha256": "46db5f463bed4d8b95a4a5de36f079d9fa1a0ce2131706ecaa865873a6d8461d"
+    }
+  ]
+}

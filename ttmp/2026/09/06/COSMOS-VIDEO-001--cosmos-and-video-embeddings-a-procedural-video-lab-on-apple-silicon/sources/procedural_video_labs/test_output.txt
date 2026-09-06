@@ -1,0 +1,25 @@
+test_collapse_bounds (test_labs.SequenceTests.test_collapse_bounds) ... ok
+test_collapse_empty (test_labs.SequenceTests.test_collapse_empty) ... ok
+test_demo (test_labs.SequenceTests.test_demo) ... ok
+test_edit (test_labs.SequenceTests.test_edit) ... ok
+test_empty_input (test_labs.SequenceTests.test_empty_input) ... ok
+test_gap_breaks_persistence (test_labs.SequenceTests.test_gap_breaks_persistence) ... ok
+test_gate_hysteresis (test_labs.SequenceTests.test_gate_hysteresis) ... ok
+test_hsmm_brute_force (test_labs.SequenceTests.test_hsmm_brute_force) ... ok
+test_hsmm_impossible_duration (test_labs.SequenceTests.test_hsmm_impossible_duration) ... ok
+test_impossible_path (test_labs.SequenceTests.test_impossible_path) ... ok
+test_invalid_probability (test_labs.SequenceTests.test_invalid_probability) ... ok
+test_iou (test_labs.SequenceTests.test_iou) ... ok
+test_iou_invalid (test_labs.SequenceTests.test_iou_invalid) ... ok
+test_log_zero (test_labs.SequenceTests.test_log_zero) ... ok
+test_logsumexp_impossible (test_labs.SequenceTests.test_logsumexp_impossible) ... ok
+test_prerequisites (test_labs.SequenceTests.test_prerequisites) ... ok
+test_smoothing_normalized (test_labs.SequenceTests.test_smoothing_normalized) ... ok
+test_timestamp_validation (test_labs.SequenceTests.test_timestamp_validation) ... ok
+test_unknown_step (test_labs.SequenceTests.test_unknown_step) ... ok
+test_viterbi_brute_force (test_labs.SequenceTests.test_viterbi_brute_force) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.016s
+
+OK

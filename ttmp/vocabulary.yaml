@@ -5,6 +5,12 @@ topics:
       description: Backend services
     - slug: websocket
       description: WebSocket lifecycle & events
+    - slug: video
+      description: Video understanding and temporal inference
+    - slug: embeddings
+      description: Multimodal representations and retrieval
+    - slug: cosmos
+      description: NVIDIA Cosmos models and comparison experiments
 docTypes:
     - slug: design-doc
       description: Structured rationale and architecture notes

@@ -1,0 +1,14 @@
+{
+  "output_shape": [
+    2,
+    2,
+    3,
+    24
+  ],
+  "future_perturbation_max_prefix_error": 0.0,
+  "initial_synthetic_loss": 1.141251,
+  "final_synthetic_loss": 0.059701,
+  "optimizer_steps": 40,
+  "tests": "passed",
+  "torch_version": "2.10.0+cpu"
+}

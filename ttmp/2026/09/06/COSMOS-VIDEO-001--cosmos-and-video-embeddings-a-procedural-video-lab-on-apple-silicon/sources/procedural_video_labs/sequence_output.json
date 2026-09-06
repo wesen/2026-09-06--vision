@@ -1,0 +1,66 @@
+{
+  "hmm_forward_probability": 0.056478,
+  "hmm_forward_rows": [
+    [
+      0.54,
+      0.01
+    ],
+    [
+      0.1137,
+      0.0684
+    ],
+    [
+      0.008643,
+      0.047835
+    ]
+  ],
+  "hmm_smoothed_marginals": [
+    [
+      0.96951,
+      0.03049
+    ],
+    [
+      0.442898,
+      0.557102
+    ],
+    [
+      0.153033,
+      0.846967
+    ]
+  ],
+  "hmm_best_path": [
+    0,
+    1,
+    1
+  ],
+  "hmm_best_path_probability": 0.02916,
+  "hsmm_segments": [
+    [
+      0,
+      2,
+      0
+    ],
+    [
+      2,
+      4,
+      1
+    ]
+  ],
+  "hsmm_path_weight": 0.331776,
+  "procedure_violation": {
+    "observed_step": "tighten",
+    "status": "wrong_order",
+    "unmet_prerequisites": [
+      "insert"
+    ]
+  },
+  "persistence_trace": [
+    "normal",
+    "possible",
+    "possible",
+    "incident",
+    "normal"
+  ],
+  "temporal_iou": 0.6,
+  "tests": "passed"
+}

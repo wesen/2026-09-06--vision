@@ -1,0 +1,2216 @@
+A good 4–5 week lab is five incremental projects, each producing a working system and feeding directly into the next one. The final project should be mostly integration, not a completely new problem.
+
+The current Qwen3-VL-Embedding-2B is well suited to this curriculum because it supports text, image, video, and mixed multimodal inputs in one embedding space, with task-specific instructions. There are also community MLX 4/6/8-bit conversions small enough for your M1/64 GB.
+
+Project	Main idea	Approx. time
+1	Multimodal video search	3–4 days
+2	Text-guided machine-state recognition	4–5 days
+3	Events + temporal state across chunks	4–5 days
+4	DSL + recursive investigation	5–6 days
+5	Real-time error-condition alert system	6–8 days
+Project 1 — Build a local semantic video-search engine
+
+Goal: understand embeddings, similarity search, video chunking, and multimodal retrieval.
+
+Start with 10–20 short videos. Divide them into 5–10 second chunks.
+
+video
+  ↓
+chunks
+  ↓
+Qwen3-VL-Embedding-2B
+  ↓
+vectors
+  ↓
+LanceDB / NumPy
+  ↓
+text query
+  ↓
+top-K video chunks
+
+Example queries:
+
+"worker approaches machine"
+"person opens a door"
+"machine with rotating parts"
+"worker picks up a tool"
+
+Implement cosine similarity yourself first:
+
+$$ s(q,v)=\frac{q^\top v}{\|q\|\|v\|} $$
+
+Then move to a vector database.
+
+Lab concepts
+
+Learn:
+
+vectors and norms
+cosine similarity
+normalization
+embedding dimensions
+top-K retrieval
+frame sampling
+chunk length
+recall vs precision
+shared multimodal embedding spaces
+Experiment
+
+Compare:
+
+5-second chunks
+10-second chunks
+20-second chunks
+
+and:
+
+1 FPS
+2 FPS
+4 FPS
+
+Measure which combination retrieves events best.
+
+Deliverable
+
+A command like:
+
+python search.py \
+  --video-dir ./videos \
+  --query "worker opens machine guard"
+
+Output:
+
+1. machine03.mp4  02:13-02:23   0.81
+2. machine01.mp4  04:31-04:41   0.76
+3. machine03.mp4  07:12-07:22   0.71
+
+Success criterion: given 10 test queries, the correct clip appears in top-5 at least most of the time.
+
+Project 2 — Text-guided machine-state recognition
+
+Now introduce the idea you asked about: context/instructions refining the video embedding.
+
+Instead of:
+
+video → embedding
+
+use:
+
+video
++
+machine description
++
+task instruction
+        ↓
+multimodal embedding
+
+Qwen3-VL-Embedding supports mixed inputs such as text+video and customizable instructions, so this is directly supported by the model architecture.
+
+For example:
+
+Machine:
+This is press P1.
+
+Visible state indicators:
+- rotating shaft normally indicates RUNNING
+- stationary shaft indicates STOPPED
+- green lamp indicates RUNNING
+- red lamp indicates STOPPED
+
+Task:
+Represent visual evidence concerning machine operating state.
+
+Create separate embeddings for:
+
+generic scene
+machine state
+worker action
+safety condition
+
+for the same video chunk.
+
+Recognition by competing hypotheses
+
+Create text embeddings for:
+
+H1 = "machine is running; rotating parts remain in motion"
+H2 = "machine is stopped; moving parts are stationary"
+
+Then evaluate:
+
+$$ s_{\text{run}}=\cos(v,E(H_1)) $$ $$ s_{\text{stop}}=\cos(v,E(H_2)) $$
+
+and define:
+
+$$ D=s_{\text{run}}-s_{\text{stop}} $$
+
+This is more informative than simply checking whether similarity exceeds one arbitrary threshold.
+
+Important experiment
+
+Compare:
+
+No context
+
+video only
+
+against:
+
+Generic instruction
+
+video +
+"determine machine state"
+
+against:
+
+Machine-specific context
+
+video +
+"the rotating silver spindle indicates machine operation..."
+
+That makes this project scientifically useful.
+
+Deliverable
+
+Produce a timeline:
+
+00:00–00:10    RUNNING       0.82
+00:10–00:20    RUNNING       0.88
+00:20–00:30    UNCERTAIN     0.51
+00:30–00:40    STOPPED       0.79
+00:40–00:50    STOPPED       0.85
+
+And visualize the state score:
+
+$$ s_{\text{running}}-s_{\text{stopped}} $$
+
+through time.
+
+Success criterion: show experimentally that machine-specific textual context improves state classification over generic embeddings on your dataset.
+
+Project 3 — Temporal memory: events and states across chunks
+
+This is where the project stops being ordinary video search.
+
+The objective is:
+
+Understand an event whose meaning depends on what happened previously.
+
+Example:
+
+chunk 31
+machine running
+
+chunk 32
+machine running
+
+chunk 33
+worker approaches
+
+chunk 34
+worker opens guard
+
+The important fact is:
+
+machine still RUNNING
+when guard was opened
+
+even though that information does not exist entirely inside chunk 34.
+
+Build two persistent abstractions.
+
+Events
+{
+  "type": "worker.opens_guard",
+  "worker": "worker_2",
+  "machine": "press_1",
+  "time": 184.7,
+  "confidence": 0.84
+}
+States
+{
+  "entity": "press_1",
+  "property": "state",
+  "value": "RUNNING",
+  "start": 160.2,
+  "end": 188.1,
+  "confidence": 0.88
+}
+
+Store these in SQLite.
+
+Then queries become temporal rather than vector-only:
+
+What was press_1.state at t = 184.7?
+
+Answer:
+
+RUNNING
+Add hysteresis
+
+Don't let this:
+
+RUNNING
+STOPPED
+RUNNING
+STOPPED
+
+happen because of noisy frame classification.
+
+Require persistent evidence:
+
+STOPPED similarity wins
+for ≥ 2 seconds
+       ↓
+state transition
+
+This introduces signal-processing ideas:
+
+smoothing
+hysteresis
+confidence thresholds
+state machines
+change-point detection
+Add entity tracking
+
+Even simple IDs:
+
+worker_1
+worker_2
+press_1
+
+are enough.
+
+The temporal engine must distinguish:
+
+worker_1 stops machine
+worker_2 opens guard
+
+from:
+
+worker_1 stops machine
+worker_1 opens guard
+Deliverable
+
+A timeline viewer:
+
+160s ─────────────────────────────── 200s
+
+press_1:
+RUNNING ━━━━━━━━━━━━━━━━━━┓
+                          ┗━━━━ STOPPED
+
+worker_2:
+             approach ━━━
+                        open_guard ● 184.7
+
+And a query API:
+
+state_at("press_1", "machine_state", 184.7)
+
+Success criterion: correctly answer questions involving events that span at least 3–5 different chunks.
+
+Project 4 — Temporal DSL + recursive VLM investigation
+
+This is probably the most interesting lab academically.
+
+Users should no longer write Python.
+
+They write:
+
+Alert if a worker opens the machine guard without stopping the machine first.
+
+A VLM/LLM converts it to DSL:
+
+rule guard_requires_stop {
+
+    bind worker W
+    bind machine M
+
+    trigger:
+        W opens_guard M
+
+    require:
+        M.state == STOPPED
+        continuously_for >= 2s
+        before trigger
+
+    lookback:
+        30s
+}
+Build a parser
+
+Use something like Lark or a strict JSON/Pydantic AST.
+
+Compile:
+
+DSL
+ ↓
+AST
+ ↓
+temporal query plan
+ ↓
+event/state database
+
+Do not execute model-generated Python.
+
+Then introduce uncertainty
+
+Suppose:
+
+machine state = UNKNOWN
+confidence = 0.54
+
+The rule engine should not immediately alert.
+
+Instead initiate an investigation:
+
+trigger event
+    ↓
+missing predicate
+    ↓
+retrieve nearby evidence
+    ↓
+ask VLM focused question
+    ↓
+update facts
+    ↓
+reevaluate rule
+
+Give the investigator restricted tools:
+
+LOOK_BACK(seconds)
+
+LOOK_FORWARD(seconds)
+
+RESAMPLE(start, end, fps)
+
+QUERY_STATE(entity, time)
+
+SEMANTIC_SEARCH(query, start, end)
+
+ASK_VIDEO(question, start, end)
+
+FINISH(...)
+
+Example:
+
+Step 1
+"Did machine P1 stop before 184.7?"
+
+        ↓ uncertain
+
+Step 2
+Retrieve 170–185 sec at 1 FPS.
+
+        ↓ possible transition at 181 sec
+
+Step 3
+Resample 179–185 sec at 4 FPS.
+
+        ↓
+
+Step 4
+VLM:
+"Spindle becomes stationary around 182.9 sec."
+
+        ↓
+
+rule engine calculates
+
+184.7 - 182.9 = 1.8 sec
+
+Rule requires:
+
+$$ 2.0\text{s} $$
+
+Therefore:
+
+VIOLATION
+
+The important architectural lesson:
+
+The VLM discovers facts; your deterministic code decides whether the rule passes.
+
+Deliverable
+
+Natural-language input:
+
+"The press must be stopped for at least 3 seconds
+before anyone reaches through the guard."
+
+Generated DSL, executable temporal rule, evidence retrieval, and final decision.
+
+Success criterion: successfully handle at least three rules that require recursive evidence gathering.
+
+Project 5 — Real-time video safety/error-condition agent
+
+Now integrate everything.
+
+Input:
+
+RTSP camera / prerecorded stream pretending to be live
+
+Pipeline:
+
+                  RTSP
+                   │
+                   ▼
+             rolling buffer
+                   │
+        ┌──────────┴───────────┐
+        ▼                      ▼
+ embeddings/state         event detection
+        │                      │
+        └──────────┬───────────┘
+                   ▼
+             temporal DB
+                   │
+                   ▼
+               DSL engine
+                   │
+             candidate error
+                   │
+                   ▼
+        recursive investigation
+                   │
+                   ▼
+              VLM verification
+                   │
+                   ▼
+                 alert
+
+Use Qwen3-VL-Embedding-2B as the inexpensive semantic layer and a larger Qwen3-VL model only for focused verification.
+
+The 2B embedding model supports video and arbitrary multimodal combinations, up to a 32K context and configurable embedding dimensions up to 2048, which makes it appropriate for experimenting with different index-size/accuracy tradeoffs.
+
+Final rules
+
+Have at least five.
+
+For example:
+
+1. Worker opens guard before machine stopped.
+
+2. Worker reaches into machine while machine is running.
+
+3. Machine restarted before guard was closed.
+
+4. Worker leaves machine running unattended for >30 sec.
+
+5. Required inspection did not occur before packaging.
+
+Some should be simple:
+
+A AND B
+
+Some should be temporal:
+
+A BEFORE B
+
+Some should use absence:
+
+NOT A within 30 sec before B
+
+And one should require recursive investigation.
+
+Alert output
+
+Don't just produce:
+
+ALERT!
+
+Produce an explainable incident:
+
+RULE:
+guard_requires_stop
+
+STATUS:
+VIOLATION
+
+TRIGGER:
+worker_2 opened press_1 guard at 184.7s
+
+REQUIRED:
+press_1 STOPPED continuously for >= 2.0s beforehand
+
+OBSERVED:
+press_1 transitioned to STOPPED at approximately 182.9s
+
+MEASURED INTERVAL:
+1.8s
+
+EVIDENCE:
+179.0–185.0 sec
+
+CONFIDENCE:
+0.87
+
+That makes the system auditable.
+
+Suggested 5-week schedule
+Week	Project	Main learning
+1	Project 1	embeddings, cosine similarity, video chunking
+2	Project 2	multimodal conditioning, hypothesis testing
+3	Project 3	temporal databases, state machines, tracking
+4	Project 4	DSL parsing, agents, recursive retrieval
+5	Project 5	streaming, integration, evaluation, alerts
+
+If limited to 4 weeks, combine Projects 1 and 2 during week 1.
+
+Math progression
+
+The curriculum also gives you a clean mathematical progression:
+
+Project 1
+vectors
+dot products
+cosine similarity
+normalization
+        ↓
+Project 2
+classification
+score margins
+thresholds
+precision/recall
+        ↓
+Project 3
+time series
+hysteresis
+state machines
+interval algebra
+        ↓
+Project 4
+logic
+temporal predicates
+graphs / ASTs
+search
+        ↓
+Project 5
+system-level evaluation
+latency
+throughput
+false alarms
+cost
+
+For the final evaluation, I would grade the system primarily on event recall, false alerts, temporal accuracy, and alert latency, rather than judging whether the generated textual explanations merely sound convincing.
+
+Yes. For your project, synthetic video from a game/3D engine is probably the best way to create the first evaluation corpus.
+
+The major advantage is not photorealism. It is that the simulator knows the exact truth:
+
+machine.state = RUNNING
+guard.state = CLOSED
+worker_3.action = PRESS_STOP
+t = 12.482 s
+
+Your vision system only sees pixels, while the evaluator gets perfect ground truth.
+
+For your M1, I would use Unity first, with Blender as an alternative. Unity runs on Apple Silicon/Metal and its Recorder can capture video or image sequences during simulation. Unreal also runs on M1-class Macs and has strong automated render tooling, but it is heavier. NVIDIA Omniverse Replicator is excellent for synthetic datasets, but current Omniverse Kit requirements target Windows/Linux with NVIDIA RTX GPUs, so it is not a good match for your Mac.
+
+Build the corpus from a simulator state machine
+
+Don't start by animating arbitrary videos.
+
+First define the world model.
+
+For example:
+
+MACHINE
+    STOPPED
+    STARTING
+    RUNNING
+    STOPPING
+
+GUARD
+    OPEN
+    CLOSED
+
+WORKER
+    IDLE
+    APPROACHING
+    PRESSING_STOP
+    OPENING_GUARD
+    REACHING_INSIDE
+    CLEANING
+    LEAVING
+
+Then define legal transitions:
+
+STOPPED → STARTING → RUNNING
+RUNNING → STOPPING → STOPPED
+
+and events:
+
+worker.press_stop(machine)
+worker.open_guard(machine)
+worker.reach_inside(machine)
+worker.clean(machine)
+
+Now the rule you eventually want to evaluate becomes deterministic:
+
+IF
+    worker opens_guard machine
+
+THEN REQUIRE
+    machine.state == STOPPED
+    for at least 3 seconds previously
+
+The engine controls the animation, but the state machine creates the ground truth.
+
+Generate scenarios, not videos
+
+Create a scenario generator.
+
+For example:
+
+scenario: guard_opening
+
+initial:
+  machine: RUNNING
+  guard: CLOSED
+
+timeline:
+  - at: 4.0
+    worker: approach_machine
+
+  - at: 7.0
+    worker: press_stop
+
+  - at: 9.5
+    machine: STOPPED
+
+  - at: 13.0
+    worker: open_guard
+
+This one is valid because:
+
+$$ 13.0-9.5=3.5s $$
+
+If the rule requires three seconds, it passes.
+
+Then automatically mutate it:
+
+- at: 11.0
+  worker: open_guard
+
+Now:
+
+$$ 11.0-9.5=1.5s $$
+
+so this is a violation.
+
+The resulting videos could look almost identical.
+
+That's extremely valuable.
+
+Counterfactual pairs are especially useful
+
+I would make these a major part of your corpus.
+
+Pair A:
+
+machine running
+     ↓
+worker presses STOP
+     ↓
+machine stops
+     ↓
+3.2 seconds
+     ↓
+worker opens guard
+
+PASS
+
+Pair B:
+
+machine running
+     ↓
+worker presses STOP
+     ↓
+machine stops
+     ↓
+1.8 seconds
+     ↓
+worker opens guard
+
+FAIL
+
+Everything else can be identical:
+
+same worker
+same camera
+same lighting
+same machine
+same movements
+same textures
+
+Only the critical timing changes.
+
+That tells you whether your system understands the actual temporal condition, rather than just correlating:
+
+worker + guard + machine → danger.
+
+You can make another pair:
+
+A: worker presses stop → machine actually stops → guard opens
+B: worker presses stop → machine DOES NOT stop → guard opens
+
+That tests whether the model detects machine state, rather than merely observing the stop-button action.
+
+Make deliberately difficult negatives
+
+Random negative clips aren't very useful.
+
+This is an easy negative:
+
+empty factory
+
+for:
+
+"worker opened guard while machine was running"
+
+Of course the model gets it right.
+
+Instead create hard negatives.
+
+Hard negative 1 — correct sequence
+RUNNING
+↓
+STOP
+↓
+OPEN GUARD
+
+No violation.
+
+Hard negative 2 — wrong worker
+worker A stops machine
+
+worker B opens guard
+
+Depending on your rule, this may or may not count.
+
+Hard negative 3 — visually ambiguous stopping
+
+Machine gradually slows:
+
+100 RPM
+70
+40
+20
+5
+0
+
+When is it actually stopped?
+
+Hard negative 4 — unrelated motion
+
+Machine is stopped, but:
+
+fan rotating in background
+
+The vision system shouldn't conclude that the machine itself is running.
+
+Hard negative 5 — stop button pressed but ineffective
+worker presses STOP
+
+machine remains RUNNING
+
+worker opens guard
+
+This is particularly important.
+
+Hard negative 6 — occlusion
+
+Worker blocks the machine indicator.
+
+Hard negative 7 — chunk boundary
+chunk 17:
+worker presses stop
+
+chunk 18:
+machine stops
+
+chunk 19:
+worker opens guard
+
+Your temporal memory system must solve it.
+
+Randomize appearance independently from semantics
+
+Once your scenario logic works, introduce domain randomization.
+
+For every generated episode randomly vary:
+
+camera
+├── angle
+├── distance
+├── focal length
+└── height
+
+environment
+├── lighting
+├── brightness
+├── shadows
+├── walls
+└── floor
+
+worker
+├── clothing
+├── skin/hair appearance
+├── height
+└── movement speed
+
+machine
+├── color
+├── texture
+├── wear
+└── indicator location
+
+video
+├── 15 / 24 / 30 FPS
+├── compression
+├── motion blur
+├── noise
+└── resolution
+
+The semantic scenario remains:
+
+machine stops at 10.3
+guard opens at 12.1
+
+while the visual presentation changes.
+
+This tests whether your model actually learned the concept.
+
+But don't randomize everything in the first corpus
+
+I'd use difficulty tiers.
+
+Level 1
+
+Very clean:
+
+fixed camera
+bright lighting
+one worker
+one machine
+no occlusion
+
+Test your basic pipeline.
+
+Level 2
+different camera positions
+different workers
+different machine colors
+lighting variation
+Level 3
+multiple workers
+partial occlusion
+irrelevant activity
+multiple machines
+Level 4
+poor lighting
+compression
+camera shake
+small objects
+unusual viewpoints
+Level 5
+
+Temporal adversarial cases:
+
+almost-but-not-quite enough delay
+
+action starts just outside chunk
+
+worker reaches toward guard but does not open it
+
+machine looks stopped but moves slightly
+
+stop button pressed without machine stopping
+
+Then you can plot accuracy by difficulty.
+
+Make the simulator emit labels directly
+
+For each rendered video:
+
+episode_004213.mp4
+
+generate:
+
+episode_004213.json
+
+something like:
+
+{
+  "episode_id": "004213",
+
+  "duration": 24.0,
+  "fps": 30,
+
+  "entities": {
+    "worker_01": {
+      "type": "worker"
+    },
+    "press_01": {
+      "type": "machine"
+    }
+  },
+
+  "events": [
+    {
+      "time": 5.2,
+      "type": "worker.press_stop",
+      "subject": "worker_01",
+      "object": "press_01"
+    },
+    {
+      "time": 8.4,
+      "type": "machine.stopped",
+      "subject": "press_01"
+    },
+    {
+      "time": 10.1,
+      "type": "worker.open_guard",
+      "subject": "worker_01",
+      "object": "press_01"
+    }
+  ],
+
+  "states": [
+    {
+      "entity": "press_01",
+      "state": "RUNNING",
+      "start": 0.0,
+      "end": 8.4
+    },
+    {
+      "entity": "press_01",
+      "state": "STOPPED",
+      "start": 8.4,
+      "end": 24.0
+    }
+  ],
+
+  "rule_results": {
+    "stop_3s_before_guard": {
+      "passed": false,
+      "required_delay": 3.0,
+      "actual_delay": 1.7
+    }
+  }
+}
+
+This JSON—not the VLM—is your truth.
+
+Also save frame-level metadata
+
+The engine knows exactly where every object is.
+
+So optionally save:
+
+frame 310
+worker_01 bbox: [324, 193, 442, 681]
+press_01 bbox: [...]
+guard state: CLOSED
+machine state: RUNNING
+
+Or produce:
+
+object-ID masks
+segmentation masks
+depth maps
+optical flow
+skeleton/joint positions
+camera pose
+
+Unity Recorder can also capture image sequences and additional render-pass/AOV data in appropriate pipelines.
+
+You don't necessarily need these for your final system, but they're useful for debugging:
+
+Was the state recognition wrong because the machine wasn't visible?
+
+Your DSL can generate synthetic tests too
+
+This part fits your project particularly well.
+
+Suppose your DSL says:
+
+rule stop_before_open {
+
+    trigger:
+        worker W opens_guard M
+
+    require:
+        M.state == STOPPED
+        continuously_for >= 3s
+        before trigger
+}
+
+A test-case generator can automatically derive:
+
+PASS CASE
+STOPPED for 4 sec → OPEN
+
+BOUNDARY PASS
+STOPPED for 3.01 sec → OPEN
+
+BOUNDARY FAIL
+STOPPED for 2.99 sec → OPEN
+
+CLEAR FAIL
+RUNNING → OPEN
+
+MISSING EVENT
+UNKNOWN state → OPEN
+
+DISTRACTOR
+other machine stops → OPEN this machine
+
+MULTI-WORKER
+worker A stops → worker B opens
+
+STATE REVERSAL
+STOP → START AGAIN → OPEN
+
+Then render each automatically.
+
+That would be a very strong part of the lab:
+
+$$ \boxed{ DSL\ rule \rightarrow automatic\ test\ scenarios \rightarrow synthetic\ video \rightarrow evaluation } $$
+
+Essentially property-based testing, but for video AI.
+
+I'd use Unity on your Mac
+
+For this particular project:
+
+Unity
+
+Best overall choice.
+
+Why:
+
+native Apple Silicon support
+easy C# scripting
+simple state machines
+easy humanoid animation
+physics engine
+lots of inexpensive/free factory assets
+straightforward camera control
+Recorder supports movies and image sequences.
+
+Conceptually:
+
+Machine machine;
+Worker worker;
+
+machine.SetState(MachineState.Running);
+
+await WaitUntil(5.0);
+
+worker.PressStop(machine);
+
+await WaitUntil(8.2);
+
+machine.SetState(MachineState.Stopped);
+
+await WaitUntil(10.0);
+
+worker.OpenGuard(machine);
+
+At every transition:
+
+groundTruth.Log(
+    timestamp,
+    entity,
+    action,
+    state
+);
+
+Rendering and labels are produced from the exact same simulation run.
+
+Blender is another excellent option
+
+If you're much more comfortable in Python, Blender is attractive because nearly everything can be scripted through bpy, including animations and rendering. The current Blender API exposes programmatic animation rendering and keyframe manipulation.
+
+You could make:
+
+scenario = generate_scenario(seed=93821)
+
+build_scene(scenario)
+animate_worker(scenario)
+animate_machine(scenario)
+render_video(scenario)
+write_ground_truth(scenario)
+
+Blender may actually be better for mass automated offline corpus generation.
+
+Unity is better if you want:
+
+interactive simulation
++
+game-like agents
++
+real-time streaming
++
+event systems
+
+For your final streaming project I'd choose Unity.
+
+Unreal would give you better realism
+
+Unreal's current Movie Render Pipeline supports queued, scripted high-quality rendering, and runtime rendering can also be controlled via Blueprints.
+
+It would be good if your goal shifted toward:
+
+How well does the system survive near-photorealistic industrial imagery?
+
+But for a five-week lab, I don't think extra graphical realism is worth the additional engine complexity.
+
+Don't make the evaluation 100% synthetic
+
+This matters.
+
+Synthetic data tests:
+
+$$ \text{Does my algorithm work under controlled conditions?} $$
+
+It does not fully answer:
+
+$$ \text{Will it work on a real camera?} $$
+
+You'll have a simulation-to-real gap involving:
+
+human movement
+materials
+reflections
+lens artifacts
+real motion blur
+clutter
+imperfect lighting
+unusual machine geometry
+
+So I'd build the eval corpus in three layers:
+
+                     evaluation corpus
+
+             ┌────────────┼─────────────┐
+             ▼            ▼             ▼
+
+         synthetic     staged real    unseen real
+           70%            20%            10%
+
+       thousands       tens/hundreds   final holdout
+       of controlled    of recorded
+       variations       scenarios
+
+The percentages aren't sacred, but the idea is.
+
+Never tune against your final real-world holdout.
+
+For the five-project lab, a manageable corpus
+
+You don't need millions of clips.
+
+I'd target something like:
+
+5 rule families
+×
+~100 episodes/rule
+=
+~500 synthetic episodes
+
+with roughly equal:
+
+valid
+violation
+hard-negative
+boundary
+ambiguous
+
+For example:
+
+Condition	Episodes
+clear valid	100
+clear violations	100
+hard negatives	100
+timing boundary cases	100
+occlusion/noisy cases	100
+
+Then perhaps 30–50 manually staged real clips for sim-to-real testing.
+
+The synthetic corpus should be generated from seeds:
+
+seed=48392
+
+so every failure is reproducible.
+
+What I'd evaluate
+
+Don't collapse everything into one "accuracy".
+
+Measure separate stages:
+
+$$ Recall@K $$
+
+for embedding retrieval.
+
+Then:
+
+$$ F1_{\text{predicate}} $$
+
+for things such as:
+
+RUNNING
+STOPPED
+OPEN_GUARD
+REACH_INSIDE
+
+Then temporal error:
+
+$$ E_t = |\hat t-t| $$
+
+for event timestamps.
+
+Then rule accuracy:
+
+$$ F1_{\text{violation}} $$
+
+And for the final alert system:
+
+false alerts / hour
+missed violations
+alert latency
+VLM calls / episode
+
+The particularly interesting experiment would be counterfactual temporal pairs where two videos differ by only 0.5–2 seconds in one state transition. If your final system distinguishes those reliably, you've demonstrated much more than ordinary video classification.
+
+Are there ready made systems like this already? Maybe different domain? I don’t to program full engine. Or can one program this quickly with ready made assets that already have movements and ai wired in and all?
+
+Yes. I would not build a simulation engine for this lab. There are existing systems that already solve most of the hard 3D/animation/interaction problem.
+
+For your particular goal, VirtualHome is unusually close to what you need.
+
+1. Best fit: VirtualHome
+
+VirtualHome already provides:
+
+furnished 3D scenes
+humanoid characters
+character navigation
+inverse-kinematics interactions
+multiple agents
+objects with semantic states
+scripted activities
+video rendering
+environment graphs
+timestamped/action ground truth
+segmentation/depth/optical-flow outputs
+
+Its characters use Unity NavMeshAgent navigation and IK for object interactions. Activities are specified as simple programs rather than low-level animation code.
+
+For example:
+
+<char0> [Walk] <stove> (23)
+<char0> [SwitchOn] <stove> (23)
+<char0> [Walk] <fridge> (41)
+<char0> [Open] <fridge> (41)
+
+VirtualHome itself updates symbolic state such as:
+
+stove:
+    ON
+
+fridge:
+    OPEN
+
+It already defines operations including open, close, switchon, switchoff, grab, putin, wipe, etc., together with their preconditions and state changes.
+
+So rather than writing:
+
+animation controller
+walking
+IK
+door physics
+stove switch
+object interaction
+camera rendering
+
+you write a sequence of symbolic actions.
+
+That is almost exactly the abstraction you were proposing.
+
+It even already has your "DSL → world" half
+
+Your system could become:
+
+              Natural-language scenario
+                        │
+                        ▼
+                       LLM
+                        │
+                        ▼
+                VirtualHome program
+
+    [Walk] stove
+    [SwitchOn] stove
+    [Grab] pan
+    ...
+                        │
+                        ▼
+                    VirtualHome
+                 ┌──────┴──────┐
+                 ▼             ▼
+              VIDEO       ground truth
+                           state graph
+                 │             │
+                 ▼             │
+         your VLM system       │
+                 │             │
+                 ▼             ▼
+          predicted events   truth
+                 │             │
+                 └──────┬──────┘
+                        ▼
+                      EVAL
+
+This is extremely attractive for your five-project lab.
+
+VirtualHome explicitly supports generating either rendered video or a sequence of environment graphs showing how the state evolves during the activity.
+
+2. VirtualHome-AIST may be even better for your evaluation
+
+There's an extended version called VirtualHome-AIST.
+
+It adds:
+
+frame-by-frame JSON
+2D object bounding boxes
+additional cameras/camera modes
+additional actions
+notebooks for batch-generating simulations
+
+That is almost tailor-made for creating an evaluation dataset.
+
+So you could get:
+
+video.mp4
+
+frame_0001:
+    person bbox
+    stove bbox
+    stove ON
+
+frame_0002:
+    ...
+
+frame_0312:
+    person opens fridge
+    stove ON
+
+without asking your VLM to create the ground truth.
+
+3. Your domain doesn't have to be a factory
+
+This is probably the biggest simplification I'd make.
+
+For the lab, test the reasoning architecture, not industrial realism.
+
+Replace:
+
+Worker forgot to stop hydraulic press before opening guard.
+
+with:
+
+Person forgot to turn off stove before leaving the kitchen.
+
+or:
+
+Person opened the refrigerator while still carrying something they should have put down.
+
+or:
+
+Person started cleaning an appliance without switching it off.
+
+Conceptually they're identical:
+
+$$ state(X)=ON $$
+
+followed by
+
+$$ action(Y) $$
+
+when your rule says:
+
+$$ OFF(X)\ BEFORE\ Y $$
+
+Your entire retrieval/temporal/DSL/recursive architecture remains unchanged.
+
+Then in a later project, swap:
+
+stove
+↓
+industrial machine
+
+The research question doesn't change.
+
+4. This gives you excellent counterfactual generation
+
+Generate two programs.
+
+Correct
+Walk stove
+SwitchOff stove
+Walk fridge
+Open fridge
+
+Ground truth:
+
+stove ON
+   ↓
+stove OFF
+   ↓
+fridge OPEN
+
+PASS
+Incorrect
+Walk stove
+Walk fridge
+Open fridge
+
+Ground truth:
+
+stove ON
+   │
+   │
+fridge OPEN
+
+FAIL
+
+Then render both.
+
+Your VLM only receives the videos.
+
+Your evaluator receives the hidden VirtualHome state graph.
+
+That's exactly the experiment you want.
+
+5. Let an LLM mutate the programs automatically
+
+Once you have a valid task:
+
+[Walk] stove
+[SwitchOff] stove
+[Walk] sink
+[Wash] plate
+
+ask an LLM to generate variants:
+
+VALID
+
+[Walk] stove
+[SwitchOff] stove
+[Walk] sink
+[Wash] plate
+OMITTED REQUIRED ACTION
+
+[Walk] stove
+[Walk] sink
+[Wash] plate
+WRONG ORDER
+
+[Walk] sink
+[Wash] plate
+[Walk] stove
+[SwitchOff] stove
+DISTRACTOR
+
+[Walk] television
+[SwitchOff] television
+[Walk] sink
+[Wash] plate
+MULTI-AGENT
+
+<char0> [SwitchOff] television
+<char1> [Wash] plate
+
+Then execute all of them automatically.
+
+You effectively get:
+
+$$ DSL\ rule \rightarrow LLM\ test\ generation \rightarrow VirtualHome \rightarrow video + truth $$
+
+That's substantially less work than building Unity scenes yourself.
+
+6. Second choice: AI2-THOR
+
+AI2-THOR is another strong option.
+
+It already contains interactive household scenes and exposes exact object metadata. Objects can be:
+
+open / closed
+on / off
+dirty / clean
+broken
+filled
+moving
+etc.
+
+For example, ToggleObjectOn / ToggleObjectOff modifies a visible appliance state, and isToggled in the metadata gives you authoritative ground truth.
+
+Python:
+
+event = controller.step(
+    action="ToggleObjectOff",
+    objectId=stove_id
+)
+
+assert event.metadata["objects"][i]["isToggled"] == False
+
+AI2-THOR officially supports macOS and installs through Python.
+
+The disadvantage
+
+It's primarily an embodied-agent simulator.
+
+So you often see:
+
+camera / robot viewpoint
+
+rather than:
+
+third-person human doing action
+
+For your VLM video-recognition work, that's less ideal.
+
+I'd choose:
+
+VirtualHome → human procedural activity
+
+AI2-THOR → object-state reasoning
+
+7. BEHAVIOR-1K is conceptually even more advanced
+
+BEHAVIOR-1K currently contains:
+
+1,000 household activities
+50 interactive scenes
+10,000+ objects
+long-horizon tasks
+
+and much more detailed physical interactions.
+
+This is close to:
+
+"Did the agent perform the correct long sequence of actions?"
+
+which is exactly the reasoning problem you're exploring.
+
+But its current simulation stack is based on OmniGibson / NVIDIA Isaac-style infrastructure, making it a poor choice for your M1-local lab.
+
+I'd remember it for later when you have access to an NVIDIA Linux machine.
+
+8. If you really want a factory, use Unity assets rather than building one
+
+The next-best option would be:
+
+Unity
++
+premade factory asset
++
+premade human
++
+premade animations
++
+NavMesh
++
+small scenario script
+
+You don't actually need to build "AI."
+
+For an evaluation dataset, deterministic scripted actors are preferable.
+
+For example:
+
+Worker
+  │
+  ├── WalkTo(machine)
+  ├── PressButton()
+  ├── Wait()
+  ├── OpenDoor()
+  └── ReachInside()
+
+All locomotion comes from NavMesh.
+
+All visual actions come from animation clips.
+
+You only write the orchestration.
+
+Unity already has synthetic-data infrastructure too
+
+Unity's Perception package provides:
+
+camera capture
+2D/3D boxes
+segmentation
+keypoints
+labeling
+dataset JSON
+domain randomization
+
+specifically for generating synthetic ML training/evaluation datasets.
+
+So:
+
+Unity factory scene
+        │
+        ├── Worker prefab
+        ├── Machine prefab
+        ├── animations
+        │
+        ▼
+scenario script
+        │
+   ┌────┴────┐
+   ▼         ▼
+video     Perception
+          ground truth
+
+You are still not writing a renderer, physics engine, character controller, etc.
+
+9. ML-Agents probably isn't what you want
+
+Unity ML-Agents does provide trained agents and over a dozen sample learning environments.
+
+But for your evaluation corpus, I would not use RL initially.
+
+An RL agent introduces randomness:
+
+same test
+    ↓
+different movement
+    ↓
+possibly different state
+
+Whereas scripted behavior gives:
+
+seed 392
+    ↓
+same scenario
+    ↓
+same violation
+    ↓
+reproducible evaluation
+
+You want deterministic agents first.
+
+Later, adding ML-Agents is interesting for testing whether your video reasoning system survives naturally varying trajectories.
+
+10. Kubric is useful for a different part of the lab
+
+Google's Kubric is a Python framework specifically for generating synthetic video datasets using Blender + PyBullet.
+
+It automatically generates:
+
+RGB
+segmentation
+depth
+optical flow
+object metadata
+randomized scenes
+
+and is Apache-2.0.
+
+It is great for:
+
+object moves
+object collides
+object falls
+object enters region
+
+Not so good for:
+
+worker turns machine off
+worker opens guard
+worker cleans machine
+
+because you would have to provide the humanoid/action infrastructure yourself.
+
+So I'd skip it for this project.
+
+What I would choose
+
+I'd change the proposed lab slightly:
+
+          PROJECTS 1–4
+              │
+              ▼
+         VirtualHome
+              │
+      ready humanoids
+      ready actions
+      ready environments
+      ready state graph
+              │
+              ▼
+      generated videos
+              │
+              ▼
+ Qwen embedding / VLM system
+              │
+              ▼
+         temporal DSL
+              │
+              ▼
+       recursive verifier
+
+Then Project 5 can optionally test transfer to:
+
+VirtualHome household
+         ↓
+staged real videos
+
+or:
+
+VirtualHome household
+         ↓
+simple Unity factory scene
+
+That isolates the interesting research problem from 3D game development.
+
+One important caveat
+
+VirtualHome's official latest packaged release is v2.3.0 from March 2022, although there are more recent forks/development efforts. It provides a macOS executable, but I would treat modern Apple-Silicon compatibility as something to verify early; there have been reported macOS-specific rendering issues in the project's issue tracker.
+
+So my order would be:
+
+1. VirtualHome / VirtualHome-AIST — strongest fit
+
+2. AI2-THOR — easiest object-state fallback
+
+3. Unity + premade factory + premade character/animations — if industrial visuals matter
+
+4. BEHAVIOR/OmniGibson — later on NVIDIA hardware
+
+The interesting discovery here is that VirtualHome's existing activity-program language can almost serve as the inverse of your planned VLM-generated DSL: one DSL describes what the actor should do, while yours describes what temporal conditions should be recognized. That gives you a clean automatic way to generate both positive and negative evaluation videos.
+
+Newer versions of virtual home, or further similar ones?
+
+There are newer systems, but they split into two camps: Mac-friendly simulators you can actually use locally, and much newer/high-fidelity platforms that assume NVIDIA/RTX hardware.
+
+One correction from earlier: VirtualHome 2.3.0 is still the latest official VirtualHome release, from March 28, 2022. VirtualHome-AIST is an extension of VirtualHome 2.2, not a newer generation of the core simulator.
+
+For your M1 lab, I would look hardest at these:
+
+System	Human agents	Object interaction/state	Ready movements	Ground truth	M1 practicality	Fit for you
+Habitat 3.0	✅ strong	✅	✅ humanoid behavior/motion	✅	Good	⭐⭐⭐⭐⭐
+TDW / Replicants	✅	✅ physics, less semantic	✅	✅	Good	⭐⭐⭐⭐
+VirtualHome 2.3	✅	✅ very convenient	✅	✅ excellent	Probably	⭐⭐⭐⭐
+AI2-THOR/ProcTHOR	❌ mostly agent camera	✅ excellent	robot/agent	✅ excellent	Good	⭐⭐⭐
+BEHAVIOR-1K	robot/manipulator	✅ extremely rich	✅ demonstrations	✅ excellent	❌ simulator	⭐⭐⭐⭐ dataset only
+InternUtopia	✅ NPCs + robots	✅	✅	✅	❌ NVIDIA	future
+SimWorld	✅ agents	✅	✅ LLM/VLM	✅	❌ Mac	future
+Habitat 3.0 is probably the newer thing you're looking for
+
+Habitat 3.0 was explicitly designed as a human + avatar + robot co-habitation simulator.
+
+It gives you humanoid avatars with different appearances, programmatic humanoid control, navigation, object interaction, motion policies, mocap support, and even the ability to use text-to-motion generated movements.
+
+Conceptually:
+
+Python
+   │
+   ▼
+Habitat
+   │
+   ├── apartment
+   ├── objects
+   ├── humanoid
+   ├── robot
+   │
+   ▼
+behavior/motion policy
+   │
+   ▼
+humanoid walks / reaches / interacts
+   │
+   ├── RGB video
+   ├── depth
+   ├── semantic information
+   └── simulator state
+
+This is much more modern than VirtualHome's animation system.
+
+And importantly, Habitat-Sim supports macOS, and its recent build/release work explicitly includes M1 Mac CI changes. The headless EGL mode doesn't work on macOS, but normal displayed execution does.
+
+So I would seriously test this first.
+
+The downside
+
+VirtualHome has an exceptionally convenient abstraction:
+
+[Walk] fridge
+[Open] fridge
+[Grab] milk
+
+Habitat is more of a robotics/embodied-AI framework.
+
+You may need slightly more Python orchestration:
+
+human.walk_to(...)
+human.pick(...)
+human.place(...)
+
+rather than writing a one-line activity program.
+
+But you're still nowhere close to programming an engine.
+
+TDW is another surprisingly good Mac choice
+
+ThreeDWorld / TDW deserves more attention for your application.
+
+It runs on:
+
+macOS
+Windows
+Linux
+
+and has humanoid agents called Replicants.
+
+Replicants already support:
+
+turn
+move
+move_to
+reach
+grasp
+drop
+look_at
+head movement
+play animations
+
+with built-in IK and prerecorded animation support.
+
+So you can write:
+
+worker.move_to(machine)
+
+worker.reach_for(stop_button)
+
+worker.move_to(guard)
+
+worker.grasp(handle)
+
+You can have multiple Replicants acting concurrently.
+
+And attach cameras:
+
+             overhead camera
+                    │
+                    ▼
+
+ worker ──────► machine
+
+          camera 2
+
+with automatic frame capture.
+
+TDW also contains a substantial library of scenes/assets and supports procedural scene generation.
+
+TDW's weakness
+
+Its action model is somewhat lower level than VirtualHome.
+
+VirtualHome knows semantically:
+
+SWITCHON
+SWITCHOFF
+OPEN
+CLOSE
+WIPE
+DRINK
+
+TDW's Replicant API is more:
+
+move
+reach
+grasp
+drop
+animate
+
+So you might implement:
+
+machine.running = False
+
+yourself when the Replicant reaches the stop button.
+
+For an evaluation corpus, that's actually not a huge burden.
+
+TDW is still maintained, but in LTS
+
+TDW's repository says it is now in long-term support, receiving minor fixes rather than major new development. Its last major listed release was v1.13.0 in May 2024.
+
+So:
+
+VirtualHome
+    old + convenient semantic actions
+
+TDW
+    newer + better physics + humanoids
+    but less semantic task structure
+
+Habitat 3
+    newer + sophisticated humanoids
+    + modern embodied-AI ecosystem
+
+For you, I'd investigate Habitat first, TDW second.
+
+BEHAVIOR-1K is the current heavyweight
+
+If we ignore the Mac requirement, BEHAVIOR-1K / OmniGibson is arguably the most complete modern descendant of this general idea.
+
+Current BEHAVIOR-1K has:
+
+1,000 full household activities
+50 interactive environments
+10,000+ objects
+rigid objects
+articulated objects
+liquids
+deformable objects
+object states
+predicate-based task definitions
+long-horizon action sequences.
+
+Current stable evaluation is v3.9.2, including the active 2026 BEHAVIOR Challenge.
+
+It has exactly the sort of symbolic semantics you're interested in:
+
+object is_open
+object is_clean
+object is_wet
+object is_hot
+object is_inside(...)
+...
+
+and tasks described logically.
+
+Think:
+
+VirtualHome
+programs + graph state
+       ↓
+       ↓ evolution
+       ↓
+BEHAVIOR
+predicate-based tasks + much richer physics
+But not on your M1
+
+The simulator currently requires:
+
+Ubuntu / Windows
+NVIDIA RTX 2070+
+32 GB RAM+
+8 GB VRAM+
+
+because OmniGibson is built on NVIDIA Omniverse/Isaac Sim.
+
+So don't try running it locally on the M1.
+
+But there's a useful shortcut with BEHAVIOR
+
+You may not need to run it.
+
+The 2026 BEHAVIOR dataset already contains demonstrations and video.
+
+The challenge release provides 20,000 demonstrations, videos, state data, task metadata, and per-episode language annotations.
+
+So on your Mac you could simply download:
+
+BEHAVIOR videos
+       │
+       ▼
+your embedding model
+       │
+       ▼
+your DSL/event recognition
+       │
+       ▼
+compare against provided state/action truth
+
+That eliminates simulation entirely for part of your evaluation.
+
+This might actually be the fastest way to get Projects 1–3 running.
+
+InternUtopia is a much newer VirtualHome-like direction
+
+This one is interesting conceptually.
+
+InternUtopia, formerly GRUtopia, had its 2.2.0 release in July 2025. It includes:
+
+100k interactive annotated scenes
+89 scene categories
+robots
+social navigation
+physically interactive assets
+LLM-driven NPCs
+task generation
+task assignment.
+
+The NPC component, GRResidents, is particularly close to the system you were imagining:
+
+LLM
+ │
+ ▼
+NPC intention
+ │
+ ▼
+behavior
+ │
+ ▼
+simulation
+
+So you could eventually imagine:
+
+"Worker 3 should clean machine 7 but occasionally makes procedure mistakes."
+
+and have an LLM-driven resident execute the behavior.
+
+However, it requires Ubuntu + Isaac Sim + NVIDIA RTX.
+
+Not an M1 option.
+
+SimWorld is even newer
+
+SimWorld is a 2025/2026 project built on Unreal Engine 5 for physical and social agents.
+
+It supports:
+
+realistic worlds
+LLM/VLM agents
+language-based procedural generation
+social interactions
+custom agents
+custom environments
+physical reasoning scenarios.
+
+It sounds almost exactly like:
+
+"Generate a factory scene.
+Put two workers in it.
+Worker A correctly performs procedure.
+Worker B forgets step 4."
+
+The project is actively moving in that direction.
+
+But its runtime currently requires Windows or Linux with a dedicated ≥6 GB VRAM GPU. macOS isn't supported.
+
+So keep it on the radar, but not for this lab.
+
+AI2-THOR / ProcTHOR remains useful
+
+It's not actually newer—the latest AI2-THOR release is 5.0.0 from December 2022—but the object-state model is excellent.
+
+And ProcTHOR gives you procedurally generated interactive homes compatible with AI2-THOR.
+
+For example:
+
+stove.isToggled = True
+door.isOpen = False
+cup.isDirty = True
+
+The simulator gives you perfect metadata.
+
+The missing component is realistic humans.
+
+So I'd use it if you care more about:
+
+temporal object state
++
+rule logic
+
+than visually recognizing human actions.
+
+My revised recommendation for your project
+
+I would test three options for about an hour each, in this order:
+
+1. Habitat 3.0
+
+Best modern Mac-native direction.
+
+Use:
+
+Habitat 3
++
+humanoid avatar
++
+scripted action sequence
++
+third-person camera
+
+If installation and avatar control work cleanly on your M1, use this for the lab.
+
+2. TDW Replicant
+
+If Habitat is too complex:
+
+TDW
++
+Replicant
++
+premade scenes/assets
++
+simple Python action scripts
+
+This is likely the easiest current alternative to VirtualHome that still gives you visible humanoid actors.
+
+3. VirtualHome 2.3
+
+If the goal is maximum productivity:
+
+[Walk]
+[Grab]
+[SwitchOff]
+[Open]
+
+is hard to beat.
+
+Its age matters much less for an evaluation-video generator than it would for a modern robotics benchmark.
+
+There may be an even easier lab design
+
+Don't make one simulator do everything.
+
+Use:
+
+Projects 1–2
+BEHAVIOR prerecorded videos
+        ↓
+embedding + state recognition
+
+
+Project 3
+VirtualHome
+        ↓
+controlled temporal counterfactuals
+
+
+Project 4
+Habitat / TDW
+        ↓
+harder unseen synthetic domain
+
+
+Project 5
+staged iPhone videos
+        ↓
+real-world transfer
+
+That gives you three visual domains without building any game engine.
+
+And it produces a much stronger evaluation result: if the same DSL/rule engine works across BEHAVIOR, VirtualHome/TDW, and real camera video, you're evaluating the video reasoning architecture rather than accidentally evaluating one simulator's visual quirks.
+
+1Password menu is available. Press down arrow to select.

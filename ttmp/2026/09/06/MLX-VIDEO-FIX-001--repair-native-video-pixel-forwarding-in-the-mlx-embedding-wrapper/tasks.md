@@ -36,14 +36,14 @@
 
 ## P3 Real-model validation
 
-- [ ] Run identical-token/grid pixel interventions and end-to-end processor tests.
-- [ ] Test single-frame, odd-frame, and asymmetric reversed-frame inputs.
-- [ ] Build a controlled unquantized conversion from the official checkpoint.
-- [ ] Compare preprocessing, visual features, positions, pooling, and vectors.
-- [ ] Freeze precision-specific parity tolerances with an explicit rationale.
-- [ ] Evaluate the 4-bit model separately for numerical and ranking differences.
-- [ ] Measure materialized cold/warm latency, MLX peak memory, and RSS.
-- [ ] Publish JSON evidence and fixture/contact-sheet or comparison screenshots.
+- [x] Run identical-token/grid pixel interventions and end-to-end processor tests.
+- [x] Test single-frame, odd-frame, and asymmetric reversed-frame inputs.
+- [x] Build a controlled unquantized conversion from the official checkpoint.
+- [x] Compare preprocessing, visual features, positions, pooling, and vectors.
+- [x] Freeze precision-specific parity tolerances with an explicit rationale.
+- [x] Evaluate the 4-bit model separately for numerical and ranking differences.
+- [x] Measure materialized cold/warm latency, MLX peak memory, and RSS.
+- [x] Publish JSON evidence and fixture/contact-sheet or comparison screenshots.
 
 ## P4 Workbench integration
 

@@ -508,3 +508,68 @@ Updated the stale ticket introduction and retained the original guide as histori
 
 - Existing fork commits: `05432ac`, `d26804d`, `6452614`.
 - No pooled-image environment or corpus files were modified by this audit.
+
+P3 immediate failure record: script 09 official processor rejected a one-frame input with `ValueError: t:1 must be larger than temporal_factor:2`. Added an explicit repeat-last-frame policy before both processors, retaining duplicate final frame indices in official timestamp metadata. Odd/single frame policy is now part of the audited contract, rather than relying on implicit processor behavior. Plan and P3 start printing succeeded at 20:07:29Z and 20:08:49Z. Audit baseline committed as `ade0f2b`; initial sandbox Git write failed with `Unable to create .../.git/index.lock: Operation not permitted`, then authorized escalation succeeded.
+
+
+## Step 8: Complete controlled reference parity and separate preprocessing drift
+
+Added an enumerated, process-isolated audit that compares official and MLX processors, identical-input runtime outputs, all visual/deepstack features, positions, pooled states, and normalized vectors. Token-only and pixel-only interventions explain the preprocessing gap. Eight FP32 correctness gates passed; four-bit variants show substantial vector and ranking drift and are not accepted for native integration.
+
+### Prompt Context
+
+**User prompt (verbatim):** (see Step 7)
+
+**Assistant interpretation:** Establish measured correctness and explicit limits before workbench rollout.
+
+**Inferred user intent:** Prevent a superficially working native mode from silently changing semantics or reusing incompatible features.
+
+### What I did
+
+- Added scripts 09/10, explicit audit policy, provenance hashes, fresh timestamped reports, and a reviewed original/reversed contact sheet.
+- Ran independent HF/MLX preparation and serial Torch FP32, MLX FP32, BF16, controlled four-bit, and community four-bit model processes.
+- Wrote `reference/02-parity-findings.md` with reproduction, bounds, timings, memory, causal distinctions, and limits.
+
+### Why
+
+- Same-input agreement cannot excuse preprocessing changes; community weights cannot isolate pure quantization effects.
+
+### What worked
+
+- Eight FP32 cases passed: text, image, video, black, reverse, video1, video3, and mixed.
+- Exact positions; maximum embedding error 2.83123e-6; maximum intermediate error 8.60214e-4.
+- Token-only drift dominates pixel-only drift. Warm FP32 video median is 0.2014 seconds.
+
+### What didn't work
+
+- Official single-frame processor rejection required explicit repeat-last padding (recorded above).
+- Neither four-bit variant supports numerical/ranking interchangeability with FP32. They remain measurement-only.
+
+### What I learned
+
+- The official processor retains outer delimiters; MLX removes them. Odd-frame timestamps also differ.
+- Controlled quantization of all eligible layers is a different conversion policy from an opaque community artifact.
+
+### What was tricky to build
+
+- Model registration mutates processor lookup; separate processes and explicit processor classes prevent contamination.
+- Lazy GPU evaluation and diagnostic feature calls must be outside each other's timing boundaries.
+
+### What warrants a second pair of eyes
+
+- The pinned official processor's boundary-token contract is version-specific, not a claim about every Transformers version.
+- Eight fixtures and one text query establish implementation parity, not retrieval or temporal-classification quality.
+
+### What should be done in the future
+
+- P4 integrates only official FP32 with pinned preprocessing, isolated dependency, distinct cache identity, and a fresh-process cold adapter benchmark.
+
+### Code review instructions
+
+- Read the parity findings, policy, and `audit-gates.json`; rerun scripts 09/10 in documented order.
+- Inspect original/reversed contact sheet and token-only/pixel-only records in `audit-comparison.json`.
+
+### Technical details
+
+- Runtime versions: MLX/Metal 0.32.2; Transformers 5.16.1; Torch 2.14.0; Torchvision 0.29.0; NumPy 2.4.6; Pillow 12.3.0.
+- Original/black FP32 cosine 0.429234; original/reverse 0.969836 under official preprocessing.

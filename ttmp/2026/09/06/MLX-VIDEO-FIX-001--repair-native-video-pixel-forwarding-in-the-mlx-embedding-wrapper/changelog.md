@@ -14,3 +14,7 @@ Created dedicated native-video wrapper repair ticket, source snapshots, intern g
 
 Completed 12-page PDF layout review, archived page previews, and uploaded intern repair guide to /ai/2026/09/06/MLX-VIDEO-FIX-001 with a positive receipt. Repair implementation remains open.
 
+
+## 2026-09-06 — P3 acceptance
+
+Fresh P0–P2 regression run passed 15 tests. Eight controlled FP32 parity gates passed with explicit processor contract and tolerances. Recorded independent preprocessing interventions, quantization/ranking limits, timings, memory and source hashes. P4 will use official FP32 only; quantized native rollout is not accepted.

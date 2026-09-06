@@ -1,0 +1,434 @@
+{
+  "created_at": "2026-09-06T20:13:04.991673+00:00",
+  "commit": "6452614f6de04694d1e34fd13abaca11f6ffb994",
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx-metal": "0.32.2",
+    "mlx-vlm": "0.6.17",
+    "transformers": "5.16.1",
+    "torch": "2.14.0",
+    "torchvision": "0.29.0",
+    "numpy": "2.4.6",
+    "pillow": "12.3.0"
+  },
+  "mode": "mlx",
+  "load_materialized_seconds": 4.197330542141572,
+  "cases": [
+    {
+      "case": "text",
+      "family": "hf",
+      "first_seconds": 0.09245695895515382,
+      "warm_seconds": [
+        0.036714332876726985,
+        0.036940916907042265,
+        0.03636908298358321
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4674256896,
+      "mlx_peak_bytes": 8597897656
+    },
+    {
+      "case": "image",
+      "family": "hf",
+      "first_seconds": 0.1652728330809623,
+      "warm_seconds": [
+        0.12079750001430511,
+        0.12048512510955334,
+        0.12054779101163149
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4692410368,
+      "mlx_peak_bytes": 9106135187
+    },
+    {
+      "case": "video",
+      "family": "hf",
+      "first_seconds": 0.35552724986337125,
+      "warm_seconds": [
+        0.20140020782127976,
+        0.20174837484955788,
+        0.20058025000616908
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4722442240,
+      "mlx_peak_bytes": 9543407184
+    },
+    {
+      "case": "black",
+      "family": "hf",
+      "first_seconds": 0.20126983406953514,
+      "warm_seconds": [
+        0.2103489579167217,
+        0.20152020803652704,
+        0.2022439579013735
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4749344768,
+      "mlx_peak_bytes": 9543407186
+    },
+    {
+      "case": "reverse",
+      "family": "hf",
+      "first_seconds": 0.2019497500732541,
+      "warm_seconds": [
+        0.20629654196090996,
+        0.2013333342038095,
+        0.20160004193894565
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4765483008,
+      "mlx_peak_bytes": 9543407186
+    },
+    {
+      "case": "video1",
+      "family": "hf",
+      "first_seconds": 0.12209187494590878,
+      "warm_seconds": [
+        0.12067166715860367,
+        0.12054054206237197,
+        0.12190795899368823
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4773150720,
+      "mlx_peak_bytes": 9543407186
+    },
+    {
+      "case": "video3",
+      "family": "hf",
+      "first_seconds": 0.20215829205699265,
+      "warm_seconds": [
+        0.20176554191857576,
+        0.20201654196716845,
+        0.20261145802214742
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4794630144,
+      "mlx_peak_bytes": 9543407186
+    },
+    {
+      "case": "mixed",
+      "family": "hf",
+      "first_seconds": 0.30552062508650124,
+      "warm_seconds": [
+        0.28779087495058775,
+        0.29277562513016164,
+        0.29505362501367927
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4821565440,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "text",
+      "family": "mlx",
+      "first_seconds": 0.037598667200654745,
+      "warm_seconds": [
+        0.036330042174085975,
+        0.03652545786462724,
+        0.036605125060305
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4821811200,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "image",
+      "family": "mlx",
+      "first_seconds": 0.12045633303932846,
+      "warm_seconds": [
+        0.12017937493510544,
+        0.12025254196487367,
+        0.12155333417467773
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4826710016,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "video",
+      "family": "mlx",
+      "first_seconds": 0.2973652088548988,
+      "warm_seconds": [
+        0.20427966583520174,
+        0.20071616698987782,
+        0.20042866608127952
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4841734144,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "black",
+      "family": "mlx",
+      "first_seconds": 0.21532175014726818,
+      "warm_seconds": [
+        0.20074991695582867,
+        0.2001280828844756,
+        0.20053199981339276
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4857200640,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "reverse",
+      "family": "mlx",
+      "first_seconds": 0.2084034162107855,
+      "warm_seconds": [
+        0.2006833751220256,
+        0.201011624885723,
+        0.2007591670844704
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4873404416,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "video1",
+      "family": "mlx",
+      "first_seconds": 0.12139662494882941,
+      "warm_seconds": [
+        0.12063429201953113,
+        0.1215043340343982,
+        0.120364333037287
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4879433728,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "video3",
+      "family": "mlx",
+      "first_seconds": 0.2005725831259042,
+      "warm_seconds": [
+        0.2007100828923285,
+        0.2148670838214457,
+        0.21141095808707178
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4894326784,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "mixed",
+      "family": "mlx",
+      "first_seconds": 0.28692887513898313,
+      "warm_seconds": [
+        0.28804162493906915,
+        0.29456916614435613,
+        0.2875556249637157
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4908859392,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "text",
+      "family": "pixels",
+      "first_seconds": 0.03773874999023974,
+      "warm_seconds": [
+        0.03686470817774534,
+        0.03692787513136864,
+        0.03643508302047849
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4908974080,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "image",
+      "family": "pixels",
+      "first_seconds": 0.12085524993017316,
+      "warm_seconds": [
+        0.1213704168330878,
+        0.12015729187987745,
+        0.1199162919074297
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4910628864,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "video",
+      "family": "pixels",
+      "first_seconds": 0.20152762508951128,
+      "warm_seconds": [
+        0.20517262513749301,
+        0.20364066609181464,
+        0.20526150008663535
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4919132160,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "black",
+      "family": "pixels",
+      "first_seconds": 0.20466787507757545,
+      "warm_seconds": [
+        0.20253879204392433,
+        0.2016723749693483,
+        0.2032266661990434
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4931239936,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "reverse",
+      "family": "pixels",
+      "first_seconds": 0.20188883389346302,
+      "warm_seconds": [
+        0.20156808383762836,
+        0.202876792056486,
+        0.2097395418677479
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4943233024,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "video1",
+      "family": "pixels",
+      "first_seconds": 0.12331883306615055,
+      "warm_seconds": [
+        0.12105258298106492,
+        0.1207931658718735,
+        0.12196774990297854
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4945379328,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "video3",
+      "family": "pixels",
+      "first_seconds": 0.2014852080028504,
+      "warm_seconds": [
+        0.20048724999651313,
+        0.20926375011913478,
+        0.20086099999025464
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4956766208,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "mixed",
+      "family": "pixels",
+      "first_seconds": 0.29103675018996,
+      "warm_seconds": [
+        0.2917685001157224,
+        0.30322416592389345,
+        0.29336362495087087
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4968087552,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "text",
+      "family": "tokens",
+      "first_seconds": 0.03777454188093543,
+      "warm_seconds": [
+        0.03679945878684521,
+        0.03672087495215237,
+        0.03662504209205508
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4968284160,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "image",
+      "family": "tokens",
+      "first_seconds": 0.12095508398488164,
+      "warm_seconds": [
+        0.12825737497769296,
+        0.12387754186056554,
+        0.12404104205779731
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4969725952,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "video",
+      "family": "tokens",
+      "first_seconds": 0.20393837499432266,
+      "warm_seconds": [
+        0.20503349998034537,
+        0.20450629200786352,
+        0.21753508388064802
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4977688576,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "black",
+      "family": "tokens",
+      "first_seconds": 0.203232416883111,
+      "warm_seconds": [
+        0.20468454202637076,
+        0.20371020794846117,
+        0.2131644580513239
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4989550592,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "reverse",
+      "family": "tokens",
+      "first_seconds": 0.20306470803916454,
+      "warm_seconds": [
+        0.20396670792251825,
+        0.20421466697007418,
+        0.20739608397707343
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 5000069120,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "video1",
+      "family": "tokens",
+      "first_seconds": 0.1233275830745697,
+      "warm_seconds": [
+        0.12196850008331239,
+        0.12279225001111627,
+        0.12221199995838106
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 5000855552,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "video3",
+      "family": "tokens",
+      "first_seconds": 0.2046789589803666,
+      "warm_seconds": [
+        0.2125333328731358,
+        0.20445550000295043,
+        0.20330191613174975
+      ],
+      "norm": 0.9999998807907104,
+      "rss_peak_bytes": 5010554880,
+      "mlx_peak_bytes": 9545377900
+    },
+    {
+      "case": "mixed",
+      "family": "tokens",
+      "first_seconds": 0.2902910828124732,
+      "warm_seconds": [
+        0.29809991689398885,
+        0.29077358404174447,
+        0.28969108406454325
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 5019467776,
+      "mlx_peak_bytes": 9545377900
+    }
+  ]
+}

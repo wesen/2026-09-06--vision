@@ -1,0 +1,122 @@
+{
+  "created_at": "2026-09-06T20:13:43.547343+00:00",
+  "commit": "6452614f6de04694d1e34fd13abaca11f6ffb994",
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx-metal": "0.32.2",
+    "mlx-vlm": "0.6.17",
+    "transformers": "5.16.1",
+    "torch": "2.14.0",
+    "torchvision": "0.29.0",
+    "numpy": "2.4.6",
+    "pillow": "12.3.0"
+  },
+  "mode": "quant",
+  "load_materialized_seconds": 2.894306499976665,
+  "cases": [
+    {
+      "case": "text",
+      "family": "hf",
+      "first_seconds": 0.07656854088418186,
+      "warm_seconds": [
+        0.02500654198229313,
+        0.024962333030998707,
+        0.024938583141192794
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4670537728,
+      "mlx_peak_bytes": 1657139640
+    },
+    {
+      "case": "image",
+      "family": "hf",
+      "first_seconds": 0.15221866685897112,
+      "warm_seconds": [
+        0.12583858286961913,
+        0.12505620787851512,
+        0.1247173750307411
+      ],
+      "norm": 1.0000001192092896,
+      "rss_peak_bytes": 4688396288,
+      "mlx_peak_bytes": 1854825863
+    },
+    {
+      "case": "video",
+      "family": "hf",
+      "first_seconds": 0.217173958895728,
+      "warm_seconds": [
+        0.21338541596196592,
+        0.21460766601376235,
+        0.2156111248768866
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4715823104,
+      "mlx_peak_bytes": 2281096728
+    },
+    {
+      "case": "black",
+      "family": "hf",
+      "first_seconds": 0.2143989158794284,
+      "warm_seconds": [
+        0.2150681670755148,
+        0.21761804190464318,
+        0.21870245807804167
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4743610368,
+      "mlx_peak_bytes": 2281097106
+    },
+    {
+      "case": "reverse",
+      "family": "hf",
+      "first_seconds": 0.21935854107141495,
+      "warm_seconds": [
+        0.21486787497997284,
+        0.21543516707606614,
+        0.21584712504409254
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4766711808,
+      "mlx_peak_bytes": 2281097106
+    },
+    {
+      "case": "video1",
+      "family": "hf",
+      "first_seconds": 0.12880829209461808,
+      "warm_seconds": [
+        0.1317147919908166,
+        0.12661079200915992,
+        0.12539058295078576
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4769906688,
+      "mlx_peak_bytes": 2281097106
+    },
+    {
+      "case": "video3",
+      "family": "hf",
+      "first_seconds": 0.21442562504671514,
+      "warm_seconds": [
+        0.2183671670500189,
+        0.21367458393797278,
+        0.2159949168562889
+      ],
+      "norm": 0.9999999403953552,
+      "rss_peak_bytes": 4786094080,
+      "mlx_peak_bytes": 2281097106
+    },
+    {
+      "case": "mixed",
+      "family": "hf",
+      "first_seconds": 0.3043746668845415,
+      "warm_seconds": [
+        0.3160777920857072,
+        0.3046780410222709,
+        0.3043377499561757
+      ],
+      "norm": 1.0,
+      "rss_peak_bytes": 4809785344,
+      "mlx_peak_bytes": 2397339480
+    }
+  ]
+}

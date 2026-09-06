@@ -29,5 +29,9 @@
 
 - [ ] Implement append-only facts, supersession/retraction, and SQLite migration.
 - [ ] Implement as-of state queries with conflict, coverage, and expiry rules.
-- [ ] Test late facts, duplicate ingestion, restart, and no future leakage.
-- [ ] Publish separate offline/causal metrics and rule-engine handoff.
+- [x] Test late facts, duplicate ingestion, restart, and no future leakage.
+- [x] Publish separate offline/causal metrics and rule-engine handoff.
+
+### Memory scope checkpoint
+
+The practical append-only observation path and exact-sample as-of queries are implemented in `3bd21e5`; actual producer replay and rule handoff are complete. The first two compound T4 tasks remain unchecked because supersession/retraction and expiry/reconciliation were not implemented. The user questioned their necessity and requested less speculative engineering; formal scope deferral remains distinct from implementation completion. See `reference/04-observation-memory-and-practical-rule-handoff.md` and diary Step 9.

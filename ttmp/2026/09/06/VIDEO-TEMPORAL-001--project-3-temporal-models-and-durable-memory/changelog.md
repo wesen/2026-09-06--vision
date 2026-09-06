@@ -32,3 +32,7 @@ Step 7: Complete T2 measured classical comparison, capability/evidence clocks, n
 ## 2026-09-06
 
 Step 8: Complete T3 causal TCN training, seed comparison, trained-weight streaming/causality checks and reviewed evidence (commit fd405d3).
+
+## 2026-09-06
+
+Step 9: Practical observation store and actual replay/handoff complete; broader revision/expiry scope remains open; smoke checks moved to feature boundaries (commit 3bd21e5).

@@ -484,3 +484,60 @@ Read `temporal/tcn.py`, `train.py`, and `test_temporal_tcn.py`, then the measure
 
 ### Technical details
 Selected architecture: input 2048, ten classes, 16 channels, one dilation-one residual block per stage, two stages, 35412 trainable parameters. Parameter/normalization buffer storage is 158032 bytes; batch-one retained raw history is 32772 bytes excluding temporary activations. Process peak RSS on macOS was 401342464 bytes. Adam learning rate 0.003, dropout 0.1, smoothness loss zero, inverse training-frequency weights normalized to mean one. Checkpoints and hashes live under `output/temporal-v1/tcn-v1` and tracked result metadata respectively.
+
+## Step 9: Replace speculative fact machinery with actual observation replay
+
+Implemented the practical memory path: append immutable point observations, preserve source/model identities and clocks, and query only samples durably available at a requested as-of time. Connected the existing localization production handoff and independent/offline-smoothed action outputs to SQLite, then exercised one completed-feature replay and one focused smoke check.
+
+Before the user's scope question, an uncommitted prototype implemented revisions, retractions, uncertainty intervals, and expiry. Replaced it with the smaller observation store rather than retaining an unused parallel subsystem. The original compound revision/expiry tasks remain open; this step is not a claim that the full original T4 design is complete.
+
+### Prompt Context
+**User prompt (verbatim):** "do smoke testing at the end of feature implementation we don't need to test everything all the time. What is expiry and revisions and conflicts and explicit as-of. how much of this is necessary? how much is trying to engineer for the future?"
+
+**Assistant interpretation:** Reduce speculative memory engineering, explain its present necessity, and test at completed feature boundaries rather than after every small edit.
+
+**Inferred user intent:** Deliver a useful experimental system without accumulating unneeded infrastructure and repetitive checks.
+
+**Commit (code):** `3bd21e5` — Add practical observation memory and actual producer replay.
+
+### What I did
+- Explained the clock/coverage requirements and distinguished them from future correction/reconciliation workflows.
+- Asked whether to narrow the ticket formally; no explicit option response had arrived when this checkpoint was written. Continued the concrete observation path and left broader tasks visibly open.
+- Replaced the uncommitted general Fact prototype with `Observation`, `Store.append`, and exact-sample `Store.state_at`.
+- Added one initial SQLite schema, append-only triggers, transactional inserts, idempotent retries, producer-stream isolation, and monotone replay commitments.
+- Added the replay CLI and adapters for 864 production state observations plus 792 linear and 792 smoothed action observations.
+- Ran the completed feature once: 2448 inserted observations, zero retry inserts, 4896 before/at-commit queries, identical results after database restart, and unknown between sparse samples.
+- Ran one focused store smoke check at that feature boundary; did not rerun the full temporal or project suites.
+- Saved compact actual examples and the reviewed replay-clock figure, wrote the practical rule handoff report, and checked completed replay/handoff tasks 16 and 17.
+
+### Why
+The current consumer needs provenance and replay visibility. It does not yet need a correction graph or a last-known-state expiry policy. Exact sampled-time queries preserve evidence limits without assuming continuous state. Alternative model streams remain separate so disagreements between experiments cannot masquerade as corroborating evidence.
+
+### What worked
+- Actual replay imported all 2448 source predictions into eight separate streams; oracle-assisted localization predictions were excluded.
+- Every observation was absent before its simulated durable commitment and present at commitment; all query results survived reopen.
+- One microsecond after a sparse state sample returned unknown, avoiding a carry-forward/expiry policy entirely.
+- Exact retries inserted zero rows; changed-content duplicate IDs and mixed producers are rejected.
+- The focused smoke test passed in 0.01 seconds.
+- The reviewed figure shows a 0.5-second action observation available from the independent head at 0.5 seconds versus 4.1 seconds for the offline smoother, with explicitly simulated 250 ms commitment delay.
+
+### What didn't work
+An exploratory source lookup used condition `F__linear` and raised `StopIteration`; the actual condition is `F__linear_head`. Corrected the lookup before building the adapter. No completed-feature replay or smoke check failed. The earlier broader prototype and its tests were discarded before any commit, following the user's concern about future-oriented complexity. Printing remains paused under the previously recorded automatic approval rejection for external Almanach egress.
+
+### What I learned
+The existing state handoff consists of point samples, including time zero. Representing them as continuous intervals would fabricate coverage or require artificial one-microsecond availability adjustments. An exact sample timestamp is the correct minimal observation contract for this evidence.
+
+### What was tricky to build
+The same event can have different availability depending on the model's context. The adapter retains whole-run dependencies for offline smoothing and source-local evidence for the independent head. Sorting by simulated commitment allows late event observations to arrive after newer event samples without moving the database's run clock backward. Retry comparison excludes a new attempted commitment time so it cannot rewrite the original visibility history.
+
+### What warrants a second pair of eyes
+The replay uses source-horizon availability plus a simulated commit delay, not live measured inference/transport latency. Action event times are feature-decision endpoints, not reviewed action boundaries. Exact-time queries cannot prove continuous closure or action absence across gaps. Broad revisions/retractions/expiry remain unimplemented, with the original ticket scope still explicit.
+
+### What should be done in the future
+Resolve whether to formally defer the original broader T4 design items. Use the observation handoff for a concrete rule consumer before adding interval inference or correction workflows. Keep smoke checks at completed feature boundaries unless a specific failure calls for more investigation.
+
+### Code review instructions
+Read `temporal/store.py`, `replay.py`, and `reference/04-observation-memory-and-practical-rule-handoff.md`. Reproduce the actual replay with `PYTHONPATH=workbench/src workbench/.venv/bin/python -m video_workbench.temporal.replay output/localization-v1/temporal-handoff-v2 output/temporal-v1/classical-v2/results.json NEW_DESTINATION`. The end-of-feature smoke command is `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_temporal_store.py -q`.
+
+### Technical details
+Accepted output: `output/temporal-v1/replay-v1`. Stream counts: six production state conditions at 144 each; independent and offline-smoothed action streams at 792 each. Run ID: `temporal-replay-v1`. Commit delay: 250000 microseconds, explicitly simulated. Full SQLite/JSONL/query outputs remain in the experiment cache; source/artifact hashes and compact actual query examples are tracked in `various/replay-v1`. No expiry, retraction, supersession, revision graph, or continuous interval inference is present in the committed implementation.

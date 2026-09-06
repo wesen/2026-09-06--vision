@@ -9,13 +9,20 @@ Topics:
 DocType: reference
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://workbench/src/video_workbench/temporal/replay.py
+      Note: Actual state/action producer integration and restart replay
+    - Path: repo://workbench/src/video_workbench/temporal/store.py
+      Note: Small append-only exact-sample observation API
+    - Path: repo://workbench/tests/test_temporal_store.py
+      Note: One end-of-feature smoke check
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T19:08:36.37538-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Observation memory and practical rule handoff
 

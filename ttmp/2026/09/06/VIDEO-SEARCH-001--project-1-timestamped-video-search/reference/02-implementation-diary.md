@@ -233,3 +233,52 @@ Saved [the actual search and seek screenshot](../various/screenshots/02-first-se
 - `GET /v1/index`: immutable index and feature-space metadata.
 - `GET /v1/episodes/{episode_id}/video`: registered source with range support.
 - OpenAPI: `/docs` and `/openapi.json`.
+
+## Step 5: Freeze evaluation before reading development results
+
+Prepared a six-configuration protocol, copied and hashed the four positive query families, and added two explicit negative controls. The evaluator separates query Success@K from interval Recall@K and reports a temporal-IoU diagnostic, per-query results, random-ranking controls, and resource measurements. It durably saves the development winner before test ranking and rejects accidental reruns of the held-out report.
+
+Hardened cache provenance to include actual MLX, Metal, NumPy, Pillow, and PyAV versions. This intentionally creates a new space identity and fresh final-baseline features; the earlier smoke measurements remain valid for their recorded earlier identity.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1)
+
+**Assistant interpretation:** Select on development data and evaluate the held-out partition once, with precise metric definitions.
+
+**Inferred user intent:** Distinguish working retrieval infrastructure from measured model quality.
+
+### What I did
+- Added frozen query/protocol files and the evaluator CLI.
+- Added hand-computed relevance and freeze-before-test/retest-guard fixtures.
+- Formatted the Python implementation and prevented overwriting an already published index matrix.
+
+### Why
+- Long windows can satisfy weak coverage while locating an action poorly. Report that bias explicitly and include IoU.
+
+### What worked
+- Hand-computed metric fixture distinguishes query success, interval recall, duplicate hits, and zero-positive queries.
+- Model-safe inference code does not import evaluator labels.
+
+### What didn't work
+- Offline formatter initially failed creating `/Users/manuel/.local/share/uv/tools/.lock`: `Operation not permitted (os error 1)`. Set `UV_TOOL_DIR=output/uv-tools` to keep tool state in the workspace.
+- First evaluator workflow fixture failed with `KeyError: 'limitations'`: its minimal protocol omitted a required reporting field. Added the field to the fixture.
+
+### What I learned
+- A frozen query set must be joined against exactly the frozen source manifest, not merely a registry with matching group names.
+
+### What was tricky to build
+- The evaluator must save a selected configuration and its provenance before the first test ranking. An exclusive test-start marker prevents an accidental rerun from silently replacing the result.
+
+### What warrants a second pair of eyes
+- Metric denominator definitions and the fixed development tie-break order.
+
+### What should be done in the future
+- Run this committed protocol, report results without retuning on test, and publish the handoff.
+
+### Code review instructions
+- Read `configs/retrieval/home-v1-protocol.json`, `evaluation.py`, and `test_evaluation.py`.
+
+### Technical details
+- Development group g03; held-out group g04. Six settings: 2/5/10 seconds × 1/2 FPS.
+- Relevance: same episode and at least 50% coverage of the weak interior.
+- Select by macro Success@5, interval Recall@5, best IoU@5, then smaller window and FPS.

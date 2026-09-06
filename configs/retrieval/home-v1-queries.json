@@ -1,0 +1,420 @@
+[
+  {
+    "quality": "weak_program_supervision",
+    "query": "A person opening the fridge door",
+    "relevant_interiors": [
+      {
+        "end_frame_exclusive": 36,
+        "end_us": 3600000,
+        "episode_id": "ep-34efcd7e3f0dcbb3",
+        "split": "train",
+        "start_frame": 24,
+        "start_us": 2400000
+      },
+      {
+        "end_frame_exclusive": 48,
+        "end_us": 4800000,
+        "episode_id": "ep-6f34785036ca14be",
+        "split": "train",
+        "start_frame": 36,
+        "start_us": 3600000
+      },
+      {
+        "end_frame_exclusive": 48,
+        "end_us": 4800000,
+        "episode_id": "ep-ccb9e4016de3b2ca",
+        "split": "train",
+        "start_frame": 36,
+        "start_us": 3600000
+      },
+      {
+        "end_frame_exclusive": 147,
+        "end_us": 14700000,
+        "episode_id": "ep-ccb9e4016de3b2ca",
+        "split": "train",
+        "start_frame": 135,
+        "start_us": 13500000
+      },
+      {
+        "end_frame_exclusive": 40,
+        "end_us": 4000000,
+        "episode_id": "ep-365c6e6c4ad14360",
+        "split": "train",
+        "start_frame": 28,
+        "start_us": 2800000
+      },
+      {
+        "end_frame_exclusive": 33,
+        "end_us": 3300000,
+        "episode_id": "ep-b493c4709a26f92e",
+        "split": "train",
+        "start_frame": 21,
+        "start_us": 2100000
+      },
+      {
+        "end_frame_exclusive": 30,
+        "end_us": 3000000,
+        "episode_id": "ep-5d33c14367639439",
+        "split": "train",
+        "start_frame": 18,
+        "start_us": 1800000
+      },
+      {
+        "end_frame_exclusive": 101,
+        "end_us": 10100000,
+        "episode_id": "ep-5d33c14367639439",
+        "split": "train",
+        "start_frame": 89,
+        "start_us": 8900000
+      },
+      {
+        "end_frame_exclusive": 35,
+        "end_us": 3500000,
+        "episode_id": "ep-368d6331fc690a2c",
+        "split": "development",
+        "start_frame": 23,
+        "start_us": 2300000
+      },
+      {
+        "end_frame_exclusive": 44,
+        "end_us": 4400000,
+        "episode_id": "ep-1ba09e07399f4a30",
+        "split": "development",
+        "start_frame": 32,
+        "start_us": 3200000
+      },
+      {
+        "end_frame_exclusive": 44,
+        "end_us": 4400000,
+        "episode_id": "ep-e9c9ef6801285914",
+        "split": "development",
+        "start_frame": 32,
+        "start_us": 3200000
+      },
+      {
+        "end_frame_exclusive": 129,
+        "end_us": 12900000,
+        "episode_id": "ep-e9c9ef6801285914",
+        "split": "development",
+        "start_frame": 117,
+        "start_us": 11700000
+      },
+      {
+        "end_frame_exclusive": 47,
+        "end_us": 4700000,
+        "episode_id": "ep-205a311600c89bf7",
+        "split": "test",
+        "start_frame": 35,
+        "start_us": 3500000
+      },
+      {
+        "end_frame_exclusive": 46,
+        "end_us": 4600000,
+        "episode_id": "ep-7d3106fb1cac9776",
+        "split": "test",
+        "start_frame": 34,
+        "start_us": 3400000
+      },
+      {
+        "end_frame_exclusive": 46,
+        "end_us": 4600000,
+        "episode_id": "ep-d9e2a612fb2342e2",
+        "split": "test",
+        "start_frame": 34,
+        "start_us": 3400000
+      },
+      {
+        "end_frame_exclusive": 140,
+        "end_us": 14000000,
+        "episode_id": "ep-d9e2a612fb2342e2",
+        "split": "test",
+        "start_frame": 128,
+        "start_us": 12800000
+      }
+    ]
+  },
+  {
+    "quality": "weak_program_supervision",
+    "query": "A person closing the fridge door",
+    "relevant_interiors": [
+      {
+        "end_frame_exclusive": 101,
+        "end_us": 10100000,
+        "episode_id": "ep-34efcd7e3f0dcbb3",
+        "split": "train",
+        "start_frame": 89,
+        "start_us": 8900000
+      },
+      {
+        "end_frame_exclusive": 130,
+        "end_us": 13000000,
+        "episode_id": "ep-ccb9e4016de3b2ca",
+        "split": "train",
+        "start_frame": 118,
+        "start_us": 11800000
+      },
+      {
+        "end_frame_exclusive": 121,
+        "end_us": 12100000,
+        "episode_id": "ep-365c6e6c4ad14360",
+        "split": "train",
+        "start_frame": 109,
+        "start_us": 10900000
+      },
+      {
+        "end_frame_exclusive": 84,
+        "end_us": 8400000,
+        "episode_id": "ep-5d33c14367639439",
+        "split": "train",
+        "start_frame": 72,
+        "start_us": 7200000
+      },
+      {
+        "end_frame_exclusive": 112,
+        "end_us": 11200000,
+        "episode_id": "ep-368d6331fc690a2c",
+        "split": "development",
+        "start_frame": 100,
+        "start_us": 10000000
+      },
+      {
+        "end_frame_exclusive": 112,
+        "end_us": 11200000,
+        "episode_id": "ep-e9c9ef6801285914",
+        "split": "development",
+        "start_frame": 100,
+        "start_us": 10000000
+      },
+      {
+        "end_frame_exclusive": 121,
+        "end_us": 12100000,
+        "episode_id": "ep-205a311600c89bf7",
+        "split": "test",
+        "start_frame": 109,
+        "start_us": 10900000
+      },
+      {
+        "end_frame_exclusive": 123,
+        "end_us": 12300000,
+        "episode_id": "ep-d9e2a612fb2342e2",
+        "split": "test",
+        "start_frame": 111,
+        "start_us": 11100000
+      }
+    ]
+  },
+  {
+    "quality": "weak_program_supervision",
+    "query": "A person opening the microwave door",
+    "relevant_interiors": [
+      {
+        "end_frame_exclusive": 40,
+        "end_us": 4000000,
+        "episode_id": "ep-26448333df96e9bc",
+        "split": "train",
+        "start_frame": 28,
+        "start_us": 2800000
+      },
+      {
+        "end_frame_exclusive": 40,
+        "end_us": 4000000,
+        "episode_id": "ep-2a420ff714f0a8e5",
+        "split": "train",
+        "start_frame": 28,
+        "start_us": 2800000
+      },
+      {
+        "end_frame_exclusive": 40,
+        "end_us": 4000000,
+        "episode_id": "ep-1779083be6e7d3b2",
+        "split": "train",
+        "start_frame": 28,
+        "start_us": 2800000
+      },
+      {
+        "end_frame_exclusive": 113,
+        "end_us": 11300000,
+        "episode_id": "ep-1779083be6e7d3b2",
+        "split": "train",
+        "start_frame": 101,
+        "start_us": 10100000
+      },
+      {
+        "end_frame_exclusive": 38,
+        "end_us": 3800000,
+        "episode_id": "ep-33fbcce3c63f4265",
+        "split": "train",
+        "start_frame": 26,
+        "start_us": 2600000
+      },
+      {
+        "end_frame_exclusive": 38,
+        "end_us": 3800000,
+        "episode_id": "ep-3fc2ecf3a1ed6d99",
+        "split": "train",
+        "start_frame": 26,
+        "start_us": 2600000
+      },
+      {
+        "end_frame_exclusive": 38,
+        "end_us": 3800000,
+        "episode_id": "ep-b3f1b6687fc723ca",
+        "split": "train",
+        "start_frame": 26,
+        "start_us": 2600000
+      },
+      {
+        "end_frame_exclusive": 131,
+        "end_us": 13100000,
+        "episode_id": "ep-b3f1b6687fc723ca",
+        "split": "train",
+        "start_frame": 119,
+        "start_us": 11900000
+      },
+      {
+        "end_frame_exclusive": 39,
+        "end_us": 3900000,
+        "episode_id": "ep-c2ad5c5f7b67a9a8",
+        "split": "development",
+        "start_frame": 27,
+        "start_us": 2700000
+      },
+      {
+        "end_frame_exclusive": 39,
+        "end_us": 3900000,
+        "episode_id": "ep-97a1a39b2e9490b6",
+        "split": "development",
+        "start_frame": 27,
+        "start_us": 2700000
+      },
+      {
+        "end_frame_exclusive": 39,
+        "end_us": 3900000,
+        "episode_id": "ep-327429c08d46e616",
+        "split": "development",
+        "start_frame": 27,
+        "start_us": 2700000
+      },
+      {
+        "end_frame_exclusive": 128,
+        "end_us": 12800000,
+        "episode_id": "ep-327429c08d46e616",
+        "split": "development",
+        "start_frame": 116,
+        "start_us": 11600000
+      },
+      {
+        "end_frame_exclusive": 49,
+        "end_us": 4900000,
+        "episode_id": "ep-e614ca27a15019cd",
+        "split": "test",
+        "start_frame": 37,
+        "start_us": 3700000
+      },
+      {
+        "end_frame_exclusive": 49,
+        "end_us": 4900000,
+        "episode_id": "ep-c1c313b64f579794",
+        "split": "test",
+        "start_frame": 37,
+        "start_us": 3700000
+      },
+      {
+        "end_frame_exclusive": 49,
+        "end_us": 4900000,
+        "episode_id": "ep-37909e041bc956c8",
+        "split": "test",
+        "start_frame": 37,
+        "start_us": 3700000
+      },
+      {
+        "end_frame_exclusive": 121,
+        "end_us": 12100000,
+        "episode_id": "ep-37909e041bc956c8",
+        "split": "test",
+        "start_frame": 109,
+        "start_us": 10900000
+      }
+    ]
+  },
+  {
+    "quality": "weak_program_supervision",
+    "query": "A person closing the microwave door",
+    "relevant_interiors": [
+      {
+        "end_frame_exclusive": 116,
+        "end_us": 11600000,
+        "episode_id": "ep-26448333df96e9bc",
+        "split": "train",
+        "start_frame": 104,
+        "start_us": 10400000
+      },
+      {
+        "end_frame_exclusive": 96,
+        "end_us": 9600000,
+        "episode_id": "ep-1779083be6e7d3b2",
+        "split": "train",
+        "start_frame": 84,
+        "start_us": 8400000
+      },
+      {
+        "end_frame_exclusive": 114,
+        "end_us": 11400000,
+        "episode_id": "ep-33fbcce3c63f4265",
+        "split": "train",
+        "start_frame": 102,
+        "start_us": 10200000
+      },
+      {
+        "end_frame_exclusive": 114,
+        "end_us": 11400000,
+        "episode_id": "ep-b3f1b6687fc723ca",
+        "split": "train",
+        "start_frame": 102,
+        "start_us": 10200000
+      },
+      {
+        "end_frame_exclusive": 111,
+        "end_us": 11100000,
+        "episode_id": "ep-c2ad5c5f7b67a9a8",
+        "split": "development",
+        "start_frame": 99,
+        "start_us": 9900000
+      },
+      {
+        "end_frame_exclusive": 111,
+        "end_us": 11100000,
+        "episode_id": "ep-327429c08d46e616",
+        "split": "development",
+        "start_frame": 99,
+        "start_us": 9900000
+      },
+      {
+        "end_frame_exclusive": 104,
+        "end_us": 10400000,
+        "episode_id": "ep-e614ca27a15019cd",
+        "split": "test",
+        "start_frame": 92,
+        "start_us": 9200000
+      },
+      {
+        "end_frame_exclusive": 104,
+        "end_us": 10400000,
+        "episode_id": "ep-37909e041bc956c8",
+        "split": "test",
+        "start_frame": 92,
+        "start_us": 9200000
+      }
+    ]
+  },
+  {
+    "query": "A dog running outside in a garden",
+    "quality": "negative_control_no_generated_action",
+    "relevant_interiors": []
+  },
+  {
+    "query": "A person watering houseplants",
+    "quality": "negative_control_no_generated_action",
+    "relevant_interiors": []
+  }
+]

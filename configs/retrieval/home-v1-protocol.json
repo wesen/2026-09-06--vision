@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "corpus_manifest_sha256": "8e68e3ba40da1f5fefdc643ca027fda3983afad5f0616338429fcc6ac7670d25",
+  "queries_sha256": "2c0bb8510c9b193460430a0bd874665ae32b93cf474d8a631073ac0068bc7652",
+  "development_groups": [
+    "g03"
+  ],
+  "test_groups": [
+    "g04"
+  ],
+  "candidates": [
+    {
+      "seconds": 2,
+      "fps": 1
+    },
+    {
+      "seconds": 2,
+      "fps": 2
+    },
+    {
+      "seconds": 5,
+      "fps": 1
+    },
+    {
+      "seconds": 5,
+      "fps": 2
+    },
+    {
+      "seconds": 10,
+      "fps": 1
+    },
+    {
+      "seconds": 10,
+      "fps": 2
+    }
+  ],
+  "k": [
+    1,
+    5,
+    10
+  ],
+  "coverage_threshold": 0.5,
+  "selection": [
+    "max macro Success@5",
+    "max macro interval Recall@5",
+    "max mean best temporal IoU@5",
+    "min window seconds",
+    "min FPS"
+  ],
+  "negative_policy": "report top scores and returned-hit count; no learned abstention threshold",
+  "random_seed": 42,
+  "random_repeats": 100,
+  "limitations": [
+    "weak program interiors",
+    "one apartment and one character",
+    "four positive query families",
+    "mean-pooled frames erase order",
+    "coverage relevance favors long windows"
+  ]
+}

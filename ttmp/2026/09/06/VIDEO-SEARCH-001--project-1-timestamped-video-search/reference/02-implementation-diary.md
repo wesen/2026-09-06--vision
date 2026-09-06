@@ -350,3 +350,57 @@ Archived the frozen development/test JSON, exact query vectors, source/index man
 - Serving index: `e9ba74dabd6c07eafc1df2ee28c2b77a6f0235b87a7e7b3e0fff2e3df893bbce`.
 - Final feature space: `9246fa13a4a2d32fbb78ba1614024d65bb44339b757497bf0e90cdd6f07a0bf4`.
 - Four screenshots are linked from the implementation report; original PNGs are under `various/screenshots/`.
+
+## Step 7: Publish the textbook-style deep dive to the Obsidian vault
+
+Wrote a new 6,247-word technical article explaining the implemented system from source identity through frozen evaluation. The article uses direct technical prose, worked examples, equations, three Mermaid diagrams, and four copied screenshots. It includes an analytical random-ranking calculation: the exact expected Success@5 is 73.926%, consistent with the recorded 74% random control.
+
+Validated frontmatter, diagram fences, image signatures and hashes, wiki-link targets, reported metrics, and append-only destinations. Copied the article and images into today's go-go-parc project folder, committed only those five files, and pushed main successfully. The vault is clean and reports zero commits ahead or behind origin/main.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 6)
+
+**Assistant interpretation:** Publish an evidence-backed technical blog post in the vault, preserving existing notes and making figures self-contained.
+
+**Inferred user intent:** Keep a durable, readable account that teaches the system and its evaluation limits.
+
+**Commit (code):** `cc58db0` — completed implementation/report source. **Commit (vault):** `8e8a8745603d330e6fec408531a73e7e9ae90b5e` — technical article and four screenshots.
+
+### What I did
+- Applied the textbook-authoring and obsidian-vault-writing skills; read the existing VirtualHome vault article for continuity.
+- Wrote the new article in the ARTICLE style with source and protocol revisions.
+- Added `scripts/03-publish-vault-article.py` to validate and copy only new note/asset files.
+- Fetched origin, verified the vault had no unrelated staged changes, committed the five intended files, and pushed main.
+
+### Why
+- The vault article teaches the mechanisms and measured implications rather than repeating the implementation changelog.
+- Colocated `_assets/` images make the post independent of the source checkout's screenshot paths.
+
+### What worked
+- Vault push: `a45ea5d..8e8a874 main -> main`.
+- Post-push status clean; `HEAD...origin/main` divergence `0 0`.
+- All four vault assets match their reviewed source PNG hashes.
+
+### What didn't work
+- The prior source commit's whitespace check found the six intentional trailing spaces in the user's verbatim prompt. After verifying that was the sole finding, retained the exact prompt and used a per-command `core.whitespace=-blank-at-eol` check for that source commit. The vault article passed the ordinary whitespace check.
+
+### What I learned
+- Relevant-window counts of 4, 2, 4, and 2 among fourteen candidates explain the high random Success@5 without any new model evaluation.
+
+### What was tricky to build
+- Preserve a strict distinction between post-run explanatory analysis, browser inspection, and another held-out evaluation. The post adds the closed-form random expectation; it does not change configuration or rerun model selection.
+
+### What warrants a second pair of eyes
+- Future native-video claims should use the exact installed implementation and a separately validated feature space.
+
+### What should be done in the future
+- Continue the separate native-video and reviewed-label workstreams. No requested publication work remains.
+
+### Code review instructions
+- Open the vault article and confirm the three diagrams, equations, and four local screenshot embeds.
+- Review `various/vault-article-validation.json` for paths, word count, and asset hashes.
+
+### Technical details
+- Vault path: `Projects/2026/09/06/ARTICLE - Timestamped Video Search - From Verified Pixels to Frozen Evaluation.md`.
+- Source repo: `/Users/manuel/code/wesen/2026-09-06--vision`.
+- Vault repo: `/Users/manuel/code/wesen/go-go-golems/go-go-parc`.

@@ -1,7 +1,7 @@
 ---
 Title: Project 1 - Timestamped video search
 Ticket: VIDEO-SEARCH-001
-Status: active
+Status: complete
 Topics:
     - video
     - embeddings
@@ -12,10 +12,11 @@ Owners: []
 RelatedFiles: []
 ExternalSources: []
 Summary: ""
-LastUpdated: 2026-09-06T13:13:51.005983-04:00
+LastUpdated: 2026-09-06T14:31:39.122269-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Project 1 - Timestamped video search
 
@@ -44,3 +45,7 @@ Uploaded to `/ai/2026/09/06/VIDEO-SEARCH-001/VIDEO-SEARCH-001_Intern_Guide.pdf`.
 - [Frozen evaluation screenshot](various/screenshots/04-frozen-evaluation-report.png)
 
 Selected configuration: 10-second windows at 1 FPS. Held-out Success@5: 75%; random baseline: 74%. Treat the output as coarse candidate evidence.
+
+## Vault deep dive
+
+Published a 6,247-word textbook-style technical article with three Mermaid diagrams and four screenshots in go-go-parc. Vault commit `8e8a874` is pushed to main. [Delivery validation](various/vault-article-validation.json).

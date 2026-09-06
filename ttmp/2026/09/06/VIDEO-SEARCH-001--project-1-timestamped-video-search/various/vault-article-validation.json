@@ -1,0 +1,27 @@
+{
+  "draft": "/Users/manuel/code/wesen/2026-09-06--vision/output/vault-report/ARTICLE - Timestamped Video Search - From Verified Pixels to Frozen Evaluation.md",
+  "destination": "/Users/manuel/code/wesen/go-go-golems/go-go-parc/Projects/2026/09/06/ARTICLE - Timestamped Video Search - From Verified Pixels to Frozen Evaluation.md",
+  "words": 6247,
+  "mermaid_diagrams": 3,
+  "screenshots": 4,
+  "article_sha256": "a39b82ab697593a49aa47eae53899319e3722361d565e71f834646545a122655",
+  "assets": {
+    "video-search-01-corpus-gallery.png": "7ed9da92db45703e968801d55a05e8a63974523c3117a001329dff8328a75829",
+    "video-search-02-first-search.png": "31dd72534d521b9adbfe4b7688a537c72fcc9d79da890e9ee11dbf0894f6f9b0",
+    "video-search-03-selected-index.png": "def98ed4ea45b6b068297301731b8d1b4a4b7d10b97cb872e509ce726d2a46da",
+    "video-search-04-evaluation.png": "06025d0fdf5b585b9b9b4022c8e6fd1c25cd4e3603fc4c069f9c5987bbd7c70a"
+  },
+  "analytical_random_success_at_5": 0.7392607392607393,
+  "observed_random_success_at_5": 0.74,
+  "implementation_revision": "cc58db0",
+  "copied": true,
+  "vault_commit": "8e8a8745603d330e6fec408531a73e7e9ae90b5e",
+  "pushed": true,
+  "branch": "main",
+  "remote": "origin",
+  "post_push_clean": true,
+  "divergence": [
+    0,
+    0
+  ]
+}

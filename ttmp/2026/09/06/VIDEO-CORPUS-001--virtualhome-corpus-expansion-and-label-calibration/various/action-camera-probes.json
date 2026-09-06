@@ -1,0 +1,453 @@
+[
+  {
+    "scene": 0,
+    "family": "door",
+    "target_id": 308,
+    "target_class": "fridge",
+    "actor_position": [
+      -0.7184218,
+      1.25,
+      -7.54612064
+    ],
+    "room": "kitchen",
+    "room_id": 209,
+    "cameras": {
+      "left": {
+        "position": [
+          -3.2277122510024054,
+          1.65,
+          -4.947826559029467
+        ],
+        "look_at": [
+          -3.37654,
+          1.00480747,
+          -2.15178466
+        ],
+        "rotation": [
+          12.97593879933728,
+          -3.0468650729154763,
+          0
+        ],
+        "id": 103
+      },
+      "right": {
+        "position": [
+          -0.9752927901874409,
+          1.65,
+          -3.591927651986352
+        ],
+        "look_at": [
+          -3.37654,
+          1.00480747,
+          -2.15178466
+        ],
+        "rotation": [
+          12.975938799337278,
+          -59.04686507291547,
+          0
+        ],
+        "id": 104
+      }
+    },
+    "program": [
+      "<char0> [Walk] <fridge> (308)",
+      "<char0> [LookAt] <fridge> (308)",
+      "<char0> [Open] <fridge> (308)",
+      "<char0> [LookAt] <fridge> (308)",
+      "<char0> [Close] <fridge> (308)",
+      "<char0> [LookAt] <fridge> (308)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    }
+  },
+  {
+    "scene": 0,
+    "family": "pickup",
+    "target_id": 454,
+    "target_class": "mug",
+    "actor_position": [
+      4.615426,
+      1.25,
+      -10.6919069
+    ],
+    "room": "livingroom",
+    "room_id": 342,
+    "cameras": {
+      "left": {
+        "position": [
+          4.301723831859018,
+          1.65,
+          -9.670413709108447
+        ],
+        "look_at": [
+          1.50979245,
+          1.00468671,
+          -9.458001
+        ],
+        "rotation": [
+          12.978285272565838,
+          -85.64926590462512,
+          0
+        ],
+        "id": 103
+      },
+      "right": {
+        "position": [
+          3.2471187824519463,
+          1.65,
+          -7.262164663983795
+        ],
+        "look_at": [
+          1.50979245,
+          1.00468671,
+          -9.458001
+        ],
+        "rotation": [
+          12.978285272565834,
+          -141.64926590462514,
+          0
+        ],
+        "id": 104
+      }
+    },
+    "program": [
+      "<char0> [Walk] <mug> (454)",
+      "<char0> [LookAt] <mug> (454)",
+      "<char0> [Grab] <mug> (454)",
+      "<char0> [LookAt] <mug> (454)",
+      "<char0> [PutBack] <mug> (454) <desk> (380)",
+      "<char0> [LookAt] <mug> (454)"
+    ],
+    "success": false,
+    "result": {
+      "0": {
+        "message": "ScriptExcutor 0: EXECUTION_GENERAL: Script is impossible to execute\n\n"
+      }
+    }
+  },
+  {
+    "scene": 0,
+    "family": "posture",
+    "target_id": 110,
+    "target_class": "chair",
+    "actor_position": [
+      -5.356374,
+      1.25,
+      -6.365501
+    ],
+    "room": "bedroom",
+    "room_id": 75,
+    "cameras": {
+      "left": {
+        "position": [
+          -6.1925254868907675,
+          1.65,
+          -4.931371877060451
+        ],
+        "look_at": [
+          -5.033001,
+          0.85,
+          -7.47999954
+        ],
+        "rotation": [
+          15.94539590092285,
+          155.5363479162889,
+          0
+        ],
+        "id": 103
+      },
+      "right": {
+        "position": [
+          -7.794306955499907,
+          1.65,
+          -7.016114403225022
+        ],
+        "look_at": [
+          -5.033001,
+          0.85,
+          -7.47999954
+        ],
+        "rotation": [
+          15.945395900922854,
+          99.53634791628888,
+          0
+        ],
+        "id": 104
+      }
+    },
+    "program": [
+      "<char0> [Walk] <chair> (110)",
+      "<char0> [LookAt] <chair> (110)",
+      "<char0> [Sit] <chair> (110)",
+      "<char0> [LookAt] <chair> (110)",
+      "<char0> [StandUp]",
+      "<char0> [LookAt] <chair> (110)"
+    ],
+    "success": false,
+    "result": {
+      "0": {
+        "message": "ScriptExcutor 0: PROCESS WALK: Can not select object: chair. REASON: Unknown\nEXECUTION_GENERAL: Script is impossible to execute\n\n"
+      }
+    }
+  },
+  {
+    "scene": 0,
+    "family": "switch",
+    "target_id": 433,
+    "target_class": "tv",
+    "actor_position": [
+      4.029909,
+      1.25,
+      -10.383316
+    ],
+    "room": "livingroom",
+    "room_id": 342,
+    "cameras": {
+      "left": {
+        "position": [
+          4.524583328684795,
+          1.65,
+          -6.302496864630765
+        ],
+        "look_at": [
+          6.10300159,
+          0.9046552,
+          -8.6152
+        ],
+        "rotation": [
+          14.906160935158603,
+          145.68649101720527,
+          0
+        ],
+        "id": 103
+      },
+      "right": {
+        "position": [
+          3.3030435061769587,
+          1.65,
+          -8.630520862704286
+        ],
+        "look_at": [
+          6.10300159,
+          0.9046552,
+          -8.6152
+        ],
+        "rotation": [
+          14.906160935158606,
+          89.68649101720524,
+          0
+        ],
+        "id": 104
+      }
+    },
+    "program": [
+      "<char0> [Walk] <tv> (433)",
+      "<char0> [LookAt] <tv> (433)",
+      "<char0> [SwitchOn] <tv> (433)",
+      "<char0> [LookAt] <tv> (433)",
+      "<char0> [SwitchOff] <tv> (433)",
+      "<char0> [LookAt] <tv> (433)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    }
+  },
+  {
+    "scene": 1,
+    "family": "door",
+    "target_id": 233,
+    "target_class": "cabinet",
+    "actor_position": [
+      1.21661031,
+      1.25,
+      5.26002026
+    ],
+    "room": "bedroom",
+    "room_id": 197,
+    "cameras": {
+      "left": {
+        "position": [
+          -0.6915269950540481,
+          1.65,
+          3.3037643289248844
+        ],
+        "look_at": [
+          -0.73,
+          0.85,
+          6.1035
+        ],
+        "rotation": [
+          15.94539590092285,
+          -0.7872893488599813,
+          0
+        ],
+        "id": 99
+      },
+      "right": {
+        "position": [
+          1.6125998958848458,
+          1.65,
+          4.569803247770176
+        ],
+        "look_at": [
+          -0.73,
+          0.85,
+          6.1035
+        ],
+        "rotation": [
+          15.94539590092285,
+          -56.78728934885998,
+          0
+        ],
+        "id": 100
+      }
+    },
+    "program": [
+      "<char0> [Walk] <cabinet> (233)",
+      "<char0> [LookAt] <cabinet> (233)",
+      "<char0> [Open] <cabinet> (233)",
+      "<char0> [LookAt] <cabinet> (233)",
+      "<char0> [Close] <cabinet> (233)",
+      "<char0> [LookAt] <cabinet> (233)"
+    ],
+    "success": false,
+    "result": {
+      "0": {
+        "message": "ScriptExcutor 0: PROCESS WALK: Can not select object: cabinet. REASON: Unknown\nEXECUTION_GENERAL: Script is impossible to execute\n\n"
+      }
+    }
+  },
+  {
+    "scene": 1,
+    "family": "pickup",
+    "target_id": 332,
+    "target_class": "book",
+    "actor_position": [
+      -13.7397575,
+      1.25,
+      6.08683872
+    ],
+    "room": "livingroom",
+    "room_id": 274,
+    "cameras": {
+      "left": {
+        "position": [
+          -12.423980710912291,
+          1.65,
+          3.948684311785124
+        ],
+        "look_at": [
+          -13.7109976,
+          0.983999968,
+          1.46200228
+        ],
+        "rotation": [
+          13.379587687844461,
+          -152.63554672933043,
+          0
+        ],
+        "id": 99
+      },
+      "right": {
+        "position": [
+          -15.052859724322534,
+          1.65,
+          3.919522582929076
+        ],
+        "look_at": [
+          -13.7109976,
+          0.983999968,
+          1.46200228
+        ],
+        "rotation": [
+          13.379587687844461,
+          151.3644532706696,
+          0
+        ],
+        "id": 100
+      }
+    },
+    "program": [
+      "<char0> [Walk] <book> (332)",
+      "<char0> [LookAt] <book> (332)",
+      "<char0> [Grab] <book> (332)",
+      "<char0> [LookAt] <book> (332)",
+      "<char0> [PutBack] <book> (332) <desk> (304)",
+      "<char0> [LookAt] <book> (332)"
+    ],
+    "success": false,
+    "result": {
+      "0": {
+        "message": "ScriptExcutor 0: EXECUTION_GENERAL: Script is impossible to execute\n\n"
+      }
+    }
+  },
+  {
+    "scene": 1,
+    "family": "posture",
+    "target_id": 301,
+    "target_class": "sofa",
+    "actor_position": [
+      -14.1779642,
+      1.25,
+      3.99355936
+    ],
+    "room": "livingroom",
+    "room_id": 274,
+    "cameras": {
+      "left": {
+        "position": [
+          -14.773062978531467,
+          1.65,
+          4.123059543045651
+        ],
+        "look_at": [
+          -15.7993622,
+          0.85,
+          6.728191
+        ],
+        "rotation": [
+          15.94539590092285,
+          -21.502106661632503,
+          0
+        ],
+        "id": 99
+      },
+      "right": {
+        "position": [
+          -13.065711099257031,
+          1.65,
+          6.122260591944121
+        ],
+        "look_at": [
+          -15.7993622,
+          0.85,
+          6.728191
+        ],
+        "rotation": [
+          15.94539590092285,
+          -77.5021066616325,
+          0
+        ],
+        "id": 100
+      }
+    },
+    "program": [
+      "<char0> [Walk] <sofa> (301)",
+      "<char0> [LookAt] <sofa> (301)",
+      "<char0> [Sit] <sofa> (301)",
+      "<char0> [LookAt] <sofa> (301)",
+      "<char0> [StandUp]",
+      "<char0> [LookAt] <sofa> (301)"
+    ],
+    "success": false,
+    "error": "UnityCommunicationException(\"HTTPConnectionPool(host='127.0.0.1', port=18082): Read timed out. (read timeout=180)\")"
+  }
+]

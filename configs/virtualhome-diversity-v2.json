@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "name": "virtualhome-diversity-v2",
+  "character": "Chars/Male1",
+  "fps": 10,
+  "width": 640,
+  "height": 480,
+  "boundary_guard_frames": 2,
+  "split_policy": "entire apartment and all matched conditions/views stay in one partition",
+  "duration_policy": "retain full recorded trajectories; audit condition-dependent duration and do not claim duration matching",
+  "scenes": [
+    {"scene_index": 0, "split": "train", "scenarios": [
+      {"family": "door", "target_id": 308, "target_class": "fridge"},
+      {"family": "pickup", "target_id": 454, "target_class": "mug"},
+      {"family": "posture", "target_id": 110, "target_class": "chair"},
+      {"family": "switch", "target_id": 433, "target_class": "tv"}
+    ]},
+    {"scene_index": 1, "split": "development", "scenarios": [
+      {"family": "door", "target_id": 233, "target_class": "cabinet"},
+      {"family": "pickup", "target_id": 332, "target_class": "book"},
+      {"family": "posture", "target_id": 301, "target_class": "sofa"},
+      {"family": "switch", "target_id": 82, "target_class": "lightswitch"}
+    ]},
+    {"scene_index": 2, "split": "test", "scenarios": [
+      {"family": "door", "target_id": 174, "target_class": "microwave"},
+      {"family": "pickup", "target_id": 67, "target_class": "plate"},
+      {"family": "posture", "target_id": 163, "target_class": "chair"},
+      {"family": "switch", "target_id": 268, "target_class": "tablelamp"}
+    ]}
+  ]
+}

@@ -1,0 +1,59 @@
+almanach_studio_version: 1
+theme: brutalist
+paperWidth: 384
+bodyScale: 1
+feedLines: 8
+blocks:
+- id: head
+  type: row
+  data:
+    cols:
+    - w: 1fr
+      text: NATIVE-POOLED
+      preset: micro
+    - w: 1fr
+      text: STATUS
+      preset: micro
+      align: right
+- id: r1
+  type: rule
+  data:
+    weight: heavy
+- id: gap1
+  type: space
+  data:
+    size: s
+- id: title
+  type: text
+  data:
+    text: Compare the repaired video path
+    preset: h1
+    lines: 3
+- id: gap3
+  type: space
+  data:
+    size: m
+- id: planhead
+  type: text
+  data:
+    text: PLAN
+    preset: h2
+- id: plan
+  type: checks
+  data:
+    items:
+    - Freeze development clips and queries
+    - Encode native and verify source parity
+    - Rank both modes and preserve evidence
+- id: r2
+  type: rule
+  data:
+    weight: hair
+- id: facts
+  type: kv
+  data:
+    items:
+    - - PHASES
+      - '3'
+    - - NEXT
+      - Native FP32 development index

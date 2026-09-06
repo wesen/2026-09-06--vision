@@ -404,3 +404,50 @@ Validated frontmatter, diagram fences, image signatures and hashes, wiki-link ta
 - Vault path: `Projects/2026/09/06/ARTICLE - Timestamped Video Search - From Verified Pixels to Frozen Evaluation.md`.
 - Source repo: `/Users/manuel/code/wesen/2026-09-06--vision`.
 - Vault repo: `/Users/manuel/code/wesen/go-go-golems/go-go-parc`.
+
+## Step 8: Adopt the repaired native runtime under a fixed development protocol
+
+Followed the user's native-video handoff using the accepted repair and existing isolated runtime. Built a fresh FP32 native index at two-second windows and 2 FPS, then verified exact source evidence equality with the existing pooled development index. Both indices contain 55 clips from six videos.
+
+### Prompt Context
+**User prompt (verbatim):** The full quoted native-video handoff is preserved in `various/native-pooled-v1/user-handoff.txt`.
+
+**Assistant interpretation:** Execute the repaired runtime and compare it with the pooled baseline on matched development evidence.
+
+**Inferred user intent:** Start using the fixed MLX implementation without invalidating prior results or assuming a retrieval-quality improvement.
+
+**Commit (code):** Workbench integration `127921a`; repaired fork `6452614f6de04694d1e34fd13abaca11f6ffb994`. Comparison script follows in the next commit.
+
+### What I did
+- Read the README and repair handoff; retained isolated runtime extras and official FP32 weights.
+- Ran the requested index command with a fresh `--root output/native-pooled-comparison-v1/native`.
+- Froze queries, two-second/2 FPS setting, development-only split, and existing relevance metrics before reading comparison scores.
+- Added a reproducible script that rejects clip/PTS differences and query/index feature-space mismatches.
+- Corrected the README's stale opening statement that all native video remained rejected.
+
+### Why
+The repaired implementation has passed numerical acceptance, while retrieval quality remains a separate question. The existing pooled index provides a preserved comparison on identical observations.
+
+### What worked
+All 55 native clips encoded successfully; build elapsed time was 14.8026 seconds excluding encoder construction. Exact source evidence matches the pooled index. The plan slip printed successfully (HTTP 200, 2026-09-06T20:50:03Z).
+
+### What didn't work
+No runtime failure occurred in this phase. The two systems use different precision, model artifacts, and preprocessing; this experiment cannot isolate temporal architecture as the cause of a result difference.
+
+### What I learned
+No baseline re-encoding is needed: an immutable two-second/2 FPS pooled development index already exists and its full source metadata matches.
+
+### What was tricky to build
+Chunk IDs must differ because they include feature-space identity. The comparison excludes only that derived ID when verifying the underlying source records, retaining source hashes, raw PTS, origin, time base, partitions, and interval boundaries.
+
+### What warrants a second pair of eyes
+Weak program-supervised relevance and one development group limit semantic conclusions. No test data is ranked and no default-mode promotion is authorized by these measurements.
+
+### What should be done in the future
+Finish query ranking, preserve per-query differences and screenshots, and report the result with the system-level confounds.
+
+### Code review instructions
+Review `scripts/04-compare-native-pooled.py`, the frozen protocol, source manifests, and the README native section.
+
+### Technical details
+Native output: `output/native-pooled-comparison-v1/native`. Pooled index: `78b4ccb4780da259733f3ab253cf359b759b147da556b90b7af6421b02eb8a1b`. Native index: `ed99514634df6f1c8f952be1ce54a281ebf80a576f98806c3e894dfda7d9eb23`.

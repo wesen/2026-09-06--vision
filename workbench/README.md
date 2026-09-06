@@ -1,6 +1,6 @@
 # Timestamped video search
 
-Local search over the 24-video VirtualHome household corpus. The implementation uses the 4-bit Qwen3-VL-Embedding model on MLX, explicitly in **pooled_images** mode. It encodes individual frames, averages their unit vectors, and normalizes again. This baseline discards frame order. Native-video encoding is rejected because the tested upstream embedding wrapper drops video pixels.
+Local search over the 24-video VirtualHome household corpus. The implementation uses the 4-bit Qwen3-VL-Embedding model on MLX, explicitly in **pooled_images** mode. It encodes individual frames, averages their unit vectors, and normalizes again. This baseline discards frame order. The original upstream native-video wrapper dropped video pixels. An opt-in repaired FP32 native-video path is now available in a separate environment; see “Opt-in native video” below. The pooled baseline remains the default.
 
 ## Install and reproduce
 

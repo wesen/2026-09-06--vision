@@ -1,0 +1,16 @@
+> The MLX video repair is ready. Read workbench/README.md under “Opt-in native video” and the MLX-VIDEO-FIX-001 review handoff.
+  >
+  > Use workbench integration commit 127921a and repaired MLX-VLM fork commit 6452614f6de04694d1e34fd13abaca11f6ffb994.
+  >
+  > - Run through output/mlx-video-fix/.venv/bin/video-workbench with --mode native_video.
+  > - Use the accepted official FP32 weights and pinned official preprocessing. The community 4-bit checkpoint has not passed native-video acceptance.
+  > - Build a fresh native index; existing pooled embeddings and indices are incompatible with the native feature space.
+  > - Preserve workbench/.venv, pooled caches, and pooled results for comparison.
+  > - Compare native versus pooled on identical clips, timestamps, queries, and partitions. Implementation parity is validated; improved retrieval quality is still unproven.
+
+  Start with:
+
+  output/mlx-video-fix/.venv/bin/video-workbench index \
+    --mode native_video --splits development --seconds 2 --fps 2
+
+  The exact setup and search commands are in workbench/README.md:66.

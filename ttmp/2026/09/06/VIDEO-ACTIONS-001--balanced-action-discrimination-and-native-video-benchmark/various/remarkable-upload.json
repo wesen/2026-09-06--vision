@@ -1,0 +1,8 @@
+{
+  "mode": "upload",
+  "ticket": "VIDEO-ACTIONS-001",
+  "returncode": 0,
+  "source_sha256": "f5e9ced249023becf807cac684bf85948f66faea6f29d305707d67ecab43dfdc",
+  "output": "OK: uploaded VIDEO-ACTIONS-001_Intern_Guide.pdf -> /ai/2026/09/06/VIDEO-ACTIONS-001\n",
+  "remote_dir": "/ai/2026/09/06/VIDEO-ACTIONS-001"
+}

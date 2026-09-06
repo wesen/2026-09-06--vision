@@ -1,0 +1,8 @@
+{
+  "mode": "dry-run",
+  "ticket": "VIDEO-LOCALIZATION-001",
+  "returncode": 0,
+  "source_sha256": "60e1d1d2eeeebf81f05a303dd390c3ba322628f715152ad42a51c30c01b0152b",
+  "output": "DRY: layout=default\nDRY: remote-dir=/ai/2026/09/06/VIDEO-LOCALIZATION-001\nDRY: workers=1\nDRY: pandoc /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/VIDEO-LOCALIZATION-001--requested-object-localization-and-crop-evidence-coverage/design-doc/01-intern-analysis-design-and-implementation-guide.md -> <tmp>/VIDEO-LOCALIZATION-001 Intern Guide.pdf\nDRY: upload VIDEO-LOCALIZATION-001 Intern Guide.pdf -> /ai/2026/09/06/VIDEO-LOCALIZATION-001\n",
+  "remote_dir": "/ai/2026/09/06/VIDEO-LOCALIZATION-001"
+}

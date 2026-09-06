@@ -1,0 +1,8 @@
+{
+  "mode": "upload",
+  "ticket": "VIDEO-LOCALIZATION-001",
+  "returncode": 0,
+  "source_sha256": "60e1d1d2eeeebf81f05a303dd390c3ba322628f715152ad42a51c30c01b0152b",
+  "output": "OK: uploaded VIDEO-LOCALIZATION-001_Intern_Guide.pdf -> /ai/2026/09/06/VIDEO-LOCALIZATION-001\n",
+  "remote_dir": "/ai/2026/09/06/VIDEO-LOCALIZATION-001"
+}

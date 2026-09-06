@@ -1,0 +1,12 @@
+{
+  "source_sha256": "f5e9ced249023becf807cac684bf85948f66faea6f29d305707d67ecab43dfdc",
+  "pdf_sha256": "d8aa20716a8cf2a4116c5c005fd9e9a8e10076dd34ac7def7c96577fba183167",
+  "pdf": "output/pdf/next-guides/VIDEO-ACTIONS-001/VIDEO-ACTIONS-001_Intern_Guide.pdf",
+  "pages": 8,
+  "contact_sheets": [
+    "output/pdf/next-guides/VIDEO-ACTIONS-001/qa/contact-1.jpg",
+    "output/pdf/next-guides/VIDEO-ACTIONS-001/qa/contact-2.jpg"
+  ],
+  "visual_review": "passed",
+  "review_notes": "All eight pages inspected through contact sheets; source contract/geometry page inspected at full raster size. No clipping or overlap. Final-page whitespace retained."
+}

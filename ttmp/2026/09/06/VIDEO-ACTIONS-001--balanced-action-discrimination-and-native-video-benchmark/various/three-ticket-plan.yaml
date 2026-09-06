@@ -1,0 +1,61 @@
+almanach_studio_version: 1
+theme: brutalist
+paperWidth: 384
+bodyScale: 1
+feedLines: 8
+blocks:
+- id: head
+  type: row
+  data:
+    cols:
+    - w: 1fr
+      text: VIDEO-NEXT-3
+      preset: micro
+    - w: 1fr
+      text: STATUS
+      preset: micro
+      align: right
+- id: r1
+  type: rule
+  data:
+    weight: heavy
+- id: gap1
+  type: space
+  data:
+    size: s
+- id: title
+  type: text
+  data:
+    text: Actions, localization, temporal memory
+    preset: h1
+    lines: 3
+- id: gap3
+  type: space
+  data:
+    size: m
+- id: planhead
+  type: text
+  data:
+    text: PLAN
+    preset: h2
+- id: plan
+  type: checks
+  data:
+    items:
+    - Design and deliver two intern guides
+    - A1-A4 balanced action benchmark
+    - L1-L4 localization and crop diagnosis
+    - T1-T4 temporal models and memory
+    - Audit results, reports and handoffs
+- id: r2
+  type: rule
+  data:
+    weight: hair
+- id: facts
+  type: kv
+  data:
+    items:
+    - - PHASES
+      - '5'
+    - - NEXT
+      - Author and review intern guides

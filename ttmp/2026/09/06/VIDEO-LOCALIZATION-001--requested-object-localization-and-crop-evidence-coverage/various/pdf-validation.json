@@ -1,0 +1,12 @@
+{
+  "source_sha256": "60e1d1d2eeeebf81f05a303dd390c3ba322628f715152ad42a51c30c01b0152b",
+  "pdf_sha256": "0181ef852c017a1bdf9d5f10ecb1445a9141941def3f67bd96f7b541c766612a",
+  "pdf": "output/pdf/next-guides/VIDEO-LOCALIZATION-001/VIDEO-LOCALIZATION-001_Intern_Guide.pdf",
+  "pages": 8,
+  "contact_sheets": [
+    "output/pdf/next-guides/VIDEO-LOCALIZATION-001/qa/contact-1.jpg",
+    "output/pdf/next-guides/VIDEO-LOCALIZATION-001/qa/contact-2.jpg"
+  ],
+  "visual_review": "passed",
+  "review_notes": "All eight pages inspected through contact sheets; source contract/geometry page inspected at full raster size. No clipping or overlap. Final-page whitespace retained."
+}

@@ -1,0 +1,8 @@
+{
+  "mode": "dry-run",
+  "ticket": "VIDEO-ACTIONS-001",
+  "returncode": 0,
+  "source_sha256": "f5e9ced249023becf807cac684bf85948f66faea6f29d305707d67ecab43dfdc",
+  "output": "DRY: layout=default\nDRY: remote-dir=/ai/2026/09/06/VIDEO-ACTIONS-001\nDRY: workers=1\nDRY: pandoc /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/VIDEO-ACTIONS-001--balanced-action-discrimination-and-native-video-benchmark/design-doc/01-intern-analysis-design-and-implementation-guide.md -> <tmp>/VIDEO-ACTIONS-001 Intern Guide.pdf\nDRY: upload VIDEO-ACTIONS-001 Intern Guide.pdf -> /ai/2026/09/06/VIDEO-ACTIONS-001\n",
+  "remote_dir": "/ai/2026/09/06/VIDEO-ACTIONS-001"
+}

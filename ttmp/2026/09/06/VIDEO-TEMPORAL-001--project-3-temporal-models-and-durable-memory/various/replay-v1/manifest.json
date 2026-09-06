@@ -1,0 +1,64 @@
+{
+  "status": "complete",
+  "run_id": "temporal-replay-v1",
+  "inserted": 2448,
+  "retry_inserts": 0,
+  "checked_queries": 4896,
+  "restart_equal": true,
+  "gap_query": {
+    "status": "unknown",
+    "value": null,
+    "event_us": 1,
+    "as_of_us": 1250000,
+    "observation_ids": [],
+    "evidence_ids": [],
+    "reason": "no_visible_sample"
+  },
+  "streams": {
+    "action/linear": {
+      "rows": 792,
+      "mode": "causal"
+    },
+    "action/smooth": {
+      "rows": 792,
+      "mode": "offline"
+    },
+    "state/D__linear_head": {
+      "rows": 144,
+      "mode": "causal"
+    },
+    "state/D__text_margin": {
+      "rows": 144,
+      "mode": "causal"
+    },
+    "state/FD__linear_head": {
+      "rows": 144,
+      "mode": "causal"
+    },
+    "state/FD__text_margin": {
+      "rows": 144,
+      "mode": "causal"
+    },
+    "state/F__linear_head": {
+      "rows": 144,
+      "mode": "causal"
+    },
+    "state/F__text_margin": {
+      "rows": 144,
+      "mode": "causal"
+    }
+  },
+  "clock_policy": "Simulated commitment = source/result availability + 250000us; not live measured latency.",
+  "coverage_policy": "Exact sampled timestamps only; no continuous state, expiry, revisions, or carry-forward.",
+  "state_handoff_sha256": "d606e7a6181c3bca98ecd3966bc37d935a3c2497b7713858cc9606b91f14ced1",
+  "classical_comparison_sha256": "9a424cf465cadfb19c02f193c1fbd422002c267bcfd942b5af245766d63e50f3",
+  "artifacts": {
+    "observations.jsonl": "c33d9cf750254245342155193f83e6b344cbc48e629588d674884ee9bda9f4f4",
+    "queries.json": "e6298df731c33a5027a438ea40335789035ce29dea16edaccb92c7ee14125f51",
+    "observations.sqlite": "3a2f5051660eba3dabdd92685e3dd11df4a261e638e7861447b2524e798aa2c3"
+  },
+  "code_sha256": {
+    "store.py": "4040aea266cd2cab7e9b7c08801f9fe2839199b6eb85ef954d188c2f88a1fcc7",
+    "replay.py": "8e40e835824bf6ce952c5d08d1bad8ee3909ee74200721fc1152ee2444ef527d"
+  }
+}

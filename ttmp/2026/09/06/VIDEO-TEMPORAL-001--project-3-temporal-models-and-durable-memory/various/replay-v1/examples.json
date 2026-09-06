@@ -1,0 +1,175 @@
+{
+  "observations": [
+    {
+      "available_us": 0,
+      "committed_us": 250000,
+      "entity": "dv-7726ded72630455a:object-308",
+      "episode_id": "dv-7726ded72630455a",
+      "event_us": 0,
+      "evidence_ids": [
+        "5ac2776b925d5d8c78bc72b9"
+      ],
+      "feature_space_id": "ac5d5763589b65139691fc99ca94f9cd9968e72e80fb63ea48137cf293d8f7ad",
+      "mode": "causal",
+      "observation_id": "06586a693a9342d922483e24257dfa230cb8f2087bbf104af796bcc90285e881",
+      "producer": "0e6b5c359526421a8fb5c26fbb06d5a91eec7cb739441af4b049e5d35139fbca",
+      "property": "door_open",
+      "run_id": "temporal-replay-v1",
+      "stream_id": "state/F__linear_head",
+      "unknown_reason": null,
+      "value": false
+    },
+    {
+      "available_us": 500000,
+      "committed_us": 750000,
+      "entity": "dv-d065ae4a05eb0978:actor",
+      "episode_id": "dv-d065ae4a05eb0978",
+      "event_us": 500000,
+      "evidence_ids": [
+        "452e6cd95ef3e2065a22b502"
+      ],
+      "feature_space_id": "92b2a1f338385a4a499cadc27b0b41c3a8d9074e4a7aab53bfa975add80c3f19",
+      "mode": "causal",
+      "observation_id": "022ccd51b0c1871fd5a62a75f17f90b662c49b561730aa81a11b03d5c0303d08",
+      "producer": "5df5818fcced914ab2bd0091674895067e2b1072c024f402d6e1039950b3da22",
+      "property": "action",
+      "run_id": "temporal-replay-v1",
+      "stream_id": "action/linear",
+      "unknown_reason": null,
+      "value": "WALK"
+    },
+    {
+      "available_us": 4100000,
+      "committed_us": 4350000,
+      "entity": "dv-d065ae4a05eb0978:actor",
+      "episode_id": "dv-d065ae4a05eb0978",
+      "event_us": 500000,
+      "evidence_ids": [
+        "30eb9ab57fdd9ed24fa9cb21",
+        "438962f9d81c42bb77ec1eb7",
+        "452e6cd95ef3e2065a22b502",
+        "9c63a173296d0f9559b47b51",
+        "a556881e405b5fb2d3ff3b4e",
+        "d4aa25c33373928f9dcb63e5",
+        "e46c92566274c24b90ae4629",
+        "ee6871207df8f8d2304fa9f7",
+        "fddd4e354de0ed54a0d046d4"
+      ],
+      "feature_space_id": "92b2a1f338385a4a499cadc27b0b41c3a8d9074e4a7aab53bfa975add80c3f19",
+      "mode": "offline",
+      "observation_id": "3ffd98500376e7389a4c1bcb400a73c327dc362bf07675f783a62988f540ec2f",
+      "producer": "007b874a4c16f3574ce76749deac48155595b4b86c104cecbbfa6d3d27f9c242",
+      "property": "action",
+      "run_id": "temporal-replay-v1",
+      "stream_id": "action/smooth",
+      "unknown_reason": null,
+      "value": "WALK"
+    }
+  ],
+  "queries": [
+    {
+      "query": [
+        "temporal-replay-v1",
+        "state/F__linear_head",
+        "dv-7726ded72630455a",
+        "dv-7726ded72630455a:object-308",
+        "door_open",
+        0
+      ],
+      "before": {
+        "status": "unknown",
+        "value": null,
+        "event_us": 0,
+        "as_of_us": 249999,
+        "observation_ids": [],
+        "evidence_ids": [],
+        "reason": "no_visible_sample"
+      },
+      "after": {
+        "status": "supported",
+        "value": false,
+        "event_us": 0,
+        "as_of_us": 250000,
+        "observation_ids": [
+          "06586a693a9342d922483e24257dfa230cb8f2087bbf104af796bcc90285e881"
+        ],
+        "evidence_ids": [
+          "5ac2776b925d5d8c78bc72b9"
+        ],
+        "reason": "observed_sample"
+      }
+    },
+    {
+      "query": [
+        "temporal-replay-v1",
+        "action/linear",
+        "dv-d065ae4a05eb0978",
+        "dv-d065ae4a05eb0978:actor",
+        "action",
+        500000
+      ],
+      "before": {
+        "status": "unknown",
+        "value": null,
+        "event_us": 500000,
+        "as_of_us": 749999,
+        "observation_ids": [],
+        "evidence_ids": [],
+        "reason": "no_visible_sample"
+      },
+      "after": {
+        "status": "supported",
+        "value": "WALK",
+        "event_us": 500000,
+        "as_of_us": 750000,
+        "observation_ids": [
+          "022ccd51b0c1871fd5a62a75f17f90b662c49b561730aa81a11b03d5c0303d08"
+        ],
+        "evidence_ids": [
+          "452e6cd95ef3e2065a22b502"
+        ],
+        "reason": "observed_sample"
+      }
+    },
+    {
+      "query": [
+        "temporal-replay-v1",
+        "action/smooth",
+        "dv-d065ae4a05eb0978",
+        "dv-d065ae4a05eb0978:actor",
+        "action",
+        500000
+      ],
+      "before": {
+        "status": "unknown",
+        "value": null,
+        "event_us": 500000,
+        "as_of_us": 4349999,
+        "observation_ids": [],
+        "evidence_ids": [],
+        "reason": "no_visible_sample"
+      },
+      "after": {
+        "status": "supported",
+        "value": "WALK",
+        "event_us": 500000,
+        "as_of_us": 4350000,
+        "observation_ids": [
+          "3ffd98500376e7389a4c1bcb400a73c327dc362bf07675f783a62988f540ec2f"
+        ],
+        "evidence_ids": [
+          "30eb9ab57fdd9ed24fa9cb21",
+          "438962f9d81c42bb77ec1eb7",
+          "452e6cd95ef3e2065a22b502",
+          "9c63a173296d0f9559b47b51",
+          "a556881e405b5fb2d3ff3b4e",
+          "d4aa25c33373928f9dcb63e5",
+          "e46c92566274c24b90ae4629",
+          "ee6871207df8f8d2304fa9f7",
+          "fddd4e354de0ed54a0d046d4"
+        ],
+        "reason": "observed_sample"
+      }
+    }
+  ]
+}

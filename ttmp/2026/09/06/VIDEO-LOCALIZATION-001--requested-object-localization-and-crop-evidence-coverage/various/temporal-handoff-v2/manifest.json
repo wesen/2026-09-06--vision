@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "source_manifest_sha256": "056123416f257c718a10f93b14203ae284752865451a8c4e4463a7dab2bcdac7",
+  "crop_manifest_sha256": "c4820a5233640109e3879e16b74df78af1e23dd21ceac2fe094856117616e5e4",
+  "streams": {
+    "production": {
+      "rows": 864,
+      "sha256": "1d25bd3b050bbc89907ab60dbbb333cd1d31ff62a93d6c18d4a0661701410080"
+    },
+    "oracle_diagnostic": {
+      "rows": 576,
+      "sha256": "3d7e3e4c4807acb6ccaed343ca27bcf7161d3c671b1b9552079d82668bd1013d"
+    }
+  },
+  "availability": "offline source horizon only; live processing/commit latency not modeled",
+  "sampling": "six sparse state frames per episode; not dense temporal ground truth",
+  "consumption": "Choose one producer/condition; never concatenate alternative predictions as independent evidence. Oracle stream is diagnostic only."
+}

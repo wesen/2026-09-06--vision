@@ -1,0 +1,14 @@
+{
+  "actual_streams": {
+    "production": {
+      "rows": 864,
+      "sha256": "1d25bd3b050bbc89907ab60dbbb333cd1d31ff62a93d6c18d4a0661701410080"
+    },
+    "oracle_diagnostic": {
+      "rows": 576,
+      "sha256": "3d7e3e4c4807acb6ccaed343ca27bcf7161d3c671b1b9552079d82668bd1013d"
+    }
+  },
+  "production_oracle_citation_rejected": "condition evidence citation mismatch",
+  "invalid_output_published": false
+}

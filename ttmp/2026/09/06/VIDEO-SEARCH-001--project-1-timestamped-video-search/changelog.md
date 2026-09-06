@@ -20,3 +20,7 @@ Implemented search through registry 3749908, cache 522afe4, viewer 42f3247, and 
 ## 2026-09-06
 
 Completed pooled-image timestamped search, 15 tests, frozen evaluation, screenshots, and intern handoff (source cc58db0). Published 6247-word Obsidian deep dive and pushed go-go-parc commit 8e8a874.
+
+## 2026-09-06
+
+Adopted repaired native FP32 runtime in a fixed development comparison (protocol/script 4483cbd): 55 source-identical clips, six queries, Recall@5 0.25 to 0.4375, Success@5 unchanged 0.50. Preserved pooled baseline, screenshots, source manifests, and complete native cache reuse.

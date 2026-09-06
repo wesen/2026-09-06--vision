@@ -1,0 +1,1799 @@
+{
+  "evaluation": {
+    "index_id": "ed99514634df6f1c8f952be1ce54a281ebf80a576f98806c3e894dfda7d9eb23",
+    "metrics": {
+      "1": {
+        "best_iou": 0.15,
+        "interval_recall": 0.0625,
+        "success": 0.25
+      },
+      "10": {
+        "best_iou": 0.44999999999999996,
+        "interval_recall": 0.6875,
+        "success": 0.75
+      },
+      "5": {
+        "best_iou": 0.3,
+        "interval_recall": 0.4375,
+        "success": 0.5
+      }
+    },
+    "positive_queries": 4,
+    "queries": [
+      {
+        "hits": [
+          {
+            "chunk_id": "c79e0e4b0110e33f708c61ee1f186eca5be92e1df22a8d65c94a1d0a485d003c",
+            "end_us": 4000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 1,
+            "score": 0.6062196493148804,
+            "selected_pts_us": [
+              2000000,
+              2500000,
+              3000000,
+              3500000
+            ],
+            "selected_raw_pts": [
+              20480,
+              25600,
+              30720,
+              35840
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 2000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "5ecc3be042982d68941c4f902e6690ab25eb912729300f10d2590f3c90bbeafc",
+            "end_us": 14000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 2,
+            "score": 0.580302357673645,
+            "selected_pts_us": [
+              12000000,
+              12500000,
+              13000000,
+              13500000
+            ],
+            "selected_raw_pts": [
+              122880,
+              128000,
+              133120,
+              138240
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 12000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "adcae04d5b33f53ed85f349df50eaca9feaecb523fffd50afadea88055d76958",
+            "end_us": 12000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 3,
+            "score": 0.57509446144104,
+            "selected_pts_us": [
+              10000000,
+              10500000,
+              11000000,
+              11500000
+            ],
+            "selected_raw_pts": [
+              102400,
+              107520,
+              112640,
+              117760
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 10000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "4b1fc88d87ca4597f53bd943cb8b23eeb66e15b97610047b19e8eef109de7b64",
+            "end_us": 4000000,
+            "episode_id": "ep-1ba09e07399f4a30",
+            "origin_us": 0,
+            "rank": 4,
+            "score": 0.5663559436798096,
+            "selected_pts_us": [
+              2000000,
+              2500000,
+              3000000,
+              3500000
+            ],
+            "selected_raw_pts": [
+              20480,
+              25600,
+              30720,
+              35840
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 2000000,
+            "time_base": "1/10240",
+            "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+          },
+          {
+            "chunk_id": "5fd9e4772391b79550b7abbdb7cf5573c1e91b2b8be6fe7ec4c98e078ad5f007",
+            "end_us": 12000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 5,
+            "score": 0.5637779831886292,
+            "selected_pts_us": [
+              10000000,
+              10500000,
+              11000000,
+              11500000
+            ],
+            "selected_raw_pts": [
+              102400,
+              107520,
+              112640,
+              117760
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 10000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "206c3a0ec0533774c944decbedf0968e355c216b9a153abc974d8ff24d2e74eb",
+            "end_us": 10000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 6,
+            "score": 0.5636907815933228,
+            "selected_pts_us": [
+              8000000,
+              8500000,
+              9000000,
+              9500000
+            ],
+            "selected_raw_pts": [
+              81920,
+              87040,
+              92160,
+              97280
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 8000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "4028cc0da28da287aca8e2c11507ae67d86a6b082e18ba08fb7e11d6b7affd6d",
+            "end_us": 4000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 7,
+            "score": 0.5595599412918091,
+            "selected_pts_us": [
+              2000000,
+              2500000,
+              3000000,
+              3500000
+            ],
+            "selected_raw_pts": [
+              20480,
+              25600,
+              30720,
+              35840
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 2000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "2508d37af9736a05355ae999f5e7996d14e7ef74431ea28883baa319d6ffe6cd",
+            "end_us": 10000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 8,
+            "score": 0.5534156560897827,
+            "selected_pts_us": [
+              8000000,
+              8500000,
+              9000000,
+              9500000
+            ],
+            "selected_raw_pts": [
+              81920,
+              87040,
+              92160,
+              97280
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 8000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "4db24fe05fc5f04c23109b635569b3b9e62c1b16c1d9a6d777a368c3b63f2c3d",
+            "end_us": 6000000,
+            "episode_id": "ep-1ba09e07399f4a30",
+            "origin_us": 0,
+            "rank": 9,
+            "score": 0.549418568611145,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+          },
+          {
+            "chunk_id": "1ac11b29932cdef9c70eb6c40754c13e74471d729385831ad4decef600a717c8",
+            "end_us": 8000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 10,
+            "score": 0.5463657379150391,
+            "selected_pts_us": [
+              6000000,
+              6500000,
+              7000000,
+              7500000
+            ],
+            "selected_raw_pts": [
+              61440,
+              66560,
+              71680,
+              76800
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 6000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          }
+        ],
+        "metrics": {
+          "1": {
+            "best_iou": 0.6,
+            "interval_recall": 0.25,
+            "matched": 1,
+            "relevant": 4,
+            "success": 1
+          },
+          "10": {
+            "best_iou": 0.6,
+            "interval_recall": 1.0,
+            "matched": 4,
+            "relevant": 4,
+            "success": 1
+          },
+          "5": {
+            "best_iou": 0.6,
+            "interval_recall": 0.75,
+            "matched": 3,
+            "relevant": 4,
+            "success": 1
+          }
+        },
+        "quality": "weak_program_supervision",
+        "query": "A person opening the fridge door",
+        "random_interval_recall_at_5": 0.085,
+        "random_success_at_5": 0.34,
+        "ranking_seconds": 0.0005421249661594629,
+        "returned_hits": 10,
+        "top_score": 0.6062196493148804
+      },
+      {
+        "hits": [
+          {
+            "chunk_id": "c79e0e4b0110e33f708c61ee1f186eca5be92e1df22a8d65c94a1d0a485d003c",
+            "end_us": 4000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 1,
+            "score": 0.6102360486984253,
+            "selected_pts_us": [
+              2000000,
+              2500000,
+              3000000,
+              3500000
+            ],
+            "selected_raw_pts": [
+              20480,
+              25600,
+              30720,
+              35840
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 2000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "5ecc3be042982d68941c4f902e6690ab25eb912729300f10d2590f3c90bbeafc",
+            "end_us": 14000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 2,
+            "score": 0.5932158827781677,
+            "selected_pts_us": [
+              12000000,
+              12500000,
+              13000000,
+              13500000
+            ],
+            "selected_raw_pts": [
+              122880,
+              128000,
+              133120,
+              138240
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 12000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "adcae04d5b33f53ed85f349df50eaca9feaecb523fffd50afadea88055d76958",
+            "end_us": 12000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 3,
+            "score": 0.5863091945648193,
+            "selected_pts_us": [
+              10000000,
+              10500000,
+              11000000,
+              11500000
+            ],
+            "selected_raw_pts": [
+              102400,
+              107520,
+              112640,
+              117760
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 10000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "206c3a0ec0533774c944decbedf0968e355c216b9a153abc974d8ff24d2e74eb",
+            "end_us": 10000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 4,
+            "score": 0.5783686637878418,
+            "selected_pts_us": [
+              8000000,
+              8500000,
+              9000000,
+              9500000
+            ],
+            "selected_raw_pts": [
+              81920,
+              87040,
+              92160,
+              97280
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 8000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "5fd9e4772391b79550b7abbdb7cf5573c1e91b2b8be6fe7ec4c98e078ad5f007",
+            "end_us": 12000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 5,
+            "score": 0.5747801661491394,
+            "selected_pts_us": [
+              10000000,
+              10500000,
+              11000000,
+              11500000
+            ],
+            "selected_raw_pts": [
+              102400,
+              107520,
+              112640,
+              117760
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 10000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "2508d37af9736a05355ae999f5e7996d14e7ef74431ea28883baa319d6ffe6cd",
+            "end_us": 10000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 6,
+            "score": 0.573486328125,
+            "selected_pts_us": [
+              8000000,
+              8500000,
+              9000000,
+              9500000
+            ],
+            "selected_raw_pts": [
+              81920,
+              87040,
+              92160,
+              97280
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 8000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "4b1fc88d87ca4597f53bd943cb8b23eeb66e15b97610047b19e8eef109de7b64",
+            "end_us": 4000000,
+            "episode_id": "ep-1ba09e07399f4a30",
+            "origin_us": 0,
+            "rank": 7,
+            "score": 0.5726805925369263,
+            "selected_pts_us": [
+              2000000,
+              2500000,
+              3000000,
+              3500000
+            ],
+            "selected_raw_pts": [
+              20480,
+              25600,
+              30720,
+              35840
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 2000000,
+            "time_base": "1/10240",
+            "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+          },
+          {
+            "chunk_id": "4028cc0da28da287aca8e2c11507ae67d86a6b082e18ba08fb7e11d6b7affd6d",
+            "end_us": 4000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 8,
+            "score": 0.5664052963256836,
+            "selected_pts_us": [
+              2000000,
+              2500000,
+              3000000,
+              3500000
+            ],
+            "selected_raw_pts": [
+              20480,
+              25600,
+              30720,
+              35840
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 2000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "4db24fe05fc5f04c23109b635569b3b9e62c1b16c1d9a6d777a368c3b63f2c3d",
+            "end_us": 6000000,
+            "episode_id": "ep-1ba09e07399f4a30",
+            "origin_us": 0,
+            "rank": 9,
+            "score": 0.5548235177993774,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+          },
+          {
+            "chunk_id": "1ac11b29932cdef9c70eb6c40754c13e74471d729385831ad4decef600a717c8",
+            "end_us": 8000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 10,
+            "score": 0.55149245262146,
+            "selected_pts_us": [
+              6000000,
+              6500000,
+              7000000,
+              7500000
+            ],
+            "selected_raw_pts": [
+              61440,
+              66560,
+              71680,
+              76800
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 6000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          }
+        ],
+        "metrics": {
+          "1": {
+            "best_iou": 0.0,
+            "interval_recall": 0.0,
+            "matched": 0,
+            "relevant": 2,
+            "success": 0
+          },
+          "10": {
+            "best_iou": 0.6,
+            "interval_recall": 1.0,
+            "matched": 2,
+            "relevant": 2,
+            "success": 1
+          },
+          "5": {
+            "best_iou": 0.6,
+            "interval_recall": 1.0,
+            "matched": 2,
+            "relevant": 2,
+            "success": 1
+          }
+        },
+        "quality": "weak_program_supervision",
+        "query": "A person closing the fridge door",
+        "random_interval_recall_at_5": 0.105,
+        "random_success_at_5": 0.21,
+        "ranking_seconds": 4.429207183420658e-05,
+        "returned_hits": 10,
+        "top_score": 0.6102360486984253
+      },
+      {
+        "hits": [
+          {
+            "chunk_id": "c79e0e4b0110e33f708c61ee1f186eca5be92e1df22a8d65c94a1d0a485d003c",
+            "end_us": 4000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 1,
+            "score": 0.5477712154388428,
+            "selected_pts_us": [
+              2000000,
+              2500000,
+              3000000,
+              3500000
+            ],
+            "selected_raw_pts": [
+              20480,
+              25600,
+              30720,
+              35840
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 2000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "435c541f73da31820a6b3a5ad59a958d62285171686bffd9f2b238dbe4226333",
+            "end_us": 6000000,
+            "episode_id": "ep-97a1a39b2e9490b6",
+            "origin_us": 0,
+            "rank": 2,
+            "score": 0.5402748584747314,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+          },
+          {
+            "chunk_id": "87dccaae2908c5c17bce4357259083d5cc3460b1703d094769e55bc41dab8274",
+            "end_us": 6000000,
+            "episode_id": "ep-327429c08d46e616",
+            "origin_us": 0,
+            "rank": 3,
+            "score": 0.5380877256393433,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+          },
+          {
+            "chunk_id": "13888d5d16f5ff50b730195271bbb83731441367e38b753f0fc6fc31e2f534a0",
+            "end_us": 8000000,
+            "episode_id": "ep-c2ad5c5f7b67a9a8",
+            "origin_us": 0,
+            "rank": 4,
+            "score": 0.5359207391738892,
+            "selected_pts_us": [
+              6000000,
+              6500000,
+              7000000,
+              7500000
+            ],
+            "selected_raw_pts": [
+              61440,
+              66560,
+              71680,
+              76800
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 6000000,
+            "time_base": "1/10240",
+            "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+          },
+          {
+            "chunk_id": "0c323675c0a038fdc9f64448e4260cae6ecc1601c09ec6766227387439515095",
+            "end_us": 6000000,
+            "episode_id": "ep-c2ad5c5f7b67a9a8",
+            "origin_us": 0,
+            "rank": 5,
+            "score": 0.5358777046203613,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+          },
+          {
+            "chunk_id": "511aee1dccce3f9c24163b8597a98138990ec5c5ad1b6f1007f03d3fd911e2df",
+            "end_us": 8000000,
+            "episode_id": "ep-327429c08d46e616",
+            "origin_us": 0,
+            "rank": 6,
+            "score": 0.53338623046875,
+            "selected_pts_us": [
+              6000000,
+              6500000,
+              7000000,
+              7500000
+            ],
+            "selected_raw_pts": [
+              61440,
+              66560,
+              71680,
+              76800
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 6000000,
+            "time_base": "1/10240",
+            "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+          },
+          {
+            "chunk_id": "86da7ed3ac826634b99616d569fcc45038527a5a48f98a1ebc075f389a85bc0f",
+            "end_us": 14000000,
+            "episode_id": "ep-327429c08d46e616",
+            "origin_us": 0,
+            "rank": 7,
+            "score": 0.5196560025215149,
+            "selected_pts_us": [
+              12000000,
+              12500000,
+              13000000,
+              13500000
+            ],
+            "selected_raw_pts": [
+              122880,
+              128000,
+              133120,
+              138240
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 12000000,
+            "time_base": "1/10240",
+            "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+          },
+          {
+            "chunk_id": "6a90d3f0181694177e8aea8b7f3b247f133cb22d992e556cd438a2eadf671b60",
+            "end_us": 8000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 8,
+            "score": 0.5195741653442383,
+            "selected_pts_us": [
+              6000000,
+              6500000,
+              7000000,
+              7500000
+            ],
+            "selected_raw_pts": [
+              61440,
+              66560,
+              71680,
+              76800
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 6000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "4a24c29e8a70f7eab9f33a7842df79210a5cf79b3800d9348c7915949530bbaa",
+            "end_us": 4000000,
+            "episode_id": "ep-97a1a39b2e9490b6",
+            "origin_us": 0,
+            "rank": 9,
+            "score": 0.5177603363990784,
+            "selected_pts_us": [
+              2000000,
+              2500000,
+              3000000,
+              3500000
+            ],
+            "selected_raw_pts": [
+              20480,
+              25600,
+              30720,
+              35840
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 2000000,
+            "time_base": "1/10240",
+            "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+          },
+          {
+            "chunk_id": "0567da7ee3201c3aff99476b1fa30c5327174d8b12053dce891fd697d7bc1fd2",
+            "end_us": 4000000,
+            "episode_id": "ep-327429c08d46e616",
+            "origin_us": 0,
+            "rank": 10,
+            "score": 0.5174584984779358,
+            "selected_pts_us": [
+              2000000,
+              2500000,
+              3000000,
+              3500000
+            ],
+            "selected_raw_pts": [
+              20480,
+              25600,
+              30720,
+              35840
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 2000000,
+            "time_base": "1/10240",
+            "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+          }
+        ],
+        "metrics": {
+          "1": {
+            "best_iou": 0.0,
+            "interval_recall": 0.0,
+            "matched": 0,
+            "relevant": 4,
+            "success": 0
+          },
+          "10": {
+            "best_iou": 0.6,
+            "interval_recall": 0.75,
+            "matched": 3,
+            "relevant": 4,
+            "success": 1
+          },
+          "5": {
+            "best_iou": 0.0,
+            "interval_recall": 0.0,
+            "matched": 0,
+            "relevant": 4,
+            "success": 0
+          }
+        },
+        "quality": "weak_program_supervision",
+        "query": "A person opening the microwave door",
+        "random_interval_recall_at_5": 0.0825,
+        "random_success_at_5": 0.3,
+        "ranking_seconds": 3.508315421640873e-05,
+        "returned_hits": 10,
+        "top_score": 0.5477712154388428
+      },
+      {
+        "hits": [
+          {
+            "chunk_id": "c79e0e4b0110e33f708c61ee1f186eca5be92e1df22a8d65c94a1d0a485d003c",
+            "end_us": 4000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 1,
+            "score": 0.5613945722579956,
+            "selected_pts_us": [
+              2000000,
+              2500000,
+              3000000,
+              3500000
+            ],
+            "selected_raw_pts": [
+              20480,
+              25600,
+              30720,
+              35840
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 2000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "435c541f73da31820a6b3a5ad59a958d62285171686bffd9f2b238dbe4226333",
+            "end_us": 6000000,
+            "episode_id": "ep-97a1a39b2e9490b6",
+            "origin_us": 0,
+            "rank": 2,
+            "score": 0.5497111082077026,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+          },
+          {
+            "chunk_id": "13888d5d16f5ff50b730195271bbb83731441367e38b753f0fc6fc31e2f534a0",
+            "end_us": 8000000,
+            "episode_id": "ep-c2ad5c5f7b67a9a8",
+            "origin_us": 0,
+            "rank": 3,
+            "score": 0.5472118854522705,
+            "selected_pts_us": [
+              6000000,
+              6500000,
+              7000000,
+              7500000
+            ],
+            "selected_raw_pts": [
+              61440,
+              66560,
+              71680,
+              76800
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 6000000,
+            "time_base": "1/10240",
+            "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+          },
+          {
+            "chunk_id": "87dccaae2908c5c17bce4357259083d5cc3460b1703d094769e55bc41dab8274",
+            "end_us": 6000000,
+            "episode_id": "ep-327429c08d46e616",
+            "origin_us": 0,
+            "rank": 4,
+            "score": 0.5443132519721985,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+          },
+          {
+            "chunk_id": "0c323675c0a038fdc9f64448e4260cae6ecc1601c09ec6766227387439515095",
+            "end_us": 6000000,
+            "episode_id": "ep-c2ad5c5f7b67a9a8",
+            "origin_us": 0,
+            "rank": 5,
+            "score": 0.5438731908798218,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+          },
+          {
+            "chunk_id": "511aee1dccce3f9c24163b8597a98138990ec5c5ad1b6f1007f03d3fd911e2df",
+            "end_us": 8000000,
+            "episode_id": "ep-327429c08d46e616",
+            "origin_us": 0,
+            "rank": 6,
+            "score": 0.5408502221107483,
+            "selected_pts_us": [
+              6000000,
+              6500000,
+              7000000,
+              7500000
+            ],
+            "selected_raw_pts": [
+              61440,
+              66560,
+              71680,
+              76800
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 6000000,
+            "time_base": "1/10240",
+            "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+          },
+          {
+            "chunk_id": "2508d37af9736a05355ae999f5e7996d14e7ef74431ea28883baa319d6ffe6cd",
+            "end_us": 10000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 7,
+            "score": 0.535457968711853,
+            "selected_pts_us": [
+              8000000,
+              8500000,
+              9000000,
+              9500000
+            ],
+            "selected_raw_pts": [
+              81920,
+              87040,
+              92160,
+              97280
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 8000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "adcae04d5b33f53ed85f349df50eaca9feaecb523fffd50afadea88055d76958",
+            "end_us": 12000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 8,
+            "score": 0.5337554812431335,
+            "selected_pts_us": [
+              10000000,
+              10500000,
+              11000000,
+              11500000
+            ],
+            "selected_raw_pts": [
+              102400,
+              107520,
+              112640,
+              117760
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 10000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "5ecc3be042982d68941c4f902e6690ab25eb912729300f10d2590f3c90bbeafc",
+            "end_us": 14000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 9,
+            "score": 0.5301514863967896,
+            "selected_pts_us": [
+              12000000,
+              12500000,
+              13000000,
+              13500000
+            ],
+            "selected_raw_pts": [
+              122880,
+              128000,
+              133120,
+              138240
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 12000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "4a24c29e8a70f7eab9f33a7842df79210a5cf79b3800d9348c7915949530bbaa",
+            "end_us": 4000000,
+            "episode_id": "ep-97a1a39b2e9490b6",
+            "origin_us": 0,
+            "rank": 10,
+            "score": 0.5287411212921143,
+            "selected_pts_us": [
+              2000000,
+              2500000,
+              3000000,
+              3500000
+            ],
+            "selected_raw_pts": [
+              20480,
+              25600,
+              30720,
+              35840
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 2000000,
+            "time_base": "1/10240",
+            "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+          }
+        ],
+        "metrics": {
+          "1": {
+            "best_iou": 0.0,
+            "interval_recall": 0.0,
+            "matched": 0,
+            "relevant": 2,
+            "success": 0
+          },
+          "10": {
+            "best_iou": 0.0,
+            "interval_recall": 0.0,
+            "matched": 0,
+            "relevant": 2,
+            "success": 0
+          },
+          "5": {
+            "best_iou": 0.0,
+            "interval_recall": 0.0,
+            "matched": 0,
+            "relevant": 2,
+            "success": 0
+          }
+        },
+        "quality": "weak_program_supervision",
+        "query": "A person closing the microwave door",
+        "random_interval_recall_at_5": 0.085,
+        "random_success_at_5": 0.16,
+        "ranking_seconds": 3.320910036563873e-05,
+        "returned_hits": 10,
+        "top_score": 0.5613945722579956
+      },
+      {
+        "hits": [
+          {
+            "chunk_id": "c687c2b39984d0470b6d9bdb1c29ae062b744b2068e71d8241ce89f50b2ca7ee",
+            "end_us": 18000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 1,
+            "score": 0.2944384813308716,
+            "selected_pts_us": [
+              16000000,
+              16500000,
+              17000000,
+              17500000
+            ],
+            "selected_raw_pts": [
+              163840,
+              168960,
+              174080,
+              179200
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 16000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "5ecc3be042982d68941c4f902e6690ab25eb912729300f10d2590f3c90bbeafc",
+            "end_us": 14000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 2,
+            "score": 0.2937924563884735,
+            "selected_pts_us": [
+              12000000,
+              12500000,
+              13000000,
+              13500000
+            ],
+            "selected_raw_pts": [
+              122880,
+              128000,
+              133120,
+              138240
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 12000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "6851c659f0b40d9e6570972963258571e4b497985961237cac6aa9406491a0a0",
+            "end_us": 8000000,
+            "episode_id": "ep-97a1a39b2e9490b6",
+            "origin_us": 0,
+            "rank": 3,
+            "score": 0.28357619047164917,
+            "selected_pts_us": [
+              6000000,
+              6500000,
+              7000000,
+              7500000
+            ],
+            "selected_raw_pts": [
+              61440,
+              66560,
+              71680,
+              76800
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 6000000,
+            "time_base": "1/10240",
+            "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+          },
+          {
+            "chunk_id": "03701c292c0eb0053899cbd3a2e1eb33e6ac584e6005aaaf49a556c4acdc1a02",
+            "end_us": 14000000,
+            "episode_id": "ep-c2ad5c5f7b67a9a8",
+            "origin_us": 0,
+            "rank": 4,
+            "score": 0.277866005897522,
+            "selected_pts_us": [
+              12000000,
+              12500000,
+              13000000,
+              13500000
+            ],
+            "selected_raw_pts": [
+              122880,
+              128000,
+              133120,
+              138240
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 12000000,
+            "time_base": "1/10240",
+            "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+          },
+          {
+            "chunk_id": "4db24fe05fc5f04c23109b635569b3b9e62c1b16c1d9a6d777a368c3b63f2c3d",
+            "end_us": 6000000,
+            "episode_id": "ep-1ba09e07399f4a30",
+            "origin_us": 0,
+            "rank": 5,
+            "score": 0.27591851353645325,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+          },
+          {
+            "chunk_id": "ffb7b427cdc665de45320c4cc9a3e2aab58aad91b58ad79da117188ec20de7df",
+            "end_us": 6000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 6,
+            "score": 0.2750839591026306,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "bc8993f7c93757d170faaba5d62c0e83c62e30320d0b1b679065b1b52ba91e55",
+            "end_us": 8000000,
+            "episode_id": "ep-1ba09e07399f4a30",
+            "origin_us": 0,
+            "rank": 7,
+            "score": 0.2730462849140167,
+            "selected_pts_us": [
+              6000000,
+              6500000,
+              7000000,
+              7500000
+            ],
+            "selected_raw_pts": [
+              61440,
+              66560,
+              71680,
+              76800
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 6000000,
+            "time_base": "1/10240",
+            "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+          },
+          {
+            "chunk_id": "a2579777b9a887b4b7e3688bf5ad8ef6463c06845af5a0e9e96cd0b8c92d704a",
+            "end_us": 18000000,
+            "episode_id": "ep-327429c08d46e616",
+            "origin_us": 0,
+            "rank": 8,
+            "score": 0.26991474628448486,
+            "selected_pts_us": [
+              16000000,
+              16500000,
+              17000000,
+              17500000
+            ],
+            "selected_raw_pts": [
+              163840,
+              168960,
+              174080,
+              179200
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 16000000,
+            "time_base": "1/10240",
+            "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+          },
+          {
+            "chunk_id": "2192dd415c2ded0df8b822ca2f84cff8775125215e2797474278c54c236d21c0",
+            "end_us": 6000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 9,
+            "score": 0.26925769448280334,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "6a90d3f0181694177e8aea8b7f3b247f133cb22d992e556cd438a2eadf671b60",
+            "end_us": 8000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 10,
+            "score": 0.26731404662132263,
+            "selected_pts_us": [
+              6000000,
+              6500000,
+              7000000,
+              7500000
+            ],
+            "selected_raw_pts": [
+              61440,
+              66560,
+              71680,
+              76800
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 6000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          }
+        ],
+        "metrics": {
+          "1": {
+            "best_iou": null,
+            "interval_recall": null,
+            "matched": 0,
+            "relevant": 0,
+            "success": null
+          },
+          "10": {
+            "best_iou": null,
+            "interval_recall": null,
+            "matched": 0,
+            "relevant": 0,
+            "success": null
+          },
+          "5": {
+            "best_iou": null,
+            "interval_recall": null,
+            "matched": 0,
+            "relevant": 0,
+            "success": null
+          }
+        },
+        "quality": "negative_control_no_generated_action",
+        "query": "A dog running outside in a garden",
+        "random_interval_recall_at_5": null,
+        "random_success_at_5": null,
+        "ranking_seconds": 3.154110163450241e-05,
+        "returned_hits": 10,
+        "top_score": 0.2944384813308716
+      },
+      {
+        "hits": [
+          {
+            "chunk_id": "2508d37af9736a05355ae999f5e7996d14e7ef74431ea28883baa319d6ffe6cd",
+            "end_us": 10000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 1,
+            "score": 0.4130631685256958,
+            "selected_pts_us": [
+              8000000,
+              8500000,
+              9000000,
+              9500000
+            ],
+            "selected_raw_pts": [
+              81920,
+              87040,
+              92160,
+              97280
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 8000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "adcae04d5b33f53ed85f349df50eaca9feaecb523fffd50afadea88055d76958",
+            "end_us": 12000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 2,
+            "score": 0.40908074378967285,
+            "selected_pts_us": [
+              10000000,
+              10500000,
+              11000000,
+              11500000
+            ],
+            "selected_raw_pts": [
+              102400,
+              107520,
+              112640,
+              117760
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 10000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "5fd9e4772391b79550b7abbdb7cf5573c1e91b2b8be6fe7ec4c98e078ad5f007",
+            "end_us": 12000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 3,
+            "score": 0.4087355136871338,
+            "selected_pts_us": [
+              10000000,
+              10500000,
+              11000000,
+              11500000
+            ],
+            "selected_raw_pts": [
+              102400,
+              107520,
+              112640,
+              117760
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 10000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "5ecc3be042982d68941c4f902e6690ab25eb912729300f10d2590f3c90bbeafc",
+            "end_us": 14000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 4,
+            "score": 0.4054628312587738,
+            "selected_pts_us": [
+              12000000,
+              12500000,
+              13000000,
+              13500000
+            ],
+            "selected_raw_pts": [
+              122880,
+              128000,
+              133120,
+              138240
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 12000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "206c3a0ec0533774c944decbedf0968e355c216b9a153abc974d8ff24d2e74eb",
+            "end_us": 10000000,
+            "episode_id": "ep-e9c9ef6801285914",
+            "origin_us": 0,
+            "rank": 5,
+            "score": 0.40502822399139404,
+            "selected_pts_us": [
+              8000000,
+              8500000,
+              9000000,
+              9500000
+            ],
+            "selected_raw_pts": [
+              81920,
+              87040,
+              92160,
+              97280
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 8000000,
+            "time_base": "1/10240",
+            "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+          },
+          {
+            "chunk_id": "27953f883726b77e44d0cf763e9ebdc4f00ca6e020dfed443be4bd89765c1652",
+            "end_us": 10000000,
+            "episode_id": "ep-c2ad5c5f7b67a9a8",
+            "origin_us": 0,
+            "rank": 6,
+            "score": 0.4042944014072418,
+            "selected_pts_us": [
+              8000000,
+              8500000,
+              9000000,
+              9500000
+            ],
+            "selected_raw_pts": [
+              81920,
+              87040,
+              92160,
+              97280
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 8000000,
+            "time_base": "1/10240",
+            "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+          },
+          {
+            "chunk_id": "2192dd415c2ded0df8b822ca2f84cff8775125215e2797474278c54c236d21c0",
+            "end_us": 6000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 7,
+            "score": 0.40426719188690186,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          },
+          {
+            "chunk_id": "435c541f73da31820a6b3a5ad59a958d62285171686bffd9f2b238dbe4226333",
+            "end_us": 6000000,
+            "episode_id": "ep-97a1a39b2e9490b6",
+            "origin_us": 0,
+            "rank": 8,
+            "score": 0.4026145339012146,
+            "selected_pts_us": [
+              4000000,
+              4500000,
+              5000000,
+              5500000
+            ],
+            "selected_raw_pts": [
+              40960,
+              46080,
+              51200,
+              56320
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 4000000,
+            "time_base": "1/10240",
+            "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+          },
+          {
+            "chunk_id": "d69be28687d11a97afb588f82885623b3172ea0ca87015918f981307f91dcd6e",
+            "end_us": 10000000,
+            "episode_id": "ep-327429c08d46e616",
+            "origin_us": 0,
+            "rank": 9,
+            "score": 0.40104401111602783,
+            "selected_pts_us": [
+              8000000,
+              8500000,
+              9000000,
+              9500000
+            ],
+            "selected_raw_pts": [
+              81920,
+              87040,
+              92160,
+              97280
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 8000000,
+            "time_base": "1/10240",
+            "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+          },
+          {
+            "chunk_id": "c79e0e4b0110e33f708c61ee1f186eca5be92e1df22a8d65c94a1d0a485d003c",
+            "end_us": 4000000,
+            "episode_id": "ep-368d6331fc690a2c",
+            "origin_us": 0,
+            "rank": 10,
+            "score": 0.40096747875213623,
+            "selected_pts_us": [
+              2000000,
+              2500000,
+              3000000,
+              3500000
+            ],
+            "selected_raw_pts": [
+              20480,
+              25600,
+              30720,
+              35840
+            ],
+            "split": "development",
+            "split_group": "g03",
+            "start_us": 2000000,
+            "time_base": "1/10240",
+            "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+          }
+        ],
+        "metrics": {
+          "1": {
+            "best_iou": null,
+            "interval_recall": null,
+            "matched": 0,
+            "relevant": 0,
+            "success": null
+          },
+          "10": {
+            "best_iou": null,
+            "interval_recall": null,
+            "matched": 0,
+            "relevant": 0,
+            "success": null
+          },
+          "5": {
+            "best_iou": null,
+            "interval_recall": null,
+            "matched": 0,
+            "relevant": 0,
+            "success": null
+          }
+        },
+        "quality": "negative_control_no_generated_action",
+        "query": "A person watering houseplants",
+        "random_interval_recall_at_5": null,
+        "random_success_at_5": null,
+        "ranking_seconds": 3.200001083314419e-05,
+        "returned_hits": 10,
+        "top_score": 0.4130631685256958
+      }
+    ],
+    "random_interval_recall_at_5": 0.08937500000000001,
+    "random_success_at_5": 0.2525,
+    "split": "development",
+    "unsupported_queries": 2
+  },
+  "mode": "native_video",
+  "protocol_sha256": "0cd02911406d164b702420bd0ec6e4b259d71bcd099f45279f3f47a2f956c12d",
+  "query_vectors_sha256": "303d7a8f422bfcd205a1cae68ee372d67d1ceb369e1eb47acac76aa58c55b575",
+  "script_sha256": "c6efa155da1592aeb2ec67ba412b38629bee8cbb64aba560792e973be055e331",
+  "space": {
+    "adapter": "qwen3-vl-native-official-fp32-v1",
+    "adapter_source": "3743f74f704a4b9fa831cc9e5cf6230425be7514ec6cda2684d0ca087021cfa3",
+    "artifacts": "b54ff71dd970ab734fdd24dcbe4be01553bf8cb762b8acb1c195669678596e95",
+    "dimension": 2048,
+    "dtype": "float32",
+    "image_size": [
+      320,
+      240
+    ],
+    "instruction": "Represent the user's input.",
+    "max_frames": 32,
+    "mlx_source": "53c55a9c3831cced6b9651967888a6be13564440a475eec6af70427cae6c1ebf",
+    "mlx_vlm": "git:6452614f6de04694d1e34fd13abaca11f6ffb994",
+    "mode": "native_video",
+    "model_id": "Qwen/Qwen3-VL-Embedding-2B",
+    "normalization": "l2",
+    "pooling": "last-unmasked-token-then-fp32-l2",
+    "processor": "transformers.Qwen3VLProcessor-5.16.1-checkpoint-template",
+    "quantization": "none-fp32",
+    "resize": "PIL-bicubic-320x240-then-official-torchvision-bicubic",
+    "revision": "9f2f7e710d6d81056aa5c0a4f04764fec6bb7bda",
+    "runtime": [
+      [
+        "av",
+        "17.1.0"
+      ],
+      [
+        "mlx",
+        "0.32.2"
+      ],
+      [
+        "mlx-metal",
+        "0.32.2"
+      ],
+      [
+        "numpy",
+        "2.4.6"
+      ],
+      [
+        "pillow",
+        "12.3.0"
+      ],
+      [
+        "torch",
+        "2.14.0"
+      ],
+      [
+        "torchvision",
+        "0.29.0"
+      ],
+      [
+        "transformers",
+        "5.16.1"
+      ]
+    ],
+    "sampling": "first-PTS-at-or-after-grid-v1",
+    "temporal": "actual-selected-PTS-relative-to-clip-us-repeat-last-frame-and-PTS-v1",
+    "transformers": "5.16.1",
+    "wrapper_sha256": "f265fecc0c4de4d896e7ef14a9e51bfc43f2e20f344c7f6e0d2c3b30c0265a73"
+  },
+  "space_id": "2610572d944abb10b0366c2b00aaf87e701b6f6bb6656b022eca66dd230edecd"
+}

@@ -451,3 +451,55 @@ Review `scripts/04-compare-native-pooled.py`, the frozen protocol, source manife
 
 ### Technical details
 Native output: `output/native-pooled-comparison-v1/native`. Pooled index: `78b4ccb4780da259733f3ab253cf359b759b147da556b90b7af6421b02eb8a1b`. Native index: `ed99514634df6f1c8f952be1ce54a281ebf80a576f98806c3e894dfda7d9eb23`.
+
+## Step 9: Record native retrieval gains, remaining misses, and cache reuse
+
+The fixed development comparison completed without an inference failure. Native Interval Recall@5 is 0.4375 versus pooled 0.25, while Success@5 is unchanged at 0.50. Both systems miss both microwave families at K=5. These are system-level exploratory results with weak relevance labels, not evidence that temporal encoding alone caused the difference.
+
+### Prompt Context
+**User prompt (verbatim):** See Step 8 and `various/native-pooled-v1/user-handoff.txt`.
+
+**Assistant interpretation:** Finish the matched comparison and retain enough evidence to inspect and reproduce it.
+
+**Inferred user intent:** Use the repaired MLX runtime in actual work while preserving a credible comparison with pooled images.
+
+**Commit (code):** `4483cbd` — Add frozen development comparison for repaired native and pooled video retrieval.
+
+### What I did
+- Encoded all six frozen queries separately in the native and pooled environments and rejected any query/index space mismatch.
+- Saved both complete ranking reports, query vectors, index manifests, aggregate comparison, and a fixed-source screenshot page.
+- Decoded eight actual source frames for the first-ranked opening-fridge result in each system, checked source hashes, captured and visually inspected the browser screenshot.
+- Repeated the native index build: 55 reused clips, zero fresh clips, identical index identity; 0.0267 seconds inside the build function.
+- Updated the search ticket, README, comparison report, and completed follow-up task list.
+
+### Why
+A repaired model should be evaluated using matched observations and unchanged queries. Raw cosine magnitude is not comparable calibrated confidence across different model spaces.
+
+### What worked
+- Main tests: `workbench/.venv/bin/python -m pytest workbench/tests -q` → 34 passed, one skipped, two existing deprecation warnings.
+- Exact source evidence matching and frozen query checks passed. Four positive families and two unsupported queries were retained in both reports.
+- Native Success@10 improved from 0.50 to 0.75; Recall@10 improved from 0.375 to 0.6875.
+- Both plan and completion slips printed with HTTP 200; completion receipt is 2026-09-06T20:56:29Z.
+- `docmgr doctor --ticket VIDEO-SEARCH-001` passed.
+
+### What didn't work
+- Both systems missed opening and closing microwave interiors at K=5. Unsupported dog/garden and watering-plant queries still return hits; no abstention threshold was fitted.
+- The static browser initially requested `/favicon.ico` and received 404. Added an explicit empty favicon to the renderer; all eight source images loaded at native width 640.
+
+### What I learned
+The K=5 recall improvement reflects more fridge interiors recovered, not a new solved action family. The common seeded random baseline has Success@5 0.2525 and Recall@5 0.089375.
+
+### What was tricky to build
+The native repeat build overwrites only its own latest-build summary. The first-build timing remains archived in `comparison.json`, while `reuse-build.json` preserves the separate cache verification. Model loading is excluded from both build timings, and pooled encoding was reused rather than timed anew.
+
+### What warrants a second pair of eyes
+FP32 versus 4-bit model artifacts and preprocessing remain confounded with native temporal encoding. One development group and weak program interiors limit generalization. No held-out ranking or default-mode change was performed.
+
+### What should be done in the future
+Use the explicit native path for broader visually reviewed evaluation; include matched-precision controls before attributing gains to temporal modeling. Expand microwave and scene coverage before promotion.
+
+### Code review instructions
+Start with `reference/04-repaired-native-video-versus-pooled-images-development-comparison.md`, then inspect the equality assertions in script 04, raw ranked hits, protocol hashes, and source-frame screenshot in `various/native-pooled-v1/`.
+
+### Technical details
+Review page: `http://127.0.0.1:8775/comparison.html`. Native index root: `output/native-pooled-comparison-v1/native`. Existing pooled cache/environment/results are preserved. Ticket artifacts include both feature-space manifests and query vector hashes; large model weights and index vectors remain in ignored output storage.

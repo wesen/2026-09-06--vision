@@ -31,3 +31,8 @@
 - [x] Run bounded development window/FPS sweep and freeze selected configuration.
 - [x] Run final test partition with Success@K, interval Recall@K, and resource metrics.
 - [x] Publish reproducible index/evaluation report and shared decoder/cache handoff.
+
+## Repaired native-video adoption
+
+- [x] Build the accepted FP32 native development index and verify exact pooled source/PTS parity.
+- [x] Compare fixed queries and preserve raw results, screenshot evidence, and cache reuse.

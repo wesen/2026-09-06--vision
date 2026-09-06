@@ -56,3 +56,11 @@ Published a 6,247-word textbook-style technical article with three Mermaid diagr
 MLX-VIDEO-FIX-001 completed the wrapper repair and explicit FP32 native mode. The repair is pushed to `wesen/mlx-vlm` at `6452614`; workbench integration is commit `127921a`. Eight official-reference FP32 cases and a nine-clip development build/reuse passed. Native uses its own runtime, processor/PTS contract and clip-cache identity. The existing pooled-image baseline and environment remain available; quantized native rollout and semantic superiority are not accepted claims.
 
 See [the root-cause and review handoff](../MLX-VIDEO-FIX-001--repair-native-video-pixel-forwarding-in-the-mlx-embedding-wrapper/reference/03-root-cause-and-review-handoff.md). The 6,805-word textbook report is committed and pushed in go-go-parc at `02925f6`. No public PR or issue was created; the user is reviewing the fork personally.
+
+## Repaired native-video follow-up
+
+The accepted FP32 path was compared with the preserved pooled baseline on 55 exactly matched development clips at 2 seconds and 2 FPS. Interval Recall@5 improved from 0.25 to 0.4375; Success@5 remained 0.50. Both microwave families still failed at K=5.
+
+- [Native versus pooled development comparison](reference/04-repaired-native-video-versus-pooled-images-development-comparison.md)
+- [Frozen metrics and source equality](various/native-pooled-v1/comparison.json)
+- [Browser evidence](various/native-pooled-v1/comparison-browser.png)

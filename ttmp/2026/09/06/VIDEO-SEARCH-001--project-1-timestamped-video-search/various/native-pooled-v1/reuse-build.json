@@ -1,0 +1,9 @@
+{
+  "chunks": 55,
+  "elapsed_seconds": 0.026664749952033162,
+  "feature_bytes": 450688,
+  "fresh_clips": 0,
+  "index_id": "ed99514634df6f1c8f952be1ce54a281ebf80a576f98806c3e894dfda7d9eb23",
+  "manifest": "output/native-pooled-comparison-v1/native/indices/ed99514634df6f1c8f952be1ce54a281ebf80a576f98806c3e894dfda7d9eb23/manifest.json",
+  "reused_clips": 55
+}

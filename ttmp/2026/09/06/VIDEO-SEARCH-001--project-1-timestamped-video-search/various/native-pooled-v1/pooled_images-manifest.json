@@ -1,0 +1,1352 @@
+{
+  "array_sha256": "315f7cfc9baa6adcd9d0f498d137643b372a73ca76239f21bc9fba3146e2ab21",
+  "chunks": [
+    {
+      "chunk_id": "b73cccf20b8500a361de5fc3f2494b492f9ab86c4ffa7df596342787b02009c3",
+      "end_us": 2000000,
+      "episode_id": "ep-1ba09e07399f4a30",
+      "origin_us": 0,
+      "selected_pts_us": [
+        0,
+        500000,
+        1000000,
+        1500000
+      ],
+      "selected_raw_pts": [
+        0,
+        5120,
+        10240,
+        15360
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 0,
+      "time_base": "1/10240",
+      "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+    },
+    {
+      "chunk_id": "371fa7a4d9e9e8ab4561d99441282b4c2a516b0bbbd2d61da9805d57a24eb1b1",
+      "end_us": 4000000,
+      "episode_id": "ep-1ba09e07399f4a30",
+      "origin_us": 0,
+      "selected_pts_us": [
+        2000000,
+        2500000,
+        3000000,
+        3500000
+      ],
+      "selected_raw_pts": [
+        20480,
+        25600,
+        30720,
+        35840
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 2000000,
+      "time_base": "1/10240",
+      "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+    },
+    {
+      "chunk_id": "365c2717d740d03188e669d24c18f1bec8108f6bc91636c4f4475b6ed7dd4ef9",
+      "end_us": 6000000,
+      "episode_id": "ep-1ba09e07399f4a30",
+      "origin_us": 0,
+      "selected_pts_us": [
+        4000000,
+        4500000,
+        5000000,
+        5500000
+      ],
+      "selected_raw_pts": [
+        40960,
+        46080,
+        51200,
+        56320
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 4000000,
+      "time_base": "1/10240",
+      "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+    },
+    {
+      "chunk_id": "d8efcc3771b18d31ff150800b0cab527730da5f4bf8df2523a844d33acff3b83",
+      "end_us": 8000000,
+      "episode_id": "ep-1ba09e07399f4a30",
+      "origin_us": 0,
+      "selected_pts_us": [
+        6000000,
+        6500000,
+        7000000,
+        7500000
+      ],
+      "selected_raw_pts": [
+        61440,
+        66560,
+        71680,
+        76800
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 6000000,
+      "time_base": "1/10240",
+      "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+    },
+    {
+      "chunk_id": "77f64a96efabbf7e1415fa3a0ccacfc1c6c021b5bf8698c8bb99a75081a33fdc",
+      "end_us": 10000000,
+      "episode_id": "ep-1ba09e07399f4a30",
+      "origin_us": 0,
+      "selected_pts_us": [
+        8000000,
+        8500000,
+        9000000,
+        9500000
+      ],
+      "selected_raw_pts": [
+        81920,
+        87040,
+        92160,
+        97280
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 8000000,
+      "time_base": "1/10240",
+      "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+    },
+    {
+      "chunk_id": "c24fb5ebeb509d3cb55e509fef3f870fa4a803f52107d95d95ff691240b102ec",
+      "end_us": 12000000,
+      "episode_id": "ep-1ba09e07399f4a30",
+      "origin_us": 0,
+      "selected_pts_us": [
+        10000000,
+        10500000,
+        11000000,
+        11500000
+      ],
+      "selected_raw_pts": [
+        102400,
+        107520,
+        112640,
+        117760
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 10000000,
+      "time_base": "1/10240",
+      "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+    },
+    {
+      "chunk_id": "c60388ded12e798838dbdd94f8473fcb23aac5ae759a85d329d01d01f1c0c310",
+      "end_us": 12600000,
+      "episode_id": "ep-1ba09e07399f4a30",
+      "origin_us": 0,
+      "selected_pts_us": [
+        12000000,
+        12500000
+      ],
+      "selected_raw_pts": [
+        122880,
+        128000
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 12000000,
+      "time_base": "1/10240",
+      "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+    },
+    {
+      "chunk_id": "74646fd0e1718da01620adc4baca5a4556798ff3eff114b4cc19585779b98001",
+      "end_us": 2000000,
+      "episode_id": "ep-327429c08d46e616",
+      "origin_us": 0,
+      "selected_pts_us": [
+        0,
+        500000,
+        1000000,
+        1500000
+      ],
+      "selected_raw_pts": [
+        0,
+        5120,
+        10240,
+        15360
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 0,
+      "time_base": "1/10240",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "chunk_id": "a34c7716222290cb782657e0c8a6f52cbf7582f3b52a52b3f98cc620739fba5b",
+      "end_us": 4000000,
+      "episode_id": "ep-327429c08d46e616",
+      "origin_us": 0,
+      "selected_pts_us": [
+        2000000,
+        2500000,
+        3000000,
+        3500000
+      ],
+      "selected_raw_pts": [
+        20480,
+        25600,
+        30720,
+        35840
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 2000000,
+      "time_base": "1/10240",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "chunk_id": "2ebfb5465095fae14d29dfc10e885bdfac3108ee2f84b5636f0b72ee50a28c29",
+      "end_us": 6000000,
+      "episode_id": "ep-327429c08d46e616",
+      "origin_us": 0,
+      "selected_pts_us": [
+        4000000,
+        4500000,
+        5000000,
+        5500000
+      ],
+      "selected_raw_pts": [
+        40960,
+        46080,
+        51200,
+        56320
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 4000000,
+      "time_base": "1/10240",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "chunk_id": "7ce16beab889120879479cb3ccd9dfbc5090951fd1b5450e702843d95a201c95",
+      "end_us": 8000000,
+      "episode_id": "ep-327429c08d46e616",
+      "origin_us": 0,
+      "selected_pts_us": [
+        6000000,
+        6500000,
+        7000000,
+        7500000
+      ],
+      "selected_raw_pts": [
+        61440,
+        66560,
+        71680,
+        76800
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 6000000,
+      "time_base": "1/10240",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "chunk_id": "56d88245bf5fa97aff33fe613d4b9e5dab8ac95daa7ce39402b56e6a07e1f7d2",
+      "end_us": 10000000,
+      "episode_id": "ep-327429c08d46e616",
+      "origin_us": 0,
+      "selected_pts_us": [
+        8000000,
+        8500000,
+        9000000,
+        9500000
+      ],
+      "selected_raw_pts": [
+        81920,
+        87040,
+        92160,
+        97280
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 8000000,
+      "time_base": "1/10240",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "chunk_id": "1ef6b2ca8def8f4e11b4f5ec842752d809ed493fcbf9f87e5562028e1508b55c",
+      "end_us": 12000000,
+      "episode_id": "ep-327429c08d46e616",
+      "origin_us": 0,
+      "selected_pts_us": [
+        10000000,
+        10500000,
+        11000000,
+        11500000
+      ],
+      "selected_raw_pts": [
+        102400,
+        107520,
+        112640,
+        117760
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 10000000,
+      "time_base": "1/10240",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "chunk_id": "472c00081a663744fb297e936fc67dac14ce8a52deb28dce688b8d65de328194",
+      "end_us": 14000000,
+      "episode_id": "ep-327429c08d46e616",
+      "origin_us": 0,
+      "selected_pts_us": [
+        12000000,
+        12500000,
+        13000000,
+        13500000
+      ],
+      "selected_raw_pts": [
+        122880,
+        128000,
+        133120,
+        138240
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 12000000,
+      "time_base": "1/10240",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "chunk_id": "0b0a8b5bc116382eb107ce9f72a2f595d9d7b92c4819f5a3a07bcf303b719ed2",
+      "end_us": 16000000,
+      "episode_id": "ep-327429c08d46e616",
+      "origin_us": 0,
+      "selected_pts_us": [
+        14000000,
+        14500000,
+        15000000,
+        15500000
+      ],
+      "selected_raw_pts": [
+        143360,
+        148480,
+        153600,
+        158720
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 14000000,
+      "time_base": "1/10240",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "chunk_id": "2c63657f729ac3e2f60840d3dd91fa903054e730602b25bcc8138b2b915e7fbd",
+      "end_us": 18000000,
+      "episode_id": "ep-327429c08d46e616",
+      "origin_us": 0,
+      "selected_pts_us": [
+        16000000,
+        16500000,
+        17000000,
+        17500000
+      ],
+      "selected_raw_pts": [
+        163840,
+        168960,
+        174080,
+        179200
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 16000000,
+      "time_base": "1/10240",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "chunk_id": "7c572f4b2eb4edf0b0d2eee19ab5721817fee31c28afa7dac42f58551dc1033b",
+      "end_us": 20000000,
+      "episode_id": "ep-327429c08d46e616",
+      "origin_us": 0,
+      "selected_pts_us": [
+        18000000,
+        18500000,
+        19000000,
+        19500000
+      ],
+      "selected_raw_pts": [
+        184320,
+        189440,
+        194560,
+        199680
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 18000000,
+      "time_base": "1/10240",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "chunk_id": "4f39022a724fb6c61b4d2325a5e86e81fa9632ef3c6efdb3b5e808f81e51af23",
+      "end_us": 22000000,
+      "episode_id": "ep-327429c08d46e616",
+      "origin_us": 0,
+      "selected_pts_us": [
+        20000000,
+        20500000,
+        21000000,
+        21500000
+      ],
+      "selected_raw_pts": [
+        204800,
+        209920,
+        215040,
+        220160
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 20000000,
+      "time_base": "1/10240",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "chunk_id": "278bb024b2f320258f9ecaaa1fc6955ef363180eb55ff31e650d1caa5138fd87",
+      "end_us": 22900000,
+      "episode_id": "ep-327429c08d46e616",
+      "origin_us": 0,
+      "selected_pts_us": [
+        22000000,
+        22500000
+      ],
+      "selected_raw_pts": [
+        225280,
+        230400
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 22000000,
+      "time_base": "1/10240",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "chunk_id": "b3c831f91f03363f7eee3e314a497e6d602875a35d76f57450f5085d9fde1fa8",
+      "end_us": 2000000,
+      "episode_id": "ep-368d6331fc690a2c",
+      "origin_us": 0,
+      "selected_pts_us": [
+        0,
+        500000,
+        1000000,
+        1500000
+      ],
+      "selected_raw_pts": [
+        0,
+        5120,
+        10240,
+        15360
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 0,
+      "time_base": "1/10240",
+      "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+    },
+    {
+      "chunk_id": "e0a1bd0d8fe4af5de7b703da384f09fb8827dc2ebaf44b3746cdc6d039211204",
+      "end_us": 4000000,
+      "episode_id": "ep-368d6331fc690a2c",
+      "origin_us": 0,
+      "selected_pts_us": [
+        2000000,
+        2500000,
+        3000000,
+        3500000
+      ],
+      "selected_raw_pts": [
+        20480,
+        25600,
+        30720,
+        35840
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 2000000,
+      "time_base": "1/10240",
+      "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+    },
+    {
+      "chunk_id": "5081aeaa249ee84bc93b176d6fb238f8690cbe0d307d56d2fd014cd517196501",
+      "end_us": 6000000,
+      "episode_id": "ep-368d6331fc690a2c",
+      "origin_us": 0,
+      "selected_pts_us": [
+        4000000,
+        4500000,
+        5000000,
+        5500000
+      ],
+      "selected_raw_pts": [
+        40960,
+        46080,
+        51200,
+        56320
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 4000000,
+      "time_base": "1/10240",
+      "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+    },
+    {
+      "chunk_id": "c5180fb4c551b7b66e5a5477fe239aaa078e93b230e49b2971915361a72103d2",
+      "end_us": 8000000,
+      "episode_id": "ep-368d6331fc690a2c",
+      "origin_us": 0,
+      "selected_pts_us": [
+        6000000,
+        6500000,
+        7000000,
+        7500000
+      ],
+      "selected_raw_pts": [
+        61440,
+        66560,
+        71680,
+        76800
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 6000000,
+      "time_base": "1/10240",
+      "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+    },
+    {
+      "chunk_id": "c6f78c246c8327d9cdd95a2146d2d080ca729dc0ac16c82deeda4188c4382717",
+      "end_us": 10000000,
+      "episode_id": "ep-368d6331fc690a2c",
+      "origin_us": 0,
+      "selected_pts_us": [
+        8000000,
+        8500000,
+        9000000,
+        9500000
+      ],
+      "selected_raw_pts": [
+        81920,
+        87040,
+        92160,
+        97280
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 8000000,
+      "time_base": "1/10240",
+      "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+    },
+    {
+      "chunk_id": "1624929650e695c739d6892ed5bee32a982861d3ccedecb3bf4c70163fac1360",
+      "end_us": 12000000,
+      "episode_id": "ep-368d6331fc690a2c",
+      "origin_us": 0,
+      "selected_pts_us": [
+        10000000,
+        10500000,
+        11000000,
+        11500000
+      ],
+      "selected_raw_pts": [
+        102400,
+        107520,
+        112640,
+        117760
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 10000000,
+      "time_base": "1/10240",
+      "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+    },
+    {
+      "chunk_id": "7d8ece71d32e5482212d4023d702c01407b14a60094b5b4fc2e037bf2d46fe2d",
+      "end_us": 14000000,
+      "episode_id": "ep-368d6331fc690a2c",
+      "origin_us": 0,
+      "selected_pts_us": [
+        12000000,
+        12500000,
+        13000000,
+        13500000
+      ],
+      "selected_raw_pts": [
+        122880,
+        128000,
+        133120,
+        138240
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 12000000,
+      "time_base": "1/10240",
+      "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+    },
+    {
+      "chunk_id": "90111279df8aa0f86652566dccf0193658bbc339034ed5a7a0ce886daa7e0fb1",
+      "end_us": 16000000,
+      "episode_id": "ep-368d6331fc690a2c",
+      "origin_us": 0,
+      "selected_pts_us": [
+        14000000,
+        14500000,
+        15000000,
+        15500000
+      ],
+      "selected_raw_pts": [
+        143360,
+        148480,
+        153600,
+        158720
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 14000000,
+      "time_base": "1/10240",
+      "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+    },
+    {
+      "chunk_id": "1519d061227ddac19b50c6093f58622d1cd721c9ca2dd5800951a6f3cc559778",
+      "end_us": 18000000,
+      "episode_id": "ep-368d6331fc690a2c",
+      "origin_us": 0,
+      "selected_pts_us": [
+        16000000,
+        16500000,
+        17000000,
+        17500000
+      ],
+      "selected_raw_pts": [
+        163840,
+        168960,
+        174080,
+        179200
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 16000000,
+      "time_base": "1/10240",
+      "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+    },
+    {
+      "chunk_id": "1350acf89d34f5c41772cbf5ba890411631deeed5d9b34b38ae16cf9989c938f",
+      "end_us": 2000000,
+      "episode_id": "ep-97a1a39b2e9490b6",
+      "origin_us": 0,
+      "selected_pts_us": [
+        0,
+        500000,
+        1000000,
+        1500000
+      ],
+      "selected_raw_pts": [
+        0,
+        5120,
+        10240,
+        15360
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 0,
+      "time_base": "1/10240",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+    },
+    {
+      "chunk_id": "193e951be8e108f7fd26f175aab3e0585b27c67ebef148c60d0c5398b44c90d3",
+      "end_us": 4000000,
+      "episode_id": "ep-97a1a39b2e9490b6",
+      "origin_us": 0,
+      "selected_pts_us": [
+        2000000,
+        2500000,
+        3000000,
+        3500000
+      ],
+      "selected_raw_pts": [
+        20480,
+        25600,
+        30720,
+        35840
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 2000000,
+      "time_base": "1/10240",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+    },
+    {
+      "chunk_id": "79d8b1624f56aba336806ea05dab303968775dec835a14e4c302088b85998a82",
+      "end_us": 6000000,
+      "episode_id": "ep-97a1a39b2e9490b6",
+      "origin_us": 0,
+      "selected_pts_us": [
+        4000000,
+        4500000,
+        5000000,
+        5500000
+      ],
+      "selected_raw_pts": [
+        40960,
+        46080,
+        51200,
+        56320
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 4000000,
+      "time_base": "1/10240",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+    },
+    {
+      "chunk_id": "ba9756421ea178c64b4184472b79f72239665157bef29943a29a847395c67629",
+      "end_us": 8000000,
+      "episode_id": "ep-97a1a39b2e9490b6",
+      "origin_us": 0,
+      "selected_pts_us": [
+        6000000,
+        6500000,
+        7000000,
+        7500000
+      ],
+      "selected_raw_pts": [
+        61440,
+        66560,
+        71680,
+        76800
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 6000000,
+      "time_base": "1/10240",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+    },
+    {
+      "chunk_id": "a1bfb37535aebceb61f71b22d6723892a7fe2bd62e2d05c98c0ebba17d0e8728",
+      "end_us": 10000000,
+      "episode_id": "ep-97a1a39b2e9490b6",
+      "origin_us": 0,
+      "selected_pts_us": [
+        8000000,
+        8500000,
+        9000000,
+        9500000
+      ],
+      "selected_raw_pts": [
+        81920,
+        87040,
+        92160,
+        97280
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 8000000,
+      "time_base": "1/10240",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+    },
+    {
+      "chunk_id": "ea8c0218cb8a1ceeeba66632bed8904d245c205936dd54dc5bc85d2a5b3ebfa1",
+      "end_us": 12000000,
+      "episode_id": "ep-97a1a39b2e9490b6",
+      "origin_us": 0,
+      "selected_pts_us": [
+        10000000,
+        10500000,
+        11000000,
+        11500000
+      ],
+      "selected_raw_pts": [
+        102400,
+        107520,
+        112640,
+        117760
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 10000000,
+      "time_base": "1/10240",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+    },
+    {
+      "chunk_id": "f3016e264f2d1a239ac4beddfb58b0e281d3355ba4fee703d86ac0a6214817bc",
+      "end_us": 12800000,
+      "episode_id": "ep-97a1a39b2e9490b6",
+      "origin_us": 0,
+      "selected_pts_us": [
+        12000000,
+        12500000
+      ],
+      "selected_raw_pts": [
+        122880,
+        128000
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 12000000,
+      "time_base": "1/10240",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+    },
+    {
+      "chunk_id": "b0f2d638eefc43cb8e3c06300b8d0cba6ae8f2a5fc8eb73817fc001d11d0766a",
+      "end_us": 2000000,
+      "episode_id": "ep-c2ad5c5f7b67a9a8",
+      "origin_us": 0,
+      "selected_pts_us": [
+        0,
+        500000,
+        1000000,
+        1500000
+      ],
+      "selected_raw_pts": [
+        0,
+        5120,
+        10240,
+        15360
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 0,
+      "time_base": "1/10240",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+    },
+    {
+      "chunk_id": "6e584f7efb0c5d2c3879b5157fea91b082ebc38796d2018d2fc524873cab2c57",
+      "end_us": 4000000,
+      "episode_id": "ep-c2ad5c5f7b67a9a8",
+      "origin_us": 0,
+      "selected_pts_us": [
+        2000000,
+        2500000,
+        3000000,
+        3500000
+      ],
+      "selected_raw_pts": [
+        20480,
+        25600,
+        30720,
+        35840
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 2000000,
+      "time_base": "1/10240",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+    },
+    {
+      "chunk_id": "81492069dabb2b45238a4d1ae8fb20864064474902e6d0c59a0e2d9a2c8e3f0f",
+      "end_us": 6000000,
+      "episode_id": "ep-c2ad5c5f7b67a9a8",
+      "origin_us": 0,
+      "selected_pts_us": [
+        4000000,
+        4500000,
+        5000000,
+        5500000
+      ],
+      "selected_raw_pts": [
+        40960,
+        46080,
+        51200,
+        56320
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 4000000,
+      "time_base": "1/10240",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+    },
+    {
+      "chunk_id": "6c466986266f894d9c27ac6bc853f44a9e5f9ddbf7bfddd434d793d9b5ddd327",
+      "end_us": 8000000,
+      "episode_id": "ep-c2ad5c5f7b67a9a8",
+      "origin_us": 0,
+      "selected_pts_us": [
+        6000000,
+        6500000,
+        7000000,
+        7500000
+      ],
+      "selected_raw_pts": [
+        61440,
+        66560,
+        71680,
+        76800
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 6000000,
+      "time_base": "1/10240",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+    },
+    {
+      "chunk_id": "141964b8f343079d709115d56697950ce028b02cc2c75b3fd89f009c9cff0bed",
+      "end_us": 10000000,
+      "episode_id": "ep-c2ad5c5f7b67a9a8",
+      "origin_us": 0,
+      "selected_pts_us": [
+        8000000,
+        8500000,
+        9000000,
+        9500000
+      ],
+      "selected_raw_pts": [
+        81920,
+        87040,
+        92160,
+        97280
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 8000000,
+      "time_base": "1/10240",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+    },
+    {
+      "chunk_id": "5c6fa49e33384f91d25de3ec822391cdaa9be5e3b4b9acf46008372755cd16d4",
+      "end_us": 12000000,
+      "episode_id": "ep-c2ad5c5f7b67a9a8",
+      "origin_us": 0,
+      "selected_pts_us": [
+        10000000,
+        10500000,
+        11000000,
+        11500000
+      ],
+      "selected_raw_pts": [
+        102400,
+        107520,
+        112640,
+        117760
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 10000000,
+      "time_base": "1/10240",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+    },
+    {
+      "chunk_id": "263f1b9e3c612f5dfcd43d0894b1af47ed214e3532cc53ec8a6e8e0019d815aa",
+      "end_us": 14000000,
+      "episode_id": "ep-c2ad5c5f7b67a9a8",
+      "origin_us": 0,
+      "selected_pts_us": [
+        12000000,
+        12500000,
+        13000000,
+        13500000
+      ],
+      "selected_raw_pts": [
+        122880,
+        128000,
+        133120,
+        138240
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 12000000,
+      "time_base": "1/10240",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+    },
+    {
+      "chunk_id": "bcb802903cd66fa9e432d03da0e5d967356fcad4ab5b3369f826853395cb2157",
+      "end_us": 16000000,
+      "episode_id": "ep-c2ad5c5f7b67a9a8",
+      "origin_us": 0,
+      "selected_pts_us": [
+        14000000,
+        14500000,
+        15000000,
+        15500000
+      ],
+      "selected_raw_pts": [
+        143360,
+        148480,
+        153600,
+        158720
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 14000000,
+      "time_base": "1/10240",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+    },
+    {
+      "chunk_id": "a7514b6aca1946965e59b8d1d2ed08bade4ac33f107ed5a26732cd87ecce58e6",
+      "end_us": 17500000,
+      "episode_id": "ep-c2ad5c5f7b67a9a8",
+      "origin_us": 0,
+      "selected_pts_us": [
+        16000000,
+        16500000,
+        17000000
+      ],
+      "selected_raw_pts": [
+        163840,
+        168960,
+        174080
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 16000000,
+      "time_base": "1/10240",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+    },
+    {
+      "chunk_id": "443c9c00cb88770e1d362fdcac4148ff7241f4bf135eb6c534c94533e27f5a3c",
+      "end_us": 2000000,
+      "episode_id": "ep-e9c9ef6801285914",
+      "origin_us": 0,
+      "selected_pts_us": [
+        0,
+        500000,
+        1000000,
+        1500000
+      ],
+      "selected_raw_pts": [
+        0,
+        5120,
+        10240,
+        15360
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 0,
+      "time_base": "1/10240",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    },
+    {
+      "chunk_id": "f0faa376a6d373e20195168b8d9ab0b496ac3f7c9ce7b37dbd99c5ca69137aed",
+      "end_us": 4000000,
+      "episode_id": "ep-e9c9ef6801285914",
+      "origin_us": 0,
+      "selected_pts_us": [
+        2000000,
+        2500000,
+        3000000,
+        3500000
+      ],
+      "selected_raw_pts": [
+        20480,
+        25600,
+        30720,
+        35840
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 2000000,
+      "time_base": "1/10240",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    },
+    {
+      "chunk_id": "fefbd3b0d2367b24579fdab7da183fe68efd98ab00d218545c461c4f10af0c1b",
+      "end_us": 6000000,
+      "episode_id": "ep-e9c9ef6801285914",
+      "origin_us": 0,
+      "selected_pts_us": [
+        4000000,
+        4500000,
+        5000000,
+        5500000
+      ],
+      "selected_raw_pts": [
+        40960,
+        46080,
+        51200,
+        56320
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 4000000,
+      "time_base": "1/10240",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    },
+    {
+      "chunk_id": "a448eaac83ea681526c0481d74f4b9bb5740289329605d94d320f16cf5a18612",
+      "end_us": 8000000,
+      "episode_id": "ep-e9c9ef6801285914",
+      "origin_us": 0,
+      "selected_pts_us": [
+        6000000,
+        6500000,
+        7000000,
+        7500000
+      ],
+      "selected_raw_pts": [
+        61440,
+        66560,
+        71680,
+        76800
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 6000000,
+      "time_base": "1/10240",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    },
+    {
+      "chunk_id": "2efb7343b0ccd93cd815d8af4c147520bf5c938ba867f8d50c982794895ae18c",
+      "end_us": 10000000,
+      "episode_id": "ep-e9c9ef6801285914",
+      "origin_us": 0,
+      "selected_pts_us": [
+        8000000,
+        8500000,
+        9000000,
+        9500000
+      ],
+      "selected_raw_pts": [
+        81920,
+        87040,
+        92160,
+        97280
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 8000000,
+      "time_base": "1/10240",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    },
+    {
+      "chunk_id": "a84254654c1dcbf032877662c75bb8729b7c167f1ff142047b93853814facfb4",
+      "end_us": 12000000,
+      "episode_id": "ep-e9c9ef6801285914",
+      "origin_us": 0,
+      "selected_pts_us": [
+        10000000,
+        10500000,
+        11000000,
+        11500000
+      ],
+      "selected_raw_pts": [
+        102400,
+        107520,
+        112640,
+        117760
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 10000000,
+      "time_base": "1/10240",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    },
+    {
+      "chunk_id": "c1230b5d15f893637163ef94c8f09f75ea1a793077b850d3c6f8fbfd8d1b2c9f",
+      "end_us": 14000000,
+      "episode_id": "ep-e9c9ef6801285914",
+      "origin_us": 0,
+      "selected_pts_us": [
+        12000000,
+        12500000,
+        13000000,
+        13500000
+      ],
+      "selected_raw_pts": [
+        122880,
+        128000,
+        133120,
+        138240
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 12000000,
+      "time_base": "1/10240",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    },
+    {
+      "chunk_id": "4a8ff871261d36e0af5948e3b6331a69e9f9ee92eb22d9bee456d639bd941af2",
+      "end_us": 16000000,
+      "episode_id": "ep-e9c9ef6801285914",
+      "origin_us": 0,
+      "selected_pts_us": [
+        14000000,
+        14500000,
+        15000000,
+        15500000
+      ],
+      "selected_raw_pts": [
+        143360,
+        148480,
+        153600,
+        158720
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 14000000,
+      "time_base": "1/10240",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    },
+    {
+      "chunk_id": "a9d8820864e835c80ad9be25d8933b35c8db8ed49a0aad708b3daad8b01c3078",
+      "end_us": 18000000,
+      "episode_id": "ep-e9c9ef6801285914",
+      "origin_us": 0,
+      "selected_pts_us": [
+        16000000,
+        16500000,
+        17000000,
+        17500000
+      ],
+      "selected_raw_pts": [
+        163840,
+        168960,
+        174080,
+        179200
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 16000000,
+      "time_base": "1/10240",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    },
+    {
+      "chunk_id": "037f5aa60bba722f541f82d2d192c5d19af3417b75e37e35866f44a8a0536e3e",
+      "end_us": 20000000,
+      "episode_id": "ep-e9c9ef6801285914",
+      "origin_us": 0,
+      "selected_pts_us": [
+        18000000,
+        18500000,
+        19000000,
+        19500000
+      ],
+      "selected_raw_pts": [
+        184320,
+        189440,
+        194560,
+        199680
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 18000000,
+      "time_base": "1/10240",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    },
+    {
+      "chunk_id": "6c38d97711e8713410e3c6f2b309bba5a35e3750a8714b3bf348b9324d5000bd",
+      "end_us": 21300000,
+      "episode_id": "ep-e9c9ef6801285914",
+      "origin_us": 0,
+      "selected_pts_us": [
+        20000000,
+        20500000,
+        21000000
+      ],
+      "selected_raw_pts": [
+        204800,
+        209920,
+        215040
+      ],
+      "split": "development",
+      "split_group": "g03",
+      "start_us": 20000000,
+      "time_base": "1/10240",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    }
+  ],
+  "corpus": [
+    {
+      "episode_id": "ep-1ba09e07399f4a30",
+      "split": "development",
+      "split_group": "g03",
+      "video_sha256": "f00c0fef030ef5c31d50d16a2e6d3fede9cc9dc59fb01082febdf84e39351d19"
+    },
+    {
+      "episode_id": "ep-327429c08d46e616",
+      "split": "development",
+      "split_group": "g03",
+      "video_sha256": "568a9066326cbc2cd80f5102bdac95a9ae9876420af924ed55c166df960b148a"
+    },
+    {
+      "episode_id": "ep-368d6331fc690a2c",
+      "split": "development",
+      "split_group": "g03",
+      "video_sha256": "55bcaa21bd8690859fc0880b27bcb698a9a034f1c34141ab460d39d7f4895f33"
+    },
+    {
+      "episode_id": "ep-97a1a39b2e9490b6",
+      "split": "development",
+      "split_group": "g03",
+      "video_sha256": "4bb9d61df3b78d3a7bf4cee242a865730994e484f5968c8135937b93ee123ba7"
+    },
+    {
+      "episode_id": "ep-c2ad5c5f7b67a9a8",
+      "split": "development",
+      "split_group": "g03",
+      "video_sha256": "45dff6138c2b7e8206679d5faaae45f7206e06ef591c2f2d88e67eb9f3b6f758"
+    },
+    {
+      "episode_id": "ep-e9c9ef6801285914",
+      "split": "development",
+      "split_group": "g03",
+      "video_sha256": "bdaf332a9bf6efe77d391371636bf9b09c62c9e873e0de8f38fad9341d1f13a8"
+    }
+  ],
+  "fps": 2.0,
+  "index_id": "78b4ccb4780da259733f3ab253cf359b759b147da556b90b7af6421b02eb8a1b",
+  "producer_files": {
+    "embedding.py": "a3ac1bbe784a798d1bb2c5c0cc66e31f8daeb2181dd71e477d8620afd3bf4215",
+    "index.py": "502d048027009be31833c4ac7cb7ba87effb016178def07f9fea66d72f82bc42",
+    "media.py": "39216c8c92fc86206eee36be5f559e46ef1b0820782a3228f000acf52a3df386"
+  },
+  "schema": 1,
+  "shape": [
+    55,
+    2048
+  ],
+  "space": {
+    "adapter": "qwen3-vl-embedding-last-token-v1",
+    "artifacts": "0c3dab9812a2ea4ef065362ed2c8ca6df1eb22ad25da9582d8cf480435fd358a",
+    "dimension": 2048,
+    "dtype": "float32",
+    "image_size": [
+      320,
+      240
+    ],
+    "instruction": "Represent the user's input.",
+    "mlx_vlm": "0.6.17",
+    "mode": "pooled_images",
+    "model_id": "arthurcollet/Qwen3-VL-Embedding-2B-mlx-4bit",
+    "normalization": "l2",
+    "pooling": "mean-of-unit-frame-vectors-then-l2",
+    "quantization": "affine-4bit-group64",
+    "resize": "PIL-bicubic",
+    "revision": "99b57b385f543a94c46d9f8e85a354de4c836b37",
+    "runtime": [
+      [
+        "mlx",
+        "0.32.2"
+      ],
+      [
+        "mlx-metal",
+        "0.32.2"
+      ],
+      [
+        "numpy",
+        "2.4.6"
+      ],
+      [
+        "pillow",
+        "12.3.0"
+      ],
+      [
+        "av",
+        "17.1.0"
+      ]
+    ],
+    "sampling": "first-PTS-at-or-after-grid-v1",
+    "transformers": "5.16.1"
+  },
+  "space_id": "9246fa13a4a2d32fbb78ba1614024d65bb44339b757497bf0e90cdd6f07a0bf4",
+  "splits": [
+    "development"
+  ],
+  "window_seconds": 2.0
+}

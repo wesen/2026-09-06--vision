@@ -1,0 +1,99 @@
+{
+  "clips": 55,
+  "episodes": 6,
+  "metrics": {
+    "native_video": {
+      "1": {
+        "best_iou": 0.15,
+        "interval_recall": 0.0625,
+        "success": 0.25
+      },
+      "10": {
+        "best_iou": 0.44999999999999996,
+        "interval_recall": 0.6875,
+        "success": 0.75
+      },
+      "5": {
+        "best_iou": 0.3,
+        "interval_recall": 0.4375,
+        "success": 0.5
+      }
+    },
+    "pooled_images": {
+      "1": {
+        "best_iou": 0.09782608695652174,
+        "interval_recall": 0.0625,
+        "success": 0.25
+      },
+      "10": {
+        "best_iou": 0.3,
+        "interval_recall": 0.375,
+        "success": 0.5
+      },
+      "5": {
+        "best_iou": 0.3,
+        "interval_recall": 0.25,
+        "success": 0.5
+      }
+    }
+  },
+  "native_build": {
+    "chunks": 55,
+    "elapsed_seconds": 14.802642415976152,
+    "feature_bytes": 450688,
+    "fresh_clips": 55,
+    "index_id": "ed99514634df6f1c8f952be1ce54a281ebf80a576f98806c3e894dfda7d9eb23",
+    "manifest": "output/native-pooled-comparison-v1/native/indices/ed99514634df6f1c8f952be1ce54a281ebf80a576f98806c3e894dfda7d9eb23/manifest.json",
+    "reused_clips": 0
+  },
+  "protocol": {
+    "candidates": [
+      {
+        "fps": 2,
+        "seconds": 2,
+        "split": "development"
+      }
+    ],
+    "corpus_manifest_sha256": "8e68e3ba40da1f5fefdc643ca027fda3983afad5f0616338429fcc6ac7670d25",
+    "coverage_threshold": 0.5,
+    "development_groups": [
+      "g03"
+    ],
+    "experiment": "native-pooled-development-v1",
+    "fixed_setting": {
+      "fps": 2,
+      "seconds": 2,
+      "split": "development"
+    },
+    "k": [
+      1,
+      5,
+      10
+    ],
+    "limitations": [
+      "weak program interiors",
+      "one apartment and one character",
+      "four positive query families",
+      "mean-pooled frames erase order",
+      "coverage relevance favors long windows",
+      "FP32 native versus community 4-bit pooled is a system comparison, not an isolated temporal-architecture ablation.",
+      "Development only; no test partition evaluated or promotion decision made."
+    ],
+    "native_root": "output/native-pooled-comparison-v1/native",
+    "negative_policy": "report top scores and returned-hit count; no learned abstention threshold",
+    "pooled_manifest": "output/video-workbench/indices/78b4ccb4780da259733f3ab253cf359b759b147da556b90b7af6421b02eb8a1b/manifest.json",
+    "queries_sha256": "2c0bb8510c9b193460430a0bd874665ae32b93cf474d8a631073ac0068bc7652",
+    "random_repeats": 100,
+    "random_seed": 42,
+    "schema": 1,
+    "selection": "No selection; fixed handoff setting.",
+    "test_groups": [
+      "g04"
+    ]
+  },
+  "reports_sha256": {
+    "native_video": "8910dae1922eda0d3fada3c3e0fe9d78770f8982e1691b480cdb77fa055eeaf2",
+    "pooled_images": "dbd5b9c18f8097e019a6079e5ac0f2e70bcc8cf1b74a90bfd63e0a98a6598530"
+  },
+  "source_evidence_match": true
+}

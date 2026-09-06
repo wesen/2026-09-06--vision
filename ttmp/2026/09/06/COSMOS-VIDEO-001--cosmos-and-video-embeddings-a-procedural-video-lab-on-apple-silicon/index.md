@@ -23,6 +23,7 @@ Explore how video embeddings, temporal models, and Cosmos verification can suppo
 
 Source import and initial analysis are complete. Implementation and runtime benchmarks remain open.
 
+- [Intern implementation guide](design-doc/02-intern-guide-to-the-procedural-video-workbench.md)
 - [Source analysis and project roadmap](design-doc/01-source-analysis-and-mac-project-roadmap.md)
 - [Original textbook](sources/video_understanding_for_procedural_work.md)
 - [Original random notes](sources/cosmos-random-notes.txt)

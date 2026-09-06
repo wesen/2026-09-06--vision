@@ -1,0 +1,50 @@
+{
+  "train": {
+    "windows": 211,
+    "weak_labeled": 157,
+    "classes": {
+      "WALK": 95,
+      "GRAB": 4,
+      "PUTBACK": 4,
+      "TURNTO": 2,
+      "OPEN": 4,
+      "CLOSE": 6,
+      "SIT": 22,
+      "STAND": 10,
+      "SWITCHON": 4,
+      "SWITCHOFF": 6
+    }
+  },
+  "development": {
+    "windows": 225,
+    "weak_labeled": 176,
+    "classes": {
+      "WALK": 122,
+      "SWITCHON": 6,
+      "SWITCHOFF": 6,
+      "OPEN": 4,
+      "CLOSE": 6,
+      "GRAB": 5,
+      "PUTBACK": 4,
+      "TURNTO": 3,
+      "SIT": 10,
+      "STAND": 10
+    }
+  },
+  "test": {
+    "windows": 356,
+    "weak_labeled": 308,
+    "classes": {
+      "WALK": 249,
+      "SWITCHOFF": 4,
+      "SWITCHON": 6,
+      "GRAB": 5,
+      "PUTBACK": 4,
+      "TURNTO": 4,
+      "SIT": 16,
+      "STAND": 10,
+      "OPEN": 4,
+      "CLOSE": 6
+    }
+  }
+}

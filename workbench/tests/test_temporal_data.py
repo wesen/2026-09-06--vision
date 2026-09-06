@@ -43,3 +43,16 @@ def test_oracle_omissions_and_gaps_survive_independent_baseline():
         assert (pred[~s.valid]==-1).all() and np.isnan(score[~s.valid]).all()
         if name=='omission':assert 2 not in pred
         if name=='repetition':assert sum((pred==0)&np.r_[True,pred[:-1]!=0])==3
+
+
+def test_linear_fit_ignores_unlabeled_targets_and_features():
+    from copy import deepcopy
+    from video_workbench.temporal.fixtures import oracle_sequences
+    from video_workbench.temporal.linear import fit
+    seq=oracle_sequences(1)['normal']
+    seq.label_mask[1]=False
+    changed=deepcopy(seq)
+    changed.features[1]=12345
+    changed.targets[1]=-1
+    left=fit([seq],3);right=fit([changed],3)
+    assert left==right

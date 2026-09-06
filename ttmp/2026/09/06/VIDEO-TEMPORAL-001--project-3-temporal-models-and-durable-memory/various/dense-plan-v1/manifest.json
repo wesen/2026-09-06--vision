@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "episodes": 48,
+  "windows": 792,
+  "classes": [
+    "CLOSE",
+    "GRAB",
+    "OPEN",
+    "PUTBACK",
+    "SIT",
+    "STAND",
+    "SWITCHOFF",
+    "SWITCHON",
+    "TURNTO",
+    "WALK"
+  ],
+  "inputs_sha256": "388a556ff3dc53ed05f50e4c21524342006b0e2ae18441e485b5902e587769c3",
+  "labels_sha256": "74dba5ddd859e559854b34aa0994e4c189c11c6a55db4c1f5690b668fac750f6",
+  "policy": {
+    "window_us": 2000000,
+    "stride_us": 500000,
+    "fps": 2,
+    "feature_availability": "trailing end; offline latency excluded",
+    "target": "latest sampled frame inside weak interior",
+    "boundaries": "unlabeled; exact-boundary metrics prohibited"
+  },
+  "release_inputs_sha256": "3fe5f91c5ba7b0f68529a6d85143002efd25f3189c763381453cab6643e4b1c2",
+  "code_sha256": "ca65d5ba7addf414c9a1c1b1e60b984cde11148639f5cb4d03c904ca8213b321"
+}

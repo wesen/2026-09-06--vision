@@ -1,0 +1,11 @@
+{
+  "feature_source_audit_episodes": 48,
+  "native_mapping_verified": true,
+  "windows": 792,
+  "space_id": "92b2a1f338385a4a499cadc27b0b41c3a8d9074e4a7aab53bfa975add80c3f19",
+  "test_majority_walk_accuracy": 0.8084415584415584,
+  "test_linear_accuracy": 0.7597402597402597,
+  "test_macro_recall": 0.21156626506024095,
+  "figure_review": "Viewed weak-grid.png: all episode rows, class legend, unlabeled ticks and seconds axis readable. Weak labels explicitly identified.",
+  "clock_caveat": "Offline source horizon only; encoder and transport latency excluded."
+}

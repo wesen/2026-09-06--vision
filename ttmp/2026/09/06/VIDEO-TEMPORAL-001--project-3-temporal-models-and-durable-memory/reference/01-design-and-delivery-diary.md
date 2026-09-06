@@ -541,3 +541,61 @@ Read `temporal/store.py`, `replay.py`, and `reference/04-observation-memory-and-
 
 ### Technical details
 Accepted output: `output/temporal-v1/replay-v1`. Stream counts: six production state conditions at 144 each; independent and offline-smoothed action streams at 792 each. Run ID: `temporal-replay-v1`. Commit delay: 250000 microseconds, explicitly simulated. Full SQLite/JSONL/query outputs remain in the experiment cache; source/artifact hashes and compact actual query examples are tracked in `various/replay-v1`. No expiry, retraction, supersession, revision graph, or continuous interval inference is present in the committed implementation.
+
+## Step 10: Publish the illustrated vault report and close the ticket
+
+Closed TEMPORAL around the measured temporal comparisons and practical sampled-observation memory after the user requested wrap-up. The general revision/retraction/expiry proposal is now explicitly deferred, not represented as implemented. The original delivered intern guide remains a historical design artifact, with the final scope stated in the ticket index, tasks, and new report.
+
+Wrote a 4321-word textbook-style technical report with four copied result figures and an inline architecture diagram. Committed and pushed it to the go-go-parc vault, preserving the concurrent remote update. Printed the meaningful wrap-up plan and completion slips after the user explicitly approved Almanach.
+
+### Prompt Context
+**User prompt (verbatim):** "approve almanach, wrap up the ticket, and  write a vault report on TEMPORAL.  write a detailed project report for the obsidian vault as a deep dive technical analysis blog post using a textbook writing style (no analogies, see skill).      
+ Commit and push the bsidian vault when done (go-go-parc vault)."
+
+**Assistant interpretation:** Finalize the implemented scope, publish a detailed evidence-based report in the vault, push it, and resume approved printing.
+
+**Inferred user intent:** Finish this project with a durable technical account and a clear endpoint rather than continue speculative memory work.
+
+**Commit (vault report):** `da20dfa9e55ce01f5e396a3ee2550a2dab59bc6f` — Write TEMPORAL deep dive on causal models and observation memory.
+
+### What I did
+- Applied the obsidian-vault-writing, textbook-authoring, and brutalist-work-slip skills; reviewed the vault conventions and existing related report.
+- Wrote a coherent report explaining native timestamp windows, separate weak masks, ridge fitting, log-space HMM inference, duration assumptions, constrained-path fabrication, causal TCN training/streaming, and exact-sample observation memory.
+- Included numerical result tables, code/API references, reproduction commands, pseudocode, four self-contained result images, and a Mermaid architecture diagram.
+- Checked report metrics against saved manifests/results and verified image links, related vault links, balanced code fences, and exact source/vault agreement.
+- Committed only the new note and four figures to the vault, rebased onto a concurrent remote commit, and pushed successfully.
+- Updated ticket scope/tasks/index and closed the ticket with docmgr; doctor reported all checks passed.
+- Printed the wrap-up plan and completion status slips through the explicitly approved Almanach service and saved their layouts/receipts.
+
+### Why
+The measured negative results should constrain subsequent work. A durable report explains both the algorithms and the limits of their evidence. Closing the ticket with explicit deferrals preserves the distinction between implemented sampled memory and the original broader proposal.
+
+### What worked
+- Report length: 4321 words; four images and one inline architecture diagram; no analogies.
+- Vault commit `da20dfa` pushed to origin/main; local and remote-tracking refs match and the vault worktree is clean.
+- Almanach returned HTTP 200 and `printed: true` for plan and completion slips, at 23:24:37Z and 23:32:17Z respectively.
+- Ticket status changed from active to complete; documentation doctor passed.
+- No models were retrained and no repetitive code test suite was run for this documentation-only wrap-up.
+
+### What didn't work
+The first vault push failed with `[rejected] main -> main (fetch first)` because another author had pushed `d6f224c` after the initial fetch. Fetched and rebased the single report commit without conflict, then pushed successfully; the pre-rebase report commit `ba4b379` became `da20dfa`. A read-only shell emitted `pyenv: cannot rehash: /Users/manuel/.pyenv/shims isn't writable`; it did not affect Git or report validation. An exploratory `cat /tmp/cosmos-almanach-render-service` treated an executable as text and produced noisy truncated binary output; subsequent inspection used `--help` and printing used the executable normally.
+
+### What I learned
+The final report's useful contribution is the connection between source evidence, temporal assumptions, and replay visibility. It documents that causal correctness passed while recognition quality remained below the simpler baseline. The practical memory scope is sufficient for a concrete sampled-observation rule demonstration.
+
+### What was tricky to build
+The report needed to distinguish initial design promises from the final approved wrap-up scope without rewriting the already-delivered guide or implying deferred machinery exists. The index/tasks now state the final scope directly, and the report identifies the guide as initial design history. Concurrent vault changes required a rebase rather than overwriting remote history.
+
+### What warrants a second pair of eyes
+Weak labels, overlapping windows, within-scene data, pooled versus native feature identity, and simulated replay commitment remain material limitations. The report preserves them explicitly. No claim of general action-recognition quality or live end-to-end latency follows from these results.
+
+### What should be done in the future
+Use the observation handoff for a concrete rules demonstration. Revisit revisions, expiry, or continuous-state inference only when that consumer has a specific requirement.
+
+### Code review instructions
+Read the published vault note and its four colocated `_assets/temporal-*.png` files. Compare the source copy `various/vault-report.md` with `various/vault-report-review.json` and `various/closure-receipt.json`. Inspect the final ticket tasks/index for scope and the original guide delivery receipt for historical publication.
+
+### Technical details
+Vault note: `Projects/2026/09/06/ARTICLE - Temporal Video Models - Causality Weak Supervision and Observation Memory.md`. Implementation checkpoint remains `3bd21e5`; this step changes documentation and publication only. The report's source SHA is recorded in the review/closure receipts. Printing layouts are `various/wrap-up-plan.yaml` and `various/completion-slip.yaml`.
+
+The verbatim prompt above intentionally preserves its trailing spaces before the original newline; this is the sole whitespace-check finding in the closure documentation.

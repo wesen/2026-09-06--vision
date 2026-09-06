@@ -1,7 +1,7 @@
 ---
 Title: Project 3 - Temporal models and durable memory
 Ticket: VIDEO-TEMPORAL-001
-Status: active
+Status: complete
 Topics:
     - video
     - embeddings
@@ -12,14 +12,15 @@ Owners: []
 RelatedFiles: []
 ExternalSources: []
 Summary: ""
-LastUpdated: 2026-09-06T13:13:51.399048-04:00
+LastUpdated: 2026-09-06T19:32:18.108515-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
 
+
 # Project 3 - Temporal models and durable memory
 
-Compare temporal decoders and store availability-aware facts without inventing missing steps.
+Measured classical and learned temporal decoders, with availability-aware sampled observation memory that does not invent missing steps.
 
 Parent: [COSMOS-VIDEO-001](../COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-procedural-video-lab-on-apple-silicon/index.md). Dependencies: VIDEO-SEARCH-001, VIDEO-STATE-001.
 
@@ -27,7 +28,21 @@ Parent: [COSMOS-VIDEO-001](../COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-pr
 - [Tasks](tasks.md)
 - [Diary](reference/01-design-and-delivery-diary.md)
 
-Design, technical validation, six-page PDF review, and reMarkable delivery are complete. Application implementation remains open in the phased task list.
+Implementation and measured comparisons are complete. The final memory scope is immutable sampled observations and exact-time as-of queries; general revisions, retractions, expiry, and inferred continuous state were explicitly deferred during user-requested wrap-up.
+
+## Measured outcome and final report
+
+- 48 VirtualHome-AIST episodes; 792 dense pooled-image features.
+- Independent test macro recall 21.16%; selected smoother 21.31% with lower accuracy; selected causal TCN mean 18.63% across three seeds.
+- 2448 actual state/action observations; 4896 replay queries preserved across restart.
+- [Classical comparison](reference/02-measured-classical-temporal-comparison.md)
+- [Causal TCN results](reference/03-causal-tcn-training-and-streaming-results.md)
+- [Practical memory and rules handoff](reference/04-observation-memory-and-practical-rule-handoff.md)
+- [Full vault report source](various/vault-report.md)
+
+The 4321-word textbook-style vault report and four figures were committed and pushed to go-go-parc in `da20dfa`: `Projects/2026/09/06/ARTICLE - Temporal Video Models - Causality Weak Supervision and Observation Memory.md`. The inline architecture diagram and four result figures preserve the implementation/evidence trail.
+
+The delivered intern guide below records the initial broader design; the final scope above supersedes its proposed general memory features.
 
 ## Guide delivery
 

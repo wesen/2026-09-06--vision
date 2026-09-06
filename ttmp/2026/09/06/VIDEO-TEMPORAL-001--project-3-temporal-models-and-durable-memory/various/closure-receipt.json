@@ -1,0 +1,27 @@
+{
+  "vault_commit": "da20dfa9e55ce01f5e396a3ee2550a2dab59bc6f",
+  "vault_path": "/Users/manuel/code/wesen/go-go-golems/go-go-parc/Projects/2026/09/06/ARTICLE - Temporal Video Models - Causality Weak Supervision and Observation Memory.md",
+  "push": "origin/main successful; local and remote-tracking refs equal; worktree clean",
+  "report_sha256": "eaf5878a738ec34ca64a4ca5928d3cc91d84608185ef26af9d14fa12760ce0d9",
+  "almanach": [
+    {
+      "layout": "wrap-up-plan.yaml",
+      "printed": true,
+      "http_status": 200,
+      "rendered_at": "2026-09-06T23:24:37Z",
+      "width": 384,
+      "height": 483
+    },
+    {
+      "layout": "completion-slip.yaml",
+      "printed": true,
+      "http_status": 200,
+      "rendered_at": "2026-09-06T23:32:17Z",
+      "width": 384,
+      "height": 594
+    }
+  ],
+  "authorization": "User explicitly approved Almanach and requested ticket wrap-up and vault commit/push.",
+  "ticket_doctor": "All checks passed",
+  "scope": "Original general memory features deferred; implemented sampled observation scope complete."
+}

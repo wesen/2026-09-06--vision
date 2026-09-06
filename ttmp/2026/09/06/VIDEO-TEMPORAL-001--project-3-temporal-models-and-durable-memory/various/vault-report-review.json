@@ -1,0 +1,13 @@
+{
+  "words": 4321,
+  "images": [
+    "_assets/temporal-weak-grid.png",
+    "_assets/temporal-oracle-traces.png",
+    "_assets/temporal-seed-comparison.png",
+    "_assets/temporal-replay-clocks.png"
+  ],
+  "mermaid_diagrams": 1,
+  "source_equals_vault": true,
+  "sha256": "eaf5878a738ec34ca64a4ca5928d3cc91d84608185ef26af9d14fa12760ce0d9",
+  "review": "Prose, metrics, source references, four image paths, related notes and code fences checked against saved experiment evidence. Existing figures were visually reviewed during implementation."
+}

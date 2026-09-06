@@ -36,3 +36,11 @@ Step 8: Complete T3 causal TCN training, seed comparison, trained-weight streami
 ## 2026-09-06
 
 Step 9: Practical observation store and actual replay/handoff complete; broader revision/expiry scope remains open; smoke checks moved to feature boundaries (commit 3bd21e5).
+
+## 2026-09-06
+
+User-requested wrap-up: temporal comparisons and sampled observation memory complete; general revisions/expiry explicitly deferred. Vault technical report pushed as da20dfa; Almanach approved.
+
+## 2026-09-06
+
+Step 10: Illustrated textbook report published to go-go-parc da20dfa; plan/completion slips printed after explicit approval; ticket closed with general memory features deferred.

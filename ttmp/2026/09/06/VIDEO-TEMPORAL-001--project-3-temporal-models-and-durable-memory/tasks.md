@@ -27,11 +27,13 @@
 
 ## T4 Memory
 
-- [ ] Implement append-only facts, supersession/retraction, and SQLite migration.
-- [ ] Implement as-of state queries with conflict, coverage, and expiry rules.
+- [x] Implement append-only sampled observations and initial SQLite schema.
+- [x] Implement exact-sample as-of queries, source-unknown handling, and stream isolation.
 - [x] Test late facts, duplicate ingestion, restart, and no future leakage.
 - [x] Publish separate offline/causal metrics and rule-engine handoff.
 
-### Memory scope checkpoint
+### Final scope decision
 
-The practical append-only observation path and exact-sample as-of queries are implemented in `3bd21e5`; actual producer replay and rule handoff are complete. The first two compound T4 tasks remain unchecked because supersession/retraction and expiry/reconciliation were not implemented. The user questioned their necessity and requested less speculative engineering; formal scope deferral remains distinct from implementation completion. See `reference/04-observation-memory-and-practical-rule-handoff.md` and diary Step 9.
+The user requested wrap-up after questioning speculative memory machinery. Closure covers the implemented observation store, exact-sample as-of queries, actual producer replay, and rule handoff. General supersession, retraction, expiry, uncertainty-interval reconciliation, and continuous-state inference are explicitly deferred until a concrete consumer requires them; they are not completed implementation claims. The original intern guide remains an immutable record of the initial design and delivery.
+
+The measured comparisons and observation memory are complete. See `reference/04-observation-memory-and-practical-rule-handoff.md`, the final vault report in `various/vault-report.md`, and diary Step 10 for the closure decision and publication receipt.

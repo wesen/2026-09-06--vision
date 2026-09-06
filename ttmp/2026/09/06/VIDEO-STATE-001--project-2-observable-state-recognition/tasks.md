@@ -9,9 +9,9 @@
 
 ## P1 Labels
 
-- [ ] Define entity/property/visibility/unknown annotation schema.
-- [ ] Build source-hashed reviewed RGB subset with grouped splits.
-- [ ] Record class counts, unresolved labels, and reviewer limitations.
+- [x] Define entity/property/visibility/unknown annotation schema.
+- [x] Build source-hashed reviewed RGB subset with grouped splits.
+- [x] Record class counts, unresolved labels, and reviewer limitations.
 
 ## P2 Baselines
 

@@ -106,3 +106,56 @@ The user clarified that the next work should broaden training/testing situations
 ### Technical details
 - Ignored preparation output: `output/state-workbench/review-v1`.
 - Active implementation ticket: VIDEO-CORPUS-001.
+
+## Step 3: Resume with a reviewed, apartment-separated RGB subset
+
+Resumed the second numbered project after the diversified corpus was completed. Prepared and visually inspected 144 RGB frames from 24 appliance episodes, preserving all 24 native-resolution contact sheets in the ticket. Labels describe visible door geometry, with separate ambiguous and occluded unknowns. Simulator commands and graph states are not label truth.
+
+The old microwave videos all belong to apartment 0, so this experiment assigns all of them to training rather than preserving their earlier within-apartment split. Development is apartment 1 and test is apartment 2. This prevents apartment leakage but leaves appliance and evaluation domain confounded; the experiment is an exploratory implementation check, not a generalization benchmark.
+
+### Prompt Context
+**User prompt (verbatim):** "Now continue on the second ticket."
+
+**Assistant interpretation:** Resume VIDEO-STATE-001 implementation using the expanded corpus.
+
+**Inferred user intent:** Progress from corpus generation to measurable, evidence-linked state recognition, preserving a detailed diary and screenshots.
+
+### What I did
+- Printed the resumed P1–P4 plan; service returned `printed: true`, HTTP 200, at `2026-09-06T19:34:03Z`.
+- Selected six fixed relative timestamps per episode and verified video/image SHA-256 hashes.
+- Reviewed 24 contact sheets at native resolution and froze 136 visible labels plus eight unknowns.
+- Added strict label/observation contracts and source, entity, split, and label completeness validation.
+- Saved the review codes, full manifests, class-count summary, and all contact sheets under `various/`.
+
+### Why
+- State recognition must distinguish false, unknown, and missing annotations. Independent source identity and group ownership prevent accidental reuse across splits.
+
+### What worked
+- `workbench/.venv/bin/python .../scripts/05-freeze-labels.py` validates all 144 rows and their source hashes.
+- Training has 39 open / 56 closed / one ambiguous frame; development has two open / 22 closed; test has two open / 15 closed / seven unknown.
+
+### What didn't work
+- The corpus does not meet the proposed per-appliance class minimum: training has only four visibly open fridge frames. Adding nearby duplicate frames would inflate counts without adding independent situations.
+- No independent second reviewer has adjudicated the labels; this is single-assistant RGB review.
+
+### What I learned
+- Several frames following microwave CLOSE remain visibly open. Left-camera actor occlusion prevents labeling parts of the test sequence.
+
+### What was tricky to build
+- Mixing the original corpus with the diversified release would leak apartment 0 if the old split were preserved. Explicit experiment-specific reassignment solves that without modifying either source release.
+- Partial door motion can look like closed geometry at small scale. Conservatively retained ambiguous frames instead of inferring the action's intended outcome.
+
+### What warrants a second pair of eyes
+- Review all unknowns, partially visible doors, and the very small open-fridge subset. Development has no unknown examples and only two positives, limiting calibration.
+
+### What should be done in the future
+- Fit and evaluate frozen baselines with raw-count reporting and preserve the distinction between model abstention and an oracle visibility diagnostic.
+
+### Code review instructions
+- Start at `predicates/contracts.py`, then preparation/freezing scripts and `various/label-summary-v2.json`.
+- Compare `review-codes-v2.json` with the corresponding six-panel sheets; C=closed, O=open, A=ambiguous, U=occluded.
+
+### Technical details
+- Sampling grid: 0, 20, 40, 60, 80, 100 percent of decoded frame indices; timestamps are actual MP4 presentation times in microseconds.
+- Full-frame evidence remains 640×480; the existing image encoder will resize to 320×240. No crop is selected using model scores.
+- Unrelated MLX repair and perception tickets remain untouched.

@@ -1,0 +1,92 @@
+{
+  "reviewer_limit": "Single assistant RGB review, not independent human gold; ambiguous frames retained as null.",
+  "sampling": "Six fixed relative positions per episode; full frame; no score-driven selection.",
+  "split_policy": "All home-v1 apartment-0 examples reassigned train; diversity-v2 apartment groups preserved.",
+  "counts": [
+    {
+      "split": "development",
+      "entity_class": "fridge",
+      "value": "False",
+      "observability": "visible",
+      "count": 22
+    },
+    {
+      "split": "development",
+      "entity_class": "fridge",
+      "value": "True",
+      "observability": "visible",
+      "count": 2
+    },
+    {
+      "split": "test",
+      "entity_class": "microwave",
+      "value": "False",
+      "observability": "visible",
+      "count": 15
+    },
+    {
+      "split": "test",
+      "entity_class": "microwave",
+      "value": "None",
+      "observability": "ambiguous",
+      "count": 1
+    },
+    {
+      "split": "test",
+      "entity_class": "microwave",
+      "value": "None",
+      "observability": "occluded",
+      "count": 6
+    },
+    {
+      "split": "test",
+      "entity_class": "microwave",
+      "value": "True",
+      "observability": "visible",
+      "count": 2
+    },
+    {
+      "split": "train",
+      "entity_class": "fridge",
+      "value": "False",
+      "observability": "visible",
+      "count": 20
+    },
+    {
+      "split": "train",
+      "entity_class": "fridge",
+      "value": "True",
+      "observability": "visible",
+      "count": 4
+    },
+    {
+      "split": "train",
+      "entity_class": "microwave",
+      "value": "False",
+      "observability": "visible",
+      "count": 36
+    },
+    {
+      "split": "train",
+      "entity_class": "microwave",
+      "value": "None",
+      "observability": "ambiguous",
+      "count": 1
+    },
+    {
+      "split": "train",
+      "entity_class": "microwave",
+      "value": "True",
+      "observability": "visible",
+      "count": 35
+    }
+  ],
+  "episodes": 24,
+  "samples": 144,
+  "limitations": [
+    "Only one apartment per split; appliance confounded with evaluation split.",
+    "Development has two open fridge frames; class support is insufficient for a reliable calibration claim.",
+    "No out-of-frame examples; occlusion examples occur only in test.",
+    "Frame counts are correlated within episodes, not independent trials."
+  ]
+}

@@ -1,0 +1,2598 @@
+{
+  "note": "Post-run diagnostic sweep only; deployed policies and original predictions remain unchanged. Raw head uses its predeclared regression zero threshold, no test fitting.",
+  "raw_head_before_development_calibration": {
+    "train": {
+      "confusion": {
+        "tn": 56,
+        "fp": 0,
+        "fn": 0,
+        "tp": 39
+      },
+      "macro_f1": 1.0
+    },
+    "development": {
+      "confusion": {
+        "tn": 0,
+        "fp": 22,
+        "fn": 0,
+        "tp": 2
+      },
+      "macro_f1": 0.07692307692307693
+    },
+    "test": {
+      "confusion": {
+        "tn": 0,
+        "fp": 15,
+        "fn": 0,
+        "tp": 2
+      },
+      "macro_f1": 0.10526315789473684
+    }
+  },
+  "image_encoding_seconds": {
+    "sum": 19.46713145915419,
+    "median": 0.1347685829969123
+  },
+  "risk_coverage_sweeps": {
+    "generic": {
+      "train": [
+        {
+          "radius": 0.0,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 37,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 0.4246194139793747,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 37,
+          "known_selective_risk": 0.3894736842105263,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 37,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 0.4246194139793747,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 37,
+          "known_selective_risk": 0.3894736842105263,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 37,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 0.4246194139793747,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 37,
+          "known_selective_risk": 0.3894736842105263,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 37,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 0.4246194139793747,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 37,
+          "known_selective_risk": 0.3894736842105263,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 37,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 0.4246194139793747,
+          "model_answered": 95,
+          "coverage": 0.9895833333333334,
+          "known_answered": 94,
+          "known_answered_errors": 36,
+          "known_selective_risk": 0.3829787234042553,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 94,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 37,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 0.4246194139793747,
+          "model_answered": 85,
+          "coverage": 0.8854166666666666,
+          "known_answered": 84,
+          "known_answered_errors": 35,
+          "known_selective_risk": 0.4166666666666667,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 84,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 37,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 0.4246194139793747,
+          "model_answered": 1,
+          "coverage": 0.010416666666666666,
+          "known_answered": 1,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 1,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 37,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 0.4246194139793747,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ],
+      "development": [
+        {
+          "radius": 0.0,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 21,
+          "coverage": 0.875,
+          "known_answered": 21,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 21,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ],
+      "test": [
+        {
+          "radius": 0.0,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 22,
+          "coverage": 0.9166666666666666,
+          "known_answered": 15,
+          "known_answered_errors": 1,
+          "known_selective_risk": 0.06666666666666667,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 15,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ]
+    },
+    "correct_context": {
+      "train": [
+        {
+          "radius": 0.0,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 55,
+            "fp": 1,
+            "fn": 36,
+            "tp": 3
+          },
+          "visible_macro_f1_without_abstention": 0.44391710172441073,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 37,
+          "known_selective_risk": 0.3894736842105263,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 55,
+            "fp": 1,
+            "fn": 36,
+            "tp": 3
+          },
+          "visible_macro_f1_without_abstention": 0.44391710172441073,
+          "model_answered": 93,
+          "coverage": 0.96875,
+          "known_answered": 92,
+          "known_answered_errors": 35,
+          "known_selective_risk": 0.3804347826086957,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 92,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 55,
+            "fp": 1,
+            "fn": 36,
+            "tp": 3
+          },
+          "visible_macro_f1_without_abstention": 0.44391710172441073,
+          "model_answered": 89,
+          "coverage": 0.9270833333333334,
+          "known_answered": 88,
+          "known_answered_errors": 32,
+          "known_selective_risk": 0.36363636363636365,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 88,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 55,
+            "fp": 1,
+            "fn": 36,
+            "tp": 3
+          },
+          "visible_macro_f1_without_abstention": 0.44391710172441073,
+          "model_answered": 82,
+          "coverage": 0.8541666666666666,
+          "known_answered": 82,
+          "known_answered_errors": 26,
+          "known_selective_risk": 0.3170731707317073,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 82,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 55,
+            "fp": 1,
+            "fn": 36,
+            "tp": 3
+          },
+          "visible_macro_f1_without_abstention": 0.44391710172441073,
+          "model_answered": 66,
+          "coverage": 0.6875,
+          "known_answered": 66,
+          "known_answered_errors": 16,
+          "known_selective_risk": 0.24242424242424243,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 66,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 55,
+            "fp": 1,
+            "fn": 36,
+            "tp": 3
+          },
+          "visible_macro_f1_without_abstention": 0.44391710172441073,
+          "model_answered": 2,
+          "coverage": 0.020833333333333332,
+          "known_answered": 2,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 2,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 55,
+            "fp": 1,
+            "fn": 36,
+            "tp": 3
+          },
+          "visible_macro_f1_without_abstention": 0.44391710172441073,
+          "model_answered": 2,
+          "coverage": 0.020833333333333332,
+          "known_answered": 2,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 2,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 55,
+            "fp": 1,
+            "fn": 36,
+            "tp": 3
+          },
+          "visible_macro_f1_without_abstention": 0.44391710172441073,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ],
+      "development": [
+        {
+          "radius": 0.0,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 19,
+          "coverage": 0.7916666666666666,
+          "known_answered": 19,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 19,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ],
+      "test": [
+        {
+          "radius": 0.0,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 22,
+          "coverage": 0.9166666666666666,
+          "known_answered": 15,
+          "known_answered_errors": 1,
+          "known_selective_risk": 0.06666666666666667,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 15,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 21,
+          "coverage": 0.875,
+          "known_answered": 15,
+          "known_answered_errors": 1,
+          "known_selective_risk": 0.06666666666666667,
+          "unknown_false_certainty": 6,
+          "oracle_visibility_answered": 15,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ]
+    },
+    "misleading_context": {
+      "train": [
+        {
+          "radius": 0.0,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 38,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.3983333333333334,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 38,
+          "known_selective_risk": 0.4,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 38,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.3983333333333334,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 38,
+          "known_selective_risk": 0.4,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 38,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.3983333333333334,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 38,
+          "known_selective_risk": 0.4,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 38,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.3983333333333334,
+          "model_answered": 95,
+          "coverage": 0.9895833333333334,
+          "known_answered": 94,
+          "known_answered_errors": 37,
+          "known_selective_risk": 0.39361702127659576,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 94,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 38,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.3983333333333334,
+          "model_answered": 95,
+          "coverage": 0.9895833333333334,
+          "known_answered": 94,
+          "known_answered_errors": 37,
+          "known_selective_risk": 0.39361702127659576,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 94,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 38,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.3983333333333334,
+          "model_answered": 82,
+          "coverage": 0.8541666666666666,
+          "known_answered": 82,
+          "known_answered_errors": 31,
+          "known_selective_risk": 0.3780487804878049,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 82,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 38,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.3983333333333334,
+          "model_answered": 1,
+          "coverage": 0.010416666666666666,
+          "known_answered": 1,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 1,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 38,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.3983333333333334,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ],
+      "development": [
+        {
+          "radius": 0.0,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 13,
+          "coverage": 0.5416666666666666,
+          "known_answered": 13,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 13,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 0,
+            "tp": 2
+          },
+          "visible_macro_f1_without_abstention": 1.0,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ],
+      "test": [
+        {
+          "radius": 0.0,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 19,
+          "coverage": 0.7916666666666666,
+          "known_answered": 14,
+          "known_answered_errors": 1,
+          "known_selective_risk": 0.07142857142857142,
+          "unknown_false_certainty": 5,
+          "oracle_visibility_answered": 14,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ]
+    },
+    "context_only": {
+      "train": [
+        {
+          "radius": 0.0,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 39,
+          "known_selective_risk": 0.4105263157894737,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 39,
+          "known_selective_risk": 0.4105263157894737,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 39,
+          "known_selective_risk": 0.4105263157894737,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 39,
+          "known_selective_risk": 0.4105263157894737,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 39,
+          "known_selective_risk": 0.4105263157894737,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 39,
+          "known_selective_risk": 0.4105263157894737,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 39,
+          "known_selective_risk": 0.4105263157894737,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ],
+      "development": [
+        {
+          "radius": 0.0,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.4782608695652174,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.08333333333333333,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.4782608695652174,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.08333333333333333,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.4782608695652174,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.08333333333333333,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.4782608695652174,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.08333333333333333,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.4782608695652174,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.08333333333333333,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.4782608695652174,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.08333333333333333,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.4782608695652174,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.08333333333333333,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 22,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.4782608695652174,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ],
+      "test": [
+        {
+          "radius": 0.0,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.11764705882352941,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 15,
+            "fp": 0,
+            "fn": 2,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.46875,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ]
+    },
+    "linear_head": {
+      "train": [
+        {
+          "radius": 0.0,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 39,
+          "known_selective_risk": 0.4105263157894737,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 39,
+          "known_selective_risk": 0.4105263157894737,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 96,
+          "coverage": 1.0,
+          "known_answered": 95,
+          "known_answered_errors": 39,
+          "known_selective_risk": 0.4105263157894737,
+          "unknown_false_certainty": 1,
+          "oracle_visibility_answered": 95,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 63,
+          "coverage": 0.65625,
+          "known_answered": 63,
+          "known_answered_errors": 7,
+          "known_selective_risk": 0.1111111111111111,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 63,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 96,
+          "known": 95,
+          "unknown": 1,
+          "visible_confusion_without_abstention": {
+            "tn": 56,
+            "fp": 0,
+            "fn": 39,
+            "tp": 0
+          },
+          "visible_macro_f1_without_abstention": 0.3708609271523179,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ],
+      "development": [
+        {
+          "radius": 0.0,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 21,
+            "fp": 1,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.7272727272727273,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 24,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.08333333333333333,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 24,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 21,
+            "fp": 1,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.7272727272727273,
+          "model_answered": 22,
+          "coverage": 0.9166666666666666,
+          "known_answered": 22,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.09090909090909091,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 22,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 21,
+            "fp": 1,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.7272727272727273,
+          "model_answered": 21,
+          "coverage": 0.875,
+          "known_answered": 21,
+          "known_answered_errors": 2,
+          "known_selective_risk": 0.09523809523809523,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 21,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 21,
+            "fp": 1,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.7272727272727273,
+          "model_answered": 2,
+          "coverage": 0.08333333333333333,
+          "known_answered": 2,
+          "known_answered_errors": 0,
+          "known_selective_risk": 0.0,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 2,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 21,
+            "fp": 1,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.7272727272727273,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 21,
+            "fp": 1,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.7272727272727273,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 21,
+            "fp": 1,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.7272727272727273,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 24,
+          "known": 24,
+          "unknown": 0,
+          "visible_confusion_without_abstention": {
+            "tn": 21,
+            "fp": 1,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.7272727272727273,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ],
+      "test": [
+        {
+          "radius": 0.0,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 9,
+            "fp": 6,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.4711111111111111,
+          "model_answered": 24,
+          "coverage": 1.0,
+          "known_answered": 17,
+          "known_answered_errors": 7,
+          "known_selective_risk": 0.4117647058823529,
+          "unknown_false_certainty": 7,
+          "oracle_visibility_answered": 17,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.05,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 9,
+            "fp": 6,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.4711111111111111,
+          "model_answered": 20,
+          "coverage": 0.8333333333333334,
+          "known_answered": 14,
+          "known_answered_errors": 7,
+          "known_selective_risk": 0.5,
+          "unknown_false_certainty": 6,
+          "oracle_visibility_answered": 14,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.1,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 9,
+            "fp": 6,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.4711111111111111,
+          "model_answered": 16,
+          "coverage": 0.6666666666666666,
+          "known_answered": 10,
+          "known_answered_errors": 6,
+          "known_selective_risk": 0.6,
+          "unknown_false_certainty": 6,
+          "oracle_visibility_answered": 10,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.2,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 9,
+            "fp": 6,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.4711111111111111,
+          "model_answered": 6,
+          "coverage": 0.25,
+          "known_answered": 6,
+          "known_answered_errors": 5,
+          "known_selective_risk": 0.8333333333333334,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 6,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.3,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 9,
+            "fp": 6,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.4711111111111111,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.4,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 9,
+            "fp": 6,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.4711111111111111,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 0.5,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 9,
+            "fp": 6,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.4711111111111111,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        },
+        {
+          "radius": 1.01,
+          "n": 24,
+          "known": 17,
+          "unknown": 7,
+          "visible_confusion_without_abstention": {
+            "tn": 9,
+            "fp": 6,
+            "fn": 1,
+            "tp": 1
+          },
+          "visible_macro_f1_without_abstention": 0.4711111111111111,
+          "model_answered": 0,
+          "coverage": 0.0,
+          "known_answered": 0,
+          "known_answered_errors": 0,
+          "known_selective_risk": null,
+          "unknown_false_certainty": 0,
+          "oracle_visibility_answered": 0,
+          "oracle_visibility_note": "Diagnostic only: suppresses predictions using reviewed visibility, not an implemented visibility model."
+        }
+      ]
+    }
+  }
+}

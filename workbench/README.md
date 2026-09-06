@@ -49,3 +49,15 @@ The serving manifest for the selected configuration is recorded in `output/video
 - [evaluation.py](src/video_workbench/evaluation.py) is the only application module that reads relevance labels. Inference modules never import it.
 
 Model weights, source videos, caches, and local databases are ignored under `output/`. Code, locked dependencies, protocols, tickets, measured reports, and selected browser screenshots are committed. The ticket’s implementation report explains observed results and remaining limits.
+
+## Observable-state experiment
+
+The separate state CLI reuses frozen image embeddings and leaves native-video encoding independent:
+
+```bash
+python -m video_workbench.predicates encode --help
+python -m video_workbench.predicates evaluate --help
+python -m video_workbench.predicates serve --run output/state-workbench/run-v2 --port 8772
+```
+
+The first run is an exploratory negative result, with source-reviewed unknowns and apartment-separated data. See the [implementation and evidence report](../ttmp/2026/09/06/VIDEO-STATE-001--project-2-observable-state-recognition/reference/03-observable-state-baseline-implementation-and-evidence-report.md) for reproduction, exact metrics, screenshots, and the handoff to object detection/tracking/crops. Model predictions do not use reviewed visibility as an inference gate.

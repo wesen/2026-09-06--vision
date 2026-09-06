@@ -223,3 +223,118 @@ The user also asked when to implement the YOLO-style perception ticket. Read its
 - Ridge coefficient 0.01; dual solve over visible train rows. No test-selected hyperparameters.
 - Calibration uses two-parameter regularized logistic fitting on standardized development margins.
 - Decision threshold maximizes development macro-F1; abstention chooses the smallest predeclared band meeting ≤10% empirical development risk, with reject-all fallback.
+
+## Step 5: Measure the held-out failure and build evidence playback
+
+Ran the frozen experiment without changing templates, labels, or hyperparameters after seeing test results. Generic, correct-context, misleading-context, and context-only conditions all predict closed on the 17 visible held-out frames (15 correct closed, two missed open). The calibrated linear head returns nine true negatives, six false positives, one false negative, and one true positive. Every condition answers all seven reviewed unknown frames.
+
+These results do not support a deployable state recognizer. The raw linear head fits all 95 visible training frames, then predicts open throughout development and test; development calibration moves its operating point but does not fix representation transfer. The report must preserve this negative result and the severe apartment/appliance confounding.
+
+### Prompt Context
+**User prompt (verbatim):** "remember to take screenshots as you work so that we can have a nice trail (and see what the segmentation returns and all that)"
+
+**Assistant interpretation:** Preserve actual visual outputs and failures throughout this work and the upcoming perception project.
+
+**Inferred user intent:** Make later reports visually auditable, including detector/segmentation outputs rather than only metric summaries.
+
+**Commit (code):** `631210e` — Implement frozen state baselines and development-only calibration.
+
+### What I did
+- Encoded 144 images and 14 text strings with the existing local Qwen model.
+- Evaluated all five conditions once and exported 720 evidence-bound observations.
+- Archived full results and predictions in the ticket, plus a diagnostic risk/coverage sweep and raw-head confusion matrices.
+- Built a read-only timeline showing reviewed visibility, predictions, individual source timestamps, and seekable video.
+- Kept gaps explicit; the interface does not interpolate state between samples.
+- Started browser verification and screenshots of actual results.
+
+### Why
+- A model that answers confidently under occlusion must remain visible as a failure; using the review label as an inference gate would conceal it.
+- A perfect training score alongside poor held-out behavior exposes the need for more independent data and controlled representation experiments.
+
+### What worked
+- Image model service time totaled 19.467 seconds, median 134.769 ms/frame, excluding startup, hashing, decode, and queueing.
+- Test visible macro-F1: 0.46875 for each text/context condition; 0.47111 for the linear head. These similar aggregates hide different confusion matrices.
+- The local timeline serves source-hash-checked RGB and MP4 evidence through allowlisted IDs.
+
+### What didn't work
+- First server launch in the sandbox failed: `ERROR: [Errno 1] error while attempting to bind on address ('127.0.0.1', 8772): operation not permitted`. Retried the same authorized local command with sandbox escalation; server started successfully.
+- `git diff --check` detected docmgr's extra blank line at EOF in `changelog.md`; trimmed trailing blank lines before committing.
+- Development selected zero-width abstention bands for all conditions. Its two positive frames and no occlusion examples do not teach useful abstention under test occlusion.
+
+### What I learned
+- Context wording does not improve held-out decisions in this run. A context-only majority-class baseline ties the image/text variants.
+- The raw ridge head's train F1=1.0 collapses to development F1=0.0769 and test F1=0.1053 at its default zero threshold. Calibration cannot establish new visual invariance.
+
+### What was tricky to build
+- The review must distinguish model-only predictions, human/assistant-reviewed visibility, and an oracle diagnostic. The UI displays them separately and highlights false certainty rather than overriding outputs.
+- Playback seeks actual source PTS while availability labels use a clearly named replay estimate; these clocks are not interchangeable.
+
+### What warrants a second pair of eyes
+- Confirm the two visible test positives and the seven unknowns against the preserved native-resolution sheets before treating metrics as gold.
+- The radius sweep is post-run descriptive analysis, not a new test-selected operating policy. Original predictions remain frozen.
+
+### What should be done in the future
+- Complete browser validation, API integrity tests, implementation report, and handoff. Next perception work should preserve source/overlay/crop triplets and measured misses; masks are not implemented in this ticket.
+
+### Code review instructions
+- Inspect `various/run-v2/results.json`, `observations.jsonl`, and `diagnostics.json` together.
+- Launch `python -m video_workbench.predicates serve --run output/state-workbench/run-v2 --port 8772` using the workbench environment, then inspect test episodes and source videos.
+
+### Technical details
+- Artifact output: `output/state-workbench/features-v2` and `output/state-workbench/run-v2`; results archived under this ticket's `various/run-v2`.
+- P2–P3 completion / P4 start work slip submitted; final receipt still to be recorded after completion.
+
+## Step 6: Complete the review trail and technical handoff
+
+Completed the evidence viewer, recorded four full browser screenshots, and wrote the implementation report with architecture, data contracts, numerical procedures, raw confusion matrices, API/file references, reproduction instructions, and the perception dependency sequence. All 24 native review sheets remain available alongside the browser captures.
+
+The ticket's implementation tasks are complete, with an explicitly negative recognition result. The report distinguishes supported software behavior from unsupported quality claims and does not present sparse-grid timestamps as exact transition predictions.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 5)
+
+**Assistant interpretation:** Finish the state experiment with a visually auditable handoff and preserve evidence for subsequent reports.
+
+**Inferred user intent:** See what the models actually return and make the next project start from measured behavior.
+
+### What I did
+- Captured test overview, missed-open geometry, occlusion false certainty, and linear-head false-open screenshots.
+- Confirmed browser image width 640, ready video playback, and source seeking to 5.8 seconds.
+- Added API tests for byte-range playback, source mutation rejection, and evidence allowlists.
+- Added a held-out-label perturbation test verifying unchanged fitted parameters and predictions.
+- Ran the full workbench suite: 24 tests passed, two dependency deprecation warnings.
+- Linked the report from the workbench README and updated ticket task/changelog bookkeeping.
+- P2–P3 completion / P4 start slip returned `printed: true`, HTTP 200, at `2026-09-06T19:48:00Z`.
+
+### Why
+- The report needs concrete visual examples as well as aggregate metrics; these examples explain why a model-only unknown policy has not been demonstrated.
+
+### What worked
+- Browser screenshots show actual source frames and model outputs without modifying the reviewed labels or frozen predictions.
+- Source video Range requests return 206 and correct bytes; modified source bytes return 409 in tests.
+- The report records the representation-versus-selection experimental sequence for VIDEO-PERCEPTION-001 D1–D2 next.
+
+### What didn't work
+- Browser initially requested `/favicon.ico`, causing the only console error (404). Added an inline empty icon declaration.
+- Installed Starlette/AnyIO emit deprecation warnings in the test client; tests pass and this ticket leaves dependency versions unchanged.
+
+### What I learned
+- Full confusion counts are necessary: nearly identical macro-F1 masks the head's larger false-positive count.
+
+### What was tricky to build
+- Maintain an inspectable negative outcome without replacing model predictions with reviewed unknown labels. Separate display rows and explicit error messages preserve this distinction.
+
+### What warrants a second pair of eyes
+- The single-reviewer labels and appliance-confounded split remain the main experimental limitations. This software completion is not model deployment readiness.
+
+### What should be done in the future
+- Implement perception D1–D2 with source frames, detector overlays, track resets/misses, and contextual crops captured as they occur; add masks only if the measured task needs them.
+
+### Code review instructions
+- Read the new reference report, inspect its four browser screenshots, then compare the machine-readable confusion matrices.
+- Review `test_predicate_api.py` and `test_predicate_split_isolation.py` for the behavior independently verified.
+
+### Technical details
+- Review server: `http://127.0.0.1:8772/`.
+- Screenshot inventory: 24 native contact sheets plus four browser captures.
+- Code checkpoints so far: `046ba60` (P1), `631210e` (P2/P3 implementation). Final report/viewer commit recorded in the completion entry below.

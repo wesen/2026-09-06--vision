@@ -13,12 +13,16 @@ RelatedFiles:
       Note: Prepare and review CLI
     - Path: repo://workbench/src/video_workbench/localization/annotations.py
       Note: Visibility and geometry contracts
+    - Path: repo://workbench/src/video_workbench/localization/crops.py
+      Note: Controlled detector and oracle crop materialization
     - Path: repo://workbench/src/video_workbench/localization/data.py
       Note: Source-hash audit and requested-target deduplication
     - Path: repo://workbench/src/video_workbench/localization/detector_audit.py
       Note: Verified detector source joins and measured confidence sweep
     - Path: repo://workbench/src/video_workbench/localization/evaluate.py
       Note: Best-overlap recall versus unique binding
+    - Path: repo://workbench/src/video_workbench/localization/features.py
+      Note: Actual fixed image features and explicit missing masks
     - Path: repo://workbench/src/video_workbench/localization/review.py
       Note: Source-verified overlay renderer and provisional annotation review checkpoint
     - Path: repo://workbench/src/video_workbench/perception/contracts.py
@@ -35,6 +39,7 @@ LastUpdated: 2026-09-06T17:01:56.371871-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -295,3 +300,58 @@ Inspect `detector_audit.py:load_detections`, the synthetic source-integrity test
 
 ### Technical details
 Reproduce with `PYTHONPATH=workbench/src workbench/.venv/bin/python -m video_workbench.localization audit --dataset output/localization-v1/dataset --reviews ttmp/2026/09/06/VIDEO-LOCALIZATION-001--requested-object-localization-and-crop-evidence-coverage/various/source-audit-v1/reviews-v1.json --detector output/video-perception/detect-v1 --out output/localization-v1/detector-audit-reproduction`. A new destination is required. IoU threshold is 0.5; confidence policies are 0.10, 0.25, and 0.50; small means visible box area below 1024 pixels.
+
+## Step 6: Materialize D/O crops and encode all fixed image conditions
+
+Materialized source-bound detector and reviewed crops using the same expansion, clipping, size, and interpolation. Detector binding uses exactly one usable requested-class box above confidence 0.25. This reproduces the prior state crop coverage: 46/96 training, 23/24 development, and 0/24 test. Reviewed diagnostic crops exist for every state frame.
+
+Ran the actual fixed community 4-bit image encoder on F, D, and O evidence, and computed normalized F+D and F+O fusion. State labels were not read during selection or encoding. All five arrays contain 144 rows with explicit availability; missing D rows store zero vectors and must become null prediction scores. No state-quality conclusion is drawn at this checkpoint.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1).
+
+**Assistant interpretation:** Continue the controlled crop/state diagnostic using identical evidence geometry and a fixed encoder.
+
+**Inferred user intent:** Determine whether better object localization enables better state predictions while preserving missing production evidence.
+
+**Commit (code):** `6e31c68` — Materialize controlled localization crops and encode fixed image conditions.
+
+### What I did
+- Added `localization/crops.py:prepare` with frozen crop policy and source/producer identities.
+- Reused `perception.contracts.expand` for 25-percent expansion and clipping; both D and O use 320-by-240 PIL bicubic rasterization.
+- Kept low-resolution filtering on expanded extent, matching the existing production policy; multiple usable class candidates remain ambiguous.
+- Added `localization/features.py:encode` with F, D, O, FD, and FO arrays, masks, encoder identity, source manifest hash, and per-condition producer spaces.
+- Ran local MLX inference with existing weights and offline model settings; preserved metadata and independent feature checks.
+- Saved and inspected a six-row source/detector/oracle contact sheet. It includes repeated initial frames as a checkpoint, not six independent selected examples.
+
+### Why
+The changed experimental factor is object geometry. Oracle crops must be identified as diagnostic, and missing D crops must remain visible in full-population denominators. Fusions use full-frame fallback when a crop is unavailable, rather than pretending a missing crop was inferred.
+
+### What worked
+- D state availability: 69/144; O state availability: 144/144.
+- Five feature arrays have shape `[144,2048]`; maximum available-vector norm error is approximately 1.2e-7.
+- All unavailable D vectors are zero and have `available=false`.
+- FD equals F exactly wherever D is unavailable.
+- Actual feature producer: `ab37c9127597993070b7183dc756b44c30f2df1852749b04d85dce10e931fa8b`.
+- Six localization tests pass, including equal D/O raster hashes for identical geometry and explicit multi-instance ambiguity.
+
+### What didn't work
+A speculative model directory lookup returned `ls: output/video-workbench/models: No such file or directory`. The existing model is `output/models/qwen3-vl-embedding-2b-4bit`; no download or environment change was needed. No crop or inference failure occurred. External printing remains paused after the earlier automatic approval rejection.
+
+### What I learned
+The independent crop implementation exactly reproduces the production state availability counts, supporting the interpretation that missing held-out crops arise before state classification. The oracle crop enlarges the held-out appliance but still includes foreground bottles and limited views; localization alone does not guarantee observable state.
+
+### What was tricky to build
+The production binder filters low-resolution expanded rectangles before selecting a unique candidate. Using best-IoU selection or binding before the usability check would implement a different D condition. Feature extraction filters the shared localization inventory to state aliases without importing reviewed state labels.
+
+### What warrants a second pair of eyes
+The feature extraction API accepts a crop manifest, so the evaluator must verify its hash and exact state-alias order before joining labels. Missing numerical storage is not an inference output; the observation writer must emit null raw score and probability for missing D evidence. F+D has a larger pixel budget than F, and oracle conditions are unavailable in production.
+
+### What should be done in the future
+Fit text-margin and ridge-head methods with training/development-only calibration, emit full-population and paired metrics, preserve null missing predictions and evidence availability, and produce a fuller nonduplicated comparison gallery and report. Complete temporal implementation after localization handoff.
+
+### Code review instructions
+Inspect `crops.py:prepare` and `features.py:encode`, then `test_crop_policy_keeps_ambiguity_and_matches_oracle_raster`. Review `various/crop-comparison-v1/feature-validation.json` and the contact sheet. Actual arrays remain at `output/localization-v1/features-v1/features.npz`; metadata records their hash.
+
+### Technical details
+Crop directory: `output/localization-v1/crops-v1`. Feature directory: `output/localization-v1/features-v1`. Runtime: `workbench/.venv` with `PYTHONPATH=workbench/src HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1`. GPU execution session 95629 completed successfully. Model: `output/models/qwen3-vl-embedding-2b-4bit`. No native-video acceptance claim is made for this image-only diagnostic.

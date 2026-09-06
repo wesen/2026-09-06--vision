@@ -15,3 +15,7 @@ Step 4: Annotated all 162 source targets provisionally, rendered 42 overlay shee
 ## 2026-09-06
 
 Step 5: Completed 42-sheet review, corrected three rectangles, froze source annotations, and measured detector recall/binding across three confidence policies; five tests pass (67a5cc2). L1/L2 complete; crop/state comparisons remain.
+
+## 2026-09-06
+
+Step 6: Materialized equal-policy D/O crops and ran fixed image encoding for F/D/O/FD/FO; D available 69/144 and O 144/144; six tests pass. State evaluation remains (6e31c68).

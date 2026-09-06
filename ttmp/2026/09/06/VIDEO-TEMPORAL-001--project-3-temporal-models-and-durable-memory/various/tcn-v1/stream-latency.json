@@ -1,0 +1,34 @@
+{
+  "scope": "CPU head-only push includes bounded-history recomputation; excludes video decode, embedding, transport, and tensor construction",
+  "torch": "2.14.0",
+  "threads": 2,
+  "runs": [
+    {
+      "seed": 7,
+      "samples": 356,
+      "median_ms": 0.2034375,
+      "p95_ms": 0.32471925,
+      "max_ms": 0.631542,
+      "retained_raw_history_bytes": 32772,
+      "parameter_and_buffer_bytes": 158032
+    },
+    {
+      "seed": 17,
+      "samples": 356,
+      "median_ms": 0.199104,
+      "p95_ms": 0.31691725,
+      "max_ms": 0.477375,
+      "retained_raw_history_bytes": 32772,
+      "parameter_and_buffer_bytes": 158032
+    },
+    {
+      "seed": 27,
+      "samples": 356,
+      "median_ms": 0.201021,
+      "p95_ms": 0.312521,
+      "max_ms": 0.449208,
+      "retained_raw_history_bytes": 32772,
+      "parameter_and_buffer_bytes": 158032
+    }
+  ]
+}

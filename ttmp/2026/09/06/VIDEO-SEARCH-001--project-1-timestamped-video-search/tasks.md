@@ -21,9 +21,9 @@
 
 ## S3 Search and viewer
 
-- [ ] Implement exact cosine ranking, stable ties, and split filtering.
-- [ ] Implement typed search API and registered-ID-only video access.
-- [ ] Build minimal query/results/player UI and verify interval seeking.
+- [x] Implement exact cosine ranking, stable ties, and split filtering.
+- [x] Implement typed search API and registered-ID-only video access.
+- [x] Build minimal query/results/player UI and verify interval seeking.
 
 ## S4 Evaluation
 

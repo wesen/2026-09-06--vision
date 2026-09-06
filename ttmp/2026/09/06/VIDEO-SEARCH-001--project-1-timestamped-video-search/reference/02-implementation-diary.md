@@ -179,3 +179,57 @@ The viewer phase began while this independent GPU build was finishing. No evalua
 ### Technical details
 - CLI: `workbench/.venv/bin/video-workbench index --seconds 5 --fps 2`.
 - Features live under ignored `output/video-workbench/frames/<space>/`; completed indices live under `indices/<index-id>/`.
+
+## Step 4: Search the real index and inspect timestamped playback
+
+Implemented the typed FastAPI endpoint and local HTML viewer, then searched the training partition through the browser. The first query returned five candidates in 0.19 seconds. Clicking the top interval loaded the registered source video at exactly 5.0 seconds, with readyState 4 and 640×480 decoded video.
+
+Saved [the actual search and seek screenshot](../various/screenshots/02-first-search-and-seek.png), including sampled PTS. This is an engineering demonstration on training data, not the held-out evaluation. The independently repeated index build reused all 861 frames in 0.124 seconds with zero new encodes.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1)
+
+**Assistant interpretation:** Present real ranked evidence and verify browser playback, not just API JSON.
+
+**Inferred user intent:** Obtain a usable search tool with visual proof of its behavior.
+
+**Commit (code):** `522afe4` — completed cache/index milestone; viewer commit recorded in changelog.
+
+### What I did
+- Added strict request/response models, same-space checks, split filtering, a serialized model call, registered video routes, and range responses.
+- Built a responsive query/results/player page with source and timestamp evidence.
+- Tested malicious IDs, unknown indexes, invalid requests, empty valid splits, modified videos, and HTTP byte ranges.
+
+### Why
+- The browser should receive registered IDs and source URLs, never arbitrary filesystem access.
+
+### What worked
+- All 13 tests passed; actual browser POST returned 200 and video request returned 206 Partial Content.
+- Browser seek: `currentTime: 5`, `duration: 19.9`, `readyState: 4`, video 640×480.
+- Playback near the end paused successfully. Screenshot captured actual rendered video and search results.
+
+### What didn't work
+- The first endpoint stop used only `timeupdate`, stopping at 10.245371s for a 10s endpoint. Added animation-frame checks and clamped the final seek to the boundary, improving visible interval stopping.
+- Browser logged an irrelevant missing favicon 404; no application JS errors were observed.
+
+### What I learned
+- A server-side range-response test does not by itself establish that the browser decodes and seeks the source correctly; both checks matter.
+
+### What was tricky to build
+- MLX model instances cache state, so API calls must serialize access to the encoder. Query and index space IDs are checked before ranking.
+
+### What warrants a second pair of eyes
+- Browser media timing precision, registry/index consistency, and source-hash verification on playback.
+
+### What should be done in the future
+- Freeze six candidate configurations and run the selected test setting once.
+
+### Code review instructions
+- Read `api.py`, `viewer.html`, and `test_api.py`.
+- Start `video-workbench serve --manifest <manifest.json>` and open http://127.0.0.1:8767/.
+
+### Technical details
+- `POST /v1/search`: query, optional loaded index ID, split, top_k.
+- `GET /v1/index`: immutable index and feature-space metadata.
+- `GET /v1/episodes/{episode_id}/video`: registered source with range support.
+- OpenAPI: `/docs` and `/openapi.json`.

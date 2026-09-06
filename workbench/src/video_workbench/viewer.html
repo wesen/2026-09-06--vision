@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home video search</title>
+<style>
+:root{font:16px system-ui,sans-serif;color:#19242a;background:#f1f0e9}*{box-sizing:border-box}body{margin:0}header{background:#19242a;color:#fff;padding:28px 5vw}header small{letter-spacing:.18em;color:#b1c1b3}h1{font-size:34px;margin:8px 0}header p{margin:0;color:#ced8d1}main{max-width:1300px;margin:auto;padding:26px}form{display:flex;gap:10px;align-items:end;margin-bottom:20px}label{display:grid;gap:5px;font-weight:600;font-size:13px}label:first-child{flex:1}input,select,button{font:inherit;padding:12px;border:1px solid #8f9995;border-radius:3px}input,select{background:white}button{background:#2a6550;color:white;cursor:pointer;font-weight:650}button:disabled{opacity:.5;cursor:wait}.layout{display:grid;grid-template-columns:minmax(300px,.8fr) minmax(440px,1.2fr);gap:24px}.panel{background:#fff;border:1px solid #c4cac3;padding:20px}.hit{display:block;text-align:left;width:100%;background:white;color:#19242a;border:1px solid #bcc9c0;margin:10px 0;padding:16px}.hit:hover,.hit.active{background:#e5eee6;border-color:#2a6550}.hit strong{display:block;font-size:18px;margin-bottom:6px}.hit span{font-size:13px;font-weight:400}.muted{color:#53665d;font-size:13px}video{width:100%;background:#151a18;aspect-ratio:4/3}h2{font-size:19px;margin:0 0 12px}#status{min-height:24px;margin-bottom:14px}#evidence{font:12px ui-monospace,monospace;overflow-wrap:anywhere;line-height:1.8}summary{cursor:pointer}footer{margin-top:24px;border-top:1px solid #b9c3ba;padding-top:15px;font-size:13px;color:#53665d}@media(max-width:800px){.layout{grid-template-columns:1fr}form{flex-wrap:wrap}label:first-child{flex-basis:100%}main{padding:15px}}
+</style>
+<header><small>VIRTUALHOME / LOCAL RETRIEVAL LAB</small><h1>Find a moment at home.</h1><p>Search household videos, then inspect the source interval.</p></header>
+<main><form id="search"><label>Describe a moment<input id="query" value="A person opening the fridge door" maxlength="500" required></label><label>Partition<select id="split"><option value="train">Training</option><option value="development">Development</option><option value="test">Test</option><option value="">All videos</option></select></label><button id="submit">Search videos</button></form>
+<div id="status" role="status">Loading index…</div>
+<div class="layout"><section class="panel"><h2>Ranked intervals</h2><div id="results"><p class="muted">Enter a description to find candidate moments.</p></div></section><section class="panel"><h2 id="player-title">Source playback</h2><video id="player" controls preload="metadata"></video><p id="caption" class="muted">Select a result to seek to its start. Playback stops at the interval end.</p><details><summary>Timestamp evidence</summary><div id="evidence"></div></details></section></div>
+<footer><strong id="mode">Pooled-image baseline</strong> · Similarity ranks candidate evidence; it is not a probability or a procedural verdict. Mean-pooled frames do not preserve action order.<p id="index-info"></p></footer></main>
+<script>
+const $=id=>document.getElementById(id);let metadata,stopAt=null;const player=$('player');
+fetch('/v1/index').then(r=>r.json()).then(m=>{metadata=m;$('status').textContent=`Ready · ${m.shape[0]} searchable intervals`;$('index-info').textContent=`${m.window_seconds}s windows · ${m.fps} sampled frames/s · index ${m.index_id.slice(0,16)} · ${m.space.dimension} dimensions`;}).catch(e=>$('status').textContent=`Cannot load index: ${e.message}`);
+function stopAtBoundary(){if(stopAt!==null && player.currentTime>=stopAt && !player.paused){player.pause();player.currentTime=stopAt;}}
+player.addEventListener('timeupdate',stopAtBoundary);
+player.addEventListener('play',()=>{function tick(){stopAtBoundary();if(!player.paused)requestAnimationFrame(tick)}requestAnimationFrame(tick)});
+function selectHit(hit,button){document.querySelectorAll('.hit').forEach(b=>b.classList.remove('active'));button.classList.add('active');stopAt=hit.end_us/1e6;
+ const begin=hit.start_us/1e6;player.pause();player.src=hit.video_url;player.load();player.onloadedmetadata=()=>{player.currentTime=begin;};
+ $('player-title').textContent=`${begin.toFixed(1)}–${stopAt.toFixed(1)} seconds`;
+ $('caption').textContent=`${hit.episode_id} · ${hit.split} · cosine ${hit.score.toFixed(4)}`;
+ $('evidence').textContent=`Selected PTS (seconds): ${hit.selected_pts_us.map(t=>(t/1e6).toFixed(3)).join(', ')}. Feature space: ${hit.feature_space_id}.`;
+}
+$('search').addEventListener('submit',async event=>{event.preventDefault();$('submit').disabled=true;$('status').textContent='Encoding query and searching…';try{
+ const response=await fetch('/v1/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:$('query').value,split:$('split').value||null,top_k:5,index_id:metadata?.index_id})});
+ const result=await response.json();if(!response.ok)throw Error(JSON.stringify(result.detail));$('results').replaceChildren();
+ result.hits.forEach((hit,i)=>{const b=document.createElement('button');b.className='hit';const title=document.createElement('strong');title.textContent=`${hit.rank}. ${(hit.start_us/1e6).toFixed(1)}–${(hit.end_us/1e6).toFixed(1)}s · ${hit.score.toFixed(3)}`;const info=document.createElement('span');info.textContent=`${hit.episode_id} / ${hit.split}`;b.append(title,info);b.onclick=()=>selectHit(hit,b);$('results').append(b);if(i===0)selectHit(hit,b)});
+ if(!result.hits.length){$('results').textContent='No intervals in this partition.';player.pause();player.removeAttribute('src');player.load();stopAt=null;}
+ $('status').textContent=`${result.hits.length} candidates · ${result.elapsed_seconds.toFixed(2)}s · raw cosine ranking`;
+ }catch(e){$('status').textContent=`Search failed: ${e.message}`}finally{$('submit').disabled=false}});
+</script></html>

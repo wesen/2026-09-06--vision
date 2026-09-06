@@ -9,9 +9,9 @@
 
 ## S1 Registry
 
-- [ ] Implement generic manifest ingest and SQLite episode migration.
-- [ ] Verify source hashes, group splits, duplicate IDs, and PTS metadata.
-- [ ] Add inspect command and corrupt/missing/variable-rate fixtures.
+- [x] Implement generic manifest ingest and SQLite episode migration.
+- [x] Verify source hashes, group splits, duplicate IDs, and PTS metadata.
+- [x] Add inspect command and corrupt/missing/variable-rate fixtures.
 
 ## S2 Cache and index
 

@@ -9,13 +9,18 @@ Topics:
 DocType: reference
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://workbench/src/video_workbench/embedding.py
+      Note: Verified pooled-image adapter and feature identity, commit 358db7e
+    - Path: repo://workbench/uv.lock
+      Note: Exact runtime dependency versions
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T13:43:39.015949-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Runtime implementation diary
 

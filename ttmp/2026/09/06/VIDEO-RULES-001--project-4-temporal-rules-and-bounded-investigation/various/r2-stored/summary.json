@@ -1,0 +1,43 @@
+{
+  "kind": "actual predicted state at explicit sampled-frame triggers; not departure/continuous rule accuracy",
+  "rows": 864,
+  "source_sqlite_sha256": "3a2f5051660eba3dabdd92685e3dd11df4a261e638e7861447b2524e798aa2c3",
+  "before": {
+    "UNKNOWN": 864
+  },
+  "after": {
+    "PASS": 662,
+    "UNKNOWN": 150,
+    "VIOLATION": 52
+  },
+  "streams": {
+    "state/D__linear_head": {
+      "UNKNOWN": 75,
+      "PASS": 56,
+      "VIOLATION": 13
+    },
+    "state/D__text_margin": {
+      "UNKNOWN": 75,
+      "PASS": 68,
+      "VIOLATION": 1
+    },
+    "state/FD__linear_head": {
+      "PASS": 123,
+      "VIOLATION": 21
+    },
+    "state/FD__text_margin": {
+      "PASS": 140,
+      "VIOLATION": 4
+    },
+    "state/F__linear_head": {
+      "PASS": 135,
+      "VIOLATION": 9
+    },
+    "state/F__text_margin": {
+      "PASS": 140,
+      "VIOLATION": 4
+    }
+  },
+  "reopened_query_equal": true,
+  "evaluation_policy": "immutable repeated evaluations; no replacement or supersession"
+}

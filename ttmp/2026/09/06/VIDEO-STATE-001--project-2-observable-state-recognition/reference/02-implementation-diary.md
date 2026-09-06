@@ -9,13 +9,22 @@ Topics:
 DocType: reference
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://workbench/src/video_workbench/predicates/classify.py
+      Note: Train head and development calibration
+    - Path: repo://workbench/src/video_workbench/predicates/contracts.py
+      Note: Reviewed labels and observation invariants
+    - Path: repo://workbench/src/video_workbench/predicates/experiment.py
+      Note: Split ownership and observation export
+    - Path: repo://workbench/src/video_workbench/predicates/features.py
+      Note: Source-bound image cache and frozen templates
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T14:35:08.443987-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Implementation diary
 
@@ -159,3 +168,58 @@ The old microwave videos all belong to apartment 0, so this experiment assigns a
 - Sampling grid: 0, 20, 40, 60, 80, 100 percent of decoded frame indices; timestamps are actual MP4 presentation times in microseconds.
 - Full-frame evidence remains 640×480; the existing image encoder will resize to 320×240. No crop is selected using model scores.
 - Unrelated MLX repair and perception tickets remain untouched.
+
+## Step 4: Freeze five image-feature baselines and their evaluation policy
+
+Implemented text-hypothesis margins, a dual-ridge linear head, regularized Platt calibration, and development-selected decision/abstention thresholds. Image extraction reads source metadata only; labels enter the separate experiment runner. Model predictions never use reviewed visibility to suppress an answer. The oracle-visibility count is explicitly a diagnostic.
+
+The user also asked when to implement the YOLO-style perception ticket. Read its design and recommended D1–D2 after this frozen state baseline, before temporal memory: boxes/tracks/crops can then be compared against the existing full-frame evidence without changing both representation and selection simultaneously.
+
+### Prompt Context
+**User prompt (verbatim):** "btw we created a ticket about doing yolo-style video segmentation and all, when do yu think is the best opportunity to implement it (read the design doc if you want)."
+
+**Assistant interpretation:** Recommend where the perception pipeline belongs in the implementation sequence while continuing Project 2.
+
+**Inferred user intent:** Add useful object-focused vision at the right dependency boundary without losing a measurable baseline.
+
+### What I did
+- P1 code/data checkpoint is `046ba60`; printed P1 completion / P2 start successfully at `2026-09-06T19:42:46Z`.
+- Added a source/entity-bound NPZ cache with separate single-image representation identity, exact text templates, model-artifact identity, and measured encoding times.
+- Froze generic, kitchen-context, bathroom-context, context-only, and linear-head conditions before feature evaluation.
+- Implemented train-only ridge fitting, development-only calibration and policy selection, and held-out metric export.
+- Added hand-computed margin, head/cache mismatch, constant-context, unknown false-certainty, and observation-clock tests.
+- Started local Qwen image extraction on the GPU using existing weights. Native-video repair code is unchanged.
+
+### Why
+- Text similarity is a raw margin, not a calibrated probability. Calibration and abstention need their own parameters, provenance, and split ownership.
+- The perception guide explicitly separates representation comparisons on fixed intervals from proposal-selection experiments; this state baseline supplies the first comparison condition.
+
+### What worked
+- Seven predicate tests passed, including the hand-computed margin 0.8−0.6=0.2.
+- Source and entity mismatches reject reuse; unknown reviewed states count toward false certainty rather than becoming false labels.
+
+### What didn't work
+- No runtime failure encountered during this implementation step. Quality results are pending the first actual evaluation.
+
+### What I learned
+- The perception guide initially scopes boxes, tracks, contextual crops, and evidence proposals; masks are a later measured extension, and temporal segmentation is a separate project.
+
+### What was tricky to build
+- Development contains only fridge frames and two positives. The implementation can fit calibration mechanically but cannot establish reliable probabilities on held-out microwaves. Both fitting and policy selection reuse this tiny development set, which must be disclosed as optimistic.
+- A context-only control must not receive image features. Its output is constant within appliance class, exposing class/context shortcuts directly.
+
+### What warrants a second pair of eyes
+- The model-only abstention policy uses no visibility oracle; a confident answer on a reviewed unknown remains a counted failure.
+- Availability is explicitly source PTS plus measured image service time, excluding queueing/decoding/head overhead. It is a replay estimate, not live-system timing.
+
+### What should be done in the future
+- Finish evaluation and evidence playback; next implement perception D1–D2, then compare fixed-interval representations before adding proposal selection or temporal memory.
+
+### Code review instructions
+- Read `features.py` for evidence/template identity, `classify.py` for numerical policies, and `experiment.py` for split selection and exports.
+- Run `workbench/.venv/bin/python -m pytest workbench/tests/test_predicate_contracts.py workbench/tests/test_predicate_baselines.py -q`.
+
+### Technical details
+- Ridge coefficient 0.01; dual solve over visible train rows. No test-selected hyperparameters.
+- Calibration uses two-parameter regularized logistic fitting on standardized development margins.
+- Decision threshold maximizes development macro-F1; abstention chooses the smallest predeclared band meeting ≤10% empirical development risk, with reject-all fallback.

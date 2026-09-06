@@ -338,3 +338,75 @@ The full trajectories also have an obvious duration confound: interaction progra
 - Configured bed-scenario start: `[1.98290539, 1.25, 1.5227592]`; observed: `[1.9829042, 1.25, 1.52275848]`.
 - Starting room: 358; target room: 253.
 - Fixed windows: 20 frames at 10 FPS, sourced directly from hashed PNGs.
+
+## Step 7: Complete the release, calibration assessment, and report evidence
+
+All 48 full trajectories completed after the placement-check correction, and all 48 equal-duration windows were encoded from verified original PNGs. The release contains 3,682 paired frames and 368.2 seconds of full video, plus 96 seconds of window video. Full media decoding, raw/source hash checks, split ownership, exact duplicate checks, and original-v1 preservation checks passed.
+
+Reviewed all six appliance trajectories across complete action intervals, inspected native endpoint composites, and sampled every fixed window at its start, midpoint, and end. Preserved 50 evidence images, including actual browser captures, with a SHA-256 inventory. Wrote the release implementation/evidence reference and operational playbook for future report preparation.
+
+### Prompt Context
+**User prompt (verbatim):** (see Steps 1–2)
+
+**Assistant interpretation:** Finish the broader corpus and preserve an auditable record of its useful coverage and remaining limitations.
+
+**Inferred user intent:** Have training/testing material that supports meaningful follow-up experiments and a technically honest future report.
+
+**Commit (code):** `e0fe884` — "Corpus: support verified cross-room starts and add equal-duration windows"
+
+### What I did
+- Completed 16 train, 16 development, and 16 test trajectories; each partition contains all four families and both conditions/views.
+- Ran `python -m virtualhome_corpus.diversity_review` for full video/source validation, world-state runs, perceptual diagnostics, and native transition pages.
+- Ran `python -m virtualhome_corpus.diversity_windows`; all 48 clips are exactly 20 frames at 10 FPS, with no padding.
+- Ran ticket `scripts/10-final-audit.py` to check derivative provenance, split ownership, model-input keys, producer history, duration baseline, and original v1 hashes.
+- Signed separate calibration and window visual assessments; raw annotations remain unchanged.
+- Captured browser screenshots of the release overview, test apartment, and microwave evidence, and inspected the resulting screenshot.
+- Printed the C2–C3-complete / C4-start slip and stopped the owned Unity session after generation.
+
+### Why
+- Simulator success, video integrity, visibility, and training-label eligibility are different claims. Each needs separate evidence.
+
+### What worked
+- All 96 MP4 files passed decoding and media checks.
+- Zero cross-split lineage/group violations and zero exact video duplicates were found in the audited releases.
+- The full-video perceptual diagnostic's nearest cross-split pair has mean Hamming distance 18/64; the method remains a limited diagnostic rather than an exhaustive duplicate detector.
+- All 24 original videos and the original inputs manifest are unchanged.
+- Nine conservative RGB transition brackets were recorded across the six appliance trajectories.
+
+### What didn't work
+- All six appliance graph streams retain CLOSED throughout, including visibly open fridge frames. Graph-to-RGB timing offsets cannot be estimated from missing graph transitions.
+- Both microwave CLOSE sequences lack visibly confirmed closure; the door remains open in the reviewed post-action frames. Their CLOSE rows are excluded from visually confirmed closing evaluation.
+- The left microwave opening is substantially occluded. Small pickup props and some device contact/state views also remain weak-only or partially occluded.
+- One development door control contains a brief near-camera actor clipping/floating-hand artifact; its signed review excludes it from a visual benchmark.
+- A train-fitted 5.7-second duration threshold scores 100% train, 100% development, and 75% test on full trajectories. This confirms a shortcut. Equal-duration windows remove that particular signal but retain program-conditioned selection and other context biases.
+
+### What I learned
+- More situations exposed simulator/export defects and evaluation shortcuts that the single-appliance setup could hide.
+- A conservative release can be useful without claiming dense visual ground truth. Explicit exclusions are part of the dataset contract.
+
+### What was tricky to build
+- Rerunning the automated audit regenerates unsigned review templates. Kept signed assessments as separate versioned files with video hashes and repository-relative evidence bases, so tooling cannot silently overwrite reviewer judgments.
+- Original and derived inputs use different relative-path bases. The playbook names both bases and keeps all evaluator metadata separate.
+
+### What warrants a second pair of eyes
+- Independently adjudicate visual brackets and ambiguous props before using them as gold labels. Inspect the flagged rendering artifact and program-conditioned cropping biases.
+- Do not mix v1 evaluation with v2 training as unseen-apartment evaluation; both include apartment 0.
+
+### What should be done in the future
+- Use the fixed-window inputs for coarse action-discrimination experiments and report results by family/view.
+- Keep exact boundary and dense state learning disabled until an independently reviewed subset supports stronger labels.
+- Use the archived images, assessments, and commit-linked diary as the basis of the future technical report.
+
+### Code review instructions
+- Start with `reference/03-diverse-household-release-implementation-and-evidence.md` and `various/release-audit.json`.
+- Inspect `various/screenshots/release-test-apartment-browser.png`, `release-calibration-browser.png`, and the per-family window sheets.
+- Reproduce with the playbook commands; unit suite: `PYTHONPATH=src output/virtualhome-install/.venv/bin/python -m unittest discover -s tests -v` (18 passing tests).
+
+### Technical details
+- Full inputs: `output/virtualhome-corpus/diversity-v2/inputs.jsonl`.
+- Window inputs: `output/virtualhome-corpus/diversity-v2/windows-v1/inputs.jsonl`.
+- Evidence dashboard: `http://127.0.0.1:8770/release-gallery.html`; full gallery: `http://127.0.0.1:8771/gallery.html` while the local servers remain running.
+- Producer history: 40 initial-exporter recordings and eight placement-fix recordings; one configuration and one installation variant.
+- The single failed release attempt remains under `episodes/dv-673fa0ed90d3c06a/attempt-0001`.
+
+- Final documentation check: `docmgr doctor --ticket VIDEO-CORPUS-001 --stale-after 30 --fail-on error` passed. Ticket closure generated a blank EOF line reported by `git diff --check`; normalized the changelog before staging.

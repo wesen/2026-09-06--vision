@@ -15,20 +15,20 @@
 
 ## C2 Calibrate
 
-- [ ] Export native-resolution transition neighborhoods and review schema.
-- [ ] Review repeated OPEN/CLOSE cases for both appliances and multiple views.
-- [ ] Compare raw action, graph state, and visual uncertainty bounds.
-- [ ] Publish per-subset timing/visibility eligibility without global false guarantees.
+- [x] Export native-resolution transition neighborhoods and review schema.
+- [x] Review repeated OPEN/CLOSE cases for both appliances and multiple views.
+- [x] Compare raw action, graph state, and visual uncertainty bounds.
+- [x] Publish per-subset timing/visibility eligibility without global false guarantees.
 
 ## C3 Expand
 
-- [ ] Plan at most 48 initial new episodes with explicit variation factors.
-- [ ] Record lineage, transforms, seeds, duration controls, and preassigned group splits.
-- [ ] Generate only verified scenes; retain attempts/failures and immutable provenance.
+- [x] Plan at most 48 initial new episodes with explicit variation factors.
+- [x] Record lineage, transforms, seeds, duration controls, and preassigned group splits.
+- [x] Generate only verified scenes; retain attempts/failures and immutable provenance.
 
 ## C4 Audit and handoff
 
-- [ ] Validate all media and annotation/source-hash compatibility.
-- [ ] Audit cross-split lineage plus exact and perceptual duplicate diagnostics.
-- [ ] Inspect every scenario/view family and full calibration transition neighborhoods.
-- [ ] Publish model-safe inputs and separately scoped state/action/rule labels.
+- [x] Validate all media and annotation/source-hash compatibility.
+- [x] Audit cross-split lineage plus exact and perceptual duplicate diagnostics.
+- [x] Inspect every scenario/view family and full calibration transition neighborhoods.
+- [x] Publish model-safe inputs and separately scoped state/action/rule labels.

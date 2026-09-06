@@ -86,3 +86,22 @@ Interaction videos are expected to be longer than approach-only controls. Report
 ## Simulator findings to preserve
 
 The ticket contains successful and failed probes, camera captures, and browser screenshots. In this pinned build, the tested explicit PUTBACK-to-desk program failed; a minimal GRAB/PUTOBJBACK program succeeded. LOOKAT during the held-object or seated sequence caused failures in tested compositions. Terminal SIT worked. Some graph-advertised chairs/cabinets could not be approached. Some executable objects were hidden by other furniture. These are observed exclusions for tested programs and bindings, not universal statements about all VirtualHome versions.
+
+## Equal-duration windows
+
+After completing and validating the parent release:
+
+```sh
+PYTHONPATH=src output/virtualhome-install/.venv/bin/python \
+  -m virtualhome_corpus.diversity_windows
+```
+
+`windows-v1/inputs.jsonl` contains 48 additional MP4 references, each exactly 20 frames at 10 FPS. Its video paths are relative to `windows-v1/`. The windows preserve parent split/group/lineage, include no padding, and are encoded directly from verified source PNGs. `windows-v1/labels.jsonl` records parent video hash, raw-source hash bundle, source frame range, condition, and weak target-action label.
+
+OPEN, GRAB, and the first switching event use an action-midpoint window. Sitting uses the last two seconds of its exported action, because the observed interval can contain substantial preparation before visible sitting. Controls use their final two seconds. This removes duration as a condition feature but introduces program-conditioned selection; it does not remove actor-presence, pose, rendering, or context shortcuts.
+
+The measured full-trajectory duration-only classifier, fitted on training data, uses 5.7 seconds as its threshold and obtains 16/16 train, 16/16 development, and 12/16 test accuracy. All fixed windows last two seconds, so a duration-only majority prediction obtains 50% on each balanced partition. That is a nuisance-factor check, not a learned visual-model result.
+
+The signed ticket assessment records nine conservative visual transition brackets across the six appliance trajectories. Both microwave CLOSE rows are excluded from visually confirmed closure; the left microwave opening is occluded. Dense graph-derived visual state labels remain disabled. Some camera views also obscure small props or TV state, and one development control contains a brief actor clipping artifact. Consult the per-window visual assessment before treating any label as visually verified.
+
+Do not combine v1 evaluation videos with v2 training videos and call the result unseen-apartment evaluation: v1 is entirely apartment 0, which is v2's training apartment. A combined dataset needs a newly defined global split manifest while preserving both original releases.

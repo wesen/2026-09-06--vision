@@ -1,0 +1,544 @@
+[
+  {
+    "episode_id": "dv-008b5e55af631629",
+    "scene": 0,
+    "view": "right",
+    "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+    "sheet": "calibration-scene-0-right.jpg",
+    "frames": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69
+    ],
+    "actions": [
+      {
+        "action": "OPEN",
+        "endpoint_convention": "unresolved",
+        "interior": {
+          "end_frame_exclusive": 49,
+          "end_us": 4900000,
+          "start_frame": 37,
+          "start_us": 3700000
+        },
+        "program_index": 2,
+        "program_line": "<char0> [Open] <fridge> (308)",
+        "quality": "weak_program_supervision",
+        "raw_end": 51,
+        "raw_line": "2 OPEN 35 51",
+        "raw_start": 35
+      },
+      {
+        "action": "CLOSE",
+        "endpoint_convention": "unresolved",
+        "interior": {
+          "end_frame_exclusive": 67,
+          "end_us": 6700000,
+          "start_frame": 55,
+          "start_us": 5500000
+        },
+        "program_index": 4,
+        "program_line": "<char0> [Close] <fridge> (308)",
+        "quality": "weak_program_supervision",
+        "raw_end": 69,
+        "raw_line": "4 CLOSE 53 69",
+        "raw_start": 53
+      }
+    ],
+    "world_runs": [
+      {
+        "end_frame_exclusive": 70,
+        "start_frame": 0,
+        "states": [
+          "CLOSED"
+        ]
+      }
+    ]
+  },
+  {
+    "episode_id": "dv-7726ded72630455a",
+    "scene": 0,
+    "view": "left",
+    "video_sha256": "aa6bd524dce1067c56b8fb7f07de7ea057d6e82e2b2da79deff3d995a7d3f7da",
+    "sheet": "calibration-scene-0-left.jpg",
+    "frames": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68
+    ],
+    "actions": [
+      {
+        "action": "OPEN",
+        "endpoint_convention": "unresolved",
+        "interior": {
+          "end_frame_exclusive": 48,
+          "end_us": 4800000,
+          "start_frame": 36,
+          "start_us": 3600000
+        },
+        "program_index": 2,
+        "program_line": "<char0> [Open] <fridge> (308)",
+        "quality": "weak_program_supervision",
+        "raw_end": 50,
+        "raw_line": "2 OPEN 34 50",
+        "raw_start": 34
+      },
+      {
+        "action": "CLOSE",
+        "endpoint_convention": "unresolved",
+        "interior": {
+          "end_frame_exclusive": 66,
+          "end_us": 6600000,
+          "start_frame": 54,
+          "start_us": 5400000
+        },
+        "program_index": 4,
+        "program_line": "<char0> [Close] <fridge> (308)",
+        "quality": "weak_program_supervision",
+        "raw_end": 68,
+        "raw_line": "4 CLOSE 52 68",
+        "raw_start": 52
+      }
+    ],
+    "world_runs": [
+      {
+        "end_frame_exclusive": 69,
+        "start_frame": 0,
+        "states": [
+          "CLOSED"
+        ]
+      }
+    ]
+  },
+  {
+    "episode_id": "dv-af669d3e3a486780",
+    "scene": 2,
+    "view": "right",
+    "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+    "sheet": "calibration-scene-2-right.jpg",
+    "frames": [
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72
+    ],
+    "actions": [
+      {
+        "action": "OPEN",
+        "endpoint_convention": "unresolved",
+        "interior": {
+          "end_frame_exclusive": 52,
+          "end_us": 5200000,
+          "start_frame": 40,
+          "start_us": 4000000
+        },
+        "program_index": 2,
+        "program_line": "<char0> [Open] <microwave> (174)",
+        "quality": "weak_program_supervision",
+        "raw_end": 54,
+        "raw_line": "2 OPEN 38 54",
+        "raw_start": 38
+      },
+      {
+        "action": "CLOSE",
+        "endpoint_convention": "unresolved",
+        "interior": {
+          "end_frame_exclusive": 70,
+          "end_us": 7000000,
+          "start_frame": 58,
+          "start_us": 5800000
+        },
+        "program_index": 4,
+        "program_line": "<char0> [Close] <microwave> (174)",
+        "quality": "weak_program_supervision",
+        "raw_end": 72,
+        "raw_line": "4 CLOSE 56 72",
+        "raw_start": 56
+      }
+    ],
+    "world_runs": [
+      {
+        "end_frame_exclusive": 73,
+        "start_frame": 0,
+        "states": [
+          "CLOSED",
+          "OFF"
+        ]
+      }
+    ]
+  },
+  {
+    "episode_id": "dv-b78c9de6650abd04",
+    "scene": 1,
+    "view": "right",
+    "video_sha256": "927d8e1d7c6fd2652d6340c606ec62558cc7673978eee38b1a47cbf9cc19c16f",
+    "sheet": "calibration-scene-1-right.jpg",
+    "frames": [
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85
+    ],
+    "actions": [
+      {
+        "action": "OPEN",
+        "endpoint_convention": "unresolved",
+        "interior": {
+          "end_frame_exclusive": 65,
+          "end_us": 6500000,
+          "start_frame": 53,
+          "start_us": 5300000
+        },
+        "program_index": 2,
+        "program_line": "<char0> [Open] <fridge> (155)",
+        "quality": "weak_program_supervision",
+        "raw_end": 67,
+        "raw_line": "2 OPEN 51 67",
+        "raw_start": 51
+      },
+      {
+        "action": "CLOSE",
+        "endpoint_convention": "unresolved",
+        "interior": {
+          "end_frame_exclusive": 83,
+          "end_us": 8300000,
+          "start_frame": 71,
+          "start_us": 7100000
+        },
+        "program_index": 4,
+        "program_line": "<char0> [Close] <fridge> (155)",
+        "quality": "weak_program_supervision",
+        "raw_end": 85,
+        "raw_line": "4 CLOSE 69 85",
+        "raw_start": 69
+      }
+    ],
+    "world_runs": [
+      {
+        "end_frame_exclusive": 86,
+        "start_frame": 0,
+        "states": [
+          "CLOSED"
+        ]
+      }
+    ]
+  },
+  {
+    "episode_id": "dv-ddf28e0a6b4c30db",
+    "scene": 1,
+    "view": "left",
+    "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+    "sheet": "calibration-scene-1-left.jpg",
+    "frames": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83
+    ],
+    "actions": [
+      {
+        "action": "OPEN",
+        "endpoint_convention": "unresolved",
+        "interior": {
+          "end_frame_exclusive": 63,
+          "end_us": 6300000,
+          "start_frame": 51,
+          "start_us": 5100000
+        },
+        "program_index": 2,
+        "program_line": "<char0> [Open] <fridge> (155)",
+        "quality": "weak_program_supervision",
+        "raw_end": 65,
+        "raw_line": "2 OPEN 49 65",
+        "raw_start": 49
+      },
+      {
+        "action": "CLOSE",
+        "endpoint_convention": "unresolved",
+        "interior": {
+          "end_frame_exclusive": 81,
+          "end_us": 8100000,
+          "start_frame": 69,
+          "start_us": 6900000
+        },
+        "program_index": 4,
+        "program_line": "<char0> [Close] <fridge> (155)",
+        "quality": "weak_program_supervision",
+        "raw_end": 83,
+        "raw_line": "4 CLOSE 67 83",
+        "raw_start": 67
+      }
+    ],
+    "world_runs": [
+      {
+        "end_frame_exclusive": 84,
+        "start_frame": 0,
+        "states": [
+          "CLOSED"
+        ]
+      }
+    ]
+  },
+  {
+    "episode_id": "dv-e1975790e6ee831e",
+    "scene": 2,
+    "view": "left",
+    "video_sha256": "1a70bad31d795885847baf94423c108b5957fad2567c7dd5869aa80d9dcea4ca",
+    "sheet": "calibration-scene-2-left.jpg",
+    "frames": [
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72
+    ],
+    "actions": [
+      {
+        "action": "OPEN",
+        "endpoint_convention": "unresolved",
+        "interior": {
+          "end_frame_exclusive": 52,
+          "end_us": 5200000,
+          "start_frame": 40,
+          "start_us": 4000000
+        },
+        "program_index": 2,
+        "program_line": "<char0> [Open] <microwave> (174)",
+        "quality": "weak_program_supervision",
+        "raw_end": 54,
+        "raw_line": "2 OPEN 38 54",
+        "raw_start": 38
+      },
+      {
+        "action": "CLOSE",
+        "endpoint_convention": "unresolved",
+        "interior": {
+          "end_frame_exclusive": 70,
+          "end_us": 7000000,
+          "start_frame": 58,
+          "start_us": 5800000
+        },
+        "program_index": 4,
+        "program_line": "<char0> [Close] <microwave> (174)",
+        "quality": "weak_program_supervision",
+        "raw_end": 72,
+        "raw_line": "4 CLOSE 56 72",
+        "raw_start": 56
+      }
+    ],
+    "world_runs": [
+      {
+        "end_frame_exclusive": 73,
+        "start_frame": 0,
+        "states": [
+          "CLOSED",
+          "OFF"
+        ]
+      }
+    ]
+  }
+]

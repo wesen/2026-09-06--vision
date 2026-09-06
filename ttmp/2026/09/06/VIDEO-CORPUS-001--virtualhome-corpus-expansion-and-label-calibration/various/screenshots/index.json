@@ -1,0 +1,306 @@
+{
+  "count": 50,
+  "scope": "Probe failures, accepted scenarios, full appliance intervals, native calibration endpoints, all 48 windows, browser review pages",
+  "files": [
+    {
+      "file": "accepted-scene-1-switch-left.png",
+      "kind": "simulator capture",
+      "sha256": "8ab0b72d1f6b89ee15583197d04c5e44df4fc8d43a3456c150a84f502ad39d50",
+      "bytes": 282541
+    },
+    {
+      "file": "accepted-scene-1-switch-right.png",
+      "kind": "simulator capture",
+      "sha256": "4be4c903a9ea332eef543cd19ddceae394d48328a744d4cc07461658b76dfaac",
+      "bytes": 257295
+    },
+    {
+      "file": "accepted-scene-2-posture-left.png",
+      "kind": "simulator capture",
+      "sha256": "289b82001dce1b4c51fbfdac1cfc81a0882b6430e7137a5ce981336852b33d11",
+      "bytes": 385323
+    },
+    {
+      "file": "accepted-scene-2-posture-right.png",
+      "kind": "simulator capture",
+      "sha256": "e6e702b4755a999956ff61b9a5325c597cbf38cf2a159ed3e1cc528d3caa29b2",
+      "bytes": 396245
+    },
+    {
+      "file": "calibration-native-0-left.png",
+      "kind": "native-resolution composite",
+      "sha256": "985684749c0866ed3af6fa15ef033cc561c8856bf9b13234a4985d8e0d0093fc",
+      "bytes": 1402873
+    },
+    {
+      "file": "calibration-native-0-right.png",
+      "kind": "native-resolution composite",
+      "sha256": "113386d37c4ad54962a561a252162ff7d51528a3cee97cd7b9f486edea4c8f8e",
+      "bytes": 1441446
+    },
+    {
+      "file": "calibration-native-1-left.png",
+      "kind": "native-resolution composite",
+      "sha256": "acd4b324b1b9feefdec3ec41b967c399798c9a67814184cdf5240310ce50e5cb",
+      "bytes": 1220418
+    },
+    {
+      "file": "calibration-native-1-right.png",
+      "kind": "native-resolution composite",
+      "sha256": "241e9130f0f670a8c42b3982c626f2577e47ac6a50f6b6980c40830b92d0c2ca",
+      "bytes": 1297509
+    },
+    {
+      "file": "calibration-native-2-left.png",
+      "kind": "native-resolution composite",
+      "sha256": "efd3d781c9d9c3271995c4de6e3a348f45b6a4c81d5f7b69becb2f18cd191f23",
+      "bytes": 855396
+    },
+    {
+      "file": "calibration-native-2-right.png",
+      "kind": "native-resolution composite",
+      "sha256": "53fb2fa812f5edaf6e877c5456145280da4ea7e56239a3b23328879573bd5db2",
+      "bytes": 887161
+    },
+    {
+      "file": "calibration-scene-0-left.jpg",
+      "kind": "contact sheet",
+      "sha256": "5fee6a685fb092b1610e26fcd12c01802ebc9767ae03166e325f8bff094be8e0",
+      "bytes": 992062
+    },
+    {
+      "file": "calibration-scene-0-right.jpg",
+      "kind": "contact sheet",
+      "sha256": "0a6126e6d9ea0731a09d2315ea88bb78e12c612d2c6f2ddbac4ffe971d50212d",
+      "bytes": 913023
+    },
+    {
+      "file": "calibration-scene-1-left.jpg",
+      "kind": "contact sheet",
+      "sha256": "c84440b6746b96385e026296e5db99bb91cc97139fb4c9d35ec2dd3592085100",
+      "bytes": 1034382
+    },
+    {
+      "file": "calibration-scene-1-right.jpg",
+      "kind": "contact sheet",
+      "sha256": "10301b6c7fa8d139208dd0243b0128eb66f5834325efba0425c0a0825eb3c62e",
+      "bytes": 996264
+    },
+    {
+      "file": "calibration-scene-2-left.jpg",
+      "kind": "contact sheet",
+      "sha256": "9716485a34350e3f1124e9cb145020b89bd5f4385ecdc5d4671bcfdeea75f610",
+      "bytes": 866404
+    },
+    {
+      "file": "calibration-scene-2-right.jpg",
+      "kind": "contact sheet",
+      "sha256": "3cd567b0a11d9e8b2af2d6acd6b4470993a66eeec0654ced7174588f1fa0b482",
+      "bytes": 927495
+    },
+    {
+      "file": "probe-gallery-browser.png",
+      "kind": "browser screenshot",
+      "sha256": "22d58ad734eb64400ce51cea2ad1eeb76df5d3f045b0aa2d1bd0f0d1e514aa87",
+      "bytes": 2587312
+    },
+    {
+      "file": "release-calibration-browser.png",
+      "kind": "browser screenshot",
+      "sha256": "3b7b35a326fd967bc99dbb0836d623d0ee08524a89b859931fffb4ddeb95fe2c",
+      "bytes": 670447
+    },
+    {
+      "file": "release-overview-browser.png",
+      "kind": "browser screenshot",
+      "sha256": "f9a710aac371e5ed605176f0ea2c77d94c9ccbec4f24db9eb1e990942aefc419",
+      "bytes": 706399
+    },
+    {
+      "file": "release-test-apartment-browser.png",
+      "kind": "browser screenshot",
+      "sha256": "15bb89fb87e24ec0fb2d1ac843b65c7736064de5ad5eae9902d32f291c492104",
+      "bytes": 1689858
+    },
+    {
+      "file": "revised-scene-0-overview.jpg",
+      "kind": "contact sheet",
+      "sha256": "65114674bc5c4b1f34140d9aed5f9d67bc34ea988f83de006e75768c27e8d7be",
+      "bytes": 416310
+    },
+    {
+      "file": "revised-scene-1-overview.jpg",
+      "kind": "contact sheet",
+      "sha256": "0a1dd601c9aae9a4b5973af5293122acae706814fed2ae7a66fce8de6e926b33",
+      "bytes": 407091
+    },
+    {
+      "file": "revised-scene-2-overview.jpg",
+      "kind": "contact sheet",
+      "sha256": "8982b9345a7c72271b76f4f9a924fabf752eebbf3121aee61fd1e63c57f6addb",
+      "bytes": 360364
+    },
+    {
+      "file": "scene-0-door-left-after.png",
+      "kind": "simulator capture",
+      "sha256": "9c6eff71e77c4622d46d8576dc023641d563c01a41402cf841b638ba6b472c23",
+      "bytes": 421641
+    },
+    {
+      "file": "scene-0-door-right-after.png",
+      "kind": "simulator capture",
+      "sha256": "a0dbc05563451f57dc763fa0f5eb4ba3176c28a1e264dbc2b13d2f8be9e4503b",
+      "bytes": 421397
+    },
+    {
+      "file": "scene-0-pickup-left-after.png",
+      "kind": "simulator capture",
+      "sha256": "c25de0841548087b42a1c2d98cea024b32f0ab913c5b0effa8a2ab7eedc8b2be",
+      "bytes": 361603
+    },
+    {
+      "file": "scene-0-pickup-right-after.png",
+      "kind": "simulator capture",
+      "sha256": "aebfd16ab79253c5af1476fd26d1a1df820ece38dc6afad6f83445524a34f2b6",
+      "bytes": 343608
+    },
+    {
+      "file": "scene-0-posture-left-after.png",
+      "kind": "simulator capture",
+      "sha256": "48bd9aad451adfe96decd5c2de9543512df71c56a3b9e28dbe953377b747315f",
+      "bytes": 261819
+    },
+    {
+      "file": "scene-0-posture-right-after.png",
+      "kind": "simulator capture",
+      "sha256": "771c9cadf395433cf9b6946e89cff7d7695d26f0e8993927099928e1f7d0147f",
+      "bytes": 274269
+    },
+    {
+      "file": "scene-0-switch-left-after.png",
+      "kind": "simulator capture",
+      "sha256": "f894261381a5ec07a2239ee0e8bee3c7c194fac6ad1f41077706baf86ce2c88b",
+      "bytes": 373305
+    },
+    {
+      "file": "scene-0-switch-right-after.png",
+      "kind": "simulator capture",
+      "sha256": "373cf97a751c974642890302f278bdc8acdb55f14eb07836b83c8d510f4ae992",
+      "bytes": 370376
+    },
+    {
+      "file": "scene-1-door-left-after.png",
+      "kind": "simulator capture",
+      "sha256": "a4ca1c565ae9f372ce6bf8983fff202e8713d0cd0c71197fa0d13cd275e29f63",
+      "bytes": 375377
+    },
+    {
+      "file": "scene-1-door-right-after.png",
+      "kind": "simulator capture",
+      "sha256": "f6aa645a900015ca34f4fd286d4963f1fc5b3a25321f8c614864a518d40b0fb8",
+      "bytes": 430517
+    },
+    {
+      "file": "scene-1-pickup-left-after.png",
+      "kind": "simulator capture",
+      "sha256": "2daae09497d7836960a25281a6bca34a85d6b69dd615b628225cb9f14d9268d0",
+      "bytes": 285289
+    },
+    {
+      "file": "scene-1-pickup-right-after.png",
+      "kind": "simulator capture",
+      "sha256": "c4bdddabf1947f929ab8e12e0357603f332017750f1ef5d0728241ca2c78d02f",
+      "bytes": 234530
+    },
+    {
+      "file": "train-pickup-matched-review.jpg",
+      "kind": "contact sheet",
+      "sha256": "f2518498c91ccb26c44d941dd7732fa504d3d0780849d4b6f511d7b027fcdd29",
+      "bytes": 376979
+    },
+    {
+      "file": "train-posture-matched-review.jpg",
+      "kind": "contact sheet",
+      "sha256": "39db05b9c6c90dad3cc3b2cc5b199b63eaa017090411a7c56cc3e90a402fdd65",
+      "bytes": 420902
+    },
+    {
+      "file": "train-switch-matched-review.jpg",
+      "kind": "contact sheet",
+      "sha256": "7c3bb1cc5046f746176aa05564620fa023fd5d5b09526fc49e0a7667fedd1d2f",
+      "bytes": 505288
+    },
+    {
+      "file": "windows-scene-0-door.jpg",
+      "kind": "contact sheet",
+      "sha256": "df3db9c2ddf352cdcb449e5e205ea40e589c21b5a13f681a11f103cadece2ce0",
+      "bytes": 304036
+    },
+    {
+      "file": "windows-scene-0-pickup.jpg",
+      "kind": "contact sheet",
+      "sha256": "fbb0a01b5568a00f2c3f54558be0de2a96480d7ea4e6e902247d8fb96c586ef4",
+      "bytes": 303044
+    },
+    {
+      "file": "windows-scene-0-posture.jpg",
+      "kind": "contact sheet",
+      "sha256": "5525c8d260cc5c462a1efb5d9b9ef11d341247b6c0fe71da6cb29f3859a6cc9a",
+      "bytes": 330849
+    },
+    {
+      "file": "windows-scene-0-switch.jpg",
+      "kind": "contact sheet",
+      "sha256": "cbd72ee3280683f8997ed08597221874bd78975bb2ac299f972e79a5b79335f9",
+      "bytes": 315612
+    },
+    {
+      "file": "windows-scene-1-door.jpg",
+      "kind": "contact sheet",
+      "sha256": "9a3e10e0c68a278c42eca3af0045e63bffbdfb5e858a4652f56c5f06a22e699c",
+      "bytes": 322966
+    },
+    {
+      "file": "windows-scene-1-pickup.jpg",
+      "kind": "contact sheet",
+      "sha256": "457cbf72e54abc39b5dd50cc506292d16bf2d2e87c0a2743d90f6d3c52d5368a",
+      "bytes": 272772
+    },
+    {
+      "file": "windows-scene-1-posture.jpg",
+      "kind": "contact sheet",
+      "sha256": "8f8f48616e0aae9c4807503b6c0b8795e24bcf77047809ea7e068a8007e1dd08",
+      "bytes": 316594
+    },
+    {
+      "file": "windows-scene-1-switch.jpg",
+      "kind": "contact sheet",
+      "sha256": "e04331a4b44f4ea3bf6e1a84d46567cc6f4bf71778cabf01c0e5f47b2ed9b7a5",
+      "bytes": 250114
+    },
+    {
+      "file": "windows-scene-2-door.jpg",
+      "kind": "contact sheet",
+      "sha256": "07c33c6dfaf7a4a4f1deeea7d90bfee60451470342fa18052433e1fc7d44bd34",
+      "bytes": 287812
+    },
+    {
+      "file": "windows-scene-2-pickup.jpg",
+      "kind": "contact sheet",
+      "sha256": "98e47429ab7390c160402ebe5cf2a9183d3cf4ff6eb71ae44d34cf9f2c75773e",
+      "bytes": 317741
+    },
+    {
+      "file": "windows-scene-2-posture.jpg",
+      "kind": "contact sheet",
+      "sha256": "60107c353512dfe7a6dcb8daa89c500d25bf2d0ec0a5eaced4e7c686468ff508",
+      "bytes": 303374
+    },
+    {
+      "file": "windows-scene-2-switch.jpg",
+      "kind": "contact sheet",
+      "sha256": "54e25f3a8fbe51dd7d91b9919468fb588b61a195e35452ad7041fb051dffc031",
+      "bytes": 271358
+    }
+  ]
+}

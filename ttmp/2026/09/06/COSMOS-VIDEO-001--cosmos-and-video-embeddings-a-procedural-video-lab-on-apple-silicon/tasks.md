@@ -7,16 +7,16 @@
 - [x] Verify key model/runtime and simulator claims against primary sources.
 - [x] Write project roadmap, limitations, and investigation diary.
 
-## Proposed implementation
+## Project implementation tickets
 
-- [ ] Smoke-test Qwen text/image/video embeddings on MLX; record versions, memory, throughput, and output semantics.
-- [ ] Build Project 1: timestamped video search and held-out retrieval benchmark.
-- [ ] Build Project 2: state-recognition/context ablations with unknown handling.
-- [ ] Spike Habitat actor, video, and state export after the first baseline; stop at the timebox if blocked.
-- [ ] Build Project 3: frozen-feature linear, HMM/hysteresis, causal TCN, and duration-aware comparisons.
-- [ ] Smoke-test Cosmos Reason2 MLX conversion and select a matched small Qwen VLM baseline.
-- [ ] Build Project 4: typed temporal rules, oracle checks, bounded investigation, and verifier comparison.
-- [ ] Build Project 5: availability-faithful replay, incident viewer, and held-out real-video evaluation.
+- [ ] [COSMOS-EMBED-001: Embedding runtime baseline on MLX](../COSMOS-EMBED-001--embedding-runtime-baseline-on-mlx/tasks.md).
+- [ ] [VIDEO-SEARCH-001: Project 1 - Timestamped video search](../VIDEO-SEARCH-001--project-1-timestamped-video-search/tasks.md).
+- [ ] [VIDEO-STATE-001: Project 2 - Observable state recognition](../VIDEO-STATE-001--project-2-observable-state-recognition/tasks.md).
+- [ ] [VIDEO-TEMPORAL-001: Project 3 - Temporal models and durable memory](../VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory/tasks.md).
+- [ ] [COSMOS-VERIFY-001: Cosmos and Qwen verifier runtime baseline](../COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/tasks.md).
+- [ ] [VIDEO-RULES-001: Project 4 - Temporal rules and bounded investigation](../VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation/tasks.md).
+- [ ] [VIDEO-REPLAY-001: Project 5 - Replay and incident workbench](../VIDEO-REPLAY-001--project-5-replay-and-incident-workbench/tasks.md).
+- [ ] [VIDEO-CORPUS-001: VirtualHome corpus expansion and label calibration](../VIDEO-CORPUS-001--virtualhome-corpus-expansion-and-label-calibration/tasks.md).
 
 ## Intern guide and delivery
 

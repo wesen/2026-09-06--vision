@@ -23,6 +23,7 @@ Explore how video embeddings, temporal models, and Cosmos verification can suppo
 
 Source import, analysis, intern guide, and a validated 24-episode VirtualHome household corpus are complete. Embedding/model implementation and benchmarks remain open.
 
+- [Project ticket map and intern reading order](design-doc/04-project-ticket-map-and-intern-reading-order.md)
 - [Household corpus design and generation report](design-doc/03-virtualhome-household-corpus-design-and-generation-report.md)
 - [Corpus implementation diary](reference/02-virtualhome-corpus-implementation-diary.md)
 - [Intern implementation guide](design-doc/02-intern-guide-to-the-procedural-video-workbench.md)
@@ -34,7 +35,7 @@ Source import, analysis, intern guide, and a validated 24-episode VirtualHome ho
 - [Tasks](tasks.md)
 - [Changelog](changelog.md)
 
-Recommended order: searchable video notebook → state recognition → temporal learning and memory → rule investigator with Cosmos comparison → streaming replay. Add a bounded Habitat corpus experiment after the first baseline works.
+Recommended order: searchable video notebook → state recognition → temporal learning and memory → rule investigator with Cosmos comparison → streaming replay. Continue with the working VirtualHome generator; calibrate and expand it through VIDEO-CORPUS-001.
 
 ## Intern guide delivery
 

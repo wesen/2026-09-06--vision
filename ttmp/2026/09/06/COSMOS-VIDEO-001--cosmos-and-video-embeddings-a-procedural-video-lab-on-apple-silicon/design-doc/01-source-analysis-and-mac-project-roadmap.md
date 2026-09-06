@@ -24,6 +24,8 @@ WhenToUse: ""
 
 # Source analysis and Mac project roadmap
 
+> Planning update: the user selected VirtualHome on 2026-09-06. Simulator alternatives below are historical; the active implementation plan is [the child ticket map](04-project-ticket-map-and-intern-reading-order.md) and VIDEO-CORPUS-001. The previously uploaded umbrella PDF predates this update.
+
 ## Recommendation
 
 Build a local procedural-video research workbench with five cumulative projects: semantic search, state recognition, learned temporal segmentation, a temporal rule investigator, and streaming replay. Add a small synthetic-corpus experiment after the first working video baseline. Use Qwen embeddings as the first representation candidate and Cosmos Reason as a comparison verifier. Keep Cosmos-Embed1 behind a replaceable adapter for a later NVIDIA-hosted comparison.

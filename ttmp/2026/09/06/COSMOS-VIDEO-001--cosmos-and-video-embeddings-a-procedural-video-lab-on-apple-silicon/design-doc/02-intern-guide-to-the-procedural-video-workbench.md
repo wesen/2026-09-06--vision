@@ -32,6 +32,8 @@ The first implementation targets the MacBook Pro inspected for this ticket: Appl
 
 **Implementation status:** the ticket contains research documents, imported sources, and extracted teaching labs. The application modules and application APIs described below are a proposed design. They do not exist yet. Code blocks labeled pseudocode specify behavior; they are not a claim that an installable package already implements that behavior. Vendor references were checked on 6 September 2026; pin the actual versions when you implement adapters.
 
+> Planning update: the user selected VirtualHome on 2026-09-06. Simulator alternatives below are historical; the active implementation plan is [the child ticket map](04-project-ticket-map-and-intern-reading-order.md) and VIDEO-CORPUS-001. The previously uploaded umbrella PDF predates this update.
+
 ## 1. The problem, through one complete example
 
 Suppose a recording shows a person operating a demonstration machine. The relevant rule is: the machine must be stopped continuously for at least two seconds immediately before its guard opens. This is a teaching scenario. The same implementation can use a household activity, an assembly procedure, or a staged tabletop mechanism with visible state indicators.

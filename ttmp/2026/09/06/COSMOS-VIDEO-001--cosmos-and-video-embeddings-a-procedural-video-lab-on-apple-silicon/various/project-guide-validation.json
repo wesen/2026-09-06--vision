@@ -1,0 +1,66 @@
+[
+  {
+    "ticket": "COSMOS-EMBED-001",
+    "words": 2005,
+    "code_blocks": 3,
+    "local_links_checked": 5,
+    "unchecked_tasks_including_delivery": 15,
+    "syntax_only_not_application_tests": true
+  },
+  {
+    "ticket": "VIDEO-SEARCH-001",
+    "words": 1977,
+    "code_blocks": 4,
+    "local_links_checked": 6,
+    "unchecked_tasks_including_delivery": 15,
+    "syntax_only_not_application_tests": true
+  },
+  {
+    "ticket": "VIDEO-STATE-001",
+    "words": 1767,
+    "code_blocks": 3,
+    "local_links_checked": 7,
+    "unchecked_tasks_including_delivery": 15,
+    "syntax_only_not_application_tests": true
+  },
+  {
+    "ticket": "VIDEO-TEMPORAL-001",
+    "words": 1891,
+    "code_blocks": 4,
+    "local_links_checked": 9,
+    "unchecked_tasks_including_delivery": 15,
+    "syntax_only_not_application_tests": true
+  },
+  {
+    "ticket": "COSMOS-VERIFY-001",
+    "words": 1742,
+    "code_blocks": 3,
+    "local_links_checked": 5,
+    "unchecked_tasks_including_delivery": 15,
+    "syntax_only_not_application_tests": true
+  },
+  {
+    "ticket": "VIDEO-RULES-001",
+    "words": 1965,
+    "code_blocks": 5,
+    "local_links_checked": 7,
+    "unchecked_tasks_including_delivery": 15,
+    "syntax_only_not_application_tests": true
+  },
+  {
+    "ticket": "VIDEO-REPLAY-001",
+    "words": 1911,
+    "code_blocks": 3,
+    "local_links_checked": 9,
+    "unchecked_tasks_including_delivery": 17,
+    "syntax_only_not_application_tests": true
+  },
+  {
+    "ticket": "VIDEO-CORPUS-001",
+    "words": 1970,
+    "code_blocks": 3,
+    "local_links_checked": 5,
+    "unchecked_tasks_including_delivery": 16,
+    "syntax_only_not_application_tests": true
+  }
+]

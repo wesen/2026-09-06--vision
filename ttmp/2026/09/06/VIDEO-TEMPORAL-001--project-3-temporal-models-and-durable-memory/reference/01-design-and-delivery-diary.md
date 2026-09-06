@@ -20,12 +20,17 @@ RelatedFiles:
       Note: Visual review and artifact hashes
     - Path: repo://ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory/various/remarkable-upload.json
       Note: Successful individual delivery
+    - Path: repo://workbench/src/video_workbench/temporal/data.py
+      Note: Sequence masks clocks and trailing windows
+    - Path: repo://workbench/src/video_workbench/temporal/linear.py
+      Note: Independent frozen-feature ridge baseline
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T13:13:51.534537-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -187,3 +192,57 @@ Rendered this guide as a six-page PDF with a dedicated contents page, readable H
 - Remote directory: `/ai/2026/09/06/VIDEO-TEMPORAL-001`.
 - Local inspected PDF: `/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/project-guides/VIDEO-TEMPORAL-001/VIDEO-TEMPORAL-001_Intern_Guide.pdf`.
 - Six-page visual review and individual dry-run/upload receipts are stored under `various/`.
+
+## Step 4: Implement sequence clocks, masks, and numerical oracle baseline
+
+Started temporal implementation after completing the localization diagnostic. Added timestamped feature sequence validation, independent evidence-validity and label masks, source-horizon availability, gap-preserving interval mapping, and dense trailing-window planning on native timestamps. These contracts do not imply that real dense video features have already been extracted.
+
+Added numerical normal, omission, repetition, and gap fixtures plus an independent multiclass ridge baseline. The baseline preserves the known fixture errors and leaves missing features unclassified. This is a numerical software check, explicitly separate from representation quality on rendered video.
+
+### Prompt Context
+**User prompt (verbatim):** "Then implement all 3 tickets, commit at appropriate intervals and keep a detailed diary as you work (using the diary format from the skill), Print out a brutalist work slip with the plan / different phases for the ticket. then before stsarting a phase, plrint a split about the phase, and print one when the phase is done."
+
+**Assistant interpretation:** Implement the temporal project in addition to the completed action and localization work, retaining evidence and diary checkpoints.
+
+**Inferred user intent:** Use temporal history and durable memory without fabricating missing procedural events or leaking future information.
+
+**Commit (code):** `f7f5f43` — Add temporal sequence clocks masks and oracle linear baseline.
+
+### What I did
+- Read the temporal design, tasks, prior delivery diary, and upstream sparse handoff context.
+- Added Sequence validation for shape, integer clocks, evidence, finite features, target ranges, and Boolean masks.
+- Added half-open trailing-window planning and segment-to-source coverage mapping that retains gaps.
+- Added numerical oracle fixtures with irregular durations, omitted CLOSE, repeated OPEN, and a missing-feature interval.
+- Added independent ridge fitting and prediction with feature-space validation and missing predictions represented by -1 and NaN scores internally.
+- Saved the numerical baseline report in `various/oracle-linear-v1.json`.
+
+### Why
+Validity describes whether evidence exists; label masks describe whether supervision is allowed. Combining them prematurely can train missing evidence as background. Segment bounds also must not imply continuous coverage across missing observations.
+
+### What worked
+- Four temporal tests pass.
+- Oracle known valid accuracy: normal 20/20, omission 16/16, repetition 28/28, gap 16/16.
+- The omission contains no invented CLOSE prediction, repetition retains three OPEN runs, and gap samples remain unclassified.
+- Irregular native timestamps map to trailing windows without including a frame at the half-open end.
+- Delayed availability prevents a feature from appearing in an earlier as-of selection.
+
+### What didn't work
+An exploratory lookup of `workbench/src/video_workbench/actions/temporal.py` returned `No such file or directory`; the actual exported handoff exists under `output/action-benchmark-v1/temporal-handoff-v2`. No temporal test or oracle run failed. Printing remains paused because the external Almanach request was previously rejected by automatic approval review; no new external request was made.
+
+### What I learned
+Sparse upstream state and action exports are useful provenance examples but cannot substitute for the dense sequence benchmark. Numerical oracle accuracy only demonstrates the controlled fixture, not video understanding.
+
+### What was tricky to build
+A feature segment has an overall time span and potentially disjoint evidence coverage. The mapper returns both instead of filling gaps. Availability is constrained to be no earlier than the feature end; label supervision remains an independent mask combined with validity only for loss.
+
+### What warrants a second pair of eyes
+The oracle feature vocabulary reserves OTHER but the numerical classifier fits only the three observed event classes. Real corpus supervision needs an explicit class inventory and uncertain-boundary mask. Streaming consumers must not feed unavailable future features merely because a head itself is causal.
+
+### What should be done in the future
+Extract actual dense trailing features, map weak interiors without supervising uncertain boundaries, and evaluate the real linear baseline. Then implement classical decoders, causal TCN training and leakage tests, and append-only memory. T1 remains open until actual source mapping and video measurements are complete.
+
+### Code review instructions
+Inspect `temporal/data.py:Sequence` and `trailing_grid`, then `fixtures.py` and `linear.py`. Run `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_temporal_data.py -q`. Check the saved report's irregular timestamps, missing masks, and omission/repetition predictions.
+
+### Technical details
+Numerical training seed: 1; oracle evaluation seed: 2. Ridge strength: 0.01. Missing feature storage is zero with validity false. Internal missing predictions are -1 with NaN scores; durable observation serialization will require explicit nulls rather than nonfinite JSON. No GPU job was started in this step.

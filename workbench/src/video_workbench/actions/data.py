@@ -24,6 +24,12 @@ def window(center_us,duration_us,width_us=2_000_000):
     return start,start+width_us
 
 
+def action_center(action,start_us,end_us):
+    # AIST Sit exports include a long positioning/wait period. Source review
+    # shows the actual descent at the end; preserve a seated final sample.
+    return end_us-750_000 if action=='sit' else (start_us+end_us)//2
+
+
 def validate_samples(samples):
     ids=set();lineages={};hashes={}
     for s in samples:
@@ -62,7 +68,7 @@ def prepare(release, destination):
                 rows=[r for r in annotations['actions'] if r['program_index']==i and r['action'] not in ('WALK','TURNTO','WATCH')]
                 if not rows:raise ValueError(f'missing inverse action export: {ep["episode_id"]} {verb}')
                 lo=min(r['raw_start'] for r in rows)*1_000_000//annotations['fps'];hi=max(r['raw_end'] for r in rows)*1_000_000//annotations['fps']
-                candidates.append((VERBS[verb],(lo+hi)//2,[lo,hi]))
+                candidates.append((VERBS[verb],action_center(VERBS[verb],lo,hi),[lo,hi]))
             if len(candidates)!=2:raise ValueError('paired interaction must expose two directions')
         for action,center,weak in candidates:
             interval=window(center,ep['media']['duration_us'])
@@ -80,7 +86,8 @@ def prepare(release, destination):
                             'view':m['view'],'condition':m['condition'],'source_sha256':ep['video_sha256']})
     validate_samples(samples)
     write_json(dest/'samples.json',samples);write_json(dest/'review-proposals.json',reviews)
-    write_json(dest/'protocol.json',{'version':'actions-v1','seconds':2,'fps':2,'actions':ACTIONS,'queries':QUERIES,
+    write_json(dest/'protocol.json',{'version':'actions-v2','seconds':2,'fps':2,'actions':ACTIONS,'queries':QUERIES,
+        'window_policy':'Sit center = exported end minus 750 ms; other actions use exported midpoint; controls use trajectory end minus 1 s. Source-review correction before model inference.',
         'representations':['native_fp32','pooled_fp32','pooled_4bit'],'interventions':['original','reverse','repeat_first'],
         'samples_sha256':file_hash(dest/'samples.json'),'release_config_sha256':file_hash(root/'config.json'),
         'excluded':excluded,'labels':'Source RGB review required before primary scoring; weak requested actions are not truth.'})

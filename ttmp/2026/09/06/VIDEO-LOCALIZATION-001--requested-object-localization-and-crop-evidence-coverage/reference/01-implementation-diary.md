@@ -21,6 +21,8 @@ RelatedFiles:
       Note: Verified detector source joins and measured confidence sweep
     - Path: repo://workbench/src/video_workbench/localization/evaluate.py
       Note: Best-overlap recall versus unique binding
+    - Path: repo://workbench/src/video_workbench/localization/experiment.py
+      Note: Measured fixed state comparison and source-bound missing observations
     - Path: repo://workbench/src/video_workbench/localization/features.py
       Note: Actual fixed image features and explicit missing masks
     - Path: repo://workbench/src/video_workbench/localization/review.py
@@ -39,6 +41,7 @@ LastUpdated: 2026-09-06T17:01:56.371871-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -355,3 +358,58 @@ Inspect `crops.py:prepare` and `features.py:encode`, then `test_crop_policy_keep
 
 ### Technical details
 Crop directory: `output/localization-v1/crops-v1`. Feature directory: `output/localization-v1/features-v1`. Runtime: `workbench/.venv` with `PYTHONPATH=workbench/src HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1`. GPU execution session 95629 completed successfully. Model: `output/models/qwen3-vl-embedding-2b-4bit`. No native-video acceptance claim is made for this image-only diagnostic.
+
+## Step 7: Evaluate state quality and preserve missing inference
+
+Ran both text-margin and ridge-head state methods across F, D, O, FD, and FO. Heads fit available known training rows; calibration and abstention use available known development rows. Labels join only after feature extraction, through verified state aliases and exact source clocks. The evaluator publishes all 1,440 observations, including unavailable detector evidence.
+
+The reviewed-crop linear head gets 16/17 known test states correct, compared with 10/17 for the full-frame head. This is an exploratory oracle-assisted result on previously inspected scenes. All evidence-bearing methods still answer on all seven unknown test frames. Detector-only methods have no test evidence, and the paired F/D/O test denominator is zero with null metrics.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1).
+
+**Assistant interpretation:** Complete the measured state comparison while preserving source identity, split discipline, unknowns, and missing evidence.
+
+**Inferred user intent:** Determine how much localization helps state recognition and whether that improvement is usable downstream.
+
+**Commit (code):** `b2a89e9` — Evaluate controlled crop state baselines with explicit missing evidence.
+
+### What I did
+- Added `localization/experiment.py:run` with feature/artifact verification and exact state-alias joins.
+- Reused the existing ridge, margin, calibration, and policy implementations.
+- Evaluated ten condition/method combinations over train, development, and test.
+- Reported full-population metrics and paired F/D/O subsets with explicit zero denominator.
+- Emitted validated StateObservation records with evidence IDs, producer identity, oracle flags, and offline source-horizon availability.
+- Preserved raw results, fitted parameters, observations, completion manifest, and validation counts in the ticket.
+
+### Why
+Conditional metrics can conceal complete localization failure. Missing D rows must remain in the experiment with null score/probability and unknown value. Oracle crop improvements cannot be presented as production detector coverage or proof of reliable abstention.
+
+### What worked
+- All ten baselines completed using existing encoded features; no new model download or inference was needed.
+- Test linear-head known correct counts: F 10/17, D 0/17 with no evidence, O 16/17, FD 3/17, FO 16/17.
+- All evidence-bearing text-margin conditions predict the 15 known closed frames correctly and miss both known open frames.
+- All evidence-bearing methods answer on seven unknown test frames; this remains a visibility/abstention failure.
+- Validated all 1,440 StateObservation records, including 150 missing-evidence records with paired null scores.
+- All paired test metrics are null with n=0. Six localization tests still pass.
+
+### What didn't work
+No evaluation command failed. The FD linear head performs poorly on test (14/17 known errors), although FD test features equal F because every D crop is missing. Its fitted head/calibration differ because training and development contain a different mix of cropped and fallback evidence. This measured failure is retained. Printing remains pending after the earlier automatic approval rejection.
+
+### What I learned
+Correct object geometry helps the learned state head in this small diagnostic, but does not fix unknown false certainty. Full-frame fallback preserves evidence availability without preserving the distribution used to train a fusion head. The comparison therefore needs both coverage and state risk.
+
+### What was tricky to build
+Localization IDs differ from the original state sample IDs. The evaluator follows state aliases, verifies source and entity identity and timestamps, and reorders labels to the feature rows. It verifies each condition space against the feature producer before scoring. Missing inference cites the requested source only for traceability and is marked unavailable; it does not claim that a crop was seen.
+
+### What warrants a second pair of eyes
+The full label file hash identifies the evaluation revision, but fitting uses only explicit training/development row lists. The test partition was inspected previously and has only two known open examples. Availability is an offline source horizon, not measured execution latency. O/FO observations must never be mixed into a production temporal stream without retaining their oracle flag.
+
+### What should be done in the future
+Publish the detailed localization failure analysis, a nonduplicated outcome gallery, and a measured improvement plan. Validate the temporal handoff and complete the temporal ticket's dense feature, decoder, neural model, and durable-memory implementation.
+
+### Code review instructions
+Start at `localization/experiment.py:run`. Verify row joins and masks before reading metrics. Inspect `various/state-comparison-v1/results.json` for fitted row IDs and test confusion counts, and `observations.jsonl` for null missing D scores and oracle flags. The independent validation record counts 1,440 validated observations and 150 missing rows.
+
+### Technical details
+Output: `output/localization-v1/state-comparison-v1`. Inputs: state `samples-v2.json` and `labels-v2.json`, `output/localization-v1/crops-v1/manifest.json`, and `output/localization-v1/features-v1`. Run through `PYTHONPATH=workbench/src workbench/.venv/bin/python` and call `localization.experiment.run` with a new destination. Ridge strength remains the existing 0.01 default; no held-out threshold selection was performed.

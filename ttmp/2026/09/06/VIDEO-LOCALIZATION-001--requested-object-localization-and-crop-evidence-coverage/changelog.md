@@ -19,3 +19,7 @@ Step 5: Completed 42-sheet review, corrected three rectangles, froze source anno
 ## 2026-09-06
 
 Step 6: Materialized equal-policy D/O crops and ran fixed image encoding for F/D/O/FD/FO; D available 69/144 and O 144/144; six tests pass. State evaluation remains (6e31c68).
+
+## 2026-09-06
+
+Step 7: Evaluated ten crop/state baselines; oracle linear head 16/17 known test correct versus F 10/17, but seven unknown false certainties persist. Preserved 1440 validated observations and null missing D scores (b2a89e9).

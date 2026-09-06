@@ -1,0 +1,11 @@
+{
+  "pdf_path": "output/pdf/COSMOS-VIDEO-001_Intern_Guide.pdf",
+  "sha256": "b21843588202a0efff67638e37b2b019ba7fd8152180b1e3268603c51b4d7338",
+  "bytes": 125962,
+  "pages": 22,
+  "visual_review": "All page contact sheets; detailed architecture, SQL, and API pages inspected",
+  "source_commit": "411c3cc",
+  "renderer": "remarquee upload md / Pandoc / XeLaTeX",
+  "validation": "JSON, YAML, SQL, 10 local links, arithmetic, 20 sequence tests, neural causality and optimizer checks passed",
+  "upload_receipt": "OK: uploaded COSMOS-VIDEO-001_Intern_Guide.pdf -> /ai/2026/09/06/COSMOS-VIDEO-001"
+}

@@ -33,3 +33,9 @@ Source import and initial analysis are complete. Implementation and runtime benc
 - [Changelog](changelog.md)
 
 Recommended order: searchable video notebook → state recognition → temporal learning and memory → rule investigator with Cosmos comparison → streaming replay. Add a bounded Habitat corpus experiment after the first baseline works.
+
+## Intern guide delivery
+
+The approximately 8,000-word intern guide was rendered as a reviewed 22-page PDF and uploaded to `/ai/2026/09/06/COSMOS-VIDEO-001/COSMOS-VIDEO-001_Intern_Guide.pdf` on reMarkable.
+
+See [PDF validation and upload receipt](various/pdf-validation.json), [the diary](reference/01-investigation-diary.md), and [the local rendering script](scripts/06-render-guide.sh).

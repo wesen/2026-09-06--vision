@@ -24,6 +24,6 @@
 - [x] Extract and verify the companion teaching labs locally.
 - [x] Validate structured examples, file links, and worked arithmetic.
 - [x] Print plan, authoring completion, and technical-review start slips.
-- [ ] Render and visually inspect the PDF.
-- [ ] Upload the guide to reMarkable and record the result.
-- [ ] Print remaining phase slips and commit final diary.
+- [x] Render and visually inspect the PDF.
+- [x] Upload the guide to reMarkable and record the result.
+- [x] Print remaining phase slips and commit final diary.

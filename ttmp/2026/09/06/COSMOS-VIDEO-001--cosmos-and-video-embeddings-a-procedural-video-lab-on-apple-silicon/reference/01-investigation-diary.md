@@ -9,13 +9,18 @@ Topics:
 DocType: reference
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://ttmp/2026/09/06/COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-procedural-video-lab-on-apple-silicon/design-doc/02-intern-guide-to-the-procedural-video-workbench.md
+      Note: Intern guide authored and validated in commit 411c3cc
+    - Path: repo://ttmp/2026/09/06/COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-procedural-video-lab-on-apple-silicon/scripts/06-render-guide.sh
+      Note: Reproduce the reviewed reMarkable edition
 ExternalSources: []
-Summary: "Chronological record of source import, machine inspection, verification, and roadmap decisions."
+Summary: Chronological record of source import, machine inspection, verification, and roadmap decisions.
 LastUpdated: 2026-09-06T11:31:47.512538-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Investigation diary
 
@@ -263,3 +268,88 @@ Reviewed concrete examples with a small validation script and inspected the math
 
 - Source content is Markdown; diagram blocks are ASCII so they remain readable in the PDF without a Mermaid runtime.
 - Guide validation checks documentation examples; it is not an application integration test.
+
+## Step 4: Render and inspect the reMarkable edition
+
+Rendered the guide to PDF and inspected every page through contact sheets, with detailed checks of the architecture diagram, SQL schema, and API table. The first layout split diagrams across pages; the final layout keeps code and diagrams intact, uses 11-point body type, and places the contents on its own page.
+
+The local BasicTeX installation required a reduced-dependency rendering configuration. Preserved the rendering header, Pandoc wrapper, and reproduction script in the ticket rather than depending on an undocumented machine change.
+
+### Prompt Context
+
+**User prompt (verbatim):** (see Step 1)
+
+**User prompt (verbatim):** "what packages should we install"
+
+**User prompt (verbatim):** "continue"
+
+**Assistant interpretation:** Explain missing PDF dependencies, continue with available tools, inspect the result, and complete the requested delivery.
+
+**Inferred user intent:** Obtain a readable technical document on reMarkable without leaving the work at a partial rendering failure.
+
+**Commit (guide and diary):** `411c3cc` — `docs(cosmos): add intern implementation guide and validation diary`.
+
+### What I did
+
+- Ran the PDF skill's artifact-operation marker successfully before rendering.
+- Used `remarquee upload bundle --pdf-only` for the initial PDF and switched to `remarquee upload md --pdf-only` for a single-document edition without a filename-derived heading.
+- Added `/Library/TeX/texbin` to the command PATH and used the existing Helvetica and Menlo fonts.
+- Added `scripts/04-pdf-header.tex`, `05-pdf-pandoc.sh`, and `06-render-guide.sh`.
+- Rendered page PNGs with Ghostscript because Poppler was unavailable.
+- Reviewed final 22-page contact sheets and detailed page 4, 12, and 17 images.
+- Recorded the local PDF hash and validation scope in `various/pdf-validation.json`.
+
+### Why
+
+- Keeping diagrams together is necessary to understand data flow on the device.
+- A stored rendering recipe makes later edits reproducible without requiring optional TeX packages.
+
+### What worked
+
+- The fallback PDF uses available `fancyvrb` and `fancyhdr` packages.
+- The final edition contains a clean table of contents, readable code, intact diagrams, and legible tables without visible clipping or overlap.
+- P3 done slip printed successfully at 2026-09-06T15:58:41Z, 384 x 385.
+- P4 start slip printed successfully at 2026-09-06T15:58:55Z, 384 x 359.
+
+### What didn't work
+
+- First render: `sh: extractbb: command not found`, followed by `! Argument of \\__sys_tmp:w has an extra }.` and Pandoc exit status 43. Adding the TeX directory to PATH fixed helper discovery.
+- Next render: `! LaTeX Error: File enumitem.sty not found.` The original error enclosed the filename in TeX quote characters. Optional `fvextra` and `framed` were also absent on inspection.
+- Recommended installation command to the user: `sudo /Library/TeX/texbin/tlmgr install enumitem fvextra framed`; did not install or update system TeX packages.
+- The initial 18-page bundle had a filename heading and split long diagrams. Switched to single-document rendering, a separate contents page, and `samepage=true` for verbatim blocks.
+- A QA rerender initially targeted the old space-separated bundle filename. Corrected the target to `COSMOS-VIDEO-001_Intern_Guide.pdf` and repeated final rendering and inspection.
+
+### What I learned
+
+- Passing an absolute XeLaTeX executable is insufficient if its helper programs are absent from PATH.
+- Bundle and single-document commands sanitize names differently; verify the actual generated filename before reviewing or delivering it.
+
+### What was tricky to build
+
+- Code-block pagination was a readability issue even though the PDF compiled successfully. Contact-sheet review revealed it; keeping verbatim blocks together fixed it at the cost of intentional white space.
+
+### What warrants a second pair of eyes
+
+- The teaching code blocks are pseudocode or existing lab examples, not a completed application. Preserve that distinction in future revisions.
+
+### What should be done in the future
+
+- Implement the guide's Milestone 0 model-adapter smoke tests when application work begins.
+
+### Code review instructions
+
+- Run `scripts/06-render-guide.sh` from any working directory to reproduce the local PDF.
+- Compare `various/pdf-validation.json` with the rendered artifact; rerender and inspect after layout/content changes.
+
+### Technical details
+
+- Final local artifact: `output/pdf/COSMOS-VIDEO-001_Intern_Guide.pdf` (repository-relative).
+- Renderer: Pandoc, XeLaTeX, Helvetica/Menlo, 0.8-inch margins, 11-point body, small unbroken code blocks.
+- Generated PDFs and raster QA are ignored build artifacts; the guide and rendering source are committed.
+
+
+### Step 4 delivery outcome
+
+Upload command returned `OK: uploaded COSMOS-VIDEO-001_Intern_Guide.pdf -> /ai/2026/09/06/COSMOS-VIDEO-001`. No redundant cloud listing was performed, following the upload skill. The uploaded edition used the same source and renderer configuration as the inspected local PDF.
+
+Final P4 done slip returned HTTP 200 with `printed: true` and printer `ok: true`, 384 x 404, rendered at 2026-09-06T16:05:29Z. All requested remaining phase boundaries have physical print receipts. Earlier research/drafting started before the slip request and were identified retrospectively rather than assigned false start receipts.

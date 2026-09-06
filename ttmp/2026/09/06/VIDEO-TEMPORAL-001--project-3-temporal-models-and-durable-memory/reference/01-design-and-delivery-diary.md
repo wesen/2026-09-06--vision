@@ -20,16 +20,23 @@ RelatedFiles:
       Note: Visual review and artifact hashes
     - Path: repo://ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory/various/remarkable-upload.json
       Note: Successful individual delivery
+    - Path: repo://workbench/src/video_workbench/temporal/benchmark.py
+      Note: Train-only baseline and development selection (0d47851)
     - Path: repo://workbench/src/video_workbench/temporal/data.py
       Note: Sequence masks clocks and trailing windows
+    - Path: repo://workbench/src/video_workbench/temporal/encode.py
+      Note: Actual pooled extraction and source audit (0d47851)
     - Path: repo://workbench/src/video_workbench/temporal/linear.py
       Note: Independent frozen-feature ridge baseline
+    - Path: repo://workbench/src/video_workbench/temporal/prepare.py
+      Note: Dense model inputs and weak labels (0d47851)
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T13:13:51.534537-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -246,3 +253,60 @@ Inspect `temporal/data.py:Sequence` and `trailing_grid`, then `fixtures.py` and 
 
 ### Technical details
 Numerical training seed: 1; oracle evaluation seed: 2. Ridge strength: 0.01. Missing feature storage is zero with validity false. Internal missing predictions are -1 with NaN scores; durable observation serialization will require explicit nulls rather than nonfinite JSON. No GPU job was started in this step.
+
+## Step 5: Extract dense video features and measure the weak-label baseline
+
+Completed the actual dense pooled-image run on 48 rendered VirtualHome-AIST episodes. The dataset contains 792 trailing windows with separate model inputs and weak program-interior supervision. Every episode passed the encoder's native timestamp audit before publication. This completes T1's real-data baseline alongside the previous numerical fixtures.
+
+The development-selected ridge model has 75.97% weak-label test accuracy and 21.16% macro recall, below the 80.84% accuracy of an always-WALK classifier. These measurements establish an imbalanced baseline; they do not demonstrate reviewed dense action recognition. Saved and visually reviewed the per-episode weak-label timeline for the future report.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 4)
+
+**Assistant interpretation:** Continue all three implementations with concrete experiments, evidence, and diary checkpoints.
+
+**Inferred user intent:** Determine whether temporal models improve discrimination while preserving source provenance and procedural errors.
+
+**Commit (code):** `0d47851` — Build dense temporal features and measure weak-label linear baseline.
+
+### What I did
+- Added `temporal/prepare.py` to create half-open two-second windows at 0.5-second stride, sampled at 2 fps, with labels joined only after encoding.
+- Added `temporal/encode.py` and ran the existing four-bit image encoder on unique sampled frames per episode; pooled and normalized each trailing window.
+- Checked video SHA, native PTS, raw PTS, time base, origin, and source horizon for every encoded window.
+- Added `temporal/benchmark.py`: train-only ridge fitting, development macro-recall selection among 0.01/0.1/1.0, and separate test evaluation.
+- Preserved manifests, exact window/label tables, fitted model and predictions, and the reviewed `various/dense-plan-v1/weak-grid.png`.
+- Added a test showing that changing masked labels/features cannot change the fitted independent baseline.
+
+### Why
+Sparse upstream exports cannot support dense temporal experiments. Separating inputs from supervision prevents weak program labels entering feature production, and macro recall exposes majority-class accuracy that conceals failed action discrimination.
+
+### What worked
+- The extraction artifact was complete on resumption; all 48 source-audit entries verified native mapping.
+- Five temporal tests passed with `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_temporal_data.py -q`.
+- Supervised windows: train 157, development 176, test 308. All ten classes occur in each partition.
+- Selected ridge: 0.01. Train accuracy/macro recall 100%/100%; development 78.98%/32.58%; test 75.97%/21.16%.
+- Viewed the saved timeline: all 48 rows, the class legend, unlabeled boundary ticks, and the seconds axis are readable.
+
+### What didn't work
+Polling the prior GPU session returned `write_stdin failed: Unknown process id 54735`. The completed feature manifest and NPZ existed; their hashes and row identities passed the baseline loader, so the job was not restarted. No extraction or baseline failure was inferred from the expired handle. Printing remains paused after the previously recorded automatic approval rejection of external Almanach egress; no new print request was sent.
+
+### What I learned
+WALK occupies 249/308 supervised test windows. Six classes have zero test recall. A temporal decoder can increase apparent accuracy by suppressing uncommon events, so subsequent comparisons must retain per-class metrics and separate numerical omission/repetition tests.
+
+### What was tricky to build
+The supervision target is the latest actual sampled source frame, not the nominal trailing-window endpoint. An endpoint can fall in an uncertain boundary or lack a rendered frame. Only a unique weak action at the sampled timestamp receives a label; uncertain boundaries stay masked. Offline availability records the source horizon and excludes real inference latency.
+
+### What warrants a second pair of eyes
+These are overlapping pooled-image features with weak program interiors. They are neither repaired native-video features nor reviewed boundary ground truth. Review lineage split enforcement, input/label separation, and timestamp mapping before interpreting future temporal results. Perfect training accuracy with 157 observations and 2048 feature dimensions is not evidence of generalization.
+
+### What should be done in the future
+Implement T2 classical inference and duration models with exhaustive numerical checks, then T3 causal TCN comparisons and T4 append-only memory. Keep constrained versus unconstrained behavior and offline versus causal evidence separate.
+
+### Code review instructions
+Start with `prepare.prepare`, `encode.encode`, and `benchmark.run`. Inspect the frozen `various/dense-plan-v1/validation.json`, feature manifest, and linear results. Reproduce the baseline with a fresh destination using `benchmark.run('output/temporal-v1/dataset', 'output/temporal-v1/pooled-features', NEW_DESTINATION)` under `PYTHONPATH=workbench/src`. Run the five temporal tests above.
+
+### Technical details
+- Feature matrix: 792 by 2048; feature space `92b2a1f338385a4a499cadc27b0b41c3a8d9074e4a7aab53bfa975add80c3f19`.
+- Actual cache: `output/temporal-v1/pooled-features`; measured baseline: `output/temporal-v1/linear-v1`.
+- Model: `output/models/qwen3-vl-embedding-2b-4bit`, existing pooled-image environment. The repaired native-video runtime remains separate.
+- Source horizon is offline availability; production latency must be added by streaming producers.

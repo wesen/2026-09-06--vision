@@ -16,3 +16,7 @@ Design source committed as edd3d34. Six-page PDF passed visual review and indivi
 ## 2026-09-06
 
 Step 4: Implemented sequence timing/mask contracts and numerical omission/repetition/gap oracle baseline; four tests pass. Dense video features remain pending (f7f5f43).
+
+## 2026-09-06
+
+Step 5: Dense 792-window pooled feature extraction, native timestamp audit, weak-label linear baseline and reviewed timeline figure (commit 0d47851).

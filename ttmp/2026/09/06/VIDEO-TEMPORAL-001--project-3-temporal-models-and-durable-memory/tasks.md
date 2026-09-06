@@ -9,9 +9,9 @@
 
 ## T1 Data and baseline
 
-- [ ] Implement timestamped feature sequences, validity, and weak-label masks.
-- [ ] Create oracle omission/repetition/gap fixtures and linear baseline.
-- [ ] Verify feature-index to source-time mapping.
+- [x] Implement timestamped feature sequences, validity, and weak-label masks.
+- [x] Create oracle omission/repetition/gap fixtures and linear baseline.
+- [x] Verify feature-index to source-time mapping.
 
 ## T2 Classical models
 

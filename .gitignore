@@ -7,3 +7,5 @@ workbench/.pytest_cache/
 *.egg-info/
 
 .playwright-mcp/
+workbench/perception-env/.venv/
+workbench/perception-env/.pytest_cache/

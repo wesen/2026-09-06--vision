@@ -1,0 +1,9 @@
+ultralytics>=8.3,<9
+av>=14,<18
+pillow>=11,<13
+numpy>=2,<3
+pytest>=8,<10
+fastapi>=0.115
+uvicorn>=0.34
+httpx>=0.28
+lap>=0.5

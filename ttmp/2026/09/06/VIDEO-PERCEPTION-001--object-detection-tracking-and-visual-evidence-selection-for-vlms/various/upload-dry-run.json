@@ -1,0 +1,7 @@
+{
+  "mode": "dry-run",
+  "returncode": 0,
+  "source_sha256": "48bb860ec2cbc1400b9a61f01ee8c30726be9611c0b19cf1a9a9dd700ac8b485",
+  "remote_dir": "/ai/2026/09/06/VIDEO-PERCEPTION-001",
+  "output": "DRY: layout=default\nDRY: remote-dir=/ai/2026/09/06/VIDEO-PERCEPTION-001\nDRY: workers=1\nDRY: pandoc /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/VIDEO-PERCEPTION-001--object-detection-tracking-and-visual-evidence-selection-for-vlms/design-doc/01-intern-analysis-design-and-implementation-guide.md -> <tmp>/VIDEO-PERCEPTION-001 Intern Guide.pdf\nDRY: upload VIDEO-PERCEPTION-001 Intern Guide.pdf -> /ai/2026/09/06/VIDEO-PERCEPTION-001\n"
+}

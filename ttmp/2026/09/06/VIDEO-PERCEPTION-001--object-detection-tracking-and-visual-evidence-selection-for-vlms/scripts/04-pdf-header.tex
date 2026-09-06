@@ -1,0 +1,13 @@
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\footnotesize,samepage=true}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small VIDEO-PERCEPTION-001}
+\fancyhead[R]{\small Intern implementation guide}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}
+\setlength{\emergencystretch}{3em}
+
+\let\originaltableofcontents\tableofcontents
+\renewcommand{\tableofcontents}{\originaltableofcontents\clearpage}

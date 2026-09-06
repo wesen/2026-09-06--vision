@@ -1,0 +1,59 @@
+{
+  "vault": "/Users/manuel/code/wesen/go-go-golems/go-go-parc",
+  "note": "Projects/2026/09/06/ARTICLE - YOLO Video Perception - Detection Tracking Evidence and State Recognition.md",
+  "commit": "03dc93c",
+  "remote": "origin",
+  "branch": "main",
+  "push": "successful; main synchronized with origin/main",
+  "implementation_commit": "f140717",
+  "initial_pipeline_commit": "dda2aa6",
+  "words": 4474,
+  "screenshots": 5,
+  "api_checks": 12,
+  "files": [
+    {
+      "path": "ARTICLE - YOLO Video Perception - Detection Tracking Evidence and State Recognition.md",
+      "sha256": "92d9b06c29e3b0cf7c56cb743c85f6811426a72c2e7551da0240bd9075402acb"
+    },
+    {
+      "path": "_assets/yolo-api-review-checks.json",
+      "sha256": "cd916c0ec55926cfd014fcef63124cab3f1ef4f6f17887ac6a122f97804a8455"
+    },
+    {
+      "path": "_assets/yolo-contiguous-actor-review.jpg",
+      "sha256": "6aebbf740152bf360c5ecbad697e47af7fa93c6ca3de108a764331e3b220104a"
+    },
+    {
+      "path": "_assets/yolo-detection-pilot-results.json",
+      "sha256": "c309c22bab19260c8a58282cd0bbe3bbea1c4236bb97fea77152060662100b85"
+    },
+    {
+      "path": "_assets/yolo-identity-review-results.json",
+      "sha256": "f367fe8419f57fea2b3c35ef22099c434d23ce979201f1f296fa0ef9078f91dd"
+    },
+    {
+      "path": "_assets/yolo-mask-and-crops.png",
+      "sha256": "14719812fa471b3c41423714bd65f58ac1004f4e3b8e81f05aebfc3e6e4d6332"
+    },
+    {
+      "path": "_assets/yolo-pipeline-evaluation.json",
+      "sha256": "d02c2cc551fcfe9d83f2f18dd077459e9887db6549107c333dd5b5c3a3689542"
+    },
+    {
+      "path": "_assets/yolo-replay-false-objects.png",
+      "sha256": "c98fb864dd3eb8f33ee3d1f58fb6dd7f540f49d70684c03cbae3d09793d83deb"
+    },
+    {
+      "path": "_assets/yolo-state-comparison-metrics.json",
+      "sha256": "2badee2e22feddfcdeafc2b6f8eab80dfcaf22c971f7ba5b971e1743b80cf342"
+    },
+    {
+      "path": "_assets/yolo-state-development-crop.png",
+      "sha256": "95d877e31d1781453fddf70e77e39539bddf39c4fd19a0152fa215c98f82ce51"
+    },
+    {
+      "path": "_assets/yolo-state-test-missing-crop.png",
+      "sha256": "d719661d4079ca0810d700dcaac944764af504d0a64bf0b73de58fecaac32448"
+    }
+  ]
+}

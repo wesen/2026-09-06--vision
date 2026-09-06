@@ -1,7 +1,7 @@
 ---
 Title: Project 2 - Observable state recognition
 Ticket: VIDEO-STATE-001
-Status: active
+Status: complete
 Topics:
     - video
     - embeddings
@@ -18,10 +18,11 @@ RelatedFiles:
       Note: Source-bound crop and hint policies
 ExternalSources: []
 Summary: ""
-LastUpdated: 2026-09-06T16:23:51.617928-04:00
+LastUpdated: 2026-09-06T16:44:32.047682-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 

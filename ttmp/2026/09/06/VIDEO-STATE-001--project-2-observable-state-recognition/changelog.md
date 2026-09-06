@@ -29,3 +29,7 @@ Ticket closed
 ## 2026-09-06
 
 Completed P1-P4 in 0d56480: evidence timeline, 28 saved review/browser images, 720 predictions, technical report, and 24 passing tests. Closed as an exploratory negative result; recommend perception D1-D2 next.
+
+## 2026-09-06
+
+Completed YOLO region follow-up in f140717: six representations, twelve classifiers, 1728 observations, missing-evidence null scores and replay screenshots. No accepted held-out microwave crops and no demonstrated state improvement.

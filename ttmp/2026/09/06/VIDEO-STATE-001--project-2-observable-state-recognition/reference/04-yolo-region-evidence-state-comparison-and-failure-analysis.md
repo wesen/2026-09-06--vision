@@ -1,7 +1,7 @@
 ---
 Title: YOLO region evidence state comparison and failure analysis
 Ticket: VIDEO-STATE-001
-Status: active
+Status: complete
 Topics:
     - video
     - embeddings

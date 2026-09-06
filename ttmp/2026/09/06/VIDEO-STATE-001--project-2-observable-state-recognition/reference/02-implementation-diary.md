@@ -440,3 +440,53 @@ Start with the two reports, then inspect `regions.py`, `region_experiment.py`, `
 
 ### Technical details
 Perception UI: http://127.0.0.1:8773/. State region UI: http://127.0.0.1:8774/. Live checks are preserved in `various/api-review-checks.json`. Output weights/features/videos remain ignored; result identities and selected evidence are committed.
+
+## Step 9: Publish the complete YOLO technical report to go-go-parc
+
+Created a new 4,474-word technical article covering the entire YOLO implementation and its state-recognition comparison. The article uses direct textbook prose, geometry equations, pseudocode, Mermaid data flow, API/source references, five copied screenshots, and five copied JSON evidence files. Historical vault notes remain unchanged.
+
+The vault commit `03dc93c` was pushed successfully to `origin/main`; status showed the branch synchronized. The meaningful completion slip printed successfully after the earlier phase-transition timeout. Both research implementation tickets are complete, with unvalidated quality claims explicitly excluded.
+
+### Prompt Context
+**User prompt (verbatim):** "once you finish the comparison,  write a detailed project report for the obsidian vault as a deep dive technical analysis blog post using a textbook writing style (no analogies, see skill).
+ Commit and push the bsidian vault when done (go-go-parc vault) about the whole YOLO part."
+
+**Assistant interpretation:** Publish a self-contained deep technical account of the full YOLO work after the comparison, including measured negative findings.
+
+**Inferred user intent:** Durable documentation that teaches the implementation and preserves its evidence in the synchronized vault.
+
+**Commit (code):** `f140717` (replay, masks, state comparison); `dda2aa6` (initial detector/tracker/crop/proposal pipeline). **Vault commit:** `03dc93c`.
+
+### What I did
+- Applied the Obsidian vault writing and textbook-authoring skills; matched the existing dated article structure.
+- Created a new article and colocated `_assets/` files, checked relative links, and hash-verified all eleven copied files.
+- Fetched the vault remote, staged only the new article and its assets, committed, pushed, and verified synchronization.
+- Retained a complete ticket-side report bundle and `various/vault-publication.json` receipt.
+- Printed `comparison-done.yaml`: HTTP 200, `printed: true`, rendered at 2026-09-06T20:43:36Z.
+
+### Why
+The report must explain the evidence pipeline and its failure boundaries, rather than merely list code changes or show successful detections.
+
+### What worked
+The append-only publication completed without a merge conflict. The five screenshots and five metric/API JSON files are available inside the vault without cross-repository image dependencies. Both docmgr doctor checks passed before closure.
+
+### What didn't work
+No new publication failure occurred. The earlier detector-to-review slip timeout remains an uncertain physical print outcome. The successful completion receipt does not retroactively confirm that earlier slip.
+
+### What I learned
+A useful final report gives missing evidence the same visibility as successful crop and mask outputs. Empty paired-test denominators and unsupported classes constrain the next experiment more strongly than a favorable development score.
+
+### What was tricky to build
+The report distinguishes 60 detector videos, 24 mask pilot frames, 42 visibly reviewed actor rows, nine transition brackets, and 144 state samples. These are different experimental units and cannot be combined into one quality denominator.
+
+### What warrants a second pair of eyes
+The report's single-reviewer labels and small grouped state dataset warrant independent review before detector fine-tuning or deployment decisions. No fresh blind test, dense temporal mask accuracy, or real generative-verifier quality claim is supported.
+
+### What should be done in the future
+Follow the report's proposed localization annotations, oracle-crop diagnostic, balanced visible states, and proposal end-of-stream coverage experiment. Preserve the existing frozen runs as baselines.
+
+### Code review instructions
+Read the vault article at `Projects/2026/09/06/ARTICLE - YOLO Video Perception - Detection Tracking Evidence and State Recognition.md`, then compare the copied metrics with the ticket result archives and source implementation at `f140717`.
+
+### Technical details
+The publication receipt records paths and SHA-256 values. The local review servers remain available at ports 8773 (perception) and 8774 (state regions). Source repository work was committed locally; only the explicitly requested vault was pushed.

@@ -1,7 +1,7 @@
 ---
 Title: Object detection tracking and visual evidence selection for VLMs
 Ticket: VIDEO-PERCEPTION-001
-Status: active
+Status: complete
 Topics:
     - video
     - embeddings
@@ -17,10 +17,11 @@ RelatedFiles:
       Note: Fixed region evidence comparison
 ExternalSources: []
 Summary: ""
-LastUpdated: 2026-09-06T14:52:49.80359-04:00
+LastUpdated: 2026-09-06T16:44:31.957609-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 # Object detection, tracking, and visual evidence selection
@@ -47,3 +48,5 @@ D1–D4 are implemented. The 60-video run, reviewed pilot, short identity spans,
 - [Pipeline counts and proposal evaluation](various/pipeline-evaluation.json)
 
 Replay: `http://127.0.0.1:8773/`.
+
+The full YOLO technical article was published to go-go-parc in commit `03dc93c` and pushed to `origin/main`. [Publication receipt](various/vault-publication.json).

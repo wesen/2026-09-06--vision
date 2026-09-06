@@ -1,19 +1,24 @@
 ---
-Title: YOLO perception implementation and measured evidence report
-Ticket: VIDEO-PERCEPTION-001
-Status: complete
-Topics:
-    - video
-    - embeddings
-DocType: reference
-Intent: long-term
-Owners: []
-RelatedFiles: []
-ExternalSources: []
-Summary: ""
-LastUpdated: 2026-09-06T16:30:36.8531-04:00
-WhatFor: ""
-WhenToUse: ""
+title: "YOLO Video Perception on Apple Silicon: Detection, Tracking, Evidence Selection, and Observable State"
+aliases:
+  - YOLO Perception Technical Report
+  - VIDEO-PERCEPTION-001 Project Report
+tags:
+  - article
+  - project
+  - yolo
+  - virtualhome
+  - video-understanding
+  - evaluation
+status: completed
+type: article
+created: 2026-09-06
+repo: /Users/manuel/code/wesen/2026-09-06--vision
+tickets:
+  - VIDEO-PERCEPTION-001
+  - VIDEO-STATE-001
+implementation_revision: f140717
+initial_pipeline_revision: dda2aa6
 ---
 
 # YOLO Video Perception on Apple Silicon: Detection, Tracking, Evidence Selection, and Observable State
@@ -22,7 +27,7 @@ A video state recognizer needs evidence of the requested object at the requested
 
 The implementation processed **60 VirtualHome videos containing 5,793 native frames**, producing 41,044 detections, 22,459 track records, and 4,472 contextual crops. A separate segmentation checkpoint produced masks on 24 fixed pilot frames. The state follow-up evaluated six evidence representations with two classification methods on the existing 144-sample dataset. No accepted microwave crop existed on any of the 24 held-out state frames. Crop-only recognition therefore had zero test coverage; combining crops with full frames did not establish an improvement.
 
-This report describes `VIDEO-PERCEPTION-001` and its completed experimental handoff into `VIDEO-STATE-001`. The source repository is `/Users/manuel/code/wesen/2026-09-06--vision`. The result is an inspectable research implementation with negative findings that constrain the next experiment. It is not a validated general-purpose action recognizer. The independent MLX native-video repair is outside this implementation; the state comparison uses the existing image embedding path.
+This report describes `VIDEO-PERCEPTION-001` and its completed experimental handoff into `VIDEO-STATE-001`. The source repository is `/Users/manuel/code/wesen/2026-09-06--vision`. The implementation checkpoint is `f140717`, following the initial detector/tracker commit `dda2aa6`. The result is an inspectable research implementation with negative findings that constrain the next experiment. It is not a validated general-purpose action recognizer. The independent MLX native-video repair is outside this implementation; the state comparison uses the existing image embedding path.
 
 ## 1. The units of evidence
 
@@ -96,7 +101,7 @@ A fixed initial-frame pilot selected 24 interaction examples independently of de
 
 The resulting categories were **11 localized, 8 missed, 4 unsupported, and 1 unreviewable**. The supported and visibly reviewable denominator is 19, giving localization recall of 11/19 at confidence ≥ 0.25 and IoU ≥ 0.5. All three reviewed small targets below 1,024 square pixels were missed. These counts describe requested targets in 24 selected frames. They do not constitute scene-wide average precision, dense video recall, or an exhaustive inventory of false positives.
 
-![Source-aligned detector and tracker replay.](../various/screenshots/browser-portrait-false-tv-and-tracks.png)
+![Source-aligned detector and tracker replay.](_assets/yolo-replay-false-objects.png)
 
 *Figure 1. Actual replay capture showing source pixels and the stored detector/tracker outputs. Portraits, reflections, and actor shadows produced false object/person interpretations in this corpus. The displayed track identifier describes an association in this run, not a verified physical identity.*
 
@@ -125,7 +130,7 @@ for frame in source_order:
 
 Eight reviewed spans each contained six contiguous native frames. One bed span did not provide a visible physical actor and was excluded from the identity denominator. Across the remaining **42 visible actor rows**, the reviewed association matched 42/42, with zero within-span ID switches and zero fragmentations. Seven extra observed person-track rows did not represent the physical actor. These short spans establish useful local behavior but cannot establish long-term identity stability across occlusion, re-entry, or long camera motion.
 
-![Six contiguous frames used for physical-actor association review.](../various/screenshots/track-span-00.jpg)
+![Six contiguous frames used for physical-actor association review.](_assets/yolo-contiguous-actor-review.jpg)
 
 *Figure 2. The review unit is a contiguous native-frame span. A persistent false person prediction must remain distinct from the manually identified actor when counting identity success.*
 
@@ -133,7 +138,7 @@ Eight reviewed spans each contained six contiguous native frames. One bed span d
 
 The mask experiment runs YOLO11n-seg on the same 24 fixed pilot source frames. It records 148 raw masks, source-coordinate polygons, source hashes, and checkpoint identity. Each image has a saved overlay. The browser can show these polygons together with detection/tracking evidence, but a mask polygon and a detection rectangle originate from different checkpoints and are not automatically the same instance.
 
-![Actual mask polygons and crop review.](../various/screenshots/browser-mask-and-crops.png)
+![Actual mask polygons and crop review.](_assets/yolo-mask-and-crops.png)
 
 *Figure 3. Browser evidence from the fixed-frame mask probe. The page exposes the checkpoint distinction and limited probe coverage. Empty mask display at an unsampled timestamp does not mean a segmentation model ran and found no object.*
 
@@ -192,6 +197,10 @@ Each representation is evaluated using both a text-hypothesis margin and a ridge
 
 Crop availability was **46/96 train, 23/24 development, and 0/24 test**. Across all samples, 69 had a unique accepted crop, 74 had no accepted crop, and one was ambiguous. This distribution is the primary result: a region-conditioned model trained mostly with usable regions encounters a held-out partition where the requested localization is unavailable.
 
+![Source frame and accepted development refrigerator crop.](_assets/yolo-state-development-crop.png)
+
+*Figure 4. Actual development sample, paired source and crop, and all twelve predictions. A valid crop path on this partition does not establish localization on the held-out apartment.*
+
 ## 9. State results and denominator discipline
 
 The held-out partition contains 17 visibly labeled states and seven unknown observations. Only two visible examples are open. A classifier that always predicts closed can appear successful by raw accuracy while failing the minority state and answering when the object is unobservable. The report therefore records correct answers over all visible samples, errors among answered visible samples, unknown false certainty, and coverage together.
@@ -218,6 +227,10 @@ The full-frame text margin retains the earlier 15/17 result, but its visible mac
 Development F1 reaches 1.0 for several region/hint conditions while held-out performance is poor. The data do not support selecting those development winners as deployable models. At test time FC has only F evidence, but its head was fit in a representation distribution containing crops. That train/test feature difference is one plausible contributor to failure; this small experiment cannot isolate it from scene and class distribution shifts.
 
 There are no common available test crops, so a paired test comparison restricted to frames with both F and C has an empty denominator. The archive records this as null. Creating a table of crop-only conditional accuracy without that fact would conceal the experiment's central limitation.
+
+![Held-out microwave sample with explicit missing target evidence.](_assets/yolo-state-test-missing-crop.png)
+
+*Figure 5. The source microwave is visible, but the accepted detector vocabulary at this frame contains bottle, bowl, and cup. The comparison preserves missing crop evidence and null crop-only scores alongside full-frame predictions.*
 
 ## 10. Replay interfaces and inspection
 
@@ -285,3 +298,17 @@ Further work has distinct entry conditions:
 - Run a real generative verifier as a separate experiment with the already implemented citation and availability contracts, using fixed evidence intervals before evaluating proposal-selected intervals.
 
 The completed work makes these choices measurable. Detection, tracking, segmentation probes, crop identities, proposal decisions, and state observations can now be inspected against the same source pixels. The evidence currently supports further localization and observability work, not a claim that YOLO regions already improve household state recognition.
+
+## Related project reports and evidence
+
+The dataset's lineage and visual label limitations are explained in [[ARTICLE - VirtualHome Corpus Expansion - Scenario Diversity Provenance and Visual Labels]]. The preceding retrieval system is described in [[ARTICLE - Timestamped Video Search - From Verified Pixels to Frozen Evaluation]]. This report adds detection, tracking, a mask probe, and region-conditioned state experiments to those foundations.
+
+The following compact evidence files are copied into the vault so that the principal reported counts remain available with this article:
+
+- [Detection pilot results](_assets/yolo-detection-pilot-results.json)
+- [Reviewed identity results](_assets/yolo-identity-review-results.json)
+- [Pipeline and proposal results](_assets/yolo-pipeline-evaluation.json)
+- [State comparison metrics](_assets/yolo-state-comparison-metrics.json)
+- [Live review API checks](_assets/yolo-api-review-checks.json)
+
+Full raw mask polygons, per-sample state observations, crop evidence bindings, and detailed chronological diaries remain in the source ticket archives. The note's images are copied assets, not cross-repository image links.

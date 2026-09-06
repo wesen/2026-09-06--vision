@@ -17,18 +17,23 @@ RelatedFiles:
       Note: Source-hash audit and requested-target deduplication
     - Path: repo://workbench/src/video_workbench/localization/evaluate.py
       Note: Best-overlap recall versus unique binding
+    - Path: repo://workbench/src/video_workbench/localization/review.py
+      Note: Source-verified overlay renderer and provisional annotation review checkpoint
     - Path: repo://workbench/src/video_workbench/perception/contracts.py
       Note: Shared half-open geometry
     - Path: repo://workbench/src/video_workbench/predicates/regions.py
       Note: Existing production requested-class binder
     - Path: repo://workbench/tests/test_localization_contracts.py
-      Note: Hand-computed metric and review checks
+      Note: |-
+        Hand-computed metric and review checks
+        Exact population and changed-source rejection tests
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T17:01:56.371871-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 # Implementation diary
@@ -178,3 +183,56 @@ Start at `localization/data.py:prepare`, then `annotations.py:validate_review` a
 
 ### Technical details
 Dataset: `output/localization-v1/dataset`. Source sheets: `output/localization-v1/source-review`. Tracked draft annotations: `various/source-audit-v1/reviews-in-progress.json`. No GPU job or measured localization run was started in this step.
+
+## Step 4: Complete provisional source annotations and render review overlays
+
+Completed the source-only annotation pass across the 162 unique requested targets. This includes the 144 state frames and 18 additional pilot frames. The draft now contains 158 visible-extent rectangles, one unobservable book, and three ambiguous requested-instance cases. These remain provisional single-reviewer annotations, not a certified localization benchmark.
+
+Added a source-verified overlay renderer and preserved six visually checked sheets in the ticket. All 42 episode sheets were rendered, but only sheets 20, 29, 33, 34, 35, and 40 have completed the overlay inspection pass at this checkpoint. The remaining overlay review precedes measured detector recall.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1).
+
+**Assistant interpretation:** Continue implementing localization with source evidence, meaningful commits, and a detailed diary before proceeding to the temporal ticket.
+
+**Inferred user intent:** Obtain a reproducible comparison that distinguishes incorrect object localization from insufficient state evidence.
+
+**Commit (code):** `74216dc` — Annotate localization source population and add source-verified review overlays.
+
+### What I did
+- Reviewed source sheets through the full 162-target population without detector overlays.
+- Recorded visible appliance body and protruding door extents separately for each frame, shrinking boxes where an actor hides an extremity.
+- Kept visibility independent of detector vocabulary support and state observability.
+- Added `localization/review.py:render_overlays` and the `overlays` CLI command.
+- Added tests for exact population coverage, duplicate review rejection, and changed-source rejection.
+- Preserved six checked overlay JPGs, the full rendering manifest, and a checkpoint listing precisely which sheets were inspected.
+
+### Why
+A successful JSON validation only proves schema and source identity. Overlay inspection is still needed to find inaccurate manual geometry. Multiple visible mugs or plates cannot be assigned to a requested simulator entity from class identity alone.
+
+### What worked
+- All 162 draft reviews pass source hash, visibility, and rectangle validation.
+- Provisional distribution: 86 visible unique, 72 partially visible unique, one unobservable, three ambiguous instances.
+- The renderer produced 42 source-bound review sheets and hashes.
+- `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_localization_contracts.py -q`: four tests passed.
+
+### What didn't work
+An initial diary lookup used the wrong basename and returned `zsh:1: no matches found: ttmp/2026/09/06/VIDEO-LOCALIZATION-001*/reference/01-diary.md`. Located and read the actual `01-implementation-diary.md` with `rg --files`. No annotation or rendering command failed. Printing remains pending after the previously documented automatic approval rejection; no external print retry was made.
+
+### What I learned
+The edge-on TV remains localizable although its screen state cannot be judged. A source frame with two mugs supports class presence but does not necessarily support requested-instance identity. The heavily occluded microwave requires a rectangle over the remaining visible left portion rather than its inferred full body.
+
+### What was tricky to build
+Half-open source rectangles must be displayed with their final coordinate minus one to avoid drawing an extra boundary pixel. Population validation runs before rendering, so a missing or duplicate review cannot silently produce an apparently complete gallery. A manifest explicitly says rendering does not certify annotation quality.
+
+### What warrants a second pair of eyes
+Manual boxes are approximate and use one reviewer. State-frame annotations use temporal contact-sheet context. Sectional-sofa extents, protruding appliance doors, truncation, and actor occlusion need particular attention in the remaining overlay review. No detector metrics should treat this checkpoint as final ground truth.
+
+### What should be done in the future
+Inspect the remaining overlay sheets, correct and freeze annotations, verify detector source identities, run the confidence sweep, and execute F/D/O crop and fusion comparisons. Complete the localization report and then the full temporal implementation.
+
+### Code review instructions
+Start with `localization/review.py:render_overlays` and `test_overlay_requires_exact_population_and_unchanged_source`. Inspect the six tracked overlay images and `review-checkpoint.json`. Reproduce the full overlay gallery using the CLI below. Do not mark the source-review task complete until all sheets have been inspected.
+
+### Technical details
+Run `PYTHONPATH=workbench/src workbench/.venv/bin/python -m video_workbench.localization overlays --dataset output/localization-v1/dataset --reviews ttmp/2026/09/06/VIDEO-LOCALIZATION-001--requested-object-localization-and-crop-evidence-coverage/various/source-audit-v1/reviews-in-progress.json --out output/localization-v1/overlay-review`.

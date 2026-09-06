@@ -280,3 +280,7 @@ The final corpus is a small within-scene dataset for coarse action retrieval and
 - Model inputs: `inputs.jsonl`; evaluator labels: `labels.jsonl`; weak query intervals: `retrieval-queries.json`.
 - Implementation commit `c6dc24a`; rendering/gallery milestone `b63965f`; initial simulator probe milestone `d005b3f`.
 - Printed C3 DONE at 17:02:19 UTC and C4 START at 17:02:36 UTC; service responses reported `printed: true`.
+
+### Final delivery bookkeeping
+
+Validation evidence and the final design/report were committed as `1417810` (`docs(corpus): record validated 24-episode dataset and resume audit`). Docmgr doctor and staged whitespace checks passed. The C4 completion slip printed successfully at 17:06:01 UTC (HTTP 200; printer `ok: true`; 384x414). The corpus plan plus start/done slips for all four phases are archived under `various/work-slips/corpus-*.yaml`. Port 18081 has no listener after owned-process shutdown. Original root source Markdown and teaching-lab ZIP remain untracked; generated corpus media remains in ignored `output/`.

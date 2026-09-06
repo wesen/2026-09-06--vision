@@ -1,0 +1,11 @@
+{
+  "phase": "C4 DONE",
+  "rendered_at": "2026-09-06T17:06:01Z",
+  "status_code": 200,
+  "printed": true,
+  "printer_ok": true,
+  "width": 384,
+  "height": 414,
+  "layout": "work-slips/corpus-c4-done.yaml",
+  "validation_commit": "1417810"
+}

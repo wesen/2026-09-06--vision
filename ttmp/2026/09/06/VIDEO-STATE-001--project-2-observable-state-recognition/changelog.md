@@ -20,3 +20,12 @@ Step 3: reviewed 144 RGB frames with eight unknowns and apartment-separated spli
 ## 2026-09-06
 
 Steps 4-5: implemented five frozen baselines (631210e), measured failure on held-out microwave frames, and preserved 720 observations with source evidence. All 24 workbench tests pass.
+
+## 2026-09-06
+
+Ticket closed
+
+
+## 2026-09-06
+
+Completed P1-P4 in 0d56480: evidence timeline, 28 saved review/browser images, 720 predictions, technical report, and 24 passing tests. Closed as an exploratory negative result; recommend perception D1-D2 next.

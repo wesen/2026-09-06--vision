@@ -45,6 +45,6 @@ class DiversityContracts(unittest.TestCase):
         positive=program_for('door',target,None,'interaction')
         self.assertEqual(sum('[Open]' in s for s in positive),1)
         self.assertEqual(sum('[Close]' in s for s in positive),1)
-        self.assertEqual(program_for('posture',target,None,'interaction')[-2],'<char0> [StandUp]')
+        self.assertIn('[Sit]',program_for('posture',target,None,'interaction')[-1])
 
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,192 @@
+[
+  {
+    "scene": 0,
+    "family": "door",
+    "target_id": 308,
+    "target_class": "fridge",
+    "actor_position": [
+      -2.34305716,
+      1.25,
+      -5.52291346
+    ],
+    "room": "kitchen",
+    "room_id": 209,
+    "cameras": {
+      "left": {
+        "position": [
+          -3.2277122510024054,
+          1.65,
+          -4.947826559029467
+        ],
+        "look_at": [
+          -3.37654,
+          1.00480747,
+          -2.15178466
+        ],
+        "rotation": [
+          12.97593879933728,
+          -3.0468650729154763,
+          0
+        ],
+        "id": 103
+      },
+      "right": {
+        "position": [
+          -0.9752927901874409,
+          1.65,
+          -3.591927651986352
+        ],
+        "look_at": [
+          -3.37654,
+          1.00480747,
+          -2.15178466
+        ],
+        "rotation": [
+          12.975938799337278,
+          -59.04686507291547,
+          0
+        ],
+        "id": 104
+      }
+    },
+    "program": [
+      "<char0> [Walk] <fridge> (308)",
+      "<char0> [LookAt] <fridge> (308)",
+      "<char0> [Open] <fridge> (308)",
+      "<char0> [LookAt] <fridge> (308)",
+      "<char0> [Close] <fridge> (308)",
+      "<char0> [LookAt] <fridge> (308)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    }
+  },
+  {
+    "scene": 0,
+    "family": "pickup",
+    "target_id": 454,
+    "target_class": "mug",
+    "actor_position": [
+      3.48440838,
+      1.25,
+      -7.84095
+    ],
+    "room": "livingroom",
+    "room_id": 342,
+    "cameras": {
+      "left": {
+        "position": [
+          4.301723831859018,
+          1.65,
+          -9.670413709108447
+        ],
+        "look_at": [
+          1.50979245,
+          1.00468671,
+          -9.458001
+        ],
+        "rotation": [
+          12.978285272565838,
+          -85.64926590462512,
+          0
+        ],
+        "id": 103
+      },
+      "right": {
+        "position": [
+          3.2471187824519463,
+          1.65,
+          -7.262164663983795
+        ],
+        "look_at": [
+          1.50979245,
+          1.00468671,
+          -9.458001
+        ],
+        "rotation": [
+          12.978285272565834,
+          -141.64926590462514,
+          0
+        ],
+        "id": 104
+      }
+    },
+    "program": [
+      "<char0> [Walk] <mug> (454)",
+      "<char0> [LookAt] <mug> (454)",
+      "<char0> [Grab] <mug> (454)",
+      "<char0> [LookAt] <mug> (454)",
+      "<char0> [PutObjBack] <mug> (454)",
+      "<char0> [LookAt] <mug> (454)"
+    ],
+    "success": false,
+    "result": {
+      "0": {
+        "message": "ScriptExcutor 0: PROCESS PUTBACK: Object mug not grabbed\nEXECUTION_GENERAL: Script is impossible to execute\n\n"
+      }
+    }
+  },
+  {
+    "scene": 0,
+    "family": "posture",
+    "target_id": 375,
+    "target_class": "sofa",
+    "actor_position": [
+      6.44463062,
+      1.25,
+      -10.077363
+    ],
+    "room": "livingroom",
+    "room_id": 342,
+    "cameras": {
+      "left": {
+        "position": [
+          3.98045757737851,
+          1.65,
+          -7.01673767341595
+        ],
+        "look_at": [
+          6.58019,
+          0.85,
+          -5.976838
+        ],
+        "rotation": [
+          15.94539590092285,
+          68.19846313594633,
+          0
+        ],
+        "id": 103
+      },
+      "right": {
+        "position": [
+          5.98855397929679,
+          1.65,
+          -8.713618374638504
+        ],
+        "look_at": [
+          6.58019,
+          0.85,
+          -5.976838
+        ],
+        "rotation": [
+          15.945395900922854,
+          12.19846313594633,
+          0
+        ],
+        "id": 104
+      }
+    },
+    "program": [
+      "<char0> [Walk] <sofa> (375)",
+      "<char0> [LookAt] <sofa> (375)",
+      "<char0> [Sit] <sofa> (375)",
+      "<char0> [StandUp]",
+      "<char0> [LookAt] <sofa> (375)"
+    ],
+    "success": false,
+    "error": "UnityCommunicationException(\"HTTPConnectionPool(host='127.0.0.1', port=18082): Read timed out. (read timeout=60)\")"
+  }
+]

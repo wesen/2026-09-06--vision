@@ -1,0 +1,129 @@
+[
+  {
+    "scene": 1,
+    "family": "switch",
+    "target_id": 272,
+    "target_class": "tablelamp",
+    "actor_position": [
+      0.667219937,
+      1.25,
+      0.08830857
+    ],
+    "room": "bedroom",
+    "room_id": 197,
+    "cameras": {
+      "left": {
+        "position": [
+          3.6149679610700494,
+          1.65,
+          1.9747380105438632
+        ],
+        "look_at": [
+          4.41566563,
+          0.85,
+          -0.708335459
+        ],
+        "rotation": [
+          15.94539590092285,
+          163.383552584998,
+          0
+        ],
+        "id": 99
+      },
+      "right": {
+        "position": [
+          1.7435524595313243,
+          1.65,
+          0.12821173285939658
+        ],
+        "look_at": [
+          4.41566563,
+          0.85,
+          -0.708335459
+        ],
+        "rotation": [
+          15.94539590092285,
+          107.38355258499799,
+          0
+        ],
+        "id": 100
+      }
+    },
+    "program": [
+      "<char0> [Walk] <tablelamp> (272)",
+      "<char0> [LookAt] <tablelamp> (272)",
+      "<char0> [SwitchOff] <tablelamp> (272)",
+      "<char0> [LookAt] <tablelamp> (272)",
+      "<char0> [SwitchOn] <tablelamp> (272)",
+      "<char0> [LookAt] <tablelamp> (272)"
+    ],
+    "success": false,
+    "result": {
+      "0": {
+        "message": "ScriptExcutor 0: PROCESS WATCH: Can not select object to watch: tablelamp\nEXECUTION_GENERAL: Script is impossible to execute\n\n"
+      }
+    }
+  },
+  {
+    "scene": 2,
+    "family": "posture",
+    "target_id": 296,
+    "target_class": "bed",
+    "actor_position": [
+      1.98290539,
+      1.25,
+      1.5227592
+    ],
+    "room": "bedroom",
+    "room_id": 253,
+    "cameras": {
+      "left": {
+        "position": [
+          -11.075174813127251,
+          1.65,
+          -1.693626469269184
+        ],
+        "look_at": [
+          -13.69924,
+          0.85,
+          -2.6705
+        ],
+        "rotation": [
+          15.94539590092285,
+          -110.41903431047793,
+          0
+        ],
+        "id": 115
+      },
+      "right": {
+        "position": [
+          -13.041746229866469,
+          1.65,
+          0.05120937872425957
+        ],
+        "look_at": [
+          -13.69924,
+          0.85,
+          -2.6705
+        ],
+        "rotation": [
+          15.945395900922854,
+          -166.41903431047794,
+          0
+        ],
+        "id": 116
+      }
+    },
+    "program": [
+      "<char0> [Walk] <bed> (296)",
+      "<char0> [LookAt] <bed> (296)",
+      "<char0> [Sit] <bed> (296)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    }
+  }
+]

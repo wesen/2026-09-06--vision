@@ -18,6 +18,7 @@ def bind(graph,scenario):
 
 
 def camera_for(target,room,view):
+    if view not in ('left','right'):raise ValueError('unknown view')
     t=target['bounding_box']['center'];center=room['bounding_box']['center'];size=room['bounding_box']['size']
     dx,dz=center[0]-t[0],center[2]-t[2]
     norm=math.hypot(dx,dz)
@@ -42,8 +43,8 @@ def program_for(family,target,support,condition):
     if family=='door':
         if 'CLOSED' not in target.get('states',[]):raise ValueError('door must start closed')
         operations=[action('Open',target),action('LookAt',target),action('Close',target)]
-    elif family=='pickup':operations=[action('Grab',target),action('LookAt',target),action('PutBack',target,support)]
-    elif family=='posture':operations=[action('Sit',target),action('LookAt',target),action('StandUp')]
+    elif family=='pickup':operations=[action('Grab',target),action('PutObjBack',target)]
+    elif family=='posture':return approach+[action('Sit',target)]
     elif family=='switch':
         on='ON' in target.get('states',[])
         operations=[action('SwitchOff' if on else 'SwitchOn',target),action('LookAt',target),action('SwitchOn' if on else 'SwitchOff',target)]
@@ -53,6 +54,10 @@ def program_for(family,target,support,condition):
 
 def plan(cfg):
     if cfg.get('schema_version')!=2:raise ValueError('unsupported diversity config')
+    for key in ('fps','width','height'):
+        if type(cfg.get(key)) is not int or cfg[key]<=0:raise ValueError('positive integer recording dimensions required')
+    if cfg['width']%2 or cfg['height']%2:raise ValueError('even video dimensions required')
+    if type(cfg.get('boundary_guard_frames')) is not int or cfg['boundary_guard_frames']<1:raise ValueError('positive boundary guard required')
     scenes=cfg['scenes']
     if len({s['scene_index'] for s in scenes})!=len(scenes):raise ValueError('scene appears in multiple split groups')
     if {s['split'] for s in scenes}!={'train','development','test'}:raise ValueError('three split roles required')

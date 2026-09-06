@@ -1,0 +1,67 @@
+[
+  {
+    "scene": 1,
+    "family": "switch",
+    "target_id": 313,
+    "target_class": "tv",
+    "actor_position": [
+      -15.8487244,
+      1.25,
+      2.77417564
+    ],
+    "room": "livingroom",
+    "room_id": 274,
+    "cameras": {
+      "left": {
+        "position": [
+          -13.216467998019489,
+          1.65,
+          6.898145883588158
+        ],
+        "look_at": [
+          -10.4279995,
+          1.1,
+          7.152003
+        ],
+        "rotation": [
+          11.113040535948297,
+          84.79823514805155,
+          0
+        ],
+        "id": 99
+      },
+      "right": {
+        "position": [
+          -11.776834208078334,
+          1.65,
+          4.6983027472626695
+        ],
+        "look_at": [
+          -10.4279995,
+          1.1,
+          7.152003
+        ],
+        "rotation": [
+          11.113040535948295,
+          28.79823514805153,
+          0
+        ],
+        "id": 100
+      }
+    },
+    "program": [
+      "<char0> [Walk] <tv> (313)",
+      "<char0> [LookAt] <tv> (313)",
+      "<char0> [SwitchOn] <tv> (313)",
+      "<char0> [LookAt] <tv> (313)",
+      "<char0> [SwitchOff] <tv> (313)",
+      "<char0> [LookAt] <tv> (313)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    }
+  }
+]

@@ -9,9 +9,9 @@
 
 ## C1 Preserve and probe
 
-- [ ] Verify immutable v1 inventory and create separate expansion config/output.
-- [ ] Probe additional VirtualHome scenes, target bindings, and camera visibility.
-- [ ] Record supported/unsupported scene/action/view capabilities.
+- [x] Verify immutable v1 inventory and create separate expansion config/output.
+- [x] Probe additional VirtualHome scenes, target bindings, and camera visibility.
+- [x] Record supported/unsupported scene/action/view capabilities.
 
 ## C2 Calibrate
 

@@ -1,0 +1,794 @@
+[
+  {
+    "scene": 0,
+    "family": "door",
+    "target_id": 308,
+    "target_class": "fridge",
+    "actor_position": [
+      -1.24301839,
+      1.25,
+      -7.57555676
+    ],
+    "room": "kitchen",
+    "room_id": 209,
+    "cameras": {
+      "left": {
+        "position": [
+          -3.2277122510024054,
+          1.65,
+          -4.947826559029467
+        ],
+        "look_at": [
+          -3.37654,
+          1.00480747,
+          -2.15178466
+        ],
+        "rotation": [
+          12.97593879933728,
+          -3.0468650729154763,
+          0
+        ],
+        "id": 103
+      },
+      "right": {
+        "position": [
+          -0.9752927901874409,
+          1.65,
+          -3.591927651986352
+        ],
+        "look_at": [
+          -3.37654,
+          1.00480747,
+          -2.15178466
+        ],
+        "rotation": [
+          12.975938799337278,
+          -59.04686507291547,
+          0
+        ],
+        "id": 104
+      }
+    },
+    "program": [
+      "<char0> [Walk] <fridge> (308)",
+      "<char0> [LookAt] <fridge> (308)",
+      "<char0> [Open] <fridge> (308)",
+      "<char0> [LookAt] <fridge> (308)",
+      "<char0> [Close] <fridge> (308)",
+      "<char0> [LookAt] <fridge> (308)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    },
+    "evidence_revision": 3,
+    "visual_quality": "reviewed_overview; partial occlusions remain; no precise state label guarantee"
+  },
+  {
+    "scene": 0,
+    "family": "pickup",
+    "target_id": 454,
+    "target_class": "mug",
+    "actor_position": [
+      5.11366129,
+      1.25,
+      -7.48421
+    ],
+    "room": "livingroom",
+    "room_id": 342,
+    "cameras": {
+      "left": {
+        "position": [
+          4.301723831859018,
+          1.65,
+          -9.670413709108447
+        ],
+        "look_at": [
+          1.50979245,
+          1.00468671,
+          -9.458001
+        ],
+        "rotation": [
+          12.978285272565838,
+          -85.64926590462512,
+          0
+        ],
+        "id": 103
+      },
+      "right": {
+        "position": [
+          3.2471187824519463,
+          1.65,
+          -7.262164663983795
+        ],
+        "look_at": [
+          1.50979245,
+          1.00468671,
+          -9.458001
+        ],
+        "rotation": [
+          12.978285272565834,
+          -141.64926590462514,
+          0
+        ],
+        "id": 104
+      }
+    },
+    "program": [
+      "<char0> [Walk] <mug> (454)",
+      "<char0> [LookAt] <mug> (454)",
+      "<char0> [Grab] <mug> (454)",
+      "<char0> [PutObjBack] <mug> (454)",
+      "<char0> [LookAt] <mug> (454)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    },
+    "evidence_revision": 3,
+    "visual_quality": "reviewed_overview; partial occlusions remain; no precise state label guarantee"
+  },
+  {
+    "scene": 0,
+    "family": "posture",
+    "target_id": 375,
+    "target_class": "sofa",
+    "actor_position": [
+      6.8704133,
+      1.25,
+      -7.81331348
+    ],
+    "room": "livingroom",
+    "room_id": 342,
+    "cameras": {
+      "left": {
+        "position": [
+          3.98045757737851,
+          1.65,
+          -7.01673767341595
+        ],
+        "look_at": [
+          6.58019,
+          0.85,
+          -5.976838
+        ],
+        "rotation": [
+          15.94539590092285,
+          68.19846313594633,
+          0
+        ],
+        "id": 103
+      },
+      "right": {
+        "position": [
+          5.98855397929679,
+          1.65,
+          -8.713618374638504
+        ],
+        "look_at": [
+          6.58019,
+          0.85,
+          -5.976838
+        ],
+        "rotation": [
+          15.945395900922854,
+          12.19846313594633,
+          0
+        ],
+        "id": 104
+      }
+    },
+    "program": [
+      "<char0> [Walk] <sofa> (375)",
+      "<char0> [LookAt] <sofa> (375)",
+      "<char0> [Sit] <sofa> (375)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    },
+    "evidence_revision": 3,
+    "visual_quality": "reviewed_overview; partial occlusions remain; no precise state label guarantee"
+  },
+  {
+    "scene": 0,
+    "family": "switch",
+    "target_id": 433,
+    "target_class": "tv",
+    "actor_position": [
+      6.364701,
+      1.25,
+      -9.998175
+    ],
+    "room": "livingroom",
+    "room_id": 342,
+    "cameras": {
+      "left": {
+        "position": [
+          4.524583328684795,
+          1.65,
+          -6.302496864630765
+        ],
+        "look_at": [
+          6.10300159,
+          0.9046552,
+          -8.6152
+        ],
+        "rotation": [
+          14.906160935158603,
+          145.68649101720527,
+          0
+        ],
+        "id": 103
+      },
+      "right": {
+        "position": [
+          3.3030435061769587,
+          1.65,
+          -8.630520862704286
+        ],
+        "look_at": [
+          6.10300159,
+          0.9046552,
+          -8.6152
+        ],
+        "rotation": [
+          14.906160935158606,
+          89.68649101720524,
+          0
+        ],
+        "id": 104
+      }
+    },
+    "program": [
+      "<char0> [Walk] <tv> (433)",
+      "<char0> [LookAt] <tv> (433)",
+      "<char0> [SwitchOn] <tv> (433)",
+      "<char0> [LookAt] <tv> (433)",
+      "<char0> [SwitchOff] <tv> (433)",
+      "<char0> [LookAt] <tv> (433)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    },
+    "evidence_revision": 3,
+    "visual_quality": "reviewed_overview; partial occlusions remain; no precise state label guarantee"
+  },
+  {
+    "scene": 1,
+    "family": "door",
+    "target_id": 155,
+    "target_class": "fridge",
+    "actor_position": [
+      -6.997551,
+      1.25,
+      4.323344
+    ],
+    "room": "kitchen",
+    "room_id": 51,
+    "cameras": {
+      "left": {
+        "position": [
+          -4.845940751227337,
+          1.65,
+          3.3931599649345707
+        ],
+        "look_at": [
+          -2.962186,
+          1.06257987,
+          1.32157409
+        ],
+        "rotation": [
+          11.848414074091853,
+          137.71881813038812,
+          0
+        ],
+        "id": 99
+      },
+      "right": {
+        "position": [
+          -5.732990813860698,
+          1.65,
+          0.9182867439471118
+        ],
+        "look_at": [
+          -2.962186,
+          1.06257987,
+          1.32157409
+        ],
+        "rotation": [
+          11.84841407409185,
+          81.71881813038812,
+          0
+        ],
+        "id": 100
+      }
+    },
+    "program": [
+      "<char0> [Walk] <fridge> (155)",
+      "<char0> [LookAt] <fridge> (155)",
+      "<char0> [Open] <fridge> (155)",
+      "<char0> [LookAt] <fridge> (155)",
+      "<char0> [Close] <fridge> (155)",
+      "<char0> [LookAt] <fridge> (155)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    },
+    "evidence_revision": 3,
+    "visual_quality": "reviewed_overview; partial occlusions remain; no precise state label guarantee"
+  },
+  {
+    "scene": 1,
+    "family": "pickup",
+    "target_id": 332,
+    "target_class": "book",
+    "actor_position": [
+      -12.537838,
+      1.25,
+      5.701881
+    ],
+    "room": "livingroom",
+    "room_id": 274,
+    "cameras": {
+      "left": {
+        "position": [
+          -12.423980710912291,
+          1.65,
+          3.948684311785124
+        ],
+        "look_at": [
+          -13.7109976,
+          0.983999968,
+          1.46200228
+        ],
+        "rotation": [
+          13.379587687844461,
+          -152.63554672933043,
+          0
+        ],
+        "id": 99
+      },
+      "right": {
+        "position": [
+          -15.052859724322534,
+          1.65,
+          3.919522582929076
+        ],
+        "look_at": [
+          -13.7109976,
+          0.983999968,
+          1.46200228
+        ],
+        "rotation": [
+          13.379587687844461,
+          151.3644532706696,
+          0
+        ],
+        "id": 100
+      }
+    },
+    "program": [
+      "<char0> [Walk] <book> (332)",
+      "<char0> [LookAt] <book> (332)",
+      "<char0> [Grab] <book> (332)",
+      "<char0> [PutObjBack] <book> (332)",
+      "<char0> [LookAt] <book> (332)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    },
+    "evidence_revision": 3,
+    "visual_quality": "reviewed_overview; partial occlusions remain; no precise state label guarantee"
+  },
+  {
+    "scene": 1,
+    "family": "posture",
+    "target_id": 301,
+    "target_class": "sofa",
+    "actor_position": [
+      -14.20416,
+      1.25,
+      3.34459066
+    ],
+    "room": "livingroom",
+    "room_id": 274,
+    "cameras": {
+      "left": {
+        "position": [
+          -14.773062978531467,
+          1.65,
+          4.123059543045651
+        ],
+        "look_at": [
+          -15.7993622,
+          0.85,
+          6.728191
+        ],
+        "rotation": [
+          15.94539590092285,
+          -21.502106661632503,
+          0
+        ],
+        "id": 99
+      },
+      "right": {
+        "position": [
+          -13.065711099257031,
+          1.65,
+          6.122260591944121
+        ],
+        "look_at": [
+          -15.7993622,
+          0.85,
+          6.728191
+        ],
+        "rotation": [
+          15.94539590092285,
+          -77.5021066616325,
+          0
+        ],
+        "id": 100
+      }
+    },
+    "program": [
+      "<char0> [Walk] <sofa> (301)",
+      "<char0> [LookAt] <sofa> (301)",
+      "<char0> [Sit] <sofa> (301)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    },
+    "evidence_revision": 3,
+    "visual_quality": "reviewed_overview; partial occlusions remain; no precise state label guarantee"
+  },
+  {
+    "scene": 1,
+    "family": "switch",
+    "target_id": 313,
+    "target_class": "tv",
+    "actor_position": [
+      -15.8487244,
+      1.25,
+      2.77417564
+    ],
+    "room": "livingroom",
+    "room_id": 274,
+    "cameras": {
+      "left": {
+        "position": [
+          -13.216467998019489,
+          1.65,
+          6.898145883588158
+        ],
+        "look_at": [
+          -10.4279995,
+          1.1,
+          7.152003
+        ],
+        "rotation": [
+          11.113040535948297,
+          84.79823514805155,
+          0
+        ],
+        "id": 99
+      },
+      "right": {
+        "position": [
+          -11.776834208078334,
+          1.65,
+          4.6983027472626695
+        ],
+        "look_at": [
+          -10.4279995,
+          1.1,
+          7.152003
+        ],
+        "rotation": [
+          11.113040535948295,
+          28.79823514805153,
+          0
+        ],
+        "id": 100
+      }
+    },
+    "program": [
+      "<char0> [Walk] <tv> (313)",
+      "<char0> [LookAt] <tv> (313)",
+      "<char0> [SwitchOn] <tv> (313)",
+      "<char0> [LookAt] <tv> (313)",
+      "<char0> [SwitchOff] <tv> (313)",
+      "<char0> [LookAt] <tv> (313)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    },
+    "evidence_revision": 5,
+    "visual_quality": "reviewed_overview; partial occlusions remain; no precise state label guarantee"
+  },
+  {
+    "scene": 2,
+    "family": "door",
+    "target_id": 174,
+    "target_class": "microwave",
+    "actor_position": [
+      -1.84569848,
+      1.25,
+      3.09350538
+    ],
+    "room": "kitchen",
+    "room_id": 11,
+    "cameras": {
+      "left": {
+        "position": [
+          -4.281390359981278,
+          1.65,
+          1.1918228246076168
+        ],
+        "look_at": [
+          -6.911538,
+          1.1,
+          0.231446132
+        ],
+        "rotation": [
+          11.113040535948295,
+          -110.05924831587738,
+          0
+        ],
+        "id": 115
+      },
+      "right": {
+        "position": [
+          -6.236966466599056,
+          1.65,
+          2.9489731781073796
+        ],
+        "look_at": [
+          -6.911538,
+          1.1,
+          0.231446132
+        ],
+        "rotation": [
+          11.113040535948295,
+          -166.0592483158774,
+          0
+        ],
+        "id": 116
+      }
+    },
+    "program": [
+      "<char0> [Walk] <microwave> (174)",
+      "<char0> [LookAt] <microwave> (174)",
+      "<char0> [Open] <microwave> (174)",
+      "<char0> [LookAt] <microwave> (174)",
+      "<char0> [Close] <microwave> (174)",
+      "<char0> [LookAt] <microwave> (174)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    },
+    "evidence_revision": 3,
+    "visual_quality": "reviewed_overview; partial occlusions remain; no precise state label guarantee"
+  },
+  {
+    "scene": 2,
+    "family": "pickup",
+    "target_id": 67,
+    "target_class": "plate",
+    "actor_position": [
+      -5.958102,
+      1.25,
+      2.33267927
+    ],
+    "room": "kitchen",
+    "room_id": 11,
+    "cameras": {
+      "left": {
+        "position": [
+          -2.6985043295761995,
+          1.65,
+          4.774809144442203
+        ],
+        "look_at": [
+          -3.194,
+          0.991611362,
+          2.019
+        ],
+        "rotation": [
+          13.232087373986216,
+          -169.80710230534876,
+          0
+        ],
+        "id": 115
+      },
+      "right": {
+        "position": [
+          -5.20159166093188,
+          1.65,
+          3.970813444711551
+        ],
+        "look_at": [
+          -3.194,
+          0.991611362,
+          2.019
+        ],
+        "rotation": [
+          13.232087373986218,
+          134.19289769465126,
+          0
+        ],
+        "id": 116
+      }
+    },
+    "program": [
+      "<char0> [Walk] <plate> (67)",
+      "<char0> [LookAt] <plate> (67)",
+      "<char0> [Grab] <plate> (67)",
+      "<char0> [PutObjBack] <plate> (67)",
+      "<char0> [LookAt] <plate> (67)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    },
+    "evidence_revision": 3,
+    "visual_quality": "reviewed_overview; partial occlusions remain; no precise state label guarantee"
+  },
+  {
+    "scene": 2,
+    "family": "posture",
+    "target_id": 296,
+    "target_class": "bed",
+    "actor_position": [
+      1.98290539,
+      1.25,
+      1.5227592
+    ],
+    "room": "bedroom",
+    "room_id": 253,
+    "cameras": {
+      "left": {
+        "position": [
+          -11.075174813127251,
+          1.65,
+          -1.693626469269184
+        ],
+        "look_at": [
+          -13.69924,
+          0.85,
+          -2.6705
+        ],
+        "rotation": [
+          15.94539590092285,
+          -110.41903431047793,
+          0
+        ],
+        "id": 115
+      },
+      "right": {
+        "position": [
+          -13.041746229866469,
+          1.65,
+          0.05120937872425957
+        ],
+        "look_at": [
+          -13.69924,
+          0.85,
+          -2.6705
+        ],
+        "rotation": [
+          15.945395900922854,
+          -166.41903431047794,
+          0
+        ],
+        "id": 116
+      }
+    },
+    "program": [
+      "<char0> [Walk] <bed> (296)",
+      "<char0> [LookAt] <bed> (296)",
+      "<char0> [Sit] <bed> (296)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    },
+    "evidence_revision": 4,
+    "visual_quality": "reviewed_overview; partial occlusions remain; no precise state label guarantee"
+  },
+  {
+    "scene": 2,
+    "family": "switch",
+    "target_id": 268,
+    "target_class": "tablelamp",
+    "actor_position": [
+      3.80195379,
+      1.25,
+      4.51888275
+    ],
+    "room": "bedroom",
+    "room_id": 253,
+    "cameras": {
+      "left": {
+        "position": [
+          -12.062530574143473,
+          1.65,
+          -2.6461482657809925
+        ],
+        "look_at": [
+          -14.41998,
+          0.85,
+          -1.13537621
+        ],
+        "rotation": [
+          15.945395900922854,
+          -57.34621026530949,
+          0
+        ],
+        "id": 115
+      },
+      "right": {
+        "position": [
+          -11.849224212961179,
+          1.65,
+          -0.02577507292126935
+        ],
+        "look_at": [
+          -14.41998,
+          0.85,
+          -1.13537621
+        ],
+        "rotation": [
+          15.94539590092285,
+          -113.3462102653095,
+          0
+        ],
+        "id": 116
+      }
+    },
+    "program": [
+      "<char0> [Walk] <tablelamp> (268)",
+      "<char0> [LookAt] <tablelamp> (268)",
+      "<char0> [SwitchOff] <tablelamp> (268)",
+      "<char0> [LookAt] <tablelamp> (268)",
+      "<char0> [SwitchOn] <tablelamp> (268)",
+      "<char0> [LookAt] <tablelamp> (268)"
+    ],
+    "success": true,
+    "result": {
+      "0": {
+        "message": "Success"
+      }
+    },
+    "evidence_revision": 3,
+    "visual_quality": "reviewed_overview; partial occlusions remain; no precise state label guarantee"
+  }
+]

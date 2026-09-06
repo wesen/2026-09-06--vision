@@ -1,0 +1,2306 @@
+[
+  {
+    "episode_id": "dv-048821a2a2232397",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-048821a2a2232397/attempt-0001/video.mp4",
+    "video_sha256": "edd3379776817e4c512504b6b5705b752e1c849a51211f009d66757fcf7dfbed",
+    "lineage_id": "e26cf80a6d6441bcda5a8b0bc2e877e05962bce64e0816bfde98f65293288e96",
+    "start_us": 2850000,
+    "end_us": 4850000,
+    "available_us": 4850000,
+    "selected_pts_us": [
+      2900000,
+      3400000,
+      3900000,
+      4400000
+    ],
+    "frame_indices": [
+      29,
+      34,
+      39,
+      44
+    ],
+    "selected_raw_pts": [
+      29696,
+      34816,
+      39936,
+      45056
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "6bae8b46203c0c985c465dd9"
+  },
+  {
+    "episode_id": "dv-048821a2a2232397",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-048821a2a2232397/attempt-0001/video.mp4",
+    "video_sha256": "edd3379776817e4c512504b6b5705b752e1c849a51211f009d66757fcf7dfbed",
+    "lineage_id": "e26cf80a6d6441bcda5a8b0bc2e877e05962bce64e0816bfde98f65293288e96",
+    "start_us": 8100000,
+    "end_us": 10100000,
+    "available_us": 10100000,
+    "selected_pts_us": [
+      8100000,
+      8600000,
+      9100000,
+      9600000
+    ],
+    "frame_indices": [
+      81,
+      86,
+      91,
+      96
+    ],
+    "selected_raw_pts": [
+      82944,
+      88064,
+      93184,
+      98304
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "7387b06322bb7c819613483a"
+  },
+  {
+    "episode_id": "dv-072d68a652592af5",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-072d68a652592af5/attempt-0001/video.mp4",
+    "video_sha256": "e577921a53ccbca5b918c5b6f316c7b53d71ef2d50145bd9df4d7103524d023c",
+    "lineage_id": "a2cf00507ae30d448b1d19a1c740a25968e2bea4fd139539b2f1a29b341fceed",
+    "start_us": 3100000,
+    "end_us": 5100000,
+    "available_us": 5100000,
+    "selected_pts_us": [
+      3100000,
+      3600000,
+      4100000,
+      4600000
+    ],
+    "frame_indices": [
+      31,
+      36,
+      41,
+      46
+    ],
+    "selected_raw_pts": [
+      31744,
+      36864,
+      41984,
+      47104
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "6c770deb5922d01d2ca7c2ca"
+  },
+  {
+    "episode_id": "dv-072d68a652592af5",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-072d68a652592af5/attempt-0001/video.mp4",
+    "video_sha256": "e577921a53ccbca5b918c5b6f316c7b53d71ef2d50145bd9df4d7103524d023c",
+    "lineage_id": "a2cf00507ae30d448b1d19a1c740a25968e2bea4fd139539b2f1a29b341fceed",
+    "start_us": 4900000,
+    "end_us": 6900000,
+    "available_us": 6900000,
+    "selected_pts_us": [
+      4900000,
+      5400000,
+      5900000,
+      6400000
+    ],
+    "frame_indices": [
+      49,
+      54,
+      59,
+      64
+    ],
+    "selected_raw_pts": [
+      50176,
+      55296,
+      60416,
+      65536
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "823ecf71f9fe1f81fccf42cb"
+  },
+  {
+    "episode_id": "dv-0a0732aef26f3d73",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-0a0732aef26f3d73/attempt-0001/video.mp4",
+    "video_sha256": "2cb71e86d40bc9a262ec5dc193e5e5d638a46640c1322afe6de4b9fb7153496b",
+    "lineage_id": "96f8aff24e548f9a611bb1efe82415fed1ff6e143d4f059f584f0dd6a4517eeb",
+    "start_us": 3400000,
+    "end_us": 5400000,
+    "available_us": 5400000,
+    "selected_pts_us": [
+      3400000,
+      3900000,
+      4400000,
+      4900000
+    ],
+    "frame_indices": [
+      34,
+      39,
+      44,
+      49
+    ],
+    "selected_raw_pts": [
+      34816,
+      39936,
+      45056,
+      50176
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "9758421bfe72a94f22c5440b"
+  },
+  {
+    "episode_id": "dv-0a0732aef26f3d73",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-0a0732aef26f3d73/attempt-0001/video.mp4",
+    "video_sha256": "2cb71e86d40bc9a262ec5dc193e5e5d638a46640c1322afe6de4b9fb7153496b",
+    "lineage_id": "96f8aff24e548f9a611bb1efe82415fed1ff6e143d4f059f584f0dd6a4517eeb",
+    "start_us": 5100000,
+    "end_us": 7100000,
+    "available_us": 7100000,
+    "selected_pts_us": [
+      5100000,
+      5600000,
+      6100000,
+      6600000
+    ],
+    "frame_indices": [
+      51,
+      56,
+      61,
+      66
+    ],
+    "selected_raw_pts": [
+      52224,
+      57344,
+      62464,
+      67584
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "e430171d4fd8e1436154451b"
+  },
+  {
+    "episode_id": "dv-0c192f074a97cda6",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-0c192f074a97cda6/attempt-0001/video.mp4",
+    "video_sha256": "0d8ff7cd3d3deca48fd51980f7d8ff48031908917013234725113b23caf064ae",
+    "lineage_id": "3dffc96b8aa099d961cb7f74965aada85b4ef178bc8e5fe2d89d149b6af1fc24",
+    "start_us": 13400000,
+    "end_us": 15400000,
+    "available_us": 15400000,
+    "selected_pts_us": [
+      13400000,
+      13900000,
+      14400000,
+      14900000
+    ],
+    "frame_indices": [
+      134,
+      139,
+      144,
+      149
+    ],
+    "selected_raw_pts": [
+      137216,
+      142336,
+      147456,
+      152576
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "2c6918f44aa7cfb0434c81be"
+  },
+  {
+    "episode_id": "dv-0c192f074a97cda6",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-0c192f074a97cda6/attempt-0001/video.mp4",
+    "video_sha256": "0d8ff7cd3d3deca48fd51980f7d8ff48031908917013234725113b23caf064ae",
+    "lineage_id": "3dffc96b8aa099d961cb7f74965aada85b4ef178bc8e5fe2d89d149b6af1fc24",
+    "start_us": 15200000,
+    "end_us": 17200000,
+    "available_us": 17200000,
+    "selected_pts_us": [
+      15200000,
+      15700000,
+      16200000,
+      16700000
+    ],
+    "frame_indices": [
+      152,
+      157,
+      162,
+      167
+    ],
+    "selected_raw_pts": [
+      155648,
+      160768,
+      165888,
+      171008
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "291f2b2026043d1600d6ac0f"
+  },
+  {
+    "episode_id": "dv-0cc816b50a5745cb",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-0cc816b50a5745cb/attempt-0001/video.mp4",
+    "video_sha256": "73f4c84d12c6f524d9f6b341d515ec185ecfb85dea0785f445725407342f5a09",
+    "lineage_id": "3f0a2b56f4bff1ac5dc7dd1960fc465b0c8bad61c064e478d354db3ef17a47b2",
+    "start_us": 1900000,
+    "end_us": 3900000,
+    "available_us": 3900000,
+    "selected_pts_us": [
+      1900000,
+      2400000,
+      2900000,
+      3400000
+    ],
+    "frame_indices": [
+      19,
+      24,
+      29,
+      34
+    ],
+    "selected_raw_pts": [
+      19456,
+      24576,
+      29696,
+      34816
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "f5e17b8082d5033062c3e702"
+  },
+  {
+    "episode_id": "dv-0d6f76e6e85792a3",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-0d6f76e6e85792a3/attempt-0001/video.mp4",
+    "video_sha256": "59be7396b0f32cd989573e21676eb3dce4ebc2fe014d434f8bfa5019808c396f",
+    "lineage_id": "2952ec459b4634673e51b175804ae92c50ecb13a0b74fcae67e913921e0779fd",
+    "start_us": 4700000,
+    "end_us": 6700000,
+    "available_us": 6700000,
+    "selected_pts_us": [
+      4700000,
+      5200000,
+      5700000,
+      6200000
+    ],
+    "frame_indices": [
+      47,
+      52,
+      57,
+      62
+    ],
+    "selected_raw_pts": [
+      48128,
+      53248,
+      58368,
+      63488
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "70c44b68f79befea88ad030d"
+  },
+  {
+    "episode_id": "dv-0d6f76e6e85792a3",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-0d6f76e6e85792a3/attempt-0001/video.mp4",
+    "video_sha256": "59be7396b0f32cd989573e21676eb3dce4ebc2fe014d434f8bfa5019808c396f",
+    "lineage_id": "2952ec459b4634673e51b175804ae92c50ecb13a0b74fcae67e913921e0779fd",
+    "start_us": 6400000,
+    "end_us": 8400000,
+    "available_us": 8400000,
+    "selected_pts_us": [
+      6400000,
+      6900000,
+      7400000,
+      7900000
+    ],
+    "frame_indices": [
+      64,
+      69,
+      74,
+      79
+    ],
+    "selected_raw_pts": [
+      65536,
+      70656,
+      75776,
+      80896
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "fed51ee4bff7e2087e0b3ddf"
+  },
+  {
+    "episode_id": "dv-215c039e279a470a",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-215c039e279a470a/attempt-0001/video.mp4",
+    "video_sha256": "edb3cfe23068a9eb543ba3138b68fa37c865bdf42dec3a5c3b0b60301da042e4",
+    "lineage_id": "1d683290cc86e79e3f62e072d21635f4776b123ef9188b9e5d2eebfc8a6896a7",
+    "start_us": 2900000,
+    "end_us": 4900000,
+    "available_us": 4900000,
+    "selected_pts_us": [
+      2900000,
+      3400000,
+      3900000,
+      4400000
+    ],
+    "frame_indices": [
+      29,
+      34,
+      39,
+      44
+    ],
+    "selected_raw_pts": [
+      29696,
+      34816,
+      39936,
+      45056
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "60b6382e6f7ed677fefda557"
+  },
+  {
+    "episode_id": "dv-303b9d3c2dfe7b21",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-303b9d3c2dfe7b21/attempt-0001/video.mp4",
+    "video_sha256": "8477aeeee8a8e3b5973d911513f523e09f58c3234d6cc486e58a19b362732ca3",
+    "lineage_id": "21cd49a6b3a54e1ecab53e7ac3a4859549347ab3079ad73dd577f28e9f14b783",
+    "start_us": 4050000,
+    "end_us": 6050000,
+    "available_us": 6050000,
+    "selected_pts_us": [
+      4100000,
+      4600000,
+      5100000,
+      5600000
+    ],
+    "frame_indices": [
+      41,
+      46,
+      51,
+      56
+    ],
+    "selected_raw_pts": [
+      41984,
+      47104,
+      52224,
+      57344
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "936f18bd55115ad073443d74"
+  },
+  {
+    "episode_id": "dv-303b9d3c2dfe7b21",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-303b9d3c2dfe7b21/attempt-0001/video.mp4",
+    "video_sha256": "8477aeeee8a8e3b5973d911513f523e09f58c3234d6cc486e58a19b362732ca3",
+    "lineage_id": "21cd49a6b3a54e1ecab53e7ac3a4859549347ab3079ad73dd577f28e9f14b783",
+    "start_us": 8200000,
+    "end_us": 10200000,
+    "available_us": 10200000,
+    "selected_pts_us": [
+      8200000,
+      8700000,
+      9200000,
+      9700000
+    ],
+    "frame_indices": [
+      82,
+      87,
+      92,
+      97
+    ],
+    "selected_raw_pts": [
+      83968,
+      89088,
+      94208,
+      99328
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "4d61336c28d4f62fafd53599"
+  },
+  {
+    "episode_id": "dv-31fd8bf573379ba5",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-31fd8bf573379ba5/attempt-0001/video.mp4",
+    "video_sha256": "d79fd8ef68cf99d55877828f3d2f74e57b05639a7e4ae332b3922a6a37c7075a",
+    "lineage_id": "2952ec459b4634673e51b175804ae92c50ecb13a0b74fcae67e913921e0779fd",
+    "start_us": 4700000,
+    "end_us": 6700000,
+    "available_us": 6700000,
+    "selected_pts_us": [
+      4700000,
+      5200000,
+      5700000,
+      6200000
+    ],
+    "frame_indices": [
+      47,
+      52,
+      57,
+      62
+    ],
+    "selected_raw_pts": [
+      48128,
+      53248,
+      58368,
+      63488
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "f16006000dd0ac1f892aae47"
+  },
+  {
+    "episode_id": "dv-31fd8bf573379ba5",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-31fd8bf573379ba5/attempt-0001/video.mp4",
+    "video_sha256": "d79fd8ef68cf99d55877828f3d2f74e57b05639a7e4ae332b3922a6a37c7075a",
+    "lineage_id": "2952ec459b4634673e51b175804ae92c50ecb13a0b74fcae67e913921e0779fd",
+    "start_us": 6400000,
+    "end_us": 8400000,
+    "available_us": 8400000,
+    "selected_pts_us": [
+      6400000,
+      6900000,
+      7400000,
+      7900000
+    ],
+    "frame_indices": [
+      64,
+      69,
+      74,
+      79
+    ],
+    "selected_raw_pts": [
+      65536,
+      70656,
+      75776,
+      80896
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "1b3e4573c79e63d9d5994d59"
+  },
+  {
+    "episode_id": "dv-3b1ca570a30d1b0a",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-3b1ca570a30d1b0a/attempt-0001/video.mp4",
+    "video_sha256": "f4f83171aa752a402a0883c497e180cd489366df67603a857310cb9baf219d27",
+    "lineage_id": "e20e153f4fc607752f6e3eef00a16273f92e067a3dd072048de59d088c26657b",
+    "start_us": 500000,
+    "end_us": 2500000,
+    "available_us": 2500000,
+    "selected_pts_us": [
+      500000,
+      1000000,
+      1500000,
+      2000000
+    ],
+    "frame_indices": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "selected_raw_pts": [
+      5120,
+      10240,
+      15360,
+      20480
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "22f78dec3a4a33dfbc7890d1"
+  },
+  {
+    "episode_id": "dv-43c3348a91ad7c4d",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-43c3348a91ad7c4d/attempt-0001/video.mp4",
+    "video_sha256": "cb1963b567dfb60f1abb150d5eab0aeab3c960f719539b0b93c3cfb4025f910d",
+    "lineage_id": "e20e153f4fc607752f6e3eef00a16273f92e067a3dd072048de59d088c26657b",
+    "start_us": 4450000,
+    "end_us": 6450000,
+    "available_us": 6450000,
+    "selected_pts_us": [
+      4500000,
+      5000000,
+      5500000,
+      6000000
+    ],
+    "frame_indices": [
+      45,
+      50,
+      55,
+      60
+    ],
+    "selected_raw_pts": [
+      46080,
+      51200,
+      56320,
+      61440
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "f991878b4940511ddc820b98"
+  },
+  {
+    "episode_id": "dv-43c3348a91ad7c4d",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-43c3348a91ad7c4d/attempt-0001/video.mp4",
+    "video_sha256": "cb1963b567dfb60f1abb150d5eab0aeab3c960f719539b0b93c3cfb4025f910d",
+    "lineage_id": "e20e153f4fc607752f6e3eef00a16273f92e067a3dd072048de59d088c26657b",
+    "start_us": 9050000,
+    "end_us": 11050000,
+    "available_us": 11050000,
+    "selected_pts_us": [
+      9100000,
+      9600000,
+      10100000,
+      10600000
+    ],
+    "frame_indices": [
+      91,
+      96,
+      101,
+      106
+    ],
+    "selected_raw_pts": [
+      93184,
+      98304,
+      103424,
+      108544
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "bf23a4342c33cc824a85bd09"
+  },
+  {
+    "episode_id": "dv-486601eecb7f8b97",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-486601eecb7f8b97/attempt-0001/video.mp4",
+    "video_sha256": "4a1d8346de6af66e45961ab7ab73b7948947856f4dd3b329ea5abbbd3bade753",
+    "lineage_id": "21cd49a6b3a54e1ecab53e7ac3a4859549347ab3079ad73dd577f28e9f14b783",
+    "start_us": 2300000,
+    "end_us": 4300000,
+    "available_us": 4300000,
+    "selected_pts_us": [
+      2300000,
+      2800000,
+      3300000,
+      3800000
+    ],
+    "frame_indices": [
+      23,
+      28,
+      33,
+      38
+    ],
+    "selected_raw_pts": [
+      23552,
+      28672,
+      33792,
+      38912
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "8c1b4e16fc12453f9ac1dac3"
+  },
+  {
+    "episode_id": "dv-4e7502fb118b5485",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-4e7502fb118b5485/attempt-0001/video.mp4",
+    "video_sha256": "a33d347be9b4da0d385c60b331595380c2bae263d96ab95c4f3a2760d99de77e",
+    "lineage_id": "860a662f59666b35687c6d64dedc1a08eeec036f2e404f7c0ce459092db2d9d6",
+    "start_us": 13600000,
+    "end_us": 15600000,
+    "available_us": 15600000,
+    "selected_pts_us": [
+      13600000,
+      14100000,
+      14600000,
+      15100000
+    ],
+    "frame_indices": [
+      136,
+      141,
+      146,
+      151
+    ],
+    "selected_raw_pts": [
+      139264,
+      144384,
+      149504,
+      154624
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "868ad46ee02ee56dc7fda62e"
+  },
+  {
+    "episode_id": "dv-4e7502fb118b5485",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-4e7502fb118b5485/attempt-0001/video.mp4",
+    "video_sha256": "a33d347be9b4da0d385c60b331595380c2bae263d96ab95c4f3a2760d99de77e",
+    "lineage_id": "860a662f59666b35687c6d64dedc1a08eeec036f2e404f7c0ce459092db2d9d6",
+    "start_us": 17950000,
+    "end_us": 19950000,
+    "available_us": 19950000,
+    "selected_pts_us": [
+      18000000,
+      18500000,
+      19000000,
+      19500000
+    ],
+    "frame_indices": [
+      180,
+      185,
+      190,
+      195
+    ],
+    "selected_raw_pts": [
+      184320,
+      189440,
+      194560,
+      199680
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "7ed288fd1b2317d3f646c38b"
+  },
+  {
+    "episode_id": "dv-503ac41c9f57746a",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-503ac41c9f57746a/attempt-0001/video.mp4",
+    "video_sha256": "13426f473802153632d0b221801e3fa2c4b0b5ae0f58e378e3260cef7d925e86",
+    "lineage_id": "2952ec459b4634673e51b175804ae92c50ecb13a0b74fcae67e913921e0779fd",
+    "start_us": 3000000,
+    "end_us": 5000000,
+    "available_us": 5000000,
+    "selected_pts_us": [
+      3000000,
+      3500000,
+      4000000,
+      4500000
+    ],
+    "frame_indices": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "selected_raw_pts": [
+      30720,
+      35840,
+      40960,
+      46080
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "0fb8ad0b04d00545da4910df"
+  },
+  {
+    "episode_id": "dv-50acf4cb570d5c06",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-50acf4cb570d5c06/attempt-0001/video.mp4",
+    "video_sha256": "3235195c799e481a6188e0c214c0e687f78937605ca3ec6569fba99f19a5a613",
+    "lineage_id": "2952ec459b4634673e51b175804ae92c50ecb13a0b74fcae67e913921e0779fd",
+    "start_us": 3000000,
+    "end_us": 5000000,
+    "available_us": 5000000,
+    "selected_pts_us": [
+      3000000,
+      3500000,
+      4000000,
+      4500000
+    ],
+    "frame_indices": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "selected_raw_pts": [
+      30720,
+      35840,
+      40960,
+      46080
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "8b4f249cf9596b56d77fed12"
+  },
+  {
+    "episode_id": "dv-51e9b3afac5b6c82",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-51e9b3afac5b6c82/attempt-0001/video.mp4",
+    "video_sha256": "943cfdc44cbc74a5b33ac5ed4c092ba131678a872e11f9d2f6460480f1650e10",
+    "lineage_id": "304627d73b5f2141fedb752c1e5fe4a5441c465fe65ce668d6b40c1732cfe619",
+    "start_us": 4400000,
+    "end_us": 6400000,
+    "available_us": 6400000,
+    "selected_pts_us": [
+      4400000,
+      4900000,
+      5400000,
+      5900000
+    ],
+    "frame_indices": [
+      44,
+      49,
+      54,
+      59
+    ],
+    "selected_raw_pts": [
+      45056,
+      50176,
+      55296,
+      60416
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "3cbdb3480d6042b76ff064cc"
+  },
+  {
+    "episode_id": "dv-51e9b3afac5b6c82",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-51e9b3afac5b6c82/attempt-0001/video.mp4",
+    "video_sha256": "943cfdc44cbc74a5b33ac5ed4c092ba131678a872e11f9d2f6460480f1650e10",
+    "lineage_id": "304627d73b5f2141fedb752c1e5fe4a5441c465fe65ce668d6b40c1732cfe619",
+    "start_us": 6200000,
+    "end_us": 8200000,
+    "available_us": 8200000,
+    "selected_pts_us": [
+      6200000,
+      6700000,
+      7200000,
+      7700000
+    ],
+    "frame_indices": [
+      62,
+      67,
+      72,
+      77
+    ],
+    "selected_raw_pts": [
+      63488,
+      68608,
+      73728,
+      78848
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "c0563c1339e46522aea13be8"
+  },
+  {
+    "episode_id": "dv-528d9a75133b1101",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-528d9a75133b1101/attempt-0001/video.mp4",
+    "video_sha256": "81b4d58a3a4f51ecde51fd5ef465ead40131e4c530c8e803a8c6b37d4f50daa8",
+    "lineage_id": "96f8aff24e548f9a611bb1efe82415fed1ff6e143d4f059f584f0dd6a4517eeb",
+    "start_us": 1700000,
+    "end_us": 3700000,
+    "available_us": 3700000,
+    "selected_pts_us": [
+      1700000,
+      2200000,
+      2700000,
+      3200000
+    ],
+    "frame_indices": [
+      17,
+      22,
+      27,
+      32
+    ],
+    "selected_raw_pts": [
+      17408,
+      22528,
+      27648,
+      32768
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "c65959b86e476ca34dc42c0c"
+  },
+  {
+    "episode_id": "dv-5331876fd7364472",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-5331876fd7364472/attempt-0001/video.mp4",
+    "video_sha256": "5b550c98468b4c24ff545792689fa5087c161d11c28c38bd5d30ca8546b0a27d",
+    "lineage_id": "304627d73b5f2141fedb752c1e5fe4a5441c465fe65ce668d6b40c1732cfe619",
+    "start_us": 2900000,
+    "end_us": 4900000,
+    "available_us": 4900000,
+    "selected_pts_us": [
+      2900000,
+      3400000,
+      3900000,
+      4400000
+    ],
+    "frame_indices": [
+      29,
+      34,
+      39,
+      44
+    ],
+    "selected_raw_pts": [
+      29696,
+      34816,
+      39936,
+      45056
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "78b990f3e14525cdc36da346"
+  },
+  {
+    "episode_id": "dv-554891a30ac02c19",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-554891a30ac02c19/attempt-0001/video.mp4",
+    "video_sha256": "d98d0a50adbb7bf9647fd3616aecf1b96e7ebeed974bac6709bc6b167e763508",
+    "lineage_id": "138bf9112e26c1e01265faa883b204ce09f4327880f414c912631c396eb41349",
+    "start_us": 3800000,
+    "end_us": 5800000,
+    "available_us": 5800000,
+    "selected_pts_us": [
+      3800000,
+      4300000,
+      4800000,
+      5300000
+    ],
+    "frame_indices": [
+      38,
+      43,
+      48,
+      53
+    ],
+    "selected_raw_pts": [
+      38912,
+      44032,
+      49152,
+      54272
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "6bdb83ebb2c78f5b56230f62"
+  },
+  {
+    "episode_id": "dv-554891a30ac02c19",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-554891a30ac02c19/attempt-0001/video.mp4",
+    "video_sha256": "d98d0a50adbb7bf9647fd3616aecf1b96e7ebeed974bac6709bc6b167e763508",
+    "lineage_id": "138bf9112e26c1e01265faa883b204ce09f4327880f414c912631c396eb41349",
+    "start_us": 5500000,
+    "end_us": 7500000,
+    "available_us": 7500000,
+    "selected_pts_us": [
+      5500000,
+      6000000,
+      6500000,
+      7000000
+    ],
+    "frame_indices": [
+      55,
+      60,
+      65,
+      70
+    ],
+    "selected_raw_pts": [
+      56320,
+      61440,
+      66560,
+      71680
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "18b71c95af3b50d27f74e5b0"
+  },
+  {
+    "episode_id": "dv-55c63f0959503e92",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-55c63f0959503e92/attempt-0001/video.mp4",
+    "video_sha256": "6a2a4ee81a1d18f515f59cfddb1ef90fd299bf82216dd51959c3fe210c6f7c89",
+    "lineage_id": "1d683290cc86e79e3f62e072d21635f4776b123ef9188b9e5d2eebfc8a6896a7",
+    "start_us": 2900000,
+    "end_us": 4900000,
+    "available_us": 4900000,
+    "selected_pts_us": [
+      2900000,
+      3400000,
+      3900000,
+      4400000
+    ],
+    "frame_indices": [
+      29,
+      34,
+      39,
+      44
+    ],
+    "selected_raw_pts": [
+      29696,
+      34816,
+      39936,
+      45056
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "18d29fd45341b6fbc01f105b"
+  },
+  {
+    "episode_id": "dv-58368cfe97bcc621",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-58368cfe97bcc621/attempt-0001/video.mp4",
+    "video_sha256": "2dd04189dd6dbeec45c093f03b31dc2cd74ecee4d60f75a007aeece855a5e8f2",
+    "lineage_id": "a2cf00507ae30d448b1d19a1c740a25968e2bea4fd139539b2f1a29b341fceed",
+    "start_us": 1300000,
+    "end_us": 3300000,
+    "available_us": 3300000,
+    "selected_pts_us": [
+      1300000,
+      1800000,
+      2300000,
+      2800000
+    ],
+    "frame_indices": [
+      13,
+      18,
+      23,
+      28
+    ],
+    "selected_raw_pts": [
+      13312,
+      18432,
+      23552,
+      28672
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "8c0917856ea55dc7a99c1e5c"
+  },
+  {
+    "episode_id": "dv-5fd0fd365b8f913d",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-5fd0fd365b8f913d/attempt-0001/video.mp4",
+    "video_sha256": "aaada7da655f30b967596953ba023b34e91e524f1dca9370e1fee277e6efd4d0",
+    "lineage_id": "3f0a2b56f4bff1ac5dc7dd1960fc465b0c8bad61c064e478d354db3ef17a47b2",
+    "start_us": 1900000,
+    "end_us": 3900000,
+    "available_us": 3900000,
+    "selected_pts_us": [
+      1900000,
+      2400000,
+      2900000,
+      3400000
+    ],
+    "frame_indices": [
+      19,
+      24,
+      29,
+      34
+    ],
+    "selected_raw_pts": [
+      19456,
+      24576,
+      29696,
+      34816
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "7d73bcfdb679786669e64b93"
+  },
+  {
+    "episode_id": "dv-66754684b850c2f4",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-66754684b850c2f4/attempt-0001/video.mp4",
+    "video_sha256": "6e9acbd2774b97c77fe8fdfc736ca345337b0158c6d6e9bb80b77a32340aca3b",
+    "lineage_id": "304627d73b5f2141fedb752c1e5fe4a5441c465fe65ce668d6b40c1732cfe619",
+    "start_us": 4400000,
+    "end_us": 6400000,
+    "available_us": 6400000,
+    "selected_pts_us": [
+      4400000,
+      4900000,
+      5400000,
+      5900000
+    ],
+    "frame_indices": [
+      44,
+      49,
+      54,
+      59
+    ],
+    "selected_raw_pts": [
+      45056,
+      50176,
+      55296,
+      60416
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "08f66ae2f4fff0749351c01e"
+  },
+  {
+    "episode_id": "dv-66754684b850c2f4",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-66754684b850c2f4/attempt-0001/video.mp4",
+    "video_sha256": "6e9acbd2774b97c77fe8fdfc736ca345337b0158c6d6e9bb80b77a32340aca3b",
+    "lineage_id": "304627d73b5f2141fedb752c1e5fe4a5441c465fe65ce668d6b40c1732cfe619",
+    "start_us": 6200000,
+    "end_us": 8200000,
+    "available_us": 8200000,
+    "selected_pts_us": [
+      6200000,
+      6700000,
+      7200000,
+      7700000
+    ],
+    "frame_indices": [
+      62,
+      67,
+      72,
+      77
+    ],
+    "selected_raw_pts": [
+      63488,
+      68608,
+      73728,
+      78848
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "de467896144821243e90585f"
+  },
+  {
+    "episode_id": "dv-70526cd1afa0f4e3",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-70526cd1afa0f4e3/attempt-0001/video.mp4",
+    "video_sha256": "5b6e47e3584cb7918c8f4567c096bcdc879889bc8efb2dc7e3e1c56023dd488d",
+    "lineage_id": "e20e153f4fc607752f6e3eef00a16273f92e067a3dd072048de59d088c26657b",
+    "start_us": 4400000,
+    "end_us": 6400000,
+    "available_us": 6400000,
+    "selected_pts_us": [
+      4400000,
+      4900000,
+      5400000,
+      5900000
+    ],
+    "frame_indices": [
+      44,
+      49,
+      54,
+      59
+    ],
+    "selected_raw_pts": [
+      45056,
+      50176,
+      55296,
+      60416
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "9182ef83f1f7734e2c2922a8"
+  },
+  {
+    "episode_id": "dv-70526cd1afa0f4e3",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-70526cd1afa0f4e3/attempt-0001/video.mp4",
+    "video_sha256": "5b6e47e3584cb7918c8f4567c096bcdc879889bc8efb2dc7e3e1c56023dd488d",
+    "lineage_id": "e20e153f4fc607752f6e3eef00a16273f92e067a3dd072048de59d088c26657b",
+    "start_us": 8950000,
+    "end_us": 10950000,
+    "available_us": 10950000,
+    "selected_pts_us": [
+      9000000,
+      9500000,
+      10000000,
+      10500000
+    ],
+    "frame_indices": [
+      90,
+      95,
+      100,
+      105
+    ],
+    "selected_raw_pts": [
+      92160,
+      97280,
+      102400,
+      107520
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "36eff0470df06474ebc588d7"
+  },
+  {
+    "episode_id": "dv-73dbf59cdc15749b",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-73dbf59cdc15749b/attempt-0001/video.mp4",
+    "video_sha256": "2140e107bcf55d2d697e04dee56b8d2bf2db7af4fb6df786d92e74c3a0660e1d",
+    "lineage_id": "860a662f59666b35687c6d64dedc1a08eeec036f2e404f7c0ce459092db2d9d6",
+    "start_us": 10300000,
+    "end_us": 12300000,
+    "available_us": 12300000,
+    "selected_pts_us": [
+      10300000,
+      10800000,
+      11300000,
+      11800000
+    ],
+    "frame_indices": [
+      103,
+      108,
+      113,
+      118
+    ],
+    "selected_raw_pts": [
+      105472,
+      110592,
+      115712,
+      120832
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "05527c1bf28ed19079f6acf7"
+  },
+  {
+    "episode_id": "dv-74266d02fc1cd60f",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-74266d02fc1cd60f/attempt-0001/video.mp4",
+    "video_sha256": "bef901d4189c21b4db39539bce95950af04738adc1c332103e6ff6cef00b48b8",
+    "lineage_id": "e20e153f4fc607752f6e3eef00a16273f92e067a3dd072048de59d088c26657b",
+    "start_us": 500000,
+    "end_us": 2500000,
+    "available_us": 2500000,
+    "selected_pts_us": [
+      500000,
+      1000000,
+      1500000,
+      2000000
+    ],
+    "frame_indices": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "selected_raw_pts": [
+      5120,
+      10240,
+      15360,
+      20480
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "3cd9071259c44952ba56501e"
+  },
+  {
+    "episode_id": "dv-754e06b5a7e9d575",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-754e06b5a7e9d575/attempt-0001/video.mp4",
+    "video_sha256": "dd125836aeaf8d7e90cec918fd2c84faec360b70e8b938c3165dba0b1668fbea",
+    "lineage_id": "e26cf80a6d6441bcda5a8b0bc2e877e05962bce64e0816bfde98f65293288e96",
+    "start_us": 1200000,
+    "end_us": 3200000,
+    "available_us": 3200000,
+    "selected_pts_us": [
+      1200000,
+      1700000,
+      2200000,
+      2700000
+    ],
+    "frame_indices": [
+      12,
+      17,
+      22,
+      27
+    ],
+    "selected_raw_pts": [
+      12288,
+      17408,
+      22528,
+      27648
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "0bf98c356a3fdb41e56a2a58"
+  },
+  {
+    "episode_id": "dv-7d5eedc80fc0ae7e",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-7d5eedc80fc0ae7e/attempt-0001/video.mp4",
+    "video_sha256": "d3868973bdd5c84008a5c6b662b42bdeb3b36b22895a95e9fd6ced403c0a9c70",
+    "lineage_id": "21cd49a6b3a54e1ecab53e7ac3a4859549347ab3079ad73dd577f28e9f14b783",
+    "start_us": 2400000,
+    "end_us": 4400000,
+    "available_us": 4400000,
+    "selected_pts_us": [
+      2400000,
+      2900000,
+      3400000,
+      3900000
+    ],
+    "frame_indices": [
+      24,
+      29,
+      34,
+      39
+    ],
+    "selected_raw_pts": [
+      24576,
+      29696,
+      34816,
+      39936
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "f442633f2f9de01b740f890d"
+  },
+  {
+    "episode_id": "dv-81554597c7108a99",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-81554597c7108a99/attempt-0001/video.mp4",
+    "video_sha256": "295bd412b35d7744d84f107fff2b00cc9eb2100d33a6937253ccd37f6935dea7",
+    "lineage_id": "1d683290cc86e79e3f62e072d21635f4776b123ef9188b9e5d2eebfc8a6896a7",
+    "start_us": 4550000,
+    "end_us": 6550000,
+    "available_us": 6550000,
+    "selected_pts_us": [
+      4600000,
+      5100000,
+      5600000,
+      6100000
+    ],
+    "frame_indices": [
+      46,
+      51,
+      56,
+      61
+    ],
+    "selected_raw_pts": [
+      47104,
+      52224,
+      57344,
+      62464
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "90f2f6388dd49e00d94253eb"
+  },
+  {
+    "episode_id": "dv-81554597c7108a99",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-81554597c7108a99/attempt-0001/video.mp4",
+    "video_sha256": "295bd412b35d7744d84f107fff2b00cc9eb2100d33a6937253ccd37f6935dea7",
+    "lineage_id": "1d683290cc86e79e3f62e072d21635f4776b123ef9188b9e5d2eebfc8a6896a7",
+    "start_us": 8800000,
+    "end_us": 10800000,
+    "available_us": 10800000,
+    "selected_pts_us": [
+      8800000,
+      9300000,
+      9800000,
+      10300000
+    ],
+    "frame_indices": [
+      88,
+      93,
+      98,
+      103
+    ],
+    "selected_raw_pts": [
+      90112,
+      95232,
+      100352,
+      105472
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "8a6316023a08794b3d02fddb"
+  },
+  {
+    "episode_id": "dv-84551bbccf055fae",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-84551bbccf055fae/attempt-0001/video.mp4",
+    "video_sha256": "ea1b719560daccbb2856253d9067bbdb79cbf6c29a6d8c2c824347898211c08c",
+    "lineage_id": "3f0a2b56f4bff1ac5dc7dd1960fc465b0c8bad61c064e478d354db3ef17a47b2",
+    "start_us": 5450000,
+    "end_us": 7450000,
+    "available_us": 7450000,
+    "selected_pts_us": [
+      5500000,
+      6000000,
+      6500000,
+      7000000
+    ],
+    "frame_indices": [
+      55,
+      60,
+      65,
+      70
+    ],
+    "selected_raw_pts": [
+      56320,
+      61440,
+      66560,
+      71680
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "a3b8b39ad7393ac81218acda"
+  },
+  {
+    "episode_id": "dv-84551bbccf055fae",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-84551bbccf055fae/attempt-0001/video.mp4",
+    "video_sha256": "ea1b719560daccbb2856253d9067bbdb79cbf6c29a6d8c2c824347898211c08c",
+    "lineage_id": "3f0a2b56f4bff1ac5dc7dd1960fc465b0c8bad61c064e478d354db3ef17a47b2",
+    "start_us": 8550000,
+    "end_us": 10550000,
+    "available_us": 10550000,
+    "selected_pts_us": [
+      8600000,
+      9100000,
+      9600000,
+      10100000
+    ],
+    "frame_indices": [
+      86,
+      91,
+      96,
+      101
+    ],
+    "selected_raw_pts": [
+      88064,
+      93184,
+      98304,
+      103424
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "b4f6c375866754640fbd51c3"
+  },
+  {
+    "episode_id": "dv-8e4de549f71185ff",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-8e4de549f71185ff/attempt-0001/video.mp4",
+    "video_sha256": "f5b15528b52f71698fa37b65cda560c2d36f5d3882644358fe75fc9bf42b9dee",
+    "lineage_id": "3dffc96b8aa099d961cb7f74965aada85b4ef178bc8e5fe2d89d149b6af1fc24",
+    "start_us": 10000000,
+    "end_us": 12000000,
+    "available_us": 12000000,
+    "selected_pts_us": [
+      10000000,
+      10500000,
+      11000000,
+      11500000
+    ],
+    "frame_indices": [
+      100,
+      105,
+      110,
+      115
+    ],
+    "selected_raw_pts": [
+      102400,
+      107520,
+      112640,
+      117760
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "f174499559e6bbd1c459c041"
+  },
+  {
+    "episode_id": "dv-925b7475b57f3941",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-925b7475b57f3941/attempt-0001/video.mp4",
+    "video_sha256": "be9d50afb015f9d076af23ee7b9e6e30be20c409d6ce86b4dc87228ada38a4da",
+    "lineage_id": "304627d73b5f2141fedb752c1e5fe4a5441c465fe65ce668d6b40c1732cfe619",
+    "start_us": 1500000,
+    "end_us": 3500000,
+    "available_us": 3500000,
+    "selected_pts_us": [
+      1500000,
+      2000000,
+      2500000,
+      3000000
+    ],
+    "frame_indices": [
+      15,
+      20,
+      25,
+      30
+    ],
+    "selected_raw_pts": [
+      15360,
+      20480,
+      25600,
+      30720
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "0b82de7ce276013ffd516f88"
+  },
+  {
+    "episode_id": "dv-93864ed7f6c58992",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-93864ed7f6c58992/attempt-0001/video.mp4",
+    "video_sha256": "0a4973cbc56c02661a102e67f8706499834f79cd49496f4373c31bb7550cf6d3",
+    "lineage_id": "3dffc96b8aa099d961cb7f74965aada85b4ef178bc8e5fe2d89d149b6af1fc24",
+    "start_us": 13400000,
+    "end_us": 15400000,
+    "available_us": 15400000,
+    "selected_pts_us": [
+      13400000,
+      13900000,
+      14400000,
+      14900000
+    ],
+    "frame_indices": [
+      134,
+      139,
+      144,
+      149
+    ],
+    "selected_raw_pts": [
+      137216,
+      142336,
+      147456,
+      152576
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "b380b8a08803437eda93da3e"
+  },
+  {
+    "episode_id": "dv-93864ed7f6c58992",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-93864ed7f6c58992/attempt-0001/video.mp4",
+    "video_sha256": "0a4973cbc56c02661a102e67f8706499834f79cd49496f4373c31bb7550cf6d3",
+    "lineage_id": "3dffc96b8aa099d961cb7f74965aada85b4ef178bc8e5fe2d89d149b6af1fc24",
+    "start_us": 15200000,
+    "end_us": 17200000,
+    "available_us": 17200000,
+    "selected_pts_us": [
+      15200000,
+      15700000,
+      16200000,
+      16700000
+    ],
+    "frame_indices": [
+      152,
+      157,
+      162,
+      167
+    ],
+    "selected_raw_pts": [
+      155648,
+      160768,
+      165888,
+      171008
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "b0ae64fc45ac867f36d03cb6"
+  },
+  {
+    "episode_id": "dv-97275b5c5e686c4b",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-97275b5c5e686c4b/attempt-0001/video.mp4",
+    "video_sha256": "825d554ec5c17a7132fe8ceb6da89f874314a51b787bd4053271bf635c061b9f",
+    "lineage_id": "3dffc96b8aa099d961cb7f74965aada85b4ef178bc8e5fe2d89d149b6af1fc24",
+    "start_us": 10000000,
+    "end_us": 12000000,
+    "available_us": 12000000,
+    "selected_pts_us": [
+      10000000,
+      10500000,
+      11000000,
+      11500000
+    ],
+    "frame_indices": [
+      100,
+      105,
+      110,
+      115
+    ],
+    "selected_raw_pts": [
+      102400,
+      107520,
+      112640,
+      117760
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "69ffd7ef02d6ec07190cc50f"
+  },
+  {
+    "episode_id": "dv-9ce1c2aeef290aca",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-9ce1c2aeef290aca/attempt-0001/video.mp4",
+    "video_sha256": "66843512c2b744dd086c8bed7c86568d89e0036cd95f93620d72c05270b3894d",
+    "lineage_id": "a2cf00507ae30d448b1d19a1c740a25968e2bea4fd139539b2f1a29b341fceed",
+    "start_us": 1300000,
+    "end_us": 3300000,
+    "available_us": 3300000,
+    "selected_pts_us": [
+      1300000,
+      1800000,
+      2300000,
+      2800000
+    ],
+    "frame_indices": [
+      13,
+      18,
+      23,
+      28
+    ],
+    "selected_raw_pts": [
+      13312,
+      18432,
+      23552,
+      28672
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "5179b562afce8c1ed30f2ddf"
+  },
+  {
+    "episode_id": "dv-aa82a9413a2fc46a",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-aa82a9413a2fc46a/attempt-0001/video.mp4",
+    "video_sha256": "2667d80ca0b3c0b7155b708cfeee5946ff89800468b8fa76d15e568dde3faa05",
+    "lineage_id": "1d683290cc86e79e3f62e072d21635f4776b123ef9188b9e5d2eebfc8a6896a7",
+    "start_us": 4650000,
+    "end_us": 6650000,
+    "available_us": 6650000,
+    "selected_pts_us": [
+      4700000,
+      5200000,
+      5700000,
+      6200000
+    ],
+    "frame_indices": [
+      47,
+      52,
+      57,
+      62
+    ],
+    "selected_raw_pts": [
+      48128,
+      53248,
+      58368,
+      63488
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "7cd660c9602375f591aa6425"
+  },
+  {
+    "episode_id": "dv-aa82a9413a2fc46a",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-aa82a9413a2fc46a/attempt-0001/video.mp4",
+    "video_sha256": "2667d80ca0b3c0b7155b708cfeee5946ff89800468b8fa76d15e568dde3faa05",
+    "lineage_id": "1d683290cc86e79e3f62e072d21635f4776b123ef9188b9e5d2eebfc8a6896a7",
+    "start_us": 10000000,
+    "end_us": 12000000,
+    "available_us": 12000000,
+    "selected_pts_us": [
+      10000000,
+      10500000,
+      11000000,
+      11500000
+    ],
+    "frame_indices": [
+      100,
+      105,
+      110,
+      115
+    ],
+    "selected_raw_pts": [
+      102400,
+      107520,
+      112640,
+      117760
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "568434870b5f7fea295d3fc1"
+  },
+  {
+    "episode_id": "dv-ab93c9c80442cb4a",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-ab93c9c80442cb4a/attempt-0001/video.mp4",
+    "video_sha256": "a1d360cbaf89eacfbe5a0ae4c6de5c4153df7225d2b0c654aec43ff867c624e5",
+    "lineage_id": "138bf9112e26c1e01265faa883b204ce09f4327880f414c912631c396eb41349",
+    "start_us": 3800000,
+    "end_us": 5800000,
+    "available_us": 5800000,
+    "selected_pts_us": [
+      3800000,
+      4300000,
+      4800000,
+      5300000
+    ],
+    "frame_indices": [
+      38,
+      43,
+      48,
+      53
+    ],
+    "selected_raw_pts": [
+      38912,
+      44032,
+      49152,
+      54272
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "3b702d2b59bd73a4e103bb0b"
+  },
+  {
+    "episode_id": "dv-ab93c9c80442cb4a",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-ab93c9c80442cb4a/attempt-0001/video.mp4",
+    "video_sha256": "a1d360cbaf89eacfbe5a0ae4c6de5c4153df7225d2b0c654aec43ff867c624e5",
+    "lineage_id": "138bf9112e26c1e01265faa883b204ce09f4327880f414c912631c396eb41349",
+    "start_us": 5500000,
+    "end_us": 7500000,
+    "available_us": 7500000,
+    "selected_pts_us": [
+      5500000,
+      6000000,
+      6500000,
+      7000000
+    ],
+    "frame_indices": [
+      55,
+      60,
+      65,
+      70
+    ],
+    "selected_raw_pts": [
+      56320,
+      61440,
+      66560,
+      71680
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "c6ed89bae703eed252900568"
+  },
+  {
+    "episode_id": "dv-c49ae32814f5899e",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-c49ae32814f5899e/attempt-0001/video.mp4",
+    "video_sha256": "a3a4b66acfcc0a0971717721d01e46781b7c9976adc83027ae0387e5188be5fb",
+    "lineage_id": "138bf9112e26c1e01265faa883b204ce09f4327880f414c912631c396eb41349",
+    "start_us": 2600000,
+    "end_us": 4600000,
+    "available_us": 4600000,
+    "selected_pts_us": [
+      2600000,
+      3100000,
+      3600000,
+      4100000
+    ],
+    "frame_indices": [
+      26,
+      31,
+      36,
+      41
+    ],
+    "selected_raw_pts": [
+      26624,
+      31744,
+      36864,
+      41984
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "aa63d39b2a4fc188fee65ad4"
+  },
+  {
+    "episode_id": "dv-c85d38d9b3ceedd2",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-c85d38d9b3ceedd2/attempt-0001/video.mp4",
+    "video_sha256": "47bc760abf9ff41567d1fc9ace5bb894be6fdc8b45fbd6581bd3b83f56c5cfb2",
+    "lineage_id": "21cd49a6b3a54e1ecab53e7ac3a4859549347ab3079ad73dd577f28e9f14b783",
+    "start_us": 3950000,
+    "end_us": 5950000,
+    "available_us": 5950000,
+    "selected_pts_us": [
+      4000000,
+      4500000,
+      5000000,
+      5500000
+    ],
+    "frame_indices": [
+      40,
+      45,
+      50,
+      55
+    ],
+    "selected_raw_pts": [
+      40960,
+      46080,
+      51200,
+      56320
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "486e216365f16fe711eeca24"
+  },
+  {
+    "episode_id": "dv-c85d38d9b3ceedd2",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-c85d38d9b3ceedd2/attempt-0001/video.mp4",
+    "video_sha256": "47bc760abf9ff41567d1fc9ace5bb894be6fdc8b45fbd6581bd3b83f56c5cfb2",
+    "lineage_id": "21cd49a6b3a54e1ecab53e7ac3a4859549347ab3079ad73dd577f28e9f14b783",
+    "start_us": 7300000,
+    "end_us": 9300000,
+    "available_us": 9300000,
+    "selected_pts_us": [
+      7300000,
+      7800000,
+      8300000,
+      8800000
+    ],
+    "frame_indices": [
+      73,
+      78,
+      83,
+      88
+    ],
+    "selected_raw_pts": [
+      74752,
+      79872,
+      84992,
+      90112
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "e9e874ba5fb9ebeb8e1459d4"
+  },
+  {
+    "episode_id": "dv-caa1cbc54d5dec0f",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-caa1cbc54d5dec0f/attempt-0001/video.mp4",
+    "video_sha256": "5d1cf99a082149d40be7d93a7cd8f977a1715cc6116efa59afe5f97861e3fd9f",
+    "lineage_id": "e26cf80a6d6441bcda5a8b0bc2e877e05962bce64e0816bfde98f65293288e96",
+    "start_us": 2850000,
+    "end_us": 4850000,
+    "available_us": 4850000,
+    "selected_pts_us": [
+      2900000,
+      3400000,
+      3900000,
+      4400000
+    ],
+    "frame_indices": [
+      29,
+      34,
+      39,
+      44
+    ],
+    "selected_raw_pts": [
+      29696,
+      34816,
+      39936,
+      45056
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "60b047ff5b2cff369a046d0e"
+  },
+  {
+    "episode_id": "dv-caa1cbc54d5dec0f",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-caa1cbc54d5dec0f/attempt-0001/video.mp4",
+    "video_sha256": "5d1cf99a082149d40be7d93a7cd8f977a1715cc6116efa59afe5f97861e3fd9f",
+    "lineage_id": "e26cf80a6d6441bcda5a8b0bc2e877e05962bce64e0816bfde98f65293288e96",
+    "start_us": 8100000,
+    "end_us": 10100000,
+    "available_us": 10100000,
+    "selected_pts_us": [
+      8100000,
+      8600000,
+      9100000,
+      9600000
+    ],
+    "frame_indices": [
+      81,
+      86,
+      91,
+      96
+    ],
+    "selected_raw_pts": [
+      82944,
+      88064,
+      93184,
+      98304
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "504d5949d566e8fab965b218"
+  },
+  {
+    "episode_id": "dv-cc01a041d5ecee6d",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-cc01a041d5ecee6d/attempt-0001/video.mp4",
+    "video_sha256": "6bbb877c1b58463474839b59e5bbf984286a5d20b1a95fa9ba7cf2a9fb07da27",
+    "lineage_id": "a2cf00507ae30d448b1d19a1c740a25968e2bea4fd139539b2f1a29b341fceed",
+    "start_us": 3100000,
+    "end_us": 5100000,
+    "available_us": 5100000,
+    "selected_pts_us": [
+      3100000,
+      3600000,
+      4100000,
+      4600000
+    ],
+    "frame_indices": [
+      31,
+      36,
+      41,
+      46
+    ],
+    "selected_raw_pts": [
+      31744,
+      36864,
+      41984,
+      47104
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "8c0403f844ae345b8470a6b1"
+  },
+  {
+    "episode_id": "dv-cc01a041d5ecee6d",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-cc01a041d5ecee6d/attempt-0001/video.mp4",
+    "video_sha256": "6bbb877c1b58463474839b59e5bbf984286a5d20b1a95fa9ba7cf2a9fb07da27",
+    "lineage_id": "a2cf00507ae30d448b1d19a1c740a25968e2bea4fd139539b2f1a29b341fceed",
+    "start_us": 4900000,
+    "end_us": 6900000,
+    "available_us": 6900000,
+    "selected_pts_us": [
+      4900000,
+      5400000,
+      5900000,
+      6400000
+    ],
+    "frame_indices": [
+      49,
+      54,
+      59,
+      64
+    ],
+    "selected_raw_pts": [
+      50176,
+      55296,
+      60416,
+      65536
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "e7a362b80cc6ee69a370a5a4"
+  },
+  {
+    "episode_id": "dv-d065ae4a05eb0978",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-d065ae4a05eb0978/attempt-0001/video.mp4",
+    "video_sha256": "17a5b298c5c7e56ef5c717a6be6f0e1250b3e20a27575dea81d3e0e26f405c0b",
+    "lineage_id": "138bf9112e26c1e01265faa883b204ce09f4327880f414c912631c396eb41349",
+    "start_us": 2100000,
+    "end_us": 4100000,
+    "available_us": 4100000,
+    "selected_pts_us": [
+      2100000,
+      2600000,
+      3100000,
+      3600000
+    ],
+    "frame_indices": [
+      21,
+      26,
+      31,
+      36
+    ],
+    "selected_raw_pts": [
+      21504,
+      26624,
+      31744,
+      36864
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "04bdf6ddbb5e9d52ca4900b5"
+  },
+  {
+    "episode_id": "dv-d3ba7e1944d989fd",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-d3ba7e1944d989fd/attempt-0001/video.mp4",
+    "video_sha256": "731c8e385c52e5afd302d8e4ca53fcaa1a1eda91f4eabb5cfec73065d25e8cb7",
+    "lineage_id": "96f8aff24e548f9a611bb1efe82415fed1ff6e143d4f059f584f0dd6a4517eeb",
+    "start_us": 1700000,
+    "end_us": 3700000,
+    "available_us": 3700000,
+    "selected_pts_us": [
+      1700000,
+      2200000,
+      2700000,
+      3200000
+    ],
+    "frame_indices": [
+      17,
+      22,
+      27,
+      32
+    ],
+    "selected_raw_pts": [
+      17408,
+      22528,
+      27648,
+      32768
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "877a7d31f0b3d8598de62cf0"
+  },
+  {
+    "episode_id": "dv-dad43880b6994056",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-dad43880b6994056/attempt-0001/video.mp4",
+    "video_sha256": "79b3dccc59e6fdc0acc3fd0c1d0ec89b97cbb1593c2b289991f9b23018ff891d",
+    "lineage_id": "96f8aff24e548f9a611bb1efe82415fed1ff6e143d4f059f584f0dd6a4517eeb",
+    "start_us": 3400000,
+    "end_us": 5400000,
+    "available_us": 5400000,
+    "selected_pts_us": [
+      3400000,
+      3900000,
+      4400000,
+      4900000
+    ],
+    "frame_indices": [
+      34,
+      39,
+      44,
+      49
+    ],
+    "selected_raw_pts": [
+      34816,
+      39936,
+      45056,
+      50176
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "263db62e07c1b1fdf1526cc7"
+  },
+  {
+    "episode_id": "dv-dad43880b6994056",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-dad43880b6994056/attempt-0001/video.mp4",
+    "video_sha256": "79b3dccc59e6fdc0acc3fd0c1d0ec89b97cbb1593c2b289991f9b23018ff891d",
+    "lineage_id": "96f8aff24e548f9a611bb1efe82415fed1ff6e143d4f059f584f0dd6a4517eeb",
+    "start_us": 5100000,
+    "end_us": 7100000,
+    "available_us": 7100000,
+    "selected_pts_us": [
+      5100000,
+      5600000,
+      6100000,
+      6600000
+    ],
+    "frame_indices": [
+      51,
+      56,
+      61,
+      66
+    ],
+    "selected_raw_pts": [
+      52224,
+      57344,
+      62464,
+      67584
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "7e19799fd5ed4219647c900f"
+  },
+  {
+    "episode_id": "dv-e76f00465f0692eb",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-e76f00465f0692eb/attempt-0001/video.mp4",
+    "video_sha256": "4887edf4c4cf0c0c30cca47f8f8aaa2220e46e443a59566c2c9a77b101110b34",
+    "lineage_id": "3f0a2b56f4bff1ac5dc7dd1960fc465b0c8bad61c064e478d354db3ef17a47b2",
+    "start_us": 5450000,
+    "end_us": 7450000,
+    "available_us": 7450000,
+    "selected_pts_us": [
+      5500000,
+      6000000,
+      6500000,
+      7000000
+    ],
+    "frame_indices": [
+      55,
+      60,
+      65,
+      70
+    ],
+    "selected_raw_pts": [
+      56320,
+      61440,
+      66560,
+      71680
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "c7ec09c559fa6ddbd6cdade5"
+  },
+  {
+    "episode_id": "dv-e76f00465f0692eb",
+    "split": "development",
+    "split_group": "apartment-1",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-e76f00465f0692eb/attempt-0001/video.mp4",
+    "video_sha256": "4887edf4c4cf0c0c30cca47f8f8aaa2220e46e443a59566c2c9a77b101110b34",
+    "lineage_id": "3f0a2b56f4bff1ac5dc7dd1960fc465b0c8bad61c064e478d354db3ef17a47b2",
+    "start_us": 8550000,
+    "end_us": 10550000,
+    "available_us": 10550000,
+    "selected_pts_us": [
+      8600000,
+      9100000,
+      9600000,
+      10100000
+    ],
+    "frame_indices": [
+      86,
+      91,
+      96,
+      101
+    ],
+    "selected_raw_pts": [
+      88064,
+      93184,
+      98304,
+      103424
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "6a5f6f0a80d6b8219b0f264d"
+  },
+  {
+    "episode_id": "dv-f069f0f09933ae0b",
+    "split": "train",
+    "split_group": "apartment-0",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-f069f0f09933ae0b/attempt-0001/video.mp4",
+    "video_sha256": "5aeaa4913bbc69764dba24937e8c3b9747284f46280f410157e7fc98a582fe65",
+    "lineage_id": "e26cf80a6d6441bcda5a8b0bc2e877e05962bce64e0816bfde98f65293288e96",
+    "start_us": 1200000,
+    "end_us": 3200000,
+    "available_us": 3200000,
+    "selected_pts_us": [
+      1200000,
+      1700000,
+      2200000,
+      2700000
+    ],
+    "frame_indices": [
+      12,
+      17,
+      22,
+      27
+    ],
+    "selected_raw_pts": [
+      12288,
+      17408,
+      22528,
+      27648
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "0a1c6fbb60f5859b81425ab5"
+  },
+  {
+    "episode_id": "dv-f13a0229de70b846",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-f13a0229de70b846/attempt-0001/video.mp4",
+    "video_sha256": "35e289b1358fa096b69ea85759b796a6d55c1a9d1fbda94e1faeed3111f1beca",
+    "lineage_id": "860a662f59666b35687c6d64dedc1a08eeec036f2e404f7c0ce459092db2d9d6",
+    "start_us": 12550000,
+    "end_us": 14550000,
+    "available_us": 14550000,
+    "selected_pts_us": [
+      12600000,
+      13100000,
+      13600000,
+      14100000
+    ],
+    "frame_indices": [
+      126,
+      131,
+      136,
+      141
+    ],
+    "selected_raw_pts": [
+      129024,
+      134144,
+      139264,
+      144384
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "f0912a17455b1e4799573e89"
+  },
+  {
+    "episode_id": "dv-f13a0229de70b846",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-f13a0229de70b846/attempt-0001/video.mp4",
+    "video_sha256": "35e289b1358fa096b69ea85759b796a6d55c1a9d1fbda94e1faeed3111f1beca",
+    "lineage_id": "860a662f59666b35687c6d64dedc1a08eeec036f2e404f7c0ce459092db2d9d6",
+    "start_us": 15450000,
+    "end_us": 17450000,
+    "available_us": 17450000,
+    "selected_pts_us": [
+      15500000,
+      16000000,
+      16500000,
+      17000000
+    ],
+    "frame_indices": [
+      155,
+      160,
+      165,
+      170
+    ],
+    "selected_raw_pts": [
+      158720,
+      163840,
+      168960,
+      174080
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "7079d1450b96840dd3724c3e"
+  },
+  {
+    "episode_id": "dv-f756d3233b04ef88",
+    "split": "test",
+    "split_group": "apartment-2",
+    "video": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-corpus/paired-actions-v4/episodes/dv-f756d3233b04ef88/attempt-0001/video.mp4",
+    "video_sha256": "985f280fff215769650ccd4cbff7ebf6bad901b8cbc1cdd7d40fbf74f1304e11",
+    "lineage_id": "860a662f59666b35687c6d64dedc1a08eeec036f2e404f7c0ce459092db2d9d6",
+    "start_us": 10300000,
+    "end_us": 12300000,
+    "available_us": 12300000,
+    "selected_pts_us": [
+      10300000,
+      10800000,
+      11300000,
+      11800000
+    ],
+    "frame_indices": [
+      103,
+      108,
+      113,
+      118
+    ],
+    "selected_raw_pts": [
+      105472,
+      110592,
+      115712,
+      120832
+    ],
+    "time_base": "1/10240",
+    "origin_us": 0,
+    "sample_id": "a93b9971291211c73421e47f"
+  }
+]

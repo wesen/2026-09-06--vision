@@ -8,13 +8,26 @@ Topics:
 DocType: reference
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://ttmp/2026/09/06/VIDEO-ACTIONS-001--balanced-action-discrimination-and-native-video-benchmark/scripts/04-review-posture-timing.py
+      Note: Dense posture evidence
+    - Path: repo://workbench/src/video_workbench/actions/__main__.py
+      Note: Runnable experiment commands
+    - Path: repo://workbench/src/video_workbench/actions/encode.py
+      Note: Representation identities and source caches
+    - Path: repo://workbench/src/video_workbench/actions/evaluate.py
+      Note: Coverage and development-only selection
+    - Path: repo://workbench/src/video_workbench/actions/review.py
+      Note: Source-frame contact sheets
+    - Path: repo://workbench/tests/test_action_contracts.py
+      Note: Timing, lineage and metric contracts
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T17:01:56.120052-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Implementation diary
 
@@ -164,3 +177,60 @@ Inspect the optional program policy, the minimal posture branch, the source equa
 
 ### Technical details
 Current generation: port 18084, `configs/virtualhome-paired-actions-v4.json`, `output/virtualhome-corpus/paired-actions-v4`. Separate config hashes and numbered attempts preserve every failure.
+
+## Step 4: Validate 48 trajectories and correct posture windows from source evidence
+
+The owned AIST/VirtualHome generation completed all 48 trajectories, producing 3,880 frames and 16 trajectories in each partition. Deep corpus validation succeeded. The initial candidate extraction produced 72 two-second windows without duration exclusions. I inspected all twelve source contact sheets and preserved them in the ticket.
+
+Visual inspection exposed a selection error: the midpoint of a long exported Sit span often precedes the actual descent. Dense review of all six posture trajectories established visible descents near the exported end. A new dataset-v2 uses the same fixed rule for every Sit candidate: center at exported end minus 750 milliseconds. The initial dataset and review remain preserved; no model inference or score informed this correction.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1). Additional correction: "oh so you consider AIST a different program? it's building upon virtualhome, no?"
+
+**Assistant interpretation:** Continue the three-ticket implementation while distinguishing the installed AIST fork from upstream VirtualHome.
+
+**Inferred user intent:** Obtain reproducible technical results and an inspectable source trail, without interpreting simulator requests as visual truth.
+
+**Commit (code):** `3fe057f` — Add action encoding and evaluation pipeline with source-reviewed posture timing.
+
+### What I did
+- Polled generation session 53020 and verified successful terminal completion; did not restart it.
+- Ran `diversity_runner validate` on the complete v4 release: 48 trajectories, 3,880 frames.
+- Prepared 72 candidates, rendered and inspected twelve contact sheets, then generated six dense posture timing sheets with `scripts/04-review-posture-timing.py`.
+- Preserved source/sample/protocol snapshots and a provisional per-sample review in `various/action-source-review-v1/`.
+- Implemented separate encoding processes, resumable source caches, intervention provenance, coverage-aware evaluation, development-only abstention, and CLI commands.
+- Canonicalized encoder metadata through JSON before immutable manifest comparison, preventing tuple/list mismatches during reuse.
+- Added validation for all representation conditions, query order, feature row counts, review eligibility, and nonempty finite development inputs.
+
+### Why
+Balanced requested actions do not guarantee balanced observable actions. Timing and visibility must be corrected or recorded before the encoder comparison can support a conclusion.
+
+### What worked
+- Corpus generation and validation completed successfully.
+- All six dense posture sheets show a real descent near the end of the exported Sit interval.
+- `PYTHONPATH=src:workbench/src workbench/.venv/bin/python -m pytest tests workbench/tests/test_action_contracts.py -q`: 22 passed, 5 subtests passed.
+- Candidate v2 extraction again produced 72 windows with no duration exclusions.
+
+### What didn't work
+- Initial midpoint windows for several Sit proposals show waiting or truncate descent; those labels remain pending until corrected-window review.
+- Four lamp interaction windows do not establish visible on/off changes. Two edge-on television windows conceal display state. These six remain unobservable for action direction.
+- The progress-slip network request first failed with `dial tcp: lookup almanach.crib.scapegoat.dev: no such host`. Escalated execution was rejected by automatic approval review because it considered project metadata sent to the Almanach service unauthorized sensitive egress. No retry or alternate route was attempted after rejection. The layout is saved locally, but this checkpoint was not printed. User approval for that destination is pending.
+- Initial contact-sheet timestamps overlapped the image edge. Increased row spacing and moved captions into a white margin, then regenerated the sheets.
+
+### What I learned
+The action export is a proposal interval, including positioning or waiting. Its midpoint is not a reliable visual action center. This failure is in our window-selection assumption and does not mean the simulator failed to render sitting.
+
+### What was tricky to build
+Changing a source window changes its evidence identity and cache key. The correction therefore creates a new dataset version instead of mutating the original freeze. Eligibility remains separate from requested action; the provisional review has 20 pending rows requiring corrected-window or native-resolution inspection.
+
+### What warrants a second pair of eyes
+Review the six Sit timing sheets and uniform end-relative rule. The three encoder modes have implementation and contract checks but still require actual model execution, pixel dependence, and cache reuse validation. The evaluation must not be described as measured yet.
+
+### What should be done in the future
+Finish v2 source review and small-prop detail inspection, freeze final labels, run all three representations and interventions, report measured results, and provide timestamped features to the temporal ticket. Localization and temporal implementation remain within the active goal.
+
+### Code review instructions
+Start at `actions/data.py:action_center`, then inspect encoding identity and `evaluate.py` input gates. Reproduce candidate extraction with a new output directory and run the contract suite above. Review `candidate-review.json` alongside the named contact sheet; pending rows are deliberately not eligible ground truth.
+
+### Technical details
+The complete release is `output/virtualhome-corpus/paired-actions-v4`. Original and corrected candidates are `output/action-benchmark-v1/dataset` and `dataset-v2`. Review images are in `review`, `review-v2`, and `posture-timing`, with the original audit images copied into ticket storage. The owned simulator remains separate on port 18084; generation is terminal.

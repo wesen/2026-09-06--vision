@@ -11,3 +11,7 @@ Step 3: source-hash audit deduplicates 168 references to 162 targets; added geom
 ## 2026-09-06
 
 Step 4: Annotated all 162 source targets provisionally, rendered 42 overlay sheets, inspected and preserved six; four localization tests pass (commit 74216dc). Full overlay review remains pending.
+
+## 2026-09-06
+
+Step 5: Completed 42-sheet review, corrected three rectangles, froze source annotations, and measured detector recall/binding across three confidence policies; five tests pass (67a5cc2). L1/L2 complete; crop/state comparisons remain.

@@ -15,6 +15,8 @@ RelatedFiles:
       Note: Visibility and geometry contracts
     - Path: repo://workbench/src/video_workbench/localization/data.py
       Note: Source-hash audit and requested-target deduplication
+    - Path: repo://workbench/src/video_workbench/localization/detector_audit.py
+      Note: Verified detector source joins and measured confidence sweep
     - Path: repo://workbench/src/video_workbench/localization/evaluate.py
       Note: Best-overlap recall versus unique binding
     - Path: repo://workbench/src/video_workbench/localization/review.py
@@ -33,6 +35,7 @@ LastUpdated: 2026-09-06T17:01:56.371871-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -236,3 +239,59 @@ Start with `localization/review.py:render_overlays` and `test_overlay_requires_e
 
 ### Technical details
 Run `PYTHONPATH=workbench/src workbench/.venv/bin/python -m video_workbench.localization overlays --dataset output/localization-v1/dataset --reviews ttmp/2026/09/06/VIDEO-LOCALIZATION-001--requested-object-localization-and-crop-evidence-coverage/various/source-audit-v1/reviews-in-progress.json --out output/localization-v1/overlay-review`.
+
+## Step 5: Freeze reviewed rectangles and measure detector coverage
+
+Inspected all 42 overlay sheets and corrected three source rectangles before running detector comparisons. The final review contains 158 rectangles among 162 targets, with three ambiguous requested instances and one unobservable book left without rectangles. The frozen annotations retain the limitations of approximate visible extents from one reviewer.
+
+Implemented a source-verified detector join and measured the complete confidence sweep. At confidence 0.25, 78 of 156 eligible targets reach IoU 0.5, while 74 have a unique correct binding. Confidence 0.10 increases recall to 123/156 but produces 19 ambiguous class bindings. These results diagnose localization; they do not yet establish improved downstream state recognition.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1).
+
+**Assistant interpretation:** Finish source review and measured localization evaluation before crop/state comparison and temporal implementation.
+
+**Inferred user intent:** Identify concrete failure sources with source-bound measurements, reproducible artifacts, and visual evidence.
+
+**Commit (code):** `67a5cc2` — Freeze reviewed localization boxes and audit source-verified detector coverage.
+
+### What I did
+- Inspected the 36 remaining overlay sheets and rechecked the three corrected sheets.
+- Corrected refrigerator top background, an excluded refrigerator door edge, and a partially occluded but still visible microwave door extent.
+- Saved `reviews-v1.json`, corrections, a freeze record, and corrected overlay screenshots while preserving the earlier draft.
+- Added a detector loader that validates run and producer identities, episode manifests, artifact hashes, source video hashes, frame clocks/dimensions, detection vocabulary, and requested-frame matches.
+- Added the `audit` CLI and complete confidence/size/view/apartment/class/occlusion summaries.
+- Preserved all 486 matching rows, summaries, and provenance in the ticket.
+
+### Why
+Detector comparisons require exact video and frame identity. A processed frame with no detections is a valid negative output; an unprocessed or missing frame is a provenance failure and must not be counted as a detector miss. Best matching recall and uniquely usable binding remain separate measurements.
+
+### What worked
+- Frozen review SHA256: `6d45dd67a0c8884783f1a53a472a152b7fe6aab42fdca3b093b9d13e201b2a76`.
+- All requested detector sources matched the reviewed population.
+- At confidence 0.10: 123/156 localized, 104 uniquely correct, 19 ambiguous bindings.
+- At confidence 0.25: 78/156 localized, 74 uniquely correct, four ambiguous bindings.
+- At confidence 0.50: 46/156 localized, 45 uniquely correct, one ambiguous binding.
+- Visible book and mug targets were missed at all policies. Four unsupported targets remain separate from two unreviewable supported targets.
+- `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_localization_contracts.py -q`: five tests passed.
+
+### What didn't work
+The initial audit invocation failed with `ValueError: incomplete or changed detector run`. The original detector spec hashes an integer-keyed Ultralytics class map; JSON reload converts those keys to strings, changing sorted serialization order. Restoring integer keys reproduced both the original run ID and producer ID exactly. Added a test with class IDs 2 and 10 to exercise this ordering distinction. The failed audit did not publish a result directory. No print retry was attempted while destination approval remains pending.
+
+### What I learned
+Reducing confidence increases both recall and multi-instance ambiguity. On this population, microwave localization falls from 69/96 at confidence 0.10 to 34/96 at 0.25 and 7/96 at 0.50. Aggregate detection presence is insufficient for evaluating requested-object evidence.
+
+### What was tricky to build
+Provenance spans several layers: the top-level run lists episode manifest hashes, each episode lists JSONL hashes, each frame has an identity derived from source and clocks, and each detection names a producer and frame. The loader checks each layer before joining requested targets. It restores the original class-map type explicitly rather than dropping the run hash check.
+
+### What warrants a second pair of eyes
+Single-reviewer visible-extent boxes differ from amodal detector conventions, particularly for occluded appliances and sectional sofas. The full-population sweep is diagnostic, not permission to tune a production threshold on held-out results. Confidence 0.25 remains the planned D-crop condition for the controlled comparison.
+
+### What should be done in the future
+Materialize identically padded D/O crops, encode fixed F/D/O and fusion conditions, evaluate state predictions with full-population and paired denominators, save the comparison gallery, and publish the localization report and temporal handoff. Then implement the complete temporal ticket.
+
+### Code review instructions
+Inspect `detector_audit.py:load_detections`, the synthetic source-integrity test, `source-audit-v1/overlay-corrections.json`, and `detector-audit-v1/summary.json`. Missing requested frames must raise; valid processed frames with zero boxes must return an empty list. Check the three corrected overlay screenshots against the before/after rectangles.
+
+### Technical details
+Reproduce with `PYTHONPATH=workbench/src workbench/.venv/bin/python -m video_workbench.localization audit --dataset output/localization-v1/dataset --reviews ttmp/2026/09/06/VIDEO-LOCALIZATION-001--requested-object-localization-and-crop-evidence-coverage/various/source-audit-v1/reviews-v1.json --detector output/video-perception/detect-v1 --out output/localization-v1/detector-audit-reproduction`. A new destination is required. IoU threshold is 0.5; confidence policies are 0.10, 0.25, and 0.50; small means visible box area below 1024 pixels.

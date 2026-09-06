@@ -42,3 +42,7 @@ C3/C4: rendered and visually sampled all 24 household episodes (4261 frames, 426
 
 - /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-procedural-video-lab-on-apple-silicon/various/corpus-result-inventory.json — Complete video hashes and counts
 
+
+## 2026-09-06
+
+Created eight intern-ready project tickets (edd3d34), replaced the active simulator spike with VirtualHome expansion, reviewed 48 PDF pages, and uploaded all eight guides individually. 107 implementation tasks remain open; delivery inventory and diaries record evidence.

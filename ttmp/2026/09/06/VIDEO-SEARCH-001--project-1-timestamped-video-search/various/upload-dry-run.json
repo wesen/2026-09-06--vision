@@ -1,0 +1,8 @@
+{
+  "ticket": "VIDEO-SEARCH-001",
+  "mode": "dry-run",
+  "returncode": 0,
+  "source_sha256": "1e5409f1cffbd490d8a89eee91f02b9d700c4f805442e5b739383d48b969d443",
+  "remote_dir": "/ai/2026/09/06/VIDEO-SEARCH-001",
+  "output": "DRY: layout=default\nDRY: remote-dir=/ai/2026/09/06/VIDEO-SEARCH-001\nDRY: workers=1\nDRY: pandoc /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/VIDEO-SEARCH-001--project-1-timestamped-video-search/design-doc/01-intern-analysis-design-and-implementation-guide.md -> <tmp>/VIDEO-SEARCH-001 Intern Guide.pdf\nDRY: upload VIDEO-SEARCH-001 Intern Guide.pdf -> /ai/2026/09/06/VIDEO-SEARCH-001\n"
+}

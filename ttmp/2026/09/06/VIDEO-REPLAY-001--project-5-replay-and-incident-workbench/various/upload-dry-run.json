@@ -1,0 +1,8 @@
+{
+  "ticket": "VIDEO-REPLAY-001",
+  "mode": "dry-run",
+  "returncode": 0,
+  "source_sha256": "c12f36e34657e1f532aa5105e4881619ab164921a49c02b01464c8344347440a",
+  "remote_dir": "/ai/2026/09/06/VIDEO-REPLAY-001",
+  "output": "DRY: layout=default\nDRY: remote-dir=/ai/2026/09/06/VIDEO-REPLAY-001\nDRY: workers=1\nDRY: pandoc /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/VIDEO-REPLAY-001--project-5-replay-and-incident-workbench/design-doc/01-intern-analysis-design-and-implementation-guide.md -> <tmp>/VIDEO-REPLAY-001 Intern Guide.pdf\nDRY: upload VIDEO-REPLAY-001 Intern Guide.pdf -> /ai/2026/09/06/VIDEO-REPLAY-001\n"
+}

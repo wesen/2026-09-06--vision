@@ -1,0 +1,8 @@
+{
+  "ticket": "VIDEO-RULES-001",
+  "mode": "upload",
+  "returncode": 0,
+  "source_sha256": "1da8b918554823ed55c588f9a31e72e4004d65402caf708d17b283b96133f4a8",
+  "remote_dir": "/ai/2026/09/06/VIDEO-RULES-001",
+  "output": "OK: uploaded VIDEO-RULES-001_Intern_Guide.pdf -> /ai/2026/09/06/VIDEO-RULES-001\n"
+}

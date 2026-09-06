@@ -1,0 +1,8 @@
+{
+  "ticket": "COSMOS-EMBED-001",
+  "mode": "dry-run",
+  "returncode": 0,
+  "source_sha256": "22010b7d02343b3c5f23ce3e8d2c7bc605404ec48504a9ad210e2c5d983f3f5f",
+  "remote_dir": "/ai/2026/09/06/COSMOS-EMBED-001",
+  "output": "DRY: layout=default\nDRY: remote-dir=/ai/2026/09/06/COSMOS-EMBED-001\nDRY: workers=1\nDRY: pandoc /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-EMBED-001--embedding-runtime-baseline-on-mlx/design-doc/01-intern-analysis-design-and-implementation-guide.md -> <tmp>/COSMOS-EMBED-001 Intern Guide.pdf\nDRY: upload COSMOS-EMBED-001 Intern Guide.pdf -> /ai/2026/09/06/COSMOS-EMBED-001\n"
+}

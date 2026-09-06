@@ -1,0 +1,8 @@
+{
+  "ticket": "COSMOS-EMBED-001",
+  "mode": "upload",
+  "returncode": 0,
+  "source_sha256": "22010b7d02343b3c5f23ce3e8d2c7bc605404ec48504a9ad210e2c5d983f3f5f",
+  "remote_dir": "/ai/2026/09/06/COSMOS-EMBED-001",
+  "output": "OK: uploaded COSMOS-EMBED-001_Intern_Guide.pdf -> /ai/2026/09/06/COSMOS-EMBED-001\n"
+}

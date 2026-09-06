@@ -12,14 +12,21 @@ Owners: []
 RelatedFiles:
     - Path: repo://ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/design-doc/01-intern-analysis-design-and-implementation-guide.md
       Note: Authored project guide
+    - Path: repo://ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/scripts/01-pdf-header.tex
+      Note: Per-ticket PDF header
     - Path: repo://ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/tasks.md
       Note: Phased implementation breakdown
+    - Path: repo://ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/pdf-validation.json
+      Note: Visual review and artifact hashes
+    - Path: repo://ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/remarkable-upload.json
+      Note: Successful individual delivery
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T13:13:51.729574-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 # Diary
@@ -126,3 +133,57 @@ Wrote the project-specific analysis, proposed contracts, data flow, decision rec
 ### Technical details
 - Guide: `design-doc/01-intern-analysis-design-and-implementation-guide.md`.
 - Simulator: VirtualHome only for the active synthetic-data plan.
+
+## Step 3: Review and deliver the reMarkable edition
+
+Rendered this guide as a six-page PDF with a dedicated contents page, readable Helvetica/Menlo type, and unbroken code/diagram blocks. Inspected all six pages via contact sheets and a selected contract/code page at full raster size. The dry run and real upload both succeeded; the receipt is stored in this ticket.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1)
+
+**Assistant interpretation:** Complete this ticket's independent PDF delivery after technical and visual review.
+
+**Inferred user intent:** Read the implementation guide on reMarkable and retain reviewable source and delivery evidence locally.
+
+**Commit (design source):** `edd3d34` — `docs(vision): split roadmap into eight intern-ready project tickets`.
+
+### What I did
+- Ran the shared `scripts/15-render-upload-project-guides.py render` and rasterized every page with `scripts/16-review-project-pdfs.py`.
+- Verified JSON/Python/SQL documentation examples and local references; docmgr doctor passed.
+- Reviewed all six pages and the larger API/code/diagram sample; recorded source and PDF hashes.
+- Ran a per-ticket dry run, then uploaded this guide using the same source and renderer configuration.
+- Recorded `OK: uploaded COSMOS-VERIFY-001_Intern_Guide.pdf -> /ai/2026/09/06/COSMOS-VERIFY-001`.
+
+### Why
+- Successful PDF compilation alone cannot establish readability, and a design is not delivered until the requested upload succeeds.
+
+### What worked
+- Six pages with legible text, contents, headers, page numbers, code, and diagrams; no visible clipping or overlap.
+- Upload returned a positive success receipt. No redundant cloud listing was performed, following the reMarkable upload skill.
+
+### What didn't work
+- Generated changelogs had trailing blank lines reported by `git diff --cached --check`; these were removed in final bookkeeping.
+- Local `pypdf`, `pdfplumber`, and `fitz` modules were absent. Existing Ghostscript provided page rasterization, text extraction, and ink bounds without installing packages.
+- No rendering or upload failure occurred.
+
+### What I learned
+- The shared proven Pandoc/XeLaTeX configuration produced a consistent six-page edition for each project while preserving project-specific content.
+
+### What was tricky to build
+- PDF source hashes were captured after docmgr relations and checked again before upload; later task/diary updates do not alter the reviewed guide source.
+- Upload regenerates from the reviewed Markdown and renderer settings; the stored PDF hash identifies the inspected local artifact, not a downloaded remote-byte verification.
+
+### What warrants a second pair of eyes
+- Future implementation must validate the proposed contracts and candidate runtimes; documentation checks do not establish model behavior.
+
+### What should be done in the future
+- Begin the open implementation phases in `tasks.md` when this project is scheduled.
+
+### Code review instructions
+- Compare this guide's source hash in `various/pdf-validation.json` and `various/remarkable-upload.json`.
+- Reproduce with the shared render script and `--ticket COSMOS-VERIFY-001`; repeat review after content/layout changes.
+
+### Technical details
+- Remote directory: `/ai/2026/09/06/COSMOS-VERIFY-001`.
+- Local inspected PDF: `/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/project-guides/COSMOS-VERIFY-001/COSMOS-VERIFY-001_Intern_Guide.pdf`.
+- Six-page visual review and individual dry-run/upload receipts are stored under `various/`.

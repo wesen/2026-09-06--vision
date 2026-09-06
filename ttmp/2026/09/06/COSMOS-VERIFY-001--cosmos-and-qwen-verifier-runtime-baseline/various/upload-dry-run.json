@@ -1,0 +1,8 @@
+{
+  "ticket": "COSMOS-VERIFY-001",
+  "mode": "dry-run",
+  "returncode": 0,
+  "source_sha256": "f0149e61e952e365253e141f9931ebe3a63a35a1aa268ee71844048d3f0d0b06",
+  "remote_dir": "/ai/2026/09/06/COSMOS-VERIFY-001",
+  "output": "DRY: layout=default\nDRY: remote-dir=/ai/2026/09/06/COSMOS-VERIFY-001\nDRY: workers=1\nDRY: pandoc /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/design-doc/01-intern-analysis-design-and-implementation-guide.md -> <tmp>/COSMOS-VERIFY-001 Intern Guide.pdf\nDRY: upload COSMOS-VERIFY-001 Intern Guide.pdf -> /ai/2026/09/06/COSMOS-VERIFY-001\n"
+}

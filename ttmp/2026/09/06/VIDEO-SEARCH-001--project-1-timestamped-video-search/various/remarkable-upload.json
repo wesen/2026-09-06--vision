@@ -1,0 +1,8 @@
+{
+  "ticket": "VIDEO-SEARCH-001",
+  "mode": "upload",
+  "returncode": 0,
+  "source_sha256": "1e5409f1cffbd490d8a89eee91f02b9d700c4f805442e5b739383d48b969d443",
+  "remote_dir": "/ai/2026/09/06/VIDEO-SEARCH-001",
+  "output": "OK: uploaded VIDEO-SEARCH-001_Intern_Guide.pdf -> /ai/2026/09/06/VIDEO-SEARCH-001\n"
+}

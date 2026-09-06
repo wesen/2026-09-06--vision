@@ -1,0 +1,8 @@
+{
+  "ticket": "VIDEO-TEMPORAL-001",
+  "mode": "dry-run",
+  "returncode": 0,
+  "source_sha256": "4fb147463e9356dff4814502cb7bfaa8969dae84558af4985f8d594a7a596477",
+  "remote_dir": "/ai/2026/09/06/VIDEO-TEMPORAL-001",
+  "output": "DRY: layout=default\nDRY: remote-dir=/ai/2026/09/06/VIDEO-TEMPORAL-001\nDRY: workers=1\nDRY: pandoc /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory/design-doc/01-intern-analysis-design-and-implementation-guide.md -> <tmp>/VIDEO-TEMPORAL-001 Intern Guide.pdf\nDRY: upload VIDEO-TEMPORAL-001 Intern Guide.pdf -> /ai/2026/09/06/VIDEO-TEMPORAL-001\n"
+}

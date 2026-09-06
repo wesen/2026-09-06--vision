@@ -1,0 +1,8 @@
+{
+  "ticket": "VIDEO-STATE-001",
+  "mode": "dry-run",
+  "returncode": 0,
+  "source_sha256": "e888115cc3e1d2186d151de1f5880d8b1d131b9b9a72efdfd85bff789e3e2760",
+  "remote_dir": "/ai/2026/09/06/VIDEO-STATE-001",
+  "output": "DRY: layout=default\nDRY: remote-dir=/ai/2026/09/06/VIDEO-STATE-001\nDRY: workers=1\nDRY: pandoc /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/VIDEO-STATE-001--project-2-observable-state-recognition/design-doc/01-intern-analysis-design-and-implementation-guide.md -> <tmp>/VIDEO-STATE-001 Intern Guide.pdf\nDRY: upload VIDEO-STATE-001 Intern Guide.pdf -> /ai/2026/09/06/VIDEO-STATE-001\n"
+}

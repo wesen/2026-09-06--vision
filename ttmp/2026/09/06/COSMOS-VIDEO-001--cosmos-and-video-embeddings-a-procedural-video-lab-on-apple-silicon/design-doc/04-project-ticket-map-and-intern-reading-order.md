@@ -9,13 +9,18 @@ Topics:
 DocType: design-doc
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://ttmp/2026/09/06/COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-procedural-video-lab-on-apple-silicon/various/project-guide-delivery.json
+      Note: Individual PDF destinations and hashes
+    - Path: repo://ttmp/2026/09/06/COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-procedural-video-lab-on-apple-silicon/various/project-tickets.json
+      Note: Eight project scopes and dependencies
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T13:14:14.096505-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Project ticket map and intern reading order
 
@@ -77,4 +82,4 @@ VIDEO-CORPUS-001 therefore starts with transition review and export calibration,
 
 ## Delivery and implementation status
 
-Each child ticket's `tasks.md` separates completed design/delivery work from unchecked implementation phases. The guides contain prose explanations, diagrams, proposed API records, pseudocode, existing file references, decision records, test cases, failure handling, and acceptance criteria. PDF and upload receipts will be stored per child ticket and summarized in the umbrella inventory after delivery.
+Each child ticket's `tasks.md` separates completed design/delivery work from unchecked implementation phases. The guides contain prose explanations, diagrams, proposed API records, pseudocode, existing file references, decision records, test cases, failure handling, and acceptance criteria. All eight guides have been rendered, visually reviewed, and uploaded individually. Each is six pages (48 total). Per-ticket receipts are linked from the ticket indices; the [delivery inventory](../various/project-guide-delivery.json) records all source/PDF hashes and destinations. There are 107 open implementation tasks across the eight projects.

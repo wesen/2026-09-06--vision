@@ -1,0 +1,151 @@
+{
+  "tickets": 8,
+  "pdf_pages": 48,
+  "implementation_tasks_open": 107,
+  "deliveries": [
+    {
+      "ticket": "COSMOS-EMBED-001",
+      "title": "Embedding runtime baseline on MLX",
+      "dependencies": [],
+      "scope": "Prove text, image, and video embedding behavior and freeze a feature-space contract.",
+      "path": "ttmp/2026/09/06/COSMOS-EMBED-001--embedding-runtime-baseline-on-mlx",
+      "guide": "ttmp/2026/09/06/COSMOS-EMBED-001--embedding-runtime-baseline-on-mlx/design-doc/01-intern-analysis-design-and-implementation-guide.md",
+      "word_count": 2044,
+      "pdf_pages": 6,
+      "remote_pdf": "/ai/2026/09/06/COSMOS-EMBED-001/COSMOS-EMBED-001_Intern_Guide.pdf",
+      "implementation_tasks_open": 13,
+      "source_sha256": "22010b7d02343b3c5f23ce3e8d2c7bc605404ec48504a9ad210e2c5d983f3f5f",
+      "local_pdf": "/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/project-guides/COSMOS-EMBED-001/COSMOS-EMBED-001_Intern_Guide.pdf",
+      "local_pdf_sha256": "9691754bd9596e172d682faa6044ed910f36e446d03035b90879b371091c5e3d",
+      "upload_confirmed": true
+    },
+    {
+      "ticket": "VIDEO-SEARCH-001",
+      "title": "Project 1 - Timestamped video search",
+      "dependencies": [
+        "COSMOS-EMBED-001"
+      ],
+      "scope": "Build timestamped retrieval, cache integrity, a local viewer, and split-aware evaluation.",
+      "path": "ttmp/2026/09/06/VIDEO-SEARCH-001--project-1-timestamped-video-search",
+      "guide": "ttmp/2026/09/06/VIDEO-SEARCH-001--project-1-timestamped-video-search/design-doc/01-intern-analysis-design-and-implementation-guide.md",
+      "word_count": 2016,
+      "pdf_pages": 6,
+      "remote_pdf": "/ai/2026/09/06/VIDEO-SEARCH-001/VIDEO-SEARCH-001_Intern_Guide.pdf",
+      "implementation_tasks_open": 13,
+      "source_sha256": "1e5409f1cffbd490d8a89eee91f02b9d700c4f805442e5b739383d48b969d443",
+      "local_pdf": "/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/project-guides/VIDEO-SEARCH-001/VIDEO-SEARCH-001_Intern_Guide.pdf",
+      "local_pdf_sha256": "2441e40f658a769fd2bbd31347afbda66d82636e31a6ed767fb14db882ece370",
+      "upload_confirmed": true
+    },
+    {
+      "ticket": "VIDEO-STATE-001",
+      "title": "Project 2 - Observable state recognition",
+      "dependencies": [
+        "COSMOS-EMBED-001",
+        "VIDEO-SEARCH-001"
+      ],
+      "scope": "Measure visual state discrimination, context effects, calibration, and abstention.",
+      "path": "ttmp/2026/09/06/VIDEO-STATE-001--project-2-observable-state-recognition",
+      "guide": "ttmp/2026/09/06/VIDEO-STATE-001--project-2-observable-state-recognition/design-doc/01-intern-analysis-design-and-implementation-guide.md",
+      "word_count": 1806,
+      "pdf_pages": 6,
+      "remote_pdf": "/ai/2026/09/06/VIDEO-STATE-001/VIDEO-STATE-001_Intern_Guide.pdf",
+      "implementation_tasks_open": 13,
+      "source_sha256": "e888115cc3e1d2186d151de1f5880d8b1d131b9b9a72efdfd85bff789e3e2760",
+      "local_pdf": "/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/project-guides/VIDEO-STATE-001/VIDEO-STATE-001_Intern_Guide.pdf",
+      "local_pdf_sha256": "fcd16a3029d69d7f6195acdb084102873dbcb7e4bd9c32a22a8f86fa8de206d8",
+      "upload_confirmed": true
+    },
+    {
+      "ticket": "VIDEO-TEMPORAL-001",
+      "title": "Project 3 - Temporal models and durable memory",
+      "dependencies": [
+        "VIDEO-SEARCH-001",
+        "VIDEO-STATE-001"
+      ],
+      "scope": "Compare temporal decoders and store availability-aware facts without inventing missing steps.",
+      "path": "ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory",
+      "guide": "ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory/design-doc/01-intern-analysis-design-and-implementation-guide.md",
+      "word_count": 1930,
+      "pdf_pages": 6,
+      "remote_pdf": "/ai/2026/09/06/VIDEO-TEMPORAL-001/VIDEO-TEMPORAL-001_Intern_Guide.pdf",
+      "implementation_tasks_open": 13,
+      "source_sha256": "4fb147463e9356dff4814502cb7bfaa8969dae84558af4985f8d594a7a596477",
+      "local_pdf": "/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/project-guides/VIDEO-TEMPORAL-001/VIDEO-TEMPORAL-001_Intern_Guide.pdf",
+      "local_pdf_sha256": "37cf3d559257b708f1020b526dd6546d81b8a60e8756dfb0d93e8bbf28bff4bc",
+      "upload_confirmed": true
+    },
+    {
+      "ticket": "COSMOS-VERIFY-001",
+      "title": "Cosmos and Qwen verifier runtime baseline",
+      "dependencies": [],
+      "scope": "Compare bounded, evidence-grounded verifier behavior on identical local clips.",
+      "path": "ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline",
+      "guide": "ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/design-doc/01-intern-analysis-design-and-implementation-guide.md",
+      "word_count": 1781,
+      "pdf_pages": 6,
+      "remote_pdf": "/ai/2026/09/06/COSMOS-VERIFY-001/COSMOS-VERIFY-001_Intern_Guide.pdf",
+      "implementation_tasks_open": 13,
+      "source_sha256": "f0149e61e952e365253e141f9931ebe3a63a35a1aa268ee71844048d3f0d0b06",
+      "local_pdf": "/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/project-guides/COSMOS-VERIFY-001/COSMOS-VERIFY-001_Intern_Guide.pdf",
+      "local_pdf_sha256": "f6813846bd59cebd00af04e022f6d39a1321a512de9da47d4913c9f4bd5b666a",
+      "upload_confirmed": true
+    },
+    {
+      "ticket": "VIDEO-RULES-001",
+      "title": "Project 4 - Temporal rules and bounded investigation",
+      "dependencies": [
+        "VIDEO-TEMPORAL-001",
+        "COSMOS-VERIFY-001"
+      ],
+      "scope": "Evaluate typed three-valued rules and audit bounded evidence refinement.",
+      "path": "ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation",
+      "guide": "ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation/design-doc/01-intern-analysis-design-and-implementation-guide.md",
+      "word_count": 2004,
+      "pdf_pages": 6,
+      "remote_pdf": "/ai/2026/09/06/VIDEO-RULES-001/VIDEO-RULES-001_Intern_Guide.pdf",
+      "implementation_tasks_open": 13,
+      "source_sha256": "1da8b918554823ed55c588f9a31e72e4004d65402caf708d17b283b96133f4a8",
+      "local_pdf": "/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/project-guides/VIDEO-RULES-001/VIDEO-RULES-001_Intern_Guide.pdf",
+      "local_pdf_sha256": "18c3ccee64cf6c74c06546440387fd4445cfddb2e94925fcf9a40ab1a0ba4ac1",
+      "upload_confirmed": true
+    },
+    {
+      "ticket": "VIDEO-REPLAY-001",
+      "title": "Project 5 - Replay and incident workbench",
+      "dependencies": [
+        "VIDEO-SEARCH-001",
+        "VIDEO-STATE-001",
+        "VIDEO-TEMPORAL-001",
+        "VIDEO-RULES-001"
+      ],
+      "scope": "Integrate causal replay, incident revisions, a viewer, and held-out real-video evaluation.",
+      "path": "ttmp/2026/09/06/VIDEO-REPLAY-001--project-5-replay-and-incident-workbench",
+      "guide": "ttmp/2026/09/06/VIDEO-REPLAY-001--project-5-replay-and-incident-workbench/design-doc/01-intern-analysis-design-and-implementation-guide.md",
+      "word_count": 1950,
+      "pdf_pages": 6,
+      "remote_pdf": "/ai/2026/09/06/VIDEO-REPLAY-001/VIDEO-REPLAY-001_Intern_Guide.pdf",
+      "implementation_tasks_open": 15,
+      "source_sha256": "c12f36e34657e1f532aa5105e4881619ab164921a49c02b01464c8344347440a",
+      "local_pdf": "/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/project-guides/VIDEO-REPLAY-001/VIDEO-REPLAY-001_Intern_Guide.pdf",
+      "local_pdf_sha256": "f4cafb0b0f95f036943309db84394f13afd31571843a4bb67ee6819acc2a8373",
+      "upload_confirmed": true
+    },
+    {
+      "ticket": "VIDEO-CORPUS-001",
+      "title": "VirtualHome corpus expansion and label calibration",
+      "dependencies": [],
+      "scope": "Extend the working VirtualHome corpus with calibrated labels, controlled variations, and verified additional scenes.",
+      "path": "ttmp/2026/09/06/VIDEO-CORPUS-001--virtualhome-corpus-expansion-and-label-calibration",
+      "guide": "ttmp/2026/09/06/VIDEO-CORPUS-001--virtualhome-corpus-expansion-and-label-calibration/design-doc/01-intern-analysis-design-and-implementation-guide.md",
+      "word_count": 2009,
+      "pdf_pages": 6,
+      "remote_pdf": "/ai/2026/09/06/VIDEO-CORPUS-001/VIDEO-CORPUS-001_Intern_Guide.pdf",
+      "implementation_tasks_open": 14,
+      "source_sha256": "cf022062b504205f6fb691389fdd6a0855cb745c13cef91d3ae63f9be3a61466",
+      "local_pdf": "/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/project-guides/VIDEO-CORPUS-001/VIDEO-CORPUS-001_Intern_Guide.pdf",
+      "local_pdf_sha256": "1bc928d95df4b84dee74f121ee519f166c3bdbab0d456e72963f76eff92172cd",
+      "upload_confirmed": true
+    }
+  ]
+}

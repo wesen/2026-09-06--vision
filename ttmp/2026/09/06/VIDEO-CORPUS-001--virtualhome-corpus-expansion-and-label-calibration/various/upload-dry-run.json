@@ -1,0 +1,8 @@
+{
+  "ticket": "VIDEO-CORPUS-001",
+  "mode": "dry-run",
+  "returncode": 0,
+  "source_sha256": "cf022062b504205f6fb691389fdd6a0855cb745c13cef91d3ae63f9be3a61466",
+  "remote_dir": "/ai/2026/09/06/VIDEO-CORPUS-001",
+  "output": "DRY: layout=default\nDRY: remote-dir=/ai/2026/09/06/VIDEO-CORPUS-001\nDRY: workers=1\nDRY: pandoc /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/VIDEO-CORPUS-001--virtualhome-corpus-expansion-and-label-calibration/design-doc/01-intern-analysis-design-and-implementation-guide.md -> <tmp>/VIDEO-CORPUS-001 Intern Guide.pdf\nDRY: upload VIDEO-CORPUS-001 Intern Guide.pdf -> /ai/2026/09/06/VIDEO-CORPUS-001\n"
+}

@@ -1,0 +1,8 @@
+{
+  "ticket": "VIDEO-RULES-001",
+  "mode": "dry-run",
+  "returncode": 0,
+  "source_sha256": "1da8b918554823ed55c588f9a31e72e4004d65402caf708d17b283b96133f4a8",
+  "remote_dir": "/ai/2026/09/06/VIDEO-RULES-001",
+  "output": "DRY: layout=default\nDRY: remote-dir=/ai/2026/09/06/VIDEO-RULES-001\nDRY: workers=1\nDRY: pandoc /Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation/design-doc/01-intern-analysis-design-and-implementation-guide.md -> <tmp>/VIDEO-RULES-001 Intern Guide.pdf\nDRY: upload VIDEO-RULES-001 Intern Guide.pdf -> /ai/2026/09/06/VIDEO-RULES-001\n"
+}

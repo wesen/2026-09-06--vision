@@ -1,0 +1,11 @@
+{
+  "milestone": "Eight intern guides delivered",
+  "printed": true,
+  "printer_ok": true,
+  "status_code": 200,
+  "rendered_at": "2026-09-06T17:40:59Z",
+  "width": 384,
+  "height": 380,
+  "layout": "work-slips/designs-delivered.yaml",
+  "policy": "One substantial completion slip after the user reduced printing frequency"
+}

@@ -1,0 +1,8 @@
+{
+  "ticket": "VIDEO-CORPUS-001",
+  "mode": "upload",
+  "returncode": 0,
+  "source_sha256": "cf022062b504205f6fb691389fdd6a0855cb745c13cef91d3ae63f9be3a61466",
+  "remote_dir": "/ai/2026/09/06/VIDEO-CORPUS-001",
+  "output": "OK: uploaded VIDEO-CORPUS-001_Intern_Guide.pdf -> /ai/2026/09/06/VIDEO-CORPUS-001\n"
+}

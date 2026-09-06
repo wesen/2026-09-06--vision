@@ -1,0 +1,8 @@
+{
+  "ticket": "VIDEO-STATE-001",
+  "mode": "upload",
+  "returncode": 0,
+  "source_sha256": "e888115cc3e1d2186d151de1f5880d8b1d131b9b9a72efdfd85bff789e3e2760",
+  "remote_dir": "/ai/2026/09/06/VIDEO-STATE-001",
+  "output": "OK: uploaded VIDEO-STATE-001_Intern_Guide.pdf -> /ai/2026/09/06/VIDEO-STATE-001\n"
+}

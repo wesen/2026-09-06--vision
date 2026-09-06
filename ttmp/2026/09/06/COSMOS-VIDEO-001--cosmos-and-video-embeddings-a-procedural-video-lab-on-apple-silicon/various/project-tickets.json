@@ -6,7 +6,10 @@
     "scope": "Prove text, image, and video embedding behavior and freeze a feature-space contract.",
     "path": "ttmp/2026/09/06/COSMOS-EMBED-001--embedding-runtime-baseline-on-mlx",
     "guide": "ttmp/2026/09/06/COSMOS-EMBED-001--embedding-runtime-baseline-on-mlx/design-doc/01-intern-analysis-design-and-implementation-guide.md",
-    "word_count": 1919
+    "word_count": 2044,
+    "pdf_pages": 6,
+    "remote_pdf": "/ai/2026/09/06/COSMOS-EMBED-001/COSMOS-EMBED-001_Intern_Guide.pdf",
+    "implementation_tasks_open": 13
   },
   {
     "ticket": "VIDEO-SEARCH-001",
@@ -17,7 +20,10 @@
     "scope": "Build timestamped retrieval, cache integrity, a local viewer, and split-aware evaluation.",
     "path": "ttmp/2026/09/06/VIDEO-SEARCH-001--project-1-timestamped-video-search",
     "guide": "ttmp/2026/09/06/VIDEO-SEARCH-001--project-1-timestamped-video-search/design-doc/01-intern-analysis-design-and-implementation-guide.md",
-    "word_count": 1896
+    "word_count": 2016,
+    "pdf_pages": 6,
+    "remote_pdf": "/ai/2026/09/06/VIDEO-SEARCH-001/VIDEO-SEARCH-001_Intern_Guide.pdf",
+    "implementation_tasks_open": 13
   },
   {
     "ticket": "VIDEO-STATE-001",
@@ -29,7 +35,10 @@
     "scope": "Measure visual state discrimination, context effects, calibration, and abstention.",
     "path": "ttmp/2026/09/06/VIDEO-STATE-001--project-2-observable-state-recognition",
     "guide": "ttmp/2026/09/06/VIDEO-STATE-001--project-2-observable-state-recognition/design-doc/01-intern-analysis-design-and-implementation-guide.md",
-    "word_count": 1689
+    "word_count": 1806,
+    "pdf_pages": 6,
+    "remote_pdf": "/ai/2026/09/06/VIDEO-STATE-001/VIDEO-STATE-001_Intern_Guide.pdf",
+    "implementation_tasks_open": 13
   },
   {
     "ticket": "VIDEO-TEMPORAL-001",
@@ -41,7 +50,10 @@
     "scope": "Compare temporal decoders and store availability-aware facts without inventing missing steps.",
     "path": "ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory",
     "guide": "ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory/design-doc/01-intern-analysis-design-and-implementation-guide.md",
-    "word_count": 1797
+    "word_count": 1930,
+    "pdf_pages": 6,
+    "remote_pdf": "/ai/2026/09/06/VIDEO-TEMPORAL-001/VIDEO-TEMPORAL-001_Intern_Guide.pdf",
+    "implementation_tasks_open": 13
   },
   {
     "ticket": "COSMOS-VERIFY-001",
@@ -50,7 +62,10 @@
     "scope": "Compare bounded, evidence-grounded verifier behavior on identical local clips.",
     "path": "ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline",
     "guide": "ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/design-doc/01-intern-analysis-design-and-implementation-guide.md",
-    "word_count": 1675
+    "word_count": 1781,
+    "pdf_pages": 6,
+    "remote_pdf": "/ai/2026/09/06/COSMOS-VERIFY-001/COSMOS-VERIFY-001_Intern_Guide.pdf",
+    "implementation_tasks_open": 13
   },
   {
     "ticket": "VIDEO-RULES-001",
@@ -62,7 +77,10 @@
     "scope": "Evaluate typed three-valued rules and audit bounded evidence refinement.",
     "path": "ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation",
     "guide": "ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation/design-doc/01-intern-analysis-design-and-implementation-guide.md",
-    "word_count": 1835
+    "word_count": 2004,
+    "pdf_pages": 6,
+    "remote_pdf": "/ai/2026/09/06/VIDEO-RULES-001/VIDEO-RULES-001_Intern_Guide.pdf",
+    "implementation_tasks_open": 13
   },
   {
     "ticket": "VIDEO-REPLAY-001",
@@ -76,7 +94,10 @@
     "scope": "Integrate causal replay, incident revisions, a viewer, and held-out real-video evaluation.",
     "path": "ttmp/2026/09/06/VIDEO-REPLAY-001--project-5-replay-and-incident-workbench",
     "guide": "ttmp/2026/09/06/VIDEO-REPLAY-001--project-5-replay-and-incident-workbench/design-doc/01-intern-analysis-design-and-implementation-guide.md",
-    "word_count": 1836
+    "word_count": 1950,
+    "pdf_pages": 6,
+    "remote_pdf": "/ai/2026/09/06/VIDEO-REPLAY-001/VIDEO-REPLAY-001_Intern_Guide.pdf",
+    "implementation_tasks_open": 15
   },
   {
     "ticket": "VIDEO-CORPUS-001",
@@ -85,6 +106,9 @@
     "scope": "Extend the working VirtualHome corpus with calibrated labels, controlled variations, and verified additional scenes.",
     "path": "ttmp/2026/09/06/VIDEO-CORPUS-001--virtualhome-corpus-expansion-and-label-calibration",
     "guide": "ttmp/2026/09/06/VIDEO-CORPUS-001--virtualhome-corpus-expansion-and-label-calibration/design-doc/01-intern-analysis-design-and-implementation-guide.md",
-    "word_count": 1901
+    "word_count": 2009,
+    "pdf_pages": 6,
+    "remote_pdf": "/ai/2026/09/06/VIDEO-CORPUS-001/VIDEO-CORPUS-001_Intern_Guide.pdf",
+    "implementation_tasks_open": 14
   }
 ]

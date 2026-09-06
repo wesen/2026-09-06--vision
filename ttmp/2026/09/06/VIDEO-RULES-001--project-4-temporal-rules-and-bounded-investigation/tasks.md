@@ -4,8 +4,8 @@
 
 - [x] Establish project scope, dependencies, and VirtualHome data policy.
 - [x] Write detailed intern analysis/design/implementation guide.
-- [ ] Validate technical contracts and rendered PDF.
-- [ ] Upload this ticket guide to reMarkable and record receipt.
+- [x] Validate technical contracts and rendered PDF.
+- [x] Upload this ticket guide to reMarkable and record receipt.
 
 ## R1 AST and oracle logic
 

@@ -27,4 +27,11 @@ Parent: [COSMOS-VIDEO-001](../COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-pr
 - [Tasks](tasks.md)
 - [Diary](reference/01-design-and-delivery-diary.md)
 
-The detailed design and implementation breakdown are written. Technical/PDF review and delivery are pending; application implementation has not started.
+Design, technical validation, six-page PDF review, and reMarkable delivery are complete. Application implementation remains open in the phased task list.
+
+## Guide delivery
+
+Uploaded to `/ai/2026/09/06/VIDEO-CORPUS-001/VIDEO-CORPUS-001_Intern_Guide.pdf`.
+
+- [PDF review and hashes](various/pdf-validation.json)
+- [Upload receipt](various/remarkable-upload.json)

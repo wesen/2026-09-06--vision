@@ -42,3 +42,7 @@ Recommended order: searchable video notebook → state recognition → temporal 
 The approximately 8,000-word intern guide was rendered as a reviewed 22-page PDF and uploaded to `/ai/2026/09/06/COSMOS-VIDEO-001/COSMOS-VIDEO-001_Intern_Guide.pdf` on reMarkable.
 
 See [PDF validation and upload receipt](various/pdf-validation.json), [the diary](reference/01-investigation-diary.md), and [the local rendering script](scripts/06-render-guide.sh).
+
+## Project design delivery
+
+Eight child tickets now contain individual reviewed intern guides and 107 open implementation tasks. All eight six-page guides were uploaded to their own reMarkable ticket folders. See the [ticket map](design-doc/04-project-ticket-map-and-intern-reading-order.md), [delivery inventory](various/project-guide-delivery.json), and [design/delivery diary](reference/03-project-design-and-delivery-diary.md).

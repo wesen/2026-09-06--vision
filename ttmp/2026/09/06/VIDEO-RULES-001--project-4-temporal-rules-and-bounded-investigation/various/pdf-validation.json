@@ -1,0 +1,64 @@
+{
+  "ticket": "VIDEO-RULES-001",
+  "pdf": "/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/project-guides/VIDEO-RULES-001/VIDEO-RULES-001_Intern_Guide.pdf",
+  "pages": 6,
+  "pdf_sha256": "18c3ccee64cf6c74c06546440387fd4445cfddb2e94925fcf9a40ab1a0ba4ac1",
+  "source_sha256": "1da8b918554823ed55c588f9a31e72e4004d65402caf708d17b283b96133f4a8",
+  "renderer": "remarquee/Pandoc/XeLaTeX; Helvetica/Menlo; 11pt; 0.8in margins",
+  "qa_renderer": "Ghostscript 90 dpi PNG and text extraction",
+  "contact_sheets": [
+    "output/pdf/project-guides/VIDEO-RULES-001/qa/contact-1.jpg"
+  ],
+  "visual_review": "passed",
+  "scope": "Documentation layout review, not application execution",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "detail_review_pages": [
+    5
+  ],
+  "review_notes": "All six pages inspected through contact sheets; selected API/code/diagram page inspected at full raster size. No visible clipping, overlap, missing glyphs, or split code/diagram blocks. Contents, headers, page numbers, and body type are legible.",
+  "ink_bounds_points": [
+    [
+      57.509998,
+      24.731999,
+      554.408983,
+      767.213977
+    ],
+    [
+      57.257998,
+      24.731999,
+      570.257983,
+      767.213977
+    ],
+    [
+      57.383998,
+      24.533999,
+      580.805982,
+      767.213977
+    ],
+    [
+      57.347998,
+      24.731999,
+      555.623983,
+      767.213977
+    ],
+    [
+      57.347998,
+      24.533999,
+      555.623983,
+      767.213977
+    ],
+    [
+      57.257998,
+      24.533999,
+      563.597983,
+      767.213977
+    ]
+  ]
+}

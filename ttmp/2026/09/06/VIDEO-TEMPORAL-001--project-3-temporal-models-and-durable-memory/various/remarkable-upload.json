@@ -1,0 +1,8 @@
+{
+  "ticket": "VIDEO-TEMPORAL-001",
+  "mode": "upload",
+  "returncode": 0,
+  "source_sha256": "4fb147463e9356dff4814502cb7bfaa8969dae84558af4985f8d594a7a596477",
+  "remote_dir": "/ai/2026/09/06/VIDEO-TEMPORAL-001",
+  "output": "OK: uploaded VIDEO-TEMPORAL-001_Intern_Guide.pdf -> /ai/2026/09/06/VIDEO-TEMPORAL-001\n"
+}

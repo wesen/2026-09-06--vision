@@ -28,3 +28,5 @@ Steps 6–7: completed 48 diverse trajectories and 48 two-second windows; 18 tes
 ## 2026-09-06
 
 Completed initial diverse release and evidence handoff: 48 full videos, 48 fixed-duration windows, all audits passing, scoped visual-label exclusions retained.
+
+- Final handoff: release/evidence committed as `dc17758`; C4 completion slip printed successfully at 19:24:49 UTC. Ticket is complete; local evidence and video galleries remain available.

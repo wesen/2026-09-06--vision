@@ -18,12 +18,19 @@ RelatedFiles:
       Note: Attempt ownership, placement and source validation
     - Path: repo://src/virtualhome_corpus/diversity_windows.py
       Note: Equal-duration derivative contract
+    - Path: repo://tests/test_diversity_windows.py
+      Note: Fixed-duration crop boundaries and no-padding behavior
+    - Path: repo://tests/test_virtualhome_diversity.py
+      Note: Split, binding and cross-room placement regressions
+    - Path: repo://ttmp/2026/09/06/VIDEO-CORPUS-001--virtualhome-corpus-expansion-and-label-calibration/scripts/10-final-audit.py
+      Note: Reproducible final provenance, baseline and v1 preservation audit
 ExternalSources: []
 Summary: Implemented 48 diverse household trajectories and 48 fixed-duration windows, with source audits and scoped visual-label review.
 LastUpdated: 2026-09-06T15:04:11.530695-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 # Diverse household video release: implementation and evidence

@@ -410,3 +410,6 @@ Reviewed all six appliance trajectories across complete action intervals, inspec
 - The single failed release attempt remains under `episodes/dv-673fa0ed90d3c06a/attempt-0001`.
 
 - Final documentation check: `docmgr doctor --ticket VIDEO-CORPUS-001 --stale-after 30 --fail-on error` passed. Ticket closure generated a blank EOF line reported by `git diff --check`; normalized the changelog before staging.
+
+- Final release/evidence commit: `dc17758` — "Corpus: publish audited diversity release, visual exclusions and report evidence".
+- C4 completion slip receipt: `printed: true`, HTTP 200, rendered at `2026-09-06T19:24:49Z`; archived as `various/work-slips/corpus-c4-done.yaml`.

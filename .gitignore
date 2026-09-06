@@ -1,3 +1,9 @@
 __pycache__/
 *.pyc
 output/
+
+workbench/.venv/
+workbench/.pytest_cache/
+*.egg-info/
+
+.playwright-mcp/

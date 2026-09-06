@@ -413,3 +413,56 @@ Start at `localization/experiment.py:run`. Verify row joins and masks before rea
 
 ### Technical details
 Output: `output/localization-v1/state-comparison-v1`. Inputs: state `samples-v2.json` and `labels-v2.json`, `output/localization-v1/crops-v1/manifest.json`, and `output/localization-v1/features-v1`. Run through `PYTHONPATH=workbench/src workbench/.venv/bin/python` and call `localization.experiment.run` with a new destination. Ridge strength remains the existing 0.01 default; no held-out threshold selection was performed.
+
+## Step 8: Publish measured report and validate temporal evidence streams
+
+Published the measured localization report with source population, annotation conventions, provenance checks, confidence sweep, crop construction, state results, limitations, and a concrete improvement plan. Added a five-sample outcome gallery containing source detector overlays, D/O crops, reviewed labels, and model outcomes. All five distinct sample sheets were visually inspected.
+
+Exported separate production and oracle diagnostic streams for temporal consumers. The exporter checks exact condition-specific evidence citations, source/clock identity, feature space, producer, availability, and missing scores. A mutation audit replaces a production source citation with an oracle crop while updating its artifact hash; the semantic validation rejects it before publishing output.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1).
+
+**Assistant interpretation:** Complete localization reporting and preserve trustworthy temporal inputs before implementing the temporal ticket.
+
+**Inferred user intent:** Obtain a reviewable technical conclusion and carry measured evidence forward without losing its uncertainty or provenance.
+
+**Commit (code):** `06096fa` — Publish localization report and separate validated temporal evidence streams.
+
+### What I did
+- Created reference 02 with the full measured diagnostic, raw-count tables, implementation reading order, and improvement plan.
+- Added reproducible gallery and handoff audit scripts under the ticket's scripts directory.
+- Inspected five nonduplicated outcome sheets, including known-open success, unknown false certainty, and oracle-head error.
+- Exported 864 production-condition observations and 576 oracle-assisted observations.
+- Verified that production evidence cannot cite oracle crops and missing scores remain null.
+- Preserved the handoff streams, hashes, validation record, and exact source horizons in the ticket.
+
+### Why
+Alternative model conditions are not independent observations. Temporal consumers must choose a producer and preserve oracle provenance. A useful report must distinguish measured software integrity, localization availability, known-state accuracy, and unknown-state failure.
+
+### What worked
+- All 1,440 observations exported with source hashes, entity, frame, clocks, feature space, producer, and evidence references.
+- The altered production citation was rejected with `condition evidence citation mismatch`; no invalid output directory was published.
+- Six localization contract tests pass.
+- All five final gallery sheets are distinct and match the preserved outcomes.
+
+### What didn't work
+No report, gallery, or handoff command failed. An initial exporter draft used a fixed feature-metadata path; it was replaced with an explicit argument and verified against the comparison's metadata hash before publication. Printing remains pending after the earlier automatic approval rejection; no print receipt is claimed.
+
+### What I learned
+A handoff needs semantic citation checks as well as byte hashes. Updating an artifact hash does not make an oracle crop a valid production input. Sparse state samples preserve useful evidence but do not satisfy dense temporal-model training requirements.
+
+### What was tricky to build
+FD/FO may cite full-frame fallback when their crop is missing, whereas D/O alone must remain unavailable. The exporter derives exact allowed citations from the condition and crop manifest. It separates streams while retaining producer alternatives and warns consumers against merging those alternatives as independent evidence.
+
+### What warrants a second pair of eyes
+Offline availability excludes execution and commit latency. Oracle annotations used temporal contact context and one reviewer. The report's improved known-state score is exploratory on an already inspected partition with two positive test examples. None of these limitations should disappear in a downstream memory record.
+
+### What should be done in the future
+Implement VIDEO-TEMPORAL-001 in full: dense trailing-window features, linear and classical temporal baselines, causal neural training with leakage tests, and append-only durable memory with explicit clocks. Resolve the pending print-service authorization separately.
+
+### Code review instructions
+Read reference 02, inspect `various/outcome-gallery-v1`, then review `localization/handoff.py:export`. Run `scripts/03-audit-handoff.py` with `PYTHONPATH=workbench/src workbench/.venv/bin/python`. Check `various/temporal-handoff-v2/validation.json` for the successful semantic rejection and `manifest.json` for stream identities.
+
+### Technical details
+Production rows: 864; oracle diagnostic rows: 576. Six sparse state frames per episode; event and availability use offline source time. Handoff output is `output/localization-v1/temporal-handoff-v2`. The intern guide's earlier reMarkable delivery remains valid; this step adds the measured implementation report within the ticket.

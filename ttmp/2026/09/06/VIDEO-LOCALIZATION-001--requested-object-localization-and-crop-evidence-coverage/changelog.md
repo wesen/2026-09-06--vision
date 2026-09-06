@@ -23,3 +23,7 @@ Step 6: Materialized equal-policy D/O crops and ran fixed image encoding for F/D
 ## 2026-09-06
 
 Step 7: Evaluated ten crop/state baselines; oracle linear head 16/17 known test correct versus F 10/17, but seven unknown false certainties persist. Preserved 1440 validated observations and null missing D scores (b2a89e9).
+
+## 2026-09-06
+
+Step 8: Published measured report, five checked outcome images, and validated separate production/oracle temporal streams; all localization implementation tasks complete (06096fa). Temporal implementation and pending print authorization remain.

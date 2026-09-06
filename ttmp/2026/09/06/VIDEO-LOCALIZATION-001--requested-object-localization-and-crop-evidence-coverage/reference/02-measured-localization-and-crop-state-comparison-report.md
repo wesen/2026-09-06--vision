@@ -8,13 +8,18 @@ Topics:
 DocType: reference
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://workbench/src/video_workbench/localization/experiment.py
+      Note: Measured state comparison and unknown outcomes
+    - Path: repo://workbench/src/video_workbench/localization/handoff.py
+      Note: Source-verified production and oracle stream export
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T18:24:08.034211-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Requested-object localization and observable-state recognition
 

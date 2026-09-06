@@ -6,5 +6,5 @@
 - [x] L2: Verify matching arithmetic, source identity, and missing/unsupported distinctions.
 - [x] L3: Materialize detector and reviewed crops with identical geometry policy and encode fixed state conditions.
 - [x] L3: Evaluate full-population and paired state metrics with explicit oracle and missing-evidence status.
-- [ ] L4: Save source/detection/crop screenshots and publish measured failure analysis and improvement plan.
-- [ ] L4: Preserve temporal handoff identities, unknowns, and availability.
+- [x] L4: Save source/detection/crop screenshots and publish measured failure analysis and improvement plan.
+- [x] L4: Preserve temporal handoff identities, unknowns, and availability.

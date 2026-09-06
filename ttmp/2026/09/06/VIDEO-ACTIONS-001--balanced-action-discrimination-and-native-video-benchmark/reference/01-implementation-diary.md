@@ -110,3 +110,57 @@ Inspect the delivered guides and receipts, `configs/virtualhome-paired-actions-v
 
 ### Technical details
 Owned simulator port: 18084. Corpus destination: `output/virtualhome-corpus/paired-actions-v1`. Simulator log: `output/action-benchmark-v1/unity.log`.
+
+## Step 3: Resolve simulator inverse-posture failures without falsifying action labels
+
+The generic StandUp verb stalled after Sit and Watch: frames 96 and 1018 had identical SHA-256 values while the owned process continued recording. The request failed after 90 seconds. Preserved the failed manifest, log, and source images, identified the exact owned PID, and terminated that process before restarting. AIST's Stand operation completed in apartments 0 and 1.
+
+Apartment 2 rejected the original sequence and two alternative bindings. The log implicated Watch planning. The minimal Sit/Stand program then completed on the original bed with 204 frames, so the final v4 config restores the original target and uses a separately versioned minimal posture policy. The full 48-trajectory generation is now running.
+
+### Prompt Context
+**User prompt (verbatim):** See Step 1. Additional steering: "how brittle is virtualhome?"
+
+**Assistant interpretation:** Continue implementation and explain actual simulator failure modes candidly.
+
+**Inferred user intent:** Understand whether the tool is reliable enough for the planned experiments without abandoning the active work.
+
+**Commit (design/delivery):** `efda71c`.
+
+### What I did
+- Preserved the stalled attempt in `various/standup-failure/`, including equal source images at frames 96 and 1018.
+- Revalidated the live process (PID 34414, port 18084), terminated only that owned process, and confirmed exit 143 before restarting.
+- Probed Stand on sofas, then an apartment-2 chair and sofa; retained rejected versions v1–v3.
+- Removed intervening/final LookAt from the posture program under `paired-actions-v2`; the v4 bed probe completed.
+- Added source-window and intervention contracts plus an official FP32 image-pooling adapter under `actions/`.
+
+### Why
+A reversed video cannot substitute for a successfully rendered standing example. A source-defined operation can still be unavailable or broken in the installed Unity build.
+
+### What worked
+- Stand completed with 148 and 181 frames in the first two apartments; minimal Sit/Stand completed with 204 frames on the third apartment's original bed.
+- Two action-contract tests pass, including fixed-window bounds, split leakage rejection, and preserved monotonic intervention slots.
+- Existing corpus tests passed 19 tests and five subtests before further minimal-policy changes; rerun before the code checkpoint.
+
+### What didn't work
+- `UnityCommunicationException: HTTPConnectionPool(host='127.0.0.1', port=18084): Read timed out. (read timeout=90)` for StandUp.
+- Apartment-2 chair 295: `PROCESS WALK: Can not select object: chair. REASON: Unknown`.
+- Nonminimal bed/sofa programs: `EXECUTION_GENERAL: Script is impossible to execute`.
+- Initial docmgr changelogs contained final blank lines; the commit command proceeded after reporting them. Removed those lines for the next checkpoint.
+
+### What I learned
+AIST Stand differs operationally from the generic StandUp entry. Scene bindings and inserted Watch actions can determine feasibility even when each verb exists.
+
+### What was tricky to build
+A timed-out HTTP call does not cancel Unity. Recovery required proving the process was still recording unchanged evidence and stopping the owned instance, not blindly starting another attempt against a busy scene.
+
+### What warrants a second pair of eyes
+The completed inverse-posture clips still require visual review. Config v4 is the final generation candidate, while v1–v3 are preserved probe history rather than independent benchmark data.
+
+### What should be done in the future
+Finish all 48 renders, audit and review direction windows, execute native/FP32 pooled/4-bit pooled controls, then complete localization and all temporal phases.
+
+### Code review instructions
+Inspect the optional program policy, the minimal posture branch, the source equality of stalled frames, and `actions/data.py`/`encoders.py` contracts.
+
+### Technical details
+Current generation: port 18084, `configs/virtualhome-paired-actions-v4.json`, `output/virtualhome-corpus/paired-actions-v4`. Separate config hashes and numbered attempts preserve every failure.

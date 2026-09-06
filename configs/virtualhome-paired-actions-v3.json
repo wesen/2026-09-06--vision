@@ -1,0 +1,152 @@
+{
+  "schema_version": 2,
+  "name": "virtualhome-paired-actions-v3",
+  "character": "Chars/Male1",
+  "fps": 10,
+  "width": 640,
+  "height": 480,
+  "boundary_guard_frames": 2,
+  "split_policy": "entire apartment and all matched conditions/views stay in one partition",
+  "duration_policy": "Retain full paired trajectories; fixed source windows are derived separately with visibility review.",
+  "scenes": [
+    {
+      "scene_index": 0,
+      "split": "train",
+      "scenarios": [
+        {
+          "family": "door",
+          "target_id": 308,
+          "target_class": "fridge",
+          "initial_position": [
+            -1.24301839,
+            1.25,
+            -7.57555676
+          ]
+        },
+        {
+          "family": "pickup",
+          "target_id": 454,
+          "target_class": "mug",
+          "initial_position": [
+            5.11366129,
+            1.25,
+            -7.48421
+          ]
+        },
+        {
+          "family": "posture",
+          "target_id": 375,
+          "target_class": "sofa",
+          "initial_position": [
+            6.8704133,
+            1.25,
+            -7.81331348
+          ]
+        },
+        {
+          "family": "switch",
+          "target_id": 433,
+          "target_class": "tv",
+          "initial_position": [
+            6.364701,
+            1.25,
+            -9.998175
+          ]
+        }
+      ]
+    },
+    {
+      "scene_index": 1,
+      "split": "development",
+      "scenarios": [
+        {
+          "family": "door",
+          "target_id": 155,
+          "target_class": "fridge",
+          "initial_position": [
+            -6.997551,
+            1.25,
+            4.323344
+          ]
+        },
+        {
+          "family": "pickup",
+          "target_id": 332,
+          "target_class": "book",
+          "initial_position": [
+            -12.537838,
+            1.25,
+            5.701881
+          ]
+        },
+        {
+          "family": "posture",
+          "target_id": 301,
+          "target_class": "sofa",
+          "initial_position": [
+            -14.20416,
+            1.25,
+            3.34459066
+          ]
+        },
+        {
+          "family": "switch",
+          "target_id": 313,
+          "target_class": "tv",
+          "initial_position": [
+            -15.8487244,
+            1.25,
+            2.77417564
+          ]
+        }
+      ]
+    },
+    {
+      "scene_index": 2,
+      "split": "test",
+      "scenarios": [
+        {
+          "family": "door",
+          "target_id": 174,
+          "target_class": "microwave",
+          "initial_position": [
+            -1.84569848,
+            1.25,
+            3.09350538
+          ]
+        },
+        {
+          "family": "pickup",
+          "target_id": 67,
+          "target_class": "plate",
+          "initial_position": [
+            -5.958102,
+            1.25,
+            2.33267927
+          ]
+        },
+        {
+          "family": "posture",
+          "target_id": 224,
+          "target_class": "sofa",
+          "initial_position": [
+            -5.148,
+            1.25,
+            -3.75000024
+          ]
+        },
+        {
+          "family": "switch",
+          "target_id": 268,
+          "target_class": "tablelamp",
+          "initial_position": [
+            3.80195379,
+            1.25,
+            4.51888275
+          ]
+        }
+      ]
+    }
+  ],
+  "program_policy": "paired-actions-v1"
+}

@@ -1,0 +1,99 @@
+{
+  "attempt": "episodes/dv-553d1cbcddb72f56/attempt-0001",
+  "bindings": {
+    "char0": 1,
+    "room": 342,
+    "support": 424,
+    "target": 375
+  },
+  "camera": {
+    "id": 103,
+    "look_at": [
+      6.58019,
+      0.85,
+      -5.976838
+    ],
+    "position": [
+      3.98045757737851,
+      1.65,
+      -7.01673767341595
+    ],
+    "rotation": [
+      15.94539590092285,
+      68.19846313594633,
+      0
+    ]
+  },
+  "condition": "interaction",
+  "config_hash": "503d4cd0f46eebb2a422607f01d8dd118296eceb1544770d7b9ce6be670a020a",
+  "determinism_verified": false,
+  "episode_id": "dv-553d1cbcddb72f56",
+  "error": "UnityCommunicationException: HTTPConnectionPool(host='127.0.0.1', port=18084): Read timed out. (read timeout=90)",
+  "failed_at": "2026-09-06T21:14:50.585925+00:00",
+  "initial_actor_transform": {
+    "position": [
+      6.8704133,
+      1.25,
+      -7.81331348
+    ],
+    "rotation": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "initial_room_id": 342,
+  "installation": {
+    "app": "/Users/manuel/code/wesen/2026-09-06--vision/output/virtualhome-install/simulator/Modified_Camera_Build_2023_0404_Mac.app",
+    "architecture": "universal x86_64 + arm64",
+    "archive_sha256": "1e5aa2fbf8467abec96d0498e2ac0a22d5b5901905df9bf984e39d3fee8fafca",
+    "release": "Door_Modified_Build_2023_0404",
+    "source_revision": "122d3b0aee04768d988e02929f6eeeb38f2f28a8"
+  },
+  "lineage_id": "51b40f4dd3059f5f00115a1e8a70891972f5147e4401e58fb86b55bb26da90a8",
+  "producer": {
+    "core.py": "5922327d94232aece9b163b05346ccb90e42448ae3016a90770c6a91daa22a39",
+    "diversity.py": "844ce6df32e4436036fe7795801a950be7b82101822cbd221479afec128b11e8",
+    "diversity_runner.py": "ec5e7f86d09e0bdae2cc0f87b09cdb6dc20126d3177e61a9a28ebde1b4a76f5b",
+    "runner.py": "92c57747741273d360b0a2a4bfd35ab6723707af23ef38c6ed2b292df2aaab0e"
+  },
+  "program": [
+    "<char0> [Walk] <sofa> (375)",
+    "<char0> [LookAt] <sofa> (375)",
+    "<char0> [Sit] <sofa> (375)",
+    "<char0> [LookAt] <sofa> (375)",
+    "<char0> [StandUp]",
+    "<char0> [LookAt] <sofa> (375)"
+  ],
+  "recording": {
+    "fps": 10,
+    "height": 480,
+    "width": 640
+  },
+  "scenario": {
+    "family": "posture",
+    "initial_position": [
+      6.8704133,
+      1.25,
+      -7.81331348
+    ],
+    "target_class": "sofa",
+    "target_id": 375
+  },
+  "scene_index": 0,
+  "schema_version": 2,
+  "seed": 1000,
+  "split": "train",
+  "split_group": "apartment-0",
+  "started_at": "2026-09-06T21:13:20.109012+00:00",
+  "status": "failed",
+  "target_room_id": 342,
+  "view": "left",
+  "visual_review": "pending"
+}

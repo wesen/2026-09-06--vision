@@ -59,3 +59,16 @@ class PlacementContracts(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError,'coordinates'):placement_room(graph,actor,[3,1.25,3])
         graph['edges'].append({'from_id':9,'to_id':1,'relation_type':'INSIDE'})
         with self.assertRaisesRegex(RuntimeError,'ambiguous'):placement_room(graph,actor,[2,1.25,3])
+
+
+class PairedActionContracts(unittest.TestCase):
+    def test_real_inverse_posture_is_separate_from_original_release(self):
+        target={'id':2,'class_name':'sofa','states':[]}
+        original=program_for('posture',target,None,'interaction')
+        paired=program_for('posture',target,None,'interaction','paired-actions-v1')
+        self.assertFalse(any('[Stand]' in x for x in original))
+        self.assertIn('<char0> [Stand]',paired)
+        self.assertLess(next(i for i,x in enumerate(paired) if '[Sit]' in x),paired.index('<char0> [Stand]'))
+        control=program_for('posture',target,None,'approach_only','paired-actions-v1')
+        self.assertFalse(any('[Sit]' in x or '[Stand]' in x for x in control))
+        with self.assertRaisesRegex(ValueError,'policy'):program_for('posture',target,None,'interaction','unknown')

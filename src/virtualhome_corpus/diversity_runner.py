@@ -70,7 +70,7 @@ def generate(comm, root, cfg, item, installation, code):
         camera = camera_for(target, room, item['view'])
         ok, camera_id = comm.camera_count(); require(ok, 'Camera count failed')
         ok, result = comm.add_camera(position=camera['position'], rotation=camera['rotation']); require(ok, 'Camera insertion failed')
-        program = program_for(item['scenario']['family'], target, support, item['condition'])
+        program = program_for(item['scenario']['family'], target, support, item['condition'], cfg.get('program_policy','diversity-v2'))
         manifest.update(program=program, camera=dict(camera, id=camera_id), initial_actor_transform=actor['obj_transform'],
                         bindings={'char0': actor['id'], 'target': target['id'], 'room': room['id'], 'support': support['id'] if support else None})
         (attempt / 'actions.txt').write_text('\n'.join(program) + '\n')

@@ -36,7 +36,8 @@ def action(verb,*nodes):
     return '<char0> ['+verb+']'+''.join(f" <{n['class_name']}> ({n['id']})" for n in nodes)
 
 
-def program_for(family,target,support,condition):
+def program_for(family,target,support,condition,policy="diversity-v2"):
+    if policy not in ("diversity-v2", "paired-actions-v1", "paired-actions-v2"):raise ValueError("unknown program policy")
     approach=[action('Walk',target),action('LookAt',target)]
     if condition=='approach_only':return approach+[action('LookAt',target),action('LookAt',target)]
     if condition!='interaction':raise ValueError('unknown condition')
@@ -44,7 +45,10 @@ def program_for(family,target,support,condition):
         if 'CLOSED' not in target.get('states',[]):raise ValueError('door must start closed')
         operations=[action('Open',target),action('LookAt',target),action('Close',target)]
     elif family=='pickup':operations=[action('Grab',target),action('PutObjBack',target)]
-    elif family=='posture':return approach+[action('Sit',target)]
+    elif family=='posture':
+        if policy=='diversity-v2':return approach+[action('Sit',target)]
+        if policy=='paired-actions-v2':return approach+[action('Sit',target),action('Stand')]
+        operations=[action('Sit',target),action('LookAt',target),action('Stand')]
     elif family=='switch':
         on='ON' in target.get('states',[])
         operations=[action('SwitchOff' if on else 'SwitchOn',target),action('LookAt',target),action('SwitchOn' if on else 'SwitchOff',target)]
@@ -54,6 +58,7 @@ def program_for(family,target,support,condition):
 
 def plan(cfg):
     if cfg.get('schema_version')!=2:raise ValueError('unsupported diversity config')
+    if cfg.get('program_policy','diversity-v2') not in ('diversity-v2','paired-actions-v1','paired-actions-v2'):raise ValueError('unknown program policy')
     for key in ('fps','width','height'):
         if type(cfg.get(key)) is not int or cfg[key]<=0:raise ValueError('positive integer recording dimensions required')
     if cfg['width']%2 or cfg['height']%2:raise ValueError('even video dimensions required')

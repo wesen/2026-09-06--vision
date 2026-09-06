@@ -72,3 +72,50 @@ Installed an isolated, locked MLX environment and loaded a pinned 4-bit Qwen3-VL
 - Checkpoint revision: `99b57b385f543a94c46d9f8e85a354de4c836b37`.
 - Official reference: https://huggingface.co/Qwen/Qwen3-VL-Embedding-2B/raw/main/scripts/qwen3_vl_embedding.py
 - Packages and every model/config hash are recorded in the lock and smoke JSON.
+
+## Step 2: Finalize provenance and hand the baseline to search
+
+The search implementation now consumes this explicit pooled-image adapter. Added actual MLX, Metal, NumPy, Pillow, and PyAV versions to feature-space identity and ran a separate final smoke, preserving the first smoke rather than overwriting it. The final normalized vectors match the earlier control values, and repeated frames remain identical.
+
+### Prompt Context
+**User prompt (verbatim):** (see VIDEO-SEARCH-001 implementation diary Step 1)
+
+**Assistant interpretation:** Preserve a reproducible, capability-bounded embedding prerequisite.
+
+**Inferred user intent:** Let later projects reuse the verified visual baseline without assuming untested native-video support.
+
+**Commit (code):** `aeeaa30` — finalized runtime provenance before the retrieval experiment.
+
+### What I did
+- Added `scripts/03-download-pinned-model.py` and an output option on the smoke script.
+- Saved `various/runtime-final-smoke.json` with final space identity and exact package/model hashes.
+- Used the baseline in a real 24-video search index and a frozen development/test evaluation.
+
+### Why
+- Decoder and numerical-library changes can affect features and must not reuse an ambiguous cache identity.
+
+### What worked
+- Same-image maximum absolute difference 0; dimension 2048; norm 1; finite values.
+- Final smoke model load 2.52s; peak MLX allocation 2.152 GB.
+
+### What didn't work
+- Native video remains unsupported in this adapter; the wrapper forwarding issue is not repaired here.
+
+### What I learned
+- Appearance features support a working search application while still performing weakly on action localization.
+
+### What was tricky to build
+- Changing provenance intentionally invalidated the earlier cache identity; final evaluation regenerated the required frames under the new identity.
+
+### What warrants a second pair of eyes
+- Native-video forwarding, reversed-frame controls, and independent model conversion provenance.
+
+### What should be done in the future
+- Complete the unchecked broader runtime/profile tasks; the search prerequisite is a measured subset.
+
+### Code review instructions
+- Compare both smoke JSON records and the final space stored in VIDEO-SEARCH-001 evaluation manifests.
+
+### Technical details
+- Final space: `9246fa13a4a2d32fbb78ba1614024d65bb44339b757497bf0e90cdd6f07a0bf4`.
+- Final serving corpus uses 55 pooled windows and a 450,688-byte matrix.

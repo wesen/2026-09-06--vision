@@ -1,0 +1,19 @@
+{
+  "configuration": {
+    "fps": 1,
+    "seconds": 10
+  },
+  "development_index_id": "92956d7e1a99fce193019ad5b24e86cac7caa7aec356f3e731510fe1ff8ad3f4",
+  "development_report_sha256": "e2e8418f383ea8706837fe7518221d642431068878b939bc662d0df1f8a77fb3",
+  "protocol_sha256": "8a57cd409b49ce9005addf0f04f5c276d9d9a0fd47b6f904b8fedf5b1a4038bc",
+  "queries_sha256": "2c0bb8510c9b193460430a0bd874665ae32b93cf474d8a631073ac0068bc7652",
+  "query_vectors_sha256": "2d8cbdb6635ead3315a8eb5865f5620c2b6c7f0b28abf526352bdbd208cee268",
+  "selection_rule": [
+    "max macro Success@5",
+    "max macro interval Recall@5",
+    "max mean best temporal IoU@5",
+    "min window seconds",
+    "min FPS"
+  ],
+  "space_id": "9246fa13a4a2d32fbb78ba1614024d65bb44339b757497bf0e90cdd6f07a0bf4"
+}

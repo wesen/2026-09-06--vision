@@ -27,7 +27,7 @@
 
 ## S4 Evaluation
 
-- [ ] Freeze queries, weak-interior relevance, and split policy.
-- [ ] Run bounded development window/FPS sweep and freeze selected configuration.
-- [ ] Run final test partition with Success@K, interval Recall@K, and resource metrics.
-- [ ] Publish reproducible index/evaluation report and shared decoder/cache handoff.
+- [x] Freeze queries, weak-interior relevance, and split policy.
+- [x] Run bounded development window/FPS sweep and freeze selected configuration.
+- [x] Run final test partition with Success@K, interval Recall@K, and resource metrics.
+- [x] Publish reproducible index/evaluation report and shared decoder/cache handoff.

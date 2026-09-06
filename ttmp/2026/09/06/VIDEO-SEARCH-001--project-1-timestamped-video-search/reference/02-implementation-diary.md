@@ -10,6 +10,14 @@ DocType: reference
 Intent: long-term
 Owners: []
 RelatedFiles:
+    - Path: repo://workbench/README.md
+      Note: Reproduction handoff
+    - Path: repo://workbench/src/video_workbench/api.py
+      Note: Tested local API and playback
+    - Path: repo://workbench/src/video_workbench/evaluation.py
+      Note: Frozen evaluation and metric denominators
+    - Path: repo://workbench/src/video_workbench/index.py
+      Note: Atomic features and real index measurements
     - Path: repo://workbench/src/video_workbench/media.py
       Note: Decoded PTS and deterministic selection
     - Path: repo://workbench/src/video_workbench/registry.py
@@ -20,6 +28,7 @@ LastUpdated: 2026-09-06T13:43:38.941231-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 # Diary
@@ -282,3 +291,62 @@ Hardened cache provenance to include actual MLX, Metal, NumPy, Pillow, and PyAV 
 - Development group g03; held-out group g04. Six settings: 2/5/10 seconds × 1/2 FPS.
 - Relevance: same episode and at least 50% coverage of the weak interior.
 - Select by macro Success@5, interval Recall@5, best IoU@5, then smaller window and FPS.
+
+## Step 6: Report the held-out result and finish the search handoff
+
+The committed protocol selected 10-second windows at 1 FPS. Its one held-out aggregate evaluation produced Success@5 75%, macro interval Recall@5 68.75%, and mean best IoU@5 0.0949. Random ranking reached 74% Success@5, so the report treats this as coarse candidate retrieval rather than reliable action localization. The final serving index contains 55 windows across all 24 videos.
+
+Archived the frozen development/test JSON, exact query vectors, source/index manifests, and four actual browser screenshots. Wrote the implementation report and reproduction README, and repeated the runtime smoke under the finalized feature identity. The user then requested a textbook-style technical deep dive in the Obsidian vault with a vault commit and push; that publication is the remaining delivery step.
+
+### Prompt Context
+**User prompt (verbatim):** "write a detailed project report for the obsidian vault as a deep dive technical analysis blog post using a textbook writing style (no analogies, see skill).      
+ Commit and push the bsidian vault when done (go-go-parc vault)."
+
+**Assistant interpretation:** Finish the search report and publish a detailed, evidence-backed technical article in go-go-parc, then commit and push that vault.
+
+**Inferred user intent:** Preserve a readable explanation of how the system works, what was measured, and what the result does and does not establish.
+
+**Commit (code):** `aeeaa30` — evaluator/protocol frozen before execution.
+
+### What I did
+- Ran six development settings and one frozen test report; preserved all outputs under `various/evaluation/`.
+- Recorded final UI seek at 10s with readyState 4 and 0.09s observed query response.
+- Saved and inspected final playback and evaluation-summary screenshots.
+- Added a pinned-model download script and a full reproduction README.
+- Serialized registry validation and publication with `BEGIN IMMEDIATE` during final review; this prevents concurrent writers from validating stale split ownership.
+
+### Why
+- A working application and favorable-looking aggregate are insufficient evidence of accurate localization. The random baseline, interval recall, and temporal IoU must accompany Success@K.
+
+### What worked
+- All 15 automated tests pass; actual browser decoding, source seeking, byte ranges, and final endpoint clamp were verified.
+- Final runtime smoke again produced unit, finite 2048-dimensional vectors and exact same-frame repetition.
+- Final matrix: 450,688 bytes. Peak MLX allocation: 2.152 GB.
+
+### What didn't work
+- Microwave closing had zero matched interiors in its top five held-out results.
+- Mean best IoU@5 was only 0.0949; long windows dominate the coverage-oriented selection criterion.
+- Negative controls still return candidates because no calibrated abstention policy exists.
+
+### What I learned
+- Success@10 reaches 100% when retrieving ten of fourteen test windows, so that number carries little evidence of discriminative quality.
+- Macro interval recall (68.75%) differs from the micro matched-interior fraction (9/12 = 75%). The report names its denominator.
+
+### What was tricky to build
+- Preserve the frozen result while later browsing its hits: final UI screenshots are post-evaluation inspection, not another aggregate evaluation or a tuning opportunity.
+- Broad embedding-runtime profiling remains separate from this search baseline. Native video is still explicitly unsupported.
+
+### What warrants a second pair of eyes
+- The interpretation of weak relevance, model-card lineage uncertainty, and the open native-video wrapper repair.
+
+### What should be done in the future
+- Publish the requested vault deep dive, then pursue reviewed temporal labels and a separately validated native-video feature space.
+
+### Code review instructions
+- Read `reference/03-implementation-and-evaluation-report.md`, `workbench/README.md`, and the frozen JSON.
+- Re-run tests rather than overwriting the held-out run; its test-start marker intentionally prevents accidental replacement.
+
+### Technical details
+- Serving index: `e9ba74dabd6c07eafc1df2ee28c2b77a6f0235b87a7e7b3e0fff2e3df893bbce`.
+- Final feature space: `9246fa13a4a2d32fbb78ba1614024d65bb44339b757497bf0e90cdd6f07a0bf4`.
+- Four screenshots are linked from the implementation report; original PNGs are under `various/screenshots/`.

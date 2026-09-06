@@ -53,6 +53,13 @@ class Registry:
         return dict(r, media=json.loads(r["media"]))
 
     def ingest(self, manifest):
+        # Serialize validation with publication, so a second writer cannot validate
+        # split ownership against an out-of-date registry snapshot.
+        with self.db:
+            self.db.execute("BEGIN IMMEDIATE")
+            return self._ingest(manifest)
+
+    def _ingest(self, manifest):
         manifest = Path(manifest).resolve()
         root = manifest.parent
         required = {"episode_id", "split", "split_group", "video", "video_sha256"}

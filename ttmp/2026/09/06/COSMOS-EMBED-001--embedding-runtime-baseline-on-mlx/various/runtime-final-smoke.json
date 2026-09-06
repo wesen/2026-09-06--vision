@@ -1,0 +1,85 @@
+{
+  "space": {
+    "artifacts": "0c3dab9812a2ea4ef065362ed2c8ca6df1eb22ad25da9582d8cf480435fd358a",
+    "model_id": "arthurcollet/Qwen3-VL-Embedding-2B-mlx-4bit",
+    "revision": "99b57b385f543a94c46d9f8e85a354de4c836b37",
+    "mode": "pooled_images",
+    "adapter": "qwen3-vl-embedding-last-token-v1",
+    "quantization": "affine-4bit-group64",
+    "instruction": "Represent the user's input.",
+    "image_size": [
+      320,
+      240
+    ],
+    "resize": "PIL-bicubic",
+    "pooling": "mean-of-unit-frame-vectors-then-l2",
+    "dimension": 2048,
+    "dtype": "float32",
+    "normalization": "l2",
+    "sampling": "first-PTS-at-or-after-grid-v1",
+    "mlx_vlm": "0.6.17",
+    "transformers": "5.16.1",
+    "runtime": [
+      [
+        "mlx",
+        "0.32.2"
+      ],
+      [
+        "mlx-metal",
+        "0.32.2"
+      ],
+      [
+        "numpy",
+        "2.4.6"
+      ],
+      [
+        "pillow",
+        "12.3.0"
+      ],
+      [
+        "av",
+        "17.1.0"
+      ]
+    ]
+  },
+  "space_id": "9246fa13a4a2d32fbb78ba1614024d65bb44339b757497bf0e90cdd6f07a0bf4",
+  "artifacts": {
+    "added_tokens.json": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+    "chat_template.jinja": "a47e6afb389f86f45be7810f17d2686fd42b2bec7ba6e6958abf85845af258c5",
+    "config.json": "5e180a7b4b56cdbdfe763b289272a5fecdc32ccf200c193eab23393d122bf73a",
+    "generation_config.json": "7940a14042d126a31694c75bd8a020b668745a11867a394f19e9d26b5eccf2de",
+    "model.safetensors": "6b7e34de87dec6a8cdef242c0f6d1db2d1f9f348f1cb3c3e2c347f9a8940db8f",
+    "model.safetensors.index.json": "30ba24b1c93436450f2e202de402058ecea7417cf66785d4c73e52d1575e6d97",
+    "preprocessor_config.json": "d75c1f9f474add87cb0188d43c4fbf5c232d2af64f156fcefc5311089049100d",
+    "processor_config.json": "aeb7ad304076eacc0dbb51629ec2cf27aa0032e1858ea4e1f5802d33df621d25",
+    "special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+    "tokenizer.json": "93623af029cdc69b87f2864d3b2cc2424fdf16684f15e139b5b9d08ec34ced91",
+    "tokenizer_config.json": "d649e1c5a3b24a03b69f4d6a1b6f6be21c3dafe3d7585e6f390ee547db20e7e2",
+    "video_preprocessor_config.json": "59c5c9eb52182eb14c06ffb10ca9effd29adce5f238a95de23ca14a38dbd2cb1",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "load_seconds": 2.5204049160238355,
+  "timings_seconds": [
+    0.06947716604918242,
+    0.20631074998527765,
+    0.21628112508915365,
+    0.1555808330886066,
+    0.17545366613194346
+  ],
+  "shape": [
+    2048
+  ],
+  "finite": true,
+  "norm": 1.0,
+  "repeat_max_abs": 0.0,
+  "different_frame_cosine": 0.9633851647377014,
+  "black_frame_cosine": 0.36615556478500366,
+  "query_image_cosine": 0.2595847249031067,
+  "native_video": {
+    "supported": false,
+    "reason": "mlx-vlm 0.6.17 qwen3_vl_embedding drops pixel_values_videos; use explicit pooled_images"
+  },
+  "rss_bytes": 2126823424,
+  "mlx_peak_bytes": 2151787081,
+  "platform": "macOS-15.7.7-arm64-arm-64bit"
+}

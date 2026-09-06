@@ -1,5 +1,9 @@
 """Run with workbench/.venv/bin/python; writes measured capability evidence."""
 from pathlib import Path
+import argparse
+parser=argparse.ArgumentParser()
+parser.add_argument("--output",default="ttmp/2026/09/06/COSMOS-EMBED-001--embedding-runtime-baseline-on-mlx/various/runtime-smoke.json")
+args=parser.parse_args()
 import json, time, platform
 import numpy as np
 import av
@@ -26,5 +30,5 @@ report={'space':asdict(e.space),'space_id':e.space.id,'artifacts':e.artifacts,'l
  'query_image_cosine':float(text@a),'native_video':{'supported':False,'reason':native},
  'rss_bytes':psutil.Process().memory_info().rss,'mlx_peak_bytes':e.mx.get_peak_memory(),
  'platform':platform.platform()}
-p=Path('ttmp/2026/09/06/COSMOS-EMBED-001--embedding-runtime-baseline-on-mlx/various/runtime-smoke.json')
+p=Path(args.output)
 p.write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2),flush=True)

@@ -1,0 +1,464 @@
+{
+  "reviews_sha256": "6d45dd67a0c8884783f1a53a472a152b7fe6aab42fdca3b093b9d13e201b2a76",
+  "samples_sha256": "d7b69896ef643e4bc067311e2f20865743ed4ccaee26d742a890e4c794e6540c",
+  "sheets": [
+    {
+      "episode_id": "dv-008b5e55af631629",
+      "sample_ids": [
+        "5d4a12e0982680b61cf08bd5",
+        "bc0911c401e7875e91061344",
+        "2841eff78a84b90fb1a90ad2",
+        "32b949b927976f14871a6f02",
+        "23116bd1d1ff93b8716d67d3",
+        "b2c68887030d7a09aaafa1f9"
+      ],
+      "sha256": "703800c09971d3c9f2c91535b17b2559d34febed96c87eb0c55cca830cc9c302",
+      "sheet": "overlay-00.jpg"
+    },
+    {
+      "episode_id": "dv-03c8a2dbcd624cf8",
+      "sample_ids": [
+        "658f5ade547abb730e9cf865",
+        "5278d1c22a221bc6ca33fe22",
+        "b7bb24e901de4432deeefd01",
+        "dfcda5cba4ef1d8c23d87686",
+        "58306fa83d57fee4c0ab0fc4",
+        "a42f25cd4a4cad6e58a9af3e"
+      ],
+      "sha256": "fdb6ad6691ccad102b88858cd53bc083e6d3667295ea1ce14eaf497c3b2da9f6",
+      "sheet": "overlay-01.jpg"
+    },
+    {
+      "episode_id": "dv-22a313084fd800ca",
+      "sample_ids": [
+        "4e27c53c195306dcabdd374b",
+        "b4a1d964581da99460a23ad5",
+        "0ad6a710abdd47d925e880d0",
+        "844d965997898af8a409fa4c",
+        "399a6eb792e95fbc25c95376",
+        "56ec727fc14cbfb94a633f12"
+      ],
+      "sha256": "8b184c2578171a713b7245126a466240342fff052b35052b29461ee83352da75",
+      "sheet": "overlay-02.jpg"
+    },
+    {
+      "episode_id": "dv-7726ded72630455a",
+      "sample_ids": [
+        "5ac2776b925d5d8c78bc72b9",
+        "0c027d158de634992a8a41e2",
+        "e0967efec912b7b757170438",
+        "2c2ee9c630f66900b0f80a3b",
+        "cc3f88e1646ce25dd75fe530",
+        "10c040c6e7f67f99cc95cb08"
+      ],
+      "sha256": "5917139a9157e4f0f785233e22f91395ac574fc47883b7bd72e4a4b5f0417805",
+      "sheet": "overlay-03.jpg"
+    },
+    {
+      "episode_id": "dv-af669d3e3a486780",
+      "sample_ids": [
+        "d83a66c6b218c8b7e32dc0e9",
+        "46c6c0b8d402977e56e70144",
+        "532173a7365c82cc5f6faed9",
+        "a363454de88fb5a3eaa54131",
+        "ea2dcc6c9bc681384e0da4f5",
+        "6a32a0db3b675000dddf892d"
+      ],
+      "sha256": "950b9d138bef120d07b9da542e9fd70f5dea22573817fe9f648e3ac8c59fc491",
+      "sheet": "overlay-04.jpg"
+    },
+    {
+      "episode_id": "dv-b78c9de6650abd04",
+      "sample_ids": [
+        "3f4d44342189a43768d92d59",
+        "b4fbe73942ac92a22661ae5e",
+        "c5d2593331f86462235ce292",
+        "4304f3085c6a18a17fad92dc",
+        "c79572bede497bb2ec4dfb12",
+        "fd114f383992cbb0e68133e2"
+      ],
+      "sha256": "3c950057651464d9c3b277ff4d51ff2577c38191983489e19b6f8315d52a8864",
+      "sheet": "overlay-05.jpg"
+    },
+    {
+      "episode_id": "dv-bc11642e2c451020",
+      "sample_ids": [
+        "7c667d4f1f7033bb7a4913d7",
+        "629e05faac902f1d5be0038e",
+        "321b9a6091109e903a8b371c",
+        "5fed5c25e8982b6db6cd1be8",
+        "f60ed7aab4920dcd820f3f74",
+        "0726333fb1c323b244a29349"
+      ],
+      "sha256": "1395eafde1ed4939b0dd1022da00b7b3a86444b8d5aba1077bbb2c9b3e16928e",
+      "sheet": "overlay-06.jpg"
+    },
+    {
+      "episode_id": "dv-d6a1fa73f031c686",
+      "sample_ids": [
+        "efe7e7e79d3f586f701a878c",
+        "90bd8110771d05fc9085c451",
+        "837a31d9a3d631c411ee1394",
+        "f0aed7bffd7fcffe2c38664c",
+        "59e7b08c3f81f0148ee87ecb",
+        "9b4169dd4eb02e2879e4a67a"
+      ],
+      "sha256": "edf1e5ef7b3a174aceb49c3d9f6129895d37d556a5a73610d3c43741de71f5e7",
+      "sheet": "overlay-07.jpg"
+    },
+    {
+      "episode_id": "dv-ddf28e0a6b4c30db",
+      "sample_ids": [
+        "9ba062c5589e2eb7baa3a320",
+        "7c241b70b7baef5862a3b237",
+        "9827a2eaa464499674f0d252",
+        "985403b6bce498d9ebaa68ce",
+        "6dbc5909141e7ef233eb9ee8",
+        "09ef1d8cf98e52db8ba6f3d0"
+      ],
+      "sha256": "dc07846c9af352cac334ac5c072f41b88a7e6c28781f144e88b35d31c909d413",
+      "sheet": "overlay-08.jpg"
+    },
+    {
+      "episode_id": "dv-e1975790e6ee831e",
+      "sample_ids": [
+        "e4a829e3e877ba63082d37e5",
+        "7c911cd5d0195c74153ebf85",
+        "b6368a94a4f342ec739b7b97",
+        "16d0458bc01bef27ccfb2594",
+        "f1a8f4dae38967dcb48a799c",
+        "fe13f5ff537f0e4293cbb917"
+      ],
+      "sha256": "16f3fcb0c986028d932593fc08bfc300affd9553014942f13cf6a1339427284a",
+      "sheet": "overlay-09.jpg"
+    },
+    {
+      "episode_id": "dv-e2244cb1a1000aeb",
+      "sample_ids": [
+        "2e7c40339a3efc2254bde76e",
+        "98e5665dbe96722796e60fcf",
+        "d4ec382c122af4393488253b",
+        "467c549cb03ca8fa06f83717",
+        "d2b1418591ee1040368ae835",
+        "0c1c46be91ff4304157cb815"
+      ],
+      "sha256": "aac1b635bbe6c5b0734e4a8bd4f987ffd1ae1df67a774fb43322622e3b3c4282",
+      "sheet": "overlay-10.jpg"
+    },
+    {
+      "episode_id": "dv-fff8ee5abe309115",
+      "sample_ids": [
+        "80e5d4d85cb7650064db9277",
+        "4b22336a5650d857866aff2c",
+        "31655798773582082e2b7205",
+        "8ef09a47749adf6c04ad6c96",
+        "e1d2668d7bba742ebe199d63",
+        "9c2567ab120ee8966997ce5b"
+      ],
+      "sha256": "b6a87ee3d9dda3b478a2437d64ddbbb469b66978f499e6aac8d9736397ba0891",
+      "sheet": "overlay-11.jpg"
+    },
+    {
+      "episode_id": "ep-1779083be6e7d3b2",
+      "sample_ids": [
+        "6bac8f6ec4f4a469f1614bb3",
+        "671365a716a08b58d0ec839a",
+        "b824f435eb7e25f69dbbaf17",
+        "1efd984ddb584a579ab8acb3",
+        "3402af426322e3ef67204966",
+        "14f85f2d234a53c550c152cf"
+      ],
+      "sha256": "cbfa8a272b079db719f872406a4eb05d68e55f9ae39959ae82f66c0226e45632",
+      "sheet": "overlay-12.jpg"
+    },
+    {
+      "episode_id": "ep-26448333df96e9bc",
+      "sample_ids": [
+        "6397f4f77b3772a7c7ce2ba3",
+        "76f7cd1324d153f29d6fa4ac",
+        "e009bb95e5d0e2ec8e33e1da",
+        "fd529a87289f190fdef8966b",
+        "aa395bab8a25c698e657a6f9",
+        "b344b499e3fe5c2c717a4739"
+      ],
+      "sha256": "29b0216369f3e176c74f51adf9b13a566fbfb7a196585661f0cfb93df7198ba2",
+      "sheet": "overlay-13.jpg"
+    },
+    {
+      "episode_id": "ep-2a420ff714f0a8e5",
+      "sample_ids": [
+        "b7ffe0b0443a833c9d0f3fc1",
+        "eae8a8ab9c4b38391c1bac94",
+        "88ef3dcb2f37bf07588b6433",
+        "baaa70ffd85c13f77fae5bef",
+        "42ad3495178619e8b7ca942f",
+        "220b17f56906dc3e5ad2dc82"
+      ],
+      "sha256": "2af4bd6e10ab2f112a016b3671e52d77cf6f485c5b8635d55b7409136bc9e767",
+      "sheet": "overlay-14.jpg"
+    },
+    {
+      "episode_id": "ep-327429c08d46e616",
+      "sample_ids": [
+        "ad37e3eaeb651a0772a1d3f3",
+        "ae6bb8596737d5b1e68b9c37",
+        "86c6b26990ac1375ce8949dc",
+        "13a8aea687fae1603a1c0d39",
+        "9f5c79ae2f428a8ba360368f",
+        "f1f93cd70ee05f0a2acd6448"
+      ],
+      "sha256": "84c58d62feeb165d567f558b9970f5418dbe5d2c61939979b9fa25382f0a5cbe",
+      "sheet": "overlay-15.jpg"
+    },
+    {
+      "episode_id": "ep-33fbcce3c63f4265",
+      "sample_ids": [
+        "4fe6fc6759fe4e3a46621649",
+        "7c2147aea32f803d7e17db0f",
+        "2e4bbb82ae86df81b798662d",
+        "334f6cadd26301c2265e1897",
+        "e9e2383194d293ec5684f34b",
+        "14879494434b1f0706fdc1bf"
+      ],
+      "sha256": "5bffcb792e8b2194e3d200fcf7e799f38d18af11f42ad087d6b809852fc4abe1",
+      "sheet": "overlay-16.jpg"
+    },
+    {
+      "episode_id": "ep-37909e041bc956c8",
+      "sample_ids": [
+        "55be7f60ad771686525e7607",
+        "4e18998c5864714847a86dde",
+        "8e7d76409c9324b521c561e0",
+        "1db3092e6283fd0cb460b70d",
+        "a242b40e77ff2f1c0f51cd93",
+        "cf87bf9d0f0fb086c6db0761"
+      ],
+      "sha256": "d4d3be9bdcc81e12836b87f0882da8e4f73a34e5fe1f1a85bd48ce61bfd2ed5e",
+      "sheet": "overlay-17.jpg"
+    },
+    {
+      "episode_id": "ep-3fc2ecf3a1ed6d99",
+      "sample_ids": [
+        "bfd9a66a662902c3b3a146e0",
+        "9ebc6dd50d1027317ad37b00",
+        "0057070d1de3f0082e1959f8",
+        "cb7857069591922935fec44a",
+        "287638a858ec049934b4d9ba",
+        "116100e571bfba8d49d74393"
+      ],
+      "sha256": "d1d9b9257747b67e5413e2a5296aed4f9d68ae1f750b9aa2c884fbf90229a309",
+      "sheet": "overlay-18.jpg"
+    },
+    {
+      "episode_id": "ep-97a1a39b2e9490b6",
+      "sample_ids": [
+        "e91455d1eaf3f4628af54a4d",
+        "a19e997abe0988bfff2a4efd",
+        "71ac220e52193adb25d24b7e",
+        "52018da30b8135314a7094e9",
+        "fdf8c4f873e577aa1b93c215",
+        "141446c788b9316034c634f6"
+      ],
+      "sha256": "86b0b47df13b2ff13b34ec175410da5307b65b4eb759c5e96391f2e5c1754530",
+      "sheet": "overlay-19.jpg"
+    },
+    {
+      "episode_id": "ep-b3f1b6687fc723ca",
+      "sample_ids": [
+        "2e67556006d32e03d2474011",
+        "e2763752d32fdac945c10dec",
+        "9721de47f7714257e00a867a",
+        "bb4510f4c57fd6c227253068",
+        "333e06ac9a09c30f29b6e93c",
+        "55511d75f8fc8d2a5a75bfbe"
+      ],
+      "sha256": "874c7e412393c14224d07be2ad80015d68c78349f7f8734accf53fb4cc309d11",
+      "sheet": "overlay-20.jpg"
+    },
+    {
+      "episode_id": "ep-c1c313b64f579794",
+      "sample_ids": [
+        "dbdf83069399aecfc36a86dc",
+        "57e85d63627fad7c3303a020",
+        "11ac9626034d472fc09e52ae",
+        "be607800e5bac284719d1ed0",
+        "140440af992a9c5e942834a6",
+        "2ba86756722e977e9136f5ec"
+      ],
+      "sha256": "f6bc7db8e20c01380506ea706f44c2d53997708044ee20d09d3583c0b6886977",
+      "sheet": "overlay-21.jpg"
+    },
+    {
+      "episode_id": "ep-c2ad5c5f7b67a9a8",
+      "sample_ids": [
+        "921e31ffe36166dcac848fd4",
+        "514424972b48b0b3ffbace84",
+        "9cbf08cde155468dee424887",
+        "7cfa5227ba88850ae7ff4f6c",
+        "4b02546f2a4a11b8a8b0174a",
+        "d69a96fa3f322425dd9b79ad"
+      ],
+      "sha256": "bdffb42bbbb4dd9f3df906815ffd9be18e623efe3d6c6cf22d343d347b3bfdc9",
+      "sheet": "overlay-22.jpg"
+    },
+    {
+      "episode_id": "ep-e614ca27a15019cd",
+      "sample_ids": [
+        "e132ec0b0278c278ea0bc32a",
+        "9d30132b7c1ec85c1aeedc53",
+        "9519979e31f9717d2ed1f28f",
+        "774479e98326aac5a8dcc6c0",
+        "b5a74e5542601273a5ecbc15",
+        "b856445a9a937c993fc2e3e7"
+      ],
+      "sha256": "a22b041a9042ed16205194db9f2b3b522accecfe765f08c0d55f7c31ef8551f7",
+      "sheet": "overlay-23.jpg"
+    },
+    {
+      "episode_id": "dv-077a07eb73fdb91b",
+      "sample_ids": [
+        "5051c9dd9adc497c72618757"
+      ],
+      "sha256": "46c5b25bc4693ebc65e16ab8f80f83bc6bbcb3045fa17dbd8cd00deaca64cc44",
+      "sheet": "overlay-24.jpg"
+    },
+    {
+      "episode_id": "dv-122c74a567057f0f",
+      "sample_ids": [
+        "a20428c1990cd523cdd89ca6"
+      ],
+      "sha256": "1e7d2565947f5efbf3e3b7ae4dc4be26d52ce2a55992d5d2e28390defdf7ba3e",
+      "sheet": "overlay-25.jpg"
+    },
+    {
+      "episode_id": "dv-13cb7ede57cfce80",
+      "sample_ids": [
+        "4f9ef36f6df40878add6ed00"
+      ],
+      "sha256": "576fd22f4a3bfef772d54543b072388910e8901a3f89cb51750d7fd39a780f7a",
+      "sheet": "overlay-26.jpg"
+    },
+    {
+      "episode_id": "dv-2ce2e6667c4b4d0a",
+      "sample_ids": [
+        "f2e70d5828f7c4586f3de8ac"
+      ],
+      "sha256": "2bdac71b37f31133f3acb73f91353fa095d85e755e8bcf8d4840af55f523a434",
+      "sheet": "overlay-27.jpg"
+    },
+    {
+      "episode_id": "dv-358dc094893009b1",
+      "sample_ids": [
+        "5af0f23f519851cb0de3e566"
+      ],
+      "sha256": "e23ee1483d1720a3a9572d611b1414e437a7ac7364e99ae191d0a377920c5fdd",
+      "sheet": "overlay-28.jpg"
+    },
+    {
+      "episode_id": "dv-5379eae9425594a5",
+      "sample_ids": [
+        "a1f47aa734c874a507daca68"
+      ],
+      "sha256": "05b1e0b0875449d8dd50eafc7512592cbbddc8eaa5291e3d22f2cc7e22368c90",
+      "sheet": "overlay-29.jpg"
+    },
+    {
+      "episode_id": "dv-633a68f3856a13b9",
+      "sample_ids": [
+        "8575af3e1c36c9e08a75ea4b"
+      ],
+      "sha256": "fa92bb787a6d4831dadc27d210d4a0a4938c0e450f4a776044d1b3fa20a81364",
+      "sheet": "overlay-30.jpg"
+    },
+    {
+      "episode_id": "dv-673fa0ed90d3c06a",
+      "sample_ids": [
+        "94dbe5a2e2f303940c1a6c61"
+      ],
+      "sha256": "6e6fa3442ddf8a06284d0769f51cd654429819c190768036e8084c2145a13b45",
+      "sheet": "overlay-31.jpg"
+    },
+    {
+      "episode_id": "dv-8a5eba2e07a4edba",
+      "sample_ids": [
+        "2f87117862b56a30f2d0d7a2"
+      ],
+      "sha256": "1e26123729216ec5bc3fca828b6799fec053fa1e5579b4fdc4c2a25d887fd522",
+      "sheet": "overlay-32.jpg"
+    },
+    {
+      "episode_id": "dv-8e6a48b09752b418",
+      "sample_ids": [
+        "574adb306d856e5601a31e0e"
+      ],
+      "sha256": "13fb1c098a6cbc966db239fc5968a9aec3c02559f8b80f6a2c540e61abddd9b2",
+      "sheet": "overlay-33.jpg"
+    },
+    {
+      "episode_id": "dv-9532099dbadcd75d",
+      "sample_ids": [
+        "d5a579ab97334d0767adf376"
+      ],
+      "sha256": "3b645c67940bdd3c4849440e3521eebccbe1178b3cb70c5b769015290a68997d",
+      "sheet": "overlay-34.jpg"
+    },
+    {
+      "episode_id": "dv-b1efcf310ae19cba",
+      "sample_ids": [
+        "d5197860444d78672aab0395"
+      ],
+      "sha256": "bae8424b4f43688b5b78aff457b990a3cbe7f9dac250d3659e7888819c70b160",
+      "sheet": "overlay-35.jpg"
+    },
+    {
+      "episode_id": "dv-b80308c130c7003b",
+      "sample_ids": [
+        "f360e8598daa5120dce54e3a"
+      ],
+      "sha256": "8109e363f7a96f451650a9c442ab0d27cfe3e890f18d6a4f6609ccb6c0ce584b",
+      "sheet": "overlay-36.jpg"
+    },
+    {
+      "episode_id": "dv-b860109d640354aa",
+      "sample_ids": [
+        "30a155b90fa32fec92232c46"
+      ],
+      "sha256": "bdf051c0bdfd20bf25e636954bffa3419abbdbe58259e9c2ad5ca060275bb392",
+      "sheet": "overlay-37.jpg"
+    },
+    {
+      "episode_id": "dv-d6ae3400348a5fe9",
+      "sample_ids": [
+        "4955efe61728f4cdcfb0e745"
+      ],
+      "sha256": "225200d413387cdd3a3c8e6e32a6f8dc19cb7b149e30c26b7de8c47627611eb5",
+      "sheet": "overlay-38.jpg"
+    },
+    {
+      "episode_id": "dv-e8d0b4406873fe07",
+      "sample_ids": [
+        "32851e9f486bf2649557e1ca"
+      ],
+      "sha256": "7ef6f6c29453de01f37fd6a13168364132e327b03581cb4fe9d54430b37f7a72",
+      "sheet": "overlay-39.jpg"
+    },
+    {
+      "episode_id": "dv-f5d425826f4d5906",
+      "sample_ids": [
+        "12900d2233da1d43cb91acff"
+      ],
+      "sha256": "56f6401b7e5b7830b211faa0671023da8cd1d48ad1dce763ec92fab6bc8c77ae",
+      "sheet": "overlay-40.jpg"
+    },
+    {
+      "episode_id": "dv-fecbdda0db4c76e8",
+      "sample_ids": [
+        "125637b0e61e8c47da9ce086"
+      ],
+      "sha256": "33e107342451f93c38518dfe19a044143ba190e1bb2aa053b79fb850eb3d236d",
+      "sheet": "overlay-41.jpg"
+    }
+  ],
+  "status": "rendered for visual review; rendering does not certify annotation quality",
+  "targets": 162
+}

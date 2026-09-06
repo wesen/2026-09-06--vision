@@ -57,3 +57,37 @@ def test_overlay_requires_exact_population_and_unchanged_source(tmp_path):
     Image.new('RGB', (100, 100), 'red').save(image)
     with pytest.raises(ValueError, match='source image changed'):
         render_overlays(tmp_path, reviews, tmp_path / 'changed')
+
+
+def test_detector_join_checks_artifacts_and_distinguishes_missing_frame(tmp_path):
+    import json
+    from dataclasses import asdict
+    from video_workbench.embedding import digest
+    from video_workbench.registry import file_hash
+    from video_workbench.perception.contracts import FrameRef
+    from video_workbench.perception.store import publish_episode
+    from video_workbench.localization.detector_audit import load_detections
+    video = tmp_path / 'video.mp4'
+    video.write_bytes(b'synthetic source identity fixture')
+    frame = FrameRef('episode', file_hash(video), 0, 0, '1/10', 0, 100, 100)
+    detector = {'parameters': {'conf': .1}, 'class_map': {2: 'cup', 10: 'microwave'}}
+    spec = {'detector': detector}
+    run_id = digest(spec)
+    folder = tmp_path / 'episodes' / 'episode'
+    folder.mkdir(parents=True)
+    frame_file = folder / 'frames.jsonl'
+    frame_file.write_text(json.dumps(dict(asdict(frame), frame_id=frame.id))+'\n')
+    (folder / 'detections.jsonl').write_text('')
+    publish_episode(folder, {'episode': {'episode_id': 'episode', 'video': str(video), 'video_sha256': file_hash(video), 'media': {'width': 100, 'height': 100, 'pts_us': [0], 'raw_pts': [0], 'time_base': '1/10'}}, 'run_id': run_id, 'producer_id': digest(detector), 'frames': 1, 'detections': 0})
+    run = {'run_id': run_id, 'spec': spec, 'status': 'complete', 'episodes': [{'episode_id': 'episode', 'manifest_sha256': file_hash(folder / 'manifest.json')}]}
+    (tmp_path / 'run.json').write_text(json.dumps(run))
+    sample = dict(asdict(frame), sample_id='sample')
+    found, _ = load_detections([sample], tmp_path)
+    assert found == {'sample': []}  # A processed frame with no boxes is valid.
+    with pytest.raises(ValueError, match='absent'):
+        load_detections([dict(sample, frame_index=1)], tmp_path)
+    with pytest.raises(ValueError, match='differs'):
+        load_detections([dict(sample, pts_us=100)], tmp_path)
+    frame_file.write_text(frame_file.read_text()+'\n')
+    with pytest.raises(ValueError, match='artifact changed'):
+        load_detections([sample], tmp_path)

@@ -1,0 +1,50 @@
+[
+  {
+    "sample_id": "32b949b927976f14871a6f02",
+    "before": [
+      208,
+      42,
+      399,
+      414
+    ],
+    "after": [
+      208,
+      74,
+      399,
+      414
+    ],
+    "reason": "Remove background above refrigerator; visible top begins at y=74."
+  },
+  {
+    "sample_id": "6dbc5909141e7ef233eb9ee8",
+    "before": [
+      232,
+      62,
+      540,
+      425
+    ],
+    "after": [
+      232,
+      62,
+      550,
+      425
+    ],
+    "reason": "Include dark outer edge of fully open refrigerator door."
+  },
+  {
+    "sample_id": "baaa70ffd85c13f77fae5bef",
+    "before": [
+      285,
+      203,
+      366,
+      247
+    ],
+    "after": [
+      260,
+      203,
+      366,
+      247
+    ],
+    "reason": "Include visible upper left door despite actor occluding lower portion."
+  }
+]

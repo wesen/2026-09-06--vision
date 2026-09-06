@@ -30,3 +30,30 @@ def test_wrong_class_unsupported_and_empty_denominators():
     s,r=fixture('plate');x=match(s,r,d);assert x['binding']=='unsupported_category' and x['localized'] is None
     assert summarize([x])['recall'] is None
     assert summarize([])['binding_coverage'] is None
+
+
+def test_overlay_requires_exact_population_and_unchanged_source(tmp_path):
+    import json
+    from PIL import Image
+    from video_workbench.registry import file_hash
+    from video_workbench.localization.review import render_overlays
+    image = tmp_path / 'source.png'
+    Image.new('RGB', (100, 100)).save(image)
+    s, r = fixture()
+    s.update(image=str(image), image_sha256=file_hash(image), episode_id='episode', frame_index=0)
+    r['image_sha256'] = s['image_sha256']
+    (tmp_path / 'samples.json').write_text(json.dumps([s]))
+    reviews = tmp_path / 'reviews.json'
+    reviews.write_text(json.dumps([r]))
+    result = render_overlays(tmp_path, reviews, tmp_path / 'valid')
+    assert result['targets'] == 1 and len(result['sheets']) == 1
+    reviews.write_text(json.dumps([r, r]))
+    with pytest.raises(ValueError, match='duplicate'):
+        render_overlays(tmp_path, reviews, tmp_path / 'duplicate')
+    reviews.write_text('[]')
+    with pytest.raises(ValueError, match='exactly'):
+        render_overlays(tmp_path, reviews, tmp_path / 'missing')
+    reviews.write_text(json.dumps([r]))
+    Image.new('RGB', (100, 100), 'red').save(image)
+    with pytest.raises(ValueError, match='source image changed'):
+        render_overlays(tmp_path, reviews, tmp_path / 'changed')

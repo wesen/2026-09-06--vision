@@ -112,1819 +112,2514 @@
     "detector_class_supported": true,
     "image_sha256": "b7b6385815e5eff127942fd083cb15ff7b767a8a91e9d1396428bd552c336ffb",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "658f5ade547abb730e9cf865",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      242,
+      77,
+      394,
+      403
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "9f4f7a6fdec90a8d5204405ba4ce3a4838872b9c8cb0ead942fca010f7c21fdd",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "5278d1c22a221bc6ca33fe22",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      242,
+      77,
+      394,
+      403
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "30f57ebdf63892abb290d5e2043965e1cbb23af948d33217367ebffaef8f5e48",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "b7bb24e901de4432deeefd01",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      242,
+      77,
+      394,
+      403
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "12ebfd066076549217562636a5be005fb94024ad37695de3cb8a7ef6e4ece18e",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "dfcda5cba4ef1d8c23d87686",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      242,
+      77,
+      394,
+      403
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "90f1742193e97c329a0b04666df4bc0c66e86588857773a003f0e6b84c4c3794",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "58306fa83d57fee4c0ab0fc4",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      242,
+      77,
+      394,
+      403
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "263cdd22f7cfac26166739889477fc28b4262d9f01d711265cb2f0420cba69d8",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "a42f25cd4a4cad6e58a9af3e",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      242,
+      77,
+      394,
+      403
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "4cd6a973882d733d6637e9f91dcdefc99f76ffa72edf596d3ea59b16e10f72f0",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "4e27c53c195306dcabdd374b",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      233,
+      66,
+      392,
+      416
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "e97144c34242ffed73db6f32b7ff2d34ff3e6e1ab4013b98b853708b9934855b",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "b4a1d964581da99460a23ad5",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      233,
+      66,
+      392,
+      416
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "f6345ee179876f988bfea93b6bd2df78c33789a01ee4e28af2d6ef79608cacd8",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "0ad6a710abdd47d925e880d0",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      233,
+      66,
+      392,
+      416
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "d4fd3f338fb26e13cad180a679b4987ad6fc26a91a701e0f0be23df5f2f1436f",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "844d965997898af8a409fa4c",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      233,
+      66,
+      392,
+      416
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "713244807ca0cc5ff9853aaa424e761a6ed76701882df7d4a29b5aa0200322db",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "399a6eb792e95fbc25c95376",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      233,
+      66,
+      392,
+      416
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "e42adee6000b862e335cfe6ecb24510c374a3e1ad88389cf302d5da311a60068",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "56ec727fc14cbfb94a633f12",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      233,
+      66,
+      392,
+      416
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "ee569fbb2e1347438f29bdc0b364001779a5a32baccb7165c2f3252cc33068f6",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "5ac2776b925d5d8c78bc72b9",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      242,
+      77,
+      394,
+      403
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "31381295db5ecb7068ef4fbd3cd2ae59715f7c4449a544198ef21207a5d696a5",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "0c027d158de634992a8a41e2",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      242,
+      77,
+      394,
+      403
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "96bf8494047bb668abfdbf6e4748c3f72da4eee3105a034faeec47d9c7b161c0",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "e0967efec912b7b757170438",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      242,
+      77,
+      394,
+      403
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "063262846da75d87035026dfe90ebe57bc77177a02045f4adcda0617acd09c6f",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "2c2ee9c630f66900b0f80a3b",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      242,
+      68,
+      396,
+      403
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "e66f60a1c6a2b2bcb2a9f686c89da9254777bd91e18ba54714fc674d7aba85b1",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "cc3f88e1646ce25dd75fe530",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      242,
+      48,
+      420,
+      403
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "a3e0b5896d2da098b14dba08a96e4aa59c6359ea5abdb48ba5b34f199302f36b",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "10c040c6e7f67f99cc95cb08",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      242,
+      77,
+      394,
+      403
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "d25071c715e652c283c0b7b51b511c012306a466f5aaad9fad43f7b63e087e34",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "d83a66c6b218c8b7e32dc0e9",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      283,
+      192,
+      363,
+      255
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "6ba2c45d1bc951e40736919a8609a67d3b0e17896cfd54ade2c5f230e978c008",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "46c6c0b8d402977e56e70144",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      283,
+      192,
+      363,
+      255
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "2e7a10ae8710b795bb2d13084c31bf9f57afdb7ed0db9c899c3ba19dd0240307",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "532173a7365c82cc5f6faed9",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      283,
+      192,
+      363,
+      255
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "3311f024048ee8c0fc535e4380fc7a2f54ab0535ce8fdd39a9b8d63df83d657a",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "a363454de88fb5a3eaa54131",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      283,
+      192,
+      363,
+      255
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "ca0cd5d1467cbcdbff147590ecca3901da1cd4fdaee4d88c0fed07226760e625",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "ea2dcc6c9bc681384e0da4f5",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      252,
+      192,
+      363,
+      255
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "0f6b52fddf16550634142a30cc933d34394d8db6dfcee3f022c02f2cfc7f91f2",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "6a32a0db3b675000dddf892d",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      270,
+      192,
+      363,
+      255
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "3efb51792827ad5316e0edbe9f99ce4657154524eb624e0b463c2f4c05c3368e",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "3f4d44342189a43768d92d59",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      233,
+      66,
+      392,
+      416
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "cc1f66bea6440884074f5923ce467d426ef338cece1bc11ae162a027cc7558ef",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "b4fbe73942ac92a22661ae5e",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      233,
+      66,
+      392,
+      416
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "0dc992d90e18b200f22ac59eb32925f0dcf6aa0b394ede532f541cd4ccf89c83",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "c5d2593331f86462235ce292",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      233,
+      66,
+      392,
+      416
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "f4b7baa8cd9d8ad5e18eda3b23f950c06f87158b2cde5dd9146741d94e9b3cdd",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "4304f3085c6a18a17fad92dc",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      233,
+      66,
+      392,
+      416
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "698c309e13db7d561774262067a0075e4630872c7c5326f5dad145c9c3260997",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "c79572bede497bb2ec4dfb12",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      233,
+      21,
+      405,
+      416
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "685fbb5f5de0f359713b31c595fe34ee1a6f75c68fe4e8e3855715cafabf72f3",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "fd114f383992cbb0e68133e2",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      233,
+      66,
+      392,
+      416
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "0b1b399f3584f166e61244280d06c99f0c7eb7bf39f026ac91b19594a209410d",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "7c667d4f1f7033bb7a4913d7",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      232,
+      62,
+      413,
+      425
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "f08732e06988adade880c0bff55594b1ea1a14b38dbe2dc8faafdbe23432702f",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "629e05faac902f1d5be0038e",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      232,
+      62,
+      413,
+      425
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "83364b67503994f063300232f81c5df17cab8216728e750249e0c6e75c4141f5",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "321b9a6091109e903a8b371c",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      232,
+      62,
+      413,
+      425
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "488990467500872d7708237bdfec710d6848f4774b7fab3e85c804105cd80e13",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Foreground actor or countertop props obscure part of target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "5fed5c25e8982b6db6cd1be8",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      232,
+      62,
+      413,
+      425
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "9c024e51b2e3ecb5475d0030e5a2ea97ca8c68fdf40455224f04af2437366b88",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "f60ed7aab4920dcd820f3f74",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      232,
+      62,
+      413,
+      425
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "84e37bf231fd3aafd20ef48bebe5d289a00dc0fda6a0dcdab3ea31bdb102faa1",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible extent of the unique requested appliance, including a protruding door where present; reviewed on exact source frame in a temporal sheet. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "0726333fb1c323b244a29349",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      232,
+      62,
+      413,
+      425
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "958f63334440e397cc0cdd1a23e9443e6ac140e3f491fe5f4a602f5857ce14a6",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "efe7e7e79d3f586f701a878c",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      283,
+      192,
+      363,
+      255
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "0f369ed94a7c80cfaf8dd88c7b4c1c3494c8f90d321c28eb304ce6fa565588da",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "90bd8110771d05fc9085c451",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      283,
+      192,
+      363,
+      255
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "e752041fd0c21c55d770f8f81552859245d79280ec1d4cabd9355d596f48bc62",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "837a31d9a3d631c411ee1394",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      283,
+      192,
+      363,
+      255
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "51a948046edd0134d923f26375c05ce2c277eea7436c6fbba30c91713b975118",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "f0aed7bffd7fcffe2c38664c",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      283,
+      192,
+      363,
+      255
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "ea21e5d33a617dceea118dad17f597aafccde24c8f8d492ca3f9abdaaac56f1b",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "59e7b08c3f81f0148ee87ecb",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      283,
+      192,
+      363,
+      255
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "0fa6f2f8312a1613123ee86daf1c301d4f6619748e44ab3cf1504b6579907f9d",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "9b4169dd4eb02e2879e4a67a",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      283,
+      192,
+      363,
+      255
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "20c9259077a3aa9bca323c1087ff6a8a64ea0b5dcaf0808c7b24951383970c93",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "9ba062c5589e2eb7baa3a320",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      232,
+      62,
+      413,
+      425
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "213d7f9f91fe01ead7214704bae05043dff51f693c8a3e2cb099f1a7368b956f",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "7c241b70b7baef5862a3b237",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      232,
+      62,
+      413,
+      385
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "65c86aabf541f41de3981ba6535fc20b348ca3fc0b818354e571c8518954c05f",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "9827a2eaa464499674f0d252",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      232,
+      62,
+      413,
+      425
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "2eb7b129c9613c807dec3cd7822f0f484cd5b5157910003899e34a0b79dd6023",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "985403b6bce498d9ebaa68ce",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      232,
+      62,
+      413,
+      425
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "17b26a94ba8f120db951b81ded1367cd4204afb188245803b8051fbd0bb298cb",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "6dbc5909141e7ef233eb9ee8",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      232,
+      62,
+      540,
+      425
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "aeee89b57a0294f4d324290c47cbdfc12a4d0883bac016fbc60271288ae27708",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "09ef1d8cf98e52db8ba6f3d0",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      232,
+      62,
+      413,
+      425
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "9dc78f3e30f47307b7bbfbea665d4a87e4485ac087b121ce7bc2a273d0776b1c",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "e4a829e3e877ba63082d37e5",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      263,
+      192,
+      374,
+      254
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "571d76ab7172a97af17cb48de0354d18b61abe88595fd1dfc7146bcd851be37c",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "7c911cd5d0195c74153ebf85",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      263,
+      192,
+      374,
+      254
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "22f268707eec1577e066052596620809e95f9a6d05130e598ca990d55193c670",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "b6368a94a4f342ec739b7b97",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      263,
+      192,
+      374,
+      254
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "8bdfc25c03a9a91bacce01a0f28d2374b48315d2e1de5940331144f31033578c",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "16d0458bc01bef27ccfb2594",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      263,
+      192,
+      374,
+      254
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "d6f6795e04c5426444cc07bfca1e98be9590e12099b59cfc5df0e42fdae50802",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "f1a8f4dae38967dcb48a799c",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      263,
+      192,
+      374,
+      254
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "520a433e1f31c74e93cc3d42a3cf664d4c5770fee0a7dbdbe6fd2b62846b571a",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "fe13f5ff537f0e4293cbb917",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      263,
+      192,
+      374,
+      254
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "acaf034199af4f77fedb17b2a16c52b31196540c5149d95ec8048476e96f9893",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "2e7c40339a3efc2254bde76e",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      263,
+      192,
+      374,
+      254
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "62afebb844f6dcb4ec7f82b99379b2a77585e8ec8c0f31f8f9d59a15a752a07b",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "98e5665dbe96722796e60fcf",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      263,
+      192,
+      374,
+      254
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "3ab9d2cabc47f7e9a574627dff5f37f3cbda89484e7abc9f244fa0ccc2271009",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "d4ec382c122af4393488253b",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      263,
+      192,
+      374,
+      254
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "c03efc1c1fa8e6a10973a46401bb8010330707fe6da812f41ecfd48f5c0a6fc5",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Target outline is visible.",
+    "reviewer": "Codex source-image review",
     "sample_id": "467c549cb03ca8fa06f83717",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      263,
+      192,
+      374,
+      254
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "1b52e5541426dd6f3c159b8c960c035fb3a25df131691ccbc0f365bbb0a28525",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "d2b1418591ee1040368ae835",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      263,
+      192,
+      374,
+      254
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "0b4b990bc1a0cfceff2bc1945d455d12999173d1090c4179f99a07f78d89004b",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "0c1c46be91ff4304157cb815",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      263,
+      192,
+      374,
+      254
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "4db618dc73ddc6e5f58bef96f16b1e96dcad254b6c0086e13ba7e732a5cb3361",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "80e5d4d85cb7650064db9277",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      238,
+      74,
+      399,
+      414
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "c167210401a53c4016148f2c90c022443663cefa21b757eac416f18a9487b933",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "4b22336a5650d857866aff2c",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      238,
+      74,
+      399,
+      414
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "1886d01ff6c2ba00203f3a82ebd2ad64f2612f8df69c58ef613d89fa35973e96",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "31655798773582082e2b7205",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      238,
+      74,
+      399,
+      414
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "35942fdfd567528ea3148e98ee775e4772a7401a7fddec27b8ca7d812801d9b0",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "8ef09a47749adf6c04ad6c96",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      238,
+      74,
+      399,
+      414
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "90fad1fa69738c68305fc68b3710d18566b0010d5cc436d64b68c1522278fe24",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "e1d2668d7bba742ebe199d63",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      238,
+      74,
+      399,
+      414
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "dd0567c0d72f7cbbd78485db92d9b302b16a2cabef89f044d9e104d9b5949003",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Unique requested appliance visible in exact source frame; extent includes the protruding door when visible. Part obscured by actor or foreground props; no hidden geometry inferred.",
+    "reviewer": "Codex source-image review",
     "sample_id": "9c2567ab120ee8966997ce5b",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      238,
+      74,
+      399,
+      414
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "3a9b19c6566c835545eb224f6d293fc4245bff6b96744183304f44372b51deaa",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "6bac8f6ec4f4a469f1614bb3",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "be8bcfd5187324798628340396b55079d25081966f44e53fd75925c080e1a1a2",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Actor occludes part of the front/door; rectangle encloses visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "671365a716a08b58d0ec839a",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      286,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "9bdd0cbc0d99333c47c8182976ce83f27e40f11832ca133856fa17477d23c04c",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Actor occludes part of the front/door; rectangle encloses visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "b824f435eb7e25f69dbbaf17",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      286,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "b9933b1b67dc6a69faa024a68c45ca99b95253c0c4e078ef20692592bda8cbce",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "1efd984ddb584a579ab8acb3",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "b7a5f522854aa5d99602e65eddb6210e0ec3b498feb236919ea39af77ec0cc9a",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "3402af426322e3ef67204966",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "e0d37906f093406ef37e4f5e9214d449026700994f8990816006af94d2a2af0f",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "14f85f2d234a53c550c152cf",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "0415f6d79d6118ff92eabbec24c9fb34df06406ce507126a0b371e6bca2ddfe1",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "6397f4f77b3772a7c7ce2ba3",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "44c4fddce32e5aca3709539022a9ac851cf472fabc1f58f35117d9e877a37a76",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Actor occludes part of the front/door; rectangle encloses visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "76f7cd1324d153f29d6fa4ac",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      288,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "1ffba10e77eebbfc01c00e003849c2e33062e7b098d828da1c57a112624443a0",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "e009bb95e5d0e2ec8e33e1da",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "31f5064276d3cfdea0d0e6e9810834d4724f56b83997efb466639aa41f2aa80e",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Actor occludes part of the front/door; rectangle encloses visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "fd529a87289f190fdef8966b",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      270,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "cdebef6024d0f2b17f74a6f6317260f54f99b59e4252751ec1c8be70531b9cfe",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "aa395bab8a25c698e657a6f9",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "4bc08b298dc5b9984c534e9eacfcbeb44ed0bb214365f67a1d9ba70cb24bb949",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "b344b499e3fe5c2c717a4739",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "cc1be79c2ad6d0d12d9cc002e75894752b3d937b4413ce4570299bf8e5fc4212",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "b7ffe0b0443a833c9d0f3fc1",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "0888472cb5fb9b88bfc34ba108db3273b193709aee41afb4d844e959b66929b2",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Actor occludes part of the front/door; rectangle encloses visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "eae8a8ab9c4b38391c1bac94",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      298,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "2cc87dbe6a8dfad5bf31172406b2f2ae3bd15f70ac9b4ae3a4eabe0c383b678c",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "88ef3dcb2f37bf07588b6433",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "66b6c89a281d0595d5806d8e69bb0da1ea3e20f45b2c78166ea42ca967d56122",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Actor occludes part of the front/door; rectangle encloses visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "baaa70ffd85c13f77fae5bef",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      285,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "ea248abe8d0dd793863af4ba40be043ebd0046a27917ef2d1ce72d06ffaef765",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "42ad3495178619e8b7ca942f",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "d11a5a2e64dae6e0c7a570e781b3f09a776ed85d9110fc865db78ab9d25c56c3",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "220b17f56906dc3e5ad2dc82",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      203,
+      366,
+      247
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "55b2c42c7fd93537e65bbc8f1e590c5d27e7d8866c830062af520c956c7c19fc",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "ad37e3eaeb651a0772a1d3f3",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "5fdfbe9cd7d036b3973c51b0dbb220eae9a047aaca94eed20b0e0c9621f73700",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "ae6bb8596737d5b1e68b9c37",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      263,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "24fe8ab507f1efb776e0f5d3754d9db6b8ee28c6c760d6eee58cac6d166f5cf1",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Actor occludes part of the front/door; rectangle encloses visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "86c6b26990ac1375ce8949dc",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      272,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "29e54ee337e9d438dfe12dbeeb28b1a431558f5b4d718bed6038863f34c10ad5",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "13a8aea687fae1603a1c0d39",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "460ce61e574c0486b1f6d48a4b10cea5307815b0b1ae0702836be32a65b683e8",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "9f5c79ae2f428a8ba360368f",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "6a5d644ebcba23f7ff6583c9017267f521c94c6c4bdb05761308581e2f602545",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Requested countertop microwave identified from visible housing and door; plate resting above housing excluded from target extent. Housing and any protruding door have visible boundaries.",
+    "reviewer": "Codex source-image review",
     "sample_id": "f1f93cd70ee05f0a2acd6448",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "b37e0a6ea371c06f9ff1f112ace4dcd55b655d92e0de2ef82acdf77c18f96627",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "4fe6fc6759fe4e3a46621649",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "925b104ee8b7c718967ff13d5a050292ad58118a5bbefe24179492db870a9232",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Part of front/door obscured by actor; annotate visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "7c2147aea32f803d7e17db0f",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      294,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "6a73cf65bc7763b872e941c5abc2a5cc84cfdc25f5ec37d531b2cb447081a25c",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "2e4bbb82ae86df81b798662d",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "196211f47eb8c6bccf6c2acfb47eaa62e2230b8fc6f3c296c7598dfea46c0a7f",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Part of front/door obscured by actor; annotate visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "334f6cadd26301c2265e1897",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      270,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "bb168373b550e85b949258a26e7130724778f584cddb46a76fca5fa888ad8fb6",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "e9e2383194d293ec5684f34b",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "320e5c3656ad574de6c5b0152138783fbdfe0cbf8aa6c436762ecf94d0f48d3b",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "14879494434b1f0706fdc1bf",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "6741745e94efe9763b46ea98812757ac896b6c192953eae85e43beb37dc0b2a8",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "55be7f60ad771686525e7607",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "7d24a37c62d632e989e5eff2b6840bc043348735149abc31161bdb52786c0722",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Part of front/door obscured by actor; annotate visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "4e18998c5864714847a86dde",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "a5c71d5271fa0ff5a84964e3bf092c064f7875cd4bfcbdf0050a23eff1f5690e",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Part of front/door obscured by actor; annotate visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "8e7d76409c9324b521c561e0",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      260,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "392a50fe8349ce31768204df6060bbbba684319995e219def2326641e3130bef",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "1db3092e6283fd0cb460b70d",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "9cb82d2efceb246a8d3275d18c6cbaaa9f279ce18c51d111e09504511f97601a",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "a242b40e77ff2f1c0f51cd93",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "48057d7b93a0ff5054143ca73d6742059cfe857d894a519c4a0a8cbc2e3b5d1f",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "cf87bf9d0f0fb086c6db0761",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "b3946b4921b83a8241fb97c5df05293601501a969c9052850b651f4d13d2c9f2",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "bfd9a66a662902c3b3a146e0",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "11f2e756caa6f0c4716858d6daa6a4b9371fa12693fccb04d709f03c77080940",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Part of front/door obscured by actor; annotate visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "9ebc6dd50d1027317ad37b00",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      302,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "8aed3a3fcaf60bc225641736f9c24fb708f77e77263d60d61e9962c1072e56f4",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "0057070d1de3f0082e1959f8",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "4903f153e0cb75c7a2cf228fca2bc9a3f88cedf8e188700d0e0d25591091081c",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "cb7857069591922935fec44a",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "9c1a987eed18f2dc259e91a75d58d46bb733d901d7a51296bd2fc91d83c72444",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "287638a858ec049934b4d9ba",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "a61652d5fb9af9f6dbcdb1a20552967daf6d788a1e554238aca3f3bb77939624",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "116100e571bfba8d49d74393",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "8ee9cc6915bbee72334df2f780490c9812dcfb7834d9960e2fccfa425479ca27",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "e91455d1eaf3f4628af54a4d",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "c6ca2cc7dea5b21d1af775e85e930c035c9a15496578c2b0dad1ecc914328d04",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Part of front/door obscured by actor; annotate visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "a19e997abe0988bfff2a4efd",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      295,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "f8c58098f76556ac0ffd3368442fdc5cbb6c3c0242ac86987bd4e13dd5b20efe",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "71ac220e52193adb25d24b7e",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      263,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "213877807123156c3253372ee3c5cc6841166a7c624994895bdbc80cd9301007",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Part of front/door obscured by actor; annotate visible remainder.",
+    "reviewer": "Codex source-image review",
     "sample_id": "52018da30b8135314a7094e9",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      280,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "b270f6754131105c6c1c6f4eb794bc4a7357ce56f84adb353f8fa5d3e486ab1b",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "fdf8c4f873e577aa1b93c215",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      263,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "276c6b3a765b60c7e5301ee881b6150b69cd8df5c0ea56db2fa75a74e0e7c970",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Visible microwave housing and any protruding door; excludes plate above appliance. Visible outline identifies a unique target.",
+    "reviewer": "Codex source-image review",
     "sample_id": "141446c788b9316034c634f6",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      263,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "10acf90fb066a1559be9a48efd9294538274f106aefe44ba1947c2a235006ee1",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "2e67556006d32e03d2474011",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "cb387e151732e41195c7135d8b7834fbce834b081bcc4940615d7b6b6adbb472",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "e2763752d32fdac945c10dec",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "b6257778b2f5ab87773c71afbad9ff8c6dd4477e1cf87f6af11e64dcf9535e31",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Source-only temporal contact sheet: visible microwave body and door extents; exclude plate above appliance and do not infer body behind actor.",
+    "reviewer": "Codex source-image review",
     "sample_id": "9721de47f7714257e00a867a",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      270,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "c5653ed3888cae237f76995580170ad936fcc9debbbe4f1d395e79970d78522e",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "bb4510f4c57fd6c227253068",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "df08a805db666a04d782889a2c25dbe8eff2ea42f39fb0acdd7cf3267ee8b82a",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Source-only temporal contact sheet: visible microwave body and door extents; exclude plate above appliance and do not infer body behind actor.",
+    "reviewer": "Codex source-image review",
     "sample_id": "333e06ac9a09c30f29b6e93c",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      321,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "1a3d74e639c04110ff3693bd174afdffe6ccf81509aae296594ce45f31b0880a",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "55511d75f8fc8d2a5a75bfbe",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      363,
+      246
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "be1b395a1479a514cfdf56c260bfa39744badd4334aaa81f9d968a8d466bf90c",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "dbdf83069399aecfc36a86dc",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "2d447b9fe0db9e97f638085407d8a173d581325d44e4e037c4854666f62d3b8b",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "57e85d63627fad7c3303a020",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "b792d80b765e70f1363b55f58b006c06343d2cf9a3c1fe71e6e53f0e7bd89ad9",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Source-only temporal contact sheet: visible microwave body and door extents; exclude plate above appliance and do not infer body behind actor.",
+    "reviewer": "Codex source-image review",
     "sample_id": "11ac9626034d472fc09e52ae",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      270,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "ed928d74d6c4fbcf319e539650a00b88e23517d93b062c66a07f6ed5f25d774b",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "be607800e5bac284719d1ed0",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "da7b0720103e77ef96c994cb878c1de18d14750bb19fd97fded12317183aa21a",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "140440af992a9c5e942834a6",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "95cd79ac3c931ea11447d6d78cbae781c615608cea43b0e79c6a19abec26f639",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "2ba86756722e977e9136f5ec",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "00ba3b01f01713efe62fb0b558bbc84b4dde08afbfbe6f7c93287656dda03fb9",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "921e31ffe36166dcac848fd4",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "7cca9ffc97fe916d10cc3b727ca0b48483795266ebed038a8042b631d21357ec",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Source-only temporal contact sheet: visible microwave body and door extents; exclude plate above appliance and do not infer body behind actor.",
+    "reviewer": "Codex source-image review",
     "sample_id": "514424972b48b0b3ffbace84",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      288,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "890c292c1e0d8d69b9b19603c989e536d654ae56f992c9c5153ac7e81b113951",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Source-only temporal contact sheet: visible microwave body and door extents; exclude plate above appliance and do not infer body behind actor.",
+    "reviewer": "Codex source-image review",
     "sample_id": "9cbf08cde155468dee424887",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      287,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "3544220def4a1aadb0f159bd6714711c081f05a18b911dbddb2cae1fb99afa92",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Source-only temporal contact sheet: visible microwave body and door extents; exclude plate above appliance and do not infer body behind actor.",
+    "reviewer": "Codex source-image review",
     "sample_id": "7cfa5227ba88850ae7ff4f6c",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      296,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "dd26fbf3492473d6e5817346bf699355707f33883a574cfbef5b20e73bfbd4b6",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "4b02546f2a4a11b8a8b0174a",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "fbf0295478fc32b1ecdf1d7f0fa4fa2ff362b9805e09999e45ede790aae6dfa0",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "d69a96fa3f322425dd9b79ad",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      202,
+      370,
+      248
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "6105b9b69c43fc5b4b35598a68698dc28793a13d007674245a7d64dbd8979592",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "e132ec0b0278c278ea0bc32a",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "cbbf0fd9d215817acf47908b462d758ea7b1eac1b3ddd9ea6e02afd34b403d01",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "9d30132b7c1ec85c1aeedc53",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "b1ee4b768d47831dc7ea45fa17b7c73512458be9ae0bb3116dfe838ce79909fb",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "9519979e31f9717d2ed1f28f",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      260,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "ccbe0d2c7d8d97fd35aebb9eb3010bd8b637835432ac48e012e2e63575c1c5e6",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Source-only temporal contact sheet: visible microwave body and door extents; exclude plate above appliance and do not infer body behind actor.",
+    "reviewer": "Codex source-image review",
     "sample_id": "774479e98326aac5a8dcc6c0",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      286,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "07368bc3682c3f2cb25ccc55a418e22e2de390c0e31a0576f6e9ca6ab2aeead9",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "b5a74e5542601273a5ecbc15",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "66fc582dc4600ae513a82691b4bae1b274aa4ef52ad1f17bdfccf5da8525c0a0",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only temporal contact sheet: unique microwave, rectangle includes visible body and protruding door; excludes plate above appliance.",
+    "reviewer": "Codex source-image review",
     "sample_id": "b856445a9a937c993fc2e3e7",
-    "temporal_context_used": false,
+    "temporal_context_used": true,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      288,
+      204,
+      360,
+      245
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": false,
     "image_sha256": "dc1a84700303cac8a408c784f3d1ce726b871143d7e7a3f1066e1f467ea1501b",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only single frame: rectangle covers the unique requested object, including its visible base; no detector predictions used.",
+    "reviewer": "Codex source-image review",
     "sample_id": "5051c9dd9adc497c72618757",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      304,
+      208,
+      344,
+      295
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "d424cfab8b5452745f027f1992eb418584bd28ce880db443fcbe5df45974034a",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "No book can be identified in this source frame; absence from the scene is not established.",
+    "reviewer": "Codex source-image review",
     "sample_id": "a20428c1990cd523cdd89ca6",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
+    "visibility": "unobservable",
     "visible_xyxy": null
   },
   {
@@ -1932,103 +2627,138 @@
     "detector_class_supported": true,
     "image_sha256": "d22b2c4ed4b4ef65f6b9e7893afb6b77f2ab0f8220f640940e11d6e344ba8c7f",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only single frame: rectangle covers the unique requested object, including its visible base; no detector predictions used.",
+    "reviewer": "Codex source-image review",
     "sample_id": "4f9ef36f6df40878add6ed00",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      186,
+      138,
+      458,
+      334
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "5110d04328d024c2004ba677a27f328d0612bd188c38483e1c54835d7142df51",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only single frame: rectangle covers the unique requested object, including its visible base; no detector predictions used.",
+    "reviewer": "Codex source-image review",
     "sample_id": "f2e70d5828f7c4586f3de8ac",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      257,
+      132,
+      399,
+      358
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "c28e4952053b4b8c4655b446c176bb6905e0263cc46d5d11c36bd9f6c0667668",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only single frame: rectangle covers the unique requested object, including its visible base; no detector predictions used.",
+    "reviewer": "Codex source-image review",
     "sample_id": "5af0f23f519851cb0de3e566",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      252,
+      177,
+      394,
+      311
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "7bf15e1e08cbe5428a0221876498611389e341ef93f905eeb066c3f0853568bb",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only single frame: rectangle covers the unique requested object, including its visible base; no detector predictions used.",
+    "reviewer": "Codex source-image review",
     "sample_id": "a1f47aa734c874a507daca68",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      295,
+      232,
+      345,
+      250
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "f4c3ef387ccba0bd7f3661edec84b123809b7177509d78de1ec192cbf520ea97",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only single frame: rectangle covers the unique requested object, including its visible base; no detector predictions used.",
+    "reviewer": "Codex source-image review",
     "sample_id": "8575af3e1c36c9e08a75ea4b",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      310,
+      231,
+      330,
+      250
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "3e4a82cebf3e67107575cd8899fbc502d4181b3b1efe0a9467111e11f3ff80fa",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only single frame: rectangle covers the unique requested object, including its visible base; no detector predictions used.",
+    "reviewer": "Codex source-image review",
     "sample_id": "94dbe5a2e2f303940c1a6c61",
     "temporal_context_used": false,
-    "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "truncated": true,
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      83,
+      234,
+      468,
+      480
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "ab35429bb591c43e2dde3c521ae53dd1ec5a29becdc5af288ea97220be458839",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Source-only single frame: rectangle covers the unique requested object, including its visible base; no detector predictions used.",
+    "reviewer": "Codex source-image review",
     "sample_id": "2f87117862b56a30f2d0d7a2",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      114,
+      239,
+      551,
+      476
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": false,
     "image_sha256": "ffdcb79c7d4f1179199a9189c632c4146fac25ce2ba6ad2e9918c5e2ba0fdbcf",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Several plates are visible; the requested simulator instance cannot be bound from this frame alone.",
+    "reviewer": "Codex source-image review",
     "sample_id": "574adb306d856e5601a31e0e",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
+    "visibility": "ambiguous_instances",
     "visible_xyxy": null
   },
   {
@@ -2036,25 +2766,30 @@
     "detector_class_supported": true,
     "image_sha256": "fa11ef1174d17676c70800dcd037497b9feeeb98c5370ed98b8750b208c9d8b6",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "TV is visible edge-on; rectangle includes thin panel and stand, not the cabinet. Screen state is a separate annotation.",
+    "reviewer": "Codex source-image review",
     "sample_id": "d5a579ab97334d0767adf376",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      300,
+      174,
+      338,
+      316
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "e59fda6c22aa789925bbc1bcef14393096b16bd0063f3e128f78b853665f274f",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "White desk mug and green mug in the adjacent room are both visible; requested entity cannot be bound from this frame alone.",
+    "reviewer": "Codex source-image review",
     "sample_id": "d5197860444d78672aab0395",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
+    "visibility": "ambiguous_instances",
     "visible_xyxy": null
   },
   {
@@ -2062,77 +2797,102 @@
     "detector_class_supported": true,
     "image_sha256": "d54d88da2a4421e6e3febe83df4342d14bb6d1431aec1de8c5005d1e9df3a469",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only single frame: rectangle covers the unique requested object, including its visible base; no detector predictions used.",
+    "reviewer": "Codex source-image review",
     "sample_id": "f360e8598daa5120dce54e3a",
     "temporal_context_used": false,
-    "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "truncated": true,
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      0,
+      186,
+      559,
+      480
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "466068ca4b5ecdd5742a0ec94cfb1d095ef89bd8d10ed199e75e5fd31f9db7dd",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Source-only single frame: rectangle covers the unique requested object, including its visible base; no detector predictions used.",
+    "reviewer": "Codex source-image review",
     "sample_id": "30a155b90fa32fec92232c46",
     "temporal_context_used": false,
-    "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "truncated": true,
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      0,
+      188,
+      557,
+      480
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "a9a1829e45e6a1338ec7bd0eb8989e6c35120270ae15228ff78745b6fef7693b",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "Source-only single frame: rectangle covers the unique requested object, including its visible base; no detector predictions used.",
+    "reviewer": "Codex source-image review",
     "sample_id": "4955efe61728f4cdcfb0e745",
     "temporal_context_used": false,
-    "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "truncated": true,
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      51,
+      193,
+      640,
+      480
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": false,
     "image_sha256": "1d00c1346b048c202ad8668323cea372368fbd47ca6d9cdd5bd3a3706b7dbe2f",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Source-only single frame: rectangle covers the unique requested object, including its visible base; no detector predictions used.",
+    "reviewer": "Codex source-image review",
     "sample_id": "32851e9f486bf2649557e1ca",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "visible_unique",
+    "visible_xyxy": [
+      300,
+      209,
+      349,
+      297
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": true,
     "image_sha256": "1f23650ec5bdd750237660703d6c39ca4dbaa05aff26746eff671df00bdabed0",
-    "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "occluded": true,
+    "rationale": "One sectional sofa is visible with its right section occluded by actor; rectangle covers visible sofa extent, excluding inferred hidden edge.",
+    "reviewer": "Codex source-image review",
     "sample_id": "12900d2233da1d43cb91acff",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
-    "visible_xyxy": null
+    "visibility": "partially_visible_unique",
+    "visible_xyxy": [
+      51,
+      190,
+      521,
+      401
+    ]
   },
   {
     "convention": "visible-extent-half-open-v1",
     "detector_class_supported": false,
     "image_sha256": "ce8e6ac51c4e9846194c0da2fb9cc2ee34252e78367e90db7bd519a617621bd5",
     "occluded": false,
-    "rationale": "",
-    "reviewer": null,
+    "rationale": "Several plates are visible; the requested simulator instance cannot be bound from this frame alone.",
+    "reviewer": "Codex source-image review",
     "sample_id": "125637b0e61e8c47da9ce086",
     "temporal_context_used": false,
     "truncated": false,
-    "visibility": "pending",
+    "visibility": "ambiguous_instances",
     "visible_xyxy": null
   }
 ]

@@ -1,0 +1,26 @@
+{
+  "targets": 162,
+  "visibility": {
+    "partially_visible_unique": 72,
+    "visible_unique": 86,
+    "unobservable": 1,
+    "ambiguous_instances": 3
+  },
+  "rectangles": 158,
+  "overlay_sheets_rendered": 42,
+  "overlay_sheets_visually_checked": [
+    20,
+    29,
+    33,
+    34,
+    35,
+    40
+  ],
+  "status": "first source annotation pass complete; full overlay review pending",
+  "reviewer_count": 1,
+  "limitations": [
+    "Approximate manual visible-extent rectangles; not independent multi-reviewer ground truth.",
+    "Temporal contact context used for 144 state frames.",
+    "Detector predictions not used for manual annotation."
+  ]
+}

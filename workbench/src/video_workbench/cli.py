@@ -10,10 +10,27 @@ def main():
     commands=p.add_subparsers(dest='command',required=True)
     ingest=commands.add_parser('ingest');ingest.add_argument('manifest')
     inspect=commands.add_parser('inspect');inspect.add_argument('--split')
+    index=commands.add_parser('index');index.add_argument('--model',default='output/models/qwen3-vl-embedding-2b-4bit');index.add_argument('--root',default='output/video-workbench');index.add_argument('--seconds',type=float,default=5);index.add_argument('--fps',type=float,default=1);index.add_argument('--splits',nargs='+',default=['train','development','test'])
+    search=commands.add_parser('search');search.add_argument('query');search.add_argument('--manifest',required=True);search.add_argument('--model',default='output/models/qwen3-vl-embedding-2b-4bit');search.add_argument('--split',choices=['train','development','test']);search.add_argument('--top-k',type=int,default=5)
+    serve=commands.add_parser('serve');serve.add_argument('--manifest',required=True);serve.add_argument('--model',default='output/models/qwen3-vl-embedding-2b-4bit');serve.add_argument('--port',type=int,default=8767)
     args=p.parse_args()
     registry=Registry(args.db)
     try:
-        if args.command=='ingest':result=registry.ingest(args.manifest)
+        if args.command in ('search','serve'):
+            from .embedding import QwenEmbedder
+            e=QwenEmbedder(args.model)
+            if args.command=='serve':
+                import uvicorn
+                from .api import create_app
+                uvicorn.run(create_app(args.db,args.manifest,e),host='127.0.0.1',port=args.port)
+                return
+            from .index import Index
+            result=Index(args.manifest,e.space.id).search(e.text(args.query),e.space.id,args.top_k,args.split)
+        elif args.command=='index':
+            from .embedding import QwenEmbedder
+            from .index import build
+            result=build(registry,QwenEmbedder(args.model),args.root,args.seconds,args.fps,args.splits)
+        elif args.command=='ingest':result=registry.ingest(args.manifest)
         elif args.command=='inspect':
             result=[{k:v for k,v in r.items() if k!='media'}|{'media':{k:v for k,v in r['media'].items() if k not in ('pts_us','raw_pts')}} for r in registry.episodes(args.split)]
         print(json.dumps(result,indent=2))

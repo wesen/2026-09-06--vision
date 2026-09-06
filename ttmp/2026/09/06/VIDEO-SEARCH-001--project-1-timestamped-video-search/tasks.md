@@ -15,9 +15,9 @@
 
 ## S2 Cache and index
 
-- [ ] Implement deterministic windows and selected-PTS metadata.
-- [ ] Implement atomic array publication and resumable index manifests.
-- [ ] Test crash recovery and rejection of incompatible spaces.
+- [x] Implement deterministic windows and selected-PTS metadata.
+- [x] Implement atomic array publication and resumable index manifests.
+- [x] Test crash recovery and rejection of incompatible spaces.
 
 ## S3 Search and viewer
 

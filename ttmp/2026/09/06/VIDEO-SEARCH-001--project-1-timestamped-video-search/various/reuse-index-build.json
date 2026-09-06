@@ -1,0 +1,9 @@
+{
+  "chunks": 95,
+  "elapsed_seconds": 0.12367591704241931,
+  "feature_bytes": 778368,
+  "fresh_frames": 0,
+  "index_id": "6f76e60ce43851f70c94815d35a4eea06743f3b281a61f21695b1f6658b11156",
+  "manifest": "output/video-workbench/indices/6f76e60ce43851f70c94815d35a4eea06743f3b281a61f21695b1f6658b11156/manifest.json",
+  "reused_frames": 861
+}

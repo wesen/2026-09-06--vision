@@ -127,3 +127,55 @@ Captured the actual source gallery before building search: [corpus screenshot](.
 ### Technical details
 - Database: ignored local `output/video-workbench/registry.sqlite`, schema version 1.
 - Ingest: `workbench/.venv/bin/video-workbench ingest output/virtualhome-corpus/home-v1/inputs.jsonl`.
+
+## Step 3: Publish a real resumable feature index
+
+Built the first actual 24-video index from 861 independently encoded frames. The 95 five-second windows at 2 FPS took 134.37 seconds to encode and publish; their matrix occupies 778,368 bytes. The explicit mean-of-normalized-image-vectors baseline preserves appearance but discards frame order.
+
+The viewer phase began while this independent GPU build was finishing. No evaluation results have been inspected or used to choose parameters. The initial 5s/2FPS setting is an engineering smoke configuration; selection will happen in the bounded development sweep.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1)
+
+**Assistant interpretation:** Build durable features and prove repeatability before exposing search.
+
+**Inferred user intent:** Recover interrupted indexing and review every result against its provenance.
+
+**Commit (code):** `3749908` — completed registry; cache implementation commit recorded in changelog.
+
+### What I did
+- Implemented content-addressed frame features, exact-PTS keys, normalized pooling, immutable index manifests, checksums, writer locks, and exact ranking.
+- Added injected-crash recovery, corruption, space mismatch, stable-tie, window-boundary, and cache-reuse tests.
+- Preserved first-build measurements in `various/initial-index-build.json`.
+
+### Why
+- Write and fsync array bytes before committing cache metadata. An interrupted write may leave an orphan, but cannot expose a completed metadata row pointing to unpublished data.
+
+### What worked
+- Initial real build: 861 new frames, 95 windows, 134.37s; no model or decode failures.
+- Cache/ranking suite passed; the expanded API suite now totals 13 passing tests.
+
+### What didn't work
+- Registry milestone commit initially stopped at `new blank line at EOF` in the docmgr changelog. Trimmed its generated trailing blank line and committed successfully.
+- FastAPI/Starlette tests emit upstream TestClient deprecation warnings for httpx and BlockingPortal. Tests pass; these do not affect runtime behavior.
+
+### What I learned
+- This small corpus needs under 1 MB for the pooled feature matrix; exact cosine ranking is sufficient.
+
+### What was tricky to build
+- Per-frame keys include raw PTS and time base as well as normalized timestamps and model-space identity. Changing windows reuses frames without mixing incompatible feature spaces.
+- The first index was built while producer provenance was being finalized. A verified cache-only rebuild publishes the finalized manifest with source-file hashes.
+
+### What warrants a second pair of eyes
+- Atomic file-before-row ordering, source checksum verification, and normalized pooling.
+
+### What should be done in the future
+- Finish actual browser seeking and freeze the development/test evaluation protocol.
+
+### Code review instructions
+- Read `index.py` and `test_index.py`, especially the injected exception between rename and SQLite commit.
+- Run `video-workbench index --seconds 5 --fps 2` twice: the second build must report zero fresh frames.
+
+### Technical details
+- CLI: `workbench/.venv/bin/video-workbench index --seconds 5 --fps 2`.
+- Features live under ignored `output/video-workbench/frames/<space>/`; completed indices live under `indices/<index-id>/`.

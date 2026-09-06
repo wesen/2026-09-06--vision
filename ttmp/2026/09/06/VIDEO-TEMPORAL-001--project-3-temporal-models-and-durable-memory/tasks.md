@@ -15,9 +15,9 @@
 
 ## T2 Classical models
 
-- [ ] Adapt reviewed HMM/filter/smoother and HSMM contracts.
-- [ ] Implement timestamp-based hysteresis and tiny exhaustive decoder tests.
-- [ ] Compare constrained and unconstrained paths; verify errors are preserved.
+- [x] Adapt reviewed HMM/filter/smoother and HSMM contracts.
+- [x] Implement timestamp-based hysteresis and tiny exhaustive decoder tests.
+- [x] Compare constrained and unconstrained paths; verify errors are preserved.
 
 ## T3 Causal TCN
 

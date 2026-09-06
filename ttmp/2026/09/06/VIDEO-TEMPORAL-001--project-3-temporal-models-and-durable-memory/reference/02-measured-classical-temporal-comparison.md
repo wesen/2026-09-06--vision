@@ -9,13 +9,20 @@ Topics:
 DocType: reference
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://workbench/src/video_workbench/temporal/classical.py
+      Note: Capability-tagged decoder and evidence availability
+    - Path: repo://workbench/src/video_workbench/temporal/classical_benchmark.py
+      Note: Development-selected actual comparison
+    - Path: repo://workbench/src/video_workbench/temporal/metrics.py
+      Note: Exact numerical segment metrics
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T18:51:19.832515-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Classical temporal comparison on dense pooled video features
 

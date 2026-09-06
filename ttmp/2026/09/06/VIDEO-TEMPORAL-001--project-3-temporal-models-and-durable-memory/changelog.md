@@ -24,3 +24,7 @@ Step 5: Dense 792-window pooled feature extraction, native timestamp audit, weak
 ## 2026-09-06
 
 Step 6: Classical decoder numerical checks and constrained omission failure captured (commit cf153c1); real-feature T2 comparison still pending.
+
+## 2026-09-06
+
+Step 7: Complete T2 measured classical comparison, capability/evidence clocks, numerical segment metrics and reviewed figure (commit 3be2278).

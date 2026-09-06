@@ -372,3 +372,57 @@ Read `hmm.py`, `duration.py`, `hysteresis.py`, then `test_temporal_classical.py`
 
 ### Technical details
 Numerical fixture seeds remain train 1 and evaluation 2; three observed event classes. Unconstrained transition and initial potentials are zero. The constrained matrix permits self-loops and the 0→1→2→0 cycle only. HSMM duration potentials are flat through 32 samples. Hysteresis persistence is 300000 microseconds with a 500000-microsecond maximum gap. Startup requires persistence; missing labels cancel history.
+
+## Step 7: Complete the measured classical comparison with replay metadata
+
+Completed T2 on the frozen dense video features. The benchmark selects temporal settings on development macro recall and evaluates the selected models on test episodes. It records separate causal and offline capabilities, per-output dependency evidence, source-horizon availability, per-class results, and complete candidate measurements.
+
+Added exact numerical segment F1, edit, and short-action metrics while keeping those metrics disabled for weak video boundaries. The saved and visually reviewed trace figure makes the fabricated CLOSE, repeated OPEN events, and missing interval explicit. Classical temporal context did not establish a useful improvement on this corpus.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 4)
+
+**Assistant interpretation:** Complete the temporal comparison with measured outcomes and enough provenance for the later memory layer.
+
+**Inferred user intent:** Evaluate real discrimination and error preservation instead of assuming smoothing is beneficial.
+
+**Commit (code):** `3be2278` — Measure classical temporal models with availability and segment evidence.
+
+### What I did
+- Extracted a reusable hash-checked sequence loader, rejecting duplicate identities and closing the feature archive after reading.
+- Added training-only transition counts without bridges through masked cells, development selection, and actual six-method train/development/test evaluation.
+- Added per-output dependencies and availability for prefix versus offline inference, with missing runs unclassified.
+- Implemented one-to-one segment matching, normalized edit score, and declared short-action recall; generated numerical reports at IoU 0.1/0.25/0.5.
+- Wrote `reference/02-measured-classical-temporal-comparison.md` and saved the reviewed `various/classical-comparison-v2/oracle-traces.png`.
+- Marked the three T2 tasks complete after numerical checks and actual video comparison.
+
+### Why
+An offline decoder must cite future inputs and defer availability. Weak boundaries cannot support exact segment quality claims. Development-selected zero temporal strength is a valid negative result and must remain in the candidate set.
+
+### What worked
+- Eleven data/classical tests passed, including exhaustive paths, prefix future perturbation, delayed evidence, dependency sets, gaps, and one-to-one segment matching.
+- The original linear result reproduced exactly after the loader refactor.
+- Test accuracy/macro recall: linear 75.97%/21.16%; selected hysteresis/filter/Viterbi identical; smoother 69.48%/21.31%; HSMM 68.83%/18.35%.
+- The figure was opened at generated resolution and clearly shows the invented CLOSE in the constrained omission, three distinct OPEN events in repetition, and white missing intervals.
+- Full per-episode predictions, candidates, runtime measurements, and producer hashes are preserved in the ticket evidence.
+
+### What didn't work
+No test or measured run failed. The first actual comparison output lacked explicit dependency-evidence arrays; added them and reran into fresh `classical-v2`, retaining v1 as intermediate evidence. Printing remains paused after the previously recorded automatic approval rejection for external Almanach egress.
+
+### What I learned
+Development selection chose zero persistence for hysteresis and zero temporal strength for filtering/Viterbi. The smoother's tiny macro-recall increase comes with lower accuracy; the HSMM loses on both. These weak-label measurements give no basis to prefer temporal complexity yet.
+
+### What was tricky to build
+Feature support intervals overlap, but decision-grid cells used for numerical segment metrics must be nonoverlapping. The adapter explicitly describes its output cells as grid support rather than reviewed action boundaries. Filter outputs depend on available prefixes; offline outputs depend on entire valid runs. Dependency IDs and availability now express that distinction, and missing runs restart inference.
+
+### What warrants a second pair of eyes
+Source-horizon availability still excludes actual compute/transport latency. HSMM duration preferences are scored sample-count ablations, not learned reviewed action durations. The numerical segment matcher is temporal-order greedy, not global assignment; its policy and one-to-one behavior are explicit. The within-scene weak corpus remains unsuitable for generalization or significance claims.
+
+### What should be done in the future
+Implement and train the causal TCN with seed/checkpoint metadata and full feature-availability tests, then the append-only fact store and rule handoff. Preserve negative classical results as the baseline.
+
+### Code review instructions
+Read `temporal/classical.py`, `classical_benchmark.py`, and `metrics.py`, then the new measured report. Run `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_temporal_classical.py workbench/tests/test_temporal_data.py -q`. Reproduce the actual benchmark with the report's inputs and a fresh output directory, then run `scripts/04-classical-evidence.py` to rebuild the numerical figure and metrics.
+
+### Technical details
+Transition strengths: 0/0.25/1; persistence: 0/500000/1000000 microseconds; HSMM mean preferences: 2/4/8 samples. Selection uses development macro recall and first-candidate tie breaking. Short-action threshold is 1500000 microseconds. Actual accepted comparison: `output/temporal-v1/classical-v2`; tracked copies under `various/classical-comparison-v2`. No exact-boundary metrics were computed on the weak video labels.

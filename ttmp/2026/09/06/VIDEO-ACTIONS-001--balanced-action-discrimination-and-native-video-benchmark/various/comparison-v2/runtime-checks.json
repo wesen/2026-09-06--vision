@@ -1,0 +1,17 @@
+{
+  "native_fp32": {
+    "reverse_max_abs": 0.08082455396652222,
+    "repeat_first_max_abs": 0.15089361369609833,
+    "completed_reuse": "verified by second encode invocation; same run_id, 72 samples"
+  },
+  "pooled_fp32": {
+    "reverse_max_abs": 5.960464477539063e-08,
+    "repeat_first_max_abs": 0.17837640643119812,
+    "completed_reuse": "verified by second encode invocation; same run_id, 72 samples"
+  },
+  "pooled_4bit": {
+    "reverse_max_abs": 1.4901161193847656e-08,
+    "repeat_first_max_abs": 0.04686938598752022,
+    "completed_reuse": "verified by second encode invocation; same run_id, 72 samples"
+  }
+}

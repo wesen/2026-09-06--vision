@@ -1,0 +1,42 @@
+{
+  "version": "actions-v2",
+  "seconds": 2,
+  "fps": 2,
+  "actions": [
+    "open",
+    "close",
+    "pickup",
+    "putdown",
+    "sit",
+    "stand",
+    "switch_on",
+    "switch_off",
+    "none"
+  ],
+  "queries": {
+    "open": "A person opening a door.",
+    "close": "A person closing a door.",
+    "pickup": "A person picking up an object.",
+    "putdown": "A person putting an object down.",
+    "sit": "A person sitting down.",
+    "stand": "A person standing up from a seat.",
+    "switch_on": "A person switching an appliance on.",
+    "switch_off": "A person switching an appliance off.",
+    "none": "A person approaching or looking at an object without manipulating it."
+  },
+  "window_policy": "Sit center = exported end minus 750 ms; other actions use exported midpoint; controls use trajectory end minus 1 s. Source-review correction before model inference.",
+  "representations": [
+    "native_fp32",
+    "pooled_fp32",
+    "pooled_4bit"
+  ],
+  "interventions": [
+    "original",
+    "reverse",
+    "repeat_first"
+  ],
+  "samples_sha256": "a5c27b9a636ce346885b9d60a86739073c53d1b1da9c21595170f7cafb4e9e6b",
+  "release_config_sha256": "8dabae9afdcd6d26c8dcc9130e5315ce1c930ed6801cc280bd6e7a5aa9db146c",
+  "excluded": [],
+  "labels": "Source RGB review required before primary scoring; weak requested actions are not truth."
+}

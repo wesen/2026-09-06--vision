@@ -1,0 +1,1154 @@
+[
+  {
+    "sample_id": "6bae8b46203c0c985c465dd9",
+    "requested_action": "pickup",
+    "weak_interval_us": [
+      3100000,
+      4600000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "mug",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "edd3379776817e4c512504b6b5705b752e1c849a51211f009d66757fcf7dfbed"
+  },
+  {
+    "sample_id": "7387b06322bb7c819613483a",
+    "requested_action": "putdown",
+    "weak_interval_us": [
+      8400000,
+      9800000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "mug",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "edd3379776817e4c512504b6b5705b752e1c849a51211f009d66757fcf7dfbed"
+  },
+  {
+    "sample_id": "6c770deb5922d01d2ca7c2ca",
+    "requested_action": "switch_on",
+    "weak_interval_us": [
+      3300000,
+      4900000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tv",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "e577921a53ccbca5b918c5b6f316c7b53d71ef2d50145bd9df4d7103524d023c"
+  },
+  {
+    "sample_id": "823ecf71f9fe1f81fccf42cb",
+    "requested_action": "switch_off",
+    "weak_interval_us": [
+      5200000,
+      6800000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tv",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "e577921a53ccbca5b918c5b6f316c7b53d71ef2d50145bd9df4d7103524d023c"
+  },
+  {
+    "sample_id": "9758421bfe72a94f22c5440b",
+    "requested_action": "open",
+    "weak_interval_us": [
+      3600000,
+      5200000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "fridge",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "2cb71e86d40bc9a262ec5dc193e5e5d638a46640c1322afe6de4b9fb7153496b"
+  },
+  {
+    "sample_id": "e430171d4fd8e1436154451b",
+    "requested_action": "close",
+    "weak_interval_us": [
+      5400000,
+      7000000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "fridge",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "2cb71e86d40bc9a262ec5dc193e5e5d638a46640c1322afe6de4b9fb7153496b"
+  },
+  {
+    "sample_id": "2c6918f44aa7cfb0434c81be",
+    "requested_action": "switch_off",
+    "weak_interval_us": [
+      13600000,
+      15200000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tablelamp",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "0d8ff7cd3d3deca48fd51980f7d8ff48031908917013234725113b23caf064ae"
+  },
+  {
+    "sample_id": "291f2b2026043d1600d6ac0f",
+    "requested_action": "switch_on",
+    "weak_interval_us": [
+      15500000,
+      17100000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tablelamp",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "0d8ff7cd3d3deca48fd51980f7d8ff48031908917013234725113b23caf064ae"
+  },
+  {
+    "sample_id": "f5e17b8082d5033062c3e702",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "sofa",
+    "view": "left",
+    "condition": "approach_only",
+    "source_sha256": "73f4c84d12c6f524d9f6b341d515ec185ecfb85dea0785f445725407342f5a09"
+  },
+  {
+    "sample_id": "70c44b68f79befea88ad030d",
+    "requested_action": "open",
+    "weak_interval_us": [
+      4900000,
+      6500000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "fridge",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "59be7396b0f32cd989573e21676eb3dce4ebc2fe014d434f8bfa5019808c396f"
+  },
+  {
+    "sample_id": "fed51ee4bff7e2087e0b3ddf",
+    "requested_action": "close",
+    "weak_interval_us": [
+      6700000,
+      8300000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "fridge",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "59be7396b0f32cd989573e21676eb3dce4ebc2fe014d434f8bfa5019808c396f"
+  },
+  {
+    "sample_id": "60b6382e6f7ed677fefda557",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "book",
+    "view": "right",
+    "condition": "approach_only",
+    "source_sha256": "edb3cfe23068a9eb543ba3138b68fa37c865bdf42dec3a5c3b0b60301da042e4"
+  },
+  {
+    "sample_id": "936f18bd55115ad073443d74",
+    "requested_action": "pickup",
+    "weak_interval_us": [
+      4300000,
+      5800000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "plate",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "8477aeeee8a8e3b5973d911513f523e09f58c3234d6cc486e58a19b362732ca3"
+  },
+  {
+    "sample_id": "4d61336c28d4f62fafd53599",
+    "requested_action": "putdown",
+    "weak_interval_us": [
+      8500000,
+      9900000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "plate",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "8477aeeee8a8e3b5973d911513f523e09f58c3234d6cc486e58a19b362732ca3"
+  },
+  {
+    "sample_id": "f16006000dd0ac1f892aae47",
+    "requested_action": "open",
+    "weak_interval_us": [
+      4900000,
+      6500000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "fridge",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "d79fd8ef68cf99d55877828f3d2f74e57b05639a7e4ae332b3922a6a37c7075a"
+  },
+  {
+    "sample_id": "1b3e4573c79e63d9d5994d59",
+    "requested_action": "close",
+    "weak_interval_us": [
+      6700000,
+      8300000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "fridge",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "d79fd8ef68cf99d55877828f3d2f74e57b05639a7e4ae332b3922a6a37c7075a"
+  },
+  {
+    "sample_id": "22f78dec3a4a33dfbc7890d1",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "sofa",
+    "view": "left",
+    "condition": "approach_only",
+    "source_sha256": "f4f83171aa752a402a0883c497e180cd489366df67603a857310cb9baf219d27"
+  },
+  {
+    "sample_id": "f40a86c5a5efbfba44613e63",
+    "requested_action": "sit",
+    "weak_interval_us": [
+      2400000,
+      8500000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "sofa",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "cb1963b567dfb60f1abb150d5eab0aeab3c960f719539b0b93c3cfb4025f910d"
+  },
+  {
+    "sample_id": "bf23a4342c33cc824a85bd09",
+    "requested_action": "stand",
+    "weak_interval_us": [
+      8600000,
+      11500000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "sofa",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "cb1963b567dfb60f1abb150d5eab0aeab3c960f719539b0b93c3cfb4025f910d"
+  },
+  {
+    "sample_id": "8c1b4e16fc12453f9ac1dac3",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "plate",
+    "view": "right",
+    "condition": "approach_only",
+    "source_sha256": "4a1d8346de6af66e45961ab7ab73b7948947856f4dd3b329ea5abbbd3bade753"
+  },
+  {
+    "sample_id": "d1a2f1d3d266cd9132d6512f",
+    "requested_action": "sit",
+    "weak_interval_us": [
+      11800000,
+      17400000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "bed",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "a33d347be9b4da0d385c60b331595380c2bae263d96ab95c4f3a2760d99de77e"
+  },
+  {
+    "sample_id": "7ed288fd1b2317d3f646c38b",
+    "requested_action": "stand",
+    "weak_interval_us": [
+      17500000,
+      20400000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "bed",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "a33d347be9b4da0d385c60b331595380c2bae263d96ab95c4f3a2760d99de77e"
+  },
+  {
+    "sample_id": "0fb8ad0b04d00545da4910df",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "fridge",
+    "view": "right",
+    "condition": "approach_only",
+    "source_sha256": "13426f473802153632d0b221801e3fa2c4b0b5ae0f58e378e3260cef7d925e86"
+  },
+  {
+    "sample_id": "8b4f249cf9596b56d77fed12",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "fridge",
+    "view": "left",
+    "condition": "approach_only",
+    "source_sha256": "3235195c799e481a6188e0c214c0e687f78937605ca3ec6569fba99f19a5a613"
+  },
+  {
+    "sample_id": "3cbdb3480d6042b76ff064cc",
+    "requested_action": "switch_on",
+    "weak_interval_us": [
+      4600000,
+      6200000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tv",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "943cfdc44cbc74a5b33ac5ed4c092ba131678a872e11f9d2f6460480f1650e10"
+  },
+  {
+    "sample_id": "c0563c1339e46522aea13be8",
+    "requested_action": "switch_off",
+    "weak_interval_us": [
+      6500000,
+      8100000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tv",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "943cfdc44cbc74a5b33ac5ed4c092ba131678a872e11f9d2f6460480f1650e10"
+  },
+  {
+    "sample_id": "c65959b86e476ca34dc42c0c",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "fridge",
+    "view": "right",
+    "condition": "approach_only",
+    "source_sha256": "81b4d58a3a4f51ecde51fd5ef465ead40131e4c530c8e803a8c6b37d4f50daa8"
+  },
+  {
+    "sample_id": "78b990f3e14525cdc36da346",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tv",
+    "view": "left",
+    "condition": "approach_only",
+    "source_sha256": "5b550c98468b4c24ff545792689fa5087c161d11c28c38bd5d30ca8546b0a27d"
+  },
+  {
+    "sample_id": "6bdb83ebb2c78f5b56230f62",
+    "requested_action": "open",
+    "weak_interval_us": [
+      4000000,
+      5600000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "microwave",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "d98d0a50adbb7bf9647fd3616aecf1b96e7ebeed974bac6709bc6b167e763508"
+  },
+  {
+    "sample_id": "18b71c95af3b50d27f74e5b0",
+    "requested_action": "close",
+    "weak_interval_us": [
+      5800000,
+      7400000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "microwave",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "d98d0a50adbb7bf9647fd3616aecf1b96e7ebeed974bac6709bc6b167e763508"
+  },
+  {
+    "sample_id": "18d29fd45341b6fbc01f105b",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "book",
+    "view": "left",
+    "condition": "approach_only",
+    "source_sha256": "6a2a4ee81a1d18f515f59cfddb1ef90fd299bf82216dd51959c3fe210c6f7c89"
+  },
+  {
+    "sample_id": "8c0917856ea55dc7a99c1e5c",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tv",
+    "view": "left",
+    "condition": "approach_only",
+    "source_sha256": "2dd04189dd6dbeec45c093f03b31dc2cd74ecee4d60f75a007aeece855a5e8f2"
+  },
+  {
+    "sample_id": "7d73bcfdb679786669e64b93",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "sofa",
+    "view": "right",
+    "condition": "approach_only",
+    "source_sha256": "aaada7da655f30b967596953ba023b34e91e524f1dca9370e1fee277e6efd4d0"
+  },
+  {
+    "sample_id": "08f66ae2f4fff0749351c01e",
+    "requested_action": "switch_on",
+    "weak_interval_us": [
+      4600000,
+      6200000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tv",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "6e9acbd2774b97c77fe8fdfc736ca345337b0158c6d6e9bb80b77a32340aca3b"
+  },
+  {
+    "sample_id": "de467896144821243e90585f",
+    "requested_action": "switch_off",
+    "weak_interval_us": [
+      6500000,
+      8100000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tv",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "6e9acbd2774b97c77fe8fdfc736ca345337b0158c6d6e9bb80b77a32340aca3b"
+  },
+  {
+    "sample_id": "764efcf3fe417e1a68f9940c",
+    "requested_action": "sit",
+    "weak_interval_us": [
+      2400000,
+      8400000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "sofa",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "5b6e47e3584cb7918c8f4567c096bcdc879889bc8efb2dc7e3e1c56023dd488d"
+  },
+  {
+    "sample_id": "36eff0470df06474ebc588d7",
+    "requested_action": "stand",
+    "weak_interval_us": [
+      8500000,
+      11400000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "sofa",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "5b6e47e3584cb7918c8f4567c096bcdc879889bc8efb2dc7e3e1c56023dd488d"
+  },
+  {
+    "sample_id": "05527c1bf28ed19079f6acf7",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "bed",
+    "view": "left",
+    "condition": "approach_only",
+    "source_sha256": "2140e107bcf55d2d697e04dee56b8d2bf2db7af4fb6df786d92e74c3a0660e1d"
+  },
+  {
+    "sample_id": "3cd9071259c44952ba56501e",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "sofa",
+    "view": "right",
+    "condition": "approach_only",
+    "source_sha256": "bef901d4189c21b4db39539bce95950af04738adc1c332103e6ff6cef00b48b8"
+  },
+  {
+    "sample_id": "0bf98c356a3fdb41e56a2a58",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "mug",
+    "view": "left",
+    "condition": "approach_only",
+    "source_sha256": "dd125836aeaf8d7e90cec918fd2c84faec360b70e8b938c3165dba0b1668fbea"
+  },
+  {
+    "sample_id": "f442633f2f9de01b740f890d",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "plate",
+    "view": "left",
+    "condition": "approach_only",
+    "source_sha256": "d3868973bdd5c84008a5c6b662b42bdeb3b36b22895a95e9fd6ced403c0a9c70"
+  },
+  {
+    "sample_id": "90f2f6388dd49e00d94253eb",
+    "requested_action": "pickup",
+    "weak_interval_us": [
+      4800000,
+      6300000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "book",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "295bd412b35d7744d84f107fff2b00cc9eb2100d33a6937253ccd37f6935dea7"
+  },
+  {
+    "sample_id": "8a6316023a08794b3d02fddb",
+    "requested_action": "putdown",
+    "weak_interval_us": [
+      9100000,
+      10500000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "book",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "295bd412b35d7744d84f107fff2b00cc9eb2100d33a6937253ccd37f6935dea7"
+  },
+  {
+    "sample_id": "8d98dd414351619a16bf2b6a",
+    "requested_action": "sit",
+    "weak_interval_us": [
+      4900000,
+      8000000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "sofa",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "ea1b719560daccbb2856253d9067bbdb79cbf6c29a6d8c2c824347898211c08c"
+  },
+  {
+    "sample_id": "b4f6c375866754640fbd51c3",
+    "requested_action": "stand",
+    "weak_interval_us": [
+      8100000,
+      11000000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "sofa",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "ea1b719560daccbb2856253d9067bbdb79cbf6c29a6d8c2c824347898211c08c"
+  },
+  {
+    "sample_id": "f174499559e6bbd1c459c041",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tablelamp",
+    "view": "left",
+    "condition": "approach_only",
+    "source_sha256": "f5b15528b52f71698fa37b65cda560c2d36f5d3882644358fe75fc9bf42b9dee"
+  },
+  {
+    "sample_id": "0b82de7ce276013ffd516f88",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tv",
+    "view": "right",
+    "condition": "approach_only",
+    "source_sha256": "be9d50afb015f9d076af23ee7b9e6e30be20c409d6ce86b4dc87228ada38a4da"
+  },
+  {
+    "sample_id": "b380b8a08803437eda93da3e",
+    "requested_action": "switch_off",
+    "weak_interval_us": [
+      13600000,
+      15200000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tablelamp",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "0a4973cbc56c02661a102e67f8706499834f79cd49496f4373c31bb7550cf6d3"
+  },
+  {
+    "sample_id": "b0ae64fc45ac867f36d03cb6",
+    "requested_action": "switch_on",
+    "weak_interval_us": [
+      15500000,
+      17100000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tablelamp",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "0a4973cbc56c02661a102e67f8706499834f79cd49496f4373c31bb7550cf6d3"
+  },
+  {
+    "sample_id": "69ffd7ef02d6ec07190cc50f",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tablelamp",
+    "view": "right",
+    "condition": "approach_only",
+    "source_sha256": "825d554ec5c17a7132fe8ceb6da89f874314a51b787bd4053271bf635c061b9f"
+  },
+  {
+    "sample_id": "5179b562afce8c1ed30f2ddf",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tv",
+    "view": "right",
+    "condition": "approach_only",
+    "source_sha256": "66843512c2b744dd086c8bed7c86568d89e0036cd95f93620d72c05270b3894d"
+  },
+  {
+    "sample_id": "7cd660c9602375f591aa6425",
+    "requested_action": "pickup",
+    "weak_interval_us": [
+      4900000,
+      6400000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "book",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "2667d80ca0b3c0b7155b708cfeee5946ff89800468b8fa76d15e568dde3faa05"
+  },
+  {
+    "sample_id": "568434870b5f7fea295d3fc1",
+    "requested_action": "putdown",
+    "weak_interval_us": [
+      10300000,
+      11700000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "book",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "2667d80ca0b3c0b7155b708cfeee5946ff89800468b8fa76d15e568dde3faa05"
+  },
+  {
+    "sample_id": "3b702d2b59bd73a4e103bb0b",
+    "requested_action": "open",
+    "weak_interval_us": [
+      4000000,
+      5600000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "microwave",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "a1d360cbaf89eacfbe5a0ae4c6de5c4153df7225d2b0c654aec43ff867c624e5"
+  },
+  {
+    "sample_id": "c6ed89bae703eed252900568",
+    "requested_action": "close",
+    "weak_interval_us": [
+      5800000,
+      7400000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "microwave",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "a1d360cbaf89eacfbe5a0ae4c6de5c4153df7225d2b0c654aec43ff867c624e5"
+  },
+  {
+    "sample_id": "aa63d39b2a4fc188fee65ad4",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "microwave",
+    "view": "right",
+    "condition": "approach_only",
+    "source_sha256": "a3a4b66acfcc0a0971717721d01e46781b7c9976adc83027ae0387e5188be5fb"
+  },
+  {
+    "sample_id": "486e216365f16fe711eeca24",
+    "requested_action": "pickup",
+    "weak_interval_us": [
+      4200000,
+      5700000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "plate",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "47bc760abf9ff41567d1fc9ace5bb894be6fdc8b45fbd6581bd3b83f56c5cfb2"
+  },
+  {
+    "sample_id": "e9e874ba5fb9ebeb8e1459d4",
+    "requested_action": "putdown",
+    "weak_interval_us": [
+      7600000,
+      9000000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "plate",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "47bc760abf9ff41567d1fc9ace5bb894be6fdc8b45fbd6581bd3b83f56c5cfb2"
+  },
+  {
+    "sample_id": "60b047ff5b2cff369a046d0e",
+    "requested_action": "pickup",
+    "weak_interval_us": [
+      3100000,
+      4600000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "mug",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "5d1cf99a082149d40be7d93a7cd8f977a1715cc6116efa59afe5f97861e3fd9f"
+  },
+  {
+    "sample_id": "504d5949d566e8fab965b218",
+    "requested_action": "putdown",
+    "weak_interval_us": [
+      8400000,
+      9800000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "mug",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "5d1cf99a082149d40be7d93a7cd8f977a1715cc6116efa59afe5f97861e3fd9f"
+  },
+  {
+    "sample_id": "8c0403f844ae345b8470a6b1",
+    "requested_action": "switch_on",
+    "weak_interval_us": [
+      3300000,
+      4900000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tv",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "6bbb877c1b58463474839b59e5bbf984286a5d20b1a95fa9ba7cf2a9fb07da27"
+  },
+  {
+    "sample_id": "e7a362b80cc6ee69a370a5a4",
+    "requested_action": "switch_off",
+    "weak_interval_us": [
+      5200000,
+      6800000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "switch",
+    "target_class": "tv",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "6bbb877c1b58463474839b59e5bbf984286a5d20b1a95fa9ba7cf2a9fb07da27"
+  },
+  {
+    "sample_id": "04bdf6ddbb5e9d52ca4900b5",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "microwave",
+    "view": "left",
+    "condition": "approach_only",
+    "source_sha256": "17a5b298c5c7e56ef5c717a6be6f0e1250b3e20a27575dea81d3e0e26f405c0b"
+  },
+  {
+    "sample_id": "877a7d31f0b3d8598de62cf0",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "fridge",
+    "view": "left",
+    "condition": "approach_only",
+    "source_sha256": "731c8e385c52e5afd302d8e4ca53fcaa1a1eda91f4eabb5cfec73065d25e8cb7"
+  },
+  {
+    "sample_id": "263db62e07c1b1fdf1526cc7",
+    "requested_action": "open",
+    "weak_interval_us": [
+      3600000,
+      5200000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "fridge",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "79b3dccc59e6fdc0acc3fd0c1d0ec89b97cbb1593c2b289991f9b23018ff891d"
+  },
+  {
+    "sample_id": "7e19799fd5ed4219647c900f",
+    "requested_action": "close",
+    "weak_interval_us": [
+      5400000,
+      7000000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "door",
+    "target_class": "fridge",
+    "view": "left",
+    "condition": "interaction",
+    "source_sha256": "79b3dccc59e6fdc0acc3fd0c1d0ec89b97cbb1593c2b289991f9b23018ff891d"
+  },
+  {
+    "sample_id": "7f1c75d0fbdfa70b0c18c907",
+    "requested_action": "sit",
+    "weak_interval_us": [
+      4900000,
+      8000000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "sofa",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "4887edf4c4cf0c0c30cca47f8f8aaa2220e46e443a59566c2c9a77b101110b34"
+  },
+  {
+    "sample_id": "6a5f6f0a80d6b8219b0f264d",
+    "requested_action": "stand",
+    "weak_interval_us": [
+      8100000,
+      11000000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "sofa",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "4887edf4c4cf0c0c30cca47f8f8aaa2220e46e443a59566c2c9a77b101110b34"
+  },
+  {
+    "sample_id": "0a1c6fbb60f5859b81425ab5",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "pickup",
+    "target_class": "mug",
+    "view": "right",
+    "condition": "approach_only",
+    "source_sha256": "5aeaa4913bbc69764dba24937e8c3b9747284f46280f410157e7fc98a582fe65"
+  },
+  {
+    "sample_id": "c6784db004ea775f88e57b75",
+    "requested_action": "sit",
+    "weak_interval_us": [
+      12200000,
+      14900000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "bed",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "35e289b1358fa096b69ea85759b796a6d55c1a9d1fbda94e1faeed3111f1beca"
+  },
+  {
+    "sample_id": "7079d1450b96840dd3724c3e",
+    "requested_action": "stand",
+    "weak_interval_us": [
+      15000000,
+      17900000
+    ],
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "bed",
+    "view": "right",
+    "condition": "interaction",
+    "source_sha256": "35e289b1358fa096b69ea85759b796a6d55c1a9d1fbda94e1faeed3111f1beca"
+  },
+  {
+    "sample_id": "a93b9971291211c73421e47f",
+    "requested_action": "none",
+    "weak_interval_us": null,
+    "action": null,
+    "visibility": "pending",
+    "rationale": "",
+    "reviewer": null,
+    "family": "posture",
+    "target_class": "bed",
+    "view": "right",
+    "condition": "approach_only",
+    "source_sha256": "985f280fff215769650ccd4cbff7ebf6bad901b8cbc1cdd7d40fbf74f1304e11"
+  }
+]

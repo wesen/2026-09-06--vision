@@ -234,3 +234,60 @@ Start at `actions/data.py:action_center`, then inspect encoding identity and `ev
 
 ### Technical details
 The complete release is `output/virtualhome-corpus/paired-actions-v4`. Original and corrected candidates are `output/action-benchmark-v1/dataset` and `dataset-v2`. Review images are in `review`, `review-v2`, and `posture-timing`, with the original audit images copied into ticket storage. The owned simulator remains separate on port 18084; generation is terminal.
+
+## Step 5: Measure three encoders and publish an honest failure report
+
+Completed native-resolution review of the twenty unresolved windows and froze 62 eligible labels with ten unknown or ambiguous examples. All six corrected Sit windows show descent. The test split retains only six supported classes, including no confidently visible closing or switching examples. This eligibility loss remains explicit throughout evaluation.
+
+Ran all three representations and original/reverse/repeat-first interventions on the frozen 72-window dataset. Every model completed actual inference and returned its same run identity during a second invocation. Published raw predictions, retrieval rankings, confusion and direction metrics, development-only abstention, a local browser gallery, and a sparse timestamped handoff. The models discriminate these generic action descriptions poorly; successful runtime checks do not establish action understanding.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 1).
+
+**Assistant interpretation:** Complete the action experiment and preserve source evidence before proceeding to localization and temporal implementation.
+
+**Inferred user intent:** Obtain measured, reproducible conclusions and useful downstream contracts, including negative results.
+
+**Commit (code):** `3efda5a` — Add supported-query retrieval and timestamped action feature handoff.
+
+### What I did
+- Inspected twenty native-resolution detail sheets and copied final source reviews, source hashes, label counts, and images into `various/action-source-review-v2`.
+- Executed official FP32 pooling, accepted native video, and the isolated community 4-bit baseline sequentially; then invoked all three again to verify completed-run reuse.
+- Verified native black-frame pixel dependence and pooled permutation invariance.
+- Added supported-query retrieval with interval union coverage and raw rankings, plus explicit original direction margins.
+- Wrote the measured reference report and generated `various/comparison-v2/index.html`, with overview and full-page browser screenshots.
+- Exported 144 sparse per-episode/per-space sequences and verified all 216 feature rows against source identities and clocks.
+
+### Why
+The experiment must compare identical evidence without hiding unobservable examples, quantization differences, or unsuccessful calibration transfer. Downstream memory and temporal models require explicit availability and validity rather than implicit dense labels.
+
+### What worked
+- Native: 225 fresh cached vectors, 58.1 seconds in the encoding loop. FP32 pooled: 297 vectors, 45.5 seconds. 4-bit pooled: 297 vectors, 46.1 seconds. All repeated invocations reported reused runs with 72 samples.
+- Native original-versus-black cosine was 0.498; maximum vector component change was 0.146.
+- Pooled original/reverse maximum differences were below 6e-8; native reversal changed components by up to 0.0808.
+- Contract suite: 24 tests passed and five subtests passed, including interval-overlap union and reordered sparse handoff clock/mask checks.
+
+### What didn't work
+- Native generic test classification: 1/17; FP32 pooled: 0/17; 4-bit pooled: 7/17, mostly approach-only controls.
+- None of the opposite-action margins changed sign under reversal, despite native vector changes.
+- Development abstention did not transfer reliably. Native accepted four wrong known test answers and one unknown answer; FP32 pooling accepted seven wrong known answers and two unknown answers.
+- Microwave close requests did not establish visible closing in the sampled windows. The monitor concealed one book transfer. These remain unknown instead of receiving requested labels.
+- Printing remains blocked by the prior automatic approval rejection; no additional network print attempt was made without the requested destination approval.
+
+### What I learned
+Retrieval can improve while nine-way classification remains poor: native Success@5 is 4/6 supported test queries, but a relevant hit need not prefer its correct description over all other descriptions. Threshold confidence also changes across apartments and checkpoints.
+
+### What was tricky to build
+Source review may use larger images to establish labels, while model preprocessing remains fixed and may lose small-object evidence. Reporting must preserve that distinction. Retrieval must also retain unknown distractors and avoid manufacturing metrics for unsupported queries. Sparse temporal export requires sorting by availability and keeping unknown labels distinct from valid visual evidence.
+
+### What warrants a second pair of eyes
+The label pass has one assistant reviewer and no independent agreement estimate. Check small-prop partial labels and the unknown microwave rows against the preserved images. Treat the temporal export as sparse evidence, not dense action segmentation supervision.
+
+### What should be done in the future
+Implement the requested-object localization experiment, then construct dense trailing-window features, classical/TCN baselines, and append-only memory under VIDEO-TEMPORAL-001. The active goal remains open until both implementations and outstanding meaningful printing are handled.
+
+### Code review instructions
+Inspect `actions/evaluate.py` for undefined unsupported metrics, development-only policy selection, and opposite-query margins. Inspect `actions/handoff.py` for row ordering and mask semantics. Run `scripts/07-audit-handoff.py` to verify all exported artifacts and open the source-linked HTML gallery.
+
+### Technical details
+Run IDs: native `b42181da3d85aca62c3e78fd9be9992ca2b0ef0cd16e05b49fb65e8c288aeb5e`; FP32 pooled `b9f5be3d798a5b863a3bdcb1c781119fe94ef75a28771c5161382b0ab7b606ac`; 4-bit pooled `6e814e65fd90c9116b13bc8cd5dd0ded7fbdab213f6fcedda8e5ac19a2589847`. All encoding sessions are terminal. Local gallery server uses loopback port 8776. No test score informed the final label freeze or query selection.

@@ -1,0 +1,3533 @@
+{
+  "actions": [
+    "open",
+    "close",
+    "pickup",
+    "putdown",
+    "sit",
+    "stand",
+    "switch_on",
+    "switch_off",
+    "none"
+  ],
+  "elapsed_seconds": 46.07410733308643,
+  "features_sha256": "981313b1672f1445e4c25f72d00fa3a0ec4468def690c841721bc0a63fd5f4ed",
+  "fresh": 297,
+  "pixel_probe": null,
+  "reused": 0,
+  "run_id": "6e814e65fd90c9116b13bc8cd5dd0ded7fbdab213f6fcedda8e5ac19a2589847",
+  "sample_ids": [
+    "6bae8b46203c0c985c465dd9",
+    "7387b06322bb7c819613483a",
+    "6c770deb5922d01d2ca7c2ca",
+    "823ecf71f9fe1f81fccf42cb",
+    "9758421bfe72a94f22c5440b",
+    "e430171d4fd8e1436154451b",
+    "2c6918f44aa7cfb0434c81be",
+    "291f2b2026043d1600d6ac0f",
+    "f5e17b8082d5033062c3e702",
+    "70c44b68f79befea88ad030d",
+    "fed51ee4bff7e2087e0b3ddf",
+    "60b6382e6f7ed677fefda557",
+    "936f18bd55115ad073443d74",
+    "4d61336c28d4f62fafd53599",
+    "f16006000dd0ac1f892aae47",
+    "1b3e4573c79e63d9d5994d59",
+    "22f78dec3a4a33dfbc7890d1",
+    "f40a86c5a5efbfba44613e63",
+    "bf23a4342c33cc824a85bd09",
+    "8c1b4e16fc12453f9ac1dac3",
+    "d1a2f1d3d266cd9132d6512f",
+    "7ed288fd1b2317d3f646c38b",
+    "0fb8ad0b04d00545da4910df",
+    "8b4f249cf9596b56d77fed12",
+    "3cbdb3480d6042b76ff064cc",
+    "c0563c1339e46522aea13be8",
+    "c65959b86e476ca34dc42c0c",
+    "78b990f3e14525cdc36da346",
+    "6bdb83ebb2c78f5b56230f62",
+    "18b71c95af3b50d27f74e5b0",
+    "18d29fd45341b6fbc01f105b",
+    "8c0917856ea55dc7a99c1e5c",
+    "7d73bcfdb679786669e64b93",
+    "08f66ae2f4fff0749351c01e",
+    "de467896144821243e90585f",
+    "764efcf3fe417e1a68f9940c",
+    "36eff0470df06474ebc588d7",
+    "05527c1bf28ed19079f6acf7",
+    "3cd9071259c44952ba56501e",
+    "0bf98c356a3fdb41e56a2a58",
+    "f442633f2f9de01b740f890d",
+    "90f2f6388dd49e00d94253eb",
+    "8a6316023a08794b3d02fddb",
+    "8d98dd414351619a16bf2b6a",
+    "b4f6c375866754640fbd51c3",
+    "f174499559e6bbd1c459c041",
+    "0b82de7ce276013ffd516f88",
+    "b380b8a08803437eda93da3e",
+    "b0ae64fc45ac867f36d03cb6",
+    "69ffd7ef02d6ec07190cc50f",
+    "5179b562afce8c1ed30f2ddf",
+    "7cd660c9602375f591aa6425",
+    "568434870b5f7fea295d3fc1",
+    "3b702d2b59bd73a4e103bb0b",
+    "c6ed89bae703eed252900568",
+    "aa63d39b2a4fc188fee65ad4",
+    "486e216365f16fe711eeca24",
+    "e9e874ba5fb9ebeb8e1459d4",
+    "60b047ff5b2cff369a046d0e",
+    "504d5949d566e8fab965b218",
+    "8c0403f844ae345b8470a6b1",
+    "e7a362b80cc6ee69a370a5a4",
+    "04bdf6ddbb5e9d52ca4900b5",
+    "877a7d31f0b3d8598de62cf0",
+    "263db62e07c1b1fdf1526cc7",
+    "7e19799fd5ed4219647c900f",
+    "7f1c75d0fbdfa70b0c18c907",
+    "6a5f6f0a80d6b8219b0f264d",
+    "0a1c6fbb60f5859b81425ab5",
+    "c6784db004ea775f88e57b75",
+    "7079d1450b96840dd3724c3e",
+    "a93b9971291211c73421e47f"
+  ],
+  "source_mapping": [
+    {
+      "sample_id": "6bae8b46203c0c985c465dd9",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            29,
+            34,
+            39,
+            44
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            29,
+            29,
+            29,
+            29
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            44,
+            39,
+            34,
+            29
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "7387b06322bb7c819613483a",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            8100000,
+            8600000,
+            9100000,
+            9600000
+          ],
+          "source_indices": [
+            81,
+            86,
+            91,
+            96
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            8100000,
+            8600000,
+            9100000,
+            9600000
+          ],
+          "source_indices": [
+            81,
+            81,
+            81,
+            81
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            8100000,
+            8600000,
+            9100000,
+            9600000
+          ],
+          "source_indices": [
+            96,
+            91,
+            86,
+            81
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "6c770deb5922d01d2ca7c2ca",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            3100000,
+            3600000,
+            4100000,
+            4600000
+          ],
+          "source_indices": [
+            31,
+            36,
+            41,
+            46
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            3100000,
+            3600000,
+            4100000,
+            4600000
+          ],
+          "source_indices": [
+            31,
+            31,
+            31,
+            31
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            3100000,
+            3600000,
+            4100000,
+            4600000
+          ],
+          "source_indices": [
+            46,
+            41,
+            36,
+            31
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "823ecf71f9fe1f81fccf42cb",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            4900000,
+            5400000,
+            5900000,
+            6400000
+          ],
+          "source_indices": [
+            49,
+            54,
+            59,
+            64
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            4900000,
+            5400000,
+            5900000,
+            6400000
+          ],
+          "source_indices": [
+            49,
+            49,
+            49,
+            49
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            4900000,
+            5400000,
+            5900000,
+            6400000
+          ],
+          "source_indices": [
+            64,
+            59,
+            54,
+            49
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "9758421bfe72a94f22c5440b",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            3400000,
+            3900000,
+            4400000,
+            4900000
+          ],
+          "source_indices": [
+            34,
+            39,
+            44,
+            49
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            3400000,
+            3900000,
+            4400000,
+            4900000
+          ],
+          "source_indices": [
+            34,
+            34,
+            34,
+            34
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            3400000,
+            3900000,
+            4400000,
+            4900000
+          ],
+          "source_indices": [
+            49,
+            44,
+            39,
+            34
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "e430171d4fd8e1436154451b",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            5100000,
+            5600000,
+            6100000,
+            6600000
+          ],
+          "source_indices": [
+            51,
+            56,
+            61,
+            66
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            5100000,
+            5600000,
+            6100000,
+            6600000
+          ],
+          "source_indices": [
+            51,
+            51,
+            51,
+            51
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            5100000,
+            5600000,
+            6100000,
+            6600000
+          ],
+          "source_indices": [
+            66,
+            61,
+            56,
+            51
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "2c6918f44aa7cfb0434c81be",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            13400000,
+            13900000,
+            14400000,
+            14900000
+          ],
+          "source_indices": [
+            134,
+            139,
+            144,
+            149
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            13400000,
+            13900000,
+            14400000,
+            14900000
+          ],
+          "source_indices": [
+            134,
+            134,
+            134,
+            134
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            13400000,
+            13900000,
+            14400000,
+            14900000
+          ],
+          "source_indices": [
+            149,
+            144,
+            139,
+            134
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "291f2b2026043d1600d6ac0f",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            15200000,
+            15700000,
+            16200000,
+            16700000
+          ],
+          "source_indices": [
+            152,
+            157,
+            162,
+            167
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            15200000,
+            15700000,
+            16200000,
+            16700000
+          ],
+          "source_indices": [
+            152,
+            152,
+            152,
+            152
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            15200000,
+            15700000,
+            16200000,
+            16700000
+          ],
+          "source_indices": [
+            167,
+            162,
+            157,
+            152
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "f5e17b8082d5033062c3e702",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            1900000,
+            2400000,
+            2900000,
+            3400000
+          ],
+          "source_indices": [
+            19,
+            24,
+            29,
+            34
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            1900000,
+            2400000,
+            2900000,
+            3400000
+          ],
+          "source_indices": [
+            19,
+            19,
+            19,
+            19
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            1900000,
+            2400000,
+            2900000,
+            3400000
+          ],
+          "source_indices": [
+            34,
+            29,
+            24,
+            19
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "70c44b68f79befea88ad030d",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            4700000,
+            5200000,
+            5700000,
+            6200000
+          ],
+          "source_indices": [
+            47,
+            52,
+            57,
+            62
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            4700000,
+            5200000,
+            5700000,
+            6200000
+          ],
+          "source_indices": [
+            47,
+            47,
+            47,
+            47
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            4700000,
+            5200000,
+            5700000,
+            6200000
+          ],
+          "source_indices": [
+            62,
+            57,
+            52,
+            47
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "fed51ee4bff7e2087e0b3ddf",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            6400000,
+            6900000,
+            7400000,
+            7900000
+          ],
+          "source_indices": [
+            64,
+            69,
+            74,
+            79
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            6400000,
+            6900000,
+            7400000,
+            7900000
+          ],
+          "source_indices": [
+            64,
+            64,
+            64,
+            64
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            6400000,
+            6900000,
+            7400000,
+            7900000
+          ],
+          "source_indices": [
+            79,
+            74,
+            69,
+            64
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "60b6382e6f7ed677fefda557",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            29,
+            34,
+            39,
+            44
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            29,
+            29,
+            29,
+            29
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            44,
+            39,
+            34,
+            29
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "936f18bd55115ad073443d74",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            4100000,
+            4600000,
+            5100000,
+            5600000
+          ],
+          "source_indices": [
+            41,
+            46,
+            51,
+            56
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            4100000,
+            4600000,
+            5100000,
+            5600000
+          ],
+          "source_indices": [
+            41,
+            41,
+            41,
+            41
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            4100000,
+            4600000,
+            5100000,
+            5600000
+          ],
+          "source_indices": [
+            56,
+            51,
+            46,
+            41
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "4d61336c28d4f62fafd53599",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            8200000,
+            8700000,
+            9200000,
+            9700000
+          ],
+          "source_indices": [
+            82,
+            87,
+            92,
+            97
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            8200000,
+            8700000,
+            9200000,
+            9700000
+          ],
+          "source_indices": [
+            82,
+            82,
+            82,
+            82
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            8200000,
+            8700000,
+            9200000,
+            9700000
+          ],
+          "source_indices": [
+            97,
+            92,
+            87,
+            82
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "f16006000dd0ac1f892aae47",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            4700000,
+            5200000,
+            5700000,
+            6200000
+          ],
+          "source_indices": [
+            47,
+            52,
+            57,
+            62
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            4700000,
+            5200000,
+            5700000,
+            6200000
+          ],
+          "source_indices": [
+            47,
+            47,
+            47,
+            47
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            4700000,
+            5200000,
+            5700000,
+            6200000
+          ],
+          "source_indices": [
+            62,
+            57,
+            52,
+            47
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "1b3e4573c79e63d9d5994d59",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            6400000,
+            6900000,
+            7400000,
+            7900000
+          ],
+          "source_indices": [
+            64,
+            69,
+            74,
+            79
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            6400000,
+            6900000,
+            7400000,
+            7900000
+          ],
+          "source_indices": [
+            64,
+            64,
+            64,
+            64
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            6400000,
+            6900000,
+            7400000,
+            7900000
+          ],
+          "source_indices": [
+            79,
+            74,
+            69,
+            64
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "22f78dec3a4a33dfbc7890d1",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            500000,
+            1000000,
+            1500000,
+            2000000
+          ],
+          "source_indices": [
+            5,
+            10,
+            15,
+            20
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            500000,
+            1000000,
+            1500000,
+            2000000
+          ],
+          "source_indices": [
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            500000,
+            1000000,
+            1500000,
+            2000000
+          ],
+          "source_indices": [
+            20,
+            15,
+            10,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "f40a86c5a5efbfba44613e63",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            6800000,
+            7300000,
+            7800000,
+            8300000
+          ],
+          "source_indices": [
+            68,
+            73,
+            78,
+            83
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            6800000,
+            7300000,
+            7800000,
+            8300000
+          ],
+          "source_indices": [
+            68,
+            68,
+            68,
+            68
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            6800000,
+            7300000,
+            7800000,
+            8300000
+          ],
+          "source_indices": [
+            83,
+            78,
+            73,
+            68
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "bf23a4342c33cc824a85bd09",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            9100000,
+            9600000,
+            10100000,
+            10600000
+          ],
+          "source_indices": [
+            91,
+            96,
+            101,
+            106
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            9100000,
+            9600000,
+            10100000,
+            10600000
+          ],
+          "source_indices": [
+            91,
+            91,
+            91,
+            91
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            9100000,
+            9600000,
+            10100000,
+            10600000
+          ],
+          "source_indices": [
+            106,
+            101,
+            96,
+            91
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "8c1b4e16fc12453f9ac1dac3",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            2300000,
+            2800000,
+            3300000,
+            3800000
+          ],
+          "source_indices": [
+            23,
+            28,
+            33,
+            38
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            2300000,
+            2800000,
+            3300000,
+            3800000
+          ],
+          "source_indices": [
+            23,
+            23,
+            23,
+            23
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            2300000,
+            2800000,
+            3300000,
+            3800000
+          ],
+          "source_indices": [
+            38,
+            33,
+            28,
+            23
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "d1a2f1d3d266cd9132d6512f",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            15700000,
+            16200000,
+            16700000,
+            17200000
+          ],
+          "source_indices": [
+            157,
+            162,
+            167,
+            172
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            15700000,
+            16200000,
+            16700000,
+            17200000
+          ],
+          "source_indices": [
+            157,
+            157,
+            157,
+            157
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            15700000,
+            16200000,
+            16700000,
+            17200000
+          ],
+          "source_indices": [
+            172,
+            167,
+            162,
+            157
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "7ed288fd1b2317d3f646c38b",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            18000000,
+            18500000,
+            19000000,
+            19500000
+          ],
+          "source_indices": [
+            180,
+            185,
+            190,
+            195
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            18000000,
+            18500000,
+            19000000,
+            19500000
+          ],
+          "source_indices": [
+            180,
+            180,
+            180,
+            180
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            18000000,
+            18500000,
+            19000000,
+            19500000
+          ],
+          "source_indices": [
+            195,
+            190,
+            185,
+            180
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "0fb8ad0b04d00545da4910df",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            3000000,
+            3500000,
+            4000000,
+            4500000
+          ],
+          "source_indices": [
+            30,
+            35,
+            40,
+            45
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            3000000,
+            3500000,
+            4000000,
+            4500000
+          ],
+          "source_indices": [
+            30,
+            30,
+            30,
+            30
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            3000000,
+            3500000,
+            4000000,
+            4500000
+          ],
+          "source_indices": [
+            45,
+            40,
+            35,
+            30
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "8b4f249cf9596b56d77fed12",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            3000000,
+            3500000,
+            4000000,
+            4500000
+          ],
+          "source_indices": [
+            30,
+            35,
+            40,
+            45
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            3000000,
+            3500000,
+            4000000,
+            4500000
+          ],
+          "source_indices": [
+            30,
+            30,
+            30,
+            30
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            3000000,
+            3500000,
+            4000000,
+            4500000
+          ],
+          "source_indices": [
+            45,
+            40,
+            35,
+            30
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "3cbdb3480d6042b76ff064cc",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            4400000,
+            4900000,
+            5400000,
+            5900000
+          ],
+          "source_indices": [
+            44,
+            49,
+            54,
+            59
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            4400000,
+            4900000,
+            5400000,
+            5900000
+          ],
+          "source_indices": [
+            44,
+            44,
+            44,
+            44
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            4400000,
+            4900000,
+            5400000,
+            5900000
+          ],
+          "source_indices": [
+            59,
+            54,
+            49,
+            44
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "c0563c1339e46522aea13be8",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            6200000,
+            6700000,
+            7200000,
+            7700000
+          ],
+          "source_indices": [
+            62,
+            67,
+            72,
+            77
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            6200000,
+            6700000,
+            7200000,
+            7700000
+          ],
+          "source_indices": [
+            62,
+            62,
+            62,
+            62
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            6200000,
+            6700000,
+            7200000,
+            7700000
+          ],
+          "source_indices": [
+            77,
+            72,
+            67,
+            62
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "c65959b86e476ca34dc42c0c",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            1700000,
+            2200000,
+            2700000,
+            3200000
+          ],
+          "source_indices": [
+            17,
+            22,
+            27,
+            32
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            1700000,
+            2200000,
+            2700000,
+            3200000
+          ],
+          "source_indices": [
+            17,
+            17,
+            17,
+            17
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            1700000,
+            2200000,
+            2700000,
+            3200000
+          ],
+          "source_indices": [
+            32,
+            27,
+            22,
+            17
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "78b990f3e14525cdc36da346",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            29,
+            34,
+            39,
+            44
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            29,
+            29,
+            29,
+            29
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            44,
+            39,
+            34,
+            29
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "6bdb83ebb2c78f5b56230f62",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            3800000,
+            4300000,
+            4800000,
+            5300000
+          ],
+          "source_indices": [
+            38,
+            43,
+            48,
+            53
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            3800000,
+            4300000,
+            4800000,
+            5300000
+          ],
+          "source_indices": [
+            38,
+            38,
+            38,
+            38
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            3800000,
+            4300000,
+            4800000,
+            5300000
+          ],
+          "source_indices": [
+            53,
+            48,
+            43,
+            38
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "18b71c95af3b50d27f74e5b0",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            5500000,
+            6000000,
+            6500000,
+            7000000
+          ],
+          "source_indices": [
+            55,
+            60,
+            65,
+            70
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            5500000,
+            6000000,
+            6500000,
+            7000000
+          ],
+          "source_indices": [
+            55,
+            55,
+            55,
+            55
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            5500000,
+            6000000,
+            6500000,
+            7000000
+          ],
+          "source_indices": [
+            70,
+            65,
+            60,
+            55
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "18d29fd45341b6fbc01f105b",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            29,
+            34,
+            39,
+            44
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            29,
+            29,
+            29,
+            29
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            44,
+            39,
+            34,
+            29
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "8c0917856ea55dc7a99c1e5c",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            1300000,
+            1800000,
+            2300000,
+            2800000
+          ],
+          "source_indices": [
+            13,
+            18,
+            23,
+            28
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            1300000,
+            1800000,
+            2300000,
+            2800000
+          ],
+          "source_indices": [
+            13,
+            13,
+            13,
+            13
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            1300000,
+            1800000,
+            2300000,
+            2800000
+          ],
+          "source_indices": [
+            28,
+            23,
+            18,
+            13
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "7d73bcfdb679786669e64b93",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            1900000,
+            2400000,
+            2900000,
+            3400000
+          ],
+          "source_indices": [
+            19,
+            24,
+            29,
+            34
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            1900000,
+            2400000,
+            2900000,
+            3400000
+          ],
+          "source_indices": [
+            19,
+            19,
+            19,
+            19
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            1900000,
+            2400000,
+            2900000,
+            3400000
+          ],
+          "source_indices": [
+            34,
+            29,
+            24,
+            19
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "08f66ae2f4fff0749351c01e",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            4400000,
+            4900000,
+            5400000,
+            5900000
+          ],
+          "source_indices": [
+            44,
+            49,
+            54,
+            59
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            4400000,
+            4900000,
+            5400000,
+            5900000
+          ],
+          "source_indices": [
+            44,
+            44,
+            44,
+            44
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            4400000,
+            4900000,
+            5400000,
+            5900000
+          ],
+          "source_indices": [
+            59,
+            54,
+            49,
+            44
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "de467896144821243e90585f",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            6200000,
+            6700000,
+            7200000,
+            7700000
+          ],
+          "source_indices": [
+            62,
+            67,
+            72,
+            77
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            6200000,
+            6700000,
+            7200000,
+            7700000
+          ],
+          "source_indices": [
+            62,
+            62,
+            62,
+            62
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            6200000,
+            6700000,
+            7200000,
+            7700000
+          ],
+          "source_indices": [
+            77,
+            72,
+            67,
+            62
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "764efcf3fe417e1a68f9940c",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            6700000,
+            7200000,
+            7700000,
+            8200000
+          ],
+          "source_indices": [
+            67,
+            72,
+            77,
+            82
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            6700000,
+            7200000,
+            7700000,
+            8200000
+          ],
+          "source_indices": [
+            67,
+            67,
+            67,
+            67
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            6700000,
+            7200000,
+            7700000,
+            8200000
+          ],
+          "source_indices": [
+            82,
+            77,
+            72,
+            67
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "36eff0470df06474ebc588d7",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            9000000,
+            9500000,
+            10000000,
+            10500000
+          ],
+          "source_indices": [
+            90,
+            95,
+            100,
+            105
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            9000000,
+            9500000,
+            10000000,
+            10500000
+          ],
+          "source_indices": [
+            90,
+            90,
+            90,
+            90
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            9000000,
+            9500000,
+            10000000,
+            10500000
+          ],
+          "source_indices": [
+            105,
+            100,
+            95,
+            90
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "05527c1bf28ed19079f6acf7",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            10300000,
+            10800000,
+            11300000,
+            11800000
+          ],
+          "source_indices": [
+            103,
+            108,
+            113,
+            118
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            10300000,
+            10800000,
+            11300000,
+            11800000
+          ],
+          "source_indices": [
+            103,
+            103,
+            103,
+            103
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            10300000,
+            10800000,
+            11300000,
+            11800000
+          ],
+          "source_indices": [
+            118,
+            113,
+            108,
+            103
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "3cd9071259c44952ba56501e",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            500000,
+            1000000,
+            1500000,
+            2000000
+          ],
+          "source_indices": [
+            5,
+            10,
+            15,
+            20
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            500000,
+            1000000,
+            1500000,
+            2000000
+          ],
+          "source_indices": [
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            500000,
+            1000000,
+            1500000,
+            2000000
+          ],
+          "source_indices": [
+            20,
+            15,
+            10,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "0bf98c356a3fdb41e56a2a58",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            1200000,
+            1700000,
+            2200000,
+            2700000
+          ],
+          "source_indices": [
+            12,
+            17,
+            22,
+            27
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            1200000,
+            1700000,
+            2200000,
+            2700000
+          ],
+          "source_indices": [
+            12,
+            12,
+            12,
+            12
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            1200000,
+            1700000,
+            2200000,
+            2700000
+          ],
+          "source_indices": [
+            27,
+            22,
+            17,
+            12
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "f442633f2f9de01b740f890d",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            2400000,
+            2900000,
+            3400000,
+            3900000
+          ],
+          "source_indices": [
+            24,
+            29,
+            34,
+            39
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            2400000,
+            2900000,
+            3400000,
+            3900000
+          ],
+          "source_indices": [
+            24,
+            24,
+            24,
+            24
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            2400000,
+            2900000,
+            3400000,
+            3900000
+          ],
+          "source_indices": [
+            39,
+            34,
+            29,
+            24
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "90f2f6388dd49e00d94253eb",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            4600000,
+            5100000,
+            5600000,
+            6100000
+          ],
+          "source_indices": [
+            46,
+            51,
+            56,
+            61
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            4600000,
+            5100000,
+            5600000,
+            6100000
+          ],
+          "source_indices": [
+            46,
+            46,
+            46,
+            46
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            4600000,
+            5100000,
+            5600000,
+            6100000
+          ],
+          "source_indices": [
+            61,
+            56,
+            51,
+            46
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "8a6316023a08794b3d02fddb",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            8800000,
+            9300000,
+            9800000,
+            10300000
+          ],
+          "source_indices": [
+            88,
+            93,
+            98,
+            103
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            8800000,
+            9300000,
+            9800000,
+            10300000
+          ],
+          "source_indices": [
+            88,
+            88,
+            88,
+            88
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            8800000,
+            9300000,
+            9800000,
+            10300000
+          ],
+          "source_indices": [
+            103,
+            98,
+            93,
+            88
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "8d98dd414351619a16bf2b6a",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            6300000,
+            6800000,
+            7300000,
+            7800000
+          ],
+          "source_indices": [
+            63,
+            68,
+            73,
+            78
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            6300000,
+            6800000,
+            7300000,
+            7800000
+          ],
+          "source_indices": [
+            63,
+            63,
+            63,
+            63
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            6300000,
+            6800000,
+            7300000,
+            7800000
+          ],
+          "source_indices": [
+            78,
+            73,
+            68,
+            63
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "b4f6c375866754640fbd51c3",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            8600000,
+            9100000,
+            9600000,
+            10100000
+          ],
+          "source_indices": [
+            86,
+            91,
+            96,
+            101
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            8600000,
+            9100000,
+            9600000,
+            10100000
+          ],
+          "source_indices": [
+            86,
+            86,
+            86,
+            86
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            8600000,
+            9100000,
+            9600000,
+            10100000
+          ],
+          "source_indices": [
+            101,
+            96,
+            91,
+            86
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "f174499559e6bbd1c459c041",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            10000000,
+            10500000,
+            11000000,
+            11500000
+          ],
+          "source_indices": [
+            100,
+            105,
+            110,
+            115
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            10000000,
+            10500000,
+            11000000,
+            11500000
+          ],
+          "source_indices": [
+            100,
+            100,
+            100,
+            100
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            10000000,
+            10500000,
+            11000000,
+            11500000
+          ],
+          "source_indices": [
+            115,
+            110,
+            105,
+            100
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "0b82de7ce276013ffd516f88",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            1500000,
+            2000000,
+            2500000,
+            3000000
+          ],
+          "source_indices": [
+            15,
+            20,
+            25,
+            30
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            1500000,
+            2000000,
+            2500000,
+            3000000
+          ],
+          "source_indices": [
+            15,
+            15,
+            15,
+            15
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            1500000,
+            2000000,
+            2500000,
+            3000000
+          ],
+          "source_indices": [
+            30,
+            25,
+            20,
+            15
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "b380b8a08803437eda93da3e",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            13400000,
+            13900000,
+            14400000,
+            14900000
+          ],
+          "source_indices": [
+            134,
+            139,
+            144,
+            149
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            13400000,
+            13900000,
+            14400000,
+            14900000
+          ],
+          "source_indices": [
+            134,
+            134,
+            134,
+            134
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            13400000,
+            13900000,
+            14400000,
+            14900000
+          ],
+          "source_indices": [
+            149,
+            144,
+            139,
+            134
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "b0ae64fc45ac867f36d03cb6",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            15200000,
+            15700000,
+            16200000,
+            16700000
+          ],
+          "source_indices": [
+            152,
+            157,
+            162,
+            167
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            15200000,
+            15700000,
+            16200000,
+            16700000
+          ],
+          "source_indices": [
+            152,
+            152,
+            152,
+            152
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            15200000,
+            15700000,
+            16200000,
+            16700000
+          ],
+          "source_indices": [
+            167,
+            162,
+            157,
+            152
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "69ffd7ef02d6ec07190cc50f",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            10000000,
+            10500000,
+            11000000,
+            11500000
+          ],
+          "source_indices": [
+            100,
+            105,
+            110,
+            115
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            10000000,
+            10500000,
+            11000000,
+            11500000
+          ],
+          "source_indices": [
+            100,
+            100,
+            100,
+            100
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            10000000,
+            10500000,
+            11000000,
+            11500000
+          ],
+          "source_indices": [
+            115,
+            110,
+            105,
+            100
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "5179b562afce8c1ed30f2ddf",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            1300000,
+            1800000,
+            2300000,
+            2800000
+          ],
+          "source_indices": [
+            13,
+            18,
+            23,
+            28
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            1300000,
+            1800000,
+            2300000,
+            2800000
+          ],
+          "source_indices": [
+            13,
+            13,
+            13,
+            13
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            1300000,
+            1800000,
+            2300000,
+            2800000
+          ],
+          "source_indices": [
+            28,
+            23,
+            18,
+            13
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "7cd660c9602375f591aa6425",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            4700000,
+            5200000,
+            5700000,
+            6200000
+          ],
+          "source_indices": [
+            47,
+            52,
+            57,
+            62
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            4700000,
+            5200000,
+            5700000,
+            6200000
+          ],
+          "source_indices": [
+            47,
+            47,
+            47,
+            47
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            4700000,
+            5200000,
+            5700000,
+            6200000
+          ],
+          "source_indices": [
+            62,
+            57,
+            52,
+            47
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "568434870b5f7fea295d3fc1",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            10000000,
+            10500000,
+            11000000,
+            11500000
+          ],
+          "source_indices": [
+            100,
+            105,
+            110,
+            115
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            10000000,
+            10500000,
+            11000000,
+            11500000
+          ],
+          "source_indices": [
+            100,
+            100,
+            100,
+            100
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            10000000,
+            10500000,
+            11000000,
+            11500000
+          ],
+          "source_indices": [
+            115,
+            110,
+            105,
+            100
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "3b702d2b59bd73a4e103bb0b",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            3800000,
+            4300000,
+            4800000,
+            5300000
+          ],
+          "source_indices": [
+            38,
+            43,
+            48,
+            53
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            3800000,
+            4300000,
+            4800000,
+            5300000
+          ],
+          "source_indices": [
+            38,
+            38,
+            38,
+            38
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            3800000,
+            4300000,
+            4800000,
+            5300000
+          ],
+          "source_indices": [
+            53,
+            48,
+            43,
+            38
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "c6ed89bae703eed252900568",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            5500000,
+            6000000,
+            6500000,
+            7000000
+          ],
+          "source_indices": [
+            55,
+            60,
+            65,
+            70
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            5500000,
+            6000000,
+            6500000,
+            7000000
+          ],
+          "source_indices": [
+            55,
+            55,
+            55,
+            55
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            5500000,
+            6000000,
+            6500000,
+            7000000
+          ],
+          "source_indices": [
+            70,
+            65,
+            60,
+            55
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "aa63d39b2a4fc188fee65ad4",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            2600000,
+            3100000,
+            3600000,
+            4100000
+          ],
+          "source_indices": [
+            26,
+            31,
+            36,
+            41
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            2600000,
+            3100000,
+            3600000,
+            4100000
+          ],
+          "source_indices": [
+            26,
+            26,
+            26,
+            26
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            2600000,
+            3100000,
+            3600000,
+            4100000
+          ],
+          "source_indices": [
+            41,
+            36,
+            31,
+            26
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "486e216365f16fe711eeca24",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            4000000,
+            4500000,
+            5000000,
+            5500000
+          ],
+          "source_indices": [
+            40,
+            45,
+            50,
+            55
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            4000000,
+            4500000,
+            5000000,
+            5500000
+          ],
+          "source_indices": [
+            40,
+            40,
+            40,
+            40
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            4000000,
+            4500000,
+            5000000,
+            5500000
+          ],
+          "source_indices": [
+            55,
+            50,
+            45,
+            40
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "e9e874ba5fb9ebeb8e1459d4",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            7300000,
+            7800000,
+            8300000,
+            8800000
+          ],
+          "source_indices": [
+            73,
+            78,
+            83,
+            88
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            7300000,
+            7800000,
+            8300000,
+            8800000
+          ],
+          "source_indices": [
+            73,
+            73,
+            73,
+            73
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            7300000,
+            7800000,
+            8300000,
+            8800000
+          ],
+          "source_indices": [
+            88,
+            83,
+            78,
+            73
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "60b047ff5b2cff369a046d0e",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            29,
+            34,
+            39,
+            44
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            29,
+            29,
+            29,
+            29
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            2900000,
+            3400000,
+            3900000,
+            4400000
+          ],
+          "source_indices": [
+            44,
+            39,
+            34,
+            29
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "504d5949d566e8fab965b218",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            8100000,
+            8600000,
+            9100000,
+            9600000
+          ],
+          "source_indices": [
+            81,
+            86,
+            91,
+            96
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            8100000,
+            8600000,
+            9100000,
+            9600000
+          ],
+          "source_indices": [
+            81,
+            81,
+            81,
+            81
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            8100000,
+            8600000,
+            9100000,
+            9600000
+          ],
+          "source_indices": [
+            96,
+            91,
+            86,
+            81
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "8c0403f844ae345b8470a6b1",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            3100000,
+            3600000,
+            4100000,
+            4600000
+          ],
+          "source_indices": [
+            31,
+            36,
+            41,
+            46
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            3100000,
+            3600000,
+            4100000,
+            4600000
+          ],
+          "source_indices": [
+            31,
+            31,
+            31,
+            31
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            3100000,
+            3600000,
+            4100000,
+            4600000
+          ],
+          "source_indices": [
+            46,
+            41,
+            36,
+            31
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "e7a362b80cc6ee69a370a5a4",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            4900000,
+            5400000,
+            5900000,
+            6400000
+          ],
+          "source_indices": [
+            49,
+            54,
+            59,
+            64
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            4900000,
+            5400000,
+            5900000,
+            6400000
+          ],
+          "source_indices": [
+            49,
+            49,
+            49,
+            49
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            4900000,
+            5400000,
+            5900000,
+            6400000
+          ],
+          "source_indices": [
+            64,
+            59,
+            54,
+            49
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "04bdf6ddbb5e9d52ca4900b5",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            2100000,
+            2600000,
+            3100000,
+            3600000
+          ],
+          "source_indices": [
+            21,
+            26,
+            31,
+            36
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            2100000,
+            2600000,
+            3100000,
+            3600000
+          ],
+          "source_indices": [
+            21,
+            21,
+            21,
+            21
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            2100000,
+            2600000,
+            3100000,
+            3600000
+          ],
+          "source_indices": [
+            36,
+            31,
+            26,
+            21
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "877a7d31f0b3d8598de62cf0",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            1700000,
+            2200000,
+            2700000,
+            3200000
+          ],
+          "source_indices": [
+            17,
+            22,
+            27,
+            32
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            1700000,
+            2200000,
+            2700000,
+            3200000
+          ],
+          "source_indices": [
+            17,
+            17,
+            17,
+            17
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            1700000,
+            2200000,
+            2700000,
+            3200000
+          ],
+          "source_indices": [
+            32,
+            27,
+            22,
+            17
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "263db62e07c1b1fdf1526cc7",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            3400000,
+            3900000,
+            4400000,
+            4900000
+          ],
+          "source_indices": [
+            34,
+            39,
+            44,
+            49
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            3400000,
+            3900000,
+            4400000,
+            4900000
+          ],
+          "source_indices": [
+            34,
+            34,
+            34,
+            34
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            3400000,
+            3900000,
+            4400000,
+            4900000
+          ],
+          "source_indices": [
+            49,
+            44,
+            39,
+            34
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "7e19799fd5ed4219647c900f",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            5100000,
+            5600000,
+            6100000,
+            6600000
+          ],
+          "source_indices": [
+            51,
+            56,
+            61,
+            66
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            5100000,
+            5600000,
+            6100000,
+            6600000
+          ],
+          "source_indices": [
+            51,
+            51,
+            51,
+            51
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            5100000,
+            5600000,
+            6100000,
+            6600000
+          ],
+          "source_indices": [
+            66,
+            61,
+            56,
+            51
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "7f1c75d0fbdfa70b0c18c907",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            6300000,
+            6800000,
+            7300000,
+            7800000
+          ],
+          "source_indices": [
+            63,
+            68,
+            73,
+            78
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            6300000,
+            6800000,
+            7300000,
+            7800000
+          ],
+          "source_indices": [
+            63,
+            63,
+            63,
+            63
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            6300000,
+            6800000,
+            7300000,
+            7800000
+          ],
+          "source_indices": [
+            78,
+            73,
+            68,
+            63
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "6a5f6f0a80d6b8219b0f264d",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            8600000,
+            9100000,
+            9600000,
+            10100000
+          ],
+          "source_indices": [
+            86,
+            91,
+            96,
+            101
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            8600000,
+            9100000,
+            9600000,
+            10100000
+          ],
+          "source_indices": [
+            86,
+            86,
+            86,
+            86
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            8600000,
+            9100000,
+            9600000,
+            10100000
+          ],
+          "source_indices": [
+            101,
+            96,
+            91,
+            86
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "0a1c6fbb60f5859b81425ab5",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            1200000,
+            1700000,
+            2200000,
+            2700000
+          ],
+          "source_indices": [
+            12,
+            17,
+            22,
+            27
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            1200000,
+            1700000,
+            2200000,
+            2700000
+          ],
+          "source_indices": [
+            12,
+            12,
+            12,
+            12
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            1200000,
+            1700000,
+            2200000,
+            2700000
+          ],
+          "source_indices": [
+            27,
+            22,
+            17,
+            12
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "c6784db004ea775f88e57b75",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            13200000,
+            13700000,
+            14200000,
+            14700000
+          ],
+          "source_indices": [
+            132,
+            137,
+            142,
+            147
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            13200000,
+            13700000,
+            14200000,
+            14700000
+          ],
+          "source_indices": [
+            132,
+            132,
+            132,
+            132
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            13200000,
+            13700000,
+            14200000,
+            14700000
+          ],
+          "source_indices": [
+            147,
+            142,
+            137,
+            132
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "7079d1450b96840dd3724c3e",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            15500000,
+            16000000,
+            16500000,
+            17000000
+          ],
+          "source_indices": [
+            155,
+            160,
+            165,
+            170
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            15500000,
+            16000000,
+            16500000,
+            17000000
+          ],
+          "source_indices": [
+            155,
+            155,
+            155,
+            155
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            15500000,
+            16000000,
+            16500000,
+            17000000
+          ],
+          "source_indices": [
+            170,
+            165,
+            160,
+            155
+          ]
+        }
+      }
+    },
+    {
+      "sample_id": "a93b9971291211c73421e47f",
+      "transforms": {
+        "original": {
+          "slot_pts_us": [
+            10300000,
+            10800000,
+            11300000,
+            11800000
+          ],
+          "source_indices": [
+            103,
+            108,
+            113,
+            118
+          ]
+        },
+        "repeat_first": {
+          "slot_pts_us": [
+            10300000,
+            10800000,
+            11300000,
+            11800000
+          ],
+          "source_indices": [
+            103,
+            103,
+            103,
+            103
+          ]
+        },
+        "reverse": {
+          "slot_pts_us": [
+            10300000,
+            10800000,
+            11300000,
+            11800000
+          ],
+          "source_indices": [
+            118,
+            113,
+            108,
+            103
+          ]
+        }
+      }
+    }
+  ],
+  "spec": {
+    "mode": "pooled_4bit",
+    "producer": {
+      "data.py": "86dfdd257f6a2e1e78abe449c4f61641000f6a9b2810de57708f63db591404dc",
+      "encode.py": "f2a8119b1e09444e2c9cfbe0db3bed4d67dd5d21964a64a5bb3cf26544706c57",
+      "encoders.py": "e0fe6e6c714857026e22ea9bddb82d06628384d355375da357eee05531b27e49"
+    },
+    "protocol_sha256": "13299dd390fa775982e1c522e92e58198414e7a418ffce07faf9bd28df12870c",
+    "samples_sha256": "a5c27b9a636ce346885b9d60a86739073c53d1b1da9c21595170f7cafb4e9e6b",
+    "space": {
+      "adapter": "qwen3-vl-embedding-last-token-v1",
+      "artifacts": "0c3dab9812a2ea4ef065362ed2c8ca6df1eb22ad25da9582d8cf480435fd358a",
+      "dimension": 2048,
+      "dtype": "float32",
+      "image_size": [
+        320,
+        240
+      ],
+      "instruction": "Represent the user's input.",
+      "mlx_vlm": "0.6.17",
+      "mode": "pooled_images",
+      "model_id": "arthurcollet/Qwen3-VL-Embedding-2B-mlx-4bit",
+      "normalization": "l2",
+      "pooling": "mean-of-unit-frame-vectors-then-l2",
+      "quantization": "affine-4bit-group64",
+      "resize": "PIL-bicubic",
+      "revision": "99b57b385f543a94c46d9f8e85a354de4c836b37",
+      "runtime": [
+        [
+          "mlx",
+          "0.32.2"
+        ],
+        [
+          "mlx-metal",
+          "0.32.2"
+        ],
+        [
+          "numpy",
+          "2.4.6"
+        ],
+        [
+          "pillow",
+          "12.3.0"
+        ],
+        [
+          "av",
+          "17.1.0"
+        ]
+      ],
+      "sampling": "first-PTS-at-or-after-grid-v1",
+      "transformers": "5.16.1"
+    },
+    "space_id": "9246fa13a4a2d32fbb78ba1614024d65bb44339b757497bf0e90cdd6f07a0bf4"
+  }
+}

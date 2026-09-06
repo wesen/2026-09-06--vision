@@ -1,0 +1,44 @@
+{
+  "labels_sha256": "ddc2bd25ddf89beadbd464b4b945367be92475000ae9b603dbb40918e6ed1e7b",
+  "counts": {
+    "train": {
+      "open": 2,
+      "close": 2,
+      "pickup": 2,
+      "putdown": 2,
+      "sit": 2,
+      "stand": 2,
+      "switch_on": 1,
+      "switch_off": 1,
+      "none": 8,
+      "unknown": 2
+    },
+    "development": {
+      "open": 2,
+      "close": 2,
+      "pickup": 2,
+      "putdown": 1,
+      "sit": 2,
+      "stand": 2,
+      "switch_on": 2,
+      "switch_off": 2,
+      "none": 8,
+      "unknown": 1
+    },
+    "test": {
+      "open": 1,
+      "close": 0,
+      "pickup": 2,
+      "putdown": 2,
+      "sit": 2,
+      "stand": 2,
+      "switch_on": 0,
+      "switch_off": 0,
+      "none": 8,
+      "unknown": 7
+    }
+  },
+  "review_basis": "All 72 four-frame source windows; 20 native-resolution detail sheets; initial timing failure retained in v1. No model scores inspected before final labeling.",
+  "reviewer_count": 1,
+  "limitation": "Single assistant visual review; no independent human agreement estimate."
+}

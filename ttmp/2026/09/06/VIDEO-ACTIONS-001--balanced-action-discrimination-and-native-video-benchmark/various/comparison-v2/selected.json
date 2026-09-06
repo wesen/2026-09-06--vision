@@ -1,0 +1,18 @@
+{
+  "labels_sha256": "ddc2bd25ddf89beadbd464b4b945367be92475000ae9b603dbb40918e6ed1e7b",
+  "policies": {
+    "native_fp32": {
+      "gap_threshold": 0.022322088479995728,
+      "selection": "development maximum coverage, <=0.2 known risk, zero unknown answers"
+    },
+    "pooled_4bit": {
+      "gap_threshold": 0.06446987390518188,
+      "selection": "development maximum coverage, <=0.2 known risk, zero unknown answers"
+    },
+    "pooled_fp32": {
+      "gap_threshold": 0.010556088760495186,
+      "selection": "development maximum coverage, <=0.2 known risk, zero unknown answers"
+    }
+  },
+  "protocol_sha256": "13299dd390fa775982e1c522e92e58198414e7a418ffce07faf9bd28df12870c"
+}

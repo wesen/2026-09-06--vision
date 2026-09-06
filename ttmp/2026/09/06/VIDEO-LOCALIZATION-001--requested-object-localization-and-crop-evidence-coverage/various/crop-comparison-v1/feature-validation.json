@@ -1,0 +1,48 @@
+{
+  "F": {
+    "shape": [
+      144,
+      2048
+    ],
+    "available": 144,
+    "unit_norm_max_error": 1.1920928955078125e-07,
+    "missing_vectors_zero": true
+  },
+  "D": {
+    "shape": [
+      144,
+      2048
+    ],
+    "available": 69,
+    "unit_norm_max_error": 1.1920928955078125e-07,
+    "missing_vectors_zero": true
+  },
+  "O": {
+    "shape": [
+      144,
+      2048
+    ],
+    "available": 144,
+    "unit_norm_max_error": 1.1920928955078125e-07,
+    "missing_vectors_zero": true
+  },
+  "FD": {
+    "shape": [
+      144,
+      2048
+    ],
+    "available": 144,
+    "unit_norm_max_error": 1.1920928955078125e-07,
+    "missing_vectors_zero": true
+  },
+  "FO": {
+    "shape": [
+      144,
+      2048
+    ],
+    "available": 144,
+    "unit_norm_max_error": 1.1920928955078125e-07,
+    "missing_vectors_zero": true
+  },
+  "FD_missing_equals_F": true
+}

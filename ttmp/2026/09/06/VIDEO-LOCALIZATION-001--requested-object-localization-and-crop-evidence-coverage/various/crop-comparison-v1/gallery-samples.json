@@ -1,0 +1,260 @@
+[
+  {
+    "sample_id": "5d4a12e0982680b61cf08bd5",
+    "aliases": [
+      {
+        "id": "7f1ae70888f44c1635be",
+        "kind": "state"
+      },
+      {
+        "id": "0",
+        "kind": "pilot"
+      }
+    ],
+    "episode_id": "dv-008b5e55af631629",
+    "entity_id": "dv-008b5e55af631629:object-308",
+    "image_sha256": "6236bb5878b9e161565e95f95ea9242b6c6f90ad6b9feea37450d4db7094df5a",
+    "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+    "frame_index": 0,
+    "pts_us": 0,
+    "split": "train",
+    "F": {
+      "image": "output/state-workbench/review-v2/7f1ae70888f44c1635be.png",
+      "image_sha256": "6236bb5878b9e161565e95f95ea9242b6c6f90ad6b9feea37450d4db7094df5a",
+      "evidence_id": "5d4a12e0982680b61cf08bd5"
+    },
+    "D": null,
+    "O": {
+      "evidence_id": "b49e34812e0df2083614fb7c",
+      "image": "output/localization-v1/crops-v1/b49e34812e0df2083614fb7c.png",
+      "image_sha256": "6145afcc0a04a8d9ae80fa51c93d38673fa30f29f01c01bce637d6c12a82c00c",
+      "source_rect": [
+        197,
+        0,
+        440,
+        480
+      ],
+      "detection_ids": [],
+      "oracle_assisted": true
+    },
+    "detector_usable_candidates": 0,
+    "detector_status": "missing",
+    "oracle_status": "reviewed"
+  },
+  {
+    "sample_id": "5d4a12e0982680b61cf08bd5",
+    "aliases": [
+      {
+        "id": "7f1ae70888f44c1635be",
+        "kind": "state"
+      },
+      {
+        "id": "0",
+        "kind": "pilot"
+      }
+    ],
+    "episode_id": "dv-008b5e55af631629",
+    "entity_id": "dv-008b5e55af631629:object-308",
+    "image_sha256": "6236bb5878b9e161565e95f95ea9242b6c6f90ad6b9feea37450d4db7094df5a",
+    "video_sha256": "8904f52d4bb49201e035497573315211640e54a0b4c0161135f5a5382569484b",
+    "frame_index": 0,
+    "pts_us": 0,
+    "split": "train",
+    "F": {
+      "image": "output/state-workbench/review-v2/7f1ae70888f44c1635be.png",
+      "image_sha256": "6236bb5878b9e161565e95f95ea9242b6c6f90ad6b9feea37450d4db7094df5a",
+      "evidence_id": "5d4a12e0982680b61cf08bd5"
+    },
+    "D": null,
+    "O": {
+      "evidence_id": "b49e34812e0df2083614fb7c",
+      "image": "output/localization-v1/crops-v1/b49e34812e0df2083614fb7c.png",
+      "image_sha256": "6145afcc0a04a8d9ae80fa51c93d38673fa30f29f01c01bce637d6c12a82c00c",
+      "source_rect": [
+        197,
+        0,
+        440,
+        480
+      ],
+      "detection_ids": [],
+      "oracle_assisted": true
+    },
+    "detector_usable_candidates": 0,
+    "detector_status": "missing",
+    "oracle_status": "reviewed"
+  },
+  {
+    "sample_id": "4e27c53c195306dcabdd374b",
+    "aliases": [
+      {
+        "id": "979332678203cc020cdb",
+        "kind": "state"
+      }
+    ],
+    "episode_id": "dv-22a313084fd800ca",
+    "entity_id": "dv-22a313084fd800ca:object-155",
+    "image_sha256": "4cd6a973882d733d6637e9f91dcdefc99f76ffa72edf596d3ea59b16e10f72f0",
+    "video_sha256": "d09c5eed426d487f22a2cddaac499d91574449fcb2099674b5e20953f14a90d0",
+    "frame_index": 0,
+    "pts_us": 0,
+    "split": "development",
+    "F": {
+      "image": "output/state-workbench/review-v2/979332678203cc020cdb.png",
+      "image_sha256": "4cd6a973882d733d6637e9f91dcdefc99f76ffa72edf596d3ea59b16e10f72f0",
+      "evidence_id": "4e27c53c195306dcabdd374b"
+    },
+    "D": {
+      "evidence_id": "97d8f9ac57d7f45f3a48f185",
+      "image": "output/localization-v1/crops-v1/97d8f9ac57d7f45f3a48f185.png",
+      "image_sha256": "9a833e4ac466e7d2bc38541f47e3f2a4db10f24c77b6a5878c984aa0b7a393a5",
+      "source_rect": [
+        198,
+        0,
+        427,
+        480
+      ],
+      "detection_ids": [
+        "35d00a17298e0b34dbe953d4"
+      ],
+      "oracle_assisted": false
+    },
+    "O": {
+      "evidence_id": "843c196bd3101c08fd31b088",
+      "image": "output/localization-v1/crops-v1/843c196bd3101c08fd31b088.png",
+      "image_sha256": "3b88b1f4d8ba9f2127e3b1962b003f939b654c0f60934da470a38f37e9158163",
+      "source_rect": [
+        193,
+        0,
+        432,
+        480
+      ],
+      "detection_ids": [],
+      "oracle_assisted": true
+    },
+    "detector_usable_candidates": 1,
+    "detector_status": "unique",
+    "oracle_status": "reviewed"
+  },
+  {
+    "sample_id": "6dbc5909141e7ef233eb9ee8",
+    "aliases": [
+      {
+        "id": "e7a35e506e70e5e76205",
+        "kind": "state"
+      }
+    ],
+    "episode_id": "dv-ddf28e0a6b4c30db",
+    "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+    "image_sha256": "17b26a94ba8f120db951b81ded1367cd4204afb188245803b8051fbd0bb298cb",
+    "video_sha256": "226fad642f895adfbed0ad1684190700f6fdfc4608230ef7716f4e0d314d2a04",
+    "frame_index": 66,
+    "pts_us": 6600000,
+    "split": "development",
+    "F": {
+      "image": "output/state-workbench/review-v2/e7a35e506e70e5e76205.png",
+      "image_sha256": "17b26a94ba8f120db951b81ded1367cd4204afb188245803b8051fbd0bb298cb",
+      "evidence_id": "6dbc5909141e7ef233eb9ee8"
+    },
+    "D": null,
+    "O": {
+      "evidence_id": "e18fc9c7ff788e9550ffd7f8",
+      "image": "output/localization-v1/crops-v1/e18fc9c7ff788e9550ffd7f8.png",
+      "image_sha256": "436afde1e307ee4b8a18d4e0d74cf2f3bd0bb8055e69979be3b1912cacb8ab73",
+      "source_rect": [
+        152,
+        0,
+        630,
+        480
+      ],
+      "detection_ids": [],
+      "oracle_assisted": true
+    },
+    "detector_usable_candidates": 2,
+    "detector_status": "ambiguous",
+    "oracle_status": "reviewed"
+  },
+  {
+    "sample_id": "d83a66c6b218c8b7e32dc0e9",
+    "aliases": [
+      {
+        "id": "368fad1a2a15f4d014dd",
+        "kind": "state"
+      },
+      {
+        "id": "13",
+        "kind": "pilot"
+      }
+    ],
+    "episode_id": "dv-af669d3e3a486780",
+    "entity_id": "dv-af669d3e3a486780:object-174",
+    "image_sha256": "d25071c715e652c283c0b7b51b511c012306a466f5aaad9fad43f7b63e087e34",
+    "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+    "frame_index": 0,
+    "pts_us": 0,
+    "split": "test",
+    "F": {
+      "image": "output/state-workbench/review-v2/368fad1a2a15f4d014dd.png",
+      "image_sha256": "d25071c715e652c283c0b7b51b511c012306a466f5aaad9fad43f7b63e087e34",
+      "evidence_id": "d83a66c6b218c8b7e32dc0e9"
+    },
+    "D": null,
+    "O": {
+      "evidence_id": "fbc1e7605d228cd85dae55a8",
+      "image": "output/localization-v1/crops-v1/fbc1e7605d228cd85dae55a8.png",
+      "image_sha256": "74748952ef3a6e4ed6b2fe6ce3bd67a36ae9c606256f0901c816d28612c4d5a5",
+      "source_rect": [
+        263,
+        176,
+        383,
+        271
+      ],
+      "detection_ids": [],
+      "oracle_assisted": true
+    },
+    "detector_usable_candidates": 0,
+    "detector_status": "missing",
+    "oracle_status": "reviewed"
+  },
+  {
+    "sample_id": "d83a66c6b218c8b7e32dc0e9",
+    "aliases": [
+      {
+        "id": "368fad1a2a15f4d014dd",
+        "kind": "state"
+      },
+      {
+        "id": "13",
+        "kind": "pilot"
+      }
+    ],
+    "episode_id": "dv-af669d3e3a486780",
+    "entity_id": "dv-af669d3e3a486780:object-174",
+    "image_sha256": "d25071c715e652c283c0b7b51b511c012306a466f5aaad9fad43f7b63e087e34",
+    "video_sha256": "ba4187971be31f11df1f0ce257c5759037a0170342fcd5f1e0f0fd81dba6517d",
+    "frame_index": 0,
+    "pts_us": 0,
+    "split": "test",
+    "F": {
+      "image": "output/state-workbench/review-v2/368fad1a2a15f4d014dd.png",
+      "image_sha256": "d25071c715e652c283c0b7b51b511c012306a466f5aaad9fad43f7b63e087e34",
+      "evidence_id": "d83a66c6b218c8b7e32dc0e9"
+    },
+    "D": null,
+    "O": {
+      "evidence_id": "fbc1e7605d228cd85dae55a8",
+      "image": "output/localization-v1/crops-v1/fbc1e7605d228cd85dae55a8.png",
+      "image_sha256": "74748952ef3a6e4ed6b2fe6ce3bd67a36ae9c606256f0901c816d28612c4d5a5",
+      "source_rect": [
+        263,
+        176,
+        383,
+        271
+      ],
+      "detection_ids": [],
+      "oracle_assisted": true
+    },
+    "detector_usable_candidates": 0,
+    "detector_status": "missing",
+    "oracle_status": "reviewed"
+  }
+]

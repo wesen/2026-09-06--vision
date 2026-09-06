@@ -91,3 +91,30 @@ def test_detector_join_checks_artifacts_and_distinguishes_missing_frame(tmp_path
     frame_file.write_text(frame_file.read_text()+'\n')
     with pytest.raises(ValueError, match='artifact changed'):
         load_detections([sample], tmp_path)
+
+
+def test_crop_policy_keeps_ambiguity_and_matches_oracle_raster(tmp_path, monkeypatch):
+    import json
+    from PIL import Image
+    from video_workbench.registry import file_hash
+    from video_workbench.localization import crops
+    s, r = fixture()
+    path = tmp_path / 'source.png'
+    image = Image.new('RGB', (100, 100), 'blue')
+    image.paste('red', (0, 0, 20, 20))
+    image.save(path)
+    s.update(image=str(path), image_sha256=file_hash(path), aliases=[{'kind': 'state', 'id': 'state'}], episode_id='episode', requested_entity='entity', video_sha256='video', frame_index=0, pts_us=0)
+    r['image_sha256'] = s['image_sha256']
+    (tmp_path/'samples.json').write_text(json.dumps([s]))
+    reviews = tmp_path/'reviews.json'
+    reviews.write_text(json.dumps([r]))
+    detections = [dict(detection_id='d', class_name='microwave', score=.8, xyxy=[0, 0, 20, 20])]
+    monkeypatch.setattr(crops, 'load_detections', lambda *args: ({'s': detections}, {}))
+    result = crops.prepare(tmp_path, reviews, 'unused', tmp_path/'one')['samples'][0]
+    assert result['D']['source_rect'] == result['O']['source_rect'] == [0, 0, 25, 25]
+    assert result['D']['image_sha256'] == result['O']['image_sha256']
+    assert Image.open(result['D']['image']).size == (320, 240)
+    detections.append(dict(detections[0], detection_id='other', xyxy=[50, 50, 80, 80]))
+    ambiguous = crops.prepare(tmp_path, reviews, 'unused', tmp_path/'two')['samples'][0]
+    assert ambiguous['D'] is None and ambiguous['detector_status'] == 'ambiguous'
+    assert ambiguous['O'] is not None

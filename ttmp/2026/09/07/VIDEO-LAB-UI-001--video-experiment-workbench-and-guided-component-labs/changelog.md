@@ -17,3 +17,5 @@
 - User feedback: split Project browser into Code directory tree and Tickets workspaces; use sans-serif for highlighted code and code blocks. Browser smoke and screenshots recorded in diary Step 7.
 
 - Continued with saved-run timelines and exact settings restoration; browser verified seeking without changing the form and restoring all options. Added Code/Tickets and timeline screenshots for the future report.
+
+- Fixed eight-frame preview overflow with shrinkable columns and wrapping thumbnails. Added combined preset/component/model history filters shared by comparison selectors; responsive and filter browser smoke passed.

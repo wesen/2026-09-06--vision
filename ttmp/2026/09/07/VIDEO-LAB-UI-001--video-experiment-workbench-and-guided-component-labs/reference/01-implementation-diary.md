@@ -513,3 +513,64 @@ Read analysis.js loadRunSettings and resultTimeline. Open run-c91ef4d1a5c54ed9, 
 ### Technical details
 
 UI assets are served directly, so this update required no server restart. Existing service PID 33408 remains available over Tailscale. Screenshots are in the ticket various/ directory.
+
+## Step 9: Keep evidence previews within the workspace and filter history
+
+Fixed the reported eight-frame preview overflow and added filtering to saved experiments. The workspace columns now stay within the viewport, thumbnails wrap, and the same filters govern history and both comparison selectors.
+
+### Prompt Context
+
+**User prompt (verbatim):**
+
+the top view should stay a consistent width and wrap the thumbnails, it seems to grow horizontally rn. can't paste it over ssh, but basically I see 8 frames after loading and it pushes the parameter pane out. 
+
+Allow filtering run history by experiment preset / component / model to make it easier to select
+
+**Assistant interpretation:** Keep the parameter pane visible after loading multiple frames and make saved experiments easier to find by preset, component and model.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+### What I did
+
+- Changed desktop columns to minmax(0, ...) and allowed panels/controls to shrink within their grid tracks.
+- Replaced the horizontal thumbnail strip with a wrapping responsive grid.
+- Added combined preset/component/model filters, matching-run counts, clear filters and an empty state.
+- Unified preset definitions for experiment setup and saved-option matching.
+- Removed the duplicate history fetch/render path; filtering survives history refresh.
+- Captured p9-wrapped-eight-frame-preview.png and p9-filtered-history.png.
+
+### Why
+
+Grid min-content sizing let thumbnail content expand the left column and displace the parameter pane. Unfiltered run lists made selecting comparable experiments difficult.
+
+### What worked
+
+At 1280 px, the parameter pane stayed at x=771.20 with width 484.80 before and after loading eight frames; thumbnails wrapped into two rows and page width remained 1280 px. At 960 px thumbnails occupied three rows with no overflow. At 740 px the layout stacked into one 708 px column with page width 740 px. Preset native matched two runs, reasoning plus Qwen matched two, conflicting filters matched zero with Compare disabled, and clearing filters restored all twelve current runs.
+
+### What didn't work
+
+No new failure in browser smoke. Historical runs do not record the original preset selection, so preset filters explicitly match saved component/model/FPS rather than inventing provenance.
+
+### What I learned
+
+Preventing overflow requires shrinking the grid tracks and their children as well as wrapping the thumbnails. Filtering the comparison selectors alongside the history avoids showing unrelated candidates.
+
+### What was tricky to build
+
+The old history code fetched and rendered twice, which could overwrite filtering during a refresh. A single fetch path now retains filter values and calls one renderer; filter changes clear stale comparison output. Preset matching is documented in the UI and applies to existing runs without modifying artifacts.
+
+### What warrants a second pair of eyes
+
+Verify the layout on the user's actual SSH/Tailscale client screen and try combinations of filters against newly created runs.
+
+### What should be done in the future
+
+Continue collecting screenshots and user feedback. If historical preset provenance becomes necessary, add explicit run metadata rather than infer it.
+
+### Code review instructions
+
+Inspect viewer.html grid/thumbnail styles and history filter controls; analysis.js matchingHistory, renderHistory and refreshHistory. Load run-c91ef4d1a5c54ed9 settings and verify eight frames wrap without moving the parameter pane. Filter history and confirm both comparison selectors have the same candidates.
+
+### Technical details
+
+Presentation-only browser smoke; no model inference or server restart required. Existing user-created runs were read without modification. UI assets remain live on mimimi:8780.

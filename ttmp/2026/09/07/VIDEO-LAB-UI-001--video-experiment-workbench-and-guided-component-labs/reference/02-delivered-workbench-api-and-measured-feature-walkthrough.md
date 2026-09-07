@@ -131,3 +131,11 @@ Completed results now provide their own video player, exact saved-frame display 
 Use **Load settings to modify and rerun** to explicitly restore the saved source, range, sampling, crop, model and component options. The application regenerates the evidence preview but does not automatically launch inference. Edit one option and run a new experiment to preserve the original for comparison.
 
 ![Saved-run timeline and exact visual evidence](../various/p8-timeline-detail.png)
+
+## 8. Responsive previews and history filters
+
+Input thumbnails wrap into rows within the evidence column. The parameter column retains its width while frames load; narrow screens stack the columns. Run history and both comparison selectors share preset, component and model filters. Filters combine, and Clear filters restores the full list. Preset filtering matches saved component/model/sample-rate settings, including older runs; it does not claim to reconstruct which preset the user originally selected.
+
+![Eight-frame preview within a fixed-width workspace](../various/p9-wrapped-eight-frame-preview.png)
+
+![Filtered history and comparison choices](../various/p9-filtered-history.png)

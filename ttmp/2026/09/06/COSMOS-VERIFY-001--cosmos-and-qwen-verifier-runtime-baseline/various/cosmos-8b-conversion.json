@@ -1,0 +1,89 @@
+{
+  "source_repo": "nvidia/Cosmos-Reason2-8B",
+  "source_revision": "a9fae2cf89dc64db96b12860417f0eb403013bb9",
+  "local_path": "output/models/cosmos-reason2-8b-8bit-local",
+  "conversion": {
+    "engine": "mlx-vlm",
+    "version": "0.6.17",
+    "bits": 8,
+    "group_size": 64,
+    "mode": "affine",
+    "trust_remote_code": false
+  },
+  "seconds": 15.215663708047941,
+  "conversion_seconds": 8.634272333001718,
+  "hashing_seconds": 6.581391792045906,
+  "files": [
+    {
+      "name": "README.md",
+      "size": 84,
+      "sha256": "9a272b5949a803ab6eadf0703706dab183229952e2b374501d1069d0f6d16557"
+    },
+    {
+      "name": "chat_template.jinja",
+      "size": 5292,
+      "sha256": "3636d0f0bd6bef02654cdffdc447b79cb2cef8ab02cc75267345946291a489e4"
+    },
+    {
+      "name": "chat_template.json",
+      "size": 5499,
+      "sha256": "5c72a170d2a4a1a3bc5adad2e689ae28138a9700e5b8c96c0266331e86c0acce"
+    },
+    {
+      "name": "config.json",
+      "size": 2408,
+      "sha256": "208bbbd6435399060ed3192c9a148f08d1e65d4fc94415fc105f7020d12d1dc6"
+    },
+    {
+      "name": "generation_config.json",
+      "size": 269,
+      "sha256": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44"
+    },
+    {
+      "name": "model-00001-of-00002.safetensors",
+      "size": 5343910285,
+      "sha256": "bab6dfbe80dd103d1e5c2e45a05d7253048d79ab831464a4816940fd6065b1d9"
+    },
+    {
+      "name": "model-00002-of-00002.safetensors",
+      "size": 4511968892,
+      "sha256": "98a4f33b6d3444a7a4ec2b877731b41a487025847c28e3a9f02a70fa966a69bd"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "size": 121590,
+      "sha256": "f0c7d58aedf357517d51965dd1456d77b7abb30c100409a24a9d891aa463e94a"
+    },
+    {
+      "name": "preprocessor_config.json",
+      "size": 390,
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+    },
+    {
+      "name": "processor_config.json",
+      "size": 991,
+      "sha256": "45fc17c8dd2474af6b493b52483c26c0584b0082d368c480f9fa611e73070040"
+    },
+    {
+      "name": "tokenizer.json",
+      "size": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "size": 733,
+      "sha256": "15d9c5ecb9cfd3c63e5be36629d00b7e21f32ce7c54037fc7fdb02033bca1d13"
+    },
+    {
+      "name": "video_preprocessor_config.json",
+      "size": 385,
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+    },
+    {
+      "name": "vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  ],
+  "claim": "Local quantized conversion; no full-precision numerical parity claim."
+}

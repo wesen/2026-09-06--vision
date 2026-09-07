@@ -12,7 +12,7 @@ def validate_request(request):
     if request['property']!='door_open':raise ValueError('initial verifier supports door_open only')
     if not all(integer(request[k]) for k in ('event_us','allowed_start_us','allowed_end_us','as_of_us','max_output_tokens','deadline_ms')):raise ValueError('integer request clocks/limits required')
     if not request['allowed_start_us']<=request['event_us']<request['allowed_end_us'] or request['event_us']>request['as_of_us']:raise ValueError('request event outside horizon')
-    if not 1<=request['max_output_tokens']<=512 or not 1<=request['deadline_ms']<=120000:raise ValueError('request exceeds runtime limits')
+    if not 1<=request['max_output_tokens']<=4096 or not 1<=request['deadline_ms']<=120000:raise ValueError('request exceeds runtime limits')
     frames=request['frames']
     if not isinstance(frames,list) or not 1<=len(frames)<=4:raise ValueError('one to four approved frames required')
     ids=[]

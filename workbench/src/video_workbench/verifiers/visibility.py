@@ -50,3 +50,44 @@ def parse_visibility(request, raw):
     except (ValueError,TypeError) as exc:
         return dict(status='invalid',reason=str(exc),raw=raw,normalizations=changes,schema_version=SCHEMA_VERSION)
     return dict(status='ok',answer=bound,visibility={k:value[k] for k in ('target_identified','door_observable')},raw=raw,normalizations=changes,schema_version=SCHEMA_VERSION)
+
+
+REASONING_INSTRUCTION = """Reason step by step using only the supplied image. Identify the appliance and its door surface. Examine visible detail and occlusion. Compare direct evidence of an open door with direct evidence of a seated closed door. Choose unknown if neither is established. Do not infer state from the person's activity or an assumed history.
+Write your reasoning inside <think> and </think>.
+Immediately after </think>, return exactly one final JSON object with the specified visibility fields. Put no additional prose after the final JSON."""
+
+
+def experiment_prompt(request, profile):
+    from .profiles import validate_profile
+    validate_profile(profile, request)
+    text = prompt(request, 'visibility')
+    if profile['prompt_style'] == 'reasoning':
+        text = text.replace('Return one JSON object, no prose, with these exact fields:',
+                            'Your final answer must be one JSON object with these exact fields:')
+        text += '\n' + REASONING_INSTRUCTION
+    return text
+
+
+def parse_experiment(request, raw, profile, finish_reason=None):
+    from .profiles import validate_profile, CONTRACT_VERSION
+    validate_profile(profile, request)
+    final = None
+    try:
+        if not isinstance(raw, str) or len(raw.encode('utf-8')) > 256 * 1024:
+            raise ValueError('raw response exceeds UTF-8 size limit')
+        if finish_reason == 'length':
+            raise ValueError('generation truncated at token limit')
+        final = raw
+        if profile['prompt_style'] == 'reasoning':
+            value = raw.strip()
+            if not value.startswith('<think>') or value.count('<think>') != 1 or value.count('</think>') != 1:
+                raise ValueError('incomplete or repeated reasoning envelope')
+            body, final = value[len('<think>'):].split('</think>', 1)
+            if not body.strip() or not final.strip():
+                raise ValueError('empty reasoning or missing final answer')
+        checked = parse_visibility(request, final)
+        return dict(checked, raw=raw, final_text=final, schema_version=CONTRACT_VERSION,
+                    output_style=profile['prompt_style'])
+    except (ValueError, UnicodeError) as exc:
+        return dict(status='invalid', reason=str(exc), raw=raw, final_text=final,
+                    normalizations=[], schema_version=CONTRACT_VERSION, output_style=profile['prompt_style'])

@@ -8,6 +8,7 @@ from fastapi.responses import HTMLResponse, FileResponse
 from .catalog import Catalog, ROOT
 from .contracts import Selection, Experiment, Handoff
 from .manager import Manager,write
+from .configurations import Configurations,SaveConfiguration
 from contextlib import asynccontextmanager
 from .evidence import prepare
 from .resources import Resources
@@ -17,6 +18,7 @@ import time
 def create_app(root=ROOT):
     root=Path(root); catalog=Catalog(root); output=root/'output/video-lab'; output.mkdir(exist_ok=True,parents=True)
     manager=Manager(catalog,output)
+    configurations=Configurations(catalog,output)
     @asynccontextmanager
     async def lifespan(app):
         yield
@@ -39,6 +41,19 @@ def create_app(root=ROOT):
         try: s=catalog.get(eid)
         except ValueError as e: raise HTTPException(409,str(e))
         return FileResponse(s['video'],media_type='video/mp4')
+    @app.get('/v1/lab/configurations')
+    def saved_configurations():return dict(configurations=configurations.list())
+
+    @app.post('/v1/lab/configurations',status_code=201)
+    def save_configuration(request:SaveConfiguration):
+        try:return configurations.save(request)
+        except ValueError as e:raise HTTPException(422,str(e))
+
+    @app.get('/v1/lab/configurations/{identifier}')
+    def load_configuration(identifier:str):
+        try:return configurations.get(identifier)
+        except ValueError as e:raise HTTPException(422,str(e))
+
     @app.post('/v1/lab/render-yaml')
     def render_yaml(value:object=Body(default=None)):
         from .presentation import highlighted_yaml

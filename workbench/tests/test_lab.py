@@ -139,3 +139,22 @@ def test_yaml_endpoint_accepts_null():
         response=client.post('/v1/lab/render-yaml',content='null',headers={'Content-Type':'application/json'})
         assert response.status_code==200
         assert response.json()['yaml'].startswith('null')
+
+def test_saved_configuration_identity_and_prompt(tmp_path):
+    from video_workbench.lab.configurations import Configurations,SaveConfiguration
+    class FakeCatalog:
+        sha='a'*64
+        def get(self,eid):return dict(video_sha256=self.sha,split='test',media={'duration_us':3000000})
+    catalog=FakeCatalog();store=Configurations(catalog,tmp_path)
+    request=SaveConfiguration(name='  Fridge baseline  ',notes='Compare crop context',options=Experiment(episode_id='x',component='reasoning',model='qwen'))
+    saved=store.save(request)
+    assert saved['name']=='Fridge baseline'
+    assert saved['options']['prompt']==saved['prompt_snapshot']['prompt']
+    assert saved['prompt_snapshot']['custom'] is False
+    assert store.get(saved['configuration_id'])==saved
+    second=store.save(request)
+    assert second['configuration_id']!=saved['configuration_id'] and len(store.list())==2
+    catalog.sha='b'*64
+    with pytest.raises(ValueError,match='identity changed'):store.get(saved['configuration_id'])
+    with pytest.raises(ValueError,match='unknown'):store.get('../request')
+    with pytest.raises(ValueError):SaveConfiguration(name=' ',options=request.options)

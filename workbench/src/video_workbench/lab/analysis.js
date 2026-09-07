@@ -373,3 +373,46 @@ loadRunSettings = async function(record) {
     await refreshPrompt();
 };
 refreshPrompt();
+
+// Named configurations are drafts, not inference results or historical reviews.
+const configurationPanel=node('details');configurationPanel.id='configurationPanel';
+configurationPanel.append(node('summary','Saved experiment configurations'));
+const configurationName=node('input');configurationName.id='configurationName';configurationName.maxLength=100;
+const configurationNotes=node('textarea');configurationNotes.id='configurationNotes';configurationNotes.maxLength=4000;configurationNotes.rows=2;
+const savedConfiguration=node('select');savedConfiguration.id='savedConfiguration';
+const configurationStatus=node('p');configurationStatus.setAttribute('role','status');
+for(const [text,control] of [['Configuration name',configurationName],['Notes: purpose and expected comparison',configurationNotes],['Saved configuration',savedConfiguration]]){const label=node('label',text);label.append(control);configurationPanel.append(label)}
+const saveConfiguration=node('button','Save current settings');saveConfiguration.id='saveConfiguration';
+const loadConfiguration=node('button','Load selected configuration');loadConfiguration.id='loadConfiguration';
+const configurationDetails=node('div');
+configurationPanel.append(saveConfiguration,loadConfiguration,configurationStatus,configurationDetails,node('p','Save creates a new named snapshot of the current form, including source, range, crop, model parameters and prompt. Load verifies source identity and previews the inputs; it does not run a model. Reasoning templates are frozen as literal prompts so future template changes do not alter saved text. Reset to default prompt opts back into the current template. Notes describe your intent, not a ground-truth label. Saving again creates a separate entry.','muted'));
+$('preset').parentElement.after(configurationPanel);
+async function refreshConfigurations(selected='') {
+    const result=await api('/v1/lab/configurations');
+    savedConfiguration.replaceChildren(new Option('Choose saved settings',''),...result.configurations.map(c=>new Option(`${c.name} · ${c.options.component}/${c.options.model} · ${new Date(c.created_unix*1000).toLocaleString()}`,c.configuration_id)));
+    savedConfiguration.value=selected;loadConfiguration.disabled=!selected;
+}
+savedConfiguration.onchange=()=>{loadConfiguration.disabled=!savedConfiguration.value;configurationDetails.replaceChildren()};
+saveConfiguration.onclick=async()=>{
+    saveConfiguration.disabled=true;
+    try {
+        const value=await api('/v1/lab/configurations',{name:configurationName.value,notes:configurationNotes.value,options:experiment()});
+        await refreshConfigurations(value.configuration_id);
+        configurationDetails.replaceChildren(jsonDetails('Saved configuration YAML',value));
+        configurationStatus.textContent='Saved '+value.name+' · '+value.configuration_id+'. No model was run.';
+    }catch(error){configurationStatus.textContent=error.message}
+    finally{saveConfiguration.disabled=false}
+};
+loadConfiguration.onclick=async()=>{
+    loadConfiguration.disabled=true;
+    try {
+        const value=await api('/v1/lab/configurations/'+savedConfiguration.value);
+        await loadRunSettings({run_id:value.configuration_id,request:{options:value.options}});
+        configurationName.value=value.name;configurationNotes.value=value.notes;
+        configurationDetails.replaceChildren(jsonDetails('Loaded configuration YAML',value));
+        configurationStatus.textContent='Loaded '+value.name+'. Inspect the preview, edit if needed, then Run experiment.';
+        $('runStatus').textContent=configurationStatus.textContent;
+    }catch(error){configurationStatus.textContent=error.message}
+    finally{loadConfiguration.disabled=!savedConfiguration.value}
+};
+refreshConfigurations().catch(error=>configurationStatus.textContent=error.message);

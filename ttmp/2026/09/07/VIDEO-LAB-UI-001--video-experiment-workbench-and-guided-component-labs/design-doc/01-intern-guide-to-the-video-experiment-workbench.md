@@ -321,3 +321,43 @@ The implementation now includes fresh ridge action inference in addition to froz
 `lab/analysis.py` implements comparison, independent reviews/export, frozen action inspection and exact-point rules. `lab/analysis.js` renders comparisons, similarity plots, rule controls and reviews. `/resources` is the separate project browser requested during feedback. The authoritative API reference and measured walkthrough are in [Delivered workbench API and measured feature walkthrough](../reference/02-delivered-workbench-api-and-measured-feature-walkthrough.md), with screenshots and a table of actual local runs.
 
 The first implementation uses one shared sampling grid per selection, then filters those actual frames into embedding windows. It does not restart a sampling grid at every arbitrary window boundary. This policy is saved in each result. Comparison checks exact frame identities before reporting matched evidence. The API's generated schema is archived with the ticket and served at `/openapi.json`.
+
+## Detector-to-reasoner handoff
+
+A completed perception run now exposes a selection of refrigerator, microwave and oven detections. Each choice names the actual timestamp, class, detector score and detection ID. Selecting a box and clicking **Preview reasoning draft** restores the source in the experiment form and prepares one exact frame for Qwen. The user can switch to Cosmos or alter decoding settings before explicitly starting inference. This implements the bounded dependency described in the original design without introducing a general workflow scheduler.
+
+```text
+saved perception run → select frame + detection + padding
+                     → POST /v1/lab/handoff
+                     → resolve source coordinates → preview exact RGB crop
+                     → choose Qwen / Cosmos → POST /v1/lab/runs
+                     → validate binding again → independent door-state result
+```
+
+The accepted question remains `door_open`. A detector score estimates the detector's confidence in an object class and box; it is not a door-state probability. A segmentation mask is not passed into the reasoner. The input is an ordinary rectangular RGB crop, including the requested surrounding context. Restricting available classes avoids offering a door-state question for a detected person, tie or unrelated prop.
+
+For a detection box `(x0,y0,x1,y1)` in the parent input image, let `dx = p*(x1-x0)` and `dy = p*(y1-y0)`, where `p` is padding per side. Add the parent input crop's source origin `(ox,oy)` before rounding outward and clamping to the source image dimensions `(W,H)`:
+
+```python
+left   = max(0, floor(ox + x0 - dx))
+top    = max(0, floor(oy + y0 - dy))
+right  = min(W, ceil(ox + x1 + dx))
+bottom = min(H, ceil(oy + y1 + dy))
+normalized_crop = (left/W, top/H, right/W, bottom/H)
+selection = [frame.pts_us, frame.pts_us + 1)  # microseconds; one exact frame
+```
+
+The one-microsecond half-open interval selects the saved timestamp without substituting a nearby frame. It does not claim the observation persists for one microsecond or longer. The existing evidence preparation function applies normalized crop coordinates; its actual saved PNG and recorded pixel crop are authoritative if floating-point rounding affects a boundary.
+
+### API and implementation references
+
+- `POST /v1/lab/handoff` accepts `run_id`, `frame_id`, `detection_id`, and `padding` in `[0,1]`. It returns validated experiment `options` and resolved `provenance`; it does not execute a model.
+- `POST /v1/lab/runs` accepts those options, including optional `handoff`. The manager resolves that reference again, checks source identity, and rejects changed source, timestamp interval, FPS, crop, target or component. Changing model or decoding parameters is permitted.
+- Saved `request.json.handoff` includes parent request/result SHA-256, source metadata and partition, parent frame, detection, padding and intended source crop. The existing export includes this request without altering the original perception output.
+- `workbench/src/video_workbench/lab/contracts.py`: bounded handoff reference and optional experiment binding.
+- `workbench/src/video_workbench/lab/handoff.py`: coordinate conversion, parent lookup and submission validation.
+- `workbench/src/video_workbench/lab/manager.py`: admission, evidence preparation and persisted provenance.
+- `workbench/src/video_workbench/lab/analysis.js`: selection controls, guided draft loading, explicit detach and saved provenance display.
+- `workbench/tests/test_lab.py::test_detection_handoff_nested_crop_and_binding`: nested crop offsets, unsupported edits, missing detection and unsafe parent identifier rejection.
+
+The UI displays an explicit **Detach detection provenance to edit evidence** control. Detaching creates an ordinary independent experiment; the old parent result remains unchanged. Keeping the binding while editing protected fields produces HTTP 422. Comparisons list differing handoff references alongside other option differences and continue comparing actual image hashes and timestamps. A full-frame versus crop comparison changes visual evidence, so it is an input intervention rather than an isolated model comparison.

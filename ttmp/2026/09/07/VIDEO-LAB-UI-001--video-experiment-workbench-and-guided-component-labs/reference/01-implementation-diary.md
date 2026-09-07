@@ -14,6 +14,8 @@ RelatedFiles:
       Note: Tailscale and loopback listeners
     - Path: repo://workbench/src/video_workbench/lab/browser.html
       Note: Separate searchable project browser
+    - Path: repo://workbench/src/video_workbench/lab/handoff.py
+      Note: Detector crop resolution and provenance validation (bc4916f)
     - Path: repo://workbench/src/video_workbench/lab/resources.py
       Note: Curated resources and Markdown/source renderer
 ExternalSources: []
@@ -22,6 +24,7 @@ LastUpdated: 2026-09-07T10:05:37.359166-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 # Implementation diary
@@ -686,3 +689,59 @@ Read saveComparisonUrl, refreshHistory restoration and the comparison request ge
 ### Technical details
 
 Query fields: tab, a, b, history_preset, history_component, history_model, compare=1. No inference or server restart was needed; links reference saved runs on mimimi:8780.
+
+## Step 12: Connect selected detections to exact reasoning crops
+
+Implemented the next concrete dependency from the UI design: a selected perception box can prepare an explicit single-image reasoning draft. The saved child request preserves the parent evidence rather than treating a manually entered crop as a detector result.
+
+The actual browser smoke selected the refrigerator at 10 seconds, previewed a 185×289 crop and completed a fresh Qwen run. Screenshots preserve both the editable draft and completed evidence.
+
+### Prompt Context
+
+**User prompt (verbatim):** ok, continue with the ticket
+
+**Assistant interpretation:** Continue VIDEO-LAB-UI-001 with the next useful designed component connection.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+**Commit (code):** bc4916f
+
+### What I did
+
+Added task oxek, printed the P7 plan, implemented validated handoff references and coordinate conversion, added UI selection/padding/preview/detach controls, and stored parent provenance with child runs. Updated the intern guide and measured walkthrough.
+
+### Why
+
+The user can now test whether object-local visual context changes reasoning while retaining a reproducible connection to the detector output.
+
+### What worked
+
+`PYTHONPATH=workbench/src workbench/.venv/bin/pytest -q workbench/tests/test_lab.py`: 8 passed. Browser draft preserved exact 10-second PTS. Qwen run `run-6903f06e821843c6` completed in 13.583 seconds with parsed status ok and state closed. Parent provenance was saved. Start slip printed successfully at 2026-09-07T15:57:06Z.
+
+### What didn't work
+
+The deliberate tampering probe returned HTTP 422: `handoff crop changed; detach the handoff before editing evidence`. This expected rejection generated the browser network-console error. Pytest emitted existing Starlette/httpx and AnyIO deprecation warnings; no test failures occurred. Automatic approval review rejected remote completion-slip printing: the payload included ticket, commit and network-access details destined for an unverified remote service. Generated p12-handoff-done.yaml locally with --no-print; completion printing remains pending permission. The earlier start slip printed successfully.
+
+### What I learned
+
+Detector coordinates belong to the parent input crop, not necessarily the original source. Applying its origin is required before normalization. Cropping did not change the closed answer in this one smoke case.
+
+### What was tricky to build
+
+Retaining a binding while permitting model/decoding changes, restoring all form fields without silently dropping provenance, and keeping the exact timestamp separate from apparent state duration.
+
+### What warrants a second pair of eyes
+
+Whether the restricted appliance selection and context padding are sufficient for meaningful user experiments. Actual PNG crop boundaries remain authoritative over floating-point normalized coordinates.
+
+### What should be done in the future
+
+Collect user feedback on the draft workflow, then compare crop versus full-frame reasoning on a deliberately varied set with independent visual reviews. Do not infer quality from successful execution.
+
+### Code review instructions
+
+Start with lab/handoff.py, follow Manager.start admission and saved request construction, then inspect analysis.js detectionHandoffPanel and loadRunSettings wrappers. Read the focused nested-crop test and inspect both p12 screenshots.
+
+### Technical details
+
+Draft endpoint: POST /v1/lab/handoff. The request binding contains parent run/frame/detection IDs plus padding. Submission snapshots parent request/result hashes and verifies evidence-source equality. The selected interval is [10000000,10000001) microseconds; actual crop is [167,94,352,383]. Server was idle before restart; the live service remains on mimimi:8780. Source implementation commit: bc4916f.

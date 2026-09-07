@@ -331,6 +331,42 @@
         }
       }
     },
+    "/v1/lab/handoff": {
+      "post": {
+        "summary": "Handoff",
+        "operationId": "handoff_v1_lab_handoff_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Handoff"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/lab/runs": {
       "get": {
         "summary": "Runs",
@@ -1104,6 +1140,16 @@
             ],
             "title": "Crop"
           },
+          "handoff": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Handoff"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "component": {
             "type": "string",
             "enum": [
@@ -1248,6 +1294,41 @@
         },
         "type": "object",
         "title": "HTTPValidationError"
+      },
+      "Handoff": {
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "pattern": "^run-[a-f0-9]{16}$",
+            "title": "Run Id"
+          },
+          "frame_id": {
+            "type": "string",
+            "pattern": "^frame-[0-9]+$",
+            "title": "Frame Id"
+          },
+          "detection_id": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Detection Id"
+          },
+          "padding": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Padding",
+            "default": 0.15
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "run_id",
+          "frame_id",
+          "detection_id"
+        ],
+        "title": "Handoff"
       },
       "Review": {
         "properties": {

@@ -1,0 +1,1976 @@
+{
+  "samples_sha256": "cc5571e0e6d75a35bd694158dc8de243897948d88ac9636d8852020694e3fbae",
+  "labels_sha256": "04444f0f3666371fb3505e274fea6e08a501e121bfbef984fa7ddf87a280a6bf",
+  "cases": [
+    {
+      "sample_id": "979332678203cc020cdb",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "979332678203cc020cdb",
+        "entity_id": "dv-22a313084fd800ca:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-22a313084fd800ca",
+        "entity_id": "dv-22a313084fd800ca:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 0,
+        "allowed_start_us": 0,
+        "allowed_end_us": 1,
+        "as_of_us": 250000,
+        "frames": [
+          {
+            "id": "979332678203cc020cdb",
+            "episode_id": "dv-22a313084fd800ca",
+            "entity_id": "dv-22a313084fd800ca:object-155",
+            "pts_us": 0,
+            "available_us": 0,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/979332678203cc020cdb.png",
+            "sha256": "4cd6a973882d733d6637e9f91dcdefc99f76ffa72edf596d3ea59b16e10f72f0"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "5ba318de545651b7beede3118470fd9b20aa7d242db8ec96cf0087c2146c9b25"
+      }
+    },
+    {
+      "sample_id": "ea921f01daddff9c3dd3",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "ea921f01daddff9c3dd3",
+        "entity_id": "dv-22a313084fd800ca:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-22a313084fd800ca",
+        "entity_id": "dv-22a313084fd800ca:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 700000,
+        "allowed_start_us": 700000,
+        "allowed_end_us": 700001,
+        "as_of_us": 950000,
+        "frames": [
+          {
+            "id": "ea921f01daddff9c3dd3",
+            "episode_id": "dv-22a313084fd800ca",
+            "entity_id": "dv-22a313084fd800ca:object-155",
+            "pts_us": 700000,
+            "available_us": 700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/ea921f01daddff9c3dd3.png",
+            "sha256": "e97144c34242ffed73db6f32b7ff2d34ff3e6e1ab4013b98b853708b9934855b"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "6c4a92190292bd2307a4282c5ca44422bf4de41cd5ee281de7b463c2a3d6eece"
+      }
+    },
+    {
+      "sample_id": "0f4a6097570b8d780d58",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "0f4a6097570b8d780d58",
+        "entity_id": "dv-22a313084fd800ca:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-22a313084fd800ca",
+        "entity_id": "dv-22a313084fd800ca:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 1400000,
+        "allowed_start_us": 1400000,
+        "allowed_end_us": 1400001,
+        "as_of_us": 1650000,
+        "frames": [
+          {
+            "id": "0f4a6097570b8d780d58",
+            "episode_id": "dv-22a313084fd800ca",
+            "entity_id": "dv-22a313084fd800ca:object-155",
+            "pts_us": 1400000,
+            "available_us": 1400000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/0f4a6097570b8d780d58.png",
+            "sha256": "f6345ee179876f988bfea93b6bd2df78c33789a01ee4e28af2d6ef79608cacd8"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "05c59929122d7d91f1f496e8eb7ffd366fd2241f9fbe0d4030cd004b825efae8"
+      }
+    },
+    {
+      "sample_id": "a07cb01407069a7a9b47",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "a07cb01407069a7a9b47",
+        "entity_id": "dv-22a313084fd800ca:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-22a313084fd800ca",
+        "entity_id": "dv-22a313084fd800ca:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 2100000,
+        "allowed_start_us": 2100000,
+        "allowed_end_us": 2100001,
+        "as_of_us": 2350000,
+        "frames": [
+          {
+            "id": "a07cb01407069a7a9b47",
+            "episode_id": "dv-22a313084fd800ca",
+            "entity_id": "dv-22a313084fd800ca:object-155",
+            "pts_us": 2100000,
+            "available_us": 2100000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/a07cb01407069a7a9b47.png",
+            "sha256": "d4fd3f338fb26e13cad180a679b4987ad6fc26a91a701e0f0be23df5f2f1436f"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "d6b8d277cc35bec74a64b15fe0b4b73eb73f51c0ac7c75271eac3d723a974804"
+      }
+    },
+    {
+      "sample_id": "6544361b41bb5ab255ec",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "6544361b41bb5ab255ec",
+        "entity_id": "dv-22a313084fd800ca:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-22a313084fd800ca",
+        "entity_id": "dv-22a313084fd800ca:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 2800000,
+        "allowed_start_us": 2800000,
+        "allowed_end_us": 2800001,
+        "as_of_us": 3050000,
+        "frames": [
+          {
+            "id": "6544361b41bb5ab255ec",
+            "episode_id": "dv-22a313084fd800ca",
+            "entity_id": "dv-22a313084fd800ca:object-155",
+            "pts_us": 2800000,
+            "available_us": 2800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/6544361b41bb5ab255ec.png",
+            "sha256": "713244807ca0cc5ff9853aaa424e761a6ed76701882df7d4a29b5aa0200322db"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "0321de53ab3dc6d496ae5edc7146dcee7e648cd3e6d76852b81384f2579b26e5"
+      }
+    },
+    {
+      "sample_id": "e20b92b0bd2ef88d9ff1",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "e20b92b0bd2ef88d9ff1",
+        "entity_id": "dv-22a313084fd800ca:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-22a313084fd800ca",
+        "entity_id": "dv-22a313084fd800ca:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 3500000,
+        "allowed_start_us": 3500000,
+        "allowed_end_us": 3500001,
+        "as_of_us": 3750000,
+        "frames": [
+          {
+            "id": "e20b92b0bd2ef88d9ff1",
+            "episode_id": "dv-22a313084fd800ca",
+            "entity_id": "dv-22a313084fd800ca:object-155",
+            "pts_us": 3500000,
+            "available_us": 3500000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/e20b92b0bd2ef88d9ff1.png",
+            "sha256": "e42adee6000b862e335cfe6ecb24510c374a3e1ad88389cf302d5da311a60068"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "69cd06b91a3606b16bba3c3dcc0ab80d05228b30c1adfc002efdfe1b2f3f77b6"
+      }
+    },
+    {
+      "sample_id": "368fad1a2a15f4d014dd",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "368fad1a2a15f4d014dd",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-af669d3e3a486780",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 0,
+        "allowed_start_us": 0,
+        "allowed_end_us": 1,
+        "as_of_us": 250000,
+        "frames": [
+          {
+            "id": "368fad1a2a15f4d014dd",
+            "episode_id": "dv-af669d3e3a486780",
+            "entity_id": "dv-af669d3e3a486780:object-174",
+            "pts_us": 0,
+            "available_us": 0,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/368fad1a2a15f4d014dd.png",
+            "sha256": "d25071c715e652c283c0b7b51b511c012306a466f5aaad9fad43f7b63e087e34"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "bdcd6242d559ae9462934dea8bc2e710b87c6543d2effbf8e4f2c644551ae3a4"
+      }
+    },
+    {
+      "sample_id": "f3d36b8d9db5ad18729b",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "f3d36b8d9db5ad18729b",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-af669d3e3a486780",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 1400000,
+        "allowed_start_us": 1400000,
+        "allowed_end_us": 1400001,
+        "as_of_us": 1650000,
+        "frames": [
+          {
+            "id": "f3d36b8d9db5ad18729b",
+            "episode_id": "dv-af669d3e3a486780",
+            "entity_id": "dv-af669d3e3a486780:object-174",
+            "pts_us": 1400000,
+            "available_us": 1400000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/f3d36b8d9db5ad18729b.png",
+            "sha256": "6ba2c45d1bc951e40736919a8609a67d3b0e17896cfd54ade2c5f230e978c008"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "c601b7a46841036e6823eb95acb8e290fa0f1d4e8aef0bc8cb7d446f6a30e0c3"
+      }
+    },
+    {
+      "sample_id": "00f9f41f212c8c4f4dad",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "00f9f41f212c8c4f4dad",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-af669d3e3a486780",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 2900000,
+        "allowed_start_us": 2900000,
+        "allowed_end_us": 2900001,
+        "as_of_us": 3150000,
+        "frames": [
+          {
+            "id": "00f9f41f212c8c4f4dad",
+            "episode_id": "dv-af669d3e3a486780",
+            "entity_id": "dv-af669d3e3a486780:object-174",
+            "pts_us": 2900000,
+            "available_us": 2900000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/00f9f41f212c8c4f4dad.png",
+            "sha256": "2e7a10ae8710b795bb2d13084c31bf9f57afdb7ed0db9c899c3ba19dd0240307"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "418b018e0bc493f4eda3bcd02b07896f7b3d4f0b91f499fd5bbb59c230d7586f"
+      }
+    },
+    {
+      "sample_id": "6841f9b19a46a0b2fbcf",
+      "split": "test",
+      "expected": "unknown",
+      "label": {
+        "sample_id": "6841f9b19a46a0b2fbcf",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "property": "door_open",
+        "value": null,
+        "observability": "ambiguous",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Visible hand/edge and partial motion do not establish the door angle reliably."
+      },
+      "request": {
+        "episode_id": "dv-af669d3e3a486780",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 4300000,
+        "allowed_start_us": 4300000,
+        "allowed_end_us": 4300001,
+        "as_of_us": 4550000,
+        "frames": [
+          {
+            "id": "6841f9b19a46a0b2fbcf",
+            "episode_id": "dv-af669d3e3a486780",
+            "entity_id": "dv-af669d3e3a486780:object-174",
+            "pts_us": 4300000,
+            "available_us": 4300000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/6841f9b19a46a0b2fbcf.png",
+            "sha256": "3311f024048ee8c0fc535e4380fc7a2f54ab0535ce8fdd39a9b8d63df83d657a"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "e4ac8709b45ac1cd5bb243ce895ee53d37fc173be9474ffce077c55700fa2246"
+      }
+    },
+    {
+      "sample_id": "d8b07f0b431364d449be",
+      "split": "test",
+      "expected": "true",
+      "label": {
+        "sample_id": "d8b07f0b431364d449be",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "property": "door_open",
+        "value": true,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door projects away from appliance and/or interior opening is visible; ajar counts open."
+      },
+      "request": {
+        "episode_id": "dv-af669d3e3a486780",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 5800000,
+        "allowed_start_us": 5800000,
+        "allowed_end_us": 5800001,
+        "as_of_us": 6050000,
+        "frames": [
+          {
+            "id": "d8b07f0b431364d449be",
+            "episode_id": "dv-af669d3e3a486780",
+            "entity_id": "dv-af669d3e3a486780:object-174",
+            "pts_us": 5800000,
+            "available_us": 5800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/d8b07f0b431364d449be.png",
+            "sha256": "ca0cd5d1467cbcdbff147590ecca3901da1cd4fdaee4d88c0fed07226760e625"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "5292b548b63153b2dbccbfde988faacaaf3b50e094a8147878ed173f00da390b"
+      }
+    },
+    {
+      "sample_id": "3b2d8850f23d8ee56164",
+      "split": "test",
+      "expected": "true",
+      "label": {
+        "sample_id": "3b2d8850f23d8ee56164",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "property": "door_open",
+        "value": true,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door projects away from appliance and/or interior opening is visible; ajar counts open."
+      },
+      "request": {
+        "episode_id": "dv-af669d3e3a486780",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 7200000,
+        "allowed_start_us": 7200000,
+        "allowed_end_us": 7200001,
+        "as_of_us": 7450000,
+        "frames": [
+          {
+            "id": "3b2d8850f23d8ee56164",
+            "episode_id": "dv-af669d3e3a486780",
+            "entity_id": "dv-af669d3e3a486780:object-174",
+            "pts_us": 7200000,
+            "available_us": 7200000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/3b2d8850f23d8ee56164.png",
+            "sha256": "0f6b52fddf16550634142a30cc933d34394d8db6dfcee3f022c02f2cfc7f91f2"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "4af7f478393b39ac17d02d6c638a231c36f4eaa712b153a06802d08b85efd44a"
+      }
+    },
+    {
+      "sample_id": "547dc79a1570dba9aa12",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "547dc79a1570dba9aa12",
+        "entity_id": "dv-b78c9de6650abd04:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-b78c9de6650abd04",
+        "entity_id": "dv-b78c9de6650abd04:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 0,
+        "allowed_start_us": 0,
+        "allowed_end_us": 1,
+        "as_of_us": 250000,
+        "frames": [
+          {
+            "id": "547dc79a1570dba9aa12",
+            "episode_id": "dv-b78c9de6650abd04",
+            "entity_id": "dv-b78c9de6650abd04:object-155",
+            "pts_us": 0,
+            "available_us": 0,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/547dc79a1570dba9aa12.png",
+            "sha256": "3efb51792827ad5316e0edbe9f99ce4657154524eb624e0b463c2f4c05c3368e"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "4dcff39234d69068d09d0252ddf6677f8a90472c4002f36411d3f3810c811f6e"
+      }
+    },
+    {
+      "sample_id": "54740488f75e8af943e5",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "54740488f75e8af943e5",
+        "entity_id": "dv-b78c9de6650abd04:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-b78c9de6650abd04",
+        "entity_id": "dv-b78c9de6650abd04:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 1700000,
+        "allowed_start_us": 1700000,
+        "allowed_end_us": 1700001,
+        "as_of_us": 1950000,
+        "frames": [
+          {
+            "id": "54740488f75e8af943e5",
+            "episode_id": "dv-b78c9de6650abd04",
+            "entity_id": "dv-b78c9de6650abd04:object-155",
+            "pts_us": 1700000,
+            "available_us": 1700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/54740488f75e8af943e5.png",
+            "sha256": "cc1f66bea6440884074f5923ce467d426ef338cece1bc11ae162a027cc7558ef"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "366ad93e538eebb74270feecb66a6e4fa846cee4a7d0d852b29b3e1ac9baf9d3"
+      }
+    },
+    {
+      "sample_id": "b7d18aa39daa1c8332b5",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "b7d18aa39daa1c8332b5",
+        "entity_id": "dv-b78c9de6650abd04:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-b78c9de6650abd04",
+        "entity_id": "dv-b78c9de6650abd04:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 3400000,
+        "allowed_start_us": 3400000,
+        "allowed_end_us": 3400001,
+        "as_of_us": 3650000,
+        "frames": [
+          {
+            "id": "b7d18aa39daa1c8332b5",
+            "episode_id": "dv-b78c9de6650abd04",
+            "entity_id": "dv-b78c9de6650abd04:object-155",
+            "pts_us": 3400000,
+            "available_us": 3400000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/b7d18aa39daa1c8332b5.png",
+            "sha256": "0dc992d90e18b200f22ac59eb32925f0dcf6aa0b394ede532f541cd4ccf89c83"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "bb48ea5818c90265b345ef6aec8b0ecc88487cf9e5b01958a241792c0bb7253f"
+      }
+    },
+    {
+      "sample_id": "7107c552a41f6a280732",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "7107c552a41f6a280732",
+        "entity_id": "dv-b78c9de6650abd04:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-b78c9de6650abd04",
+        "entity_id": "dv-b78c9de6650abd04:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 5100000,
+        "allowed_start_us": 5100000,
+        "allowed_end_us": 5100001,
+        "as_of_us": 5350000,
+        "frames": [
+          {
+            "id": "7107c552a41f6a280732",
+            "episode_id": "dv-b78c9de6650abd04",
+            "entity_id": "dv-b78c9de6650abd04:object-155",
+            "pts_us": 5100000,
+            "available_us": 5100000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/7107c552a41f6a280732.png",
+            "sha256": "f4b7baa8cd9d8ad5e18eda3b23f950c06f87158b2cde5dd9146741d94e9b3cdd"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "8d709cfe6bd8a54c7be69eec5198b385705dfbb606f42327430a0c6db69e3565"
+      }
+    },
+    {
+      "sample_id": "f6fde327f1e1c9a270a3",
+      "split": "development",
+      "expected": "true",
+      "label": {
+        "sample_id": "f6fde327f1e1c9a270a3",
+        "entity_id": "dv-b78c9de6650abd04:object-155",
+        "property": "door_open",
+        "value": true,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door projects away from appliance and/or interior opening is visible; ajar counts open."
+      },
+      "request": {
+        "episode_id": "dv-b78c9de6650abd04",
+        "entity_id": "dv-b78c9de6650abd04:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 6800000,
+        "allowed_start_us": 6800000,
+        "allowed_end_us": 6800001,
+        "as_of_us": 7050000,
+        "frames": [
+          {
+            "id": "f6fde327f1e1c9a270a3",
+            "episode_id": "dv-b78c9de6650abd04",
+            "entity_id": "dv-b78c9de6650abd04:object-155",
+            "pts_us": 6800000,
+            "available_us": 6800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/f6fde327f1e1c9a270a3.png",
+            "sha256": "698c309e13db7d561774262067a0075e4630872c7c5326f5dad145c9c3260997"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "9df87eaf7e85b25c70b6147a04b0584318b65e563fd7f0549f8c3dd29362f9f0"
+      }
+    },
+    {
+      "sample_id": "a13df5791fefc26e7932",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "a13df5791fefc26e7932",
+        "entity_id": "dv-b78c9de6650abd04:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-b78c9de6650abd04",
+        "entity_id": "dv-b78c9de6650abd04:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 8500000,
+        "allowed_start_us": 8500000,
+        "allowed_end_us": 8500001,
+        "as_of_us": 8750000,
+        "frames": [
+          {
+            "id": "a13df5791fefc26e7932",
+            "episode_id": "dv-b78c9de6650abd04",
+            "entity_id": "dv-b78c9de6650abd04:object-155",
+            "pts_us": 8500000,
+            "available_us": 8500000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/a13df5791fefc26e7932.png",
+            "sha256": "685fbb5f5de0f359713b31c595fe34ee1a6f75c68fe4e8e3855715cafabf72f3"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "db13b21f8f46c3b86912586ea18b81f96200b6493ce2c88319cfe7ada8b18930"
+      }
+    },
+    {
+      "sample_id": "fde11c7c74b32842849e",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "fde11c7c74b32842849e",
+        "entity_id": "dv-bc11642e2c451020:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-bc11642e2c451020",
+        "entity_id": "dv-bc11642e2c451020:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 0,
+        "allowed_start_us": 0,
+        "allowed_end_us": 1,
+        "as_of_us": 250000,
+        "frames": [
+          {
+            "id": "fde11c7c74b32842849e",
+            "episode_id": "dv-bc11642e2c451020",
+            "entity_id": "dv-bc11642e2c451020:object-155",
+            "pts_us": 0,
+            "available_us": 0,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/fde11c7c74b32842849e.png",
+            "sha256": "0b1b399f3584f166e61244280d06c99f0c7eb7bf39f026ac91b19594a209410d"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "46f368c76df45f4ccceea2d554a3ac1c6c8fe852386824ab3cd9497f745f9ff9"
+      }
+    },
+    {
+      "sample_id": "b689185f1f8fba76434b",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "b689185f1f8fba76434b",
+        "entity_id": "dv-bc11642e2c451020:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-bc11642e2c451020",
+        "entity_id": "dv-bc11642e2c451020:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 700000,
+        "allowed_start_us": 700000,
+        "allowed_end_us": 700001,
+        "as_of_us": 950000,
+        "frames": [
+          {
+            "id": "b689185f1f8fba76434b",
+            "episode_id": "dv-bc11642e2c451020",
+            "entity_id": "dv-bc11642e2c451020:object-155",
+            "pts_us": 700000,
+            "available_us": 700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/b689185f1f8fba76434b.png",
+            "sha256": "f08732e06988adade880c0bff55594b1ea1a14b38dbe2dc8faafdbe23432702f"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "2659272df1e8df3cc9d943bd761e126cf2a2893c46e7e8f5e204c5bbf74bcda3"
+      }
+    },
+    {
+      "sample_id": "257a74975dffeb6d7438",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "257a74975dffeb6d7438",
+        "entity_id": "dv-bc11642e2c451020:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-bc11642e2c451020",
+        "entity_id": "dv-bc11642e2c451020:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 1400000,
+        "allowed_start_us": 1400000,
+        "allowed_end_us": 1400001,
+        "as_of_us": 1650000,
+        "frames": [
+          {
+            "id": "257a74975dffeb6d7438",
+            "episode_id": "dv-bc11642e2c451020",
+            "entity_id": "dv-bc11642e2c451020:object-155",
+            "pts_us": 1400000,
+            "available_us": 1400000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/257a74975dffeb6d7438.png",
+            "sha256": "83364b67503994f063300232f81c5df17cab8216728e750249e0c6e75c4141f5"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "d5188776d33761cb5b94492978e4392574151732eb83d0024107611d7156e892"
+      }
+    },
+    {
+      "sample_id": "718d974ce7dff4fb5822",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "718d974ce7dff4fb5822",
+        "entity_id": "dv-bc11642e2c451020:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-bc11642e2c451020",
+        "entity_id": "dv-bc11642e2c451020:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 2100000,
+        "allowed_start_us": 2100000,
+        "allowed_end_us": 2100001,
+        "as_of_us": 2350000,
+        "frames": [
+          {
+            "id": "718d974ce7dff4fb5822",
+            "episode_id": "dv-bc11642e2c451020",
+            "entity_id": "dv-bc11642e2c451020:object-155",
+            "pts_us": 2100000,
+            "available_us": 2100000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/718d974ce7dff4fb5822.png",
+            "sha256": "488990467500872d7708237bdfec710d6848f4774b7fab3e85c804105cd80e13"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "0f30109d5d122f2be3d05b5483185c2774fe46e9b7c426e7ee9485b13dd1201d"
+      }
+    },
+    {
+      "sample_id": "3b61e5cba11acd80d8f9",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "3b61e5cba11acd80d8f9",
+        "entity_id": "dv-bc11642e2c451020:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-bc11642e2c451020",
+        "entity_id": "dv-bc11642e2c451020:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 2800000,
+        "allowed_start_us": 2800000,
+        "allowed_end_us": 2800001,
+        "as_of_us": 3050000,
+        "frames": [
+          {
+            "id": "3b61e5cba11acd80d8f9",
+            "episode_id": "dv-bc11642e2c451020",
+            "entity_id": "dv-bc11642e2c451020:object-155",
+            "pts_us": 2800000,
+            "available_us": 2800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/3b61e5cba11acd80d8f9.png",
+            "sha256": "9c024e51b2e3ecb5475d0030e5a2ea97ca8c68fdf40455224f04af2437366b88"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "38ec2474106001bf8a90ba8a13e54ef8d5cbbe6512441403d7ca63da6d308518"
+      }
+    },
+    {
+      "sample_id": "27dc166feea1d5e31445",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "27dc166feea1d5e31445",
+        "entity_id": "dv-bc11642e2c451020:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-bc11642e2c451020",
+        "entity_id": "dv-bc11642e2c451020:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 3500000,
+        "allowed_start_us": 3500000,
+        "allowed_end_us": 3500001,
+        "as_of_us": 3750000,
+        "frames": [
+          {
+            "id": "27dc166feea1d5e31445",
+            "episode_id": "dv-bc11642e2c451020",
+            "entity_id": "dv-bc11642e2c451020:object-155",
+            "pts_us": 3500000,
+            "available_us": 3500000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/27dc166feea1d5e31445.png",
+            "sha256": "84e37bf231fd3aafd20ef48bebe5d289a00dc0fda6a0dcdab3ea31bdb102faa1"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "9db0f1763e62951bf6a2914b7b7e6627a2d9ff1d5d22c49dc72eb26dae7da47c"
+      }
+    },
+    {
+      "sample_id": "325160a04f6eb536fba3",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "325160a04f6eb536fba3",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-d6a1fa73f031c686",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 0,
+        "allowed_start_us": 0,
+        "allowed_end_us": 1,
+        "as_of_us": 250000,
+        "frames": [
+          {
+            "id": "325160a04f6eb536fba3",
+            "episode_id": "dv-d6a1fa73f031c686",
+            "entity_id": "dv-d6a1fa73f031c686:object-174",
+            "pts_us": 0,
+            "available_us": 0,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/325160a04f6eb536fba3.png",
+            "sha256": "958f63334440e397cc0cdd1a23e9443e6ac140e3f491fe5f4a602f5857ce14a6"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "825f3399050c933da7d61bf9ac6095d65a2efba0d81439a8f4f0d8fcfeb30faa"
+      }
+    },
+    {
+      "sample_id": "79c26846e9cc2fd6d3da",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "79c26846e9cc2fd6d3da",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-d6a1fa73f031c686",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 800000,
+        "allowed_start_us": 800000,
+        "allowed_end_us": 800001,
+        "as_of_us": 1050000,
+        "frames": [
+          {
+            "id": "79c26846e9cc2fd6d3da",
+            "episode_id": "dv-d6a1fa73f031c686",
+            "entity_id": "dv-d6a1fa73f031c686:object-174",
+            "pts_us": 800000,
+            "available_us": 800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/79c26846e9cc2fd6d3da.png",
+            "sha256": "0f369ed94a7c80cfaf8dd88c7b4c1c3494c8f90d321c28eb304ce6fa565588da"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "d8f954f65f38cd171acf89e70f87ae6dee6edd3bf204767513f487a9e43b0a36"
+      }
+    },
+    {
+      "sample_id": "aa8858ceb4bb02f0c1f7",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "aa8858ceb4bb02f0c1f7",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-d6a1fa73f031c686",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 1500000,
+        "allowed_start_us": 1500000,
+        "allowed_end_us": 1500001,
+        "as_of_us": 1750000,
+        "frames": [
+          {
+            "id": "aa8858ceb4bb02f0c1f7",
+            "episode_id": "dv-d6a1fa73f031c686",
+            "entity_id": "dv-d6a1fa73f031c686:object-174",
+            "pts_us": 1500000,
+            "available_us": 1500000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/aa8858ceb4bb02f0c1f7.png",
+            "sha256": "e752041fd0c21c55d770f8f81552859245d79280ec1d4cabd9355d596f48bc62"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "c9e0f2f47d53d93a1163aaa7b057a4bef63c7d9192ead76d225461442ff96a26"
+      }
+    },
+    {
+      "sample_id": "e64b72c881b1ab686b0b",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "e64b72c881b1ab686b0b",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-d6a1fa73f031c686",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 2300000,
+        "allowed_start_us": 2300000,
+        "allowed_end_us": 2300001,
+        "as_of_us": 2550000,
+        "frames": [
+          {
+            "id": "e64b72c881b1ab686b0b",
+            "episode_id": "dv-d6a1fa73f031c686",
+            "entity_id": "dv-d6a1fa73f031c686:object-174",
+            "pts_us": 2300000,
+            "available_us": 2300000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/e64b72c881b1ab686b0b.png",
+            "sha256": "51a948046edd0134d923f26375c05ce2c277eea7436c6fbba30c91713b975118"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "7fbd05e86b069f24f2e9b2fb65ca2c3a9e68ebfe3caa91c6fd34806b70cf3ffd"
+      }
+    },
+    {
+      "sample_id": "f29f72f1b843b07e3f76",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "f29f72f1b843b07e3f76",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-d6a1fa73f031c686",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 3000000,
+        "allowed_start_us": 3000000,
+        "allowed_end_us": 3000001,
+        "as_of_us": 3250000,
+        "frames": [
+          {
+            "id": "f29f72f1b843b07e3f76",
+            "episode_id": "dv-d6a1fa73f031c686",
+            "entity_id": "dv-d6a1fa73f031c686:object-174",
+            "pts_us": 3000000,
+            "available_us": 3000000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/f29f72f1b843b07e3f76.png",
+            "sha256": "ea21e5d33a617dceea118dad17f597aafccde24c8f8d492ca3f9abdaaac56f1b"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "a6fb4c83aadda77746246b2359ae03a9de300c28ae7a7b48156d68141714593f"
+      }
+    },
+    {
+      "sample_id": "8f9344968d1c0a03f3a4",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "8f9344968d1c0a03f3a4",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-d6a1fa73f031c686",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 3800000,
+        "allowed_start_us": 3800000,
+        "allowed_end_us": 3800001,
+        "as_of_us": 4050000,
+        "frames": [
+          {
+            "id": "8f9344968d1c0a03f3a4",
+            "episode_id": "dv-d6a1fa73f031c686",
+            "entity_id": "dv-d6a1fa73f031c686:object-174",
+            "pts_us": 3800000,
+            "available_us": 3800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/8f9344968d1c0a03f3a4.png",
+            "sha256": "0fa6f2f8312a1613123ee86daf1c301d4f6619748e44ab3cf1504b6579907f9d"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "b9ce682503f44d0eb84b44c15253ee745f2f4033bd42e901f58d88bfa709402f"
+      }
+    },
+    {
+      "sample_id": "20b49477bb37c4d77b2e",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "20b49477bb37c4d77b2e",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-ddf28e0a6b4c30db",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 0,
+        "allowed_start_us": 0,
+        "allowed_end_us": 1,
+        "as_of_us": 250000,
+        "frames": [
+          {
+            "id": "20b49477bb37c4d77b2e",
+            "episode_id": "dv-ddf28e0a6b4c30db",
+            "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+            "pts_us": 0,
+            "available_us": 0,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/20b49477bb37c4d77b2e.png",
+            "sha256": "20c9259077a3aa9bca323c1087ff6a8a64ea0b5dcaf0808c7b24951383970c93"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "eb5e224b70d63dfc0f98e1f9e284b22eeae85d62e48430abd57866989eda79de"
+      }
+    },
+    {
+      "sample_id": "8fc3c8b53d01f9835c9b",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "8fc3c8b53d01f9835c9b",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-ddf28e0a6b4c30db",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 1700000,
+        "allowed_start_us": 1700000,
+        "allowed_end_us": 1700001,
+        "as_of_us": 1950000,
+        "frames": [
+          {
+            "id": "8fc3c8b53d01f9835c9b",
+            "episode_id": "dv-ddf28e0a6b4c30db",
+            "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+            "pts_us": 1700000,
+            "available_us": 1700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/8fc3c8b53d01f9835c9b.png",
+            "sha256": "213d7f9f91fe01ead7214704bae05043dff51f693c8a3e2cb099f1a7368b956f"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "89403b9edfba014671a0b4710b205d25d8ff40c234e064a29fa99a29cd509034"
+      }
+    },
+    {
+      "sample_id": "45df4e9daa253a8186e2",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "45df4e9daa253a8186e2",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-ddf28e0a6b4c30db",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 3300000,
+        "allowed_start_us": 3300000,
+        "allowed_end_us": 3300001,
+        "as_of_us": 3550000,
+        "frames": [
+          {
+            "id": "45df4e9daa253a8186e2",
+            "episode_id": "dv-ddf28e0a6b4c30db",
+            "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+            "pts_us": 3300000,
+            "available_us": 3300000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/45df4e9daa253a8186e2.png",
+            "sha256": "65c86aabf541f41de3981ba6535fc20b348ca3fc0b818354e571c8518954c05f"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "4bccf5d84d432d3503ecd9e2e79716638dbd8315a6110cdfb3dd0368d2cc9dca"
+      }
+    },
+    {
+      "sample_id": "fce806b627123fa16e23",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "fce806b627123fa16e23",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-ddf28e0a6b4c30db",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 5000000,
+        "allowed_start_us": 5000000,
+        "allowed_end_us": 5000001,
+        "as_of_us": 5250000,
+        "frames": [
+          {
+            "id": "fce806b627123fa16e23",
+            "episode_id": "dv-ddf28e0a6b4c30db",
+            "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+            "pts_us": 5000000,
+            "available_us": 5000000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/fce806b627123fa16e23.png",
+            "sha256": "2eb7b129c9613c807dec3cd7822f0f484cd5b5157910003899e34a0b79dd6023"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "7352dfc9a8546233c1145bd99d311b4678316ce82af6359bb027ea6f94eb97df"
+      }
+    },
+    {
+      "sample_id": "e7a35e506e70e5e76205",
+      "split": "development",
+      "expected": "true",
+      "label": {
+        "sample_id": "e7a35e506e70e5e76205",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "property": "door_open",
+        "value": true,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door projects away from appliance and/or interior opening is visible; ajar counts open."
+      },
+      "request": {
+        "episode_id": "dv-ddf28e0a6b4c30db",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 6600000,
+        "allowed_start_us": 6600000,
+        "allowed_end_us": 6600001,
+        "as_of_us": 6850000,
+        "frames": [
+          {
+            "id": "e7a35e506e70e5e76205",
+            "episode_id": "dv-ddf28e0a6b4c30db",
+            "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+            "pts_us": 6600000,
+            "available_us": 6600000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/e7a35e506e70e5e76205.png",
+            "sha256": "17b26a94ba8f120db951b81ded1367cd4204afb188245803b8051fbd0bb298cb"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "a4dc7dead0fa415143ec20358d5e9d38967063f41084de4df30b28a38eba7912"
+      }
+    },
+    {
+      "sample_id": "ddbbec0b75cf70c367d2",
+      "split": "development",
+      "expected": "false",
+      "label": {
+        "sample_id": "ddbbec0b75cf70c367d2",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-ddf28e0a6b4c30db",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 8300000,
+        "allowed_start_us": 8300000,
+        "allowed_end_us": 8300001,
+        "as_of_us": 8550000,
+        "frames": [
+          {
+            "id": "ddbbec0b75cf70c367d2",
+            "episode_id": "dv-ddf28e0a6b4c30db",
+            "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+            "pts_us": 8300000,
+            "available_us": 8300000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/ddbbec0b75cf70c367d2.png",
+            "sha256": "aeee89b57a0294f4d324290c47cbdfc12a4d0883bac016fbc60271288ae27708"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "326c9a87baf09c6eab80a743490414cffd8045fc80d31d44a6577c9f466ccbc3"
+      }
+    },
+    {
+      "sample_id": "48140edf80ae694779b0",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "48140edf80ae694779b0",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-e1975790e6ee831e",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 0,
+        "allowed_start_us": 0,
+        "allowed_end_us": 1,
+        "as_of_us": 250000,
+        "frames": [
+          {
+            "id": "48140edf80ae694779b0",
+            "episode_id": "dv-e1975790e6ee831e",
+            "entity_id": "dv-e1975790e6ee831e:object-174",
+            "pts_us": 0,
+            "available_us": 0,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/48140edf80ae694779b0.png",
+            "sha256": "9dc78f3e30f47307b7bbfbea665d4a87e4485ac087b121ce7bc2a273d0776b1c"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "e6118aa1d3158120bcbbe1fa454f64cd92b21a6d56c759aeb5b79760085110f5"
+      }
+    },
+    {
+      "sample_id": "d51b6da035bc72efb9e3",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "d51b6da035bc72efb9e3",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-e1975790e6ee831e",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 1400000,
+        "allowed_start_us": 1400000,
+        "allowed_end_us": 1400001,
+        "as_of_us": 1650000,
+        "frames": [
+          {
+            "id": "d51b6da035bc72efb9e3",
+            "episode_id": "dv-e1975790e6ee831e",
+            "entity_id": "dv-e1975790e6ee831e:object-174",
+            "pts_us": 1400000,
+            "available_us": 1400000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/d51b6da035bc72efb9e3.png",
+            "sha256": "571d76ab7172a97af17cb48de0354d18b61abe88595fd1dfc7146bcd851be37c"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "68fe5b00e8a4f3ff52dc544e928d921c4e81056c6c14e28b2a86a6032b874733"
+      }
+    },
+    {
+      "sample_id": "325e171c971f4e451886",
+      "split": "test",
+      "expected": "unknown",
+      "label": {
+        "sample_id": "325e171c971f4e451886",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "property": "door_open",
+        "value": null,
+        "observability": "occluded",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Actor hides the door area needed to discriminate open from closed."
+      },
+      "request": {
+        "episode_id": "dv-e1975790e6ee831e",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 2900000,
+        "allowed_start_us": 2900000,
+        "allowed_end_us": 2900001,
+        "as_of_us": 3150000,
+        "frames": [
+          {
+            "id": "325e171c971f4e451886",
+            "episode_id": "dv-e1975790e6ee831e",
+            "entity_id": "dv-e1975790e6ee831e:object-174",
+            "pts_us": 2900000,
+            "available_us": 2900000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/325e171c971f4e451886.png",
+            "sha256": "22f268707eec1577e066052596620809e95f9a6d05130e598ca990d55193c670"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "44309733c4cad83672a2d1771f6c6ef95546a3f6447a3235f27f438e2806ec98"
+      }
+    },
+    {
+      "sample_id": "39256b36b90054852ffc",
+      "split": "test",
+      "expected": "unknown",
+      "label": {
+        "sample_id": "39256b36b90054852ffc",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "property": "door_open",
+        "value": null,
+        "observability": "occluded",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Actor hides the door area needed to discriminate open from closed."
+      },
+      "request": {
+        "episode_id": "dv-e1975790e6ee831e",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 4300000,
+        "allowed_start_us": 4300000,
+        "allowed_end_us": 4300001,
+        "as_of_us": 4550000,
+        "frames": [
+          {
+            "id": "39256b36b90054852ffc",
+            "episode_id": "dv-e1975790e6ee831e",
+            "entity_id": "dv-e1975790e6ee831e:object-174",
+            "pts_us": 4300000,
+            "available_us": 4300000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/39256b36b90054852ffc.png",
+            "sha256": "8bdfc25c03a9a91bacce01a0f28d2374b48315d2e1de5940331144f31033578c"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "8dbc1d3b381af3971e85f9446f6118d57b723b3349412a5b0eacebbca00289a9"
+      }
+    },
+    {
+      "sample_id": "26b3d6c18008f285898f",
+      "split": "test",
+      "expected": "unknown",
+      "label": {
+        "sample_id": "26b3d6c18008f285898f",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "property": "door_open",
+        "value": null,
+        "observability": "occluded",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Actor hides the door area needed to discriminate open from closed."
+      },
+      "request": {
+        "episode_id": "dv-e1975790e6ee831e",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 5800000,
+        "allowed_start_us": 5800000,
+        "allowed_end_us": 5800001,
+        "as_of_us": 6050000,
+        "frames": [
+          {
+            "id": "26b3d6c18008f285898f",
+            "episode_id": "dv-e1975790e6ee831e",
+            "entity_id": "dv-e1975790e6ee831e:object-174",
+            "pts_us": 5800000,
+            "available_us": 5800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/26b3d6c18008f285898f.png",
+            "sha256": "d6f6795e04c5426444cc07bfca1e98be9590e12099b59cfc5df0e42fdae50802"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "0d66ab3c71f0d5f0ef6bf5752607626fc8191fc75719beb59d8487f0c029fe0a"
+      }
+    },
+    {
+      "sample_id": "f9d1139afbf1b488a8ba",
+      "split": "test",
+      "expected": "unknown",
+      "label": {
+        "sample_id": "f9d1139afbf1b488a8ba",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "property": "door_open",
+        "value": null,
+        "observability": "occluded",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Actor hides the door area needed to discriminate open from closed."
+      },
+      "request": {
+        "episode_id": "dv-e1975790e6ee831e",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 7200000,
+        "allowed_start_us": 7200000,
+        "allowed_end_us": 7200001,
+        "as_of_us": 7450000,
+        "frames": [
+          {
+            "id": "f9d1139afbf1b488a8ba",
+            "episode_id": "dv-e1975790e6ee831e",
+            "entity_id": "dv-e1975790e6ee831e:object-174",
+            "pts_us": 7200000,
+            "available_us": 7200000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/f9d1139afbf1b488a8ba.png",
+            "sha256": "520a433e1f31c74e93cc3d42a3cf664d4c5770fee0a7dbdbe6fd2b62846b571a"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "19c8af5424649c26f82f6f5f72991001577d50d93a1a4d374c97abb33c8ba909"
+      }
+    },
+    {
+      "sample_id": "1bd7e6615b89580c9999",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "1bd7e6615b89580c9999",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-e2244cb1a1000aeb",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 0,
+        "allowed_start_us": 0,
+        "allowed_end_us": 1,
+        "as_of_us": 250000,
+        "frames": [
+          {
+            "id": "1bd7e6615b89580c9999",
+            "episode_id": "dv-e2244cb1a1000aeb",
+            "entity_id": "dv-e2244cb1a1000aeb:object-174",
+            "pts_us": 0,
+            "available_us": 0,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/1bd7e6615b89580c9999.png",
+            "sha256": "acaf034199af4f77fedb17b2a16c52b31196540c5149d95ec8048476e96f9893"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "1fd93414663c6429084db543b72b8a378433d1f3f473967f2b58525ee1a41d77"
+      }
+    },
+    {
+      "sample_id": "cdda3b070fbff50974e4",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "cdda3b070fbff50974e4",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-e2244cb1a1000aeb",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 800000,
+        "allowed_start_us": 800000,
+        "allowed_end_us": 800001,
+        "as_of_us": 1050000,
+        "frames": [
+          {
+            "id": "cdda3b070fbff50974e4",
+            "episode_id": "dv-e2244cb1a1000aeb",
+            "entity_id": "dv-e2244cb1a1000aeb:object-174",
+            "pts_us": 800000,
+            "available_us": 800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/cdda3b070fbff50974e4.png",
+            "sha256": "62afebb844f6dcb4ec7f82b99379b2a77585e8ec8c0f31f8f9d59a15a752a07b"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "2fa52ea91762aaa1f7e12121b19988a254cb3c8337a621e91a93f07b94899efa"
+      }
+    },
+    {
+      "sample_id": "f64bc31c1fc0326c5bc8",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "f64bc31c1fc0326c5bc8",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-e2244cb1a1000aeb",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 1500000,
+        "allowed_start_us": 1500000,
+        "allowed_end_us": 1500001,
+        "as_of_us": 1750000,
+        "frames": [
+          {
+            "id": "f64bc31c1fc0326c5bc8",
+            "episode_id": "dv-e2244cb1a1000aeb",
+            "entity_id": "dv-e2244cb1a1000aeb:object-174",
+            "pts_us": 1500000,
+            "available_us": 1500000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/f64bc31c1fc0326c5bc8.png",
+            "sha256": "3ab9d2cabc47f7e9a574627dff5f37f3cbda89484e7abc9f244fa0ccc2271009"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "022c44b4f9f22839592f9ce0207ee1151d83b518db3f938fdb3fd94ee28bbba5"
+      }
+    },
+    {
+      "sample_id": "dc24c549ddf6f2a2e66a",
+      "split": "test",
+      "expected": "false",
+      "label": {
+        "sample_id": "dc24c549ddf6f2a2e66a",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "property": "door_open",
+        "value": false,
+        "observability": "visible",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Door panel appears seated against the appliance; no visible opening."
+      },
+      "request": {
+        "episode_id": "dv-e2244cb1a1000aeb",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 2300000,
+        "allowed_start_us": 2300000,
+        "allowed_end_us": 2300001,
+        "as_of_us": 2550000,
+        "frames": [
+          {
+            "id": "dc24c549ddf6f2a2e66a",
+            "episode_id": "dv-e2244cb1a1000aeb",
+            "entity_id": "dv-e2244cb1a1000aeb:object-174",
+            "pts_us": 2300000,
+            "available_us": 2300000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/dc24c549ddf6f2a2e66a.png",
+            "sha256": "c03efc1c1fa8e6a10973a46401bb8010330707fe6da812f41ecfd48f5c0a6fc5"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "b01494748322643d2b7e28f0a42338ad59b6cafffa37c215f084af81df02402e"
+      }
+    },
+    {
+      "sample_id": "ebf05194ed012d99b16a",
+      "split": "test",
+      "expected": "unknown",
+      "label": {
+        "sample_id": "ebf05194ed012d99b16a",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "property": "door_open",
+        "value": null,
+        "observability": "occluded",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Actor hides the door area needed to discriminate open from closed."
+      },
+      "request": {
+        "episode_id": "dv-e2244cb1a1000aeb",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 3000000,
+        "allowed_start_us": 3000000,
+        "allowed_end_us": 3000001,
+        "as_of_us": 3250000,
+        "frames": [
+          {
+            "id": "ebf05194ed012d99b16a",
+            "episode_id": "dv-e2244cb1a1000aeb",
+            "entity_id": "dv-e2244cb1a1000aeb:object-174",
+            "pts_us": 3000000,
+            "available_us": 3000000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/ebf05194ed012d99b16a.png",
+            "sha256": "1b52e5541426dd6f3c159b8c960c035fb3a25df131691ccbc0f365bbb0a28525"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "1e041cdaa2fcc36268e8312fdb840e4f01bb3ff3ed0ce1a329fb0bbbbd92401e"
+      }
+    },
+    {
+      "sample_id": "98f88d29e38ab6467e53",
+      "split": "test",
+      "expected": "unknown",
+      "label": {
+        "sample_id": "98f88d29e38ab6467e53",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "property": "door_open",
+        "value": null,
+        "observability": "occluded",
+        "reviewer": "codex-assistant-single-rgb-review",
+        "revision": "rgb-v2-r1",
+        "provenance": "reviewed_rgb",
+        "rationale": "Actor hides the door area needed to discriminate open from closed."
+      },
+      "request": {
+        "episode_id": "dv-e2244cb1a1000aeb",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+        "event_us": 3800000,
+        "allowed_start_us": 3800000,
+        "allowed_end_us": 3800001,
+        "as_of_us": 4050000,
+        "frames": [
+          {
+            "id": "98f88d29e38ab6467e53",
+            "episode_id": "dv-e2244cb1a1000aeb",
+            "entity_id": "dv-e2244cb1a1000aeb:object-174",
+            "pts_us": 3800000,
+            "available_us": 3800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/98f88d29e38ab6467e53.png",
+            "sha256": "0b4b990bc1a0cfceff2bc1945d455d12999173d1090c4179f99a07f78d89004b"
+          }
+        ],
+        "max_output_tokens": 256,
+        "deadline_ms": 60000,
+        "request_id": "625b45be858d91d88badda1fd40f9e99e5004e9e790b5639f8d369f6a2cf24bc"
+      }
+    }
+  ],
+  "selection": "All existing development/test reviewed RGB point-state frames; no prompt tuning; splits reported separately",
+  "limitation": "Previously reviewed small within-scene corpus, repeated frames per episode, appliance and split confounded; no independent-frame significance claim."
+}

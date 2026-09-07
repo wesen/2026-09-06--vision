@@ -333,3 +333,68 @@ Read lab/analysis.py compare, point_rule and action_artifacts; inspect analysis.
 ### Technical details
 
 Perception/reasoning feature commit 03eaa80. Native and pooled output vectors are stored separately in per-run vectors.npz; no cross-space dot product occurs. Resource browser commit ff06003.
+
+## Step 6: Finish fresh action inference, live smoke and delivery
+
+Completed the fresh action-head adapter and the final browser/API checks. The laboratory remains available over Tailscale, and the updated intern guide plus measured walkthrough were uploaded as a new reMarkable document. User feedback opportunities were offered after the evidence workspace, project browser, model execution and comparison features.
+
+### Prompt Context
+
+**User prompt (verbatim):** (see Step 1)
+
+**Assistant interpretation:** Finish the authorized workbench implementation and preserve a reproducible technical handoff while leaving the UI available for review.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+**Commit (code):** 21dc706 — Add compatible fresh action heads and finalize guided lab behavior
+
+### What I did
+
+- Added fresh native and pooled ridge action inference with matching encoder/checkpoint identities and enforced training sampling policy.
+- Added per-image verifier deadlines and complete reasoning-checkpoint identity; ran the final Qwen smoke after that change.
+- Archived the final OpenAPI schema, live API smoke, model run identities and screenshots.
+- Updated workbench README, intern guide and delivered API walkthrough.
+- Uploaded Video Laboratory Delivered Guide and Walkthrough.pdf to /ai/2026/09/07/VIDEO-LAB-UI-001 (OK: uploaded).
+
+### Why
+
+Fresh component execution, readable source and evidence-bound comparison must all work together before the workbench is useful for experiments.
+
+### What worked
+
+- Fresh native ridge run-2b41c5b71eba45ee completed in 10.41 s; pooled ridge run-354329c3cd2542a3 in 5.26 s.
+- Qwen two-image state run-fc7db205cb284dcd completed in 13.18 s.
+- YOLO/ByteTrack run-7e52c6665e804620 produced 10 records in 4.53 s.
+- Final Qwen identity/deadline run-832f394de7414eab completed in 13.41 s.
+- Seven focused tests passed. Live API smoke verified 8 frozen-action rows, exact PASS, missing-time UNKNOWN, independent review persistence and test-partition-preserving export.
+- Native/pooled comparison asserted matched evidence and different feature spaces. Browser console reported zero errors/warnings.
+
+### What didn't work
+
+No new final smoke failure. Action accuracy remains weak: native ridge predicted WALK on initial scene windows, which is recorded as model output rather than an accepted event. Current Markdown reader leaves Mermaid fences as code. Multi-image/video reasoning and fresh TCN execution remain unoffered modes.
+
+### What I learned
+
+Fresh action inference can reuse the existing trained ridge models safely only by checking the complete encoder description against the frozen training manifest, not merely matching vector dimensions.
+
+### What was tricky to build
+
+The trained action space wraps encoder identity and dataset policy; the adapter separately validates the encoder digest, feature manifest hash and head space ID. Selection-start context resets are disclosed. Final server reload occurred only after verifying no active laboratory run; the UI remains bound to loopback and Tailscale.
+
+### What warrants a second pair of eyes
+
+User review of experimental ergonomics and visual model failures. The laboratory's single worker does not coordinate GPU usage with the separate replay manager or external processes. The automated smoke review is explicitly unjudgeable and is not a human accuracy label.
+
+### What should be done in the future
+
+Use feedback and reviewed failure cases to choose the next improvements. Keep unsupported modalities explicit; do not infer that a successful smoke establishes model quality.
+
+### Code review instructions
+
+Open http://mimimi:8780/ and /resources. Read the delivered walkthrough, inspect various/final-api-smoke.json and measured-runs.json, and run PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_lab.py -q. Source readers expose #L anchors and current file SHA-256.
+
+### Technical details
+
+Final server process 32382, exec session 79936, explicit listeners 127.0.0.1:8780 and 100.113.140.75:8780. Source originals remain untracked. No source push was requested. Meaningful printed receipts: browser done 14:28:37Z; P3/P4 14:33:46Z; P4/P5 14:39:19Z; P5/P6 14:45:09Z, all HTTP 200 printed true. Early code commits: 37e1019 design, eab4b83 workspace, ff06003 project browser, 03eaa80 real model runs, 79f6bd3 comparisons.
+
+Final delivery receipt: P6 completion slip printed successfully at 2026-09-07T14:51:23Z (HTTP 200, printed true). Final project browser indexed 182 Markdown/source resources and rendered the delivered walkthrough over mimimi:8780. Ticket doctor passed; all six implementation tasks are checked. Ticket remains active for user feedback.

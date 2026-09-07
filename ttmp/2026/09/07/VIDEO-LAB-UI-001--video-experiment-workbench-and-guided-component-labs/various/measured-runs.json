@@ -1,0 +1,1676 @@
+[
+  {
+    "run_id": "run-2b41c5b71eba45ee",
+    "options": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "start_us": 0,
+      "end_us": 2000000,
+      "fps": 2.0,
+      "crop": null,
+      "component": "actions",
+      "model": "native_ridge",
+      "device": "mps",
+      "confidence": 0.25,
+      "iou": 0.7,
+      "image_size": 640,
+      "classes": [],
+      "target": "refrigerator",
+      "reasoning": false,
+      "max_tokens": 512,
+      "deadline_seconds": 120,
+      "window_seconds": 2.0,
+      "stride_seconds": 1.0,
+      "query": "A person opens a refrigerator",
+      "max_gap_seconds": 2.0
+    },
+    "source": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "split": "test",
+      "split_group": "g04",
+      "video_sha256": "e9f68c403ce40bbe5e1ae609e48587e6f3a7675570cddc55fbcef57690ad41c6",
+      "original_episode_id": "ep-7d3106fb1cac9776",
+      "dataset": "home-v1"
+    },
+    "frames": [
+      {
+        "id": "frame-0",
+        "frame_index": 0,
+        "pts_us": 0,
+        "raw_pts": 0,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000000.png",
+        "sha256": "f352c29823d937947cf19d3042877605064b6539ca9a5ec442c47cbeedaaee6a",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-5",
+        "frame_index": 5,
+        "pts_us": 500000,
+        "raw_pts": 5120,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000005.png",
+        "sha256": "0f8e09ffa2215b3dc93bee9b6144e88c153c5b375877074abc8c1ed0f27f3184",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-10",
+        "frame_index": 10,
+        "pts_us": 1000000,
+        "raw_pts": 10240,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000010.png",
+        "sha256": "4b784c61e8c1630d7b51a6b524ca66e121a0243a1cb4940e869482dc3d964c56",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-15",
+        "frame_index": 15,
+        "pts_us": 1500000,
+        "raw_pts": 15360,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000015.png",
+        "sha256": "0bf7d76e5546f893f1b0442a77bddf11e92d8a222b7394f662bff50846b023fc",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      }
+    ],
+    "status": {
+      "run_id": "run-2b41c5b71eba45ee",
+      "status": "completed",
+      "started_unix": 1788792137.923894,
+      "elapsed_seconds": 10.408060790970922
+    },
+    "result_summary": {
+      "kind": "actions",
+      "mode": "fresh-encoding-frozen-ridge",
+      "feature_space_id": "3292df2cb67f9a384041d24493084bf80a6945e5fb5ce0177a0d551e504b8ef4",
+      "encoder_space_id": "2610572d944abb10b0366c2b00aaf87e701b6f6bb6656b022eca66dd230edecd",
+      "checkpoint_sha256": "65938e1da0db5a75872f4fcfdeb831c7cb779aa08f5cf7a6645de163cf392193",
+      "seconds": 9.178676665993407
+    },
+    "states": [],
+    "windows": [
+      {
+        "start_us": 0,
+        "end_us": 500000,
+        "pts_us": [
+          0
+        ],
+        "prediction": "WALK",
+        "scores": [
+          0.14638317045446644,
+          -0.08015503961818984,
+          -0.34902574191549407,
+          0.06403173903348085,
+          0.09700260255153487,
+          0.1319299642690585,
+          0.09040786774134546,
+          0.10772360730194977,
+          0.08077971455185268,
+          0.7109221156299961
+        ],
+        "frame_ids": [
+          "frame-0"
+        ]
+      },
+      {
+        "start_us": 0,
+        "end_us": 1000000,
+        "pts_us": [
+          0,
+          500000
+        ],
+        "prediction": "WALK",
+        "scores": [
+          0.1630831385322231,
+          -0.04897649549962243,
+          -0.3518022427554003,
+          0.07593053933796981,
+          0.15211898767279317,
+          0.0805996873922184,
+          0.11491335686132106,
+          0.04237270581136753,
+          0.05038627865463689,
+          0.7213740439924935
+        ],
+        "frame_ids": [
+          "frame-0",
+          "frame-5"
+        ]
+      },
+      {
+        "start_us": 0,
+        "end_us": 1500000,
+        "pts_us": [
+          0,
+          500000,
+          1000000
+        ],
+        "prediction": "WALK",
+        "scores": [
+          0.1698955697601539,
+          0.006105568026254251,
+          -0.3363079716482533,
+          0.06605625503543,
+          0.15453209923382275,
+          0.11301977074832482,
+          0.06109539501278312,
+          0.05419716854874513,
+          0.06923986800769696,
+          0.6421662772750425
+        ],
+        "frame_ids": [
+          "frame-0",
+          "frame-5",
+          "frame-10"
+        ]
+      },
+      {
+        "start_us": 0,
+        "end_us": 2000000,
+        "pts_us": [
+          0,
+          500000,
+          1000000,
+          1500000
+        ],
+        "prediction": "WALK",
+        "scores": [
+          0.17657238130042452,
+          -0.008234413975988779,
+          -0.3243900198411939,
+          0.054893946238235077,
+          0.16811527815375876,
+          0.11671026567395587,
+          0.0851508802649362,
+          0.04651379261721872,
+          0.05626283007603293,
+          0.6284050594926208
+        ],
+        "frame_ids": [
+          "frame-0",
+          "frame-5",
+          "frame-10",
+          "frame-15"
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": "run-354329c3cd2542a3",
+    "options": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "start_us": 0,
+      "end_us": 2000000,
+      "fps": 2.0,
+      "crop": null,
+      "component": "actions",
+      "model": "pooled_ridge",
+      "device": "mps",
+      "confidence": 0.25,
+      "iou": 0.7,
+      "image_size": 640,
+      "classes": [],
+      "target": "refrigerator",
+      "reasoning": false,
+      "max_tokens": 512,
+      "deadline_seconds": 120,
+      "window_seconds": 2.0,
+      "stride_seconds": 1.0,
+      "query": "A person opens a refrigerator",
+      "max_gap_seconds": 2.0
+    },
+    "source": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "split": "test",
+      "split_group": "g04",
+      "video_sha256": "e9f68c403ce40bbe5e1ae609e48587e6f3a7675570cddc55fbcef57690ad41c6",
+      "original_episode_id": "ep-7d3106fb1cac9776",
+      "dataset": "home-v1"
+    },
+    "frames": [
+      {
+        "id": "frame-0",
+        "frame_index": 0,
+        "pts_us": 0,
+        "raw_pts": 0,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000000.png",
+        "sha256": "f352c29823d937947cf19d3042877605064b6539ca9a5ec442c47cbeedaaee6a",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-5",
+        "frame_index": 5,
+        "pts_us": 500000,
+        "raw_pts": 5120,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000005.png",
+        "sha256": "0f8e09ffa2215b3dc93bee9b6144e88c153c5b375877074abc8c1ed0f27f3184",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-10",
+        "frame_index": 10,
+        "pts_us": 1000000,
+        "raw_pts": 10240,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000010.png",
+        "sha256": "4b784c61e8c1630d7b51a6b524ca66e121a0243a1cb4940e869482dc3d964c56",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-15",
+        "frame_index": 15,
+        "pts_us": 1500000,
+        "raw_pts": 15360,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000015.png",
+        "sha256": "0bf7d76e5546f893f1b0442a77bddf11e92d8a222b7394f662bff50846b023fc",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      }
+    ],
+    "status": {
+      "run_id": "run-354329c3cd2542a3",
+      "status": "completed",
+      "started_unix": 1788792215.189239,
+      "elapsed_seconds": 5.256054374855012
+    },
+    "result_summary": {
+      "kind": "actions",
+      "mode": "fresh-encoding-frozen-ridge",
+      "feature_space_id": "92b2a1f338385a4a499cadc27b0b41c3a8d9074e4a7aab53bfa975add80c3f19",
+      "encoder_space_id": "9246fa13a4a2d32fbb78ba1614024d65bb44339b757497bf0e90cdd6f07a0bf4",
+      "checkpoint_sha256": "e376eec12ad16400fcb7df1f4f3b5aa61f2e67c942d315b25f82129c6368a0c3",
+      "seconds": 4.789910041959956
+    },
+    "states": [],
+    "windows": [
+      {
+        "start_us": 0,
+        "end_us": 500000,
+        "pts_us": [
+          0
+        ],
+        "prediction": "WALK",
+        "scores": [
+          0.2540846051932517,
+          0.10491134118308751,
+          -0.2684814241472603,
+          0.03537112549249381,
+          0.08387625646817212,
+          -0.12731079698022474,
+          0.03521871565910293,
+          -0.12870860639398396,
+          -0.024835943699430246,
+          1.0358747272247848
+        ],
+        "frame_ids": [
+          "frame-0"
+        ]
+      },
+      {
+        "start_us": 0,
+        "end_us": 1000000,
+        "pts_us": [
+          0,
+          500000
+        ],
+        "prediction": "WALK",
+        "scores": [
+          0.25491001396237223,
+          0.10369756874816904,
+          -0.26532265458283516,
+          0.03445826379714339,
+          0.10199626669052017,
+          -0.1428149275375062,
+          0.04457507845396716,
+          -0.1265063564446105,
+          -0.023527156781089627,
+          1.0185339036938634
+        ],
+        "frame_ids": [
+          "frame-0",
+          "frame-5"
+        ]
+      },
+      {
+        "start_us": 0,
+        "end_us": 1500000,
+        "pts_us": [
+          0,
+          500000,
+          1000000
+        ],
+        "prediction": "WALK",
+        "scores": [
+          0.25458458101539794,
+          0.10782122850820547,
+          -0.2648218120982171,
+          0.03291355439124501,
+          0.1140514870832252,
+          -0.14950185256162396,
+          0.04625116975319473,
+          -0.12728722293531614,
+          -0.02104098880810736,
+          1.0070298556519894
+        ],
+        "frame_ids": [
+          "frame-0",
+          "frame-5",
+          "frame-10"
+        ]
+      },
+      {
+        "start_us": 0,
+        "end_us": 2000000,
+        "pts_us": [
+          0,
+          500000,
+          1000000,
+          1500000
+        ],
+        "prediction": "WALK",
+        "scores": [
+          0.2537033803316941,
+          0.1068747867653001,
+          -0.26235291529655624,
+          0.032981894577565035,
+          0.11288351316536616,
+          -0.1504529392410618,
+          0.04414713194155358,
+          -0.12703935261818314,
+          -0.020749432347681975,
+          1.0100039327219974
+        ],
+        "frame_ids": [
+          "frame-0",
+          "frame-5",
+          "frame-10",
+          "frame-15"
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": "run-7e52c6665e804620",
+    "options": {
+      "episode_id": "paired-actions-v4--dv-ab93c9c80442cb4a",
+      "start_us": 0,
+      "end_us": 1000000,
+      "fps": 10.0,
+      "crop": null,
+      "component": "tracking",
+      "model": "yolo11n",
+      "device": "mps",
+      "confidence": 0.25,
+      "iou": 0.7,
+      "image_size": 640,
+      "classes": [],
+      "target": "refrigerator",
+      "reasoning": false,
+      "max_tokens": 512,
+      "deadline_seconds": 120,
+      "window_seconds": 2,
+      "stride_seconds": 1,
+      "query": "A person opens a refrigerator",
+      "max_gap_seconds": 2
+    },
+    "source": {
+      "episode_id": "paired-actions-v4--dv-ab93c9c80442cb4a",
+      "split": "test",
+      "split_group": "apartment-2",
+      "video_sha256": "a1d360cbaf89eacfbe5a0ae4c6de5c4153df7225d2b0c654aec43ff867c624e5",
+      "original_episode_id": "dv-ab93c9c80442cb4a",
+      "dataset": "paired-actions-v4"
+    },
+    "frames": [
+      {
+        "id": "frame-0",
+        "frame_index": 0,
+        "pts_us": 0,
+        "raw_pts": 0,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000000.png",
+        "sha256": "2fed5dca82af8ff7170e2cd37c6cf611489fe6bbd2f3a5af9a6ba0bc817f1e1c",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-1",
+        "frame_index": 1,
+        "pts_us": 100000,
+        "raw_pts": 1024,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000001.png",
+        "sha256": "4fd9abc525221e7bda829c32bc75e063dd4a38a756f26e9ceeb30d56518187b3",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-2",
+        "frame_index": 2,
+        "pts_us": 200000,
+        "raw_pts": 2048,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000002.png",
+        "sha256": "255724e3c4c39b01a590522b402cbedd6f31f6aeb460831a0a0d2c1abb81baf6",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-3",
+        "frame_index": 3,
+        "pts_us": 300000,
+        "raw_pts": 3072,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000003.png",
+        "sha256": "a503dfe1d9868543bd8981f123eead71b1fe7b6ae1428c29af2a053824e69e23",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-4",
+        "frame_index": 4,
+        "pts_us": 400000,
+        "raw_pts": 4096,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000004.png",
+        "sha256": "85449d545fd7bba3de5a47995889f55de4bd842bf502f171a236d0486349d956",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-5",
+        "frame_index": 5,
+        "pts_us": 500000,
+        "raw_pts": 5120,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000005.png",
+        "sha256": "e2ec0f31ebd3921307ef51fd539d4a6801493f159241c23e43e2a3a57a2104a2",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-6",
+        "frame_index": 6,
+        "pts_us": 600000,
+        "raw_pts": 6144,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000006.png",
+        "sha256": "bb55390484b4e1d3bc0110cf5a3b29f1d55c5e34911ada5286b65388f2cc846c",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-7",
+        "frame_index": 7,
+        "pts_us": 700000,
+        "raw_pts": 7168,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000007.png",
+        "sha256": "efc90fefafc459a5381757ee4c5df0451d1f312e6444b302bd5c33b20515fda7",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-8",
+        "frame_index": 8,
+        "pts_us": 800000,
+        "raw_pts": 8192,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000008.png",
+        "sha256": "d736b4ef3e022c31db60fe4727f507936dffe67eba5c86d3745e059817bb57a2",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-9",
+        "frame_index": 9,
+        "pts_us": 900000,
+        "raw_pts": 9216,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000009.png",
+        "sha256": "177fa5dd58e72c5b2e66765766f65f6bc293e704878323d96d0fe4069a755ed4",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      }
+    ],
+    "status": {
+      "run_id": "run-7e52c6665e804620",
+      "status": "completed",
+      "started_unix": 1788792236.438817,
+      "elapsed_seconds": 4.526369832921773
+    },
+    "result_summary": {
+      "kind": "tracking",
+      "seconds": 3.736130709061399
+    },
+    "states": [],
+    "windows": []
+  },
+  {
+    "run_id": "run-813cb7b91060423b",
+    "options": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "start_us": 10000000,
+      "end_us": 10100000,
+      "fps": 2.0,
+      "crop": null,
+      "component": "reasoning",
+      "model": "cosmos",
+      "device": "mps",
+      "confidence": 0.25,
+      "iou": 0.7,
+      "image_size": 640,
+      "classes": [],
+      "target": "refrigerator",
+      "reasoning": false,
+      "max_tokens": 512,
+      "deadline_seconds": 120,
+      "window_seconds": 2.0,
+      "stride_seconds": 1.0,
+      "query": "A person opens a refrigerator",
+      "max_gap_seconds": 2.0
+    },
+    "source": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "split": "test",
+      "split_group": "g04",
+      "video_sha256": "e9f68c403ce40bbe5e1ae609e48587e6f3a7675570cddc55fbcef57690ad41c6",
+      "original_episode_id": "ep-7d3106fb1cac9776",
+      "dataset": "home-v1"
+    },
+    "frames": [
+      {
+        "id": "frame-100",
+        "frame_index": 100,
+        "pts_us": 10000000,
+        "raw_pts": 102400,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000100.png",
+        "sha256": "a935a9976518685bf581d24fdab7c05200f47562993072e5e5c1cba3ccb8a61f",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      }
+    ],
+    "status": {
+      "run_id": "run-813cb7b91060423b",
+      "status": "completed",
+      "started_unix": 1788791565.954562,
+      "elapsed_seconds": 8.457506584003568
+    },
+    "result_summary": {
+      "kind": "reasoning",
+      "mode": "independent-single-image",
+      "seconds": 7.771907583111897
+    },
+    "states": [
+      {
+        "pts_us": 10000000,
+        "state": "closed",
+        "validation": "ok"
+      }
+    ],
+    "windows": []
+  },
+  {
+    "run_id": "run-832f394de7414eab",
+    "options": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "start_us": 10000000,
+      "end_us": 10100000,
+      "fps": 1.0,
+      "crop": null,
+      "component": "reasoning",
+      "model": "qwen",
+      "device": "mps",
+      "confidence": 0.25,
+      "iou": 0.7,
+      "image_size": 640,
+      "classes": [],
+      "target": "refrigerator",
+      "reasoning": false,
+      "max_tokens": 64,
+      "deadline_seconds": 120,
+      "window_seconds": 2,
+      "stride_seconds": 1,
+      "query": "A person opens a refrigerator",
+      "max_gap_seconds": 2
+    },
+    "source": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "split": "test",
+      "split_group": "g04",
+      "video_sha256": "e9f68c403ce40bbe5e1ae609e48587e6f3a7675570cddc55fbcef57690ad41c6",
+      "original_episode_id": "ep-7d3106fb1cac9776",
+      "dataset": "home-v1"
+    },
+    "frames": [
+      {
+        "id": "frame-100",
+        "frame_index": 100,
+        "pts_us": 10000000,
+        "raw_pts": 102400,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000100.png",
+        "sha256": "a935a9976518685bf581d24fdab7c05200f47562993072e5e5c1cba3ccb8a61f",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      }
+    ],
+    "status": {
+      "run_id": "run-832f394de7414eab",
+      "status": "completed",
+      "started_unix": 1788792548.74052,
+      "elapsed_seconds": 13.408383500063792
+    },
+    "result_summary": {
+      "kind": "reasoning",
+      "mode": "independent-single-image",
+      "checkpoint_identity": "7e64db1ac90f35ef5c58944483b54f7d413980406fc9d404244c8e9625149e9c",
+      "seconds": 12.827110375044867
+    },
+    "states": [
+      {
+        "pts_us": 10000000,
+        "state": "closed",
+        "validation": "ok"
+      }
+    ],
+    "windows": []
+  },
+  {
+    "run_id": "run-86eba27c442048b7",
+    "options": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "start_us": 10000000,
+      "end_us": 10100000,
+      "fps": 2.0,
+      "crop": null,
+      "component": "reasoning",
+      "model": "qwen",
+      "device": "mps",
+      "confidence": 0.25,
+      "iou": 0.7,
+      "image_size": 640,
+      "classes": [],
+      "target": "refrigerator",
+      "reasoning": false,
+      "max_tokens": 512,
+      "deadline_seconds": 120,
+      "window_seconds": 2.0,
+      "stride_seconds": 1.0,
+      "query": "A person opens a refrigerator",
+      "max_gap_seconds": 2.0
+    },
+    "source": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "split": "test",
+      "split_group": "g04",
+      "video_sha256": "e9f68c403ce40bbe5e1ae609e48587e6f3a7675570cddc55fbcef57690ad41c6",
+      "original_episode_id": "ep-7d3106fb1cac9776",
+      "dataset": "home-v1"
+    },
+    "frames": [
+      {
+        "id": "frame-100",
+        "frame_index": 100,
+        "pts_us": 10000000,
+        "raw_pts": 102400,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000100.png",
+        "sha256": "a935a9976518685bf581d24fdab7c05200f47562993072e5e5c1cba3ccb8a61f",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      }
+    ],
+    "status": {
+      "run_id": "run-86eba27c442048b7",
+      "status": "completed",
+      "started_unix": 1788791507.0422678,
+      "elapsed_seconds": 7.827741042012349
+    },
+    "result_summary": {
+      "kind": "reasoning",
+      "mode": "independent-single-image",
+      "seconds": 7.1520818748977035
+    },
+    "states": [
+      {
+        "pts_us": 10000000,
+        "state": "closed",
+        "validation": "ok"
+      }
+    ],
+    "windows": []
+  },
+  {
+    "run_id": "run-8fda97b444ed459c",
+    "options": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "start_us": 9500000,
+      "end_us": 10500000,
+      "fps": 2.0,
+      "crop": null,
+      "component": "segmentation",
+      "model": "yolo11n-seg",
+      "device": "mps",
+      "confidence": 0.25,
+      "iou": 0.7,
+      "image_size": 640,
+      "classes": [],
+      "target": "refrigerator",
+      "reasoning": false,
+      "max_tokens": 512,
+      "deadline_seconds": 120,
+      "window_seconds": 2.0,
+      "stride_seconds": 1.0,
+      "query": "A person opens a refrigerator",
+      "max_gap_seconds": 2.0
+    },
+    "source": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "split": "test",
+      "split_group": "g04",
+      "video_sha256": "e9f68c403ce40bbe5e1ae609e48587e6f3a7675570cddc55fbcef57690ad41c6",
+      "original_episode_id": "ep-7d3106fb1cac9776",
+      "dataset": "home-v1"
+    },
+    "frames": [
+      {
+        "id": "frame-95",
+        "frame_index": 95,
+        "pts_us": 9500000,
+        "raw_pts": 97280,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000095.png",
+        "sha256": "04526249ebe8930898b8046b3f313b16b26f3743e8249544eb417ad14fa0f726",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-100",
+        "frame_index": 100,
+        "pts_us": 10000000,
+        "raw_pts": 102400,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000100.png",
+        "sha256": "a935a9976518685bf581d24fdab7c05200f47562993072e5e5c1cba3ccb8a61f",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      }
+    ],
+    "status": {
+      "run_id": "run-8fda97b444ed459c",
+      "status": "completed",
+      "started_unix": 1788791433.954873,
+      "elapsed_seconds": 4.635549916885793
+    },
+    "result_summary": {
+      "kind": "segmentation",
+      "seconds": 3.8242814580444247
+    },
+    "states": [],
+    "windows": []
+  },
+  {
+    "run_id": "run-c91ef4d1a5c54ed9",
+    "options": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "start_us": 8000000,
+      "end_us": 12000000,
+      "fps": 2.0,
+      "crop": null,
+      "component": "embeddings",
+      "model": "native_video",
+      "device": "mps",
+      "confidence": 0.25,
+      "iou": 0.7,
+      "image_size": 640,
+      "classes": [],
+      "target": "refrigerator",
+      "reasoning": false,
+      "max_tokens": 512,
+      "deadline_seconds": 120,
+      "window_seconds": 2.0,
+      "stride_seconds": 1.0,
+      "query": "A person opens a refrigerator",
+      "max_gap_seconds": 2.0
+    },
+    "source": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "split": "test",
+      "split_group": "g04",
+      "video_sha256": "e9f68c403ce40bbe5e1ae609e48587e6f3a7675570cddc55fbcef57690ad41c6",
+      "original_episode_id": "ep-7d3106fb1cac9776",
+      "dataset": "home-v1"
+    },
+    "frames": [
+      {
+        "id": "frame-80",
+        "frame_index": 80,
+        "pts_us": 8000000,
+        "raw_pts": 81920,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000080.png",
+        "sha256": "a3933c81e2e4ce4188a0cc48783f95042389a458a88ecd05e3721dbd21d8b7c5",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-85",
+        "frame_index": 85,
+        "pts_us": 8500000,
+        "raw_pts": 87040,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000085.png",
+        "sha256": "debb40d565ca22637bf681e982b4d6b07c5a63e0e2d95b7092fa7b4749e7f549",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-90",
+        "frame_index": 90,
+        "pts_us": 9000000,
+        "raw_pts": 92160,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000090.png",
+        "sha256": "b2b942e14dd152ac3dd8d551ed0cbb548f1545f852e2b14ebe82c5510d2238ec",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-95",
+        "frame_index": 95,
+        "pts_us": 9500000,
+        "raw_pts": 97280,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000095.png",
+        "sha256": "04526249ebe8930898b8046b3f313b16b26f3743e8249544eb417ad14fa0f726",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-100",
+        "frame_index": 100,
+        "pts_us": 10000000,
+        "raw_pts": 102400,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000100.png",
+        "sha256": "a935a9976518685bf581d24fdab7c05200f47562993072e5e5c1cba3ccb8a61f",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-105",
+        "frame_index": 105,
+        "pts_us": 10500000,
+        "raw_pts": 107520,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000105.png",
+        "sha256": "ad238e0af7624ae67bba3d05a03ee0a425fbf59012f9ac7b498f9e9127a69dd7",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-110",
+        "frame_index": 110,
+        "pts_us": 11000000,
+        "raw_pts": 112640,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000110.png",
+        "sha256": "be4e9593a4e2b7005f457970fbadf00ada051b85deeeb3d1699672fd99bc4961",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-115",
+        "frame_index": 115,
+        "pts_us": 11500000,
+        "raw_pts": 117760,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000115.png",
+        "sha256": "65ea083a7bef855bd1a9a3e9a3b122750274340d5e8bfccf70ad6f367dc187aa",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      }
+    ],
+    "status": {
+      "run_id": "run-c91ef4d1a5c54ed9",
+      "status": "completed",
+      "started_unix": 1788791630.7607732,
+      "elapsed_seconds": 11.217083750059828
+    },
+    "result_summary": {
+      "kind": "embeddings",
+      "feature_space_id": "2610572d944abb10b0366c2b00aaf87e701b6f6bb6656b022eca66dd230edecd",
+      "seconds": 9.865545083070174
+    },
+    "states": [],
+    "windows": [
+      {
+        "start_us": 8000000,
+        "end_us": 10000000,
+        "frame_ids": [
+          "frame-80",
+          "frame-85",
+          "frame-90",
+          "frame-95"
+        ],
+        "pts_us": [
+          8000000,
+          8500000,
+          9000000,
+          9500000
+        ],
+        "score": 0.42760252952575684
+      },
+      {
+        "start_us": 9000000,
+        "end_us": 11000000,
+        "frame_ids": [
+          "frame-90",
+          "frame-95",
+          "frame-100",
+          "frame-105"
+        ],
+        "pts_us": [
+          9000000,
+          9500000,
+          10000000,
+          10500000
+        ],
+        "score": 0.40654420852661133
+      },
+      {
+        "start_us": 10000000,
+        "end_us": 12000000,
+        "frame_ids": [
+          "frame-100",
+          "frame-105",
+          "frame-110",
+          "frame-115"
+        ],
+        "pts_us": [
+          10000000,
+          10500000,
+          11000000,
+          11500000
+        ],
+        "score": 0.38872796297073364
+      },
+      {
+        "start_us": 11000000,
+        "end_us": 12000000,
+        "frame_ids": [
+          "frame-110",
+          "frame-115"
+        ],
+        "pts_us": [
+          11000000,
+          11500000
+        ],
+        "score": 0.39539486169815063
+      }
+    ]
+  },
+  {
+    "run_id": "run-cb3fcc4c7afa4e55",
+    "options": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "start_us": 8000000,
+      "end_us": 12000000,
+      "fps": 2.0,
+      "crop": null,
+      "component": "embeddings",
+      "model": "pooled_images",
+      "device": "mps",
+      "confidence": 0.25,
+      "iou": 0.7,
+      "image_size": 640,
+      "classes": [],
+      "target": "refrigerator",
+      "reasoning": false,
+      "max_tokens": 512,
+      "deadline_seconds": 120,
+      "window_seconds": 2.0,
+      "stride_seconds": 1.0,
+      "query": "A person opens a refrigerator",
+      "max_gap_seconds": 2.0
+    },
+    "source": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "split": "test",
+      "split_group": "g04",
+      "video_sha256": "e9f68c403ce40bbe5e1ae609e48587e6f3a7675570cddc55fbcef57690ad41c6",
+      "original_episode_id": "ep-7d3106fb1cac9776",
+      "dataset": "home-v1"
+    },
+    "frames": [
+      {
+        "id": "frame-80",
+        "frame_index": 80,
+        "pts_us": 8000000,
+        "raw_pts": 81920,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000080.png",
+        "sha256": "a3933c81e2e4ce4188a0cc48783f95042389a458a88ecd05e3721dbd21d8b7c5",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-85",
+        "frame_index": 85,
+        "pts_us": 8500000,
+        "raw_pts": 87040,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000085.png",
+        "sha256": "debb40d565ca22637bf681e982b4d6b07c5a63e0e2d95b7092fa7b4749e7f549",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-90",
+        "frame_index": 90,
+        "pts_us": 9000000,
+        "raw_pts": 92160,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000090.png",
+        "sha256": "b2b942e14dd152ac3dd8d551ed0cbb548f1545f852e2b14ebe82c5510d2238ec",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-95",
+        "frame_index": 95,
+        "pts_us": 9500000,
+        "raw_pts": 97280,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000095.png",
+        "sha256": "04526249ebe8930898b8046b3f313b16b26f3743e8249544eb417ad14fa0f726",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-100",
+        "frame_index": 100,
+        "pts_us": 10000000,
+        "raw_pts": 102400,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000100.png",
+        "sha256": "a935a9976518685bf581d24fdab7c05200f47562993072e5e5c1cba3ccb8a61f",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-105",
+        "frame_index": 105,
+        "pts_us": 10500000,
+        "raw_pts": 107520,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000105.png",
+        "sha256": "ad238e0af7624ae67bba3d05a03ee0a425fbf59012f9ac7b498f9e9127a69dd7",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-110",
+        "frame_index": 110,
+        "pts_us": 11000000,
+        "raw_pts": 112640,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000110.png",
+        "sha256": "be4e9593a4e2b7005f457970fbadf00ada051b85deeeb3d1699672fd99bc4961",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-115",
+        "frame_index": 115,
+        "pts_us": 11500000,
+        "raw_pts": 117760,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000115.png",
+        "sha256": "65ea083a7bef855bd1a9a3e9a3b122750274340d5e8bfccf70ad6f367dc187aa",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      }
+    ],
+    "status": {
+      "run_id": "run-cb3fcc4c7afa4e55",
+      "status": "completed",
+      "started_unix": 1788791871.709265,
+      "elapsed_seconds": 5.878925916040316
+    },
+    "result_summary": {
+      "kind": "embeddings",
+      "feature_space_id": "9246fa13a4a2d32fbb78ba1614024d65bb44339b757497bf0e90cdd6f07a0bf4",
+      "seconds": 5.506900749867782
+    },
+    "states": [],
+    "windows": [
+      {
+        "start_us": 8000000,
+        "end_us": 10000000,
+        "frame_ids": [
+          "frame-80",
+          "frame-85",
+          "frame-90",
+          "frame-95"
+        ],
+        "pts_us": [
+          8000000,
+          8500000,
+          9000000,
+          9500000
+        ],
+        "score": 0.2789383828639984
+      },
+      {
+        "start_us": 9000000,
+        "end_us": 11000000,
+        "frame_ids": [
+          "frame-90",
+          "frame-95",
+          "frame-100",
+          "frame-105"
+        ],
+        "pts_us": [
+          9000000,
+          9500000,
+          10000000,
+          10500000
+        ],
+        "score": 0.2751796841621399
+      },
+      {
+        "start_us": 10000000,
+        "end_us": 12000000,
+        "frame_ids": [
+          "frame-100",
+          "frame-105",
+          "frame-110",
+          "frame-115"
+        ],
+        "pts_us": [
+          10000000,
+          10500000,
+          11000000,
+          11500000
+        ],
+        "score": 0.28844261169433594
+      },
+      {
+        "start_us": 11000000,
+        "end_us": 12000000,
+        "frame_ids": [
+          "frame-110",
+          "frame-115"
+        ],
+        "pts_us": [
+          11000000,
+          11500000
+        ],
+        "score": 0.2895025610923767
+      }
+    ]
+  },
+  {
+    "run_id": "run-fc7db205cb284dcd",
+    "options": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "start_us": 9000000,
+      "end_us": 10100000,
+      "fps": 1.0,
+      "crop": null,
+      "component": "states",
+      "model": "qwen",
+      "device": "mps",
+      "confidence": 0.25,
+      "iou": 0.7,
+      "image_size": 640,
+      "classes": [],
+      "target": "refrigerator",
+      "reasoning": false,
+      "max_tokens": 512,
+      "deadline_seconds": 120,
+      "window_seconds": 2.0,
+      "stride_seconds": 1.0,
+      "query": "A person opens a refrigerator",
+      "max_gap_seconds": 2.0
+    },
+    "source": {
+      "episode_id": "home-v1--ep-7d3106fb1cac9776",
+      "split": "test",
+      "split_group": "g04",
+      "video_sha256": "e9f68c403ce40bbe5e1ae609e48587e6f3a7675570cddc55fbcef57690ad41c6",
+      "original_episode_id": "ep-7d3106fb1cac9776",
+      "dataset": "home-v1"
+    },
+    "frames": [
+      {
+        "id": "frame-90",
+        "frame_index": 90,
+        "pts_us": 9000000,
+        "raw_pts": 92160,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000090.png",
+        "sha256": "b2b942e14dd152ac3dd8d551ed0cbb548f1545f852e2b14ebe82c5510d2238ec",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      },
+      {
+        "id": "frame-100",
+        "frame_index": 100,
+        "pts_us": 10000000,
+        "raw_pts": 102400,
+        "time_base": "1/10240",
+        "origin_us": 0,
+        "file": "input-000100.png",
+        "sha256": "a935a9976518685bf581d24fdab7c05200f47562993072e5e5c1cba3ccb8a61f",
+        "width": 640,
+        "height": 480,
+        "source_width": 640,
+        "source_height": 480,
+        "crop_xyxy": [
+          0,
+          0,
+          640,
+          480
+        ]
+      }
+    ],
+    "status": {
+      "run_id": "run-fc7db205cb284dcd",
+      "status": "completed",
+      "started_unix": 1788791964.23029,
+      "elapsed_seconds": 13.18361591687426
+    },
+    "result_summary": {
+      "kind": "states",
+      "mode": "independent-single-image",
+      "seconds": 12.468510208884254
+    },
+    "states": [
+      {
+        "pts_us": 9000000,
+        "state": "closed",
+        "validation": "ok"
+      },
+      {
+        "pts_us": 10000000,
+        "state": "closed",
+        "validation": "ok"
+      }
+    ],
+    "windows": []
+  }
+]

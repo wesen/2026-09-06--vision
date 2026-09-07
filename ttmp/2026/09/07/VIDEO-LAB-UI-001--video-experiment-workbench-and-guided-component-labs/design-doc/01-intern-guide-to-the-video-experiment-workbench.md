@@ -313,3 +313,11 @@ Markdown is parsed with markdown-it-py with raw HTML disabled. Pygments highligh
 The experiment Guide tab includes three reading groups: source code, local designs/measured reports, and official online resources. Upstream examples may describe different checkpoint versions or modalities, so each external link has a short explanation of its relationship to the local implementation. Online references were checked on 2026-09-07. Rendering requires no CDN, external JavaScript, or new service.
 
 The server accepts repeated `--host` flags. The current command binds loopback and this Mac's Tailscale address, so both `http://127.0.0.1:8780/` and `http://mimimi:8780/` reach the same laboratory. The default remains loopback when no host is specified.
+
+## 15. Delivered implementation update
+
+The implementation now includes fresh ridge action inference in addition to frozen-result inspection. `lab/worker.py: actions` validates the frozen training feature manifest and encoder identity, computes new native or pooled embeddings, and applies the matching ridge weights. Full-frame 2 FPS input and half-second range endpoints are required; the two-second trailing context resets at the selected range start. TCN execution remains outside the offered modes.
+
+`lab/analysis.py` implements comparison, independent reviews/export, frozen action inspection and exact-point rules. `lab/analysis.js` renders comparisons, similarity plots, rule controls and reviews. `/resources` is the separate project browser requested during feedback. The authoritative API reference and measured walkthrough are in [Delivered workbench API and measured feature walkthrough](../reference/02-delivered-workbench-api-and-measured-feature-walkthrough.md), with screenshots and a table of actual local runs.
+
+The first implementation uses one shared sampling grid per selection, then filters those actual frames into embedding windows. It does not restart a sampling grid at every arbitrary window boundary. This policy is saved in each result. Comparison checks exact frame identities before reporting matched evidence. The API's generated schema is archived with the ticket and served at `/openapi.json`.

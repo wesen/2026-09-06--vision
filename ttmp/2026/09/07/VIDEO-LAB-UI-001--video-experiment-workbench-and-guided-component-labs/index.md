@@ -11,26 +11,30 @@ Intent: long-term
 Owners: []
 RelatedFiles: []
 ExternalSources: []
-Summary: ""
-LastUpdated: 2026-09-07T10:05:36.862155-04:00
+Summary: Implemented guided video experiments and a Tailscale-accessible project browser; intern guide and measured walkthrough delivered to reMarkable. Ready for user feedback.
+LastUpdated: 2026-09-07T10:49:54.625952-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Video experiment workbench and guided component labs
 
 ## Overview
 
-<!-- Provide a brief overview of the ticket, its goals, and current status -->
+Implemented a guided video laboratory with real perception, reasoning, state, embedding and ridge action experiments; immutable evidence, comparison, reviews/export and a separate rendered Markdown/source browser. The UI is running at http://mimimi:8780/ and remains available for user feedback.
 
 ## Key Links
 
-- **Related Files**: See frontmatter RelatedFiles field
+- [Intern architecture and implementation guide](design-doc/01-intern-guide-to-the-video-experiment-workbench.md)
+- [Delivered API and measured walkthrough](reference/02-delivered-workbench-api-and-measured-feature-walkthrough.md)
+- [Detailed implementation diary](reference/01-implementation-diary.md)
+- [Live project browser](http://mimimi:8780/resources)
 - **External Sources**: See frontmatter ExternalSources field
 
 ## Status
 
-Current status: **active**
+Current status: **implemented; active for user feedback**
 
 ## Topics
 

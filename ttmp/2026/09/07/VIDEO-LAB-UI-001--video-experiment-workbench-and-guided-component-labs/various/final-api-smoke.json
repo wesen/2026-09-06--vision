@@ -1,0 +1,23 @@
+{
+  "tracking_run": "run-7e52c6665e804620",
+  "tracking_records": 10,
+  "saved_action_rows": 8,
+  "exact_rule": "PASS",
+  "missing_rule": "UNKNOWN",
+  "review_id": "review-386acf4e76954c2c",
+  "comparison": {
+    "a": "run-c91ef4d1a5c54ed9",
+    "b": "run-cb3fcc4c7afa4e55",
+    "same_evidence": true,
+    "differences": [
+      {
+        "field": "model",
+        "a": "native_video",
+        "b": "pooled_images"
+      }
+    ],
+    "same_feature_space": false,
+    "interpretation": "Matched pixels and timestamps; configuration differences are listed.",
+    "feature_note": "Compare rankings separately; do not combine or subtract vectors from different feature spaces."
+  }
+}

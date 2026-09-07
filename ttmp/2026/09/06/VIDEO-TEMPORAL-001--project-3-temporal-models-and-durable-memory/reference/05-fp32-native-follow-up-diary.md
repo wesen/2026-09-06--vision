@@ -10,6 +10,12 @@ DocType: reference
 Intent: long-term
 Owners: []
 RelatedFiles:
+    - Path: repo://ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory/reference/06-native-fp32-temporal-benchmark-measured-findings.md
+      Note: Measured findings and experiment limits
+    - Path: repo://ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory/various/native-fp32-v1/results.json
+      Note: Paired result evidence
+    - Path: repo://ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory/various/native-fp32-v1/smoke.json
+      Note: Final artifact and causality verification
     - Path: repo://workbench/src/video_workbench/native_video.py
       Note: Accepted official FP32 runtime and preprocessing gates
     - Path: repo://workbench/src/video_workbench/temporal/benchmark.py
@@ -26,6 +32,7 @@ LastUpdated: 2026-09-06T20:21:56.172291-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -95,6 +102,8 @@ The follow-up reopens TEMPORAL for a measured representation comparison. A separ
 
 The full extraction completed with 792 windows across 48 episodes. Runtime was 199.086 seconds including 5.934 seconds of model loading; peak MLX allocation was 9,611,490,824 bytes. All original source hashes and native timestamp mappings passed the producer's checks.
 
+**Commit (code):** `8e59d45` — "temporal: extract native FP32 cache and add matched head comparison"
+
 The separate comparison runner calls the existing ridge and TCN routines and records corrected/worsened predictions only after matching supervision populations. It annotates the new TCN report's representation description without changing the trainer or any old artifact.
 
 ### Prompt Context
@@ -144,3 +153,62 @@ The separate comparison runner calls the existing ridge and TCN routines and rec
 - Full feature NPZ SHA: `d646bacbd17abfee891388019aff8c35cfbba74784755ef6fa8e88068d3a5a26`.
 - Native feature-space ID: `3292df2cb67f9a384041d24493084bf80a6945e5fb5ce0177a0d551e504b8ef4`.
 - macOS process peak RSS: 5,372,346,368 bytes. Per-call timings and source audits are retained in the feature manifest.
+
+## Step 3: Complete head comparison, smoke validation, and measured report
+
+Native ridge reaches 24.55% test macro recall versus 21.16% pooled, while native TCN averages 24.31% versus 18.63% pooled. These are improvements in this frozen experiment; native TCN still does not exceed native ridge on its mean and its seed spread is substantially larger.
+
+The report explains the precision/preprocessing confound, weak labels, class imbalance, paired prediction changes, and causal checks. Tracked evidence includes per-class results, selected predictions, hashes, manifests, an SVG figure, and its visually inspected PNG rendering. Full feature vectors and weights remain in the local output directory.
+
+### Prompt Context
+
+**User prompt (verbatim):** (see Step 1)
+
+**Assistant interpretation:** Finish the comparison and preserve reviewable evidence with focused commits.
+
+**Inferred user intent:** Decide how much confidence to place in the repaired native path before further engineering.
+
+### What I did
+- Completed fresh ridge selection and all six TCN training runs using unchanged routines.
+- Published reference document 06 and archived comparison results, manifests, TCN results, and ridge results without large weight arrays.
+- Ran a final artifact smoke check; saved `various/native-fp32-v1/smoke.json`.
+- Rendered the comparison SVG with `rsvg-convert` and visually inspected the PNG for legibility.
+- Saved phase-transition and completion slip layouts locally.
+
+### Why
+- All three selected seeds and per-class counts are necessary to avoid overstating a favorable aggregate or a favorable seed.
+
+### What worked
+- Exact matched population: 792 windows, 48 episodes, 308 supervised test positions.
+- All six checkpoint hashes and preserved pooled source hashes verified.
+- Largest streamed-versus-full logit error: 0.0000105947; largest future perturbation error: zero.
+- Pilot cache rejected by the full population loader.
+- Ruff and whitespace checks passed on the completed changes.
+
+### What didn't work
+- No selected native head correctly classifies CLOSE, GRAB, PUTBACK, or TURNTO test examples. Native ridge SWITCHOFF recall regresses to zero.
+- External Almanach printing remains blocked pending explicit destination/payload approval; local layouts are not physical receipts.
+
+### What I learned
+- Better native features do not yet establish a reason to prefer a TCN over the simpler native ridge head.
+- Seed 17 gains macro recall while losing accuracy; minority-class improvements coexist with additional WALK errors.
+
+### What was tricky to build
+- The unchanged trainer's pooled-description field was misleading for new features. The follow-up annotates only its new result document; algorithm hashes and model-selection policy are retained.
+- Sparse action support makes apparently large recall changes correspond to only one or two examples. The report includes counts alongside aggregate values.
+
+### What warrants a second pair of eyes
+- Interpret these as a system comparison, not an isolated test of temporal ordering. Check the changed predictions and development-selected checkpoints rather than picking the best test seed.
+
+### What should be done in the future
+- Print the saved layouts once explicit Almanach destination approval arrives. No additional experiment was silently added to this follow-up.
+
+### Code review instructions
+- Start with reference document 06 and `various/native-fp32-v1/results.json`.
+- Inspect `smoke.json`, six candidate checkpoint hashes, per-class counts, and the unchanged training algorithm source hashes.
+- Reproduction commands are in the findings document and require fresh output destinations.
+
+### Technical details
+- Native TCN seed macro recalls: 0.1739759, 0.2721938, 0.2831727; mean 0.2431141, standard deviation 0.0490931.
+- Ridge paired outcomes: 230 both correct, 24 native corrected, 4 native worsened, 50 both wrong.
+- Six native training loops total 9.027 seconds; extraction took 199.086 seconds. These measure separate operations, not complete end-to-end project duration.

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330">
+<rect width="900" height="330" fill="white"/>
+<g font-family="sans-serif" fill="#171717"><text x="25" y="35" font-size="22">Frozen TEMPORAL: test macro recall</text>
+<text x="25" y="88" font-size="16">Pooled ridge</text>
+<rect x="280" y="65" width="110.01" height="30" fill="#777"/>
+<text x="400.01" y="87" font-size="16">21.16%</text>
+<text x="25" y="137" font-size="16">Native FP32 ridge</text>
+<rect x="280" y="114" width="127.64" height="30" fill="#245b82"/>
+<text x="417.64" y="136" font-size="16">24.55%</text>
+<text x="25" y="186" font-size="16">Pooled TCN (3 seeds)</text>
+<rect x="280" y="163" width="96.88" height="30" fill="#777"/>
+<text x="386.88" y="185" font-size="16">18.63%</text>
+<text x="25" y="235" font-size="16">Native FP32 TCN (3 seeds)</text>
+<rect x="280" y="212" width="126.42" height="30" fill="#245b82"/>
+<text x="416.42" y="234" font-size="16">24.31%</text>
+<text x="25" y="285" font-size="14">308 weak test labels; 249 WALK. Bar scale: 520 px = 100%.</text>
+<text x="25" y="310" font-size="14">System comparison: precision and preprocessing also differ. TCN bars show seed means.</text></g></svg>

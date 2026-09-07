@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "windows": 792,
+  "episodes": 48,
+  "test_labels": 308,
+  "pilot_rejected": true,
+  "six_checkpoint_hashes_verified": true,
+  "pooled_sources_preserved": true,
+  "selected_chunk_max_abs_error": 1.0594725608825684e-05,
+  "selected_future_max_abs_error": 0.0
+}

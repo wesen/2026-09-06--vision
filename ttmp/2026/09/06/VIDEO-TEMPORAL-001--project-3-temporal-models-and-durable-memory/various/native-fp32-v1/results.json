@@ -1,0 +1,2381 @@
+{
+  "status": "complete",
+  "classes": [
+    "CLOSE",
+    "GRAB",
+    "OPEN",
+    "PUTBACK",
+    "SIT",
+    "STAND",
+    "SWITCHOFF",
+    "SWITCHON",
+    "TURNTO",
+    "WALK"
+  ],
+  "original_hashes": {
+    "output/temporal-v1/linear-v1/results.json": "e376eec12ad16400fcb7df1f4f3b5aa61f2e67c942d315b25f82129c6368a0c3",
+    "output/temporal-v1/tcn-v1/results.json": "ac2ba2d721cc86344daedcbef3730bf06d08da777600974f61161976427f4b5c",
+    "output/temporal-v1/pooled-features/manifest.json": "3bd4be3d17febe3ce0ec0e95168c9a98c07dac9c36c42bf0f0207576f382afc4"
+  },
+  "native_features_manifest_sha256": "49f3c2c3a27f2bf06a772c7f7a04cc02bce17f84730294e7576297f8fd2041a0",
+  "native_results_sha256": {
+    "ridge": "65938e1da0db5a75872f4fcfdeb831c7cb779aa08f5cf7a6645de163cf392193",
+    "tcn": "382b2ab8aa84228765a16febf9aa96940d636595a92b75bc91e322272d3555e7"
+  },
+  "comparison_code_sha256": "d1c833b193295b954c5dd72de3d2add8bfe0d7b73a5b3a363be0ac628b03448c",
+  "extraction": {
+    "wall_seconds": 199.0857133329846,
+    "load_seconds": 5.934152540983632,
+    "peak_mlx_bytes": 9611490824,
+    "max_rss_bytes_macos": 5372346368,
+    "pixel_probe": {
+      "sample_id": "988bed041b8cf1b2b9761f0d",
+      "black_cosine": 0.4544495642185211,
+      "max_abs_difference": 0.2967677116394043
+    }
+  },
+  "sample_count": 792,
+  "ridge": {
+    "pooled": {
+      "weak_interior_accuracy": 0.7597402597402597,
+      "macro_recall": 0.21156626506024095,
+      "n": 308,
+      "per_class": {
+        "CLOSE": {
+          "n": 6,
+          "correct": 0
+        },
+        "GRAB": {
+          "n": 5,
+          "correct": 0
+        },
+        "OPEN": {
+          "n": 4,
+          "correct": 2
+        },
+        "PUTBACK": {
+          "n": 4,
+          "correct": 0
+        },
+        "SIT": {
+          "n": 16,
+          "correct": 0
+        },
+        "STAND": {
+          "n": 10,
+          "correct": 2
+        },
+        "SWITCHOFF": {
+          "n": 4,
+          "correct": 2
+        },
+        "SWITCHON": {
+          "n": 6,
+          "correct": 0
+        },
+        "TURNTO": {
+          "n": 4,
+          "correct": 0
+        },
+        "WALK": {
+          "n": 249,
+          "correct": 228
+        }
+      }
+    },
+    "native": {
+      "weak_interior_accuracy": 0.8246753246753247,
+      "macro_recall": 0.24546184738955823,
+      "n": 308,
+      "per_class": {
+        "CLOSE": {
+          "n": 6,
+          "correct": 0
+        },
+        "GRAB": {
+          "n": 5,
+          "correct": 0
+        },
+        "OPEN": {
+          "n": 4,
+          "correct": 4
+        },
+        "PUTBACK": {
+          "n": 4,
+          "correct": 0
+        },
+        "SIT": {
+          "n": 16,
+          "correct": 0
+        },
+        "STAND": {
+          "n": 10,
+          "correct": 3
+        },
+        "SWITCHOFF": {
+          "n": 4,
+          "correct": 0
+        },
+        "SWITCHON": {
+          "n": 6,
+          "correct": 1
+        },
+        "TURNTO": {
+          "n": 4,
+          "correct": 0
+        },
+        "WALK": {
+          "n": 249,
+          "correct": 246
+        }
+      }
+    },
+    "paired": {
+      "counts": {
+        "both_correct": 230,
+        "native_corrected": 24,
+        "native_worsened": 4,
+        "both_wrong": 50
+      },
+      "changed_predictions": [
+        {
+          "episode_id": "dv-0c192f074a97cda6",
+          "end_us": 12000000,
+          "target": 9,
+          "pooled": 2,
+          "native": 4
+        },
+        {
+          "episode_id": "dv-0c192f074a97cda6",
+          "end_us": 13000000,
+          "target": 9,
+          "pooled": 9,
+          "native": 4
+        },
+        {
+          "episode_id": "dv-0c192f074a97cda6",
+          "end_us": 13500000,
+          "target": 9,
+          "pooled": 9,
+          "native": 4
+        },
+        {
+          "episode_id": "dv-0c192f074a97cda6",
+          "end_us": 14500000,
+          "target": 6,
+          "pooled": 6,
+          "native": 4
+        },
+        {
+          "episode_id": "dv-0c192f074a97cda6",
+          "end_us": 15000000,
+          "target": 6,
+          "pooled": 6,
+          "native": 7
+        },
+        {
+          "episode_id": "dv-0c192f074a97cda6",
+          "end_us": 16500000,
+          "target": 7,
+          "pooled": 6,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-0c192f074a97cda6",
+          "end_us": 17000000,
+          "target": 7,
+          "pooled": 6,
+          "native": 7
+        },
+        {
+          "episode_id": "dv-303b9d3c2dfe7b21",
+          "end_us": 5000000,
+          "target": 1,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-303b9d3c2dfe7b21",
+          "end_us": 5500000,
+          "target": 1,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-303b9d3c2dfe7b21",
+          "end_us": 6000000,
+          "target": 1,
+          "pooled": 4,
+          "native": 5
+        },
+        {
+          "episode_id": "dv-303b9d3c2dfe7b21",
+          "end_us": 7000000,
+          "target": 9,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-303b9d3c2dfe7b21",
+          "end_us": 7500000,
+          "target": 9,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-303b9d3c2dfe7b21",
+          "end_us": 8000000,
+          "target": 9,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-303b9d3c2dfe7b21",
+          "end_us": 8500000,
+          "target": 9,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-303b9d3c2dfe7b21",
+          "end_us": 9500000,
+          "target": 3,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-303b9d3c2dfe7b21",
+          "end_us": 10000000,
+          "target": 3,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-303b9d3c2dfe7b21",
+          "end_us": 11000000,
+          "target": 8,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-303b9d3c2dfe7b21",
+          "end_us": 11400000,
+          "target": 8,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-486601eecb7f8b97",
+          "end_us": 4000000,
+          "target": 9,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-4e7502fb118b5485",
+          "end_us": 12500000,
+          "target": 4,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-4e7502fb118b5485",
+          "end_us": 13000000,
+          "target": 4,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-4e7502fb118b5485",
+          "end_us": 13500000,
+          "target": 4,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-4e7502fb118b5485",
+          "end_us": 14000000,
+          "target": 4,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-4e7502fb118b5485",
+          "end_us": 17000000,
+          "target": 4,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-4e7502fb118b5485",
+          "end_us": 17500000,
+          "target": 4,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-4e7502fb118b5485",
+          "end_us": 19500000,
+          "target": 5,
+          "pooled": 8,
+          "native": 5
+        },
+        {
+          "episode_id": "dv-4e7502fb118b5485",
+          "end_us": 20000000,
+          "target": 5,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-554891a30ac02c19",
+          "end_us": 4000000,
+          "target": 9,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-554891a30ac02c19",
+          "end_us": 5000000,
+          "target": 2,
+          "pooled": 4,
+          "native": 2
+        },
+        {
+          "episode_id": "dv-554891a30ac02c19",
+          "end_us": 5500000,
+          "target": 2,
+          "pooled": 4,
+          "native": 2
+        },
+        {
+          "episode_id": "dv-554891a30ac02c19",
+          "end_us": 6500000,
+          "target": 0,
+          "pooled": 4,
+          "native": 2
+        },
+        {
+          "episode_id": "dv-554891a30ac02c19",
+          "end_us": 7000000,
+          "target": 0,
+          "pooled": 1,
+          "native": 2
+        },
+        {
+          "episode_id": "dv-554891a30ac02c19",
+          "end_us": 7500000,
+          "target": 0,
+          "pooled": 1,
+          "native": 2
+        },
+        {
+          "episode_id": "dv-73dbf59cdc15749b",
+          "end_us": 12000000,
+          "target": 9,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-93864ed7f6c58992",
+          "end_us": 17000000,
+          "target": 7,
+          "pooled": 9,
+          "native": 4
+        },
+        {
+          "episode_id": "dv-ab93c9c80442cb4a",
+          "end_us": 3000000,
+          "target": 9,
+          "pooled": 1,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-ab93c9c80442cb4a",
+          "end_us": 3500000,
+          "target": 9,
+          "pooled": 1,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-ab93c9c80442cb4a",
+          "end_us": 4000000,
+          "target": 9,
+          "pooled": 1,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-c49ae32814f5899e",
+          "end_us": 4500000,
+          "target": 9,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-c85d38d9b3ceedd2",
+          "end_us": 5000000,
+          "target": 1,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-c85d38d9b3ceedd2",
+          "end_us": 5500000,
+          "target": 1,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-c85d38d9b3ceedd2",
+          "end_us": 6500000,
+          "target": 9,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-c85d38d9b3ceedd2",
+          "end_us": 7000000,
+          "target": 9,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-c85d38d9b3ceedd2",
+          "end_us": 7500000,
+          "target": 9,
+          "pooled": 4,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-c85d38d9b3ceedd2",
+          "end_us": 8500000,
+          "target": 3,
+          "pooled": 0,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-c85d38d9b3ceedd2",
+          "end_us": 9000000,
+          "target": 3,
+          "pooled": 0,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-c85d38d9b3ceedd2",
+          "end_us": 10000000,
+          "target": 8,
+          "pooled": 0,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-c85d38d9b3ceedd2",
+          "end_us": 10100000,
+          "target": 8,
+          "pooled": 0,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-d065ae4a05eb0978",
+          "end_us": 2500000,
+          "target": 9,
+          "pooled": 1,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-d065ae4a05eb0978",
+          "end_us": 3000000,
+          "target": 9,
+          "pooled": 1,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-d065ae4a05eb0978",
+          "end_us": 3500000,
+          "target": 9,
+          "pooled": 1,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-d065ae4a05eb0978",
+          "end_us": 4000000,
+          "target": 9,
+          "pooled": 1,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-f13a0229de70b846",
+          "end_us": 12000000,
+          "target": 9,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-f13a0229de70b846",
+          "end_us": 14500000,
+          "target": 4,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-f13a0229de70b846",
+          "end_us": 15000000,
+          "target": 4,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-f13a0229de70b846",
+          "end_us": 16000000,
+          "target": 5,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-f13a0229de70b846",
+          "end_us": 16500000,
+          "target": 5,
+          "pooled": 8,
+          "native": 9
+        },
+        {
+          "episode_id": "dv-f756d3233b04ef88",
+          "end_us": 12000000,
+          "target": 9,
+          "pooled": 8,
+          "native": 9
+        }
+      ]
+    },
+    "pooled_selected_ridge": 0.01,
+    "native_selected_ridge": 0.01
+  },
+  "tcn": {
+    "pooled_mean": 0.1862985274431058,
+    "native_mean": 0.2431141231593039,
+    "pooled_std": 0.008005584206460315,
+    "native_std": 0.049093137325260966,
+    "pooled_layers": 1,
+    "native_layers": 1,
+    "seeds": [
+      {
+        "seed": 7,
+        "pooled": {
+          "weak_interior_accuracy": 0.7662337662337663,
+          "macro_recall": 0.17817269076305223,
+          "n": 308,
+          "per_class": {
+            "CLOSE": {
+              "n": 6,
+              "correct": 0
+            },
+            "GRAB": {
+              "n": 5,
+              "correct": 0
+            },
+            "OPEN": {
+              "n": 4,
+              "correct": 0
+            },
+            "PUTBACK": {
+              "n": 4,
+              "correct": 0
+            },
+            "SIT": {
+              "n": 16,
+              "correct": 0
+            },
+            "STAND": {
+              "n": 10,
+              "correct": 1
+            },
+            "SWITCHOFF": {
+              "n": 4,
+              "correct": 3
+            },
+            "SWITCHON": {
+              "n": 6,
+              "correct": 0
+            },
+            "TURNTO": {
+              "n": 4,
+              "correct": 0
+            },
+            "WALK": {
+              "n": 249,
+              "correct": 232
+            }
+          }
+        },
+        "native": {
+          "weak_interior_accuracy": 0.775974025974026,
+          "macro_recall": 0.17397590361445783,
+          "n": 308,
+          "per_class": {
+            "CLOSE": {
+              "n": 6,
+              "correct": 0
+            },
+            "GRAB": {
+              "n": 5,
+              "correct": 0
+            },
+            "OPEN": {
+              "n": 4,
+              "correct": 2
+            },
+            "PUTBACK": {
+              "n": 4,
+              "correct": 0
+            },
+            "SIT": {
+              "n": 16,
+              "correct": 0
+            },
+            "STAND": {
+              "n": 10,
+              "correct": 3
+            },
+            "SWITCHOFF": {
+              "n": 4,
+              "correct": 0
+            },
+            "SWITCHON": {
+              "n": 6,
+              "correct": 0
+            },
+            "TURNTO": {
+              "n": 4,
+              "correct": 0
+            },
+            "WALK": {
+              "n": 249,
+              "correct": 234
+            }
+          }
+        },
+        "paired": {
+          "counts": {
+            "both_correct": 226,
+            "native_corrected": 13,
+            "native_worsened": 10,
+            "both_wrong": 59
+          },
+          "changed_predictions": [
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 11500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 12000000,
+              "target": 9,
+              "pooled": 6,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 13000000,
+              "target": 9,
+              "pooled": 6,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 13500000,
+              "target": 9,
+              "pooled": 0,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 14500000,
+              "target": 6,
+              "pooled": 6,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 15000000,
+              "target": 6,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 5000000,
+              "target": 1,
+              "pooled": 4,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 5500000,
+              "target": 1,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 6000000,
+              "target": 1,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 7000000,
+              "target": 9,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 7500000,
+              "target": 9,
+              "pooled": 4,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 8000000,
+              "target": 9,
+              "pooled": 4,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 8500000,
+              "target": 9,
+              "pooled": 4,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 11000000,
+              "target": 8,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 11400000,
+              "target": 8,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-486601eecb7f8b97",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 1,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 17000000,
+              "target": 4,
+              "pooled": 8,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 17500000,
+              "target": 4,
+              "pooled": 8,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 18500000,
+              "target": 5,
+              "pooled": 8,
+              "native": 7
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 19500000,
+              "target": 5,
+              "pooled": 8,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 20000000,
+              "target": 5,
+              "pooled": 8,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 20400000,
+              "target": 5,
+              "pooled": 8,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-554891a30ac02c19",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-554891a30ac02c19",
+              "end_us": 6500000,
+              "target": 0,
+              "pooled": 5,
+              "native": 2
+            },
+            {
+              "episode_id": "dv-554891a30ac02c19",
+              "end_us": 7000000,
+              "target": 0,
+              "pooled": 1,
+              "native": 7
+            },
+            {
+              "episode_id": "dv-554891a30ac02c19",
+              "end_us": 7500000,
+              "target": 0,
+              "pooled": 1,
+              "native": 7
+            },
+            {
+              "episode_id": "dv-73dbf59cdc15749b",
+              "end_us": 10500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-73dbf59cdc15749b",
+              "end_us": 11500000,
+              "target": 9,
+              "pooled": 8,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-73dbf59cdc15749b",
+              "end_us": 12000000,
+              "target": 9,
+              "pooled": 8,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 12000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 13000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 14500000,
+              "target": 6,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 15000000,
+              "target": 6,
+              "pooled": 6,
+              "native": 7
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 16500000,
+              "target": 7,
+              "pooled": 6,
+              "native": 0
+            },
+            {
+              "episode_id": "dv-97275b5c5e686c4b",
+              "end_us": 11500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-ab93c9c80442cb4a",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 1,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-ab93c9c80442cb4a",
+              "end_us": 5000000,
+              "target": 2,
+              "pooled": 1,
+              "native": 2
+            },
+            {
+              "episode_id": "dv-ab93c9c80442cb4a",
+              "end_us": 5500000,
+              "target": 2,
+              "pooled": 1,
+              "native": 2
+            },
+            {
+              "episode_id": "dv-ab93c9c80442cb4a",
+              "end_us": 6500000,
+              "target": 0,
+              "pooled": 1,
+              "native": 2
+            },
+            {
+              "episode_id": "dv-ab93c9c80442cb4a",
+              "end_us": 7000000,
+              "target": 0,
+              "pooled": 1,
+              "native": 2
+            },
+            {
+              "episode_id": "dv-ab93c9c80442cb4a",
+              "end_us": 7500000,
+              "target": 0,
+              "pooled": 1,
+              "native": 2
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 3000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 4,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 5000000,
+              "target": 1,
+              "pooled": 0,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 5500000,
+              "target": 1,
+              "pooled": 0,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 6500000,
+              "target": 9,
+              "pooled": 0,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 7000000,
+              "target": 9,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 7500000,
+              "target": 9,
+              "pooled": 4,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 8500000,
+              "target": 3,
+              "pooled": 0,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 9000000,
+              "target": 3,
+              "pooled": 0,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 10000000,
+              "target": 8,
+              "pooled": 0,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 10100000,
+              "target": 8,
+              "pooled": 0,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-d065ae4a05eb0978",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 1,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 13000000,
+              "target": 4,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 13500000,
+              "target": 4,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 14000000,
+              "target": 4,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 14500000,
+              "target": 4,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 16000000,
+              "target": 5,
+              "pooled": 8,
+              "native": 7
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 16500000,
+              "target": 5,
+              "pooled": 8,
+              "native": 7
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 17000000,
+              "target": 5,
+              "pooled": 8,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 17500000,
+              "target": 5,
+              "pooled": 8,
+              "native": 9
+            }
+          ]
+        },
+        "chunk_max_abs_error": 7.987022399902344e-06,
+        "future_max_abs_error": 0.0
+      },
+      {
+        "seed": 17,
+        "pooled": {
+          "weak_interior_accuracy": 0.7987012987012987,
+          "macro_recall": 0.19718875502008032,
+          "n": 308,
+          "per_class": {
+            "CLOSE": {
+              "n": 6,
+              "correct": 0
+            },
+            "GRAB": {
+              "n": 5,
+              "correct": 0
+            },
+            "OPEN": {
+              "n": 4,
+              "correct": 4
+            },
+            "PUTBACK": {
+              "n": 4,
+              "correct": 0
+            },
+            "SIT": {
+              "n": 16,
+              "correct": 0
+            },
+            "STAND": {
+              "n": 10,
+              "correct": 0
+            },
+            "SWITCHOFF": {
+              "n": 4,
+              "correct": 0
+            },
+            "SWITCHON": {
+              "n": 6,
+              "correct": 0
+            },
+            "TURNTO": {
+              "n": 4,
+              "correct": 0
+            },
+            "WALK": {
+              "n": 249,
+              "correct": 242
+            }
+          }
+        },
+        "native": {
+          "weak_interior_accuracy": 0.737012987012987,
+          "macro_recall": 0.2721937751004016,
+          "n": 308,
+          "per_class": {
+            "CLOSE": {
+              "n": 6,
+              "correct": 0
+            },
+            "GRAB": {
+              "n": 5,
+              "correct": 0
+            },
+            "OPEN": {
+              "n": 4,
+              "correct": 4
+            },
+            "PUTBACK": {
+              "n": 4,
+              "correct": 0
+            },
+            "SIT": {
+              "n": 16,
+              "correct": 5
+            },
+            "STAND": {
+              "n": 10,
+              "correct": 3
+            },
+            "SWITCHOFF": {
+              "n": 4,
+              "correct": 1
+            },
+            "SWITCHON": {
+              "n": 6,
+              "correct": 0
+            },
+            "TURNTO": {
+              "n": 4,
+              "correct": 0
+            },
+            "WALK": {
+              "n": 249,
+              "correct": 214
+            }
+          }
+        },
+        "paired": {
+          "counts": {
+            "both_correct": 218,
+            "native_corrected": 9,
+            "native_worsened": 28,
+            "both_wrong": 53
+          },
+          "changed_predictions": [
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 12000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 13000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 13500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 14500000,
+              "target": 6,
+              "pooled": 9,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 15000000,
+              "target": 6,
+              "pooled": 9,
+              "native": 6
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 3500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 6000000,
+              "target": 1,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 7000000,
+              "target": 9,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 9500000,
+              "target": 3,
+              "pooled": 4,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 10000000,
+              "target": 3,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 11000000,
+              "target": 8,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 11400000,
+              "target": 8,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-486601eecb7f8b97",
+              "end_us": 2500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-486601eecb7f8b97",
+              "end_us": 3000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-486601eecb7f8b97",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 11000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 13000000,
+              "target": 4,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 14000000,
+              "target": 4,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 14500000,
+              "target": 4,
+              "pooled": 9,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 15000000,
+              "target": 4,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 15500000,
+              "target": 4,
+              "pooled": 9,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 16000000,
+              "target": 4,
+              "pooled": 9,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 17000000,
+              "target": 4,
+              "pooled": 9,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 18500000,
+              "target": 5,
+              "pooled": 8,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 19000000,
+              "target": 5,
+              "pooled": 8,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 19500000,
+              "target": 5,
+              "pooled": 8,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 20400000,
+              "target": 5,
+              "pooled": 4,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-554891a30ac02c19",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-554891a30ac02c19",
+              "end_us": 6500000,
+              "target": 0,
+              "pooled": 2,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-554891a30ac02c19",
+              "end_us": 7000000,
+              "target": 0,
+              "pooled": 2,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-554891a30ac02c19",
+              "end_us": 7500000,
+              "target": 0,
+              "pooled": 2,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-73dbf59cdc15749b",
+              "end_us": 10500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 6
+            },
+            {
+              "episode_id": "dv-73dbf59cdc15749b",
+              "end_us": 11000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-73dbf59cdc15749b",
+              "end_us": 11500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 6
+            },
+            {
+              "episode_id": "dv-7d5eedc80fc0ae7e",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 12000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 13000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 13500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 14500000,
+              "target": 6,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 15000000,
+              "target": 6,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 16500000,
+              "target": 7,
+              "pooled": 6,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 17000000,
+              "target": 7,
+              "pooled": 6,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 17200000,
+              "target": 7,
+              "pooled": 6,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-97275b5c5e686c4b",
+              "end_us": 11500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-ab93c9c80442cb4a",
+              "end_us": 7500000,
+              "target": 0,
+              "pooled": 2,
+              "native": 7
+            },
+            {
+              "episode_id": "dv-c49ae32814f5899e",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 6
+            },
+            {
+              "episode_id": "dv-c49ae32814f5899e",
+              "end_us": 4500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 2
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 2500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 3000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 3500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 5000000,
+              "target": 1,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 5500000,
+              "target": 1,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 7000000,
+              "target": 9,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 10000000,
+              "target": 8,
+              "pooled": 0,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 10100000,
+              "target": 8,
+              "pooled": 0,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-d065ae4a05eb0978",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 6
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 11500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 12000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 13000000,
+              "target": 4,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 13500000,
+              "target": 4,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 14000000,
+              "target": 4,
+              "pooled": 9,
+              "native": 4
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 14500000,
+              "target": 4,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 15000000,
+              "target": 4,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 16000000,
+              "target": 5,
+              "pooled": 8,
+              "native": 7
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 16500000,
+              "target": 5,
+              "pooled": 8,
+              "native": 2
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 17000000,
+              "target": 5,
+              "pooled": 8,
+              "native": 2
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 17500000,
+              "target": 5,
+              "pooled": 9,
+              "native": 2
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 17900000,
+              "target": 5,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f756d3233b04ef88",
+              "end_us": 11500000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-f756d3233b04ef88",
+              "end_us": 12000000,
+              "target": 9,
+              "pooled": 9,
+              "native": 1
+            }
+          ]
+        },
+        "chunk_max_abs_error": 1.0594725608825684e-05,
+        "future_max_abs_error": 0.0
+      },
+      {
+        "seed": 27,
+        "pooled": {
+          "weak_interior_accuracy": 0.6883116883116883,
+          "macro_recall": 0.18353413654618472,
+          "n": 308,
+          "per_class": {
+            "CLOSE": {
+              "n": 6,
+              "correct": 0
+            },
+            "GRAB": {
+              "n": 5,
+              "correct": 0
+            },
+            "OPEN": {
+              "n": 4,
+              "correct": 4
+            },
+            "PUTBACK": {
+              "n": 4,
+              "correct": 0
+            },
+            "SIT": {
+              "n": 16,
+              "correct": 0
+            },
+            "STAND": {
+              "n": 10,
+              "correct": 0
+            },
+            "SWITCHOFF": {
+              "n": 4,
+              "correct": 0
+            },
+            "SWITCHON": {
+              "n": 6,
+              "correct": 0
+            },
+            "TURNTO": {
+              "n": 4,
+              "correct": 0
+            },
+            "WALK": {
+              "n": 249,
+              "correct": 208
+            }
+          }
+        },
+        "native": {
+          "weak_interior_accuracy": 0.7954545454545454,
+          "macro_recall": 0.2831726907630522,
+          "n": 308,
+          "per_class": {
+            "CLOSE": {
+              "n": 6,
+              "correct": 0
+            },
+            "GRAB": {
+              "n": 5,
+              "correct": 0
+            },
+            "OPEN": {
+              "n": 4,
+              "correct": 4
+            },
+            "PUTBACK": {
+              "n": 4,
+              "correct": 0
+            },
+            "SIT": {
+              "n": 16,
+              "correct": 0
+            },
+            "STAND": {
+              "n": 10,
+              "correct": 9
+            },
+            "SWITCHOFF": {
+              "n": 4,
+              "correct": 0
+            },
+            "SWITCHON": {
+              "n": 6,
+              "correct": 0
+            },
+            "TURNTO": {
+              "n": 4,
+              "correct": 0
+            },
+            "WALK": {
+              "n": 249,
+              "correct": 232
+            }
+          }
+        },
+        "paired": {
+          "counts": {
+            "both_correct": 212,
+            "native_corrected": 33,
+            "native_worsened": 0,
+            "both_wrong": 63
+          },
+          "changed_predictions": [
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 12000000,
+              "target": 9,
+              "pooled": 3,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 15000000,
+              "target": 6,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 16500000,
+              "target": 7,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 17000000,
+              "target": 7,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-0c192f074a97cda6",
+              "end_us": 17200000,
+              "target": 7,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 3500000,
+              "target": 9,
+              "pooled": 6,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 3,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 5000000,
+              "target": 1,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 5500000,
+              "target": 1,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 6000000,
+              "target": 1,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 7000000,
+              "target": 9,
+              "pooled": 4,
+              "native": 6
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 7500000,
+              "target": 9,
+              "pooled": 4,
+              "native": 8
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 8000000,
+              "target": 9,
+              "pooled": 4,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 8500000,
+              "target": 9,
+              "pooled": 4,
+              "native": 6
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 9500000,
+              "target": 3,
+              "pooled": 4,
+              "native": 8
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 10000000,
+              "target": 3,
+              "pooled": 4,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 11000000,
+              "target": 8,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-303b9d3c2dfe7b21",
+              "end_us": 11400000,
+              "target": 8,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-486601eecb7f8b97",
+              "end_us": 3000000,
+              "target": 9,
+              "pooled": 3,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-486601eecb7f8b97",
+              "end_us": 3500000,
+              "target": 9,
+              "pooled": 4,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-486601eecb7f8b97",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 4,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 10500000,
+              "target": 9,
+              "pooled": 3,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 11000000,
+              "target": 9,
+              "pooled": 2,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 11500000,
+              "target": 9,
+              "pooled": 3,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 12500000,
+              "target": 4,
+              "pooled": 6,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 13500000,
+              "target": 4,
+              "pooled": 6,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 14000000,
+              "target": 4,
+              "pooled": 6,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 14500000,
+              "target": 4,
+              "pooled": 6,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 15000000,
+              "target": 4,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 15500000,
+              "target": 4,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 16000000,
+              "target": 4,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 16500000,
+              "target": 4,
+              "pooled": 3,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 17000000,
+              "target": 4,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 17500000,
+              "target": 4,
+              "pooled": 3,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 18500000,
+              "target": 5,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 19000000,
+              "target": 5,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 19500000,
+              "target": 5,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-4e7502fb118b5485",
+              "end_us": 20000000,
+              "target": 5,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-554891a30ac02c19",
+              "end_us": 7000000,
+              "target": 0,
+              "pooled": 2,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-554891a30ac02c19",
+              "end_us": 7500000,
+              "target": 0,
+              "pooled": 2,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-73dbf59cdc15749b",
+              "end_us": 10500000,
+              "target": 9,
+              "pooled": 2,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-73dbf59cdc15749b",
+              "end_us": 11000000,
+              "target": 9,
+              "pooled": 2,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-73dbf59cdc15749b",
+              "end_us": 11500000,
+              "target": 9,
+              "pooled": 3,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-73dbf59cdc15749b",
+              "end_us": 12000000,
+              "target": 9,
+              "pooled": 3,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-7d5eedc80fc0ae7e",
+              "end_us": 3000000,
+              "target": 9,
+              "pooled": 6,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-7d5eedc80fc0ae7e",
+              "end_us": 3500000,
+              "target": 9,
+              "pooled": 6,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-7d5eedc80fc0ae7e",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 3,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 13000000,
+              "target": 9,
+              "pooled": 3,
+              "native": 1
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 13500000,
+              "target": 9,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 14500000,
+              "target": 6,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 15000000,
+              "target": 6,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 16500000,
+              "target": 7,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 17000000,
+              "target": 7,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-93864ed7f6c58992",
+              "end_us": 17200000,
+              "target": 7,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 3000000,
+              "target": 9,
+              "pooled": 3,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 3500000,
+              "target": 9,
+              "pooled": 3,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 4000000,
+              "target": 9,
+              "pooled": 0,
+              "native": 3
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 5000000,
+              "target": 1,
+              "pooled": 0,
+              "native": 8
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 5500000,
+              "target": 1,
+              "pooled": 0,
+              "native": 6
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 6500000,
+              "target": 9,
+              "pooled": 0,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 7000000,
+              "target": 9,
+              "pooled": 0,
+              "native": 6
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 7500000,
+              "target": 9,
+              "pooled": 0,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 8500000,
+              "target": 3,
+              "pooled": 0,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 9000000,
+              "target": 3,
+              "pooled": 0,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 10000000,
+              "target": 8,
+              "pooled": 0,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-c85d38d9b3ceedd2",
+              "end_us": 10100000,
+              "target": 8,
+              "pooled": 0,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 11000000,
+              "target": 9,
+              "pooled": 2,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 11500000,
+              "target": 9,
+              "pooled": 2,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 12000000,
+              "target": 9,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 13000000,
+              "target": 4,
+              "pooled": 3,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 13500000,
+              "target": 4,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 14000000,
+              "target": 4,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 14500000,
+              "target": 4,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 15000000,
+              "target": 4,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 16000000,
+              "target": 5,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 16500000,
+              "target": 5,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 17000000,
+              "target": 5,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 17500000,
+              "target": 5,
+              "pooled": 6,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f13a0229de70b846",
+              "end_us": 17900000,
+              "target": 5,
+              "pooled": 9,
+              "native": 5
+            },
+            {
+              "episode_id": "dv-f756d3233b04ef88",
+              "end_us": 11000000,
+              "target": 9,
+              "pooled": 2,
+              "native": 9
+            },
+            {
+              "episode_id": "dv-f756d3233b04ef88",
+              "end_us": 12000000,
+              "target": 9,
+              "pooled": 3,
+              "native": 5
+            }
+          ]
+        },
+        "chunk_max_abs_error": 9.5367431640625e-06,
+        "future_max_abs_error": 0.0
+      }
+    ]
+  },
+  "limitation": "Native FP32 versus four-bit pooled changes precision and preprocessing as well as representation. Weak labels, overlapping windows, small within-scene corpus; no independent-window significance claim."
+}

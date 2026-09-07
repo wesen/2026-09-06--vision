@@ -236,3 +236,55 @@ Read `design-doc/02-bounded-replay-implementation-and-viewer-contract.md`, then 
 
 ### Technical details
 One active replay/server, one worker/run, queued mandatory work before optional work, nonpreemptive execution with hard deadline, count and byte bounds including running payload, append-only SQLite records, bounded polling, recorded/live-verifier modes, and hash-checked registered media.
+
+## Step 5: Implement the bounded replay primitives
+
+Added the monotonic source clock, approved evidence broker, one-worker subprocess scheduler, immutable replay store, and fixed worker entry point. The scheduler accounts for the running payload as well as queued work and reports every terminal outcome to the host for durable logging. Queue waiting consumes the same wall deadline used during execution.
+
+This is the core implementation checkpoint. Trace/rule integration and the viewer remain open; passing primitive tests does not establish the whole replay application.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 4)
+
+**Assistant interpretation:** Build and verify the bounded execution and history primitives before connecting the actual workloads.
+
+**Inferred user intent:** Ensure overload and delayed evidence remain inspectable and do not create silent future leakage.
+
+### What I did
+- Added `replay/clock.py`, `broker.py`, `scheduler.py`, `store.py`, and `worker.py`.
+- Enforced future dependency rejection, registered frame timestamps, source hashing, and exclusion of path/command fields from released trace data.
+- Added mandatory queue priority and optional eviction, count/byte admission including active work, queue expiry, worker process-group termination/reaping, cancellation, and bounded result loading.
+- Added immutable SQLite rows with stable IDs, ordered commitment horizons, and bounded as-of cursor queries.
+- Ran `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest -q workbench/tests/test_replay_core.py`: ten checks passed in 0.54 s.
+- Printed and archived P2 completion and P3 start slips.
+
+### Why
+A prerecorded file already contains future evidence. Explicit broker checks prevent accidental worker access through the application contract. A finite queue alone is insufficient if the running job is omitted from memory accounting or receives a renewed deadline after waiting.
+
+### What worked
+- Real subprocess timeout and cancellation checks confirmed terminated PIDs no longer exist.
+- Mandatory jobs evicted queued optional work and never exceeded either high-water bound.
+- Cached feature dependency times beyond the horizon were rejected.
+- Earlier as-of views hid later verifier rows; reopening the database retained both separate conditions.
+- P2 done print: HTTP 200, printed true, 384×533 at 2026-09-07T05:02:03Z. P3 start: HTTP 200, printed true, 384×380 at 2026-09-07T05:02:07Z.
+
+### What didn't work
+No feature smoke failed. Source inspection showed the accepted verifier worker exports `run`, not `main`; corrected the live-worker invocation before attempting model execution. Live execution is not yet validated by this checkpoint.
+
+### What I learned
+Subprocess lifecycle tests are inexpensive and directly establish the important deadline invariant. The API and engine can consume terminal events without introducing a background publication mechanism.
+
+### What was tricky to build
+A worker may finish between polls after its deadline. The scheduler conservatively records timeout when completion is observed past the deadline, even if an output file exists. Input payloads are serialized and copied at admission so later caller mutation cannot silently change the actual worker input. As-of pagination is safe because commitment horizons are monotonic.
+
+### What warrants a second pair of eyes
+The engine still needs to persist every scheduler outcome, reset detector prefix state on dropped frames, and validate model output against the request. The broker is a trusted-code boundary, not filesystem isolation. The scheduler's output cap applies before JSON loading; worker disk artifacts remain available to the host.
+
+### What should be done in the future
+Connect actual recorded traces, exact-time states, candidate rules, recorded/live verifier paths, then implement and inspect the viewer. Complete the full P3/P4 gates before closing the ticket.
+
+### Code review instructions
+Read `replay/scheduler.py` admission, poll, and cancel paths, then the broker horizon checks and SQLite as-of query. Run the targeted test file at this feature boundary. Check that no complete source-video path is inserted into a worker job.
+
+### Technical details
+Default admission bounds are sixteen jobs and sixteen MiB, including running work. Worker results are capped at one MiB. One process group runs at a time; stdout/stderr are discarded and structured output is read from the bounded result file. The engine will attach explicit failed/timeout records rather than treating absent output as a negative model answer.

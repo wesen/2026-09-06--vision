@@ -7,14 +7,53 @@
       "phase": "development",
       "family": "cosmos",
       "arm": "D-G",
-      "calls": 12,
+      "calls": 24,
       "strict_invalid": 0,
       "replayed_invalid": 0,
       "recovered": 0,
-      "strict_correct": 11,
-      "replayed_correct": 11,
-      "strict_unsupported": 0,
-      "replayed_unsupported": 0
+      "strict_correct": 17,
+      "replayed_correct": 17,
+      "strict_unsupported": 6,
+      "replayed_unsupported": 6
+    },
+    {
+      "phase": "development",
+      "family": "cosmos",
+      "arm": "D-S",
+      "calls": 72,
+      "strict_invalid": 0,
+      "replayed_invalid": 0,
+      "recovered": 0,
+      "strict_correct": 37,
+      "replayed_correct": 37,
+      "strict_unsupported": 18,
+      "replayed_unsupported": 18
+    },
+    {
+      "phase": "development",
+      "family": "cosmos",
+      "arm": "R-G",
+      "calls": 24,
+      "strict_invalid": 1,
+      "replayed_invalid": 1,
+      "recovered": 0,
+      "strict_correct": 18,
+      "replayed_correct": 18,
+      "strict_unsupported": 4,
+      "replayed_unsupported": 4
+    },
+    {
+      "phase": "development",
+      "family": "cosmos",
+      "arm": "R-S",
+      "calls": 72,
+      "strict_invalid": 3,
+      "replayed_invalid": 3,
+      "recovered": 0,
+      "strict_correct": 52,
+      "replayed_correct": 52,
+      "strict_unsupported": 12,
+      "replayed_unsupported": 12
     },
     {
       "phase": "development",
@@ -67,6 +106,45 @@
       "replayed_correct": 54,
       "strict_unsupported": 15,
       "replayed_unsupported": 18
+    },
+    {
+      "phase": "test",
+      "family": "cosmos",
+      "arm": "D-G",
+      "calls": 24,
+      "strict_invalid": 0,
+      "replayed_invalid": 0,
+      "recovered": 0,
+      "strict_correct": 22,
+      "replayed_correct": 22,
+      "strict_unsupported": 2,
+      "replayed_unsupported": 2
+    },
+    {
+      "phase": "test",
+      "family": "cosmos",
+      "arm": "R-G",
+      "calls": 24,
+      "strict_invalid": 0,
+      "replayed_invalid": 0,
+      "recovered": 0,
+      "strict_correct": 20,
+      "replayed_correct": 20,
+      "strict_unsupported": 2,
+      "replayed_unsupported": 2
+    },
+    {
+      "phase": "test",
+      "family": "qwen",
+      "arm": "D-G",
+      "calls": 24,
+      "strict_invalid": 0,
+      "replayed_invalid": 0,
+      "recovered": 0,
+      "strict_correct": 22,
+      "replayed_correct": 22,
+      "strict_unsupported": 2,
+      "replayed_unsupported": 2
     }
   ]
 }

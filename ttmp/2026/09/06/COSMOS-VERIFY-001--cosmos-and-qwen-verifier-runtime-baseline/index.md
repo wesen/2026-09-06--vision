@@ -26,8 +26,9 @@ Parent: [COSMOS-VIDEO-001](../COSMOS-VIDEO-001--cosmos-and-video-embeddings-a-pr
 - [Intern guide](design-doc/01-intern-analysis-design-and-implementation-guide.md)
 - [Tasks](tasks.md)
 - [Diary](reference/01-design-and-delivery-diary.md)
+- [Measured reasoning comparison and case gallery](reference/08-measured-qwen-and-cosmos-prompted-reasoning-comparison.md)
 
-Design, technical validation, six-page PDF review, and reMarkable delivery are complete. Application implementation remains open in the phased task list.
+Design and reMarkable delivery are complete. The bounded single-image runtime, practical JSON recovery, and matched 8B reasoning comparison are implemented. Both direct controls scored 22/24 on the latest held-out set; Cosmos reasoning scored 20/24, and all conditions missed both unknown cases. Multi-image/native-video verification and broader semantic acceptance remain open. See the phased task list.
 
 ## Guide delivery
 

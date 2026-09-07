@@ -56,3 +56,12 @@ Step 15: development pilots and revised Qwen delimiter passed; froze 48 RGB case
 ## 2026-09-06
 
 Step 17: user-requested missing-close heuristic (f4f801a), 18 focused tests passed; separate replay initially recovered 12 wrappers without altering final JSON or the frozen sweep.
+
+## 2026-09-06
+
+Step 18 in progress: guard complete comparison populations and archive reviewed Cosmos development panels (commit 874139e); frozen inference continues.
+
+
+## 2026-09-07
+
+Completed 384 development + 72 held-out calls, all 72 final-rationale reviews, and both live RULES handoffs. Direct controls 22/24; Cosmos reasoning 20/24; unknown recall 0/2 throughout. Enabled traced missing-close recovery after frozen inference (89c4313); 71 completion smoke tests passed.

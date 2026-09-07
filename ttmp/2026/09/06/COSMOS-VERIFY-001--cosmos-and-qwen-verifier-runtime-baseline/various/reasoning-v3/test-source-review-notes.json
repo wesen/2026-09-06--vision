@@ -1,0 +1,126 @@
+{
+  "reviewer": "assistant RGB review",
+  "scope": "Source-only notes before held-out model inference; frozen labels unchanged. Contact sheets inspected at original available resolution.",
+  "cases": [
+    {
+      "case_id": "dv-dad43880b6994056-0",
+      "reviewed_label": "false",
+      "visual_note": "Red refrigerator: both door panels are seated; upper front face and frame relationship are inspectable."
+    },
+    {
+      "case_id": "dv-dad43880b6994056-14",
+      "reviewed_label": "false",
+      "visual_note": "Red refrigerator: both door panels are seated; upper front face and frame relationship are inspectable."
+    },
+    {
+      "case_id": "dv-dad43880b6994056-28",
+      "reviewed_label": "false",
+      "visual_note": "Red refrigerator: both door panels are seated; upper front face and frame relationship are inspectable. Actor overlaps part of the appliance, but the upper door remains sufficiently visible."
+    },
+    {
+      "case_id": "dv-dad43880b6994056-38",
+      "reviewed_label": "false",
+      "visual_note": "Red refrigerator: both door panels are seated; upper front face and frame relationship are inspectable. Actor overlaps part of the appliance, but the upper door remains sufficiently visible."
+    },
+    {
+      "case_id": "dv-dad43880b6994056-46",
+      "reviewed_label": "true",
+      "visual_note": "Red refrigerator: upper door is displaced from its frame; interior opening is visible. The oblique door panel partly covers the cavity, but the opening and displacement are still visible."
+    },
+    {
+      "case_id": "dv-dad43880b6994056-49",
+      "reviewed_label": "true",
+      "visual_note": "Red refrigerator: upper door is displaced from its frame; interior opening is visible."
+    },
+    {
+      "case_id": "dv-dad43880b6994056-52",
+      "reviewed_label": "true",
+      "visual_note": "Red refrigerator: upper door is displaced from its frame; interior opening is visible."
+    },
+    {
+      "case_id": "dv-dad43880b6994056-55",
+      "reviewed_label": "true",
+      "visual_note": "Red refrigerator: upper door is displaced from its frame; interior opening is visible."
+    },
+    {
+      "case_id": "dv-50acf4cb570d5c06-10",
+      "reviewed_label": "false",
+      "visual_note": "Black refrigerator seen obliquely: the right-facing front panels remain seated against the body; side/front geometry must not be mistaken for an open door."
+    },
+    {
+      "case_id": "dv-50acf4cb570d5c06-20",
+      "reviewed_label": "false",
+      "visual_note": "Black refrigerator seen obliquely: the right-facing front panels remain seated against the body; side/front geometry must not be mistaken for an open door. Actor is beside or partly overlapping the refrigerator; sufficient front-panel boundary remains inspectable."
+    },
+    {
+      "case_id": "dv-50acf4cb570d5c06-27",
+      "reviewed_label": "false",
+      "visual_note": "Black refrigerator seen obliquely: the right-facing front panels remain seated against the body; side/front geometry must not be mistaken for an open door. Actor is beside or partly overlapping the refrigerator; sufficient front-panel boundary remains inspectable."
+    },
+    {
+      "case_id": "dv-50acf4cb570d5c06-37",
+      "reviewed_label": "false",
+      "visual_note": "Black refrigerator seen obliquely: the right-facing front panels remain seated against the body; side/front geometry must not be mistaken for an open door. Actor is beside or partly overlapping the refrigerator; sufficient front-panel boundary remains inspectable."
+    },
+    {
+      "case_id": "dv-50acf4cb570d5c06-47",
+      "reviewed_label": "false",
+      "visual_note": "Black refrigerator seen obliquely: the right-facing front panels remain seated against the body; side/front geometry must not be mistaken for an open door. Actor is beside or partly overlapping the refrigerator; sufficient front-panel boundary remains inspectable."
+    },
+    {
+      "case_id": "dv-d065ae4a05eb0978-0",
+      "reviewed_label": "false",
+      "visual_note": "Front-facing microwave: dark window and white door boundary are visible and seated."
+    },
+    {
+      "case_id": "dv-d065ae4a05eb0978-8",
+      "reviewed_label": "false",
+      "visual_note": "Front-facing microwave: dark window and white door boundary are visible and seated."
+    },
+    {
+      "case_id": "dv-d065ae4a05eb0978-16",
+      "reviewed_label": "false",
+      "visual_note": "Front-facing microwave: dark window and white door boundary are visible and seated."
+    },
+    {
+      "case_id": "dv-d065ae4a05eb0978-22",
+      "reviewed_label": "false",
+      "visual_note": "Front-facing microwave: dark window and white door boundary are visible and seated."
+    },
+    {
+      "case_id": "dv-d065ae4a05eb0978-30",
+      "reviewed_label": "unknown",
+      "visual_note": "Actor blocks most of the microwave door surface; exposed appliance edges do not establish its door state."
+    },
+    {
+      "case_id": "dv-d065ae4a05eb0978-38",
+      "reviewed_label": "unknown",
+      "visual_note": "Actor blocks most of the microwave door surface; exposed appliance edges do not establish its door state."
+    },
+    {
+      "case_id": "dv-d3ba7e1944d989fd-7",
+      "reviewed_label": "false",
+      "visual_note": "Red refrigerator: visible upper door surface is seated against its frame."
+    },
+    {
+      "case_id": "dv-d3ba7e1944d989fd-14",
+      "reviewed_label": "false",
+      "visual_note": "Red refrigerator: visible upper door surface is seated against its frame."
+    },
+    {
+      "case_id": "dv-d3ba7e1944d989fd-20",
+      "reviewed_label": "false",
+      "visual_note": "Red refrigerator: visible upper door surface is seated against its frame. Floating hands are a simulator rendering artifact; they do not establish an action or a door opening."
+    },
+    {
+      "case_id": "dv-d3ba7e1944d989fd-27",
+      "reviewed_label": "false",
+      "visual_note": "Red refrigerator: visible upper door surface is seated against its frame. Actor partly overlaps the lower/left area; enough upper door and boundary remain visible."
+    },
+    {
+      "case_id": "dv-d3ba7e1944d989fd-34",
+      "reviewed_label": "false",
+      "visual_note": "Red refrigerator: visible upper door surface is seated against its frame. Actor partly overlaps the lower/left area; enough upper door and boundary remain visible."
+    }
+  ]
+}

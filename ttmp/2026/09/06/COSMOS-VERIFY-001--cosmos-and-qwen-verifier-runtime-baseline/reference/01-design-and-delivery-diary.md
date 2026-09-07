@@ -20,6 +20,8 @@ RelatedFiles:
       Note: Sequential process supervisor
     - Path: repo://ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/scripts/04-archive-image-gate.py
       Note: Reproducible audit figure
+    - Path: repo://ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/scripts/30-finalize-rationale-audit.py
+      Note: Complete per-response audit with result hash checks
     - Path: repo://ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/tasks.md
       Note: Phased implementation breakdown
     - Path: repo://ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/pdf-validation.json
@@ -28,6 +30,8 @@ RelatedFiles:
       Note: Successful individual delivery
     - Path: repo://workbench/src/video_workbench/verifiers/smoke_worker.py
       Note: Image gate and raw runtime measurements
+    - Path: repo://workbench/tests/test_reasoning_recovery.py
+      Note: Default recovery and strict host integration smoke
     - Path: repo://workbench/verify-env/README.md
       Note: Isolated environment reproduction
 ExternalSources: []
@@ -36,6 +40,7 @@ LastUpdated: 2026-09-06T13:13:51.729574-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -1131,7 +1136,9 @@ Completed-Qwen replay checkpoint: all 72 sampled-reasoning calls are now availab
 
 ## Step 18: Finish the frozen comparison and practical recovery integration
 
-Resumed the running sequential comparison after the user asked to continue. The immediate implementation boundary is deliberate: finish strict development/test inference and the strict live handoff before changing the practical adapter's parser policy. Reporting and review tooling can be completed while that inference continues.
+Completed the frozen development and held-out comparison, audited every final test rationale, and exercised both selected-profile RULES handoffs. Enabled the user-requested missing-close heuristic in practical profiled calls only after strict inference finished. The experiment did not establish a benefit from prompted reasoning on held-out door-state frames: both direct controls scored 22/24, while Cosmos reasoning scored 20/24.
+
+The final report preserves source images, model outputs, runtime metrics, per-response rationale judgments, and the separate recovery replay. The implementation is complete for the approved single-image scope; reliable abstention and broader video/rule semantics remain unaccepted.
 
 ### Prompt Context
 
@@ -1141,54 +1148,78 @@ Resumed the running sequential comparison after the user asked to continue. The 
 
 **Inferred user intent:** Obtain a measured conclusion and usable runtime behavior with a reviewable implementation trail.
 
+**Commit (code):** `89c4313` — "Enable traced reasoning wrapper recovery in practical verifier calls". Reporting completeness and Cosmos development panels were committed in `874139e`.
+
 ### What I did
 
-- Resumed session 48414 without restarting completed calls.
-- Generated and visually inspected all three Cosmos development panels: closed, open, and unknown.
+- Resumed development session 48414 without restarting completed calls. All 384 calls finished in 3,780 seconds.
+- Preserved the policy-selected Qwen D-G and Cosmos R-G profiles before running 72 test calls in session 59557; test inference finished in 639 seconds.
 - Added a complete-population gate to script 25, checking every expected profile/case identity and rejecting duplicate rows before writing final report artifacts.
-- Prepared a four-case host integration check for Qwen/Cosmos and default recovery/explicit strict mode; execution awaits the adapter change after frozen inference.
-- Expanded the measured report's architecture diagram, interpretation of Cosmos development errors, and explicit final-rationale audit rubric.
+- Generated six development and 24 test panels. Inspected the three Cosmos development panels, all four test source contact sheets, two full-size open-fridge frames, and three key final comparison panels for layout and content.
+- Read all 72 final test rationales against the source images and stored explicit supported/mixed/unsupported notes with immutable result hashes. Script 30 verifies the audit covers the complete archive.
+- Ran script 26 through the isolated MLX environment. Both live selected-profile RULES handoffs produced a separate conditioned PASS while preserving the original UNKNOWN baseline.
+- Replayed all saved responses using the missing-close heuristic: 13 Qwen development responses recovered; no Cosmos or test response required this recovery.
+- Enabled practical profiled recovery with explicit strict opt-out and persisted validation policy. Documented the callable API in `workbench/README.md`.
+- Ran the feature-completion smoke selection once: 71 tests passed in 0.40 seconds.
+- Completed R1–R5, C1–C4, the two tracking items, bounded final-rationale comparison, and the recovery follow-up. Left Thinking, crops, multi-image/native-video, reliable abstention, and broader semantics for later work.
 
 ### Why
 
-- A partial aggregate can look final unless the report checks the selected population.
-- Wrapper recovery must be distinguished from answer-content changes and measured visual correctness.
+- The adapter must recover the observed wrapper omission without mixing parser conditions during a frozen experiment.
+- A complete aggregate and per-response audit make failures reviewable; label correctness alone does not establish the truth of a generated explanation.
+- A model's development-selected reasoning style should remain distinguishable from the practical recommendation after measuring held-out behavior.
 
 ### What worked
 
-- The process continued from its saved calls; Qwen's complete development population remained unchanged.
-- Cosmos greedy reasoning improved unknown recall from zero to two of six development unknowns, while other errors remained visible in the comparison panels.
+- All 72 test outputs passed strict output validation; both direct controls got all 22 known-state labels correct.
+- Default recovery and explicit strict mode are covered for both model families, including saved raw output, request binding, normalization, and recovery metadata.
+- All 13 observed missing-close failures recovered, restoring ten correct answers and three unsupported answers without modifying content or original archives.
+- The report, source notes, and complete raw archives expose both output validity and visual errors.
 
 ### What didn't work
 
-- Initial image inspection used the nonexistent filename `cosmos-closed.png` and returned `No such file or directory (os error 2)`. Listed the generated files and inspected `cosmos-false.png`, `cosmos-true.png`, and `cosmos-unknown.png` successfully.
-- One Cosmos greedy reasoning response emitted `answer: closed`, producing `invalid answer`. The missing-close recovery intentionally does not change enum values.
+- Initial image inspection used nonexistent `cosmos-closed.png` and returned `No such file or directory (os error 2)`. Listed the generated files and inspected `cosmos-false.png`, `cosmos-true.png`, and `cosmos-unknown.png` successfully.
+- Cosmos produced three `invalid answer` enum failures across development reasoning arms. Those remain invalid.
+- `cosmos-R-S-1235`, case `dv-503ac41c9f57746a-27`, returned `status: timeout` after 120.22431666706689 seconds. The supervised process group was terminated and reaped; subsequent requests completed normally. No accepted raw response exists for that call, and no retry substituted for it.
+- All three test conditions called both actor-occluded microwave cases closed. Cosmos reasoning additionally abstained on two visibly closed fridge views.
+- Cosmos direct sampling seed 1235 answered true on every development frame and scored 3/24, versus 17/24 for its other two seeds.
+- Cosmos reasoning sometimes produced a correct label with an invalid physical justification, including a claim that a plate on top prevents a microwave door from being open.
 
 ### What I learned
 
-- Correct abstention labels can coexist with unsupported descriptions of agent activity in the final rationale.
-- Strict output validity, label accuracy, and rationale support require separate counts.
+- Prompted reasoning can change uncertainty handling on development without improving it on held-out frames.
+- The observed test rationale counts are Qwen D-G 22 supported / 0 mixed / 2 unsupported; Cosmos D-G 18 / 4 / 2; Cosmos R-G 10 / 9 / 5.
+- Generic use of the word video for the supplied frame should not itself determine a factual-support rating. During the audit I clarified that distinction and retained penalties for concrete invented state assertions, action history, incorrect object details, and invalid physical inferences.
+- Format recovery exposes both correct and incorrect content. After replay, Qwen sampled reasoning matches direct sampling's aggregate correctness and unsupported count rather than exceeding them.
 
 ### What was tricky to build
 
-- The running experiment checks source hashes and must not mix parser conditions. Prepared the future adapter integration test without modifying the frozen runtime modules.
-- Final report completeness must account for three sampled seeds but only one greedy run and avoid duplicating the direct control when it is selected.
+- The frozen runtime included adapter and parser source hashes. Prepared the new integration test while inference ran, then changed the adapter only after the complete strict test and live handoffs. The original strict runtime remains reproducible at commit `5aa10eb`; current reporting/replay operates on saved records.
+- Final report completeness must account for three sampled seeds but one greedy run, and avoid duplicating the direct control when it is selected.
+- The rationale audit is a manual internal review with correlated frame-label judgments. Preserved per-response notes and original images rather than treating the resulting counts as independent human validation.
 
 ### What warrants a second pair of eyes
 
-- Inspect the final-rationale audit against the original RGB frames, particularly actor occlusion and the side-facing microwave.
-- Check that the post-observation recovery replay does not influence development selection or alter strict archives.
+- Review the actor-occlusion threshold and the rationale categories against the original frames. The test has only two unknown cases from one episode, so uncertainty generalization is unresolved.
+- Review conservative recovery rejection rules and verify no post-observation replay influenced frozen selections.
+- Interpret the all-true sampled seed as an observed outcome; the experiment does not diagnose an underlying sampler defect.
 
 ### What should be done in the future
 
-- Pending in this step: finish development and selected/control test inference, audit final rationales, exercise live handoffs, activate recovery, run the completion smoke checks, and finalize measured tables and task status.
+- Keep direct greedy as the practical reference for this measured task. Use fresh reviewed populations for future prompt/checkpoint choices rather than retuning against this consumed test set.
+- Existing deferred work: distinct Qwen Thinking checkpoint, approved full-frame plus crop evidence, multi-image/native-video capability, and broader end-to-end rule evaluation.
 
 ### Code review instructions
 
-- Begin with scripts 24–29 and `reference/08-measured-qwen-and-cosmos-prompted-reasoning-comparison.md`.
-- Review `test_host_recovery_policy_and_persisted_trace` when the practical adapter integration lands.
+- Read `verifiers/adapter.py`, `recovery.py`, and `test_host_recovery_policy_and_persisted_trace`.
+- Read reference 08, then inspect the over-abstention, plate-justification, and occluded-microwave panels linked there.
+- Trace any case/profile into `results/test-records.jsonl` and `test-rationale-audit.json`.
+- Completion command: `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_reasoning_profiles.py workbench/tests/test_reasoning_recovery.py workbench/tests/test_visibility_adapter.py workbench/tests/test_verifier_output.py -q`.
 
 ### Technical details
 
 - Frozen protocol SHA-256: `629d7769ee9f47cf4cc0634d90e94daa3492f98b034a8b7745742953a208ace3`.
-- Strict inference uses the frozen runtime from implementation commit `5aa10eb`; the recovery helper was added separately in `f4f801a`.
+- Core experiment: 384 development + 72 test = 456 calls. Three enum failures, 13 missing-close failures, and one timeout occurred in development; test had no output or execution failures.
+- Recovery replay leaves four non-OK calls across the full experiment: three enums and one timeout.
+- Test median wall time: Qwen D-G 6.62 seconds, Cosmos D-G 7.36 seconds, Cosmos R-G 12.56 seconds. Peak completed-call MLX allocation was approximately 10.11 GiB.
+- Original strict runtime: `5aa10eb`; helper: `f4f801a`; practical integration: `89c4313`.

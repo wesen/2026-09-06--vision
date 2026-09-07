@@ -1,0 +1,440 @@
+[
+  {
+    "family": "qwen",
+    "profile": {
+      "id": "qwen-D-G-3407",
+      "model_family": "qwen",
+      "prompt_style": "direct",
+      "system_prompt": "",
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "repetition_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "penalty_context_size": 4096,
+      "seed": 3407,
+      "max_output_tokens": 4096,
+      "deadline_ms": 120000
+    },
+    "fixture": "Controlled frame-sample event, not measured departure detection",
+    "baseline": {
+      "rule_id": "closed-at-sample",
+      "rule_sha256": "2155948d3ba1e9d167d818a6955ba8e1bc99731f5904fe8129be662afd7d0f12",
+      "episode_id": "dv-31fd8bf573379ba5",
+      "entity_id": "dv-31fd8bf573379ba5:object-155",
+      "as_of_us": 250000,
+      "status": "UNKNOWN",
+      "reason": "no_exact_state_sample",
+      "applicability": "observed",
+      "evidence_ids": [
+        "sample"
+      ],
+      "evaluator_version": "flat-rules-v1",
+      "evaluation_id": "e4cb78e14dd65fd664a996de17840396ea34b10981e7bf28b25e57cb208e60e7"
+    },
+    "baseline_unchanged": true,
+    "result": {
+      "status": "ok",
+      "source_evaluation_id": "e4cb78e14dd65fd664a996de17840396ea34b10981e7bf28b25e57cb208e60e7",
+      "verifier": {
+        "status": "ok",
+        "returncode": 0,
+        "elapsed_seconds": 7.314989875070751,
+        "request_id": "a170a26fee26ee3fb55abbd73b2232c638dc6630ba289c7326b385bafbf42f1a",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "schema_version": "reasoning-image-v3",
+        "mode": "single_image",
+        "prompt": "Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+        "model_path": "/Users/manuel/code/wesen/2026-09-06--vision/output/models/qwen3-vl-instruct-8b-8bit",
+        "completed_us": 7564990,
+        "profile": {
+          "id": "qwen-D-G-3407",
+          "model_family": "qwen",
+          "prompt_style": "direct",
+          "system_prompt": "",
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "top_k": 0,
+          "repetition_penalty": 1.0,
+          "presence_penalty": 0.0,
+          "penalty_context_size": 4096,
+          "seed": 3407,
+          "max_output_tokens": 4096,
+          "deadline_ms": 120000
+        },
+        "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d",
+        "answer": {
+          "request_id": "a170a26fee26ee3fb55abbd73b2232c638dc6630ba289c7326b385bafbf42f1a",
+          "entity_id": "dv-31fd8bf573379ba5:object-155",
+          "answer": "false",
+          "evidence_ids": [
+            "dv-31fd8bf573379ba5-0"
+          ],
+          "rationale": "The refrigerator door is visibly seated against its frame, with no visible gap or displacement indicating it is open."
+        },
+        "visibility": {
+          "target_identified": true,
+          "door_observable": true
+        },
+        "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"false\", \"evidence\": [\"F1\"], \"rationale\": \"The refrigerator door is visibly seated against its frame, with no visible gap or displacement indicating it is open.\"}",
+        "normalizations": [],
+        "final_text": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"false\", \"evidence\": [\"F1\"], \"rationale\": \"The refrigerator door is visibly seated against its frame, with no visible gap or displacement indicating it is open.\"}",
+        "output_style": "direct",
+        "runtime": {
+          "request_id": "a170a26fee26ee3fb55abbd73b2232c638dc6630ba289c7326b385bafbf42f1a",
+          "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"false\", \"evidence\": [\"F1\"], \"rationale\": \"The refrigerator door is visibly seated against its frame, with no visible gap or displacement indicating it is open.\"}",
+          "prompt": "Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+          "formatted_prompt": "<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|>Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.<|im_end|>\n<|im_start|>assistant\n",
+          "mode": "single_image",
+          "load_seconds": 2.0072672080714256,
+          "preparation_seconds": 0.04630829184316099,
+          "generation_seconds": 3.7890578750520945,
+          "peak_mlx_bytes": 10857492541,
+          "prompt_tokens": 507,
+          "generation_tokens": 56,
+          "finish_reason": "stop",
+          "versions": {
+            "mlx": "0.32.2",
+            "mlx-vlm": "0.6.17",
+            "transformers": "5.16.1"
+          },
+          "profile": {
+            "id": "qwen-D-G-3407",
+            "model_family": "qwen",
+            "prompt_style": "direct",
+            "system_prompt": "",
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "top_k": 0,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "penalty_context_size": 4096,
+            "seed": 3407,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d",
+          "schema_version": "reasoning-image-v3",
+          "processed_inputs": {
+            "attention_mask": {
+              "shape": [
+                1,
+                507
+              ],
+              "dtype": "mlx.core.int64"
+            },
+            "input_ids": {
+              "shape": [
+                1,
+                507
+              ],
+              "dtype": "mlx.core.int64"
+            },
+            "pixel_values": {
+              "shape": [
+                1200,
+                1536
+              ],
+              "dtype": "mlx.core.float32"
+            },
+            "image_grid_thw": {
+              "shape": [
+                1,
+                3
+              ],
+              "dtype": "mlx.core.int64",
+              "values": [
+                [
+                  1,
+                  30,
+                  40
+                ]
+              ]
+            },
+            "resized_images_hw": [
+              [
+                480,
+                640
+              ]
+            ]
+          },
+          "resolved_sampling": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "top_k": 0,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "repetition_context_size": 4096,
+            "presence_context_size": 4096
+          },
+          "penalty_scope": "MLX recent 4096 input/generated tokens; local approximation, not vLLM parity"
+        }
+      },
+      "conditioned": {
+        "status": "ok",
+        "condition": "separate_verifier_evidence",
+        "source_evaluation_id": "e4cb78e14dd65fd664a996de17840396ea34b10981e7bf28b25e57cb208e60e7",
+        "request_id": "a170a26fee26ee3fb55abbd73b2232c638dc6630ba289c7326b385bafbf42f1a",
+        "observation": {
+          "observation_id": "cff228fcea6bf0aeb117484efa39d3fee97d55e23142f0ac31dd4cd071c7541e",
+          "run_id": "reasoning-v3-live",
+          "stream_id": "verifier/qwen-8b",
+          "episode_id": "dv-31fd8bf573379ba5",
+          "entity": "dv-31fd8bf573379ba5:object-155",
+          "property": "door_open",
+          "value": false,
+          "event_us": 0,
+          "available_us": 7564990,
+          "committed_us": 7564990,
+          "evidence_ids": [
+            "dv-31fd8bf573379ba5-0"
+          ],
+          "producer": "qwen-8b",
+          "feature_space_id": "visual-verifier/qwen-8b",
+          "mode": "causal",
+          "unknown_reason": null
+        },
+        "decision": {
+          "rule_id": "closed-at-sample",
+          "rule_sha256": "5aab6ac4994a90de0a53dcb17ba1e4fa9338c18762e362d38a4704cca495358e",
+          "episode_id": "dv-31fd8bf573379ba5",
+          "entity_id": "dv-31fd8bf573379ba5:object-155",
+          "as_of_us": 7564990,
+          "status": "PASS",
+          "reason": "observed_state_match",
+          "applicability": "observed",
+          "evidence_ids": [
+            "cff228fcea6bf0aeb117484efa39d3fee97d55e23142f0ac31dd4cd071c7541e",
+            "sample"
+          ],
+          "evaluator_version": "flat-rules-v1",
+          "evaluation_id": "750d4cb1b552b4e5b4ddd09891d2a77352cf7b62acd8ce6b28f69b8984f5f390"
+        },
+        "model_citations": [
+          "dv-31fd8bf573379ba5-0"
+        ],
+        "raw": "{\"request_id\": \"a170a26fee26ee3fb55abbd73b2232c638dc6630ba289c7326b385bafbf42f1a\", \"entity_id\": \"dv-31fd8bf573379ba5:object-155\", \"answer\": \"false\", \"evidence_ids\": [\"dv-31fd8bf573379ba5-0\"], \"rationale\": \"The refrigerator door is visibly seated against its frame, with no visible gap or displacement indicating it is open.\"}"
+      }
+    }
+  },
+  {
+    "family": "cosmos",
+    "profile": {
+      "id": "cosmos-R-G-1234",
+      "model_family": "cosmos",
+      "prompt_style": "reasoning",
+      "system_prompt": "You are a helpful assistant.",
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "repetition_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "penalty_context_size": 4096,
+      "seed": 1234,
+      "max_output_tokens": 4096,
+      "deadline_ms": 120000
+    },
+    "fixture": "Controlled frame-sample event, not measured departure detection",
+    "baseline": {
+      "rule_id": "closed-at-sample",
+      "rule_sha256": "2155948d3ba1e9d167d818a6955ba8e1bc99731f5904fe8129be662afd7d0f12",
+      "episode_id": "dv-31fd8bf573379ba5",
+      "entity_id": "dv-31fd8bf573379ba5:object-155",
+      "as_of_us": 250000,
+      "status": "UNKNOWN",
+      "reason": "no_exact_state_sample",
+      "applicability": "observed",
+      "evidence_ids": [
+        "sample"
+      ],
+      "evaluator_version": "flat-rules-v1",
+      "evaluation_id": "e4cb78e14dd65fd664a996de17840396ea34b10981e7bf28b25e57cb208e60e7"
+    },
+    "baseline_unchanged": true,
+    "result": {
+      "status": "ok",
+      "source_evaluation_id": "e4cb78e14dd65fd664a996de17840396ea34b10981e7bf28b25e57cb208e60e7",
+      "verifier": {
+        "status": "ok",
+        "returncode": 0,
+        "elapsed_seconds": 14.242683332879096,
+        "request_id": "a170a26fee26ee3fb55abbd73b2232c638dc6630ba289c7326b385bafbf42f1a",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "schema_version": "reasoning-image-v3",
+        "mode": "single_image",
+        "prompt": "Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Your final answer must be one JSON object with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.\nReason step by step using only the supplied image. Identify the appliance and its door surface. Examine visible detail and occlusion. Compare direct evidence of an open door with direct evidence of a seated closed door. Choose unknown if neither is established. Do not infer state from the person's activity or an assumed history.\nWrite your reasoning inside <think> and </think>.\nImmediately after </think>, return exactly one final JSON object with the specified visibility fields. Put no additional prose after the final JSON.",
+        "model_path": "/Users/manuel/code/wesen/2026-09-06--vision/output/models/cosmos-reason2-8b-8bit-local",
+        "completed_us": 14492684,
+        "profile": {
+          "id": "cosmos-R-G-1234",
+          "model_family": "cosmos",
+          "prompt_style": "reasoning",
+          "system_prompt": "You are a helpful assistant.",
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "top_k": 0,
+          "repetition_penalty": 1.0,
+          "presence_penalty": 0.0,
+          "penalty_context_size": 4096,
+          "seed": 1234,
+          "max_output_tokens": 4096,
+          "deadline_ms": 120000
+        },
+        "profile_sha256": "3988fbc4cdf5b3140c792b7be874c63f6ab69a46459bb01d2eba915d2aa40c6d",
+        "answer": {
+          "request_id": "a170a26fee26ee3fb55abbd73b2232c638dc6630ba289c7326b385bafbf42f1a",
+          "entity_id": "dv-31fd8bf573379ba5:object-155",
+          "answer": "false",
+          "evidence_ids": [
+            "dv-31fd8bf573379ba5-0"
+          ],
+          "rationale": "The refrigerator in the image has two doors with horizontal silver handles, and the video shows they are closed. There is no indication of an open door or gap exposing the interior."
+        },
+        "visibility": {
+          "target_identified": true,
+          "door_observable": true
+        },
+        "raw": "<think>\n\nOkay, let's see. The user is asking whether the door of the refrigerator is open. The video shows a black refrigerator with two doors, each having a horizontal silver handle. The key detail here is that the doors are \"closed.\" The video does not show any gap or the door being ajar. The handles are shown, but since the doors are closed, the handles would be in their normal position. The camera angle is slightly elevated, but the video doesn't indicate any part of the door being open. The other elements in the scene, like the door to the adjacent room, are open, but that's a different door. The refrigerator's doors are explicitly stated as closed, so the answer should be no.\n</think>\n\n```json\n{\n  \"target_identified\": true,\n  \"door_observable\": true,\n  \"answer\": \"false\",\n  \"evidence\": [\"F1\"],\n  \"rationale\": \"The refrigerator in the image has two doors with horizontal silver handles, and the video shows they are closed. There is no indication of an open door or gap exposing the interior.\"\n}\n```",
+        "normalizations": [
+          "markdown_fence_wrapper"
+        ],
+        "final_text": "\n\n```json\n{\n  \"target_identified\": true,\n  \"door_observable\": true,\n  \"answer\": \"false\",\n  \"evidence\": [\"F1\"],\n  \"rationale\": \"The refrigerator in the image has two doors with horizontal silver handles, and the video shows they are closed. There is no indication of an open door or gap exposing the interior.\"\n}\n```",
+        "output_style": "reasoning",
+        "runtime": {
+          "request_id": "a170a26fee26ee3fb55abbd73b2232c638dc6630ba289c7326b385bafbf42f1a",
+          "raw": "<think>\n\nOkay, let's see. The user is asking whether the door of the refrigerator is open. The video shows a black refrigerator with two doors, each having a horizontal silver handle. The key detail here is that the doors are \"closed.\" The video does not show any gap or the door being ajar. The handles are shown, but since the doors are closed, the handles would be in their normal position. The camera angle is slightly elevated, but the video doesn't indicate any part of the door being open. The other elements in the scene, like the door to the adjacent room, are open, but that's a different door. The refrigerator's doors are explicitly stated as closed, so the answer should be no.\n</think>\n\n```json\n{\n  \"target_identified\": true,\n  \"door_observable\": true,\n  \"answer\": \"false\",\n  \"evidence\": [\"F1\"],\n  \"rationale\": \"The refrigerator in the image has two doors with horizontal silver handles, and the video shows they are closed. There is no indication of an open door or gap exposing the interior.\"\n}\n```",
+          "prompt": "Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Your final answer must be one JSON object with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.\nReason step by step using only the supplied image. Identify the appliance and its door surface. Examine visible detail and occlusion. Compare direct evidence of an open door with direct evidence of a seated closed door. Choose unknown if neither is established. Do not infer state from the person's activity or an assumed history.\nWrite your reasoning inside <think> and </think>.\nImmediately after </think>, return exactly one final JSON object with the specified visibility fields. Put no additional prose after the final JSON.",
+          "formatted_prompt": "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|>Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Your final answer must be one JSON object with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.\nReason step by step using only the supplied image. Identify the appliance and its door surface. Examine visible detail and occlusion. Compare direct evidence of an open door with direct evidence of a seated closed door. Choose unknown if neither is established. Do not infer state from the person's activity or an assumed history.\nWrite your reasoning inside <think> and </think>.\nImmediately after </think>, return exactly one final JSON object with the specified visibility fields. Put no additional prose after the final JSON.<|im_end|>\n<|im_start|>assistant\n",
+          "mode": "single_image",
+          "load_seconds": 2.917074792087078,
+          "preparation_seconds": 0.04509962513111532,
+          "generation_seconds": 9.821394874947146,
+          "peak_mlx_bytes": 10857494411,
+          "prompt_tokens": 617,
+          "generation_tokens": 230,
+          "finish_reason": "stop",
+          "versions": {
+            "mlx": "0.32.2",
+            "mlx-vlm": "0.6.17",
+            "transformers": "5.16.1"
+          },
+          "profile": {
+            "id": "cosmos-R-G-1234",
+            "model_family": "cosmos",
+            "prompt_style": "reasoning",
+            "system_prompt": "You are a helpful assistant.",
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "top_k": 0,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "penalty_context_size": 4096,
+            "seed": 1234,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "3988fbc4cdf5b3140c792b7be874c63f6ab69a46459bb01d2eba915d2aa40c6d",
+          "schema_version": "reasoning-image-v3",
+          "processed_inputs": {
+            "attention_mask": {
+              "shape": [
+                1,
+                617
+              ],
+              "dtype": "mlx.core.int64"
+            },
+            "input_ids": {
+              "shape": [
+                1,
+                617
+              ],
+              "dtype": "mlx.core.int64"
+            },
+            "pixel_values": {
+              "shape": [
+                1200,
+                1536
+              ],
+              "dtype": "mlx.core.float32"
+            },
+            "image_grid_thw": {
+              "shape": [
+                1,
+                3
+              ],
+              "dtype": "mlx.core.int64",
+              "values": [
+                [
+                  1,
+                  30,
+                  40
+                ]
+              ]
+            },
+            "resized_images_hw": [
+              [
+                480,
+                640
+              ]
+            ]
+          },
+          "resolved_sampling": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "top_k": 0,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "repetition_context_size": 4096,
+            "presence_context_size": 4096
+          },
+          "penalty_scope": "MLX recent 4096 input/generated tokens; local approximation, not vLLM parity"
+        }
+      },
+      "conditioned": {
+        "status": "ok",
+        "condition": "separate_verifier_evidence",
+        "source_evaluation_id": "e4cb78e14dd65fd664a996de17840396ea34b10981e7bf28b25e57cb208e60e7",
+        "request_id": "a170a26fee26ee3fb55abbd73b2232c638dc6630ba289c7326b385bafbf42f1a",
+        "observation": {
+          "observation_id": "27abdd2f8097deadc35b54d298dddaf8a90fca667153b3dfbe0fd1a2d3886f77",
+          "run_id": "reasoning-v3-live",
+          "stream_id": "verifier/cosmos-8b",
+          "episode_id": "dv-31fd8bf573379ba5",
+          "entity": "dv-31fd8bf573379ba5:object-155",
+          "property": "door_open",
+          "value": false,
+          "event_us": 0,
+          "available_us": 14492684,
+          "committed_us": 14492684,
+          "evidence_ids": [
+            "dv-31fd8bf573379ba5-0"
+          ],
+          "producer": "cosmos-8b",
+          "feature_space_id": "visual-verifier/cosmos-8b",
+          "mode": "causal",
+          "unknown_reason": null
+        },
+        "decision": {
+          "rule_id": "closed-at-sample",
+          "rule_sha256": "00aae33a68012e4ca36265af815a9705ba2398162961d5ae8ceb8dbb6e14e52e",
+          "episode_id": "dv-31fd8bf573379ba5",
+          "entity_id": "dv-31fd8bf573379ba5:object-155",
+          "as_of_us": 14492684,
+          "status": "PASS",
+          "reason": "observed_state_match",
+          "applicability": "observed",
+          "evidence_ids": [
+            "27abdd2f8097deadc35b54d298dddaf8a90fca667153b3dfbe0fd1a2d3886f77",
+            "sample"
+          ],
+          "evaluator_version": "flat-rules-v1",
+          "evaluation_id": "4b0e00e4d567eb5ab69de895b204856d8fca4d05bdc46f7729ec019e26871e29"
+        },
+        "model_citations": [
+          "dv-31fd8bf573379ba5-0"
+        ],
+        "raw": "{\"request_id\": \"a170a26fee26ee3fb55abbd73b2232c638dc6630ba289c7326b385bafbf42f1a\", \"entity_id\": \"dv-31fd8bf573379ba5:object-155\", \"answer\": \"false\", \"evidence_ids\": [\"dv-31fd8bf573379ba5-0\"], \"rationale\": \"The refrigerator in the image has two doors with horizontal silver handles, and the video shows they are closed. There is no indication of an open door or gap exposing the interior.\"}"
+      }
+    }
+  }
+]

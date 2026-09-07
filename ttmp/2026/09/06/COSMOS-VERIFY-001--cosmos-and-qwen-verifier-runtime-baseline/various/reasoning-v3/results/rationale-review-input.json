@@ -1,0 +1,650 @@
+[
+  {
+    "case_id": "dv-dad43880b6994056-0",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The refrigerator door is visibly seated against its frame with no visible gap or displacement, indicating it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-14",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The refrigerator door is visibly seated against its frame with no visible gap or displacement, indicating it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-28",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red fridge's door is visibly seated against its frame with no visible gap or displacement, indicating it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-38",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red fridge's door is visibly seated against its frame with no visible gap or displacement, indicating it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-46",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "true",
+    "answer": "true",
+    "rationale": "The red fridge door is visibly ajar, with a clear gap between the door and the fridge body, exposing the interior opening.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-49",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "true",
+    "answer": "true",
+    "rationale": "The fridge door is visibly displaced from its frame, creating a clear gap that exposes the interior of the fridge.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-52",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "true",
+    "answer": "true",
+    "rationale": "The fridge door is visibly displaced from its frame, creating a clear gap that exposes the interior of the fridge.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-55",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "true",
+    "answer": "true",
+    "rationale": "The fridge door is visibly displaced from its frame, creating a clear gap that exposes the interior of the fridge.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-10",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The fridge door is visibly seated against its frame, with no visible gap or displacement indicating it is open.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-20",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The fridge door is visible and seated against its frame, with no visible gap or displacement indicating it is open.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-27",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The fridge door is visibly seated against its frame, with no visible gap or displacement indicating it is open.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-37",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The fridge door is visibly seated against its frame with no visible gap or displacement, indicating it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-47",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The fridge door is visibly seated against its frame with no visible gap or displacement, indicating it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-0",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The microwave door is visibly seated against its frame, with no visible gap or displacement indicating it is open.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-8",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The microwave door is visibly seated against its frame, with no visible gap or displacement indicating it is open.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-16",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The microwave door is visibly seated against its frame, with no visible gap or displacement indicating it is open.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-22",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The microwave door is visibly seated against its frame, with no visible gap or displacement indicating it is open.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-30",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "unknown",
+    "answer": "false",
+    "rationale": "The microwave door is visible and seated against its frame, with no visible gap or displacement indicating it is open.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-38",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "unknown",
+    "answer": "false",
+    "rationale": "The microwave is visible on the countertop, and its door is seated against its frame with no visible gap or displacement, indicating it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-7",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The refrigerator door is visibly seated against its frame with no visible gap or displacement, indicating it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-14",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The refrigerator door is visibly seated against its frame with no visible gap or displacement, indicating it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-20",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red fridge's door is visibly seated against its frame with no visible gap or displacement, indicating it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-27",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red fridge's door is visibly seated against its frame with no visible gap or displacement, indicating it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-34",
+    "profile_id": "qwen-D-G-3407",
+    "seed": 3407,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red fridge's door is visibly seated against its frame with no visible gap or displacement, indicating it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-0",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has two doors, both of which are visibly closed and aligned with their respective frames, showing no gaps or signs of being opened.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-14",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has two doors, both of which are visibly closed and aligned with their respective frames, showing no gaps or signs of being open.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-28",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has a single door that is visibly closed, with no indication of an open gap or displacement.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-38",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has a closed door with no visible gap or displacement, and the person standing in front of it does not block the door.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-46",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "true",
+    "answer": "true",
+    "rationale": "The red refrigerator door is visibly open, with a clear gap exposing the interior space behind it.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-49",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "true",
+    "answer": "true",
+    "rationale": "The red refrigerator door is visibly open, revealing the interior shelves and contents, with the door hinged on the right side and swung outward.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-52",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "true",
+    "answer": "true",
+    "rationale": "The red refrigerator door is visibly open, revealing the interior shelves and contents, with the door hinged on the right side and swung outward.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-55",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "true",
+    "answer": "true",
+    "rationale": "The red refrigerator door is visibly open, with its interior exposed and the door hinged away from the main body of the appliance.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-10",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The refrigerator door is visibly closed, with no indication of an open gap or displacement, and it is fully seated against its frame.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-20",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The refrigerator door is visible and appears to be closed, with no indication of an open gap or displacement.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-27",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The refrigerator door is visibly closed, with no indication of an open gap or displacement, and the person in the scene does not block the door.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-37",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The refrigerator door is visible and appears to be closed, with no indication of an open gap or displacement.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-47",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The refrigerator door is visible and appears to be closed, with no indication of an open gap or displacement.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-0",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The microwave door is visibly closed, with no indication of an open gap or displacement; it sits flush against the appliance\u2019s frame.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-8",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The microwave door is visibly closed, with no indication of an open gap or displacement; it sits flush against the appliance\u2019s frame.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-16",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The microwave door is visibly closed, with no indication of an open gap or displacement; it sits flush against the appliance\u2019s frame.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-22",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The microwave door is visibly closed, with no indication of an open gap or displacement; it sits flush against the appliance\u2019s frame.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-30",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "unknown",
+    "answer": "false",
+    "rationale": "The microwave door is visible and appears to be closed, with no indication of an open gap or displacement.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-38",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "unknown",
+    "answer": "false",
+    "rationale": "The microwave door is visible and appears to be closed, with no indication of an open gap or displacement.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-7",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has two doors, both of which are visibly closed and aligned with their respective frames, showing no gaps or signs of being opened.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-14",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has two doors, both of which are visibly closed and aligned with their respective frames, showing no gaps or signs of being open.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-20",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has two doors, both of which are visibly closed and aligned with their respective frames, showing no gaps or signs of being opened.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-27",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has a smooth, unbroken surface with no visible gaps or openings, indicating that its door is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-34",
+    "profile_id": "cosmos-D-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has a smooth, unbroken surface with no visible gaps or openings, indicating that its door is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-0",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has two doors with horizontal handles, but the video does not show any open doors or gaps indicating an open state. The doors are part of the fridge's structure and appear closed based on the provided details.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-14",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has two doors with horizontal handles, but the video does not show any open doors or gaps indicating an open state. The doors are part of the fridge's structure and appear closed based on the provided details.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-28",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "unknown",
+    "rationale": "The person is standing in front of the refrigerator, facing away from the camera, which blocks the view of the door. The refrigerator's door is not shown as open, and no visible gap or displaced door is observed. The handle is present but does not indicate the door's state due to the person's obstruction.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-38",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "unknown",
+    "rationale": "The person is standing in front of the fridge, but their body blocks the view of the door, and there is no visible indication of the door being open or closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-46",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "true",
+    "answer": "true",
+    "rationale": "The red refrigerator is explicitly shown as having an open door, and the agent's hand is positioned near it, indicating interaction with the open door.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-49",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "true",
+    "answer": "true",
+    "rationale": "The red refrigerator in the image has its door open, exposing the interior shelves, which directly indicates the door is not closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-52",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "true",
+    "answer": "true",
+    "rationale": "The red refrigerator in the image has its door open, revealing the interior shelves, which directly indicates the door is not closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-dad43880b6994056-55",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "true",
+    "answer": "true",
+    "rationale": "The red refrigerator in the image has its door open, and the person's hand is visible inside, confirming the door is not closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-10",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The refrigerator doors are explicitly stated as closed, with no indication of an open door or gap. The silver handles are visible but do not suggest the doors are ajar or being opened.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-20",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The refrigerator in the image is shown as having two doors, but there is no indication of an open door. The person is facing away from the camera, and the fridge is positioned against the wall, suggesting it is closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-27",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The black refrigerator in the image has two closed doors with silver handles, and there is no visible gap or indication that the door is open.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-37",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The refrigerator doors are explicitly shown as closed with silver handles, and there is no indication of an open door or gap in the image description.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-50acf4cb570d5c06-47",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The black refrigerator has two doors with silver handles, and the video shows they are closed. No indication of an open door or gap is present in the scene.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-0",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The microwave is positioned on the countertop with a plate on top, and there is no indication of an open door or items inside the microwave. The door appears to be closed as the plate is resting on the exterior surface.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-8",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The microwave is positioned on the countertop with a plate of food on top, indicating the door is closed as there is no visible gap or open state shown.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-16",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The microwave is positioned on the countertop with a plate on top, and there is no indication of the door being open or any interaction with the door in the provided details. The door is likely closed as the plate is placed externally on the appliance.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-22",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The microwave has a plate of food on top of it, which would not be possible if the door were open. The video does not show the door being open or any interaction with the microwave that would suggest the door is open.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-30",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "unknown",
+    "answer": "false",
+    "rationale": "The microwave is positioned on the countertop to the left of the sink, and its door is explicitly stated as closed. There is no indication of the door being opened or any interaction with it by the agent, confirming the door remains closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d065ae4a05eb0978-38",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "unknown",
+    "answer": "false",
+    "rationale": "The microwave is positioned on the countertop to the left of the sink, and its door is explicitly stated as closed. There is no indication of the door being opened or any interaction with it by the agent.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-7",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has two doors with horizontal handles, but the video does not show any open doors or gaps, indicating they are closed.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-14",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has two doors with horizontal handles, but the video does not show any open doors or gaps between them. The doors are part of the fridge's structure and appear closed based on the provided details.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-20",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator in the image has two doors, each with a horizontal handle, and the video shows they are closed. There is no indication of the door being opened or any interaction with it in the provided context.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-27",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator has a smooth surface and a handle on the right side, but there is no visible gap or indication that the door is open. The person partially blocks the view, but the fridge itself is not shown as having an open door.",
+    "status": "ok"
+  },
+  {
+    "case_id": "dv-d3ba7e1944d989fd-34",
+    "profile_id": "cosmos-R-G-1234",
+    "seed": 1234,
+    "expected": "false",
+    "answer": "false",
+    "rationale": "The red refrigerator in the image has a closed door, as indicated by the smooth surface and handle on the right side without any visible gap or open state.",
+    "status": "ok"
+  }
+]

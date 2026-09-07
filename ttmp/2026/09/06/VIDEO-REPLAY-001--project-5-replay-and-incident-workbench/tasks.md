@@ -6,33 +6,32 @@
 - [x] Write detailed intern analysis/design/implementation guide.
 - [x] Validate technical contracts and rendered PDF.
 - [x] Upload this ticket guide to reMarkable and record receipt.
+- [x] Supersede the broad original implementation scope with the bounded replay contract and explicit deferred tasks.
 
-## W1 Clock and broker
+## P3 Clock, broker, scheduler, and persistence
 
-- [ ] Implement monotonic replay/source time mapping and packet horizon.
-- [ ] Test delayed/future frames and precomputed-feature availability.
+- [ ] Implement monotonic source/run mapping, cycles, and dependency availability enforcement.
+- [ ] Broker only released bounded evidence; never pass complete source-video paths to workers.
+- [ ] Bound admitted jobs and input bytes including running work; implement mandatory priority and optional eviction.
+- [ ] Enforce queue-inclusive deadlines, isolated worker timeout/reaping, cancellation, and bounded output loading.
+- [ ] Emit durable explicit gaps and reset departure prefix state across missing frame coverage.
+- [ ] Persist immutable case/condition records with stable identity and bounded as-of cursor queries.
+- [ ] Smoke-test causal clocks, future dependencies, queue policy, worker failure, and persistence at feature completion.
 
-## W2 Scheduler
+## P4 Integration, viewer, and measurement
 
-- [ ] Implement bounded queues, mandatory/optional priorities, and deadlines.
-- [ ] Emit explicit gaps for dropped/deferred work and measure queue delay.
-- [ ] Prove bounded behavior with a deliberately slower-than-source worker.
+- [ ] Integrate recorded YOLO traces, exact-time stored states, rule candidates, and recorded or live accepted verifier execution.
+- [ ] Implement the loopback registered-ID run/evidence/video API and one-active-run policy.
+- [ ] Build source/state/event/rule/gap timeline with separate evidence conditions and explicit as-of seeking.
+- [ ] Inspect the browser and retain screenshots of a missed fridge violation, detected microwave violation, and overload gaps.
+- [ ] Complete a normal actual-evidence run and one fresh accepted-verifier run.
+- [ ] Run a separate repeated accelerated slow-worker capacity experiment; report latency, queue/byte bounds, drops, coverage, and memory.
+- [ ] Publish measured report, reproduction commands, diary, and final phase slips.
 
-## W3 Lifecycle and recovery
+## Deferred follow-ups (outside current bounded replay delivery)
 
-- [ ] Define stable incident identity, workflow state, and immutable decision revisions.
-- [ ] Implement transactional result/outbox and idempotent publication.
-- [ ] Test duplicate events and crash recovery around commits and cursor updates.
-
-## W4 Viewer
-
-- [ ] Implement bounded registered-ID API and reuse search/video contracts.
-- [ ] Build video/state/event/incident timeline and revision evidence panel.
-- [ ] Verify as-of history, seeking, and absence of client-side rule evaluation.
-
-## W5 Evaluation
-
-- [ ] Freeze staged real-video collection/review protocol and held-out set.
-- [ ] Run declared sustained replay and separate looped capacity stress test.
-- [ ] Report false alerts/hour, misses, unknowns, latency, queues, coverage, and memory.
-- [ ] Publish real-video transfer failures and measured next-step capacity decision.
+- [ ] LATER: General revision/supersession, reconciliation, and incident workflow lifecycle, only with a concrete consumer requirement.
+- [ ] LATER: Transactional publication/outbox and automatic crash recovery of queued/in-flight work.
+- [ ] LATER: Fresh live perception/native-embedding adapter and measured multi-worker scheduling.
+- [ ] LATER: Freeze staged real-video collection/review protocol and evaluate real-video transfer separately.
+- [ ] LATER: Live camera capture and operational false-alert/coverage acceptance.

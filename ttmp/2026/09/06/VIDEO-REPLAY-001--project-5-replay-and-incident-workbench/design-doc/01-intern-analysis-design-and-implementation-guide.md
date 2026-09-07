@@ -28,6 +28,8 @@ WhenToUse: ""
 
 # Project 5 - Replay and incident workbench
 
+> Implementation scope updated 2026-09-07: [Bounded replay implementation and viewer contract](02-bounded-replay-implementation-and-viewer-contract.md) supersedes the broad implementation requirements below. Revision/supersession, outbox/recovery, and real-video transfer are explicitly deferred. The original guide and delivered PDF are retained as design history.
+
 ## The system the intern will integrate
 
 This project turns the earlier components into an inspectable application. It replays recorded video at a controlled availability rate, schedules bounded inference, stores facts and incident revisions, and lets a user inspect why a procedural conclusion changed. The purpose is to test causality, latency, recovery, and transfer to real footage before claiming that the workbench can operate live.

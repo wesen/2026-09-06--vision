@@ -9,13 +9,18 @@ Topics:
 DocType: reference
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://workbench/src/video_workbench/rules/handoff.py
+      Note: Single focused request and separate verifier evaluation
+    - Path: repo://workbench/src/video_workbench/verifiers/contracts.py
+      Note: Shared request and cited response boundary
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T20:16:12.595279-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Measured rules and focused verifier handoff
 

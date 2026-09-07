@@ -250,3 +250,57 @@ Read `rules/evaluate.py`, `rules/stored.py`, and `workbench/configs/rules/househ
 Rule decisions have content-derived evaluation IDs, rule hashes, evidence IDs, subject scope, as-of time, applicability, and evaluator version. The stored adapter additionally records run identity. Actual source SQLite SHA: `3a2f5051660eba3dabdd92685e3dd11df4a261e638e7861447b2524e798aa2c3`. No revisions, supersession, model calls, recursive expressions, or mutable global state are used by the evaluator.
 
 R1/R2 completion slip also printed successfully: HTTP 200, `printed: true`, 384×414, rendered 2026-09-07T00:00:17Z. Layout and both printing receipts are saved under `various/`.
+
+## Step 5: Complete the focused handoff and measured RULES report
+
+Added a shared request/answer contract and a one-request planner for unknown point-state decisions. Requests bind approved exact-time frames and the target object; answers create an independent verifier evidence condition rather than replacing the original evaluation. Missing triggers and interval-coverage uncertainty do not trigger an irrelevant state question.
+
+Published the measured RULES report with explicit distinctions between oracle logic, actual predicted decision counts, and injected verifier responses. The handoff is ready for COSMOS-VERIFY, while full-system recall remains gated on a reviewed candidate/evaluation set.
+
+### Prompt Context
+**User prompt (verbatim):** "ok, commit at appropriate intervals and keep a detailed diary as you work (using the diary format from the skill). Print out a brutalist work slip with the plan / different phases for the ticket. then before stsarting a phase, plrint a split about the phase, and print one when the phase is done."
+
+**Assistant interpretation:** Finish the agreed handoff, then begin verifier runtime work, retaining commits, diary, and meaningful printed phase boundaries.
+
+**Inferred user intent:** Move the functioning rule layer into real model verification with an auditable implementation trail.
+
+**Commit (code):** `5fecab4` — Add focused verifier request handoff and measured RULES report.
+
+### What I did
+- Added `verifiers/contracts.py` for bounded image requests and strict cited JSON answers.
+- Added `rules/handoff.py` for a single focused request and separately selected verifier evaluation.
+- Generated actual full-frame packets for the 150 unknown crop decisions; deduplicated to 75 request identities.
+- Ran one completed-feature smoke covering true/false/unknown injected answers, invalid JSON, duplicate keys, invented citations, future frames, and missing triggers.
+- Wrote the measured report and saved/reviewed the handoff figure; marked R3 complete and recorded the R4 candidate-recall gate.
+- Printed the R3 start slip and requested the completion slip before VERIFY startup.
+
+### Why
+Additional verifier evidence does not automatically invalidate the old prediction. Keeping a separate evaluated condition makes this policy explicit without adding revision machinery. A fixed request boundary also separates model execution from deterministic rule semantics.
+
+### What worked
+- Actual packets: 150 candidate decisions, 75 unique requests, zero model calls at this stage.
+- Three injected answers produced separate VIOLATION/PASS/UNKNOWN results and preserved the original UNKNOWN evaluation.
+- Bad citations/schema and a future frame were rejected; a missing trigger produced no request.
+- Reviewed `various/r3-handoff/handoff-trace.png`; labels distinguish actual requests from injected answers.
+- The report keeps 662 PASS / 52 VIOLATION / 150 UNKNOWN as decision counts, not accuracy.
+
+### What didn't work
+No handoff smoke case failed. An exploratory shell glob `workbench/requirements*` had no matches; dependency pins are in `workbench/pyproject.toml` and `uv.lock`. Live verifier accuracy and upstream missed-candidate recall remain unavailable and are not replaced by fixture results.
+
+### What I learned
+The two crop classifiers share missing samples, so request deduplication removes repeated questions over identical evidence. The fallback packet uses original full frames, which changes evidence relative to crop-only recognition and must be acknowledged in later comparisons.
+
+### What was tricky to build
+The existing store concerns exact timestamps, so the request cannot answer a point-state question from a nearby frame. The request's half-open allowed interval is one microsecond wide around the exact sample. Request identity includes evidence and resource bounds. Result availability is checked against request time, preventing backdated evaluations.
+
+### What warrants a second pair of eyes
+Schema/citation validity does not prove factual support. Frame byte hashes must be checked by the runtime before inference. Model confidence is not treated as calibrated. Separate verifier-conditioned results do not constitute reconciliation or correction of the baseline.
+
+### What should be done in the future
+Begin V1 with pinned Qwen/Cosmos image candidates in an isolated environment, then implement bounded execution and a reviewed question comparison. Return to RULES end-to-end recall only with reviewed candidate coverage and accepted verifier outputs.
+
+### Code review instructions
+Read `rules/handoff.py`, `verifiers/contracts.py`, and `reference/02-measured-rules-and-focused-verifier-handoff.md`. Run ticket `scripts/04-handoff-smoke.py` at the feature boundary under `PYTHONPATH=workbench/src workbench/.venv/bin/python`. Inspect the actual packet table and injected-answer provenance separately.
+
+### Technical details
+Current limits: one to four exact-time images, 256 requested output tokens, 60-second request deadline; contract caps are 512 tokens and 120 seconds. The planner executes no model and has no retry loop. Raw responses are retained. Missing-trigger/interval cases remain UNKNOWN without a request.

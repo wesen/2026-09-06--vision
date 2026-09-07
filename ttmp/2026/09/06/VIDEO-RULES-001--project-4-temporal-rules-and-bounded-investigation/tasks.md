@@ -21,16 +21,16 @@
 
 ## R3 Investigation
 
-- [ ] Emit at most one focused evidence request per unknown evaluation, with stable request identity.
-- [ ] Enforce evidence horizon and strict injected verifier answers; runtime limits remain owned by COSMOS-VERIFY.
-- [ ] Preserve immutable evidence/evaluations and smoke-check disagreement/unavailable-verifier behavior.
+- [x] Emit at most one focused evidence request per unknown evaluation, with stable request identity.
+- [x] Enforce evidence horizon and strict injected verifier answers; runtime limits remain owned by COSMOS-VERIFY.
+- [x] Preserve immutable evidence/evaluations and smoke-check disagreement/unavailable-verifier behavior.
 
 ## R4 Evaluation
 
-- [ ] Freeze rule/candidate/matching policies and versioned prompts.
-- [ ] Compare oracle and predicted/no-verifier conditions; document the accepted-adapter gate for later Qwen/Cosmos integration.
+- [x] Freeze rule/candidate/matching policies and versioned prompts.
+- [x] Compare oracle and predicted/no-verifier conditions; document the accepted-adapter gate for later Qwen/Cosmos integration.
 - [ ] Include missed candidates in end-to-end recall and report unknown/cost/latency.
-- [ ] Keep endpoint-world-truth diagnostics separate from reviewed temporal evaluation.
+- [x] Keep endpoint-world-truth diagnostics separate from reviewed temporal evaluation.
 
 ## Explicit follow-ups outside initial implementation
 

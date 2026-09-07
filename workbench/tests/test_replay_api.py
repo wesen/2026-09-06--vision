@@ -67,3 +67,18 @@ def test_one_active_run_and_cancellation(tmp_path,monkeypatch):
     with pytest.raises(HTTPException) as caught:manager.start(StartRequest(episode_id='ep'))
     assert caught.value.status_code==409
     manager.shutdown();assert not manager.thread.is_alive()
+
+
+def test_external_cli_writer_is_not_marked_interrupted(tmp_path):
+    import subprocess,sys,psutil
+    child=subprocess.Popen([sys.executable,'-c','import time;time.sleep(5)'])
+    try:
+        run='replay-'+'a'*16;root=tmp_path/run;root.mkdir()
+        (root/'status.json').write_text(json.dumps(dict(run_id=run,status='running',horizon_us=100,writer_pid=child.pid,writer_created=psutil.Process(child.pid).create_time())))
+        catalog=type('Catalog',(),{'sources':{}})()
+        with TestClient(create_app(catalog,tmp_path)) as client:
+            assert client.get('/v1/replays/'+run).json()['status']=='running'
+            child.terminate();child.wait()
+            assert client.get('/v1/replays/'+run).json()['status']=='interrupted'
+    finally:
+        if child.poll() is None:child.terminate();child.wait()

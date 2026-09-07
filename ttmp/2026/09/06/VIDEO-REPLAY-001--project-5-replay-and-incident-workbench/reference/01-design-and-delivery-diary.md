@@ -414,3 +414,58 @@ Read `replay/app.py` source/run/evidence routes, engine live-worker command cons
 
 ### Technical details
 Viewer URL: `http://127.0.0.1:8779/`. Recorded microwave run: `replay-5e4499f558614b62`; fresh fridge run: `replay-0adb49ee32254188`; overload run: `replay-ea4ed99ac2dc407a`. The script archives latency by work kind and terminal outcome to avoid interpreting zero-service dropped jobs as fast successful work.
+
+## Step 8: Complete the report, acceptance audit, and delivery bookkeeping
+
+Published the measured replay report with the complete workload boundary, implementation details, screenshots, cost/coverage results, and reproduction commands. The final acceptance audit checks the actual RULES metrics, completed drained replay runs, fresh verifier output, overload losses, cancellation evidence, screenshot artifacts, phase layouts, and active task completion.
+
+A final status review found that a viewer in another process could label an actively running CLI replay as interrupted. Added writer PID plus process creation time to distinguish an active CLI writer from a stale run without introducing recovery machinery.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 4)
+
+**Assistant interpretation:** Finish the requested goal with a reviewable report, accurate status behavior, and verified completion evidence.
+
+**Inferred user intent:** Receive a usable local application and an honest, durable explanation of what was implemented and measured.
+
+**Commit (code):** `c8edc9c` — inspected replay viewer and live/overload integration; `fb93d16` — detailed measured report and cancellation evidence.
+
+### What I did
+- Published `reference/02-measured-replay-viewer-and-bounded-scheduler-report.md` and added README usage instructions.
+- Archived browser cancellation, portable run records, and outcome-specific latency; kept all advanced follow-ups explicitly deferred.
+- Added a status smoke proving an external live writer remains running and becomes interrupted after process termination. Four API checks passed in 0.50 s; the twelve core checks had already passed at their feature boundary.
+- Ran `scripts/03-acceptance-audit.py` against the current artifacts; all audited requirements passed.
+- Ran docmgr doctor for RULES and REPLAY; both passed.
+- Printed the final P4 completion slip and retained its layout.
+- Restarted only this session's viewer process so the local application loads the final writer-status fix.
+
+### Why
+A completion claim must be supported by runtime and artifact evidence, not only checked tasks. A separately started CLI run is a supported workflow; its viewer status must not imply it stopped while its writer process remains alive.
+
+### What worked
+- RULES task completion, reviewed denominator, both 2/6 verifier recall results, and twelve UNKNOWN baseline decisions verified from saved metrics.
+- All principal replay runs were complete with empty queues and high-water marks within configured bounds.
+- Fresh worker output included generated tokens, accepted runtime metadata, and a later committed decision.
+- Browser cancellation `replay-74c0422360a547c1` left zero admitted jobs and five explicit cancelled outcomes.
+- P4 done print: HTTP 200, printed true, 384×604 at 2026-09-07T05:29:48Z.
+
+### What didn't work
+No final acceptance assertion or new status test failed. The remaining deprecation warnings are in existing Starlette/httpx and AnyIO test infrastructure. The first live-worker/interpreter failure, occupied port, unavailable in-app browser, and initial memory-sampling failure remain documented in earlier steps and are not counted as successful runs.
+
+### What I learned
+Stable case identity and separate immutable conditions were sufficient for the requested history viewer. Accurate liveness reporting needs a writer identity, but does not require resumable queues, revisions, or a transactional outbox.
+
+### What was tricky to build
+A PID alone can be reused after a process exits. Status inspection therefore checks both PID and creation time for a separate CLI writer, while an API-owned run also requires its owning thread to remain live. Historical completed runs remain readable without any worker process.
+
+### What warrants a second pair of eyes
+The accepted result is a bounded replay workbench over recorded perception, with one fresh Qwen verifier smoke. It is not a real-video accuracy claim, a guarantee of continuous perception, or a fresh native-embedding benchmark. The report explicitly preserves those distinctions.
+
+### What should be done in the future
+Only the marked LATER items remain: general revision/workflow, outbox/recovery, fresh perception and measured multi-worker scheduling, real-video transfer, and live-camera operational acceptance. Decide among those from a concrete next experiment rather than treating them as prerequisites for this completed viewer.
+
+### Code review instructions
+Begin with the measured report and `various/p4-acceptance-audit.json`. Inspect the four principal screenshot states and archived event logs. Review the final external-writer status branch in `replay/app.py`; reproduce with `test_external_cli_writer_is_not_marked_interrupted`.
+
+### Technical details
+Current delivered CLI/viewer commands are in `workbench/README.md`. The server remains available at `http://127.0.0.1:8779/`. The final audit records four principal runs, twelve core and four API smoke checks, four reviewed screenshot states, nine phase layouts, and the browser cancellation receipt. No source repository push or new vault/reMarkable upload was part of this goal.

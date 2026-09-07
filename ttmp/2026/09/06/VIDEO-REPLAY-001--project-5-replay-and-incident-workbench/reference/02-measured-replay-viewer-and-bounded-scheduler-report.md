@@ -120,7 +120,7 @@ The useful conclusion is concrete: the queue policy enforces its bounds and make
 
 ## Validation evidence
 
-Twelve core feature checks passed, covering monotonic clocks, cycle mapping, future/cached dependency rejection, path exclusion, count and byte bounds including running work, mandatory priority, optional eviction, queue expiry, worker timeout and reaping, cancellation, malformed/oversized results, immutable persistence, and missing-frame prefix reset. Three API checks passed, including actual live-run history, evidence cutoff, cursor pagination, media byte ranges, rejected unknown sources, bounded input, and one-active-run behavior.
+Twelve core feature checks passed, covering monotonic clocks, cycle mapping, future/cached dependency rejection, path exclusion, count and byte bounds including running work, mandatory priority, optional eviction, queue expiry, worker timeout and reaping, cancellation, malformed/oversized results, immutable persistence, and missing-frame prefix reset. Four API checks passed, including actual live-run history, evidence cutoff, cursor pagination, media byte ranges, rejected unknown sources, bounded input, one-active-run behavior, and liveness of a separately launched CLI writer.
 
 Browser inspection exercised source playback, as-of seeking, case evidence, recorded/live labeling, run creation, polling, and cancellation. The final inspected pages had zero console errors or warnings. Screenshots were visually reviewed at full-page resolution. An initial favicon 404 was corrected. The in-app browser runtime had no connected browser; the available browser-testing tool provided the inspected surface.
 

@@ -4,6 +4,7 @@ from pathlib import Path
 from collections import Counter
 import json
 import math
+import os
 import sqlite3
 import sys
 import time
@@ -146,7 +147,7 @@ class ReplayEngine:
             try: memory += psutil.Process(self.scheduler.process.pid).memory_info().rss
             except (psutil.NoSuchProcess, psutil.AccessDenied, PermissionError): pass
         self.memory_high=max(self.memory_high,memory)
-        state=dict(run_id=self.run_id,status=self.status,horizon_us=self.clock.now_us(),source_end_us=self.options.repetitions*self.source['duration_us'],
+        state=dict(run_id=self.run_id,status=self.status,writer_pid=os.getpid(),writer_created=process.create_time(),horizon_us=self.clock.now_us(),source_end_us=self.options.repetitions*self.source['duration_us'],
                    wall_seconds=time.monotonic()-self.clock.started,options=asdict(self.options),scheduler=self.scheduler.snapshot(),counts=dict(self.counts),peak_host_and_worker_rss_bytes=self.memory_high,error=self.error)
         write_json(self.root/'status.json',state)
         return state

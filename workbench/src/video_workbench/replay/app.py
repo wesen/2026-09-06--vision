@@ -3,6 +3,8 @@ from pathlib import Path
 from threading import Event as CancelEvent, Lock, Thread
 from contextlib import asynccontextmanager
 import json
+import os
+import psutil
 import re
 import uuid
 from fastapi import FastAPI, HTTPException, Query
@@ -81,8 +83,17 @@ def create_app(catalog,output):
         if not (p/'status.json').exists():
             return dict(run_id=run_id,status='starting' if run_id==manager.active and manager.thread and manager.thread.is_alive() else 'interrupted',horizon_us=0)
         record=json.loads((p/'status.json').read_text())
-        if record['status'] in ('ready','running','draining') and not (run_id==manager.active and manager.thread and manager.thread.is_alive()):
-            record['status']='interrupted'
+        if record['status'] in ('ready','running','draining'):
+            alive = bool(run_id==manager.active and manager.thread and manager.thread.is_alive())
+            # A CLI replay can be inspected from another server process. Bind
+            # PID plus creation time so PID reuse does not revive a stale run.
+            if not alive and record.get('writer_pid') not in (None, os.getpid()):
+                try:
+                    writer = psutil.Process(record['writer_pid'])
+                    alive = writer.is_running() and writer.create_time()==record.get('writer_created')
+                except (psutil.NoSuchProcess, psutil.AccessDenied, PermissionError):
+                    pass
+            if not alive: record['status']='interrupted'
         if (p/'summary.json').exists():record['summary']=json.loads((p/'summary.json').read_text())
         if (p/'config.json').exists():record['config']=json.loads((p/'config.json').read_text())
         return record

@@ -26,7 +26,7 @@
 - [x] Inspect the browser and retain screenshots of a missed fridge violation, detected microwave violation, and overload gaps.
 - [x] Complete a normal actual-evidence run and one fresh accepted-verifier run.
 - [x] Run a separate repeated accelerated slow-worker capacity experiment; report latency, queue/byte bounds, drops, coverage, and memory.
-- [ ] Publish measured report, reproduction commands, diary, and final phase slips.
+- [x] Publish measured report, reproduction commands, diary, and final phase slips.
 
 ## Deferred follow-ups (outside current bounded replay delivery)
 

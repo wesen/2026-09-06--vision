@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "scope": "RULES measurement, simplified REPLAY design, bounded scheduler and viewer",
+  "runs": {
+    "recorded_microwave": "replay-5e4499f558614b62",
+    "live_fridge": "replay-0adb49ee32254188",
+    "overload": "replay-ea4ed99ac2dc407a",
+    "browser_started": "replay-da07533583334f49"
+  },
+  "observed_smoke": {
+    "core": 12,
+    "api": 4
+  },
+  "screenshots": 4,
+  "phase_layouts": 9,
+  "checks": [
+    "reviewed recall population",
+    "unknown baseline",
+    "scoped task completion",
+    "bounded drained runs",
+    "fresh worker tokens and delayed availability",
+    "repeated overload drops",
+    "PNG readability",
+    "phase layouts",
+    "browser cancellation"
+  ],
+  "manual_evidence": [
+    "Browser as-of at 11 seconds showed baseline only and source seek to 11 seconds.",
+    "Approved images, missed fridge PASS, detected microwave VIOLATION, and overload screenshots visually inspected.",
+    "Worker/data boundaries and deferred scope reviewed against design document 02."
+  ]
+}

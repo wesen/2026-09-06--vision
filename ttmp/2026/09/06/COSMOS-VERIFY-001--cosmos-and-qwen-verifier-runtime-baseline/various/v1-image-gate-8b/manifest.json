@@ -1,0 +1,12 @@
+[
+  {
+    "repo_id": "mlx-community/Qwen3-VL-8B-Instruct-8bit",
+    "revision": "a0093b9b5fda6f76ddd4a462c6830ae7c4fe47ec",
+    "status": "finished",
+    "returncode": 0,
+    "wall_seconds": 10.269223999930546,
+    "deadline_seconds": 120,
+    "log": "output/verifier-v1/image-gate-8b/qwen3-vl-instruct-8b-8bit.log",
+    "result": "output/verifier-v1/image-gate-8b/qwen3-vl-instruct-8b-8bit.json"
+  }
+]

@@ -1,0 +1,196 @@
+[
+  {
+    "repo_id": "mlx-community/Qwen3-VL-8B-Instruct-8bit",
+    "revision": "a0093b9b5fda6f76ddd4a462c6830ae7c4fe47ec",
+    "local_path": "output/models/qwen3-vl-instruct-8b-8bit",
+    "files": [
+      {
+        "name": ".gitattributes",
+        "size": 1570,
+        "blob_id": "52373fe24473b1aa44333d318f578ae6bf04b49b"
+      },
+      {
+        "name": "README.md",
+        "size": 572,
+        "blob_id": "54c337b15f660c821d8c01e8fade7911b8fec9bc"
+      },
+      {
+        "name": "added_tokens.json",
+        "size": 707,
+        "blob_id": "b54f9135e44c1e81047e8d05cb027af8bc039eed"
+      },
+      {
+        "name": "chat_template.jinja",
+        "size": 5292,
+        "blob_id": "124386803f142761528f710e77ae483f5f8c4fc4"
+      },
+      {
+        "name": "chat_template.json",
+        "size": 5499,
+        "blob_id": "1081bacf1af7c7c6de4a585ce02cd0fd34e382da"
+      },
+      {
+        "name": "config.json",
+        "size": 7140,
+        "blob_id": "b8620c908dcb52bf3731a6056ce7a6179fa632df"
+      },
+      {
+        "name": "generation_config.json",
+        "size": 269,
+        "blob_id": "e116347d7ef42621c7a5957f82c015c38d939c1f"
+      },
+      {
+        "name": "merges.txt",
+        "size": 1671853,
+        "blob_id": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+      },
+      {
+        "name": "model-00001-of-00002.safetensors",
+        "size": 5343910279,
+        "blob_id": "041f3e8e86b6c7a9d85e3d7185d10b9e2126860d"
+      },
+      {
+        "name": "model-00002-of-00002.safetensors",
+        "size": 4511968734,
+        "blob_id": "2b5a4c52c317a892ac78beec72f46746c340d542"
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "size": 67759,
+        "blob_id": "5857ec62530eb589b1876034dd5386f1d98131a6"
+      },
+      {
+        "name": "preprocessor_config.json",
+        "size": 782,
+        "blob_id": "2fa6553554f69b4e3a6b742a75264ff9dff90ad0"
+      },
+      {
+        "name": "special_tokens_map.json",
+        "size": 613,
+        "blob_id": "ac23c0aaa2434523c494330aeb79c58395378103"
+      },
+      {
+        "name": "tokenizer.json",
+        "size": 11422654,
+        "blob_id": "cd71f61a15a522601badb3dc960d800d9cb3766c"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size": 5445,
+        "blob_id": "fec7f182135c384a08ea2fc9635566ca79c45afc"
+      },
+      {
+        "name": "video_preprocessor_config.json",
+        "size": 817,
+        "blob_id": "e32b1d90356f74457edbfca27aa1e121dab7cdc7"
+      },
+      {
+        "name": "vocab.json",
+        "size": 2776833,
+        "blob_id": "4783fe10ac3adce15ac8f358ef5462739852c569"
+      }
+    ]
+  },
+  {
+    "repo_id": "nvidia/Cosmos-Reason2-8B",
+    "revision": "a9fae2cf89dc64db96b12860417f0eb403013bb9",
+    "local_path": "output/models/cosmos-reason2-8b-official",
+    "files": [
+      {
+        "name": ".gitattributes",
+        "size": 1644,
+        "blob_id": "d1132f8fca153260bfb299175656ec47fc904f2c"
+      },
+      {
+        "name": "CR2 Performance by Category.png",
+        "size": 37375,
+        "blob_id": "95ca01dddab7a1717588c53404c23898de197353"
+      },
+      {
+        "name": "PAI_Bench_Leaderboard.png",
+        "size": 473585,
+        "blob_id": "7e5282642a08cf1bd3ee54207cd79fe26f9d0517"
+      },
+      {
+        "name": "README.md",
+        "size": 35105,
+        "blob_id": "3852915abd49b2fd7d8c5a47b34072522b8f7d4f"
+      },
+      {
+        "name": "chat_template.json",
+        "size": 5499,
+        "blob_id": "1081bacf1af7c7c6de4a585ce02cd0fd34e382da"
+      },
+      {
+        "name": "config.json",
+        "size": 1474,
+        "blob_id": "0e2df614c5fe1ad2b6b540c8625bebf2d7ec43ca"
+      },
+      {
+        "name": "cosmos_cr2_8b_paiBench.png",
+        "size": 138552,
+        "blob_id": "833882028884549c5ff724c1932e8b585a3594ae"
+      },
+      {
+        "name": "generation_config.json",
+        "size": 269,
+        "blob_id": "e116347d7ef42621c7a5957f82c015c38d939c1f"
+      },
+      {
+        "name": "merges.txt",
+        "size": 1671839,
+        "blob_id": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0"
+      },
+      {
+        "name": "model-00001-of-00004.safetensors",
+        "size": 5283287392,
+        "blob_id": "ed0ce13707ca69658a8ee63bf69c50dfc65d6870"
+      },
+      {
+        "name": "model-00002-of-00004.safetensors",
+        "size": 5301856744,
+        "blob_id": "a246dbb55f68d713dac6b41ad58ccb0eca33d891"
+      },
+      {
+        "name": "model-00003-of-00004.safetensors",
+        "size": 5360576128,
+        "blob_id": "dce7ba785dc9d508a2beed188c81025145358143"
+      },
+      {
+        "name": "model-00004-of-00004.safetensors",
+        "size": 1588619104,
+        "blob_id": "4c871a244bd1c0b6c868c1574283bedf91230091"
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "size": 67748,
+        "blob_id": "f919cf9106bfa88f76c5ba5783e141613eb94b13"
+      },
+      {
+        "name": "preprocessor_config.json",
+        "size": 390,
+        "blob_id": "2ea84a437d448ff71b08df68fdd949d5cc4ebb64"
+      },
+      {
+        "name": "tokenizer.json",
+        "size": 7032403,
+        "blob_id": "c6cc1014128b19d1fc46b1d30a23e3b1d35db421"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size": 10868,
+        "blob_id": "d3d3763207692c78780f4bf42d4dadf49a5c8012"
+      },
+      {
+        "name": "video_preprocessor_config.json",
+        "size": 385,
+        "blob_id": "3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe"
+      },
+      {
+        "name": "vocab.json",
+        "size": 2776833,
+        "blob_id": "4783fe10ac3adce15ac8f358ef5462739852c569"
+      }
+    ]
+  }
+]

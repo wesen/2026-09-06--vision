@@ -276,3 +276,63 @@ This step accepts only single-image runtime viability at the measured size and b
 - Gate: `PYTHONPATH=workbench/src workbench/verify-env/.venv/bin/python ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/scripts/03-image-runtime-gate.py`.
 - API: `load(..., trust_remote_code=False)`, `apply_chat_template(..., num_images=1)`, `generate(..., max_tokens=256, temperature=0.0)`.
 - Worker subprocesses use `start_new_session=True`; timeout cleanup uses `os.killpg(..., SIGKILL)` and `wait()`.
+
+## Step 5: Scale the matched verifier runtime gate to 8B
+
+The user requested the 8B reasoning models and explicitly deferred a separate 8B embedding experiment. Pinned the public Qwen 8-bit conversion and official Cosmos 8B source. A repository search found Cosmos GGUF and other formats but no public matching 8-bit MLX checkpoint; the chosen path is a local 8-bit affine conversion with group size 64. The existing 2B artifacts are preserved.
+
+### Prompt Context
+**User prompt (verbatim):** "ok, add notes and tasks but mark them for later, then go back to the 8B reasoning models"
+
+**Assistant interpretation:** Record the larger embedding comparison as later work and execute the already-approved larger generative verifier comparison.
+
+**Inferred user intent:** Evaluate stronger local verifiers while maintaining clear experimental boundaries.
+
+### What I did
+- Committed the deferred embedding proposal and four tasks in TEMPORAL as `8f25290`.
+- Added pinned downloader and local converter scripts; made the existing gate and audit renderer accept separate input/output locations.
+- Printed the 8B phase plan/start successfully at `2026-09-07T00:45:11Z`, HTTP 200.
+- Began downloading the 9.9 GB Qwen conversion and 17.5 GB official Cosmos source sequentially.
+
+### Why
+- Using the same generation worker, evidence, question, and budget retains comparability with the 2B runtime gate.
+- Local Cosmos conversion retains MLX-VLM as the common engine instead of introducing GGUF engine differences into this size comparison.
+
+### What worked
+- Exact source revisions and repository file metadata were recorded before download.
+- The official native FP32 TEMPORAL report confirms a separate embedding path; those artifacts are unaffected.
+
+### What didn't work
+- Guessed repositories `hzang/Cosmos-Reason2-8B-8bit` and `mlx-community/Cosmos-Reason2-8B-8bit` returned `RepositoryNotFoundError` with HTTP 401. Public model enumeration found no matching MLX conversion; this is not evidence that no such conversion exists anywhere.
+- Even `python -m mlx_vlm.convert --help` initializes Metal; the sandbox returned `ImportError: [metal::load_device] No Metal device available`. Inspected local converter source without importing Metal; actual conversion runs with authorized GPU access.
+
+### What I learned
+- Model names and parameter counts do not establish the availability of a matching conversion. Conversion provenance must be recorded independently.
+
+### What was tricky to build
+- Weight downloads dominate initial waiting; quantization time has not yet been measured. The user was given a provisional few-minute estimate for conversion after download, not a measured promise.
+- Quantization applies to supported modules; the saved configuration and tensor types must establish actual coverage, including any floating-point vision components.
+
+### What warrants a second pair of eyes
+- Community Qwen versus locally converted Cosmos has different conversion provenance despite matching declared bit width and group size.
+- A strict JSON failure must remain visible even if a larger model answers the binary question plausibly.
+
+### What should be done in the future
+- Complete the pending download/conversion and matched smoke, then append actual results and resource measurements to this step.
+
+### Code review instructions
+- Read `scripts/05-download-8b.py` and `06-convert-cosmos-8b.py`, then the arguments added to the existing gate and archive scripts.
+- Validate once the complete feature is ready with the real matched image gate; preserve raw answers and inspect its rendered audit figure.
+
+### Technical details
+- Qwen revision: `a0093b9b5fda6f76ddd4a462c6830ae7c4fe47ec`.
+- Official Cosmos revision: `a9fae2cf89dc64db96b12860417f0eb403013bb9`.
+- Runtime: isolated MLX-VLM 0.6.17; conversion uses `trust_remote_code=False`, `q_bits=8`, `q_group_size=64`, `q_mode='affine'`.
+
+### Execution update: Qwen complete; Cosmos awaits access
+
+Qwen 8B completed the identical image request with valid JSON and answer true: 1.507 seconds load, 6.937 seconds generation, 149 generated tokens, 10.857 GB peak MLX allocation, and 10.269 seconds total worker wall time. Archived and visually inspected `various/v1-image-gate-8b/runtime-audit.png`. This remains a single development example, not a quality comparison.
+
+Official Cosmos download failed before conversion with `huggingface_hub.errors.GatedRepoError: 401 Client Error` and `Access to model nvidia/Cosmos-Reason2-8B is restricted. You must have access to it and be authenticated to access it. Please log in.` A cached token exists, but access was rejected. No quantization duration has been measured. The user offered to log in and requested the page be opened. Browser plugin discovery returned `No browser is available` and an empty browser list; macOS `open https://huggingface.co/nvidia/Cosmos-Reason2-8B` succeeded as the fallback. No credentials were read or printed.
+
+Resume the pinned downloader once account access is available, then convert and run Cosmos into its own output directory (the Qwen result must not be overwritten). The full 8B phase remains incomplete; do not print a completion slip yet.

@@ -1,0 +1,94 @@
+[
+  {
+    "repo_id": "mlx-community/Qwen3-VL-8B-Instruct-8bit",
+    "revision": "a0093b9b5fda6f76ddd4a462c6830ae7c4fe47ec",
+    "local_path": "output/models/qwen3-vl-instruct-8b-8bit",
+    "files": [
+      {
+        "name": ".gitattributes",
+        "size": 1570,
+        "blob_id": "52373fe24473b1aa44333d318f578ae6bf04b49b"
+      },
+      {
+        "name": "README.md",
+        "size": 572,
+        "blob_id": "54c337b15f660c821d8c01e8fade7911b8fec9bc"
+      },
+      {
+        "name": "added_tokens.json",
+        "size": 707,
+        "blob_id": "b54f9135e44c1e81047e8d05cb027af8bc039eed"
+      },
+      {
+        "name": "chat_template.jinja",
+        "size": 5292,
+        "blob_id": "124386803f142761528f710e77ae483f5f8c4fc4"
+      },
+      {
+        "name": "chat_template.json",
+        "size": 5499,
+        "blob_id": "1081bacf1af7c7c6de4a585ce02cd0fd34e382da"
+      },
+      {
+        "name": "config.json",
+        "size": 7140,
+        "blob_id": "b8620c908dcb52bf3731a6056ce7a6179fa632df"
+      },
+      {
+        "name": "generation_config.json",
+        "size": 269,
+        "blob_id": "e116347d7ef42621c7a5957f82c015c38d939c1f"
+      },
+      {
+        "name": "merges.txt",
+        "size": 1671853,
+        "blob_id": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+      },
+      {
+        "name": "model-00001-of-00002.safetensors",
+        "size": 5343910279,
+        "blob_id": "041f3e8e86b6c7a9d85e3d7185d10b9e2126860d"
+      },
+      {
+        "name": "model-00002-of-00002.safetensors",
+        "size": 4511968734,
+        "blob_id": "2b5a4c52c317a892ac78beec72f46746c340d542"
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "size": 67759,
+        "blob_id": "5857ec62530eb589b1876034dd5386f1d98131a6"
+      },
+      {
+        "name": "preprocessor_config.json",
+        "size": 782,
+        "blob_id": "2fa6553554f69b4e3a6b742a75264ff9dff90ad0"
+      },
+      {
+        "name": "special_tokens_map.json",
+        "size": 613,
+        "blob_id": "ac23c0aaa2434523c494330aeb79c58395378103"
+      },
+      {
+        "name": "tokenizer.json",
+        "size": 11422654,
+        "blob_id": "cd71f61a15a522601badb3dc960d800d9cb3766c"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size": 5445,
+        "blob_id": "fec7f182135c384a08ea2fc9635566ca79c45afc"
+      },
+      {
+        "name": "video_preprocessor_config.json",
+        "size": 817,
+        "blob_id": "e32b1d90356f74457edbfca27aa1e121dab7cdc7"
+      },
+      {
+        "name": "vocab.json",
+        "size": 2776833,
+        "blob_id": "4783fe10ac3adce15ac8f358ef5462739852c569"
+      }
+    ]
+  }
+]

@@ -71,3 +71,16 @@ def test_manager_cancels_real_process_group(tmp_path,monkeypatch):
     import json
     assert json.loads((root/r['run_id']/'status.json').read_text())['status']=='cancelled'
     assert processes[0].poll() is not None
+
+def test_comparison_and_exact_point_rules():
+    from video_workbench.lab.analysis import compare,point_rule,RuleRequest
+    from copy import deepcopy
+    o=Experiment(episode_id='test',component='states',model='qwen').model_dump()
+    run=dict(run_id='a',request=dict(options=o,evidence=dict(source=dict(video_sha256='a'*64,split='test'),frames=[dict(pts_us=0,sha256='b'*64,crop_xyxy=[0,0,10,10])])),result=dict(kind='states',records=[dict(pts_us=0,state='closed',frame={'id':'frame-0'})]))
+    other=deepcopy(run);other['run_id']='b';other['request']['options']['model']='cosmos'
+    assert compare(run,other)['same_evidence']
+    other['request']['evidence']['frames'][0]['sha256']='c'*64
+    assert not compare(run,other)['same_evidence']
+    assert point_rule(run,RuleRequest(event_us=0))['decision']['status']=='PASS'
+    assert point_rule(run,RuleRequest(event_us=1))['decision']['status']=='UNKNOWN'
+    assert point_rule(run,RuleRequest(event_us=0,expected_open=True))['decision']['status']=='VIOLATION'

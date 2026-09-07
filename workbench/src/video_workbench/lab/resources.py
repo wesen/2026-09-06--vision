@@ -50,6 +50,7 @@ class Resources:
         self.root=Path(root).resolve();self.paths={};self.by_path={}
         candidates=list((self.root/'workbench/src/video_workbench').rglob('*.py'))
         candidates+=list((self.root/'workbench/src/video_workbench').rglob('*.html'))
+        candidates+=list((self.root/'workbench/src/video_workbench').rglob('*.js'))
         candidates += [self.root/'workbench/README.md']
         candidates+=[self.root/'workbench/pyproject.toml']
         for ticket in (self.root/'ttmp').glob('*/*/*/*--*'):

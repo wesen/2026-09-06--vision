@@ -11,6 +11,8 @@ from .manager import Manager,write
 from contextlib import asynccontextmanager
 from .evidence import prepare
 from .resources import Resources
+from .analysis import Review,RuleRequest,compare,point_rule,action_artifacts
+import time
 
 def create_app(root=ROOT):
     root=Path(root); catalog=Catalog(root); output=root/'output/video-lab'; output.mkdir(exist_ok=True,parents=True)
@@ -85,6 +87,41 @@ def create_app(root=ROOT):
         if manager.active!=run_id or not manager.thread or not manager.thread.is_alive():raise HTTPException(409,'run is not active')
         manager.cancel.set();return dict(run_id=run_id,status='cancelling')
 
+    @app.get('/v1/lab/compare')
+    def comparison(a:str,b:str):return compare(read_run(a),read_run(b))
+
+    @app.post('/v1/lab/runs/{run_id}/reviews',status_code=201)
+    def review(run_id:str,request:Review):
+        p=run_root(run_id);record=read_run(run_id)
+        if record['status']!='completed':raise HTTPException(409,'review a completed run')
+        value=dict(review_id='review-'+uuid.uuid4().hex[:16],run_id=run_id,created_unix=time.time(),
+                   source=record['request']['evidence']['source'],**request.model_dump())
+        write(p/(value['review_id']+'.json'),value);return value
+
+    @app.get('/v1/lab/runs/{run_id}/export')
+    def export(run_id:str):
+        p=run_root(run_id)
+        return dict(schema_version=1,experiment=read_run(run_id),reviews=[json.loads(f.read_text()) for f in sorted(p.glob('review-*.json'))],
+                    partition_policy='Reviews retain the source split. Export does not promote test cases into training.')
+
+    @app.post('/v1/lab/runs/{run_id}/rule')
+    def rule(run_id:str,request:RuleRequest):
+        record=read_run(run_id)
+        if record['status']!='completed':raise HTTPException(409,'select a completed run')
+        try:result=point_rule(record,request)
+        except ValueError as e:raise HTTPException(422,str(e))
+        result['evaluation_record_id']='rule-'+uuid.uuid4().hex[:16]
+        write(run_root(run_id)/(result['evaluation_record_id']+'.json'),result)
+        return result
+
+    @app.post('/v1/lab/actions/inspect')
+    def actions(request:Selection):
+        try:
+            source=catalog.get(request.episode_id)
+            if request.end_us>source['media']['duration_us']:raise ValueError('range exceeds source duration')
+            return action_artifacts(root,source,request.start_us,request.end_us)
+        except ValueError as e:raise HTTPException(422,str(e))
+
     # Reuse the existing replay endpoints at the same origin for Tailscale users.
     from video_workbench.replay.app import create_app as replay_app
     from video_workbench.replay.engine import Catalog as ReplayCatalog
@@ -92,6 +129,8 @@ def create_app(root=ROOT):
     app.router.routes.extend(r for r in replay.router.routes if r.path.startswith('/v1/'))
     @app.get('/replay/',response_class=HTMLResponse)
     def replay_home():return (Path(__file__).parents[1]/'replay/viewer.html').read_text()
+    @app.get('/lab/analysis.js')
+    def analysis_script():return FileResponse(Path(__file__).parent/'analysis.js',media_type='text/javascript')
     @app.get('/favicon.ico',status_code=204)
     def favicon():return None
     return app

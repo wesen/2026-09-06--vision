@@ -274,3 +274,62 @@ Read lab/manager.py admission/supervision, worker.py perception/reasoning adapte
 ### Technical details
 
 Fixed runtimes retain venv executable paths without resolving symlinks. Admission allows one expensive worker; selections max 64 images and embeddings max 128 windows. The worker has no client-provided executable or checkpoint path.
+
+## Step 5: Compare representations and expose state/rule review workflows
+
+Native FP32 and pooled embeddings now execute on the same selected windows, producing separately identified feature spaces and query-score plots. Added comparisons that check pixel/timestamp identity before displaying outcomes, independent user review/export, explicit point-rule evaluation, and source-matched frozen action inspection.
+
+### Prompt Context
+
+**User prompt (verbatim):** (see Step 1)
+
+**Assistant interpretation:** Complete the experiment loop from component execution to comparison, review and reusable evidence.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+### What I did
+
+- Added analysis.py and analysis.js for evidence comparison, score plots, reviews, exports, presets and exact-point rules.
+- Added a saved-results-only action viewer that matches source hashes and original temporal windows.
+- Verified Qwen/Cosmos side-by-side comparison reports identical visual evidence and a model-only configuration difference.
+- Ran native and pooled embedding experiments on 8–12 s at 2 FPS with identical windows and query.
+
+### Why
+
+Results need to be comparable without mixing incompatible feature vectors or silently substituting nearby state samples.
+
+### What worked
+
+- Native run-c91ef4d1a5c54ed9: 4 windows, 11.22 s.
+- Pooled run-cb3fcc4c7afa4e55: 4 windows, 5.88 s.
+- Cosmos run-813cb7b91060423b: 8.46 s, valid CLOSED answer.
+- Six focused tests passed, including PASS/VIOLATION/UNKNOWN at exact versus missing timestamps.
+- Saved p5-matched-reasoning-comparison.png.
+
+### What didn't work
+
+No new runtime failure in this step. Frozen action predictions intentionally remain labeled saved results only; they are not newly executed action-head inference.
+
+### What I learned
+
+The matched model comparison is useful even when both models make the same answer: it exposes common visual failure while holding the input pixels fixed.
+
+### What was tricky to build
+
+Feature-space identity and visual-input identity are different checks. Comparisons require the latter for controlled evidence, while native/pooled score plots remain separate. Rule evaluation uses the existing evaluator and exact sample times; the user-selected trigger is explicitly not a detected event.
+
+### What warrants a second pair of eyes
+
+Review that action inspection excludes weak labels and filters original windows fully contained in the selection. Review exports must retain source partitions.
+
+### What should be done in the future
+
+Complete the state/tracking/action browser smoke, archive final API schema and model summaries, and update the intern guide to the delivered behavior.
+
+### Code review instructions
+
+Read lab/analysis.py compare, point_rule and action_artifacts; inspect analysis.js rendered comparisons and review binding. Test a rule at an exact state timestamp and 0.1 s later.
+
+### Technical details
+
+Perception/reasoning feature commit 03eaa80. Native and pooled output vectors are stored separately in per-run vectors.npz; no cross-space dot product occurs. Resource browser commit ff06003.

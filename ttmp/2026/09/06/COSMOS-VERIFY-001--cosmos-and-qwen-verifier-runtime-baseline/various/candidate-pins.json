@@ -1,0 +1,166 @@
+[
+  {
+    "repo_id": "mlx-community/Qwen3-VL-2B-Instruct-8bit",
+    "revision": "b0338e0e843d8e1befe873d144b81fefdc47efa6",
+    "local_path": "output/models/qwen3-vl-instruct-2b-8bit",
+    "files": [
+      {
+        "name": ".gitattributes",
+        "size": 1570,
+        "blob_id": "52373fe24473b1aa44333d318f578ae6bf04b49b"
+      },
+      {
+        "name": "README.md",
+        "size": 599,
+        "blob_id": "1158000cfaf1b316bec9d63a7eeb3452775aec1d"
+      },
+      {
+        "name": "added_tokens.json",
+        "size": 707,
+        "blob_id": "b54f9135e44c1e81047e8d05cb027af8bc039eed"
+      },
+      {
+        "name": "chat_template.jinja",
+        "size": 5292,
+        "blob_id": "124386803f142761528f710e77ae483f5f8c4fc4"
+      },
+      {
+        "name": "chat_template.json",
+        "size": 5502,
+        "blob_id": "e49e75bdda104c8de941eb20e0b3765184fb27bc"
+      },
+      {
+        "name": "config.json",
+        "size": 7137,
+        "blob_id": "16447aeb123dc807bd0d8f88b14d60cde57625d6"
+      },
+      {
+        "name": "generation_config.json",
+        "size": 269,
+        "blob_id": "7bb37933d2d86e4ceaabcc6540be989658f238e9"
+      },
+      {
+        "name": "merges.txt",
+        "size": 1671853,
+        "blob_id": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+      },
+      {
+        "name": "model.safetensors",
+        "size": 2642266911,
+        "blob_id": "5f12ca21f9772085a0298424820db35301394c90"
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "size": 82780,
+        "blob_id": "f314466022e76a71bf4858784abbe47be61f3bf1"
+      },
+      {
+        "name": "preprocessor_config.json",
+        "size": 782,
+        "blob_id": "2fa6553554f69b4e3a6b742a75264ff9dff90ad0"
+      },
+      {
+        "name": "special_tokens_map.json",
+        "size": 613,
+        "blob_id": "ac23c0aaa2434523c494330aeb79c58395378103"
+      },
+      {
+        "name": "tokenizer.json",
+        "size": 11422654,
+        "blob_id": "cd71f61a15a522601badb3dc960d800d9cb3766c"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size": 5445,
+        "blob_id": "fec7f182135c384a08ea2fc9635566ca79c45afc"
+      },
+      {
+        "name": "video_preprocessor_config.json",
+        "size": 817,
+        "blob_id": "e32b1d90356f74457edbfca27aa1e121dab7cdc7"
+      },
+      {
+        "name": "vocab.json",
+        "size": 2776833,
+        "blob_id": "4783fe10ac3adce15ac8f358ef5462739852c569"
+      }
+    ]
+  },
+  {
+    "repo_id": "hzang/Cosmos-Reason2-2B-8bit",
+    "revision": "69ae5c81f0f7651368989ef160da6808af6514cf",
+    "local_path": "output/models/cosmos-reason2-2b-8bit",
+    "files": [
+      {
+        "name": ".gitattributes",
+        "size": 1570,
+        "blob_id": "52373fe24473b1aa44333d318f578ae6bf04b49b"
+      },
+      {
+        "name": "README.md",
+        "size": 7634,
+        "blob_id": "c1650e8ef9914be262dc15039502d90221cd99cc"
+      },
+      {
+        "name": "chat_template.jinja",
+        "size": 5292,
+        "blob_id": "124386803f142761528f710e77ae483f5f8c4fc4"
+      },
+      {
+        "name": "chat_template.json",
+        "size": 5502,
+        "blob_id": "e49e75bdda104c8de941eb20e0b3765184fb27bc"
+      },
+      {
+        "name": "config.json",
+        "size": 2013,
+        "blob_id": "7eb39733315b4f6de57e7d785fd5555057af84b4"
+      },
+      {
+        "name": "generation_config.json",
+        "size": 269,
+        "blob_id": "7bb37933d2d86e4ceaabcc6540be989658f238e9"
+      },
+      {
+        "name": "model.safetensors",
+        "size": 2642266883,
+        "blob_id": "686ab6b57582b607bc738289817d0829af1c814d"
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "size": 82780,
+        "blob_id": "f314466022e76a71bf4858784abbe47be61f3bf1"
+      },
+      {
+        "name": "preprocessor_config.json",
+        "size": 390,
+        "blob_id": "2ea84a437d448ff71b08df68fdd949d5cc4ebb64"
+      },
+      {
+        "name": "processor_config.json",
+        "size": 1191,
+        "blob_id": "33818c7f9e991ad735fd240209f4fa73e6c28c50"
+      },
+      {
+        "name": "tokenizer.json",
+        "size": 11422650,
+        "blob_id": "c7afbed2efcdf019f88ab0572ec29d3bf595dfe2"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size": 705,
+        "blob_id": "6577e86ca277ad0367551e280ba1d58ad4d42c52"
+      },
+      {
+        "name": "video_preprocessor_config.json",
+        "size": 385,
+        "blob_id": "3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe"
+      },
+      {
+        "name": "vocab.json",
+        "size": 2776833,
+        "blob_id": "4783fe10ac3adce15ac8f358ef5462739852c569"
+      }
+    ]
+  }
+]

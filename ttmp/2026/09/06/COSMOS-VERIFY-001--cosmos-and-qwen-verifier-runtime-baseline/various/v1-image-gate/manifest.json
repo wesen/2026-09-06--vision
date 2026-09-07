@@ -1,0 +1,22 @@
+[
+  {
+    "repo_id": "mlx-community/Qwen3-VL-2B-Instruct-8bit",
+    "revision": "b0338e0e843d8e1befe873d144b81fefdc47efa6",
+    "status": "finished",
+    "returncode": 0,
+    "wall_seconds": 5.751731083029881,
+    "deadline_seconds": 120,
+    "log": "output/verifier-v1/image-gate/qwen3-vl-instruct-2b-8bit.log",
+    "result": "output/verifier-v1/image-gate/qwen3-vl-instruct-2b-8bit.json"
+  },
+  {
+    "repo_id": "hzang/Cosmos-Reason2-2B-8bit",
+    "revision": "69ae5c81f0f7651368989ef160da6808af6514cf",
+    "status": "finished",
+    "returncode": 0,
+    "wall_seconds": 3.9496689171064645,
+    "deadline_seconds": 120,
+    "log": "output/verifier-v1/image-gate/cosmos-reason2-2b-8bit.log",
+    "result": "output/verifier-v1/image-gate/cosmos-reason2-2b-8bit.json"
+  }
+]

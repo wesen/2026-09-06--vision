@@ -1,0 +1,64 @@
+{
+  "status": "generated",
+  "mode": "single_image",
+  "request_id": "d1bb4abb7251ad1bcaaa5aa416c5fee1ffea4afee7c5b30c5eb0ef2e0595e702",
+  "model_path": "output/models/qwen3-vl-instruct-2b-8bit",
+  "model_config_sha256": "556a5c592bfc69fc63f3c6dab6d2070193b27c5444682a1b8cac5aaf728a5b8a",
+  "prompt": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.\nReturn only one JSON object with exactly this structure. Use one answer enum, not the pipe-separated string.\n{\"request_id\": \"d1bb4abb7251ad1bcaaa5aa416c5fee1ffea4afee7c5b30c5eb0ef2e0595e702\", \"entity_id\": \"ep-97a1a39b2e9490b6:object-316\", \"answer\": \"true|false|unknown\", \"evidence_ids\": [\"141446c788b9316034c634f6\"], \"rationale\": \"brief visible evidence only\"}\nApproved frame ID: 141446c788b9316034c634f6",
+  "formatted_prompt": "<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|>Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.\nReturn only one JSON object with exactly this structure. Use one answer enum, not the pipe-separated string.\n{\"request_id\": \"d1bb4abb7251ad1bcaaa5aa416c5fee1ffea4afee7c5b30c5eb0ef2e0595e702\", \"entity_id\": \"ep-97a1a39b2e9490b6:object-316\", \"answer\": \"true|false|unknown\", \"evidence_ids\": [\"141446c788b9316034c634f6\"], \"rationale\": \"brief visible evidence only\"}\nApproved frame ID: 141446c788b9316034c634f6<|im_end|>\n<|im_start|>assistant\n",
+  "raw": "{\"request_id\": \"d1bb4abb7251ad1bcaaa5aa416c5fee1ffea4afee7c5b30c5eb0ef2e0595e702\", \"entity_id\": \"ep-97a1a39b2e9490b6:object-316\", \"answer\": \"true\", \"evidence_ids\": [\"141446c788b9316034c634f6\"], \"rationale\": \"The microwave door is visibly open in the approved frame.\"}",
+  "parsed": {
+    "status": "ok",
+    "answer": {
+      "request_id": "d1bb4abb7251ad1bcaaa5aa416c5fee1ffea4afee7c5b30c5eb0ef2e0595e702",
+      "entity_id": "ep-97a1a39b2e9490b6:object-316",
+      "answer": "true",
+      "evidence_ids": [
+        "141446c788b9316034c634f6"
+      ],
+      "rationale": "The microwave door is visibly open in the approved frame."
+    },
+    "raw": "{\"request_id\": \"d1bb4abb7251ad1bcaaa5aa416c5fee1ffea4afee7c5b30c5eb0ef2e0595e702\", \"entity_id\": \"ep-97a1a39b2e9490b6:object-316\", \"answer\": \"true\", \"evidence_ids\": [\"141446c788b9316034c634f6\"], \"rationale\": \"The microwave door is visibly open in the approved frame.\"}"
+  },
+  "load_seconds": 0.757543042069301,
+  "generation_seconds": 2.4421190000139177,
+  "peak_mlx_memory_bytes": 3562733347,
+  "generation": {
+    "text": "{\"request_id\": \"d1bb4abb7251ad1bcaaa5aa416c5fee1ffea4afee7c5b30c5eb0ef2e0595e702\", \"entity_id\": \"ep-97a1a39b2e9490b6:object-316\", \"answer\": \"true\", \"evidence_ids\": [\"141446c788b9316034c634f6\"], \"rationale\": \"The microwave door is visibly open in the approved frame.\"}",
+    "token": 151645,
+    "logprobs": "array([-29.375, -38.25, -24.5, ..., -37, -37, -37], dtype=bfloat16)",
+    "prompt_tokens": 515,
+    "generation_tokens": 140,
+    "total_tokens": 655,
+    "prompt_tps": 446.58769578228447,
+    "generation_tps": 120.38288638543087,
+    "peak_memory": 3.562733347,
+    "cached_tokens": 0,
+    "finish_reason": "stop",
+    "diffusion_canvas_tokens": 0,
+    "diffusion_denoising_steps": 0,
+    "diffusion_work_tokens": 0,
+    "diffusion_canvas_tps": 0.0,
+    "diffusion_work_tps": 0.0,
+    "is_draft": false,
+    "draft_text": "",
+    "text_already_printed": false,
+    "diffusion_step": 0,
+    "diffusion_total_steps": 0,
+    "diffusion_canvas_index": 0,
+    "diffusion_block_complete": false
+  },
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx-vlm": "0.6.17",
+    "transformers": "5.16.1",
+    "huggingface-hub": "1.30.0"
+  },
+  "api_signatures": {
+    "load": "(path_or_hf_repo: str, adapter_path: Optional[str] = None, lazy: bool = False, revision: Optional[str] = None, strict: bool = True, **kwargs) -> Tuple[mlx.nn.layers.base.Module, transformers.processing_utils.ProcessorMixin]",
+    "generate": "(model: mlx.nn.layers.base.Module, processor: mlx_vlm.generate.types.ProcessorLike | transformers.tokenization_python.PythonBackend, prompt: str, image: Union[str, List[str], NoneType] = None, audio: Union[str, List[str], NoneType] = None, video: Union[str, List[str], NoneType] = None, verbose: bool = False, **kwargs: *<class 'mlx_vlm.generate.types.GenerateKwargs'>) -> mlx_vlm.generate.common.GenerationResult",
+    "apply_chat_template": "(processor, config: Union[Dict[str, Any], Any], prompt: Union[str, Dict[str, Any], List[Any]], add_generation_prompt: bool = True, return_messages: bool = False, num_images: int = 0, num_audios: int = 0, **kwargs) -> Union[List[Dict[str, Any]], str, Any]"
+  },
+  "image_sha256": "276c6b3a765b60c7e5301ee881b6150b69cd8df5c0ea56db2fa75a74e0e7c970",
+  "claim": "Runtime image smoke only; schema success is not factual acceptance."
+}

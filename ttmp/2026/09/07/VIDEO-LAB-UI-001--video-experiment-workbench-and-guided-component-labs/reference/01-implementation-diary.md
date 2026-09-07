@@ -14,6 +14,8 @@ RelatedFiles:
       Note: Tailscale and loopback listeners
     - Path: repo://workbench/src/video_workbench/lab/browser.html
       Note: Separate searchable project browser
+    - Path: repo://workbench/src/video_workbench/lab/configurations.py
+      Note: Named draft persistence and source identity checks
     - Path: repo://workbench/src/video_workbench/lab/handoff.py
       Note: Detector crop resolution and provenance validation (bc4916f)
     - Path: repo://workbench/src/video_workbench/lab/presentation.py
@@ -26,6 +28,7 @@ LastUpdated: 2026-09-07T10:05:37.359166-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -806,3 +809,59 @@ Read presentation.reasoning_prompt, manager prompt_snapshot, and the worker over
 ### Technical details
 
 API: POST /v1/lab/prompt and POST /v1/lab/render-yaml. Optional options.prompt is limited to 16000 characters. Actual input pixels, system message, formatted prompt and raw model output remain recorded. Implementation commit cab931d; source and UI service remain available on mimimi:8780.
+
+## Step 14: Save reusable named experiment configurations
+
+Continued the ticket with reusable named configurations, building on the new prompt editor. A user can save an experimental setup without running inference and restore it after a page reload.
+
+The browser smoke preserved every setting, including the exact crop, detection binding and custom prompt. Saving and loading did not create a new model run.
+
+### Prompt Context
+
+**User prompt (verbatim):** perfect, continue.
+
+**Assistant interpretation:** Continue the designed experiment workflow with persistent reusable settings.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+**Commit (code):** c41e899
+
+### What I did
+
+Added task snp5; implemented typed save requests, immutable configuration storage, source/hash checks, prompt freezing, list/load APIs and guided form controls. Captured p14-saved-configuration.png and updated the intern guide.
+
+### Why
+
+Users should be able to keep named experimental setups and prompt variations independently of whether a run has already completed.
+
+### What worked
+
+`PYTHONPATH=workbench/src workbench/.venv/bin/pytest -q workbench/tests/test_lab.py`: 11 passed. Browser save/reload restored all option values, retained the custom prompt and previewed one exact crop. Run count remained unchanged.
+
+### What didn't work
+
+An initial browser check compared JSON.stringify(options) with JSON.stringify(saved.options) and returned false because object key ordering differed. A per-key value comparison returned an empty differences list. Existing Starlette/httpx and AnyIO deprecation warnings remained. Remote work-slip printing remains pending the earlier approval-review rejection; no further remote print attempt was made.
+
+### What I learned
+
+Saving default prompt text requires explicitly freezing it as a literal prompt; otherwise a later template change can silently alter the intended experiment.
+
+### What was tricky to build
+
+A saved configuration must restore through the existing prompt and handoff loaders without losing their state. Reusing loadRunSettings preserved both, while the configuration loader replaced run-specific status text with a draft explanation.
+
+### What warrants a second pair of eyes
+
+Configurations preserve source identity and prompt text, but do not pin installed model/runtime versions. Save validation is distinct from execution admission; full sampling/runtime checks still occur when running.
+
+### What should be done in the future
+
+Gather feedback on naming and loading configurations before adding more management controls. Compare useful prompt variants using actual matched runs and independent visual review.
+
+### Code review instructions
+
+Start with Configurations.save/get in lab/configurations.py, then inspect the three API routes and configuration controls at the end of analysis.js. Review the focused source-identity test and p14 screenshot.
+
+### Technical details
+
+Configuration ID config-bdf08f25ff734afd; source setup copied from run-805e04781b4846b7. Storage output/video-lab/configurations. Range [10000000,10000001) microseconds, actual crop [167,94,352,383]. Code commit c41e899. UI remains served at mimimi:8780.

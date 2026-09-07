@@ -236,3 +236,29 @@ Qwen run `run-805e04781b4846b7` used the earlier exact refrigerator crop with th
 ![Editable user prompt](../various/p13-prompt-editor.png)
 
 ![Syntax-highlighted YAML runtime evidence](../various/p13-highlighted-yaml.png)
+
+## Named saved experiment configurations
+
+Expand **Saved experiment configurations** under **Choose an experiment** to name and save the current form. The snapshot includes source selection, range, crop, component/model options, detection binding if present, and reasoning prompt. Notes explain the intended comparison; they are not ground-truth reviews. Each save creates a separate immutable entry, even when its name duplicates an existing entry.
+
+Loading checks the recording SHA-256 and partition against the saved identity, revalidates the experiment and any detector handoff, restores the form, and previews exact inputs. Loading does not execute inference. Model availability and complete execution budgets remain enforced when a run is submitted. Saved configurations are drafts rather than guarantees that a checkpoint will still be installed or an experiment will succeed.
+
+For reasoning and state components, saving resolves the current prompt and stores its literal text in `options.prompt`, plus the original prompt snapshot. Thus a default template at save time becomes fixed text on load. **Reset to default prompt** explicitly opts back into the current template for the selected target and profile. Source hash and prompt text preservation do not pin runtime versions or checkpoint contents; executed runs still record those identities separately.
+
+```text
+current form → validate options and source → freeze prompt → config-<id>.json
+saved ID     → verify source and handoff   → restore form  → exact preview
+                                                         → user clicks Run
+```
+
+API references:
+
+- `POST /v1/lab/configurations`: `{name, notes, options}`; returns HTTP 201 and the saved configuration. Names are trimmed and nonblank, limited to 100 characters; notes are limited to 4,000 characters.
+- `GET /v1/lab/configurations`: newest-first saved configurations.
+- `GET /v1/lab/configurations/{id}`: validates source identity and the saved detection binding before returning a loadable configuration.
+- Storage: `output/video-lab/configurations/config-<16 hex>.json`, independent of run directories.
+- Implementation: `lab/configurations.py::Configurations`, `lab/app.py` configuration routes, and the saved-configuration controls in `lab/analysis.js`.
+
+Eleven lab tests passed. The focused storage test checks prompt freezing, new identities for repeated saves, changed-source rejection, identifier validation, and blank-name rejection. Browser smoke saved `config-bdf08f25ff734afd` from the edited Qwen crop run, reloaded the page, and restored every saved option. The exact preview was one frame at 10 seconds with crop `(167,94,352,383)`. The run count stayed unchanged throughout save/load. Comparing serialized JavaScript objects initially reported a mismatch due to key order; the per-field comparison found no differing values.
+
+![Saved configuration restored after refresh](../various/p14-saved-configuration.png)

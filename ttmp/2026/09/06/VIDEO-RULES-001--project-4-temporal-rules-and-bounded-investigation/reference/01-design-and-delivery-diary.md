@@ -20,12 +20,17 @@ RelatedFiles:
       Note: Visual review and artifact hashes
     - Path: repo://ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation/various/remarkable-upload.json
       Note: Successful individual delivery
+    - Path: repo://workbench/src/video_workbench/rules/evaluate.py
+      Note: Flat deterministic rule evaluator
+    - Path: repo://workbench/src/video_workbench/rules/stored.py
+      Note: Read-only as-of observation integration
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T13:13:51.924897-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -187,3 +192,59 @@ Rendered this guide as a six-page PDF with a dedicated contents page, readable H
 - Remote directory: `/ai/2026/09/06/VIDEO-RULES-001`.
 - Local inspected PDF: `/Users/manuel/code/wesen/2026-09-06--vision/output/pdf/project-guides/VIDEO-RULES-001/VIDEO-RULES-001_Intern_Guide.pdf`.
 - Six-page visual review and individual dry-run/upload receipts are stored under `various/`.
+
+## Step 4: Simplify the design and implement the first two RULES features
+
+Revised RULES and COSMOS-VERIFY integration around immutable evidence and repeated evaluations. The initial RULES implementation now uses three flat templates and one focused evidence-request handoff, deferring recursive composition, autonomous investigation, and revision/incident machinery. Required entity, clock, unknown, and coverage checks remain.
+
+Implemented the pure rule evaluator and read-only sampled-store adapter, then ran a smoke check at each completed feature boundary. Preserved a reviewed oracle outcome figure and the complete actual-data evaluation trail. These steps establish logical behavior and integration, not end-to-end procedural accuracy.
+
+### Prompt Context
+**User prompt (verbatim):** "ok, update the design docs if needed. then work on RULES. Anything in RULES that seems overengineered? if so, explain why"
+
+**Assistant interpretation:** Update the designs to remove unneeded revision machinery, explain other premature abstractions, and implement practical rule evaluation.
+
+**Inferred user intent:** Make progress on concrete rules without a generic framework or repetitive testing overhead.
+
+**Commits (code):** `26453c0` — Simplify RULES scope and implement flat evidence-based templates; `ed3b624` — Connect flat rules to sampled observation memory.
+
+### What I did
+- Read RULES/VERIFY guides, RULES tasks/diary, and the implemented temporal store.
+- Updated RULES with a prominent scope section that supersedes the broader original design; clarified VERIFY outputs as immutable answers rather than replacements.
+- Defined flat `state_at_event`, `before`, and `no_event_in` JSON templates with strict fields and integer time bounds.
+- Implemented pure PASS/VIOLATION/UNKNOWN evaluation, correct subject/stream binding, exact-sample state matching, strict uncertain event ordering, and explicit oracle/reviewed absence coverage.
+- Added a read-only SQLite adapter that selects durably available observations for a single run/stream/entity/property.
+- Ran 16 hand-derived oracle cases and three malformed schemas once at the R1 boundary, then a separate actual 864-observation integration smoke at R2 completion.
+- Printed the meaningful implementation plan with the standing Almanach approval; saved its layout.
+- Marked R1 and R2 tasks complete and retained R3/R4 as open.
+
+### Why
+A seven-operator recursive language, generic investigator, and revision chains introduce policy before a concrete consumer exists. In contrast, missing triggers, wrong entities, time uncertainty, and uncovered intervals already create false-rule risks on the available corpus.
+
+### What worked
+- Sixteen oracle cases and three invalid schemas passed. Exact equality fails strict ordering, overlapping uncertainty stays unknown, and an observed prohibited event violates absence despite other gaps.
+- Actual sampled-state integration: all 864 queries were unknown before commitment; afterward 662 PASS, 52 VIOLATION, and 150 UNKNOWN across six separate state streams.
+- Reopening the database for repeated calls preserved evaluation identity/results; no database writes or observation replacement occurred.
+- Opened `various/r1-oracle/rule-outcomes.png` and checked labels/reasons for readability.
+- Almanach reported HTTP 200, `printed: true`, rendered at 2026-09-06T23:52:56Z, 384×461.
+
+### What didn't work
+No smoke case or implementation command failed. Exact departure events are not established by the available state handoff, so the real-data integration explicitly uses sampled-frame triggers. It does not relabel them as departures or treat decision counts as accuracy. The original reMarkable guide receipts refer to the earlier editions; updated source is not claimed as already delivered.
+
+### What I learned
+The practical rule interface can stay small while preserving the important distinctions. A missing trigger is an applicability limitation, a missing exact frame is a state-evidence limitation, and an uncovered interval is an absence-evidence limitation; each yields a different recorded reason for UNKNOWN.
+
+### What was tricky to build
+The store has point observations, so uncertain trigger bounds cannot safely select a nearby frame. The evaluator returns UNKNOWN instead. Event absence uses half-open intervals while event uncertainty bounds include their endpoints; an uncertain event touching the interval boundary prevents a false PASS. Explicit coverage spans are unioned without bridging gaps.
+
+### What warrants a second pair of eyes
+Hand-authored event coverage is oracle/reviewed evidence, not something generated from sparse predictions. The actual integration tests rule behavior against predicted values, not reviewed procedural truth. Whole interval and exact-departure quality remain unproven. The updated guide keeps the original broader explanations below an explicit superseding scope section.
+
+### What should be done in the future
+Implement the single focused verifier-request handoff and immutable repeated-evaluation contract, then publish the scoped oracle/predicted comparison. Actual Qwen/Cosmos execution remains gated on COSMOS-VERIFY acceptance. Refresh the revised guide editions separately from their historical receipts.
+
+### Code review instructions
+Read `rules/evaluate.py`, `rules/stored.py`, and `workbench/configs/rules/household-v1.json`. The feature smoke scripts are ticket `scripts/02-flat-rule-smoke.py` and `scripts/03-stored-rule-smoke.py`, run with `PYTHONPATH=workbench/src workbench/.venv/bin/python`. Review saved oracle outcomes and actual per-stream counts under `various/r1-oracle` and `various/r2-stored`.
+
+### Technical details
+Rule decisions have content-derived evaluation IDs, rule hashes, evidence IDs, subject scope, as-of time, applicability, and evaluator version. The stored adapter additionally records run identity. Actual source SQLite SHA: `3a2f5051660eba3dabdd92685e3dd11df4a261e638e7861447b2524e798aa2c3`. No revisions, supersession, model calls, recursive expressions, or mutable global state are used by the evaluator.

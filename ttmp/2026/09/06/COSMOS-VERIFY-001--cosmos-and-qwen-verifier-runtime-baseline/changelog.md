@@ -12,3 +12,7 @@ Created independent project scope, detailed intern guide, implementation phases,
 ## 2026-09-06
 
 Design source committed as edd3d34. Six-page PDF passed visual review and individual dry-run/upload succeeded; receipts stored. Implementation tasks remain open.
+
+## 2026-09-06
+
+Clarify immutable verifier answers and repeated evaluations; no mandatory revision/supersession machinery (26453c0).

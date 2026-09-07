@@ -9,15 +9,15 @@
 
 ## R1 Flat templates and oracle logic
 
-- [ ] Define three flat rule templates, explicit entity bindings, units, and bounded schema validation.
-- [ ] Implement PASS/VIOLATION/UNKNOWN, missing-trigger applicability, and exact operator semantics.
-- [ ] Add hand-derived threshold/equality/overlap/wrong-entity oracle tests.
+- [x] Define three flat rule templates, explicit entity bindings, units, and bounded schema validation.
+- [x] Implement PASS/VIOLATION/UNKNOWN, missing-trigger applicability, and exact operator semantics.
+- [x] Add hand-derived threshold/equality/overlap/wrong-entity oracle tests.
 
 ## R2 Coverage and store
 
-- [ ] Implement explicit event-coverage union/gap checks and uncertain event bounds.
-- [ ] Integrate exact-sample as-of observation views without supersession.
-- [ ] Smoke-test late observations, restart equivalence, and explanations for unknown at the feature boundary.
+- [x] Implement explicit event-coverage union/gap checks and uncertain event bounds.
+- [x] Integrate exact-sample as-of observation views without supersession.
+- [x] Smoke-test late observations, restart equivalence, and explanations for unknown at the feature boundary.
 
 ## R3 Investigation
 

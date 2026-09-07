@@ -19,8 +19,8 @@ class Selection(BaseModel):
         return self
 
 class Experiment(Selection):
-    component: Literal['detection','segmentation','tracking','reasoning','states','embeddings']='detection'
-    model: Literal['yolo11n','yolo11n-seg','qwen','cosmos','pooled_images','native_video']='yolo11n'
+    component: Literal['detection','segmentation','tracking','reasoning','states','embeddings','actions']='detection'
+    model: Literal['yolo11n','yolo11n-seg','qwen','cosmos','pooled_images','native_video','native_ridge','pooled_ridge']='yolo11n'
     device: Literal['cpu','mps']='mps'
     confidence: float=Field(default=.25,ge=.01,le=1)
     iou: float=Field(default=.7,gt=0,le=1)
@@ -37,10 +37,11 @@ class Experiment(Selection):
 
     @model_validator(mode='after')
     def supported(self):
-        models={'detection':{'yolo11n'},'segmentation':{'yolo11n-seg'},'tracking':{'yolo11n'},
+        models={'actions':{'native_ridge','pooled_ridge'},'detection':{'yolo11n'},'segmentation':{'yolo11n-seg'},'tracking':{'yolo11n'},
                 'reasoning':{'qwen','cosmos'},'states':{'qwen','cosmos'},'embeddings':{'pooled_images','native_video'}}
         if self.model not in models[self.component]: raise ValueError('unsupported component/model combination')
         if any(c<0 or c>79 for c in self.classes): raise ValueError('class IDs must be in 0..79')
         if self.component=='embeddings' and (self.end_us-self.start_us)/(self.stride_seconds*1e6)>128: raise ValueError('selection exceeds 128 window budget')
         if self.component=='embeddings' and not self.query.strip(): raise ValueError('query must not be blank')
+        if self.component=='actions' and (self.fps!=2 or self.crop is not None or self.start_us%500000 or self.end_us%500000): raise ValueError('frozen action heads require full frame, 2 FPS and range endpoints on 0.5-second grid')
         return self

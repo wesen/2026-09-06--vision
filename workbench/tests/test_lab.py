@@ -84,3 +84,10 @@ def test_comparison_and_exact_point_rules():
     assert point_rule(run,RuleRequest(event_us=0))['decision']['status']=='PASS'
     assert point_rule(run,RuleRequest(event_us=1))['decision']['status']=='UNKNOWN'
     assert point_rule(run,RuleRequest(event_us=0,expected_open=True))['decision']['status']=='VIOLATION'
+
+def test_action_head_preprocessing_contract():
+    accepted=Experiment(episode_id='x',component='actions',model='native_ridge',fps=2)
+    assert accepted.component=='actions'
+    for options in ({'fps':1},{'fps':2,'crop':(.1,0,1,1)},{'fps':2,'start_us':100000}):
+        with pytest.raises(ValueError,match='frozen action heads require'):
+            Experiment(episode_id='x',component='actions',model='native_ridge',**options)

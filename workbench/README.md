@@ -126,3 +126,29 @@ Open <http://127.0.0.1:8779/>. Recorded mode schedules saved results with measur
 The API accepts registered episode IDs only. The as-of slider hides results until their actual replay commitment time. Source playback is independent of that evidence horizon. Run files live under `output/replay-workbench/`; interrupted work is inspectable but is not automatically resumed.
 
 See [the measured replay report](../ttmp/2026/09/06/VIDEO-REPLAY-001--project-5-replay-and-incident-workbench/reference/02-measured-replay-viewer-and-bounded-scheduler-report.md) for reproduction, screenshots, measured overload, and limitations.
+
+## Guided experiment laboratory
+
+Run the shared evidence workspace and project browser:
+
+```sh
+PYTHONPATH=workbench/src workbench/.venv/bin/python -m video_workbench.lab --port 8780
+```
+
+For explicit Tailscale access, repeat `--host` for loopback and the address returned
+by `tailscale ip -4`, for example `--host 127.0.0.1 --host 100.113.140.75` on this Mac.
+Open `/` for experiments, `/resources` for rendered project Markdown and highlighted
+source, `/docs` for the executable API schema, and `/replay/` for causal replay.
+
+The laboratory runs YOLO detection/masks/tracks, accepted Qwen/Cosmos single-image
+verification, independent state samples and transition intervals, pooled/native
+embedding windows, and fresh embeddings with matching frozen ridge action heads.
+Action-head input policy is fixed to full frame, 2 FPS and half-second endpoints.
+Only one laboratory inference worker runs at once. Each run stores its exact PNG
+inputs, configuration, progress and result in `output/video-lab/run-*/`.
+Comparisons check evidence identity; reviews/export preserve source partitions.
+The separate frozen-action view inspects historical results without fresh inference.
+
+See ticket `VIDEO-LAB-UI-001` for the intern guide, API walkthrough, diary and actual
+browser/model smoke evidence. Multi-image/video reasoning, arbitrary action-head
+preprocessing, and TCN execution are not offered as accepted laboratory modes.

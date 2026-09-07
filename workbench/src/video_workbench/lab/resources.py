@@ -25,6 +25,7 @@ EXTERNAL={
  'embeddings':[('Qwen3-VL-Embedding-2B model card','https://huggingface.co/Qwen/Qwen3-VL-Embedding-2B','Embedding inputs and upstream usage. Read our native repair handoff for the accepted MLX implementation.')],
 }
 EXTERNAL['states']=EXTERNAL['reasoning']
+EXTERNAL['actions']=EXTERNAL['embeddings']
 CODE={
  'shared':[('media.py','PTS decoding and first-frame-at-or-after sampling'),('registry.py','Source hash and partition contracts'),('lab/evidence.py','Exact PNG inputs and crop rounding')],
  'detection':[('perception/detector.py','Detector defaults, RGB contract and output coordinates')],
@@ -43,6 +44,8 @@ TICKETS={
  'states':['VIDEO-TEMPORAL-001','VIDEO-RULES-001'],
  'embeddings':['VIDEO-SEARCH-001','MLX-VIDEO-FIX-001','COSMOS-EMBED-001'],
 }
+CODE['actions']=CODE['states']+CODE['embeddings']
+TICKETS['actions']=['VIDEO-TEMPORAL-001','MLX-VIDEO-FIX-001']
 CSS='''body{margin:0;background:#101619;color:#e6eeeb;font:16px/1.7 system-ui}header{position:sticky;top:0;background:#182226;padding:12px 24px;border-bottom:1px solid #334449;z-index:2}main{max-width:1100px;padding:28px;margin:auto}a{color:#a5ebc8}h1,h2,h3{line-height:1.3;scroll-margin-top:90px}pre{overflow:auto;font:13px/1.6 ui-monospace;padding:12px;background:#182226}code{font-family:ui-monospace;font-size:.9em}table{border-collapse:collapse;display:block;overflow:auto}td,th{border:1px solid #334449;padding:8px}img{max-width:100%}blockquote{border-left:3px solid #a5ebc8;padding-left:18px;color:#b0c2bd}.meta{font-size:12px;color:#b0c2bd;overflow-wrap:anywhere}.highlight{overflow:auto}.highlight pre{padding:0}.source-line{display:block;scroll-margin-top:90px}.source-line:target{background:#394b30}.line-number{display:inline-block;width:4em;text-align:right;margin-right:1em;color:#8fa5a0;text-decoration:none;user-select:none}nav a{margin-right:20px}details{border:1px solid #334449;padding:12px;margin:15px 0}summary{cursor:pointer}'''
 
 class Resources:
@@ -99,11 +102,14 @@ class Resources:
         if parts.scheme in ('https','http') or url.startswith('#'):return url
         if parts.scheme or parts.netloc:return None
         path=unquote(parts.path)
+        line=re.fullmatch(r'(.*):(\d+)',path)
+        fragment=parts.fragment
+        if line:path,fragment=line[1],'L'+line[2]
         target=Path(path) if path.startswith('/') else current.parent/path
         candidates=[target.resolve(),(self.root/path).resolve()]
         for candidate in candidates:
             rid=self.by_path.get(candidate)
-            if rid:return '/resources/'+rid+('#'+parts.fragment if parts.fragment else '')
+            if rid:return '/resources/'+rid+('#'+fragment if fragment else '')
         return None
 
     def render(self,rid):
@@ -117,6 +123,18 @@ class Resources:
         if p.suffix=='.md':
             if text.startswith('---\n'):text=text.split('---',2)[-1].lstrip()
             md=MarkdownIt('commonmark',{'html':False,'highlight':code_block}).enable('table')
+            def inline_code(tokens,index,options,env):
+                value=tokens[index].content;filename=value.split(':',1)[0].strip()
+                matches=[path for path in self.by_path if str(path.relative_to(self.root)).endswith('/'+filename) and path.suffix in ('.py','.html','.js')]
+                label='<code>'+escape(value)+'</code>'
+                if len(matches)!=1:return label
+                target=matches[0];url='/resources/'+self.by_path[target]
+                if ':' in value:
+                    symbol=value.split(':',1)[1].strip().split('.')[-1]
+                    for i,line in enumerate(target.read_text().splitlines(),1):
+                        if re.search(r'\b(?:def|class) '+re.escape(symbol)+r'\b',line):url+='#L'+str(i);break
+                return '<a href="'+url+'">'+label+'</a>'
+            md.renderer.rules['code_inline']=inline_code
             tokens=md.parse(text);slugs={}
             def walk(items):
                 for i,t in enumerate(items):

@@ -42,11 +42,7 @@ def point_rule(run,request):
     for i,r in enumerate(result['records']):
         value={'open':True,'closed':False,'unknown':None}[r['state']]
         observations.append(Observation(f'lab-{i}',run['run_id'],'lab-state',eid,entity,'door_open',value,r['pts_us'],horizon,horizon,
-                                        (r['frame']['id'],),o['model'],'verifier/'+o['model'],'offline', 'verifier_unknown' if value is None else None))
-    # Observation mode is an existing closed enum; offline lab computation still
-    # uses causal-form clocks with all inputs explicitly available at this horizon.
-    from dataclasses import replace
-    observations=[replace(o,mode='causal') for o in observations]
+                                        (r['frame']['id'],),o['model'],'verifier/'+o['model'],'causal', 'verifier_unknown' if value is None else None))
     return dict(rule=rule,decision=evaluate(rule,eid,entity,[event],observations,as_of_us=horizon),
                 scope='Offline exact-point experiment; user-selected trigger, not a detected event or streaming latency measurement.')
 

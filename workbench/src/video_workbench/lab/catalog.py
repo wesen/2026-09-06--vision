@@ -6,6 +6,8 @@ from video_workbench.registry import file_hash
 
 ROOT = Path(__file__).resolve().parents[4]
 MODELS = {
+    'native_ridge': ('actions', 'output/mlx-video-fix/.venv/bin/python', 'output/mlx-video-fix/models/official'),
+    'pooled_ridge': ('actions', 'workbench/.venv/bin/python', 'output/models/qwen3-vl-embedding-2b-4bit'),
     'yolo11n': ('perception', 'workbench/perception-env/.venv/bin/python', 'output/models/yolo11/yolo11n.pt'),
     'yolo11n-seg': ('perception', 'workbench/perception-env/.venv/bin/python', 'output/models/yolo11/yolo11n-seg.pt'),
     'qwen': ('reasoning', 'workbench/verify-env/.venv/bin/python', 'output/models/qwen3-vl-instruct-8b-8bit'),

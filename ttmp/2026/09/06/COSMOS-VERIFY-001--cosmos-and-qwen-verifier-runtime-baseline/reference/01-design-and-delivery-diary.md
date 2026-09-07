@@ -988,3 +988,68 @@ Ran eight real-model development pilots, corrected the Qwen reasoning delimiter 
 - Main comparison has 24 development cases × (1+1+3+3) runs × two models = 384 calls; selected/control test size depends on development selection.
 
 P2 implementation/pilot/freeze commit: `5aa10eb`. P2 completion and P3 start slips printed successfully at 02:46:51Z and 02:47:12Z on 2026-09-07. Consolidated receipts are in `various/reasoning-print-receipts.json`. P3 development inference started with both model protocols frozen.
+
+## Step 16: Run the frozen comparison and preserve diagnostic panels
+
+Started the sequential 384-call development sweep using the frozen two-model protocol. While execution proceeds, prepared complete-result archiving, per-case aggregation, a declared limited rationale-review sample, and live selected-profile RULES validation. This step is in progress until the final results below are recorded.
+
+### Prompt Context
+
+**User prompt (verbatim):** (see Step 14)
+
+**Assistant interpretation:** Complete the planned comparison and retain enough evidence to distinguish formatting success from factual support.
+
+**Inferred user intent:** Determine whether prompted reasoning improves the actual verifier and document its practical limits.
+
+### What I did
+
+- Started script 24 development mode with immutable code and profile identities.
+- Added scripts 25–26 for complete raw records, metrics, test panels, and live handoff validation after selection.
+- Added script 27 and visually inspected the first three completed Qwen development panels: closed, open, and unknown.
+- Drafted reference 08's frozen method and API explanation while the run continued.
+
+### Why
+
+- Averaging sampled results per case avoids counting seeds as independent visual examples.
+- A side-by-side panel exposes unsupported claims that can be obscured by an aggregate accuracy score.
+
+### What worked
+
+- Qwen direct greedy and reasoning greedy each completed 24/24 valid responses, with 18 correct labels and six unsupported answers on unknown cases.
+- Both modes correctly classified the visibly open and closed development examples inspected in the panels.
+- The original images and short final rationales are readable in the saved comparison panels.
+
+### What didn't work
+
+- Prompted greedy reasoning did not improve Qwen's six unknown development cases. The explanation asserted a visible seated microwave door where the review rubric deemed its state insufficiently inspectable.
+- Full development selection and test results remain pending at this checkpoint; no quality winner is declared yet.
+
+### What I learned
+
+- Additional explanation can repeat the same visual mistake instead of correcting it.
+- Recorded patch tensors establish input forwarding, not target visibility or semantic correctness.
+
+### What was tricky to build
+
+- Test gating requires both model selections, not just the first completed model. The report tools preserve per-case and per-seed identities while the runner remains unchanged.
+- Generation includes cold model setup per call, so wall-clock timing must not be presented as pure token-generation performance.
+
+### What warrants a second pair of eyes
+
+- Review the limited rationale-audit sample definition and prevent its support rate from being extrapolated to every response.
+- Inspect case-level scores and episode summaries because the frame population is correlated and imbalanced.
+
+### What should be done in the future
+
+- Finish both development selections, untouched test/control runs, live handoffs, factual-support review, and final measured report.
+
+### Code review instructions
+
+- Read scripts 24–27 and reference 08; trace a saved panel to its frozen frame and raw worker result.
+- Use the archived per-call JSONL and protocol identities to reproduce final aggregate tables after completion.
+
+### Technical details
+
+- Reporting/phase-record commit: `e7511f4`.
+- Early development diagnostic: Qwen D-G and R-G each 18/24, unknown recall 0/6, no invalid outputs.
+- No test outputs had been generated or inspected when these diagnostics were written.

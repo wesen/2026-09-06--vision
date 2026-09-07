@@ -125,3 +125,7 @@ Our measured Qwen result remains 8/12 on the fresh test split, including 0/4 cor
 5. Continue to defer larger embedding models and fine-tuning until the verifier experiments establish a concrete need.
 
 Local implementation references: `workbench/src/video_workbench/verifiers/worker.py`, `adapter.py`, `visibility.py`, and `rules/handoff.py`. Runtime evidence is in `sources/qwen3-vl/local-runtime-audit.json`; prior measured evidence and visual cases remain in reference 05 and `various/visibility-v2/`.
+
+## Follow-up design: prompted reasoning on Instruct
+
+The next experiment now explicitly includes step-by-step prompting on the existing Instruct checkpoint. This is distinct from evaluating the separately trained Thinking checkpoint, and does not require downloading new weights. See [design 02](../design-doc/02-prompted-reasoning-and-decoding-comparison-for-bounded-visual-verification.md) for the four-arm prompt/decoding comparison, final-answer extraction, request-budget changes, and frozen evaluation policy. This refines the earlier ordering: test prompted Instruct reasoning alongside decoding changes before the separate Thinking candidate.

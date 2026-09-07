@@ -733,3 +733,66 @@ Reviewed Qwen3-VL documentation with the same source-preserving method used for 
 - Archives: scripts 19–20; official model revisions are recorded in each provenance URL.
 
 Research and source archive committed in `0cf74e2`. Ticket doctor and diff checks passed. The research completion slip printed successfully (HTTP 200, 384×586) at `2026-09-07T02:12:09Z`; generated layout and receipt are in `various/qwen-research-done*`.
+
+## Step 12: Design prompted reasoning on the current Qwen Instruct checkpoint
+
+Added a concrete follow-up design and five implementation tasks. The first experiment now crosses direct versus step-by-step prompting with greedy versus sampled decoding on the existing checkpoint. The separate Thinking model remains a subsequent comparison rather than a prerequisite.
+
+### Prompt Context
+
+**User prompt (verbatim):** "Ok, add follow up tasks and design. You can ask for chain of thought in qwen maybe, if it's not a reasoning model."
+
+**Assistant interpretation:** Specify and task an experiment that explicitly prompts Qwen Instruct to reason before its final answer.
+
+**Inferred user intent:** Test whether prompting alone improves verification before requiring another checkpoint.
+
+### What I did
+
+- Wrote design 02 with a four-arm experiment, example reasoning instruction, explicit final-answer grammar, generation profile, resource bounds, dataset policy, selection rule, and implementation file map.
+- Added R1–R5 tasks and linked the earlier research recommendation to this refined sequence.
+- Inspected the actual request validator and adapter limits before proposing a longer response budget.
+
+### Why
+
+- Prompt style and decoding should be separated from checkpoint changes so the result has a clear interpretation.
+- Model-generated explanations are useful diagnostics but do not independently establish visible facts.
+
+### What worked
+
+- Existing host binding, citation validation, and separate RULES evidence can remain the final-answer path.
+- The current Instruct weights suffice for the proposed prompted-reasoning arms; no new download is required for this first experiment.
+
+### What didn't work
+
+- The prior research's suggested 4096-token trial cannot pass the current 512-token request maximum. The design now explicitly includes a bounded contract update and coordinated raw/final limits.
+- No execution failures occurred; no model runs were started for this design-only request.
+
+### What I learned
+
+- The final JSON parser and raw explanation need separate size limits and a declared extraction style.
+- Equal output ceilings do not mean equal realized compute, so report actual tokens and end-to-end latency.
+
+### What was tricky to build
+
+- Adding reasoning and sampling together would confound two changes. The four-arm layout measures each separately with the checkpoint, images, and shared task definitions fixed.
+- Reasoning text may contain JSON-like material; the parser must validate only the suffix after one declared reasoning block, never search for whichever object looks usable.
+
+### What warrants a second pair of eyes
+
+- Review the profile identity binding, revised request maximum, raw UTF-8 byte limits, and truncation classification when implementing.
+- Verify that sampled-case averaging does not inflate the number of independent observations.
+
+### What should be done in the future
+
+- Implement R1–R5, complete feature-level smoke checks, and run the frozen comparison before a separate Thinking checkpoint experiment.
+
+### Code review instructions
+
+- Start with design 02 and task group R1–R5; inspect `contracts.validate_request`, `visibility.parse_visibility`, and `adapter.verify` for the existing limits being changed.
+- This commit is documentation only; validate docmgr metadata and whitespace rather than rerun model or application tests.
+
+### Technical details
+
+- Proposed common ceiling: 4096 generated tokens, 120-second deadline; existing callers retain their requested budgets.
+- Proposed raw/worker limits: 256 KiB UTF-8 raw text and one MiB serialized worker result; final JSON remains limited to 16000 characters.
+- Sampled seeds: 3407, 3408, 3409. Selection averages per case before comparing arms.

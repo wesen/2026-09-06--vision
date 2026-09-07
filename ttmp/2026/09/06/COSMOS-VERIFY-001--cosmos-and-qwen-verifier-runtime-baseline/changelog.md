@@ -36,3 +36,7 @@ Steps 9–10: bounded image adapter and fresh visual cases (c6dd120); 72-call co
 ## 2026-09-06
 
 Step 11: archived 16 Qwen primary sources, reviewed Instruct versus Thinking and actual MLX defaults, documented preprocessing and bounded follow-up experiments in reference 07.
+
+## 2026-09-06
+
+Step 12: design 02 and R1–R5 specify prompted reasoning on the existing Qwen Instruct checkpoint, crossed with decoding profiles; explicit extraction, resource bounds, fresh evaluation and separate later Thinking comparison.

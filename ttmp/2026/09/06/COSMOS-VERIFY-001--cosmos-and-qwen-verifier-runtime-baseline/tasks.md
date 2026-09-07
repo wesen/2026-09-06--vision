@@ -53,6 +53,16 @@ These point-state comparisons do not complete multi-image/native-video, temporal
 - [ ] Follow-up: compare direct versus explicit NVIDIA reasoning configuration on development; freeze prompt, final-answer parser, sampling controls, larger budget and deadline before fresh test evaluation. <!-- t:ln02 -->
 
 Accepted V2–V4 checkmarks above cover the bounded single-image contract and reviewed point-state comparison only. Multi-image/native-video support, full rationale-support scoring, reliable abstention, and end-to-end rule recall remain open. See references 05 and 06.
-- [ ] Qwen follow-up: compare explicit published Instruct decoding against the frozen greedy baseline on development; record sampler defaults, seed, penalty scope and processed image dimensions. <!-- t:9y1n -->
+- [ ] Qwen follow-up (implemented through R1–R4 below): compare explicit Instruct decoding and prompted step-by-step reasoning against the greedy direct baseline; record seed, penalty scope and processed image dimensions. <!-- t:9y1n -->
 - [ ] Qwen follow-up: pin and smoke-test a separate 8B Thinking checkpoint/conversion; freeze its template, final-answer contract, budget and deadline before a fresh reviewed test comparison. <!-- t:fk2c -->
 - [ ] Later: evaluate approved full-frame plus target crop for small visible objects, preserving crop transforms and aliases; keep occluded cases unknown and multi-image capability explicitly gated. <!-- t:ovsi -->
+
+## Prompted reasoning implementation — design 02
+
+The existing broad Qwen/Cosmos follow-ups remain tracking items; R1–R5 below are the concrete implementation sequence. Prompted reasoning uses the current Instruct weights. The separate Thinking checkpoint follows afterward.
+
+- [ ] R1: implement validated generation profiles and revised bounded 4096-token contract, raw/final limits, explicit MLX seed/sampling and processed-image provenance (design 02). <!-- t:vnez -->
+- [ ] R2: add prompted step-by-step reasoning to current Qwen Instruct; parse one declared reasoning block plus final JSON, preserving raw output and existing host/citation validation. <!-- t:slzs -->
+- [ ] R3: pilot budgets on development, freeze fresh reviewed dev/test episodes and four Qwen Instruct arms: direct/reasoning crossed with greedy/sampled decoding; keep three predefined sampled seeds. <!-- t:pmfe -->
+- [ ] R4: run frozen development selection and untouched test/control comparison; report abstention, unsupported certainty, final-rationale support, failures and resource costs with visual case galleries. <!-- t:ker0 -->
+- [ ] R5: smoke-test parser/budget/process failure boundaries at feature completion, validate one live selected-style RULES handoff, and publish evidence/diary before separate Cosmos or Qwen Thinking comparisons. <!-- t:ng4c -->

@@ -48,3 +48,7 @@ Step 13: dedicated Cosmos design 03 and C1–C4 tasks specify fixed-checkpoint r
 ## 2026-09-06
 
 Step 14: implemented shared bounded reasoning profiles and final extraction (4608902); 48 focused smoke tests passed. Real-model pilots and frozen comparison follow.
+
+## 2026-09-06
+
+Step 15: development pilots and revised Qwen delimiter passed; froze 48 RGB cases and both protocols in 5aa10eb. P3 comparison uses immutable prompts and code hashes.

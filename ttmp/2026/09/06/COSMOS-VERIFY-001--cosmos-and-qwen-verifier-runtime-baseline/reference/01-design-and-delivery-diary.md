@@ -986,3 +986,5 @@ Ran eight real-model development pilots, corrected the Qwen reasoning delimiter 
 - Frozen protocol SHA-256: `629d7769ee9f47cf4cc0634d90e94daa3492f98b034a8b7745742953a208ace3`.
 - P1 completion and P2 start printed HTTP 200 at 02:38:51Z and 02:39:23Z on 2026-09-07.
 - Main comparison has 24 development cases × (1+1+3+3) runs × two models = 384 calls; selected/control test size depends on development selection.
+
+P2 implementation/pilot/freeze commit: `5aa10eb`. P2 completion and P3 start slips printed successfully at 02:46:51Z and 02:47:12Z on 2026-09-07. Consolidated receipts are in `various/reasoning-print-receipts.json`. P3 development inference started with both model protocols frozen.

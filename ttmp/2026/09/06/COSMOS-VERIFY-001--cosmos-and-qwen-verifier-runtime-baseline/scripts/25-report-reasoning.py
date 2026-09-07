@@ -4,6 +4,22 @@ import collections,json,statistics,math,textwrap
 from PIL import Image,ImageDraw,ImageFont
 from video_workbench.registry import file_hash
 r=Path(__file__).resolve().parents[1];p=r/'various/reasoning-v3/protocol.json';protocol=json.loads(p.read_text());out=Path('output/verifier-reasoning-v3');dest=r/'various/reasoning-v3/results';dest.mkdir(exist_ok=True)
+# Refuse partial aggregates: every selected/control call must be present.
+selection=json.loads((out/'selection.json').read_text())
+assert selection['protocol_sha256']==file_hash(p)
+assert set(selection['models'])==set(protocol['models'])
+for phase in ('development','test'):
+ expected=set()
+ for family,model in protocol['models'].items():
+  for entry in model['profiles']:
+   profile=entry['profile']
+   arm=('R' if profile['prompt_style']=='reasoning' else 'D')+'-'+('S' if profile['temperature'] else 'G')
+   if phase=='test' and arm not in {'D-G',selection['models'][family]['selected']}:continue
+   expected.update((family,profile['id'],c['source']['id']) for c in protocol['cases'] if c['source']['split']==phase)
+ recorded=json.loads((out/(phase+'-results.json')).read_text())
+ assert recorded['protocol_sha256']==file_hash(p)
+ actual=[(x['family'],x['profile_id'],x['case_id']) for x in recorded['rows']]
+ assert len(actual)==len(set(actual)) and set(actual)==expected, 'incomplete or duplicate '+phase+' population'
 cases={c['source']['id']:c for c in protocol['cases']}
 summary=[]
 def mean(xs):return statistics.mean(xs) if xs else None

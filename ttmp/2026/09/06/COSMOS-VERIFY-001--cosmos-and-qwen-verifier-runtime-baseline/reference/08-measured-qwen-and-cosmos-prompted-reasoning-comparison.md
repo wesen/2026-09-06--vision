@@ -93,3 +93,40 @@ During development, sampled Qwen reasoning sometimes omitted its closing delimit
 The running comparison retains its frozen strict path. Script 28 performs a separately labeled post-observation replay; it does not change generation records, prompts, labels, or selection. The completed Qwen development population contains 13 missing-close failures among 72 sampled-reasoning calls (18.1%). Replay recovered all 13: ten correct answers and three unsupported known answers on unknown cases. This changes sampled-reasoning correct calls from 44/72 to 54/72 and unsupported calls from 15/72 to 18/72. Cosmos and test replay counts remain pending. Practical adapter integration follows frozen inference so both conditions remain interpretable.
 
 ![Missing closing-tag recovery with original frame and raw response](../various/reasoning-v3/missing-close-recovery.png)
+
+## Development diagnostic: uncertainty and contract failures in Cosmos
+
+The completed Cosmos greedy runs scored 17/24 direct and 18/24 reasoning under strict parsing. Direct answered all six unknown cases with definite states. Reasoning correctly abstained on two of those cases, but also abstained on one visibly open frame and emitted an invalid `closed` enum on a closed frame. These development observations precede sampled-arm selection and are not test results.
+
+The missing-close heuristic deliberately leaves that enum failure unchanged. Mapping arbitrary synonyms would change the answer-content policy; the implemented recovery only locates the final JSON after one observed wrapper omission. The accepted enums remain `true`, `false`, and `unknown`.
+
+![Cosmos development uncertainty comparison](../various/reasoning-v3/development-panels/cosmos-unknown.png)
+
+The uncertainty example also illustrates why rationale support requires a separate audit: the answer `unknown` can match the review label while its explanation still refers to an agent's actions or describes the poorly inspectable door as visible. Label correctness alone does not establish support for every statement in the rationale.
+
+## How the runtime and rule handoff fit together
+
+```mermaid
+flowchart TD
+    A[Approved RGB frame and bound request] --> B[Host checks hash, horizon and limits]
+    B --> C[Isolated MLX worker with frozen generation profile]
+    C --> D[Raw response and runtime provenance]
+    D --> E[Strict final-answer extraction]
+    E --> F[Visibility fields and citation validation]
+    E --> G[Practical missing-close recovery]
+    G --> F
+    F --> H[Host binds request and entity identifiers]
+    H --> I[Separate verifier observation]
+    I --> J[Verifier-conditioned rule decision]
+    K[Original rule decision] --> L[Preserved baseline for comparison]
+```
+
+The worker performs inference; the host owns the accepted contract. A model cannot choose a different frame, expand the timestamp horizon, substitute request identity, or invent an evidence reference through its answer. This boundary constrains what an accepted result means, but it does not determine whether the depicted door is actually inspectable. The latter remains a measured model capability.
+
+The RULES integration produces a separate verifier observation and evaluates a corresponding rule condition. It does not replace the original state observation or rewrite the original decision. The live fixture uses an exact frame-sample event to exercise request binding, evidence validation, and the separate decision path. It does not measure departure detection or end-to-end warehouse rule recall.
+
+## Final-rationale audit rubric
+
+Every accepted final test rationale is read against the supplied RGB frame. `supported` means its material visual claims are inspectable and support the answer. `mixed` means it combines supported observations with unsupported details, activity/history claims, or an unjustified conclusion. `unsupported` means the decisive evidence claim is not visible or is contradicted by the image. Invalid responses are recorded separately and have no accepted rationale to score.
+
+These annotations assess the short final rationale, not the entire preceding generated explanation. The reviewer is the same assistant that reviewed the synthetic frames, so this is an internal visual audit with correlated judgments. It is useful for diagnosing specific errors, but is not independent human validation. Raw responses, image identities, case labels, and per-response audit notes are retained so another reviewer can reassess them.

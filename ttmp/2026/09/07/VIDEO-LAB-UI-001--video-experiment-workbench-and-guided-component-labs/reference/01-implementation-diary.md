@@ -9,13 +9,20 @@ Topics:
 DocType: reference
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://workbench/src/video_workbench/lab/__main__.py
+      Note: Tailscale and loopback listeners
+    - Path: repo://workbench/src/video_workbench/lab/browser.html
+      Note: Separate searchable project browser
+    - Path: repo://workbench/src/video_workbench/lab/resources.py
+      Note: Curated resources and Markdown/source renderer
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-07T10:05:37.359166-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Implementation diary
 
@@ -141,3 +148,71 @@ Read lab/contracts.py, evidence.py and catalog.py. Run PYTHONPATH=workbench/src 
 ### Technical details
 
 Design commit 37e1019. Server process 28859. Preview maximum 64 actual samples; full-frame evidence unchanged by browser seeking. Plan and P1 start slips printed at 14:06:01Z and 14:06:20Z.
+
+## Step 3: Serve the laboratory over Tailscale and add a project browser
+
+The user reviewed the evidence workspace and asked for tailnet access, linked resources, and a separate project browser with rendered Markdown. Added explicit interface binding and a searchable document/source browser without changing the unfinished model-execution stage.
+
+### Prompt Context
+
+**User prompts (verbatim):**
+
+> can you serve it such that I can access it over http://mimimi:8780/ over tailscale (i'm on the same tailscale network)
+
+> is "run experiment" still disabled?
+
+> add links to resources (on the net, locally as markdown, links to the source which you can serve as well, with syntax highlighting). That way we can really get some insight into it all.
+
+> also render markdown files. maybe it should be a different page that is just a project browser really.
+
+**Assistant interpretation:** Expose the existing workspace on the tailnet and make local implementation and documentation browsable beside experiments.
+
+**Inferred user intent:** Read deeply into the system while trying it from another device.
+
+### What I did
+
+- Added repeatable --host binds; verified HTTP 200 from mimimi and 100.113.140.75 on port 8780.
+- Added lab/resources.py and browser.html: 179 indexed code/Markdown resources, filtered tree, rendered Markdown, highlighted source, line anchors and raw views.
+- Added component-specific source, report and official-resource links to each guide.
+- Checked official Ultralytics, Qwen, Cosmos and PyAV pages. Declared existing markdown-it-py/Pygments dependencies in pyproject.toml.
+- Captured p3-project-browser-markdown.png and p3-project-browser-source.png in various/.
+
+### Why
+
+The experiment controls need a direct path to both explanatory documents and the code that implements their semantics.
+
+### What worked
+
+- Browser reached http://mimimi:8780/resources over the Tailscale hostname.
+- Intern guide rendered 14 top-level/section headings and three tables. Native video source rendered highlighted lines with anchors.
+- Focused smoke: 3 passed. Unknown resource IDs and path traversal attempts return 404; raw source is plain text.
+
+### What didn't work
+
+- tailscale ip -4 warned: client version "1.41.0-ERR-BuildInfo" != tailscaled server version "1.98.10-t0ee734d30-g6b4108809". Address discovery and HTTP access succeeded despite this warning.
+- Existing Starlette/httpx and AnyIO deprecation warnings remain in test output.
+- Run experiment remains disabled at this checkpoint; inference files were drafted before interruption but are not yet integrated or committed.
+
+### What I learned
+
+Current upstream documentation can show newer YOLO examples than the local YOLO11 checkpoint; resource descriptions must make that difference explicit.
+
+### What was tricky to build
+
+Relative Markdown links must resolve through the indexed project catalog rather than expose arbitrary paths. The renderer rewrites known links, marks unindexed references unavailable, escapes raw HTML and adds a restrictive CSP. The embedded reader permits user-initiated top-level navigation for its back links without allowing document scripts.
+
+### What warrants a second pair of eyes
+
+Review tree organization, reading width and links from actual reports containing figures. Current working-file hashes are not historical commit identities.
+
+### What should be done in the future
+
+Continue the model execution phase after the resource-browser feedback opportunity. Add any newly implemented components to their curated reading paths.
+
+### Code review instructions
+
+Start with lab/resources.py: Resources.path, rewrite, render and attach; inspect browser.html and test_project_reader_and_resource_boundaries. Open http://mimimi:8780/resources and search for native_video or COSMOS-VERIFY.
+
+### Technical details
+
+Workspace commit eab4b83. Current server has listeners on 127.0.0.1 and 100.113.140.75, port 8780. The Project browser is a separate page; experiment selection remains in its original tab. No new package installation was necessary.

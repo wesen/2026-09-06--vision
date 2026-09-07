@@ -301,3 +301,15 @@ Return 422 for invalid ranges, unsupported combinations, or excessive samples; 4
 Test at feature boundaries rather than after every small edit. Focus tests on real failure risks: invalid/empty selections, source mutation, worker cancellation, stale result display, crop coordinate mapping, incompatible feature spaces, and unknown state handling. Actual model smoke runs are necessary to verify environment and preprocessing integration; repeated exhaustive model runs are not needed for layout changes.
 
 Every meaningful phase receives a start/done work slip. Every significant feature receives a screenshot and a feedback opportunity. The diary records exact failures, corrective changes, validation commands, and code commit IDs. Completion means usable experiments with truthful capability labels and explanatory pages, not merely navigation shells.
+
+## 14. Project browser and supporting resources
+
+The user requested a separate project browser while reviewing the first UI. `/resources` now provides a searchable tree of current local source files and ticket documents. Selecting a file opens an embedded reader; `/resources?file=<id>` preserves the selection in a shareable URL. `/resources/<id>` opens the reader directly, and `/resources/<id>/raw` returns the original text. Source lines have anchors such as `#L42`.
+
+Markdown is parsed with markdown-it-py with raw HTML disabled. Pygments highlights source files and fenced code blocks. Markdown headings receive anchors and a contents foldout; tables and indexed raster images render in the document. Relative links to indexed project resources are rewritten to served URLs. Unindexed local links are marked unavailable. The reader displays the current file SHA-256, so a reader can distinguish working-tree content from a historical experiment snapshot.
+
+`lab/resources.py` owns the allowlisted catalog, curated component reading paths, link rewriting, and HTML rendering. `lab/browser.html` implements search, filtering, the file tree and embedded reader. The browser cannot request arbitrary filesystem paths: IDs map only to indexed project code, ticket design/reference Markdown and ticket raster figures. Source and document content are escaped; the rendered reader uses a restrictive content security policy.
+
+The experiment Guide tab includes three reading groups: source code, local designs/measured reports, and official online resources. Upstream examples may describe different checkpoint versions or modalities, so each external link has a short explanation of its relationship to the local implementation. Online references were checked on 2026-09-07. Rendering requires no CDN, external JavaScript, or new service.
+
+The server accepts repeated `--host` flags. The current command binds loopback and this Mac's Tailscale address, so both `http://127.0.0.1:8780/` and `http://mimimi:8780/` reach the same laboratory. The default remains loopback when no host is specified.

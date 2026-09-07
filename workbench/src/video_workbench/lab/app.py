@@ -8,10 +8,12 @@ from fastapi.responses import HTMLResponse, FileResponse
 from .catalog import Catalog, ROOT
 from .contracts import Selection
 from .evidence import prepare
+from .resources import Resources
 
 def create_app(root=ROOT):
     root=Path(root); catalog=Catalog(root); output=root/'output/video-lab'; output.mkdir(exist_ok=True,parents=True)
     app=FastAPI(title='Video Laboratory',version='0.1')
+    Resources(root).attach(app)
     app.state.catalog=catalog; app.state.output=output
     @app.get('/',response_class=HTMLResponse)
     def home(): return (Path(__file__).parent/'viewer.html').read_text()

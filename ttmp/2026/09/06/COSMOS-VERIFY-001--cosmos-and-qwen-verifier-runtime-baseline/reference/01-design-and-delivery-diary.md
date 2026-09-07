@@ -340,3 +340,67 @@ Resume the pinned downloader once account access is available, then convert and 
 ### Access retry after web agreement
 
 The user said "ok i agreed, try again". Retried the pinned downloader; Cosmos still returned `GatedRepoError` / HTTP 401 for `chat_template.json`. A separate read-only credential check established `implicit_token_disabled: False`, but `HfApi().whoami(token=True)` failed with `HfHubHTTPError`. Explicit authenticated `config.json` download also returned HTTP 401. Thus browser agreement has not supplied a valid CLI credential; requested local `hf auth login` for the approved account. No token or account details were printed. Conversion and Cosmos inference remain unexecuted; Qwen results remain intact.
+
+## Step 6: Complete Cosmos conversion and the matched 8B runtime gate
+
+The updated local login resolved model access. Downloaded the pinned official Cosmos source, converted it locally to 8-bit affine MLX weights, and ran the exact Qwen request through the same worker. Both 8B models successfully generate; Qwen is schema-valid, while Cosmos' Markdown fences remain a strict output failure. The complete original responses and a visually inspected comparison figure are archived.
+
+### Prompt Context
+**User prompt (verbatim):** "ok try again"
+
+**Assistant interpretation:** Retry with the updated credential and complete the already-authorized conversion and inference if access succeeds.
+
+**Inferred user intent:** Finish the larger verifier runtime comparison after resolving authentication.
+
+**Commit (code):** `537ad1e` — "Complete local Cosmos 8B conversion and matched verifier runtime gate".
+
+### What I did
+- Retried `scripts/05-download-8b.py`; Cosmos source download completed in approximately 252 seconds.
+- Ran `scripts/06-convert-cosmos-8b.py` offline with Metal access, recording conversion and hashing time separately.
+- Ran the existing gate with `--pins various/cosmos-8b-runtime-pins.json --output output/verifier-v1/image-gate-cosmos-8b`.
+- Added `07-report-8b.py` to require identical request objects, combine preserved runs, and regenerate the report/audit figure without new model calls.
+- Opened and visually inspected `various/v1-image-gate-8b-comparison/runtime-audit.png`.
+
+### Why
+- The requested comparison needed actual larger-model execution; model availability or successful conversion alone is insufficient.
+- Separating download, conversion, and hashing directly answers the user's timing question.
+
+### What worked
+- Local conversion took 8.634 seconds; output hashing took 6.581 seconds. Total recorded conversion-plus-hashing time was 15.216 seconds.
+- Converter reported source dtype bfloat16 and effective 8.993 bits per weight under the selected 8-bit quantization policy.
+- Cosmos loaded in 1.434 seconds, generated 158 tokens in 6.992 seconds, and used 10.857 GB peak MLX allocation. Total worker time was 10.495 seconds.
+- Qwen's preserved run loaded in 1.507 seconds, generated 149 tokens in 6.937 seconds, and used 10.857 GB peak MLX allocation. Total worker time was 10.269 seconds.
+- Both raw answers say the microwave door is open; the archived image supports that binary observation.
+
+### What didn't work
+- Cosmos emitted a fenced JSON block; strict parsing returned `Expecting value: line 1 column 1 (char 0)`. The output was not silently repaired.
+- Cosmos' rationale mentions “contents inside,” which is more specific than the visible evidence warrants; schema and factual rationale support remain separate checks.
+- The earlier few-minute estimate for conversion was conservative: the actual conversion completed in under nine seconds. Downloading was the dominant wait.
+
+### What I learned
+- Both 8B candidates are practical for this bounded single-image request on the 64 GB M1 Max. This does not establish video-mode capability or accuracy improvements over 2B.
+
+### What was tricky to build
+- Authentication involved two independent steps: web agreement and a valid local CLI credential. The successful retry needed no code change or credential exposure.
+- Quantization bit width is a configuration, not a guarantee that every stored tensor is 8-bit. The converter's effective bit count includes its quantization policy and overhead; exact converted file hashes are retained.
+- Separate result directories allow completing Cosmos after Qwen without rerunning or overwriting the successful Qwen gate. The report join asserts full request equality.
+
+### What warrants a second pair of eyes
+- Local conversion has not been compared numerically with the official full-precision model.
+- This prompt requests direct JSON within 256 tokens; it does not evaluate a long-form reasoning configuration or establish Cosmos' best achievable quality.
+
+### What should be done in the future
+- Proceed with V2 bounded evidence execution, V3 malformed/timeout fixtures, and V4 reviewed matched cases with development-only prompt selection.
+- Keep the separately recorded 8B embedding experiment deferred.
+
+### Code review instructions
+- Inspect conversion settings and file hashes in `various/cosmos-8b-conversion.json`, then the comparison manifest and raw result objects.
+- Run `07-report-8b.py` to reproduce the figure/report from saved evidence; no additional inference is necessary for that check.
+
+### Technical details
+- Official Cosmos revision: `a9fae2cf89dc64db96b12860417f0eb403013bb9`.
+- Converted weights: `output/models/cosmos-reason2-8b-8bit-local`.
+- Shared runtime: MLX-VLM 0.6.17, MLX 0.32.2, Transformers 5.16.1.
+- Selected quantization: affine, eight bits, group size 64, `trust_remote_code=False`.
+
+Phase-completion slip confirmed `printed: true`, HTTP 200 at `2026-09-07T01:07:37Z`; archived in `various/8b-done-print-receipt.json`. Ticket doctor passed.

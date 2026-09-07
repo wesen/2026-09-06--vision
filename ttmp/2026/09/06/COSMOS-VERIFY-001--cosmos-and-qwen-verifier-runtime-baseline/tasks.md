@@ -31,3 +31,12 @@
 - [ ] Run both candidates sequentially and report factual support separately from schema validity.
 - [ ] Publish accuracy/abstention/failure/latency/memory table with raw counts.
 - [ ] Hand off versioned adapter and accepted capabilities to rule investigation.
+
+## V1 follow-up — 8B runtime gate
+
+- [x] Pin Qwen 8-bit conversion and official Cosmos 8B source; resolve authenticated access.
+- [x] Convert Cosmos locally to 8-bit MLX and record timing, settings, and output hashes.
+- [x] Run both 8B candidates on the unchanged development image request and preserve separate raw results.
+- [x] Publish matched runtime report and visual audit; retain strict Cosmos JSON failure.
+
+This completes the 8B runtime smoke only. V2–V4 acceptance remains open; no full comparison accuracy is claimed.

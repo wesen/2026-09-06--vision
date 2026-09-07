@@ -20,3 +20,7 @@ Clarify immutable verifier answers and repeated evaluations; no mandatory revisi
 ## 2026-09-06
 
 Step 4: pinned isolated Qwen/Cosmos single-image runtime gate; both generate, Qwen JSON valid and Cosmos fence rejected; raw outputs and visual audit archived (commit a5e01ee).
+
+## 2026-09-06
+
+Step 6: completed pinned Cosmos 8B local conversion in 8.63s and matched Qwen/Cosmos image gate; both generate, Cosmos strict JSON still fails; visual audit archived (537ad1e).

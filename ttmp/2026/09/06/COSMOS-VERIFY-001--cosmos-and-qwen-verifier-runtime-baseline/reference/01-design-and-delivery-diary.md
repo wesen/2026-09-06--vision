@@ -1223,3 +1223,5 @@ The final report preserves source images, model outputs, runtime metrics, per-re
 - Recovery replay leaves four non-OK calls across the full experiment: three enums and one timeout.
 - Test median wall time: Qwen D-G 6.62 seconds, Cosmos D-G 7.36 seconds, Cosmos R-G 12.56 seconds. Peak completed-call MLX allocation was approximately 10.11 GiB.
 - Original strict runtime: `5aa10eb`; helper: `f4f801a`; practical integration: `89c4313`.
+
+Final delivery: report/evidence commit `bb9e4f1`; `docmgr doctor --ticket COSMOS-VERIFY-001 --stale-after 30` passed. Verified report image links, all 24 final PNG artifacts, and the complete 72-response audit. Printed the P3 completion slip at `2026-09-07T04:10:25Z` (HTTP 200, `printed: true`, 384×677); archived its YAML and receipt. The initial plan and P1/P2/P3 start/completion trail remains in the same ticket.

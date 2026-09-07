@@ -528,3 +528,137 @@ During normalized reporting, the first diagnostic categorizer mislabeled remaini
 The original Step 7 no-failure note referred to process/tests during execution, not output correctness. The sweep is now complete, while broader V2/V4 scope remains open. No prompts were tuned and no embedding extraction was repeated. The 18 regression tests and 11 new output-boundary tests passed at their respective feature completion points.
 
 Completed evidence/report commit: `7ffab0b`. Completion slip printed successfully with HTTP 200 at `2026-09-07T01:34:11Z`; receipt archived in `various/rerun-done-print-receipt.json`.
+
+## Step 9: Bound visibility requests and preserve a fresh visual comparison
+
+Implemented a host-owned answer envelope and one-image subprocess adapter, then evaluated direct and visibility prompts on fresh reviewed images. The integration now retains an independent verifier-conditioned RULES result. The comparison also exposed a semantic limit: neither 8B model abstained on the four occluded test cases.
+
+### Prompt Context
+
+**User prompt (verbatim):** "ok. commit at appropriate intervals and keep a detailed diary as you work (using the diary format from the skill) . Take screenshots as well so we can use that for a detailed report later on as well, to explain what a closed case is and such."
+
+**Assistant interpretation:** Implement the next bounded verifier step with reviewable evidence, commits, and a visual case guide.
+
+**Inferred user intent:** Make the verifier usable while preserving enough evidence to explain its behavior and failures.
+
+**Commit (code):** `c6dd120` — bounded visibility adapter, fresh cases, and initial cookbook archive.
+
+### What I did
+
+- Added visibility prompt/parser, isolated worker, host adapter, and `rules.handoff.investigate`.
+- Reviewed 24 original frames, four contact sheets, and annotated closed/open/unknown panels. Original images remain separate from annotations.
+- Froze labels and selection before model calls; ran 48 development calls then 24 selected-prompt test calls.
+- Ran one real Cosmos RULES handoff: baseline UNKNOWN remained unchanged; separate conditioned decision was PASS.
+- Printed the phase plan successfully: HTTP 200, printed true, 2026-09-07T01:40:40Z, 384 by 483 pixels. Layout is `various/visibility-plan.yaml`.
+
+### Why
+
+- Long identity copying caused avoidable failures; host binding removes that model obligation.
+- Positive closed-door criteria and reviewed occlusions let us measure whether visibility instructions address false certainty.
+
+### What worked
+
+- All 26 focused smoke tests passed in 0.29 seconds at feature completion.
+- All 72 model calls returned valid responses without reported truncation. Test accuracy was Qwen 8/12 and Cosmos 7/12.
+- Raw output, actual formatted prompts, timing, model allocation, original frames, and the separate live RULES trace are preserved.
+
+### What didn't work
+
+- Initial integration fixture used incorrect rule fields and raised `ValueError: rule schema fields/version invalid`. Corrected the fixture to `schema_version=1, rule_id=...`; production validation remained unchanged.
+- Both models gave known answers for all four unknown test labels. Visibility wording did not solve abstention.
+- A later diary read used the guessed name `reference/01-diary.md` and returned `No such file or directory`; discovered and used the actual `01-design-and-delivery-diary.md`.
+
+### What I learned
+
+- Valid visibility flags are model assertions, not an independently validated visibility detector.
+- A one-point development selection advantage is weak evidence, especially with correlated synthetic frames.
+
+### What was tricky to build
+
+- Host binding must preserve approved evidence identity without accepting invented model citations. The model sees F1; the host validates and maps only that alias.
+- The deadline spans setup plus worker execution. Process-group termination and reaping prevent a timed-out worker from surviving into the next request.
+- The test partition was kept out of prompt selection. New research did not change the frozen implementation during inference.
+
+### What warrants a second pair of eyes
+
+- Conservative side-view RGB labels and apartment overlap across episodes limit independence. Obtain human review before treating this as a benchmark.
+- Inspect timeout cleanup, completion timestamps, and the distinction between baseline and conditioned streams.
+
+### What should be done in the future
+
+- Evaluate explicitly prompted reasoning separately. Keep multi-image/video and full rationale-support acceptance open.
+
+### Code review instructions
+
+- Start at `visibility.parse_visibility`, `adapter.verify`, and `handoff.investigate`; compare the live trace with the unchanged baseline.
+- Validation command: `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_visibility_adapter.py workbench/tests/test_verifier_output.py -q`.
+- Read reference 05 and reproduce archived summary counts with script 18.
+
+### Technical details
+
+- Frozen protocol SHA-256: `b11aa2a5538ee1cf8f8b5670aeb466c99f4a096d852ea1300294f0c01e9a24cb`.
+- Selection scores: direct 1, visibility 2; correct count minus unsupported known-on-unknown answers, aggregated across both models.
+- Single image, at most ten MiB and 1920×1080 pixels; benchmark temperature zero, 384 output tokens; 60-second deadline.
+
+## Step 10: Review official Cosmos Reason2 guidance and archive primary sources
+
+Expanded the requested warehouse review into the official model card, prompting guide, inference examples, quantization guide, and troubleshooting documentation. Wrote a source-linked analysis distinguishing our short JSON baseline from NVIDIA's explicitly prompted reasoning configuration.
+
+### Prompt Context
+
+**User prompt (verbatim):** "also look at the "worker safety in a classical warehouse" notebookby nvidia in the cosmos cookbook, if there are things you can use to improve our system. Store any relevant resources int he ticket sources/ folder"
+
+**User prompt (verbatim):** "look at other guidance and information about cosmos reason 2"
+
+**Assistant interpretation:** Inspect broader authoritative guidance, preserve relevant resources, and identify useful system changes.
+
+**Inferred user intent:** Avoid missing model-specific conventions that might explain weak verifier results.
+
+### What I did
+
+- Archived seven cookbook resources and seven official Reason2/model-card resources with pinned revisions and SHA-256 manifests.
+- Compared documented message order and generation profiles with our actual saved MLX formatted prompts and worker code.
+- Wrote reference 06 with current-versus-recommended settings, source inconsistencies, and a bounded follow-up sequence.
+
+### Why
+
+- Increasing model size does not automatically enable the documented reasoning response protocol.
+- Primary-source examples clarify compatibility and expected inputs, but require task-specific evaluation.
+
+### What worked
+
+- Official inference utility agrees with the cookbook sampling profiles. Saved MLX input already places media before task text.
+- The archive can be reproduced without running downloaded upstream Python.
+
+### What didn't work
+
+- Official guidance is inconsistent about placing reasoning instructions in the system versus user turn and using a separate answer tag. Documented both conventions rather than silently mixing them.
+- Some cookbook examples infer hidden authorization or physical properties; these are not suitable ground-truth policies for our verifier.
+
+### What I learned
+
+- Our worker has no system turn and uses temperature zero with a short budget. It is a deliberate direct-answer experiment, not a reproduction of the vendor reasoning profile.
+- Reason2 video timestamps belong in its input representation; annotated review images must not be substituted for original inputs.
+
+### What was tricky to build
+
+- Guidance arrived during a frozen comparison. Preserved that experiment and recorded recommendations as separately versioned follow-up tasks instead of changing prompts mid-run.
+
+### What warrants a second pair of eyes
+
+- Review the future reasoning-envelope parser and actual MLX sampling support before claiming vendor-configuration parity.
+
+### What should be done in the future
+
+- Run development-only direct versus explicit reasoning configurations, then freeze an independent test evaluation.
+- Consider crops and short timestamped videos only under explicitly extended packet contracts.
+
+### Code review instructions
+
+- Read reference 06, both provenance manifests, and script 16. Compare `worker.py` with archived `inference_sample.py` and `inference.py`.
+
+### Technical details
+
+- Official repository revision: `a3b4a1db4065fe13c4b1f4d2fb8605bad647f4b9`.
+- Cookbook revision: `d0857364e8a727be41b181731e03f478213e4558`.
+- Official 8B model-card revision: `a9fae2cf89dc64db96b12860417f0eb403013bb9` (source manifest carries the full authoritative checkpoint revision).

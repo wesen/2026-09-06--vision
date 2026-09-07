@@ -1,0 +1,45 @@
+{
+  "status": "ok",
+  "returncode": 0,
+  "elapsed_seconds": 6.740571500035003,
+  "request_id": "bce81fdc434918e059ee9378c2d055d6a0f2ea819aba5d140ad43979914fc11e",
+  "entity_id": "dv-0a0732aef26f3d73:object-308",
+  "schema_version": "visible-door-v2",
+  "mode": "single_image",
+  "prompt": "Inspect only the supplied image. Target appliance: fridge. Is its door open?\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+  "model_path": "/Users/manuel/code/wesen/2026-09-06--vision/output/models/qwen3-vl-instruct-8b-8bit",
+  "completed_us": 12190572,
+  "answer": {
+    "request_id": "bce81fdc434918e059ee9378c2d055d6a0f2ea819aba5d140ad43979914fc11e",
+    "entity_id": "dv-0a0732aef26f3d73:object-308",
+    "answer": "true",
+    "evidence_ids": [
+      "dv-0a0732aef26f3d73-52"
+    ],
+    "rationale": "The red fridge door is visibly swung open, revealing the interior and showing a gap between the door and the fridge body."
+  },
+  "visibility": {
+    "target_identified": true,
+    "door_observable": true
+  },
+  "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"true\", \"evidence\": [\"F1\"], \"rationale\": \"The red fridge door is visibly swung open, revealing the interior and showing a gap between the door and the fridge body.\"}",
+  "normalizations": [],
+  "runtime": {
+    "request_id": "bce81fdc434918e059ee9378c2d055d6a0f2ea819aba5d140ad43979914fc11e",
+    "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"true\", \"evidence\": [\"F1\"], \"rationale\": \"The red fridge door is visibly swung open, revealing the interior and showing a gap between the door and the fridge body.\"}",
+    "prompt": "Inspect only the supplied image. Target appliance: fridge. Is its door open?\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+    "formatted_prompt": "<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|>Inspect only the supplied image. Target appliance: fridge. Is its door open?\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.<|im_end|>\n<|im_start|>assistant\n",
+    "mode": "single_image",
+    "load_seconds": 1.303002208005637,
+    "generation_seconds": 3.7950484580360353,
+    "peak_mlx_bytes": 10857490756,
+    "prompt_tokens": 402,
+    "generation_tokens": 59,
+    "finish_reason": "stop",
+    "versions": {
+      "mlx": "0.32.2",
+      "mlx-vlm": "0.6.17",
+      "transformers": "5.16.1"
+    }
+  }
+}

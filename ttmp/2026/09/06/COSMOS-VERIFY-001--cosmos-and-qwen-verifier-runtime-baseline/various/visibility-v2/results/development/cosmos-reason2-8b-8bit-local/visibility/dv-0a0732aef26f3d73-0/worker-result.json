@@ -1,0 +1,18 @@
+{
+  "request_id": "7eebc10c88a005774a67d01b159b05ff97535b617a1706a872c8b9c906698f3c",
+  "raw": "```json\n{\n  \"target_identified\": true,\n  \"door_observable\": true,\n  \"answer\": \"false\",\n  \"evidence\": [\"F1\"],\n  \"rationale\": \"The red refrigerator has two doors, both of which are visibly closed and seated against their respective frames, with no gaps or signs of being open.\"\n}\n```",
+  "prompt": "Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+  "formatted_prompt": "<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|>Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.<|im_end|>\n<|im_start|>assistant\n",
+  "mode": "single_image",
+  "load_seconds": 1.3734834589995444,
+  "generation_seconds": 4.398057665908709,
+  "peak_mlx_bytes": 10857492541,
+  "prompt_tokens": 507,
+  "generation_tokens": 74,
+  "finish_reason": "stop",
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx-vlm": "0.6.17",
+    "transformers": "5.16.1"
+  }
+}

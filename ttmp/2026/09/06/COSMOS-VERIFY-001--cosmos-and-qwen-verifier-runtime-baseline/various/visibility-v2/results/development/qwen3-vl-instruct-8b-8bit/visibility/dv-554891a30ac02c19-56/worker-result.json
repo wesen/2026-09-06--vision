@@ -1,0 +1,18 @@
+{
+  "request_id": "5384bb9215d1b52c329fd012bf35822620f5269b595460e8ef46e8c1200003c8",
+  "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"false\", \"evidence\": [\"F1\"], \"rationale\": \"The microwave door is visible and seated against its frame, showing no gap or displacement indicating it is closed.\"}",
+  "prompt": "Inspect only the supplied image. Target appliance: microwave. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+  "formatted_prompt": "<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|>Inspect only the supplied image. Target appliance: microwave. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.<|im_end|>\n<|im_start|>assistant\n",
+  "mode": "single_image",
+  "load_seconds": 1.228515625,
+  "generation_seconds": 3.8679337080102414,
+  "peak_mlx_bytes": 10857492541,
+  "prompt_tokens": 507,
+  "generation_tokens": 56,
+  "finish_reason": "stop",
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx-vlm": "0.6.17",
+    "transformers": "5.16.1"
+  }
+}

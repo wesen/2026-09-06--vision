@@ -1,0 +1,45 @@
+{
+  "status": "ok",
+  "returncode": 0,
+  "elapsed_seconds": 6.240010792156681,
+  "request_id": "5384bb9215d1b52c329fd012bf35822620f5269b595460e8ef46e8c1200003c8",
+  "entity_id": "dv-554891a30ac02c19:object-174",
+  "schema_version": "visible-door-v2",
+  "mode": "single_image",
+  "prompt": "Inspect only the supplied image. Target appliance: microwave. Is its door open?\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+  "model_path": "/Users/manuel/code/wesen/2026-09-06--vision/output/models/qwen3-vl-instruct-8b-8bit",
+  "completed_us": 12090011,
+  "answer": {
+    "request_id": "5384bb9215d1b52c329fd012bf35822620f5269b595460e8ef46e8c1200003c8",
+    "entity_id": "dv-554891a30ac02c19:object-174",
+    "answer": "false",
+    "evidence_ids": [
+      "dv-554891a30ac02c19-56"
+    ],
+    "rationale": "The microwave door is closed, as indicated by the visible seam and the lack of any visible interior."
+  },
+  "visibility": {
+    "target_identified": true,
+    "door_observable": true
+  },
+  "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"false\", \"evidence\": [\"F1\"], \"rationale\": \"The microwave door is closed, as indicated by the visible seam and the lack of any visible interior.\"}",
+  "normalizations": [],
+  "runtime": {
+    "request_id": "5384bb9215d1b52c329fd012bf35822620f5269b595460e8ef46e8c1200003c8",
+    "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"false\", \"evidence\": [\"F1\"], \"rationale\": \"The microwave door is closed, as indicated by the visible seam and the lack of any visible interior.\"}",
+    "prompt": "Inspect only the supplied image. Target appliance: microwave. Is its door open?\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+    "formatted_prompt": "<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|>Inspect only the supplied image. Target appliance: microwave. Is its door open?\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.<|im_end|>\n<|im_start|>assistant\n",
+    "mode": "single_image",
+    "load_seconds": 1.1984964590519667,
+    "generation_seconds": 3.5319337910041213,
+    "peak_mlx_bytes": 10857490756,
+    "prompt_tokens": 402,
+    "generation_tokens": 55,
+    "finish_reason": "stop",
+    "versions": {
+      "mlx": "0.32.2",
+      "mlx-vlm": "0.6.17",
+      "transformers": "5.16.1"
+    }
+  }
+}

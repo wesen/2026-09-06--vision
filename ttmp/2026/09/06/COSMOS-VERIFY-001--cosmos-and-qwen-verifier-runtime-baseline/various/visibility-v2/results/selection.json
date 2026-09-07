@@ -1,0 +1,9 @@
+{
+  "variant": "visibility",
+  "scores": {
+    "direct": 1,
+    "visibility": 2
+  },
+  "protocol_sha256": "b11aa2a5538ee1cf8f8b5670aeb466c99f4a096d852ea1300294f0c01e9a24cb",
+  "policy": "Choose one shared variant on development using correct_count minus unsupported_known_on_unknown; ties prefer direct. No test output inspected before selection."
+}

@@ -15,22 +15,22 @@
 
 ## V2 Evidence adapter
 
-- [ ] Define bounded VerifyRequest/Result and evidence packet schemas.
+- [x] Define bounded VerifyRequest/Result and evidence packet schemas.
 - [ ] Implement image, multi-image, and supported native-video modes distinctly.
-- [ ] Enforce horizon/size/deadline and subprocess timeout/restart behavior.
+- [x] Enforce horizon/size/deadline and subprocess timeout/restart behavior.
 
 ## V3 Output validation
 
-- [ ] Implement strict JSON parsing and answer/status separation.
-- [ ] Reject missing/invented citations, wrong entities, and out-of-scope times.
-- [ ] Preserve raw responses and test malformed/timeout fixtures without models.
+- [x] Implement strict JSON parsing and answer/status separation.
+- [x] Reject missing/invented citations, wrong entities, and out-of-scope times.
+- [x] Preserve raw responses and test malformed/timeout fixtures without models.
 
 ## V4 Comparison
 
-- [ ] Freeze reviewed question set and matched evidence/prompt/budget conditions.
+- [x] Freeze reviewed question set and matched evidence/prompt/budget conditions.
 - [ ] Run both candidates sequentially and report factual support separately from schema validity.
-- [ ] Publish accuracy/abstention/failure/latency/memory table with raw counts.
-- [ ] Hand off versioned adapter and accepted capabilities to rule investigation.
+- [x] Publish accuracy/abstention/failure/latency/memory table with raw counts.
+- [x] Hand off versioned adapter and accepted capabilities to rule investigation.
 
 ## V1 follow-up — 8B runtime gate
 
@@ -39,7 +39,7 @@
 - [x] Run both 8B candidates on the unchanged development image request and preserve separate raw results.
 - [x] Publish matched runtime report and visual audit; retain strict Cosmos JSON failure.
 
-This completes the 8B runtime smoke only. V2–V4 acceptance remains open; no full comparison accuracy is claimed.
+The historical 8B runtime smoke is complete. Subsequent work below accepts the bounded single-image implementation; multi-image/video and broader semantic acceptance remain open.
 
 ## Reviewed rerun and practical JSON fences
 
@@ -47,6 +47,9 @@ This completes the 8B runtime smoke only. V2–V4 acceptance remains open; no fu
 - [x] Retrain native temporal heads from the accepted 792-window feature cache and check reproducibility; targeted 18-test regression selection passed.
 - [x] Inspect sanitize and implement traced outer-fence normalization with 11 output-boundary smoke cases.
 - [x] Reparse saved responses separately; report strict versus normalized results and preserve visual evidence.
-- [ ] Later: evaluate visibility-aware abstention and a host-owned request envelope on a separately planned development/evaluation protocol.
+- [x] Later: evaluate visibility-aware abstention and a host-owned request envelope on a separately planned development/evaluation protocol.
 
 These point-state comparisons do not complete multi-image/native-video, temporal-insufficiency, full rationale-support, or end-to-end rule evaluation acceptance.
+- [ ] Follow-up: compare direct versus explicit NVIDIA reasoning configuration on development; freeze prompt, final-answer parser, sampling controls, larger budget and deadline before fresh test evaluation. <!-- t:ln02 -->
+
+Accepted V2–V4 checkmarks above cover the bounded single-image contract and reviewed point-state comparison only. Multi-image/native-video support, full rationale-support scoring, reliable abstention, and end-to-end rule recall remain open. See references 05 and 06.

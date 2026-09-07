@@ -1,0 +1,45 @@
+{
+  "status": "ok",
+  "returncode": 0,
+  "elapsed_seconds": 6.6538060419261456,
+  "request_id": "e45119392b7bacc2d0ccc40ee682171cfed48d29d8c8268025eaa2d2b9e88e4f",
+  "entity_id": "dv-ab93c9c80442cb4a:object-174",
+  "schema_version": "visible-door-v2",
+  "mode": "single_image",
+  "prompt": "Inspect only the supplied image. Target appliance: microwave. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+  "model_path": "/Users/manuel/code/wesen/2026-09-06--vision/output/models/qwen3-vl-instruct-8b-8bit",
+  "completed_us": 6903807,
+  "answer": {
+    "request_id": "e45119392b7bacc2d0ccc40ee682171cfed48d29d8c8268025eaa2d2b9e88e4f",
+    "entity_id": "dv-ab93c9c80442cb4a:object-174",
+    "answer": "false",
+    "evidence_ids": [
+      "dv-ab93c9c80442cb4a-0"
+    ],
+    "rationale": "The microwave door is visibly seated against its frame, showing no gap or displacement that would indicate it is open."
+  },
+  "visibility": {
+    "target_identified": true,
+    "door_observable": true
+  },
+  "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"false\", \"evidence\": [\"F1\"], \"rationale\": \"The microwave door is visibly seated against its frame, showing no gap or displacement that would indicate it is open.\"}",
+  "normalizations": [],
+  "runtime": {
+    "request_id": "e45119392b7bacc2d0ccc40ee682171cfed48d29d8c8268025eaa2d2b9e88e4f",
+    "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"false\", \"evidence\": [\"F1\"], \"rationale\": \"The microwave door is visibly seated against its frame, showing no gap or displacement that would indicate it is open.\"}",
+    "prompt": "Inspect only the supplied image. Target appliance: microwave. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+    "formatted_prompt": "<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|>Inspect only the supplied image. Target appliance: microwave. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.<|im_end|>\n<|im_start|>assistant\n",
+    "mode": "single_image",
+    "load_seconds": 1.214569249888882,
+    "generation_seconds": 3.926423791097477,
+    "peak_mlx_bytes": 10857492541,
+    "prompt_tokens": 507,
+    "generation_tokens": 57,
+    "finish_reason": "stop",
+    "versions": {
+      "mlx": "0.32.2",
+      "mlx-vlm": "0.6.17",
+      "transformers": "5.16.1"
+    }
+  }
+}

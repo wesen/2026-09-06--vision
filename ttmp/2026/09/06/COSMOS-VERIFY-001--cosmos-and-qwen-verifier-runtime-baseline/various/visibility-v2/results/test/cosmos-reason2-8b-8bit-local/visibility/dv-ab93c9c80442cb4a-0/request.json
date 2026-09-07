@@ -1,0 +1,25 @@
+{
+  "episode_id": "dv-ab93c9c80442cb4a",
+  "entity_id": "dv-ab93c9c80442cb4a:object-174",
+  "entity_label": "microwave",
+  "property": "door_open",
+  "question": "Is the microwave door visibly open?",
+  "event_us": 0,
+  "allowed_start_us": 0,
+  "allowed_end_us": 1,
+  "as_of_us": 250000,
+  "frames": [
+    {
+      "id": "dv-ab93c9c80442cb4a-0",
+      "episode_id": "dv-ab93c9c80442cb4a",
+      "entity_id": "dv-ab93c9c80442cb4a:object-174",
+      "pts_us": 0,
+      "available_us": 0,
+      "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/visibility-v2/dv-ab93c9c80442cb4a-0.png",
+      "sha256": "2fed5dca82af8ff7170e2cd37c6cf611489fe6bbd2f3a5af9a6ba0bc817f1e1c"
+    }
+  ],
+  "max_output_tokens": 384,
+  "deadline_ms": 60000,
+  "request_id": "e45119392b7bacc2d0ccc40ee682171cfed48d29d8c8268025eaa2d2b9e88e4f"
+}

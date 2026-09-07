@@ -1,0 +1,53 @@
+{
+  "revision": "a3b4a1db4065fe13c4b1f4d2fb8605bad647f4b9",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-reason2/a3b4a1db4065fe13c4b1f4d2fb8605bad647f4b9/README.md",
+      "path": "README.md",
+      "local": "README.md",
+      "sha256": "0d119386e4c0d1fc144c859ad718493bfa8340b431d315722c995bc618d7cf1f",
+      "bytes": 12976
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-reason2/a3b4a1db4065fe13c4b1f4d2fb8605bad647f4b9/LICENSE",
+      "path": "LICENSE",
+      "local": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-reason2/a3b4a1db4065fe13c4b1f4d2fb8605bad647f4b9/docs/troubleshooting.md",
+      "path": "docs/troubleshooting.md",
+      "local": "troubleshooting.md",
+      "sha256": "fd9d0996bc8e0e6e7fc5cd3702ad2e2ba4d8049dc7877936477b58dc92af6602",
+      "bytes": 4579
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-reason2/a3b4a1db4065fe13c4b1f4d2fb8605bad647f4b9/docs/llmcompressor.md",
+      "path": "docs/llmcompressor.md",
+      "local": "llmcompressor.md",
+      "sha256": "7998a2357a5c0c7ce407093525bf4b8ea9ee8406935837a759a42b5a1981b0b1",
+      "bytes": 1062
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-reason2/a3b4a1db4065fe13c4b1f4d2fb8605bad647f4b9/scripts/inference_sample.py",
+      "path": "scripts/inference_sample.py",
+      "local": "inference_sample.py",
+      "sha256": "54691d25a713cb9f2d5979fb755ca85e3b6b2b8004aee014f4432ad08ca32129",
+      "bytes": 3471
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-reason2/a3b4a1db4065fe13c4b1f4d2fb8605bad647f4b9/cosmos_reason2_utils/cosmos_reason2_utils/script/inference.py",
+      "path": "cosmos_reason2_utils/cosmos_reason2_utils/script/inference.py",
+      "local": "inference.py",
+      "sha256": "fad8f8f0d9e9b021820f00ebc1f05b64074124cf3fb4af240aa4bc9c46fb0d38",
+      "bytes": 13966
+    },
+    {
+      "url": "https://huggingface.co/nvidia/Cosmos-Reason2-8B/blob/a9fae2cf89dc64db96b12860417f0eb403013bb9/README.md",
+      "local": "model-card-8b.md",
+      "sha256": "a5c4ed84901410927adf2c49bd515c095e4dcd3cfbaea0794b1a7c8f332c221f",
+      "bytes": 35105
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "phase": "development",
+    "model": "mlx-community/Qwen3-VL-8B-Instruct-8bit",
+    "variant": "direct",
+    "total": 12,
+    "correct": 5,
+    "invalid": 0,
+    "unsupported": 4,
+    "unknown_correct": 0,
+    "generation_seconds_median": 3.588312542065978,
+    "peak_mlx_bytes": 10857490756,
+    "truncated": 0
+  },
+  {
+    "phase": "development",
+    "model": "mlx-community/Qwen3-VL-8B-Instruct-8bit",
+    "variant": "visibility",
+    "total": 12,
+    "correct": 5,
+    "invalid": 0,
+    "unsupported": 4,
+    "unknown_correct": 0,
+    "generation_seconds_median": 3.902291874983348,
+    "peak_mlx_bytes": 10857492541,
+    "truncated": 0
+  },
+  {
+    "phase": "development",
+    "model": "nvidia/Cosmos-Reason2-8B",
+    "variant": "direct",
+    "total": 12,
+    "correct": 4,
+    "invalid": 0,
+    "unsupported": 4,
+    "unknown_correct": 0,
+    "generation_seconds_median": 4.066083833458833,
+    "peak_mlx_bytes": 10857490756,
+    "truncated": 0
+  },
+  {
+    "phase": "development",
+    "model": "nvidia/Cosmos-Reason2-8B",
+    "variant": "visibility",
+    "total": 12,
+    "correct": 5,
+    "invalid": 0,
+    "unsupported": 4,
+    "unknown_correct": 0,
+    "generation_seconds_median": 4.198149895528331,
+    "peak_mlx_bytes": 10857492541,
+    "truncated": 0
+  },
+  {
+    "phase": "test",
+    "model": "mlx-community/Qwen3-VL-8B-Instruct-8bit",
+    "variant": "visibility",
+    "total": 12,
+    "correct": 8,
+    "invalid": 0,
+    "unsupported": 4,
+    "unknown_correct": 0,
+    "generation_seconds_median": 3.880211958079599,
+    "peak_mlx_bytes": 10857492541,
+    "truncated": 0
+  },
+  {
+    "phase": "test",
+    "model": "nvidia/Cosmos-Reason2-8B",
+    "variant": "visibility",
+    "total": 12,
+    "correct": 7,
+    "invalid": 0,
+    "unsupported": 4,
+    "unknown_correct": 0,
+    "generation_seconds_median": 4.289134374936111,
+    "peak_mlx_bytes": 10857492541,
+    "truncated": 0
+  }
+]

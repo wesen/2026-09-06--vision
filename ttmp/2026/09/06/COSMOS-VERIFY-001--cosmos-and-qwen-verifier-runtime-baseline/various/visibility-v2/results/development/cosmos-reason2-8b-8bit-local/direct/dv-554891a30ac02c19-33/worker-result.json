@@ -1,0 +1,18 @@
+{
+  "request_id": "fd8cd370757703fc5c2ccd999b965fdbec73382342263f5425a6787b9a299e7a",
+  "raw": "```json\n{\n  \"target_identified\": true,\n  \"door_observable\": true,\n  \"answer\": \"false\",\n  \"evidence\": [\n    \"F1\"\n  ],\n  \"rationale\": \"The microwave door is closed, as it is visibly attached to the appliance and there are no signs of it being open or ajar.\"\n}\n```",
+  "prompt": "Inspect only the supplied image. Target appliance: microwave. Is its door open?\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+  "formatted_prompt": "<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|>Inspect only the supplied image. Target appliance: microwave. Is its door open?\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.<|im_end|>\n<|im_start|>assistant\n",
+  "mode": "single_image",
+  "load_seconds": 1.384676958899945,
+  "generation_seconds": 4.1599893749225885,
+  "peak_mlx_bytes": 10857490756,
+  "prompt_tokens": 402,
+  "generation_tokens": 76,
+  "finish_reason": "stop",
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx-vlm": "0.6.17",
+    "transformers": "5.16.1"
+  }
+}

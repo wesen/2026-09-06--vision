@@ -1,0 +1,47 @@
+{
+  "status": "ok",
+  "returncode": 0,
+  "elapsed_seconds": 6.885034041013569,
+  "request_id": "9b4fe45cd3fde137979ee328611099d2536a89caf4fe7e79f45997303e82b5ea",
+  "entity_id": "dv-0a0732aef26f3d73:object-308",
+  "schema_version": "visible-door-v2",
+  "mode": "single_image",
+  "prompt": "Inspect only the supplied image. Target appliance: fridge. Is its door open?\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+  "model_path": "/Users/manuel/code/wesen/2026-09-06--vision/output/models/cosmos-reason2-8b-8bit-local",
+  "completed_us": 10335035,
+  "answer": {
+    "request_id": "9b4fe45cd3fde137979ee328611099d2536a89caf4fe7e79f45997303e82b5ea",
+    "entity_id": "dv-0a0732aef26f3d73:object-308",
+    "answer": "false",
+    "evidence_ids": [
+      "dv-0a0732aef26f3d73-32"
+    ],
+    "rationale": "The red fridge has two doors, both of which are closed, as indicated by the visible handles and lack of any open door sections."
+  },
+  "visibility": {
+    "target_identified": true,
+    "door_observable": true
+  },
+  "raw": "```json\n{\n  \"target_identified\": true,\n  \"door_observable\": true,\n  \"answer\": \"false\",\n  \"evidence\": [\"F1\"],\n  \"rationale\": \"The red fridge has two doors, both of which are closed, as indicated by the visible handles and lack of any open door sections.\"\n}\n```",
+  "normalizations": [
+    "markdown_fence_wrapper"
+  ],
+  "runtime": {
+    "request_id": "9b4fe45cd3fde137979ee328611099d2536a89caf4fe7e79f45997303e82b5ea",
+    "raw": "```json\n{\n  \"target_identified\": true,\n  \"door_observable\": true,\n  \"answer\": \"false\",\n  \"evidence\": [\"F1\"],\n  \"rationale\": \"The red fridge has two doors, both of which are closed, as indicated by the visible handles and lack of any open door sections.\"\n}\n```",
+    "prompt": "Inspect only the supplied image. Target appliance: fridge. Is its door open?\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+    "formatted_prompt": "<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|>Inspect only the supplied image. Target appliance: fridge. Is its door open?\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.<|im_end|>\n<|im_start|>assistant\n",
+    "mode": "single_image",
+    "load_seconds": 1.3781443329062313,
+    "generation_seconds": 4.029247292084619,
+    "peak_mlx_bytes": 10857490756,
+    "prompt_tokens": 402,
+    "generation_tokens": 72,
+    "finish_reason": "stop",
+    "versions": {
+      "mlx": "0.32.2",
+      "mlx-vlm": "0.6.17",
+      "transformers": "5.16.1"
+    }
+  }
+}

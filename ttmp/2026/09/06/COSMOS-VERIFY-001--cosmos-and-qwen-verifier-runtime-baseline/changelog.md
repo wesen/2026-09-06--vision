@@ -28,3 +28,7 @@ Step 6: completed pinned Cosmos 8B local conversion in 8.63s and matched Qwen/Co
 ## 2026-09-06
 
 Steps 7–8: 192 reviewed verifier responses; native head rerun reproduced; sanitize-inspired fence normalization tested and separately scored. Both 8B models 16/24 test, fail all seven unknown cases; strict and normalized visual evidence retained (f075df7, e7b34b0).
+
+## 2026-09-06
+
+Steps 9–10: bounded image adapter and fresh visual cases (c6dd120); 72-call comparison, live RULES handoff, visual guide and pinned NVIDIA guidance review. Reliable abstention remains unaccepted.

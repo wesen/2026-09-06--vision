@@ -1,0 +1,25 @@
+{
+  "episode_id": "dv-0d6f76e6e85792a3",
+  "entity_id": "dv-0d6f76e6e85792a3:object-155",
+  "entity_label": "fridge",
+  "property": "door_open",
+  "question": "Is the fridge door visibly open?",
+  "event_us": 3700000,
+  "allowed_start_us": 3700000,
+  "allowed_end_us": 3700001,
+  "as_of_us": 3950000,
+  "frames": [
+    {
+      "id": "dv-0d6f76e6e85792a3-37",
+      "episode_id": "dv-0d6f76e6e85792a3",
+      "entity_id": "dv-0d6f76e6e85792a3:object-155",
+      "pts_us": 3700000,
+      "available_us": 3700000,
+      "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/visibility-v2/dv-0d6f76e6e85792a3-37.png",
+      "sha256": "a2180fbf233252f60a14d42204a52c80582ec82952c390491e2aa97161870ee8"
+    }
+  ],
+  "max_output_tokens": 384,
+  "deadline_ms": 60000,
+  "request_id": "ef5dafea0b7b755a851e2db95a4fc827837657626beb707065bd7fd93a4a90cb"
+}

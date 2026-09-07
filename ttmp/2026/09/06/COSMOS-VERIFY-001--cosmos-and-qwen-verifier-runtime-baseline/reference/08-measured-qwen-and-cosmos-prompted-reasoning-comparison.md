@@ -60,7 +60,7 @@ The development sweep has 384 calls: 24 cases × eight runs per model × two mod
 
 Test evaluates each selected arm and its direct greedy control; if the selected arm is already the control, run it once. Report exact call counts and per-case averages, seed range, episode summaries, known-state accuracy, unknown recall, unsupported certainty, execution/output failures, tokens, latency, and peak MLX allocation. Median and p95 latency include cold process/model setup; MLX allocation is not total system memory.
 
-The rationale audit is a deliberately limited diagnostic sample: the first reviewed closed test frame, first open test frame, and every unknown test frame, for every tested arm and seed. Its supported/mixed/unsupported classifications require reading the final rationale against the original image. Do not extrapolate this sample's support rate to all responses or treat agreement between rationale and answer as factual support.
+The rationale audit covers every accepted final test rationale for each tested arm and seed. Supported/mixed/unsupported classifications require reading the short rationale against the original image. Invalid outputs are counted separately because they have no accepted rationale. The full preceding explanation is retained for diagnosis, but is not scored as independent evidence. Agreement between rationale and answer is not sufficient for factual support.
 
 ## Evidence and reproduction
 
@@ -85,3 +85,9 @@ The experimental worker calls `mlx_vlm.utils.prepare_inputs` once and records th
 The pilot frame produced an image grid `[1, 30, 40]` and pixel-value shape `[1200, 1536]`, with reconstructed spatial dimensions 480×640 from the processor's patch size. The grid is a preprocessing record, not a bounding box or evidence of target visibility. A correctly forwarded image can still contain too few inspectable target pixels, as the unknown microwave case demonstrates.
 
 The runtime comparison is sequential, using a fresh isolated process for every request. Reported wall time includes process and model setup. Model families are not interleaved, so temperature/load conditions and execution order may influence timing; latency figures describe these runs rather than isolated engine performance.
+
+## User-requested missing-close recovery
+
+During development, sampled Qwen reasoning sometimes omitted its closing delimiter while still emitting final JSON. The user requested a heuristic. `recovery.parse_with_recovery` now accepts that single wrapper omission only when the expected opener is present, the preceding explanation has no competing JSON/fences, and the final line-start object or outer JSON fence passes the unchanged visibility validator. Raw text and a recovery trace are retained. Truncation, repeated/mixed tags, trailing prose, duplicate keys, and invalid citations remain failures.
+
+The running comparison retains its frozen strict path. Script 28 performs a separately labeled post-observation replay; it does not change generation records, prompts, labels, or selection. Early replay recovered 12 responses, nine with correct answers and three with unsupported known answers on unknown cases. Final counts will be updated after completion. Practical adapter integration follows frozen inference so both conditions remain interpretable.

@@ -52,3 +52,7 @@ Step 14: implemented shared bounded reasoning profiles and final extraction (460
 ## 2026-09-06
 
 Step 15: development pilots and revised Qwen delimiter passed; froze 48 RGB cases and both protocols in 5aa10eb. P3 comparison uses immutable prompts and code hashes.
+
+## 2026-09-06
+
+Step 17: user-requested missing-close heuristic (f4f801a), 18 focused tests passed; separate replay initially recovered 12 wrappers without altering final JSON or the frozen sweep.

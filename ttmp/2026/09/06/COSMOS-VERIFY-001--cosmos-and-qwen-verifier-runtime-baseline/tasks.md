@@ -74,3 +74,4 @@ Reuse shared R1–R2 before C1–C4. Freeze both model protocols before examinin
 - [x] C2: smoke the explicit Cosmos reasoning envelope and 4096-token/120-second budget using the shared adapter; freeze profiles, prompts, seeds and reviewed cases before evaluation. <!-- t:b87k -->
 - [ ] C3: run Cosmos development selection and untouched selected/control test comparison; prevent Qwen test feedback from tuning Cosmos; report uncertainty, rationale support, failures and runtime. <!-- t:tu95 -->
 - [ ] C4: retain annotated case galleries and raw outputs, run one live selected-style Cosmos RULES handoff, and publish measured report/diary with explicit semantic acceptance limits. <!-- t:l9u8 -->
+- [ ] Recover observed missing reasoning closing tag with raw trace and strict final validation; replay saved responses separately and integrate practical adapter after frozen inference completes. <!-- t:ecay -->

@@ -54,13 +54,8 @@ for phase in ['development','test']:
     draw.multiline_text((20,y+30),'\n'.join(textwrap.wrap('First-seed rationale (model claim): '+rationale,115)[:5]),font=font,fill='black',spacing=4)
     y+=160
    canvas.save(panel_dir/(cid+'.png'))
-  # A fixed, explicitly limited rationale-review set: one visible closed, one open,
-  # and every unknown test case, for every evaluated arm and seed.
-  chosen=[]
-  for label in ['false','true']:
-   chosen.append(next(c['source']['id'] for c in protocol['cases'] if c['source']['split']=='test' and c['expected']==label))
-  chosen += [c['source']['id'] for c in protocol['cases'] if c['source']['split']=='test' and c['expected']=='unknown']
-  review=[dict(case_id=x['row']['case_id'],profile_id=x['row']['profile_id'],seed=x['row']['seed'],expected=x['row']['expected'],answer=x['row']['answer'],rationale=x['result'].get('answer',{}).get('rationale'),status=x['row']['status']) for x in archive if x['row']['case_id'] in chosen]
+  # Audit every final test rationale; invalid outputs have no accepted rationale.
+  review=[dict(case_id=x['row']['case_id'],profile_id=x['row']['profile_id'],seed=x['row']['seed'],expected=x['row']['expected'],answer=x['row']['answer'],rationale=x['result'].get('answer',{}).get('rationale'),status=x['row']['status']) for x in archive]
   (dest/'rationale-review-input.json').write_text(json.dumps(review,indent=2)+'\n')
 (dest/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
 if (out/'selection.json').exists():(dest/'selection.json').write_text((out/'selection.json').read_text())

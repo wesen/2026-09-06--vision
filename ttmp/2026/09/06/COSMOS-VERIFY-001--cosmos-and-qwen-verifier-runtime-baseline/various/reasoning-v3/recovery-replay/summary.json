@@ -1,0 +1,58 @@
+{
+  "protocol_sha256": "629d7769ee9f47cf4cc0634d90e94daa3492f98b034a8b7745742953a208ace3",
+  "interpretation": "Post-observation parsing replay. Strict generation records and development selection are unchanged. Counts may be partial until the complete run is archived.",
+  "groups": [
+    {
+      "phase": "development",
+      "family": "qwen",
+      "arm": "D-G",
+      "calls": 24,
+      "strict_invalid": 0,
+      "replayed_invalid": 0,
+      "recovered": 0,
+      "strict_correct": 18,
+      "replayed_correct": 18,
+      "strict_unsupported": 6,
+      "replayed_unsupported": 6
+    },
+    {
+      "phase": "development",
+      "family": "qwen",
+      "arm": "D-S",
+      "calls": 72,
+      "strict_invalid": 0,
+      "replayed_invalid": 0,
+      "recovered": 0,
+      "strict_correct": 54,
+      "replayed_correct": 54,
+      "strict_unsupported": 18,
+      "replayed_unsupported": 18
+    },
+    {
+      "phase": "development",
+      "family": "qwen",
+      "arm": "R-G",
+      "calls": 24,
+      "strict_invalid": 0,
+      "replayed_invalid": 0,
+      "recovered": 0,
+      "strict_correct": 18,
+      "replayed_correct": 18,
+      "strict_unsupported": 6,
+      "replayed_unsupported": 6
+    },
+    {
+      "phase": "development",
+      "family": "qwen",
+      "arm": "R-S",
+      "calls": 56,
+      "strict_invalid": 12,
+      "replayed_invalid": 0,
+      "recovered": 12,
+      "strict_correct": 35,
+      "replayed_correct": 44,
+      "strict_unsupported": 9,
+      "replayed_unsupported": 12
+    }
+  ]
+}

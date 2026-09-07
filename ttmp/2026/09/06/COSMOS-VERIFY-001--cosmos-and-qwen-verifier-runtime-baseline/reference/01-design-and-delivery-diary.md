@@ -1053,3 +1053,75 @@ Started the sequential 384-call development sweep using the frozen two-model pro
 - Reporting/phase-record commit: `e7511f4`.
 - Early development diagnostic: Qwen D-G and R-G each 18/24, unknown recall 0/6, no invalid outputs.
 - No test outputs had been generated or inspected when these diagnostics were written.
+
+Before test inference, expanded the planned final-rationale audit from the initial diagnostic subset to every accepted final test response. Script 25 now exports all test rationales for explicit RGB support review; invalid outputs remain separate. No prompts, case labels, selection policy, or runtime code changed.
+
+## Step 17: Recover the observed missing reasoning close with a trace
+
+The user asked how many sampled reasoning responses had failed, then requested a heuristic for that specific omission. Added a strict-first recovery function in a new module, leaving the running frozen worker/parser path unchanged. A separate replay evaluates the heuristic on saved raw responses without regenerating or rewriting strict records.
+
+### Prompt Context
+
+**User prompt (verbatim):** "how many failed like that?"
+
+**User prompt (verbatim):** "ok i think it's worth adding a heuristic to catch that."
+
+**Assistant interpretation:** Quantify the failure and recover the observed missing closing tag when a final answer can be located without modifying its contents.
+
+**Inferred user intent:** Avoid discarding usable JSON solely because an explanation wrapper is incomplete.
+
+**Commit (code):** `f4f801a` — "Recover a missing reasoning close before a validated final JSON object".
+
+### What I did
+
+- Reported the then-current count: four missing-close failures among 31 completed Qwen sampled-reasoning responses.
+- Added `recovery.parse_with_recovery`, requiring the expected opening tag, no closing/mixed/repeated tags, nonempty explanation, and a single line-start final JSON or outer JSON fence.
+- Reject earlier braces/fences, multiple objects, trailing prose, truncated generation, invalid JSON, invalid citations, and inconsistent visibility flags.
+- Preserved raw text and recorded the missing token, final-text character offset, recovery version, and original strict failure.
+- Added 18 focused tests; all passed in 0.03 seconds.
+- Replayed saved responses separately. At the first replay checkpoint, 12/56 completed sampled-reasoning responses were recovered: nine correct labels and three unsupported known answers on unknown cases.
+
+### Why
+
+- The observed responses include usable final JSON but omit a wrapper token. Recovering that boundary does not justify changing answer contents.
+- Keeping strict and recovered records separate preserves the frozen experiment while making the requested behavior concrete.
+
+### What worked
+
+- All 12 observed missing-close failures at the checkpoint passed the unchanged final visibility contract after boundary recovery.
+- Bare/fenced JSON and whitespace offsets are tested for both model-family delimiters.
+
+### What didn't work
+
+- Recovery did not fix semantic uncertainty: three recovered answers remained wrong under the reviewed unknown labels.
+- The current runtime path cannot be changed mid-sweep without mixing parser conditions. The new helper is replayed separately now and will be wired into the practical adapter after frozen inference completes.
+
+### What I learned
+
+- Failure counts increase as the sampled sweep progresses; count reports must include the completed denominator and checkpoint.
+- Recovery can expose both correct and incorrect answers previously classified as invalid.
+
+### What was tricky to build
+
+- Avoiding ambiguous JSON extraction: the heuristic accepts the first explicit line-start candidate only when the preceding explanation contains no JSON braces or fences, and requires the entire suffix to pass strict final validation.
+- The new module is not imported by the frozen worker path. Existing protocol hashes and generation behavior remain unchanged during the sweep.
+
+### What warrants a second pair of eyes
+
+- Review the deliberately conservative rejection of earlier JSON/fences and the recorded character offset.
+- Preserve a strict replay mode when integrating the helper into the adapter after the comparison.
+
+### What should be done in the future
+
+- Replay the completed development/test artifacts, report strict and recovered counts, then enable the heuristic in practical profiled calls and smoke-test integration.
+
+### Code review instructions
+
+- Read `recovery.py` and `test_reasoning_recovery.py`; inspect script 28's separate replay output.
+- Test command: `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_reasoning_recovery.py -q`.
+
+### Technical details
+
+- Recovery trace name: `missing_reasoning_close_before_final_json`.
+- Recovery version: `missing-reasoning-close-v1`.
+- Strict worker results and development selection remain the primary frozen condition; replay results are explicitly post-observation.

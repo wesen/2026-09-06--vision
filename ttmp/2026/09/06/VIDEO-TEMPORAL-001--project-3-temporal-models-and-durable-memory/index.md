@@ -1,7 +1,7 @@
 ---
 Title: Project 3 - Temporal models and durable memory
 Ticket: VIDEO-TEMPORAL-001
-Status: active
+Status: complete
 Topics:
     - video
     - embeddings
@@ -52,8 +52,8 @@ Uploaded to `/ai/2026/09/06/VIDEO-TEMPORAL-001/VIDEO-TEMPORAL-001_Intern_Guide.p
 - [Upload receipt](various/remarkable-upload.json)
 
 
-## Active native FP32 follow-up
+## Completed native FP32 follow-up
 
 Reopened at the user's request to measure repaired native-video features before drawing conclusions from the pooled TEMPORAL results. The completed initial scope above remains historical. See [comparison design](design-doc/02-fp32-native-temporal-feature-comparison-design.md) and [follow-up diary](reference/05-fp32-native-follow-up-diary.md).
 
-Native follow-up computation is complete: 792 FP32 windows extracted in 199 seconds; ridge macro recall 24.55% and TCN seed mean 24.31%. See [measured findings](reference/06-native-fp32-temporal-benchmark-measured-findings.md) and [follow-up diary](reference/05-fp32-native-follow-up-diary.md). The remaining open item is physical printing, pending explicit external-destination approval; the local slip layouts are saved.
+Native follow-up computation is complete: 792 FP32 windows extracted in 199 seconds; ridge macro recall 24.55% and TCN seed mean 24.31%. See [measured findings](reference/06-native-fp32-temporal-benchmark-measured-findings.md) and [follow-up diary](reference/05-fp32-native-follow-up-diary.md). All five saved slips were printed after explicit approval; successful printer responses are archived in `various/native-print-receipts.json`.

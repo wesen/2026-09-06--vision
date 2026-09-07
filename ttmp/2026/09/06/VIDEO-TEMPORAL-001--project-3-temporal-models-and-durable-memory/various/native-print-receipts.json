@@ -1,0 +1,37 @@
+[
+  {
+    "layout": "native-plan.yaml",
+    "at": "2026-09-07T00:39:42.988297+00:00",
+    "returncode": 0,
+    "stdout": "[\n{\n  \"dry_run\": false,\n  \"height\": 461,\n  \"layout_member\": \"native-plan.yaml\",\n  \"ok\": true,\n  \"printed\": true,\n  \"printer_response\": {\n    \"ok\": true\n  },\n  \"rendered_at\": \"2026-09-07T00:39:41Z\",\n  \"response\": {\n    \"height\": 461,\n    \"ok\": true,\n    \"printed\": true,\n    \"printerResponse\": {\n      \"ok\": true\n    },\n    \"renderedAt\": \"2026-09-07T00:39:41Z\",\n    \"width\": 384\n  },\n  \"source_kind\": \"file\",\n  \"status_code\": 200,\n  \"url\": \"https://almanach.crib.scapegoat.dev/api/render-and-print\",\n  \"width\": 384\n}\n]\n",
+    "stderr": ""
+  },
+  {
+    "layout": "native-n1-done-n2-start.yaml",
+    "at": "2026-09-07T00:39:45.322039+00:00",
+    "returncode": 0,
+    "stdout": "[\n{\n  \"dry_run\": false,\n  \"height\": 272,\n  \"layout_member\": \"native-n1-done-n2-start.yaml\",\n  \"ok\": true,\n  \"printed\": true,\n  \"printer_response\": {\n    \"ok\": true\n  },\n  \"rendered_at\": \"2026-09-07T00:39:43Z\",\n  \"response\": {\n    \"height\": 272,\n    \"ok\": true,\n    \"printed\": true,\n    \"printerResponse\": {\n      \"ok\": true\n    },\n    \"renderedAt\": \"2026-09-07T00:39:43Z\",\n    \"width\": 384\n  },\n  \"source_kind\": \"file\",\n  \"status_code\": 200,\n  \"url\": \"https://almanach.crib.scapegoat.dev/api/render-and-print\",\n  \"width\": 384\n}\n]\n",
+    "stderr": ""
+  },
+  {
+    "layout": "native-n2-done-n3-start.yaml",
+    "at": "2026-09-07T00:39:47.726135+00:00",
+    "returncode": 0,
+    "stdout": "[\n{\n  \"dry_run\": false,\n  \"height\": 309,\n  \"layout_member\": \"native-n2-done-n3-start.yaml\",\n  \"ok\": true,\n  \"printed\": true,\n  \"printer_response\": {\n    \"ok\": true\n  },\n  \"rendered_at\": \"2026-09-07T00:39:46Z\",\n  \"response\": {\n    \"height\": 309,\n    \"ok\": true,\n    \"printed\": true,\n    \"printerResponse\": {\n      \"ok\": true\n    },\n    \"renderedAt\": \"2026-09-07T00:39:46Z\",\n    \"width\": 384\n  },\n  \"source_kind\": \"file\",\n  \"status_code\": 200,\n  \"url\": \"https://almanach.crib.scapegoat.dev/api/render-and-print\",\n  \"width\": 384\n}\n]\n",
+    "stderr": ""
+  },
+  {
+    "layout": "native-n3-done-n4-start.yaml",
+    "at": "2026-09-07T00:39:50.416826+00:00",
+    "returncode": 0,
+    "stdout": "[\n{\n  \"dry_run\": false,\n  \"height\": 402,\n  \"layout_member\": \"native-n3-done-n4-start.yaml\",\n  \"ok\": true,\n  \"printed\": true,\n  \"printer_response\": {\n    \"ok\": true\n  },\n  \"rendered_at\": \"2026-09-07T00:39:48Z\",\n  \"response\": {\n    \"height\": 402,\n    \"ok\": true,\n    \"printed\": true,\n    \"printerResponse\": {\n      \"ok\": true\n    },\n    \"renderedAt\": \"2026-09-07T00:39:48Z\",\n    \"width\": 384\n  },\n  \"source_kind\": \"file\",\n  \"status_code\": 200,\n  \"url\": \"https://almanach.crib.scapegoat.dev/api/render-and-print\",\n  \"width\": 384\n}\n]\n",
+    "stderr": ""
+  },
+  {
+    "layout": "native-n4-done.yaml",
+    "at": "2026-09-07T00:39:53.051696+00:00",
+    "returncode": 0,
+    "stdout": "[\n{\n  \"dry_run\": false,\n  \"height\": 388,\n  \"layout_member\": \"native-n4-done.yaml\",\n  \"ok\": true,\n  \"printed\": true,\n  \"printer_response\": {\n    \"ok\": true\n  },\n  \"rendered_at\": \"2026-09-07T00:39:51Z\",\n  \"response\": {\n    \"height\": 388,\n    \"ok\": true,\n    \"printed\": true,\n    \"printerResponse\": {\n      \"ok\": true\n    },\n    \"renderedAt\": \"2026-09-07T00:39:51Z\",\n    \"width\": 384\n  },\n  \"source_kind\": \"file\",\n  \"status_code\": 200,\n  \"url\": \"https://almanach.crib.scapegoat.dev/api/render-and-print\",\n  \"width\": 384\n}\n]\n",
+    "stderr": ""
+  }
+]

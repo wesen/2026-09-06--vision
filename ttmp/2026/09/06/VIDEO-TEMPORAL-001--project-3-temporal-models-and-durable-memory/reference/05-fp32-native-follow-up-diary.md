@@ -212,3 +212,47 @@ The report explains the precision/preprocessing confound, weak labels, class imb
 - Native TCN seed macro recalls: 0.1739759, 0.2721938, 0.2831727; mean 0.2431141, standard deviation 0.0490931.
 - Ridge paired outcomes: 230 both correct, 24 native corrected, 4 native worsened, 50 both wrong.
 - Six native training loops total 9.027 seconds; extraction took 199.086 seconds. These measure separate operations, not complete end-to-end project duration.
+
+## Step 4: Print approved slips and close the follow-up
+
+The user explicitly approved printing after the destination blocker was explained. All five saved plan and phase slips received successful printed responses from Almanach and the printer. The final slip now points to the implementer handoff.
+
+### Prompt Context
+
+**User prompt (verbatim):** "print. also, give me a paragraph or two to give to our main implementer about the work you did."
+
+**Assistant interpretation:** Print the queued slips and provide a concise implementation handoff.
+
+**Inferred user intent:** Complete the physical record and transfer the experimental findings to ongoing work.
+
+### What I did
+- Printed the plan, three phase-transition slips, and final completion slip sequentially.
+- Archived five responses in `various/native-print-receipts.json` and closed the remaining task.
+
+### Why
+- Explicit approval resolved the earlier external-destination blocker.
+
+### What worked
+- Every response reported `printed: true`, HTTP 200, and printer `ok: true`.
+
+### What didn't work
+- N/A; no print retries were necessary.
+
+### What I learned
+- The saved layouts could be printed directly after approval without repeating experimental work.
+
+### What was tricky to build
+- The completion layout contained the stale printing-blocker text; regenerated it through the skill script before printing.
+
+### What warrants a second pair of eyes
+- N/A.
+
+### What should be done in the future
+- Use the measured results and preserved feature-space boundaries in subsequent implementation.
+
+### Code review instructions
+- Inspect the five archived print responses and the completed task list.
+
+### Technical details
+- Destination: `https://almanach.crib.scapegoat.dev/api/render-and-print`.
+- Experiment commits: `176a300`, `8e59d45`, `209cea4`; no experiment code changed in this printing step.

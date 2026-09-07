@@ -123,4 +123,4 @@ On this Mac, native inference required GPU access beyond the sandbox because the
 - `output/temporal-native-fp32-v1/`: full feature archive, ridge weights, and six TCN checkpoints, kept outside tracked ticket evidence.
 - `05-fp32-native-follow-up-diary.md`: implementation sequence, failures, commits, and printing status.
 
-Physical printing remains pending explicit approval to send the task metadata to the Almanach destination. Local plan and phase layouts are saved; no physical receipt is claimed.
+After explicit approval, all five plan and phase slips were printed successfully through Almanach. Printer responses are archived in `../various/native-print-receipts.json`.

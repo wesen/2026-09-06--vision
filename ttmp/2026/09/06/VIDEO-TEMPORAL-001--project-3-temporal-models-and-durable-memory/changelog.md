@@ -52,3 +52,7 @@ Native follow-up N1: designed matched FP32 experiment and passed eight-window pi
 ## 2026-09-06
 
 Native N2/N3/N4: 792 FP32 windows extracted in 199.09s; encoder/comparison commit 8e59d45. Ridge macro 24.55%, TCN mean 24.31%; paired artifacts and causal smoke passed. Findings and figure archived; only physical printing remains pending explicit Almanach approval.
+
+## 2026-09-06
+
+Printed all five native FP32 plan/phase slips after explicit user approval; archived successful printer responses and completed the follow-up.

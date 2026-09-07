@@ -45,4 +45,4 @@ The measured comparisons and observation memory are complete. See `reference/04-
 - [x] N2: Extract and source-audit all 792 matched native FP32 windows without changing pooled artifacts.
 - [x] N3: Train fresh ridge and TCN heads under the existing development-selection policy; save matched per-class/paired comparisons.
 - [x] N4: Publish measured native-versus-pooled findings, figure, diary, commits, and local phase-slip layouts; record the printing blocker.
-- [ ] Print saved native follow-up slips after explicit approval to send task metadata to the Almanach destination (automatic approval review rejected the original request).
+- [x] Print saved native follow-up slips after explicit Almanach approval; all five printer responses successful, archived in various/native-print-receipts.json.

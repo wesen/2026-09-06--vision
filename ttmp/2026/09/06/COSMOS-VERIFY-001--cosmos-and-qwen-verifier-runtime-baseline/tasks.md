@@ -53,3 +53,6 @@ These point-state comparisons do not complete multi-image/native-video, temporal
 - [ ] Follow-up: compare direct versus explicit NVIDIA reasoning configuration on development; freeze prompt, final-answer parser, sampling controls, larger budget and deadline before fresh test evaluation. <!-- t:ln02 -->
 
 Accepted V2–V4 checkmarks above cover the bounded single-image contract and reviewed point-state comparison only. Multi-image/native-video support, full rationale-support scoring, reliable abstention, and end-to-end rule recall remain open. See references 05 and 06.
+- [ ] Qwen follow-up: compare explicit published Instruct decoding against the frozen greedy baseline on development; record sampler defaults, seed, penalty scope and processed image dimensions. <!-- t:9y1n -->
+- [ ] Qwen follow-up: pin and smoke-test a separate 8B Thinking checkpoint/conversion; freeze its template, final-answer contract, budget and deadline before a fresh reviewed test comparison. <!-- t:fk2c -->
+- [ ] Later: evaluate approved full-frame plus target crop for small visible objects, preserving crop transforms and aliases; keep occluded cases unknown and multi-image capability explicitly gated. <!-- t:ovsi -->

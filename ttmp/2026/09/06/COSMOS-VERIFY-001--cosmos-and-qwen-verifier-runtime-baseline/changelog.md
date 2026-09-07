@@ -32,3 +32,7 @@ Steps 7–8: 192 reviewed verifier responses; native head rerun reproduced; sani
 ## 2026-09-06
 
 Steps 9–10: bounded image adapter and fresh visual cases (c6dd120); 72-call comparison, live RULES handoff, visual guide and pinned NVIDIA guidance review. Reliable abstention remains unaccepted.
+
+## 2026-09-06
+
+Step 11: archived 16 Qwen primary sources, reviewed Instruct versus Thinking and actual MLX defaults, documented preprocessing and bounded follow-up experiments in reference 07.

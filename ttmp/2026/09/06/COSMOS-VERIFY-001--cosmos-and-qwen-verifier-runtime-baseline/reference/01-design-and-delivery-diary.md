@@ -664,3 +664,70 @@ Expanded the requested warehouse review into the official model card, prompting 
 - Official 8B model-card revision: `a9fae2cf89dc64db96b12860417f0eb403013bb9` (source manifest carries the full authoritative checkpoint revision).
 
 Completed reports, raw evidence, source archive, and bookkeeping in `ccfce45`. Ticket doctor and diff whitespace checks passed. Meaningful completion slip printed successfully (HTTP 200) at `2026-09-07T02:03:08Z`; receipt and generated layout are archived in `various/visibility-done*`.
+
+## Step 11: Review Qwen guidance against the installed verifier runtime
+
+Reviewed Qwen3-VL documentation with the same source-preserving method used for Cosmos. The key result is that our current Qwen Instruct checkpoint and a Qwen Thinking checkpoint are different candidates. A future experiment must separate checkpoint changes from decoding changes, while preserving the existing visibility comparison.
+
+### Prompt Context
+
+**User prompt (verbatim):** "Now do the same research with qwen potentially too."
+
+**Assistant interpretation:** Review authoritative Qwen guidance, compare it with our implementation, and archive relevant material and actionable findings in this ticket.
+
+**Inferred user intent:** Identify model-specific improvements and avoid treating Cosmos conventions as universal.
+
+### What I did
+
+- Archived 16 original source files with immutable revisions and SHA-256 hashes, including four notebooks and Instruct/Thinking model metadata.
+- Generated readable notebook cell extracts without executing notebook code; original notebooks preserve upstream visual examples.
+- Inspected installed MLX generation defaults and penalty interfaces directly from source, without loading models.
+- Wrote reference 07 and added follow-up tasks for explicit Instruct decoding, a separate Thinking checkpoint, and a later bounded crop experiment.
+
+### Why
+
+- Our frozen temperature-zero JSON run does not reproduce Qwen's published stochastic evaluation recipe.
+- The model's saved generation configuration and an inference library's Python defaults need not agree.
+
+### What worked
+
+- Script 20 verified all 16 archived source hashes and captured five local source/config identities.
+- The official repository documents separate Instruct and Thinking checkpoints and reproduction settings.
+- Local inspection established MLX top-p 1.0 and top-k 0 defaults; the worker explicitly chooses temperature zero.
+
+### What didn't work
+
+- The initial guessed single-file runtime path failed with `zsh:1: no matches found: workbench/verify-env/.venv/lib/python*/site-packages/mlx_vlm/generate.py`. Used `rg --files --hidden --no-ignore` to locate the installed generation package instead.
+- Thinking checkpoint metadata specifies temperature 1.0 while the repository evaluation recipe specifies 0.6. Recorded both rather than presenting a single universal default.
+- Some evaluation and notebook examples retain older model names or preprocessing assumptions. They cannot all be copied unchanged into our Qwen3 MLX path.
+
+### What I learned
+
+- Qwen Thinking is a separate checkpoint experiment, not simply a Cosmos-style prompt change.
+- A crop can improve access to small visible detail but cannot resolve complete occlusion.
+- Penalty context scope is another runtime setting to check before claiming inference parity.
+
+### What was tricky to build
+
+- Guidance comes from several layers: model files, repository reproduction settings, utility APIs, and installed runtime code. Kept each claim attached to its source and recorded differences explicitly.
+- Notebook originals contain visual output and can be large. Preserved the requested relevant originals, while cell extracts make the code review practical without executing downloads or exposing external API keys.
+
+### What warrants a second pair of eyes
+
+- Inspect Thinking template/final-answer behavior and quantization provenance when choosing the actual candidate.
+- Check processed tensor resolution and penalty semantics before assuming that named parameter equality establishes parity.
+
+### What should be done in the future
+
+- Follow the ordered experiments in reference 07; use a fresh reviewed test population because the existing test outcomes have already been inspected.
+
+### Code review instructions
+
+- Start with reference 07 and `sources/qwen3-vl/provenance.json`; compare the archived generation configurations against installed-source excerpts in `local-runtime-audit.json`.
+- Run script 20 for source-hash verification. No model tests were rerun because this step changes research artifacts and tasks only.
+
+### Technical details
+
+- Qwen repository revision: `96588727e44c78b25ba03ea03b8e12f7e64fd0da`.
+- Existing MLX Instruct conversion revision: `a0093b9b5fda6f76ddd4a462c6830ae7c4fe47ec`.
+- Archives: scripts 19–20; official model revisions are recorded in each provenance URL.

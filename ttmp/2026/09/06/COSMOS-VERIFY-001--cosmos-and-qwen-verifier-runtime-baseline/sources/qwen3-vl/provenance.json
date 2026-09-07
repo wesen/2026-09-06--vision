@@ -1,0 +1,101 @@
+{
+  "repository_revision": "96588727e44c78b25ba03ea03b8e12f7e64fd0da",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/96588727e44c78b25ba03ea03b8e12f7e64fd0da/README.md",
+      "local": "README.md",
+      "sha256": "fc21106258c51e0b91a652eef12f5925becb146ea8b8c79a4251ac2e89a2f1ac",
+      "bytes": 52828
+    },
+    {
+      "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/96588727e44c78b25ba03ea03b8e12f7e64fd0da/LICENSE",
+      "local": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/96588727e44c78b25ba03ea03b8e12f7e64fd0da/qwen-vl-utils/README.md",
+      "local": "qwen-vl-utils/README.md",
+      "sha256": "478102eafefed5956b9a0eb182f477699fe893c2fb074a594c82ca5420788513",
+      "bytes": 8140
+    },
+    {
+      "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/96588727e44c78b25ba03ea03b8e12f7e64fd0da/qwen-vl-utils/src/qwen_vl_utils/vision_process.py",
+      "local": "qwen-vl-utils/src/qwen_vl_utils/vision_process.py",
+      "sha256": "46c056f52f8acd2597a46377868f0bf7436dd893ee2ca53cc3c4cb59ebae7bf0",
+      "bytes": 21073
+    },
+    {
+      "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/96588727e44c78b25ba03ea03b8e12f7e64fd0da/cookbooks/video_understanding.ipynb",
+      "local": "cookbooks/video_understanding.ipynb",
+      "sha256": "14cb4e9a37d10e64437d5d9291aceecf1034c026b7c8344ff539a27ea815913d",
+      "bytes": 3022148
+    },
+    {
+      "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/96588727e44c78b25ba03ea03b8e12f7e64fd0da/cookbooks/2d_grounding.ipynb",
+      "local": "cookbooks/2d_grounding.ipynb",
+      "sha256": "24a39b56467c16aea1062e40157c00800e8f53266714e8270ca3238064fd9898",
+      "bytes": 8691442
+    },
+    {
+      "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/96588727e44c78b25ba03ea03b8e12f7e64fd0da/cookbooks/spatial_understanding.ipynb",
+      "local": "cookbooks/spatial_understanding.ipynb",
+      "sha256": "1b5e077b457a743e917ce76f721baad8b9b127c15a49198e26f2faeb742ce22c",
+      "bytes": 2862243
+    },
+    {
+      "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/96588727e44c78b25ba03ea03b8e12f7e64fd0da/cookbooks/think_with_images.ipynb",
+      "local": "cookbooks/think_with_images.ipynb",
+      "sha256": "9e4a3c2d40266ec8cef8b8b77e2ddf351655555ebbb6ae4e32080db5e1c9ad01",
+      "bytes": 2574737
+    },
+    {
+      "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/96588727e44c78b25ba03ea03b8e12f7e64fd0da/evaluation/VideoMME/README.md",
+      "local": "evaluation/VideoMME/README.md",
+      "sha256": "3502e55ab43ca5667cc47ec7c5d8337d7d28c267fdb259b42e3096030d7437b7",
+      "bytes": 14581
+    },
+    {
+      "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/96588727e44c78b25ba03ea03b8e12f7e64fd0da/evaluation/RealWorldQA/README.md",
+      "local": "evaluation/RealWorldQA/README.md",
+      "sha256": "7e1a5fda9a9dd0d23a2c50adb8f6534e64c8752646f836b5a1d3004ca9f2d906",
+      "bytes": 10325
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/README.md",
+      "local": "Qwen--Qwen3-VL-8B-Instruct/README.md",
+      "sha256": "6d5d06e0c3f069097002445d30dce9ee107db3afaf15563f09e6df49b8dcb4d7",
+      "bytes": 7133
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/generation_config.json",
+      "local": "Qwen--Qwen3-VL-8B-Instruct/generation_config.json",
+      "sha256": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44",
+      "bytes": 269
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-8B-Thinking/resolve/92f3c4b4feadd3a016ef468d103bb5f58b2a2c6b/README.md",
+      "local": "Qwen--Qwen3-VL-8B-Thinking/README.md",
+      "sha256": "1422c370346c2d6a1f382db769c6d600995ceead1c064f88220f9f9e7bb39cb6",
+      "bytes": 7201
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-8B-Thinking/resolve/92f3c4b4feadd3a016ef468d103bb5f58b2a2c6b/generation_config.json",
+      "local": "Qwen--Qwen3-VL-8B-Thinking/generation_config.json",
+      "sha256": "fe72e86576da6dc6886b1083d9216296dcfa085e7a86feb3c8888a1faa52e656",
+      "bytes": 270
+    },
+    {
+      "url": "https://huggingface.co/mlx-community/Qwen3-VL-8B-Instruct-8bit/resolve/a0093b9b5fda6f76ddd4a462c6830ae7c4fe47ec/README.md",
+      "local": "mlx-community--Qwen3-VL-8B-Instruct-8bit/README.md",
+      "sha256": "64dbd587196e94e051444427d926384aa18846abd33abea5a89a83610aa0f678",
+      "bytes": 572
+    },
+    {
+      "url": "https://huggingface.co/mlx-community/Qwen3-VL-8B-Instruct-8bit/resolve/a0093b9b5fda6f76ddd4a462c6830ae7c4fe47ec/generation_config.json",
+      "local": "mlx-community--Qwen3-VL-8B-Instruct-8bit/generation_config.json",
+      "sha256": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44",
+      "bytes": 269
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+[
+  {
+    "path": "/Users/manuel/code/wesen/2026-09-06--vision/workbench/verify-env/.venv/lib/python3.11/site-packages/mlx_vlm/generate/common.py",
+    "sha256": "1c57677888874a6309579aa6e365ae87210127afcf2ffa6c40e273941a1857b1",
+    "excerpts": [
+      {
+        "line": 20,
+        "text": "DEFAULT_TEMPERATURE = 0.0"
+      },
+      {
+        "line": 21,
+        "text": "DEFAULT_TOP_P = 1.0"
+      },
+      {
+        "line": 22,
+        "text": "DEFAULT_TOP_K = 0"
+      }
+    ]
+  },
+  {
+    "path": "/Users/manuel/code/wesen/2026-09-06--vision/workbench/verify-env/.venv/lib/python3.11/site-packages/mlx_vlm/generate/ar.py",
+    "sha256": "7076aedecab82c42cdaf520f6e1e02466ccf0f22c99af82d9ce4a414f4bd9fab",
+    "excerpts": [
+      {
+        "line": 22,
+        "text": "from ..sample_utils import make_logits_processors, make_sampler, top_p_sampling"
+      },
+      {
+        "line": 42,
+        "text": "    DEFAULT_TEMPERATURE,"
+      },
+      {
+        "line": 43,
+        "text": "    DEFAULT_TOP_K,"
+      },
+      {
+        "line": 44,
+        "text": "    DEFAULT_TOP_P,"
+      },
+      {
+        "line": 54,
+        "text": "DEFAULT_TOP_N_SIGMA = 0.0"
+      },
+      {
+        "line": 91,
+        "text": "    def __init__(self, *, temperature: float, top_p: float, seed: int):"
+      },
+      {
+        "line": 93,
+        "text": "        self.top_p = float(top_p)"
+      },
+      {
+        "line": 97,
+        "text": "        if self.top_p > 0 and self.top_p < 1.0:"
+      },
+      {
+        "line": 98,
+        "text": "            return top_p_sampling(logprobs, self.top_p, self.temperature)"
+      },
+      {
+        "line": 111,
+        "text": "        if self.top_p > 0 and self.top_p < 1.0:"
+      },
+      {
+        "line": 112,
+        "text": "            return mx.vmap(self._sample_top_p_one, in_axes=(0, 0))(logprobs, keys)"
+      },
+      {
+        "line": 128,
+        "text": "    def _sample_top_p_one(self, logprobs: mx.array, key: mx.array) -> mx.array:"
+      },
+      {
+        "line": 135,
+        "text": "        top_probs = mx.where("
+      },
+      {
+        "line": 136,
+        "text": "            cumulative_probs > 1 - self.top_p,"
+      },
+      {
+        "line": 140,
+        "text": "        sampled_pos = mx.random.categorical(mx.log(top_probs), key=key)"
+      },
+      {
+        "line": 168,
+        "text": "    temperature: float = DEFAULT_TEMPERATURE,"
+      },
+      {
+        "line": 171,
+        "text": "    presence_penalty: Optional[float] = None,"
+      },
+      {
+        "line": 172,
+        "text": "    presence_context_size: Optional[int] = DEFAULT_REPETITION_CONTEXT_SIZE,"
+      },
+      {
+        "line": 175,
+        "text": "    top_p: float = DEFAULT_TOP_P,"
+      },
+      {
+        "line": 177,
+        "text": "    top_k: int = DEFAULT_TOP_K,"
+      },
+      {
+        "line": 178,
+        "text": "    top_n_sigma: float = DEFAULT_TOP_N_SIGMA,"
+      },
+      {
+        "line": 218,
+        "text": "        presence_penalty (float, optional): Additive penalty for tokens that"
+      },
+      {
+        "line": 220,
+        "text": "        presence_context_size (int, optional): The number of tokens to"
+      },
+      {
+        "line": 226,
+        "text": "        top_p (float, optional): Nucleus sampling, higher means model considers"
+      },
+      {
+        "line": 230,
+        "text": "        top_k (int, optional): Restrict sampling to the top-k tokens."
+      },
+      {
+        "line": 279,
+        "text": "            and top_k == DEFAULT_TOP_K"
+      },
+      {
+        "line": 280,
+        "text": "            and top_n_sigma == DEFAULT_TOP_N_SIGMA"
+      },
+      {
+        "line": 285,
+        "text": "                temperature=temperature,"
+      },
+      {
+        "line": 286,
+        "text": "                top_p=top_p,"
+      },
+      {
+        "line": 292,
+        "text": "                top_p=top_p,"
+      },
+      {
+        "line": 294,
+        "text": "                top_k=top_k,"
+      },
+      {
+        "line": 306,
+        "text": "        presence_penalty,"
+      },
+      {
+        "line": 307,
+        "text": "        presence_context_size,"
+      },
+      {
+        "line": 499,
+        "text": "            max_tokens=max_tokens,"
+      },
+      {
+        "line": 1520,
+        "text": "            max_tokens=max(self.max_tokens) if self.max_tokens else 0,"
+      },
+      {
+        "line": 2028,
+        "text": "                max_tokens=list(self.max_tokens),"
+      },
+      {
+        "line": 2047,
+        "text": "                max_tokens=list(self.max_tokens),"
+      },
+      {
+        "line": 2530,
+        "text": "            max_tokens=max_tokens_list,"
+      },
+      {
+        "line": 2843,
+        "text": "                max_tokens=max_tokens_list,"
+      }
+    ]
+  },
+  {
+    "path": "/Users/manuel/code/wesen/2026-09-06--vision/workbench/verify-env/.venv/lib/python3.11/site-packages/mlx_vlm/sample_utils.py",
+    "sha256": "b3057b6dcaefe5b0a7c50cb96b70baad4334a2f88f70adc04fe7ec2060f7851c",
+    "excerpts": [
+      {
+        "line": 12,
+        "text": "    top_p: float = 0.0,"
+      },
+      {
+        "line": 15,
+        "text": "    top_k: int = 0,"
+      },
+      {
+        "line": 29,
+        "text": "        top_p (float, optional): Nucleus sampling, higher means model considers"
+      },
+      {
+        "line": 35,
+        "text": "        top_k (int, optional): The top k tokens ranked by probability to constrain"
+      },
+      {
+        "line": 73,
+        "text": "    if top_p > 0 and top_p < 1.0:"
+      },
+      {
+        "line": 74,
+        "text": "        sampling_methods.append(lambda x: apply_top_p(x, top_p))"
+      },
+      {
+        "line": 81,
+        "text": "    if top_k > 0:"
+      },
+      {
+        "line": 82,
+        "text": "        sampling_methods.append(lambda x: apply_top_k(x, top_k))"
+      },
+      {
+        "line": 96,
+        "text": "    presence_penalty: Optional[float] = None,"
+      },
+      {
+        "line": 97,
+        "text": "    presence_context_size: Optional[int] = 20,"
+      },
+      {
+        "line": 109,
+        "text": "        presence_penalty (float, optional): An additive penalty to reduce"
+      },
+      {
+        "line": 111,
+        "text": "        presence_context_size (int, optional): The number of tokens to consider"
+      },
+      {
+        "line": 138,
+        "text": "        (make_presence_penalty, presence_penalty, presence_context_size),"
+      },
+      {
+        "line": 149,
+        "text": "def apply_top_k("
+      },
+      {
+        "line": 151,
+        "text": "    top_k: int,"
+      },
+      {
+        "line": 158,
+        "text": "        top_k (int): Top k tokens to sample from."
+      },
+      {
+        "line": 161,
+        "text": "    if not isinstance(top_k, int) or not (0 < top_k < vocab_size):"
+      },
+      {
+        "line": 163,
+        "text": "            f\"`top_k` has to be an integer in the (0, {vocab_size}] interval,\""
+      },
+      {
+        "line": 164,
+        "text": "            f\" but is {top_k}.\""
+      },
+      {
+        "line": 166,
+        "text": "    return _apply_top_k(logprobs, top_k)"
+      },
+      {
+        "line": 170,
+        "text": "def _apply_top_k(logprobs: mx.array, top_k: int) -> mx.array:"
+      },
+      {
+        "line": 171,
+        "text": "    mask_idx = mx.argpartition(-logprobs, kth=top_k - 1, axis=-1)[..., top_k:]"
+      },
+      {
+        "line": 249,
+        "text": "            0.01-0.2 range, comparably selective as setting `top_p` in the"
+      },
+      {
+        "line": 290,
+        "text": "def apply_top_p(logprobs: mx.array, top_p: float) -> mx.array:"
+      },
+      {
+        "line": 296,
+        "text": "        top_p: The cumulative probability threshold for top-p filtering."
+      },
+      {
+        "line": 315,
+        "text": "        cumulative_probs > 1 - top_p,"
+      },
+      {
+        "line": 423,
+        "text": "def make_presence_penalty(penalty: float, context_size: int = 20):"
+      },
+      {
+        "line": 440,
+        "text": "    def presence_penalty_processor(tokens, logits):"
+      },
+      {
+        "line": 446,
+        "text": "    return presence_penalty_processor"
+      },
+      {
+        "line": 478,
+        "text": "def top_p_sampling(logits: mx.array, top_p: float, temperature: float) -> mx.array:"
+      },
+      {
+        "line": 486,
+        "text": "        top_p: The cumulative probability threshold for top-p filtering."
+      },
+      {
+        "line": 506,
+        "text": "    top_probs = mx.where("
+      },
+      {
+        "line": 507,
+        "text": "        cumulative_probs > 1 - top_p,"
+      },
+      {
+        "line": 512,
+        "text": "    sampled_pos = mx.random.categorical(mx.log(top_probs))"
+      }
+    ]
+  },
+  {
+    "path": "/Users/manuel/code/wesen/2026-09-06--vision/workbench/src/video_workbench/verifiers/worker.py",
+    "sha256": "df143ec50bedc8c7c7302b010aea4949c84b1322b53a902cc446ac6613c8238e",
+    "excerpts": [
+      {
+        "line": 19,
+        "text": "    generated=generate(model,processor,formatted,image=[request['frames'][0]['path']],max_tokens=request['max_output_tokens'],temperature=0.0,verbose=False)"
+      }
+    ]
+  },
+  {
+    "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/models/qwen3-vl-instruct-8b-8bit/generation_config.json",
+    "sha256": "8469742d1fce0de951c8909b26a2c0c0d8490837ce476efb114da9e0cefc4d44",
+    "excerpts": [
+      {
+        "line": 9,
+        "text": "    \"top_k\": 20,"
+      },
+      {
+        "line": 10,
+        "text": "    \"top_p\": 0.8,"
+      }
+    ]
+  }
+]

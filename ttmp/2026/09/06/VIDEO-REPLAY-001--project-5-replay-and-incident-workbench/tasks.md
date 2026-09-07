@@ -10,13 +10,13 @@
 
 ## P3 Clock, broker, scheduler, and persistence
 
-- [ ] Implement monotonic source/run mapping, cycles, and dependency availability enforcement.
-- [ ] Broker only released bounded evidence; never pass complete source-video paths to workers.
-- [ ] Bound admitted jobs and input bytes including running work; implement mandatory priority and optional eviction.
-- [ ] Enforce queue-inclusive deadlines, isolated worker timeout/reaping, cancellation, and bounded output loading.
-- [ ] Emit durable explicit gaps and reset departure prefix state across missing frame coverage.
-- [ ] Persist immutable case/condition records with stable identity and bounded as-of cursor queries.
-- [ ] Smoke-test causal clocks, future dependencies, queue policy, worker failure, and persistence at feature completion.
+- [x] Implement monotonic source/run mapping, cycles, and dependency availability enforcement.
+- [x] Broker only released bounded evidence; never pass complete source-video paths to workers.
+- [x] Bound admitted jobs and input bytes including running work; implement mandatory priority and optional eviction.
+- [x] Enforce queue-inclusive deadlines, isolated worker timeout/reaping, cancellation, and bounded output loading.
+- [x] Emit durable explicit gaps and reset departure prefix state across missing frame coverage.
+- [x] Persist immutable case/condition records with stable identity and bounded as-of cursor queries.
+- [x] Smoke-test causal clocks, future dependencies, queue policy, worker failure, and persistence at feature completion.
 
 ## P4 Integration, viewer, and measurement
 

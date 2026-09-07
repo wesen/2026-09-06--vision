@@ -288,3 +288,57 @@ Read `replay/scheduler.py` admission, poll, and cancel paths, then the broker ho
 
 ### Technical details
 Default admission bounds are sixteen jobs and sixteen MiB, including running work. Worker results are capped at one MiB. One process group runs at a time; stdout/stderr are discarded and structured output is read from the bounded result file. The engine will attach explicit failed/timeout records rather than treating absent output as a negative model answer.
+
+## Step 6: Connect the measured workload and observe real queue loss
+
+Connected full recorded YOLO traces, sampled observations, departure rules, and the accepted verifier contract to the new scheduler. A normal-speed recorded run completed over an actual open-microwave episode. It correctly produced a separate VIOLATION after the recorded Qwen service delay, while the nonpreemptive verifier caused visible perception drops and queue expiry.
+
+The result establishes why the queue needs explicit coverage records: one long optional call can block mandatory frames already arriving, even though queued mandatory work has priority once the worker becomes free.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 4)
+
+**Assistant interpretation:** Verify connected replay behavior and retain evidence before building the viewer.
+
+**Inferred user intent:** Inspect actual delayed decisions and understand bounded overload behavior.
+
+**Commit (code):** `1deb161` — bounded replay clock, broker, scheduler, and immutable history primitives.
+
+### What I did
+- Added `replay/engine.py` and module CLI with recorded/live-verifier modes, bounded options, and a fixed operator registry.
+- Added source/trace integrity checks, exact-time sampled-state import, stable case IDs, separate baseline/verifier records, and retained approved images.
+- Reset the departure prefix across missing frame indices or cycle boundaries.
+- Reparsed recorded model text against the newly bound approved request after checking identical image bytes and profile identity.
+- Ran the connected recorded episode `ep-c1c313b64f579794` at speed 1.
+- Expanded feature smoke to twelve passing checks, including dropped-frame prefix reset and bounded option validation.
+
+### Why
+The primitive scheduler cannot demonstrate correct rule integration by itself. Real trace execution checks the available evidence, rule timing, request boundary, and commitment history together.
+
+### What worked
+- Run `replay-5e4499f558614b62` completed in 17.29 wall seconds for 13.7 source seconds.
+- One camera candidate, one UNKNOWN baseline, and one separate recorded-Qwen VIOLATION were committed.
+- 97/137 perception frames completed; ten were dropped and thirty expired. Every loss has an explicit gap record.
+- Queue high water was exactly sixteen jobs, including the running verifier, and 1,236,979 admitted bytes under the sixteen-MiB bound.
+- No frame was passed to a verifier before its source availability; recorded model output required exact approved image hash equality.
+
+### What didn't work
+The first CLI attempt failed during memory sampling with `PermissionError: [Errno 1] Operation not permitted (originated from sysctl() malloc 1/3)` when psutil enumerated all process children. Replaced global process enumeration with sampling only the known scheduler worker PID and renamed the metric to host-and-worker RSS. The subsequent run completed successfully. The failed construction directory remains as diagnostic evidence and is not counted as a completed run.
+
+### What I learned
+Priority among queued jobs cannot preempt a running model call. The current policy preserves memory bounds and explicitly loses coverage during that call. It does not establish sustainable full-frame real-time processing with one shared worker.
+
+### What was tricky to build
+The recorded result uses old host-bound request IDs, so copying its parsed answer would be invalid. The engine verifies identical image bytes and profile identity, then reuses only the original raw model response and parses it under the new request. Live mode additionally requires the worker's new request ID to match exactly.
+
+### What warrants a second pair of eyes
+The normal run demonstrates queue loss, not complete source coverage. Recorded service replay does not execute YOLO anew. Live verifier execution is being validated separately. Deadline statistics currently include terminal dropped/expired work as well as completed work; the report must state this or group them by outcome.
+
+### What should be done in the future
+Build the API and viewer, inspect the missed-fridge/detected-microwave cases and gap timeline, complete a fresh live verifier run and a separate repeated capacity experiment, then publish measured results and screenshots.
+
+### Code review instructions
+Read engine source release, candidate packet construction, and completion handling. Inspect the saved replay SQLite rows and summary under `output/replay-workbench/replay-5e4499f558614b62/`. Run the twelve focused tests after changing engine boundary behavior.
+
+### Technical details
+CLI: `PYTHONPATH=workbench/src workbench/.venv/bin/python -m video_workbench.replay run ep-c1c313b64f579794 --speed 1 --max-jobs 16`. The live mode invokes the existing accepted worker's `run` function in the scheduler-owned process group, so its deadline covers loading and inference directly.

@@ -119,3 +119,22 @@ def test_store_asof_pagination_and_immutable_identity(tmp_path):
     s.close();reader=ReplayStore(path,readonly=True)
     assert len(reader.events(as_of_us=400)['events'])==2
     reader.close()
+
+
+def test_missing_frame_resets_departure_prefix():
+    from video_workbench.replay.engine import DepartureStream
+    stream=DepartureStream('a')
+    def observe(i,score,cycle=0):return stream.observe({'frame_index':i,'pts_us':i*100000},str(i),score,cycle)
+    for i in range(3):assert observe(i,1)==(None,False)
+    assert observe(4,0)==(None,True)  # Missing frame 3 breaks the armed prefix.
+    assert observe(5,0)[0] is None and observe(6,0)[0] is None
+    for i in range(7,10):observe(i,1)
+    assert observe(10,0)[0] is None and observe(11,0)[0] is None
+    assert observe(12,0)[0]['event_us']==1000000
+    assert observe(0,0,cycle=1)==(None,False)
+
+
+def test_options_reject_unbounded_workload():
+    from video_workbench.replay.engine import Options
+    for kwargs in [dict(repetitions=101),dict(max_jobs=0),dict(max_bytes=2**30),dict(speed=float('nan')),dict(mode='shell')]:
+        with pytest.raises(ValueError):Options('a',**kwargs).validate()

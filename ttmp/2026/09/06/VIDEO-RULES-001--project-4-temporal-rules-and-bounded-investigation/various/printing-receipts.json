@@ -1,0 +1,16 @@
+{
+  "plan": {
+    "printed": true,
+    "status_code": 200,
+    "rendered_at": "2026-09-06T23:52:56Z",
+    "width": 384,
+    "height": 461
+  },
+  "r1_r2_complete": {
+    "printed": true,
+    "status_code": 200,
+    "rendered_at": "2026-09-07T00:00:17Z",
+    "width": 384,
+    "height": 414
+  }
+}

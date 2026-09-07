@@ -248,3 +248,5 @@ Read `rules/evaluate.py`, `rules/stored.py`, and `workbench/configs/rules/househ
 
 ### Technical details
 Rule decisions have content-derived evaluation IDs, rule hashes, evidence IDs, subject scope, as-of time, applicability, and evaluator version. The stored adapter additionally records run identity. Actual source SQLite SHA: `3a2f5051660eba3dabdd92685e3dd11df4a261e638e7861447b2524e798aa2c3`. No revisions, supersession, model calls, recursive expressions, or mutable global state are used by the evaluator.
+
+R1/R2 completion slip also printed successfully: HTTP 200, `printed: true`, 384×414, rendered 2026-09-07T00:00:17Z. Layout and both printing receipts are saved under `various/`.

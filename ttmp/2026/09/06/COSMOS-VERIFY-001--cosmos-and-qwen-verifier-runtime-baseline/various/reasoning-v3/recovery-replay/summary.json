@@ -1,7 +1,21 @@
 {
   "protocol_sha256": "629d7769ee9f47cf4cc0634d90e94daa3492f98b034a8b7745742953a208ace3",
+  "recovery_sha256": "b0fe3eb6c9a405509c6fc13a79b4fad830465186696cafaeac79b5b6182d3ae9",
   "interpretation": "Post-observation parsing replay. Strict generation records and development selection are unchanged. Counts may be partial until the complete run is archived.",
   "groups": [
+    {
+      "phase": "development",
+      "family": "cosmos",
+      "arm": "D-G",
+      "calls": 12,
+      "strict_invalid": 0,
+      "replayed_invalid": 0,
+      "recovered": 0,
+      "strict_correct": 11,
+      "replayed_correct": 11,
+      "strict_unsupported": 0,
+      "replayed_unsupported": 0
+    },
     {
       "phase": "development",
       "family": "qwen",
@@ -45,14 +59,14 @@
       "phase": "development",
       "family": "qwen",
       "arm": "R-S",
-      "calls": 56,
-      "strict_invalid": 12,
+      "calls": 72,
+      "strict_invalid": 13,
       "replayed_invalid": 0,
-      "recovered": 12,
-      "strict_correct": 35,
-      "replayed_correct": 44,
-      "strict_unsupported": 9,
-      "replayed_unsupported": 12
+      "recovered": 13,
+      "strict_correct": 44,
+      "replayed_correct": 54,
+      "strict_unsupported": 15,
+      "replayed_unsupported": 18
     }
   ]
 }

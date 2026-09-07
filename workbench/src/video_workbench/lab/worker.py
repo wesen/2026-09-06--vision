@@ -86,7 +86,8 @@ def reasoning(root,request):
         def expired(*_):raise TimeoutError('single-image verifier exceeded its approved deadline')
         previous_handler=signal.signal(signal.SIGALRM,expired)
         signal.setitimer(signal.ITIMER_REAL,profile['deadline_ms']/1000)
-        try:run(str(ROOT/MODELS[o['model']][2]),rp,out,'visibility',pp)
+        try:run(str(ROOT/MODELS[o['model']][2]),rp,out,'visibility',pp,
+                prompt_override=request.get('prompt_snapshot',{}).get('prompt') or o.get('prompt'))
         finally:
             signal.setitimer(signal.ITIMER_REAL,0)
             signal.signal(signal.SIGALRM,previous_handler)

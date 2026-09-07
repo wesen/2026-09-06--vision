@@ -8,9 +8,13 @@ SCHEMA_VERSION = 'visible-door-v2'
 
 def prompt(request, variant='visibility'):
     validate_request(request)
+    return prompt_text(request['entity_label'], variant)
+
+
+def prompt_text(target, variant='visibility'):
     if variant not in ('direct', 'visibility'):
         raise ValueError('unsupported prompt variant')
-    task = f"Inspect only the supplied image. Target appliance: {request['entity_label']}. Is its door open?"
+    task = f"Inspect only the supplied image. Target appliance: {target}. Is its door open?"
     if variant == 'visibility':
         task += (' First establish whether you can identify the target and directly see enough of its door to determine its state.'
                  ' Closed means a visible door seated against its frame, not merely no visible opening.'
@@ -60,7 +64,14 @@ Immediately after </think>, return exactly one final JSON object with the specif
 def experiment_prompt(request, profile):
     from .profiles import validate_profile
     validate_profile(profile, request)
-    text = prompt(request, 'visibility')
+    validate_request(request)
+    return experiment_prompt_text(request['entity_label'], profile)
+
+
+def experiment_prompt_text(target, profile):
+    from .profiles import validate_profile
+    validate_profile(profile)
+    text = prompt_text(target, 'visibility')
     if profile['prompt_style'] == 'reasoning':
         text = text.replace('Return one JSON object, no prose, with these exact fields:',
                             'Your final answer must be one JSON object with these exact fields:')

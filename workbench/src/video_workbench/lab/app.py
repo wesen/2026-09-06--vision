@@ -3,7 +3,7 @@ from pathlib import Path
 import json
 import re
 import uuid
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Body
 from fastapi.responses import HTMLResponse, FileResponse
 from .catalog import Catalog, ROOT
 from .contracts import Selection, Experiment, Handoff
@@ -39,6 +39,17 @@ def create_app(root=ROOT):
         try: s=catalog.get(eid)
         except ValueError as e: raise HTTPException(409,str(e))
         return FileResponse(s['video'],media_type='video/mp4')
+    @app.post('/v1/lab/render-yaml')
+    def render_yaml(value:object=Body(default=None)):
+        from .presentation import highlighted_yaml
+        return highlighted_yaml(value)
+
+    @app.post('/v1/lab/prompt')
+    def prompt_preview(request:Experiment):
+        from .presentation import reasoning_prompt
+        if request.component not in ('reasoning','states'):raise HTTPException(422,'select reasoning or states')
+        return reasoning_prompt(request)
+
     @app.post('/v1/lab/preview')
     def preview(request:Selection):
         name='preview-'+uuid.uuid4().hex[:16]; dest=output/name

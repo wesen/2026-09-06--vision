@@ -35,7 +35,9 @@ class Manager:
             if not (self.catalog.root/python).is_file() or not (self.catalog.root/checkpoint).exists():
                 import shutil
                 shutil.rmtree(dest);raise ValueError('required local runtime/checkpoint missing')
-            record=dict(schema_version=1,run_id=run_id,options=request.model_dump(),evidence=evidence,
+            from .presentation import reasoning_prompt
+            prompt_snapshot=reasoning_prompt(request) if request.component in ('reasoning','states') else None
+            record=dict(prompt_snapshot=prompt_snapshot,schema_version=1,run_id=run_id,options=request.model_dump(),evidence=evidence,
                         handoff=provenance,checkpoint=checkpoint,worker_sha256=file_hash(Path(__file__).parent/'worker.py'),created_unix=time.time())
             write(dest/'request.json',record);write(dest/'status.json',dict(run_id=run_id,status='preparing'))
             self.active=run_id;self.cancel=Event();stop=self.cancel

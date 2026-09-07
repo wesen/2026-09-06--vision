@@ -9,7 +9,7 @@ from .visibility import prompt, experiment_prompt
 from .profiles import validate_profile, profile_hash, sampling_kwargs, CONTRACT_VERSION
 
 
-def run(model_path, request_path, result_path, variant, profile_path=None):
+def run(model_path, request_path, result_path, variant, profile_path=None, *, prompt_override=None):
     request = json.loads(Path(request_path).read_text())
     check_packet(request)
     profile = json.loads(Path(profile_path).read_text()) if profile_path else None
@@ -23,6 +23,10 @@ def run(model_path, request_path, result_path, variant, profile_path=None):
     model, processor = load(model_path, trust_remote_code=False)
     loaded = time.monotonic()
     text = experiment_prompt(request, profile) if profile is not None else prompt(request, variant)
+    if prompt_override is not None:
+        if not isinstance(prompt_override, str) or not prompt_override.strip() or len(prompt_override)>16000:
+            raise ValueError('invalid prompt override')
+        text = prompt_override
     config = load_config(model_path)
     formatted = apply_chat_template(processor, config, text, num_images=1)
     if profile is not None and profile['system_prompt']:

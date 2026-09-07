@@ -27,6 +27,7 @@ class Handoff(BaseModel):
 
 class Experiment(Selection):
     handoff: Handoff|None=None
+    prompt: str|None=Field(default=None,min_length=1,max_length=16000)
     component: Literal['detection','segmentation','tracking','reasoning','states','embeddings','actions']='detection'
     model: Literal['yolo11n','yolo11n-seg','qwen','cosmos','pooled_images','native_video','native_ridge','pooled_ridge']='yolo11n'
     device: Literal['cpu','mps']='mps'
@@ -45,6 +46,8 @@ class Experiment(Selection):
 
     @model_validator(mode='after')
     def supported(self):
+        if self.prompt is not None and (not self.prompt.strip() or self.component not in ('reasoning','states')):
+            raise ValueError('custom prompt requires a nonblank reasoning/state prompt')
         models={'actions':{'native_ridge','pooled_ridge'},'detection':{'yolo11n'},'segmentation':{'yolo11n-seg'},'tracking':{'yolo11n'},
                 'reasoning':{'qwen','cosmos'},'states':{'qwen','cosmos'},'embeddings':{'pooled_images','native_video'}}
         if self.model not in models[self.component]: raise ValueError('unsupported component/model combination')

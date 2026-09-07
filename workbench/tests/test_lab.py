@@ -114,3 +114,28 @@ def test_detection_handoff_nested_crop_and_binding(tmp_path):
     with pytest.raises(ValueError,match='unknown'):
         resolve(tmp_path,binding.model_copy(update={'detection_id':'missing'}))
     with pytest.raises(ValueError): Handoff(run_id='../elsewhere',frame_id='frame-5',detection_id='det-1')
+
+def test_prompt_snapshot_and_yaml_html():
+    import yaml
+    from video_workbench.lab.presentation import reasoning_prompt,highlighted_yaml
+    options=Experiment(episode_id='x',component='reasoning',model='qwen')
+    default=reasoning_prompt(options)
+    assert 'Target appliance: refrigerator' in default['prompt']
+    assert default['system_prompt']=='' and not default['custom']
+    custom=options.model_copy(update={'prompt':'Inspect F1.\n<script>alert(1)</script>','model':'cosmos'})
+    snapshot=reasoning_prompt(custom)
+    assert snapshot['prompt']==custom.prompt and snapshot['custom']
+    assert snapshot['system_prompt']=='You are a helpful assistant.'
+    rendered=highlighted_yaml({'prompt':custom.prompt,'known':False,'missing':None})
+    assert yaml.safe_load(rendered['yaml'])=={'prompt':custom.prompt,'known':False,'missing':None}
+    assert '<script>' not in rendered['html'] and '<span' in rendered['html']
+    with pytest.raises(ValueError): Experiment(episode_id='x',prompt='bad component')
+    with pytest.raises(ValueError): Experiment(episode_id='x',component='reasoning',model='qwen',prompt=' ')
+
+def test_yaml_endpoint_accepts_null():
+    from fastapi.testclient import TestClient
+    from video_workbench.lab.app import create_app
+    with TestClient(create_app()) as client:
+        response=client.post('/v1/lab/render-yaml',content='null',headers={'Content-Type':'application/json'})
+        assert response.status_code==200
+        assert response.json()['yaml'].startswith('null')

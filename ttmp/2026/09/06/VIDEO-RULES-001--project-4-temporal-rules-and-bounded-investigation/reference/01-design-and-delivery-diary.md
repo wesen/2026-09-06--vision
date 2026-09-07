@@ -304,3 +304,54 @@ Read `rules/handoff.py`, `verifiers/contracts.py`, and `reference/02-measured-ru
 
 ### Technical details
 Current limits: one to four exact-time images, 256 requested output tokens, 60-second request deadline; contract caps are 512 tokens and 120 seconds. The planner executes no model and has no retry loop. Raw responses are retained. Missing-trigger/interval cases remain UNKNOWN without a request.
+
+## Step 6: Freeze the camera-departure population and causal candidate policy
+
+The remaining recall task needs reviewed events, including events that never generate a request. The paired-action corpus does not contain the required departures. I inspected the original household recordings and prepared twelve development/test recording reviews, with every native frame around each visible exit retained as screenshots.
+
+The event is precisely a departure from the camera view. Room crossings outside that view are not observable. The reference annotations come from RGB inspection, and several microwave recordings remain visibly closed despite scenario names suggesting reopening. No program-derived state labels enter this experiment.
+
+### Prompt Context
+**User prompt (verbatim):** "finish RULES measurement → simplify REPLAY design → implement the replay viewer and bounded scheduler. commit at appropriate intervals and keep a detailed diary as you work (using the diary format from the skill). Print out a brutalist work slip with the plan / different phases for the ticket. then before stsarting a phase, plrint a split about the phase, and print one when the phase is done."
+
+**Assistant interpretation:** Complete measured rule coverage, then simplify and implement the replay workbench, recording phase boundaries and evidence.
+
+**Inferred user intent:** Connect the existing perception and verifier components into an inspectable bounded system with defensible measurements.
+
+### What I did
+- Printed the four-phase work plan and P1 start slip; saved layouts in REPLAY and RULES `various/`.
+- Added review scripts 05 and 06, twelve complete-recording contact sheets, twelve native-frame exit sheets, a source manifest, separate reviewed labels, and a frozen protocol.
+- Added `rules/departure.py`: constant-memory causal person-disappearance candidates, armed after three detections and confirmed after three absences at score threshold 0.25.
+- Added script 07 to run the existing pinned YOLO adapter over every frame without reading reviewed labels.
+- Fixed one-to-one event matching tolerance at 500 ms before candidate/model outcomes; selected the already accepted direct-greedy Qwen and Cosmos profiles.
+
+### Why
+A verifier-only image comparison cannot count missed triggers. The new population contains both visible open and closed target doors at camera departure and preserves false candidate opportunities throughout each recording.
+
+### What worked
+- All twelve source video hashes matched their manifests.
+- RGB review located six open and six closed target states at visible exits.
+- Candidate input and reviewed labels are separate files; candidate extraction has no access to scenario variants, programs, or state truth.
+- Plan print: HTTP 200, printed true, 384×461 at 2026-09-07T04:35:21Z. P1 start: HTTP 200, printed true, 384×358 at 2026-09-07T04:35:42Z.
+
+### What didn't work
+- `cat workbench/src/video_workbench/perception/detect.py` failed with `No such file or directory`; the adapter is `detector.py`.
+- The first native-frame sheet run failed with `IndexError: list index out of range` because review intervals assumed split grouping while the manifest is sorted by episode ID. Corrected the interval order and reran successfully.
+
+### What I learned
+Synthetic program intent does not establish visible endpoint state. The benchmark must name the camera event it actually observes. An actor can also disappear before a detector's full-body score ceases to pass, or a detector can lose the actor early; matching needs an explicit tolerance.
+
+### What was tricky to build
+Disappearance must emit at the first absent timestamp but become available only after confirmation. The implementation stores both times and only rearms after a fresh consecutive presence sequence. It retains every false candidate rather than selecting the event nearest the reviewed departure.
+
+### What warrants a second pair of eyes
+These are assistant-reviewed synthetic frames, not independent human adjudication. Full-recording review is sampled while exit neighborhoods are dense. Small microwave door geometry and a few foreground actor pixels at the image boundary warrant independent review. This is an exploratory camera-exit measurement, not a general room-departure benchmark.
+
+### What should be done in the future
+Run detection, materialize exact candidate frames, execute the two accepted verifiers, and report misses, false candidates, unknowns, cost, and latency. Then simplify REPLAY without adding revision machinery.
+
+### Code review instructions
+Start with `various/r4-review/protocol.json`, `reviewed-events.json`, and the saved exit sheets. Read `rules/departure.py` and script 07. Candidate extraction runs under the perception environment with explicit MPS; feature smoke checks follow implementation completion.
+
+### Technical details
+Policy: YOLO person score ≥0.25, three consecutive detections to arm, three consecutive absences to emit, first absent PTS as event time, third absent PTS as availability. Event matching is within episode, maximum one-to-one cardinality followed by minimum absolute timestamp error, tolerance 500,000 us. The no-verifier state baseline requires exact timestamps and otherwise remains UNKNOWN.

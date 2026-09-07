@@ -1,0 +1,98 @@
+[
+  {
+    "episode_id": "ep-1ba09e07399f4a30",
+    "frame_index": 81,
+    "door_open": true,
+    "event_id": "ep-1ba09e07399f4a30:reviewed-exit",
+    "evidence": "ep-1ba09e07399f4a30-exit.png",
+    "review_note": "Visible actor exits foreground right; door panel protrudes when open, lies flush when closed."
+  },
+  {
+    "episode_id": "ep-205a311600c89bf7",
+    "frame_index": 146,
+    "door_open": false,
+    "event_id": "ep-205a311600c89bf7:reviewed-exit",
+    "evidence": "ep-205a311600c89bf7-exit.png",
+    "review_note": "Visible actor exits foreground right; door panel protrudes when open, lies flush when closed."
+  },
+  {
+    "episode_id": "ep-327429c08d46e616",
+    "frame_index": 185,
+    "door_open": false,
+    "event_id": "ep-327429c08d46e616:reviewed-exit",
+    "evidence": "ep-327429c08d46e616-exit.png",
+    "review_note": "Visible actor exits foreground right; door panel protrudes when open, lies flush when closed."
+  },
+  {
+    "episode_id": "ep-368d6331fc690a2c",
+    "frame_index": 135,
+    "door_open": false,
+    "event_id": "ep-368d6331fc690a2c:reviewed-exit",
+    "evidence": "ep-368d6331fc690a2c-exit.png",
+    "review_note": "Visible actor exits foreground right; door panel protrudes when open, lies flush when closed."
+  },
+  {
+    "episode_id": "ep-37909e041bc956c8",
+    "frame_index": 166,
+    "door_open": false,
+    "event_id": "ep-37909e041bc956c8:reviewed-exit",
+    "evidence": "ep-37909e041bc956c8-exit.png",
+    "review_note": "Visible actor exits foreground right; door panel protrudes when open, lies flush when closed."
+  },
+  {
+    "episode_id": "ep-7d3106fb1cac9776",
+    "frame_index": 100,
+    "door_open": true,
+    "event_id": "ep-7d3106fb1cac9776:reviewed-exit",
+    "evidence": "ep-7d3106fb1cac9776-exit.png",
+    "review_note": "Visible actor exits foreground right; door panel protrudes when open, lies flush when closed."
+  },
+  {
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "frame_index": 83,
+    "door_open": true,
+    "event_id": "ep-97a1a39b2e9490b6:reviewed-exit",
+    "evidence": "ep-97a1a39b2e9490b6-exit.png",
+    "review_note": "Visible actor exits foreground right; door panel protrudes when open, lies flush when closed."
+  },
+  {
+    "episode_id": "ep-c1c313b64f579794",
+    "frame_index": 94,
+    "door_open": true,
+    "event_id": "ep-c1c313b64f579794:reviewed-exit",
+    "evidence": "ep-c1c313b64f579794-exit.png",
+    "review_note": "Visible actor exits foreground right; door panel protrudes when open, lies flush when closed."
+  },
+  {
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "frame_index": 130,
+    "door_open": false,
+    "event_id": "ep-c2ad5c5f7b67a9a8:reviewed-exit",
+    "evidence": "ep-c2ad5c5f7b67a9a8-exit.png",
+    "review_note": "Visible actor exits foreground right; door panel protrudes when open, lies flush when closed."
+  },
+  {
+    "episode_id": "ep-d9e2a612fb2342e2",
+    "frame_index": 197,
+    "door_open": true,
+    "event_id": "ep-d9e2a612fb2342e2:reviewed-exit",
+    "evidence": "ep-d9e2a612fb2342e2-exit.png",
+    "review_note": "Visible actor exits foreground right; door panel protrudes when open, lies flush when closed."
+  },
+  {
+    "episode_id": "ep-e614ca27a15019cd",
+    "frame_index": 126,
+    "door_open": false,
+    "event_id": "ep-e614ca27a15019cd:reviewed-exit",
+    "evidence": "ep-e614ca27a15019cd-exit.png",
+    "review_note": "Visible actor exits foreground right; door panel protrudes when open, lies flush when closed."
+  },
+  {
+    "episode_id": "ep-e9c9ef6801285914",
+    "frame_index": 168,
+    "door_open": true,
+    "event_id": "ep-e9c9ef6801285914:reviewed-exit",
+    "evidence": "ep-e9c9ef6801285914-exit.png",
+    "review_note": "Visible actor exits foreground right; door panel protrudes when open, lies flush when closed."
+  }
+]

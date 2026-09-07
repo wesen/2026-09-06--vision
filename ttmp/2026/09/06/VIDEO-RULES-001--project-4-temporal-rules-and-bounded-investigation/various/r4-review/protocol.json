@@ -1,0 +1,38 @@
+{
+  "version": "camera-exit-v1",
+  "event_definition": "First decoded frame with no visible actor following a visible departure; camera view only, no inferred room crossing.",
+  "reviewer": "assistant RGB review; not independent human adjudication",
+  "population": "All 12 home-v1 development and test recordings; no filtering by detector or verifier output. Existing images are not a novel held-out benchmark.",
+  "candidate_policy": {
+    "person_threshold": 0.25,
+    "arm_frames": 3,
+    "absent_frames": 3
+  },
+  "matching": {
+    "tolerance_us": 500000,
+    "method": "maximum one-to-one cardinality, minimum absolute timestamp error, within episode"
+  },
+  "rule": "Target door must be closed at the candidate event timestamp.",
+  "baseline": "Exact-time stored state if present; otherwise UNKNOWN. No nearest sample or forward fill.",
+  "verifiers": [
+    "qwen/direct_greedy",
+    "cosmos/direct_greedy"
+  ],
+  "metrics": [
+    "candidate recall",
+    "candidate precision",
+    "missed reviewed departures",
+    "end-to-end violation recall over all reviewed positive departures",
+    "false alerts per source hour",
+    "unknown fraction",
+    "request count",
+    "tokens",
+    "wall latency"
+  ],
+  "limitations": [
+    "Fixed single-actor kitchen camera with synthetic render artifacts.",
+    "Sparse full-recording contact review plus every native frame near exits; independent dense review remains desirable.",
+    "Camera disappearance can represent occlusion or a detection failure.",
+    "No claim about all rule operators or real-world transfer."
+  ]
+}

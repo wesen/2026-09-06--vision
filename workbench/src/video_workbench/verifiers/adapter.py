@@ -10,6 +10,7 @@ from video_workbench.registry import file_hash
 from .contracts import validate_request
 from .profiles import validate_profile, profile_hash, CONTRACT_VERSION
 from .visibility import parse_visibility, prompt, SCHEMA_VERSION, experiment_prompt, parse_experiment
+from .recovery import parse_with_recovery, RECOVERY_VERSION
 
 
 def check_packet(request):
@@ -49,7 +50,12 @@ def supervise(command, deadline_seconds, log_path, env=None):
     return dict(status=status,returncode=code,elapsed_seconds=time.monotonic()-started)
 
 
-def verify(request, model_path, destination, *, python=None, variant='visibility', profile=None):
+def verify(request, model_path, destination, *, python=None, variant='visibility', profile=None, recover_missing_close=True):
+    """Run one bounded request; profiled calls allow traced wrapper recovery.
+
+    Set recover_missing_close=False for strict experimental output validation.
+    Recovery never modifies answer contents or relaxes evidence validation.
+    """
     started=time.monotonic();check_packet(request)
     if profile is not None:
         # Snapshot caller-owned profile before worker launch.
@@ -72,7 +78,8 @@ def verify(request, model_path, destination, *, python=None, variant='visibility
     elapsed=time.monotonic()-started
     result=dict(execution,request_id=request['request_id'],entity_id=request['entity_id'],schema_version=SCHEMA_VERSION,mode='single_image',prompt=text,model_path=str(model_path),elapsed_seconds=elapsed,completed_us=request['as_of_us']+int(elapsed*1e6)+1)
     if profile is not None:
-        result.update(profile=profile,profile_sha256=profile_hash(profile),schema_version=CONTRACT_VERSION)
+        result.update(profile=profile,profile_sha256=profile_hash(profile),schema_version=CONTRACT_VERSION,
+                      validation_policy=RECOVERY_VERSION if recover_missing_close else 'strict-reasoning-envelope-v1')
     if execution['status']=='ok':
         try:
             if result_path.stat().st_size>(1024*1024 if profile is not None else 100000):raise ValueError('worker result too large')
@@ -83,7 +90,8 @@ def verify(request, model_path, destination, *, python=None, variant='visibility
             if profile is not None:
                 if record.get('profile_sha256')!=profile_hash(profile) or record.get('profile')!=profile:
                     raise ValueError('worker profile binding mismatch')
-                result.update(parse_experiment(request,record['raw'],profile,record.get('finish_reason')))
+                parser=parse_with_recovery if recover_missing_close else parse_experiment
+                result.update(parser(request,record['raw'],profile,record.get('finish_reason')))
                 result.update(profile=profile,profile_sha256=profile_hash(profile),schema_version=CONTRACT_VERSION)
             else:
                 result.update(parse_visibility(request,record['raw']))

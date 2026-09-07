@@ -55,3 +55,29 @@ def test_complete_envelope_stays_strict(request_packet):
     raw='<reasoning>reason</reasoning>'+payload()
     result=parse_with_recovery(request_packet,raw,make_profile('qwen',True))
     assert result['status']=='ok' and 'recovery' not in result and result['raw']==raw
+
+@pytest.mark.parametrize('family,opening',[('qwen','<reasoning>'),('cosmos','<think>')])
+@pytest.mark.parametrize('recover',[False,True])
+def test_host_recovery_policy_and_persisted_trace(request_packet,tmp_path,monkeypatch,family,opening,recover):
+    from video_workbench.verifiers.adapter import verify
+    from video_workbench.verifiers.profiles import profile_hash
+    from video_workbench.verifiers.recovery import RECOVERY_VERSION
+    model=tmp_path/'model';model.mkdir();(model/'config.json').write_text('{}')
+    profile=make_profile(family,True)
+    raw=opening+'Visible door is seated.\n'+payload()
+    def fake_supervise(command,*args):
+        record=dict(request_id=request_packet['request_id'],raw=raw,profile=profile,
+                    profile_sha256=profile_hash(profile),finish_reason='stop')
+        Path(command[5]).write_text(json.dumps(record))
+        return dict(status='ok')
+    monkeypatch.setattr('video_workbench.verifiers.adapter.supervise',fake_supervise)
+    result=verify(request_packet,model,tmp_path/'run',profile=profile,**({} if recover else {'recover_missing_close':False}))
+    assert result['status']==('ok' if recover else 'invalid')
+    assert result['validation_policy']==(RECOVERY_VERSION if recover else 'strict-reasoning-envelope-v1')
+    assert result['raw']==result['runtime']['raw']==raw
+    assert json.loads((tmp_path/'run/result.json').read_text())==result
+    if recover:
+        assert result['answer']['request_id']==request_packet['request_id']
+        assert result['recovery']['missing_token']==('</reasoning>' if family=='qwen' else '</think>')
+    else:
+        assert 'recovery' not in result

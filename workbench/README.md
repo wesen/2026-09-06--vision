@@ -86,3 +86,27 @@ output/mlx-video-fix/.venv/bin/video-workbench search --mode native_video 'A per
 `--model` defaults to `output/mlx-video-fix/models/official` for native mode. Download exactly the official revision above if absent. Native defaults to `output/video-workbench-native`; pooled mode retains `output/video-workbench`. Actual selected PTS, relative to each clip, determine video timestamps. Single/odd inputs repeat the last frame and PTS; clips exceeding 32 selected frames fail clearly. Reduce FPS or window duration if needed.
 
 Rollback is explicit: run `workbench/.venv/bin/video-workbench search --mode pooled_images ... --manifest OLD_POOLED_MANIFEST`. Existing indices and the baseline environment are retained. Loading a pooled index with the native query encoder, or vice versa, raises an incompatible-feature-space error. No native failure falls back to pooled images. The development smoke encoded nine clips from one episode and verified full cache reuse; this is not a corpus retrieval-quality acceptance.
+
+## Bounded 8B visual verification
+
+The single-image verifier runs in `workbench/verify-env/.venv`, separately from the embedding environments. It accepts one approved frame and a bound request; inference cannot select new evidence. Generation profiles make reasoning style, sampling, seed, token budget, and deadline explicit:
+
+```python
+from video_workbench.rules.evaluate import digest
+from video_workbench.verifiers.adapter import verify
+from video_workbench.verifiers.profiles import make_profile
+
+profile = make_profile('qwen', reasoning=False, sampled=False)
+# request is an approved packet from rules.handoff.plan_request.
+request = dict(request, max_output_tokens=profile['max_output_tokens'],
+               deadline_ms=profile['deadline_ms'])
+request['request_id'] = digest({k: v for k, v in request.items() if k != 'request_id'})
+result = verify(request, 'output/models/qwen3-vl-instruct-8b-8bit',
+                'output/my-verifier-run', profile=profile)
+```
+
+Use a fresh destination for each call. `rules.handoff.investigate(..., profile=profile)` performs the profile budget binding and produces a separate verifier-conditioned decision while preserving the baseline. A successful result means the answer passed the output contract; visual correctness must be evaluated separately.
+
+Profiled calls now recover one observed missing reasoning closing tag when the entire final JSON passes strict validation. `raw`, `normalizations`, `recovery`, and `validation_policy` expose that behavior. Ambiguous boundaries, truncation, wrong answer enums, and invalid citations remain failures. Pass `recover_missing_close=False` to `verify` for strict output validation. Calls without a profile retain their existing visibility parser.
+
+The completed [Qwen/Cosmos reasoning comparison](../ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/reference/08-measured-qwen-and-cosmos-prompted-reasoning-comparison.md) records 384 development and 72 held-out calls. Both direct controls scored 22/24 on test; development-selected Cosmos reasoning scored 20/24. None resolved the two unknown test cases. Keep direct greedy as the practical reference for this task; prompted reasoning remains an explicit experiment option. This result does not evaluate Qwen Thinking weights, multi-image/video verification, or embedding quality.

@@ -19,8 +19,8 @@ class RuleRequest(BaseModel):
 
 def compare(a,b):
     differences=[]
-    for key in ('episode_id','start_us','end_us','fps','crop','component','model','target','reasoning','max_tokens','query','window_seconds','stride_seconds','confidence','iou','image_size','classes'):
-        av=a['request']['options'][key];bv=b['request']['options'][key]
+    for key in ('episode_id','start_us','end_us','fps','crop','component','model','target','reasoning','max_tokens','query','window_seconds','stride_seconds','confidence','iou','image_size','classes','handoff'):
+        av=a['request']['options'].get(key);bv=b['request']['options'].get(key)
         if av!=bv:differences.append(dict(field=key,a=av,b=bv))
     def inputs(run):
         e=run['request']['evidence']

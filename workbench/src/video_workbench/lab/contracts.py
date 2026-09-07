@@ -18,7 +18,15 @@ class Selection(BaseModel):
             if not (0<=x0<x1<=1 and 0<=y0<y1<=1): raise ValueError('crop must be normalized ordered coordinates')
         return self
 
+class Handoff(BaseModel):
+    model_config=ConfigDict(extra='forbid',allow_inf_nan=False)
+    run_id: str=Field(pattern=r'^run-[a-f0-9]{16}$')
+    frame_id: str=Field(pattern=r'^frame-[0-9]+$')
+    detection_id: str=Field(min_length=1,max_length=100)
+    padding: float=Field(default=.15,ge=0,le=1)
+
 class Experiment(Selection):
+    handoff: Handoff|None=None
     component: Literal['detection','segmentation','tracking','reasoning','states','embeddings','actions']='detection'
     model: Literal['yolo11n','yolo11n-seg','qwen','cosmos','pooled_images','native_video','native_ridge','pooled_ridge']='yolo11n'
     device: Literal['cpu','mps']='mps'

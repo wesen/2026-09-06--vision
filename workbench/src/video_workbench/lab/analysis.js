@@ -271,3 +271,64 @@ renderResult = function(record) {
     renderWithoutTimeline(record);
     if (record.status === 'completed') $('resultBody').prepend(resultTimeline(record));
 };
+
+// Explicit detector-to-reasoner drafts. Evidence edits require deliberate detachment.
+let reasoningHandoff = null;
+const handoffNotice = node('div'); handoffNotice.id = 'handoffNotice';
+$('runStatus').before(handoffNotice);
+function setHandoff(binding) {
+    reasoningHandoff = binding;
+    handoffNotice.replaceChildren();
+    if (!binding) return;
+    const detach = node('button', 'Detach detection provenance to edit evidence');
+    detach.onclick = () => setHandoff(null);
+    handoffNotice.append(node('p', `Bound detection draft: ${binding.run_id} / ${binding.frame_id}. Model and decoding settings may change; source, time, crop and target must stay fixed.`), detach);
+}
+const experimentWithoutHandoff = experiment;
+experiment = function() {
+    const options = experimentWithoutHandoff();
+    if (reasoningHandoff) options.handoff = reasoningHandoff;
+    return options;
+};
+const loadWithoutHandoff = loadRunSettings;
+loadRunSettings = async function(record) {
+    setHandoff(null);
+    await loadWithoutHandoff(record);
+    setHandoff(record.request.options.handoff || null);
+};
+function detectionHandoffPanel(record) {
+    const panel = node('section'); panel.id = 'detectionHandoff';
+    panel.append(node('h3', 'Use a detection for door-state reasoning'));
+    const choices = [];
+    for (const row of record.result.records || []) for (const detection of row.detections || []) {
+        if (['refrigerator', 'microwave', 'oven'].includes(detection.class_name)) choices.push({row, detection});
+    }
+    panel.append(node('p', 'Choose an actual detected appliance and preview a crop at its exact timestamp. This prepares a single-image Qwen or Cosmos experiment; it does not run inference until you press Run experiment. A box identifies a region, not whether its door is open.'));
+    if (!choices.length) { panel.append(node('p', 'No supported door-bearing appliance detections in this run. Try another range or detection threshold.')); return panel; }
+    const select = node('select'); select.id = 'handoffDetection';
+    choices.forEach(({row, detection}, i) => select.append(new Option(`${row.frame.pts_us/1e6} s · ${detection.class_name} · score ${detection.score.toFixed(3)} · ${detection.detection_id}`, i)));
+    const padding = node('input'); padding.type = 'number'; padding.min = '0'; padding.max = '1'; padding.step = '.05'; padding.value = '.15'; padding.id = 'handoffPadding';
+    const label = node('label', 'Context padding per side (fraction of box width / height)'); label.append(padding);
+    const button = node('button', 'Preview reasoning draft'); button.id = 'prepareHandoff';
+    const status = node('p');
+    button.onclick = async () => {
+        button.disabled = true;
+        try {
+            const {row, detection} = choices[Number(select.value)];
+            const draft = await api('/v1/lab/handoff', {run_id:record.run_id, frame_id:row.frame.id, detection_id:detection.detection_id, padding:Number(padding.value)});
+            await loadRunSettings({run_id:record.run_id, request:{options:draft.options}});
+            status.textContent = 'Draft prepared; inspect the exact crop above, choose Qwen or Cosmos, then Run experiment.';
+            $('runStatus').textContent = status.textContent;
+        } catch (error) { status.textContent = error.message; }
+        finally { button.disabled = false; }
+    };
+    const guide = node('details'); guide.append(node('summary', 'Guide: crop coordinates, context and provenance'), node('p', 'For box (x0,y0,x1,y1), padding p adds p×(x1−x0) horizontally and p×(y1−y0) vertically on each side. The server adds the parent crop origin, rounds outward to pixels and clamps to source bounds. More context can retain door edges or handles; too much context can reintroduce other objects. The reasoner sees an RGB rectangular crop, not a segmentation mask. Full-frame versus crop results use different visual evidence and cannot establish which model is better in isolation.'), node('p', 'The saved request includes the parent request/result hashes, source partition, exact frame, detection box and score, and padding. Submission resolves the parent again and rejects changed evidence fields. The actual saved input PNG and crop coordinates are authoritative.'), node('a', 'Browse handoff implementation'));
+    guide.lastChild.href = '/resources?section=code';
+    panel.append(select, label, button, status, guide); return panel;
+}
+const renderWithoutHandoff = renderResult;
+renderResult = function(record) {
+    renderWithoutHandoff(record);
+    if (record.status === 'completed' && ['detection','segmentation','tracking'].includes(record.request.options.component)) $('resultBody').prepend(detectionHandoffPanel(record));
+    if (record.request.handoff) $('resultBody').prepend(jsonDetails('Detection-to-reasoning provenance', record.request.handoff));
+};

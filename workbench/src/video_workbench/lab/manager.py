@@ -4,6 +4,7 @@ from threading import Lock,Thread,Event
 import json,os,signal,subprocess,time,uuid
 from .catalog import MODELS
 from .evidence import prepare
+from .handoff import validate
 from video_workbench.registry import file_hash
 
 def write(path,value):
@@ -19,10 +20,14 @@ class Manager:
     def start(self,request):
         with self.lock:
             if self.thread and self.thread.is_alive(): raise RuntimeError('one experiment is already running; cancel it or wait')
+            provenance=validate(self.output,request)
             run_id='run-'+uuid.uuid4().hex[:16];dest=self.output/run_id;dest.mkdir()
             # Validate and snapshot pixels before starting the worker. Preparation
             # is serialized with admission, so concurrent requests cannot overwrite.
-            try: evidence=prepare(self.catalog,request,dest)
+            try:
+                evidence=prepare(self.catalog,request,dest)
+                if provenance and evidence['source'] != provenance['source']:
+                    raise ValueError('handoff source identity changed')
             except Exception:
                 import shutil
                 shutil.rmtree(dest);raise
@@ -31,7 +36,7 @@ class Manager:
                 import shutil
                 shutil.rmtree(dest);raise ValueError('required local runtime/checkpoint missing')
             record=dict(schema_version=1,run_id=run_id,options=request.model_dump(),evidence=evidence,
-                        checkpoint=checkpoint,worker_sha256=file_hash(Path(__file__).parent/'worker.py'),created_unix=time.time())
+                        handoff=provenance,checkpoint=checkpoint,worker_sha256=file_hash(Path(__file__).parent/'worker.py'),created_unix=time.time())
             write(dest/'request.json',record);write(dest/'status.json',dict(run_id=run_id,status='preparing'))
             self.active=run_id;self.cancel=Event();stop=self.cancel
             def work():

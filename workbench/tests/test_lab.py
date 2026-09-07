@@ -91,3 +91,26 @@ def test_action_head_preprocessing_contract():
     for options in ({'fps':1},{'fps':2,'crop':(.1,0,1,1)},{'fps':2,'start_us':100000}):
         with pytest.raises(ValueError,match='frozen action heads require'):
             Experiment(episode_id='x',component='actions',model='native_ridge',**options)
+
+def test_detection_handoff_nested_crop_and_binding(tmp_path):
+    import json
+    from video_workbench.lab.contracts import Handoff
+    from video_workbench.lab.handoff import resolve,validate
+    parent=tmp_path/'run-0123456789abcdef';parent.mkdir()
+    frame=dict(id='frame-5',pts_us=1000000,crop_xyxy=[100,50,500,350],source_width=640,source_height=480)
+    detection=dict(detection_id='det-1',class_name='refrigerator',score=.9,xyxy=[20,30,120,230])
+    for name,value in dict(status={'status':'completed'},request={'options':{'component':'segmentation','episode_id':'test'},'evidence':{'frames':[frame],'source':{'video_sha256':'abc','split':'test'}}},result={'records':[{'frame':frame,'detections':[detection]}]}).items():
+        (parent/(name+'.json')).write_text(json.dumps(value))
+    binding=Handoff(run_id=parent.name,frame_id='frame-5',detection_id='det-1',padding=.1)
+    options,provenance=resolve(tmp_path,binding)
+    assert provenance['source_crop_xyxy']==(110,60,230,300)
+    assert options.crop==(110/640,60/480,230/640,300/480)
+    assert options.end_us-options.start_us==1
+    assert validate(tmp_path,options)==provenance
+    for key,value in [('crop',None),('target','microwave'),('start_us',0),('episode_id','other'),('component','states')]:
+        with pytest.raises(ValueError,match='changed'):
+            validate(tmp_path,options.model_copy(update={key:value}))
+    assert validate(tmp_path,options.model_copy(update={'model':'cosmos'}))==provenance
+    with pytest.raises(ValueError,match='unknown'):
+        resolve(tmp_path,binding.model_copy(update={'detection_id':'missing'}))
+    with pytest.raises(ValueError): Handoff(run_id='../elsewhere',frame_id='frame-5',detection_id='det-1')

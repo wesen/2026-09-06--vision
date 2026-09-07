@@ -6,7 +6,7 @@ import uuid
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse, FileResponse
 from .catalog import Catalog, ROOT
-from .contracts import Selection, Experiment
+from .contracts import Selection, Experiment, Handoff
 from .manager import Manager,write
 from contextlib import asynccontextmanager
 from .evidence import prepare
@@ -66,6 +66,14 @@ def create_app(root=ROOT):
         for name in ('result','progress'):
             if (p/(name+'.json')).is_file():record[name]=json.loads((p/(name+'.json')).read_text())
         return record
+
+    @app.post('/v1/lab/handoff')
+    def handoff(request:Handoff):
+        from .handoff import resolve
+        try:
+            options, provenance=resolve(output,request)
+            return dict(options=options.model_dump(),provenance=provenance)
+        except ValueError as e:raise HTTPException(422,str(e))
 
     @app.post('/v1/lab/runs',status_code=202)
     def start(request:Experiment):

@@ -574,3 +574,58 @@ Inspect viewer.html grid/thumbnail styles and history filter controls; analysis.
 ### Technical details
 
 Presentation-only browser smoke; no model inference or server restart required. Existing user-created runs were read without modification. UI assets remain live on mimimi:8780.
+
+## Step 10: Overlay embedding comparisons on shared axes
+
+Replaced independent side-by-side embedding charts with one overlaid chart. Both curves now use common time and cosine-score bounds computed across all displayed windows, making vertical differences visually faithful to their numerical values.
+
+### Prompt Context
+
+**User prompt (verbatim):** "when comparing graphs left and right, say on embedding against two runs, overlay the curves so they use the same scales."
+
+**Assistant interpretation:** Make embedding-run comparisons use shared axes and overlaid curves rather than independently scaled plots.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+### What I did
+
+- Added a reusable multi-series similarity renderer and used it for comparison overlays.
+- Added mint solid A and orange dashed B curves, run-ID legends, grid lines and exact-value hover labels.
+- Kept per-run ranked window lists and existing feature-space interpretation text.
+- Captured p10-shared-embedding-overlay.png.
+
+### Why
+
+Independent vertical scaling visually magnified small variations and hid the actual score separation between runs.
+
+### What worked
+
+Browser smoke with native run-c91ef4d1a5c54ed9 and pooled run-cb3fcc4c7afa4e55 found exactly one chart containing two curves. Matched window starts mapped to identical x coordinates; both curves used the combined y transform. Legends correctly identified A/native and B/pooled. No UI error was displayed.
+
+### What didn't work
+
+No failure during this change.
+
+### What I learned
+
+Shared graphical axes improve reading of raw scores but do not statistically calibrate different model feature spaces; that distinction remains visible in the chart explanation.
+
+### What was tricky to build
+
+Bounds must include both runs, including different time ranges. The renderer sorts each curve by window start, uses one transform for every point, and preserves original A/B identities even if only one side has embedding results.
+
+### What warrants a second pair of eyes
+
+Try same-model and cross-model comparisons, including runs with different time ranges, and check legend/hover readability.
+
+### What should be done in the future
+
+Use the overlay screenshot in the future comparison report.
+
+### Code review instructions
+
+Inspect analysis.js addSimilarityPlot and comparison rendering. Compare the saved native and pooled embedding runs and verify only one chart is displayed with both curves.
+
+### Technical details
+
+UI-only asset change; no model inference or server restart. Screenshot and diary preserve the comparison evidence.

@@ -139,3 +139,9 @@ Input thumbnails wrap into rows within the evidence column. The parameter column
 ![Eight-frame preview within a fixed-width workspace](../various/p9-wrapped-eight-frame-preview.png)
 
 ![Filtered history and comparison choices](../various/p9-filtered-history.png)
+
+## 9. Shared-scale embedding overlays
+
+Embedding comparisons now show A and B on one chart. Time and similarity bounds are computed from both runs together. The mint solid and orange dashed curves retain their own window membership and raw scores, and hover labels identify the run and interval. Shared axes support direct visual reading; they do not calibrate separate feature spaces or combine their vectors. Per-run ranking lists remain below the chart.
+
+![Embedding curves overlaid on shared axes](../various/p10-shared-embedding-overlay.png)

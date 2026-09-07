@@ -39,3 +39,17 @@ def evaluate_answer(rule,baseline,event,request,raw,run_id,producer,completed_us
     decision=evaluate(conditioned_rule,baseline['episode_id'],baseline['entity_id'],[event],[observation],as_of_us=completed_us)
     return {'status':'ok','condition':'separate_verifier_evidence','source_evaluation_id':baseline['evaluation_id'],
             'request_id':request['request_id'],'observation':observation,'decision':decision,'model_citations':answer['evidence_ids'],'raw':raw}
+
+
+def investigate(rule,baseline,event,frames,entity_label,model_path,destination,run_id,producer,*,python=None,variant='visibility'):
+    """One bounded call, with separate verifier evidence; preserve baseline always."""
+    from video_workbench.verifiers.adapter import verify
+    plan=plan_request(rule,baseline,event,frames,entity_label)
+    if plan['status']!='ready':return plan
+    request=plan['request']
+    result=verify(request,model_path,destination,python=python,variant=variant)
+    if result['status']!='ok':return dict(status=result['status'],source_evaluation_id=baseline['evaluation_id'],verifier=result)
+    # IDs are supplied by the trusted host; only the validated model payload is used.
+    import json
+    conditioned=evaluate_answer(rule,baseline,event,request,json.dumps(result['answer']),run_id,producer,result['completed_us'])
+    return dict(status=conditioned['status'],source_evaluation_id=baseline['evaluation_id'],verifier=result,conditioned=conditioned)

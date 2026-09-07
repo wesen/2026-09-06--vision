@@ -1,0 +1,54 @@
+{
+  "revision": "d0857364e8a727be41b181731e03f478213e4558",
+  "files": [
+    {
+      "source_url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-cookbook/d0857364e8a727be41b181731e03f478213e4558/docs/recipes/inference/reason2/worker_safety/SUMMARY.md",
+      "repo_path": "docs/recipes/inference/reason2/worker_safety/SUMMARY.md",
+      "local_path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/sources/cosmos-cookbook/SUMMARY.md",
+      "sha256": "940ed496ceebf32c99041c291ec2e439146430798bb50cbf5e6d4d0da8863b8c",
+      "bytes": 111
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-cookbook/d0857364e8a727be41b181731e03f478213e4558/docs/recipes/inference/reason2/worker_safety/inference.md",
+      "repo_path": "docs/recipes/inference/reason2/worker_safety/inference.md",
+      "local_path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/sources/cosmos-cookbook/inference.md",
+      "sha256": "47f3ee34c4dd14362709dc14a94e13a97e46b68a2ccb529d1464d590bbca1820",
+      "bytes": 13024
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-cookbook/d0857364e8a727be41b181731e03f478213e4558/docs/recipes/inference/reason2/worker_safety/setup.md",
+      "repo_path": "docs/recipes/inference/reason2/worker_safety/setup.md",
+      "local_path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/sources/cosmos-cookbook/setup.md",
+      "sha256": "70eeca776b70257202abdd0ec5a37265fc2f1bc845b45c70d1f0e63276820451",
+      "bytes": 3825
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-cookbook/d0857364e8a727be41b181731e03f478213e4558/docs/recipes/inference/reason2/worker_safety/worker_safety.ipynb",
+      "repo_path": "docs/recipes/inference/reason2/worker_safety/worker_safety.ipynb",
+      "local_path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/sources/cosmos-cookbook/worker_safety.ipynb",
+      "sha256": "d08feeb5df8ce6f4bfa89f5c21473287eab0a2afe7358725f0ee837bd115ca73",
+      "bytes": 130
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-cookbook/d0857364e8a727be41b181731e03f478213e4558/docs/recipes/inference/reason2/worker_safety/worker_safety.py",
+      "repo_path": "docs/recipes/inference/reason2/worker_safety/worker_safety.py",
+      "local_path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/sources/cosmos-cookbook/worker_safety.py",
+      "sha256": "3e25233f824e29b5205c6cfb10900cf5bdf2c4ffae8cd91e0046cf200bcb01bc",
+      "bytes": 10087
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-cookbook/d0857364e8a727be41b181731e03f478213e4558/docs/getting_started/prompt_guide/reason_guide.md",
+      "repo_path": "docs/getting_started/prompt_guide/reason_guide.md",
+      "local_path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/sources/cosmos-cookbook/reason_guide.md",
+      "sha256": "49cfb4ece9b7c2a84d48c66a3eca81d654691565f30a768f7c0f4690ba24ef1f",
+      "bytes": 33083
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/nvidia-cosmos/cosmos-cookbook/d0857364e8a727be41b181731e03f478213e4558/LICENSE",
+      "repo_path": "LICENSE",
+      "local_path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/sources/cosmos-cookbook/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "unknown_decisions": 150,
+  "unique_requests": 75,
+  "actual_model_calls": 0,
+  "injected_answer_cases": 3,
+  "invalid_response_cases": 3,
+  "future_packet_rejected": true,
+  "missing_trigger_not_queried": true,
+  "baseline_unchanged": true,
+  "scope": "Full-frame verifier proposals for sparse point states; no procedural accuracy claim."
+}

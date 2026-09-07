@@ -1,0 +1,1877 @@
+[
+  {
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "entity_id": "ep-97a1a39b2e9490b6:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 12700000,
+    "allowed_start_us": 12700000,
+    "allowed_end_us": 12700001,
+    "as_of_us": 12950000,
+    "frames": [
+      {
+        "id": "141446c788b9316034c634f6",
+        "episode_id": "ep-97a1a39b2e9490b6",
+        "entity_id": "ep-97a1a39b2e9490b6:object-316",
+        "pts_us": 12700000,
+        "available_us": 12700000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/f261c12adc490418a32a.png",
+        "sha256": "276c6b3a765b60c7e5301ee881b6150b69cd8df5c0ea56db2fa75a74e0e7c970"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "d1bb4abb7251ad1bcaaa5aa416c5fee1ffea4afee7c5b30c5eb0ef2e0595e702"
+  },
+  {
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 3500000,
+    "allowed_start_us": 3500000,
+    "allowed_end_us": 3500001,
+    "as_of_us": 3750000,
+    "frames": [
+      {
+        "id": "514424972b48b0b3ffbace84",
+        "episode_id": "ep-c2ad5c5f7b67a9a8",
+        "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+        "pts_us": 3500000,
+        "available_us": 3500000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/70945a2c7d5062f8c2f2.png",
+        "sha256": "7cca9ffc97fe916d10cc3b727ca0b48483795266ebed038a8042b631d21357ec"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "0b1524b709668bd7d951f4ac7baa4593010bc17ee485dd1a1e0fbff601b08fb9"
+  },
+  {
+    "episode_id": "dv-008b5e55af631629",
+    "entity_id": "dv-008b5e55af631629:object-308",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 2800000,
+    "allowed_start_us": 2800000,
+    "allowed_end_us": 2800001,
+    "as_of_us": 3050000,
+    "frames": [
+      {
+        "id": "2841eff78a84b90fb1a90ad2",
+        "episode_id": "dv-008b5e55af631629",
+        "entity_id": "dv-008b5e55af631629:object-308",
+        "pts_us": 2800000,
+        "available_us": 2800000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/dc4b9a695b5c78073a7e.png",
+        "sha256": "a567f3609089777138884f8386e4e97f2f00051ad1ad146552f55515f55c8ccf"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "12a91eea9991c688b7b61c11e28fe24b528bdff579b0eb53f5fbf7cfb2628f16"
+  },
+  {
+    "episode_id": "ep-37909e041bc956c8",
+    "entity_id": "ep-37909e041bc956c8:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 8300000,
+    "allowed_start_us": 8300000,
+    "allowed_end_us": 8300001,
+    "as_of_us": 8550000,
+    "frames": [
+      {
+        "id": "8e7d76409c9324b521c561e0",
+        "episode_id": "ep-37909e041bc956c8",
+        "entity_id": "ep-37909e041bc956c8:object-316",
+        "pts_us": 8300000,
+        "available_us": 8300000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/481a44433018af60c66a.png",
+        "sha256": "a5c71d5271fa0ff5a84964e3bf092c064f7875cd4bfcbdf0050a23eff1f5690e"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "d9ccac03ecf508fcef55c177e3bfeb6664108088b6f0c91095c03dbd518de3ab"
+  },
+  {
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "entity_id": "dv-e2244cb1a1000aeb:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 2300000,
+    "allowed_start_us": 2300000,
+    "allowed_end_us": 2300001,
+    "as_of_us": 2550000,
+    "frames": [
+      {
+        "id": "467c549cb03ca8fa06f83717",
+        "episode_id": "dv-e2244cb1a1000aeb",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "pts_us": 2300000,
+        "available_us": 2300000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/dc24c549ddf6f2a2e66a.png",
+        "sha256": "c03efc1c1fa8e6a10973a46401bb8010330707fe6da812f41ecfd48f5c0a6fc5"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "d739ec991519cbaf59bb461d7f57fa2e668b14ca8e7611174e49aa48d1d8bcb9"
+  },
+  {
+    "episode_id": "ep-2a420ff714f0a8e5",
+    "entity_id": "ep-2a420ff714f0a8e5:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 5100000,
+    "allowed_start_us": 5100000,
+    "allowed_end_us": 5100001,
+    "as_of_us": 5350000,
+    "frames": [
+      {
+        "id": "88ef3dcb2f37bf07588b6433",
+        "episode_id": "ep-2a420ff714f0a8e5",
+        "entity_id": "ep-2a420ff714f0a8e5:object-316",
+        "pts_us": 5100000,
+        "available_us": 5100000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/b8e61217e4a904ed8980.png",
+        "sha256": "2cc87dbe6a8dfad5bf31172406b2f2ae3bd15f70ac9b4ae3a4eabe0c383b678c"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "9ca26053e6a3b3254310c788bc560ba5317481b791b16232ae5972abeb373fe5"
+  },
+  {
+    "episode_id": "dv-d6a1fa73f031c686",
+    "entity_id": "dv-d6a1fa73f031c686:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 800000,
+    "allowed_start_us": 800000,
+    "allowed_end_us": 800001,
+    "as_of_us": 1050000,
+    "frames": [
+      {
+        "id": "90bd8110771d05fc9085c451",
+        "episode_id": "dv-d6a1fa73f031c686",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "pts_us": 800000,
+        "available_us": 800000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/79c26846e9cc2fd6d3da.png",
+        "sha256": "0f369ed94a7c80cfaf8dd88c7b4c1c3494c8f90d321c28eb304ce6fa565588da"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "375be19361567796e5a493304809260a1722c3e7292741f475dd57177a1dd75e"
+  },
+  {
+    "episode_id": "dv-fff8ee5abe309115",
+    "entity_id": "dv-fff8ee5abe309115:object-308",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 0,
+    "allowed_start_us": 0,
+    "allowed_end_us": 1,
+    "as_of_us": 250000,
+    "frames": [
+      {
+        "id": "80e5d4d85cb7650064db9277",
+        "episode_id": "dv-fff8ee5abe309115",
+        "entity_id": "dv-fff8ee5abe309115:object-308",
+        "pts_us": 0,
+        "available_us": 0,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/6ddd132fba7487389e98.png",
+        "sha256": "4db618dc73ddc6e5f58bef96f16b1e96dcad254b6c0086e13ba7e732a5cb3361"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "727cd79cd2f91db8ad5eb60fe39c29c1f2ebe827ab7201dedc8032690596723e"
+  },
+  {
+    "episode_id": "ep-c1c313b64f579794",
+    "entity_id": "ep-c1c313b64f579794:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 10900000,
+    "allowed_start_us": 10900000,
+    "allowed_end_us": 10900001,
+    "as_of_us": 11150000,
+    "frames": [
+      {
+        "id": "140440af992a9c5e942834a6",
+        "episode_id": "ep-c1c313b64f579794",
+        "entity_id": "ep-c1c313b64f579794:object-316",
+        "pts_us": 10900000,
+        "available_us": 10900000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/88d8e848b9496c6201b2.png",
+        "sha256": "da7b0720103e77ef96c994cb878c1de18d14750bb19fd97fded12317183aa21a"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "bdac793948342cafbf78d01e5bd3c5e1867f192e116707ea38b919087c9b05c4"
+  },
+  {
+    "episode_id": "dv-d6a1fa73f031c686",
+    "entity_id": "dv-d6a1fa73f031c686:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 0,
+    "allowed_start_us": 0,
+    "allowed_end_us": 1,
+    "as_of_us": 250000,
+    "frames": [
+      {
+        "id": "efe7e7e79d3f586f701a878c",
+        "episode_id": "dv-d6a1fa73f031c686",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "pts_us": 0,
+        "available_us": 0,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/325160a04f6eb536fba3.png",
+        "sha256": "958f63334440e397cc0cdd1a23e9443e6ac140e3f491fe5f4a602f5857ce14a6"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "7b88dc02a165f3bdc60ee3373039d6073ba276c4cd54ee42a7cd972178b95f04"
+  },
+  {
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 10400000,
+    "allowed_start_us": 10400000,
+    "allowed_end_us": 10400001,
+    "as_of_us": 10650000,
+    "frames": [
+      {
+        "id": "7cfa5227ba88850ae7ff4f6c",
+        "episode_id": "ep-c2ad5c5f7b67a9a8",
+        "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+        "pts_us": 10400000,
+        "available_us": 10400000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/77beafb3eb06acf73212.png",
+        "sha256": "3544220def4a1aadb0f159bd6714711c081f05a18b911dbddb2cae1fb99afa92"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "08f8e0ecfdc910aa37a4018479d66ffcc524fd8ddf7816219dbae47810556c76"
+  },
+  {
+    "episode_id": "dv-d6a1fa73f031c686",
+    "entity_id": "dv-d6a1fa73f031c686:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 1500000,
+    "allowed_start_us": 1500000,
+    "allowed_end_us": 1500001,
+    "as_of_us": 1750000,
+    "frames": [
+      {
+        "id": "837a31d9a3d631c411ee1394",
+        "episode_id": "dv-d6a1fa73f031c686",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "pts_us": 1500000,
+        "available_us": 1500000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/aa8858ceb4bb02f0c1f7.png",
+        "sha256": "e752041fd0c21c55d770f8f81552859245d79280ec1d4cabd9355d596f48bc62"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "b2582dec1472879e94168590deb31cf7954e1383c021d91be4e9cc6f1e7a5383"
+  },
+  {
+    "episode_id": "dv-af669d3e3a486780",
+    "entity_id": "dv-af669d3e3a486780:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 5800000,
+    "allowed_start_us": 5800000,
+    "allowed_end_us": 5800001,
+    "as_of_us": 6050000,
+    "frames": [
+      {
+        "id": "ea2dcc6c9bc681384e0da4f5",
+        "episode_id": "dv-af669d3e3a486780",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "pts_us": 5800000,
+        "available_us": 5800000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/d8b07f0b431364d449be.png",
+        "sha256": "ca0cd5d1467cbcdbff147590ecca3901da1cd4fdaee4d88c0fed07226760e625"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "1f924fcd271e381cba04a487ca9fbafb170da5a15efb549184600d16d3f0f3df"
+  },
+  {
+    "episode_id": "ep-327429c08d46e616",
+    "entity_id": "ep-327429c08d46e616:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 22800000,
+    "allowed_start_us": 22800000,
+    "allowed_end_us": 22800001,
+    "as_of_us": 23050000,
+    "frames": [
+      {
+        "id": "f1f93cd70ee05f0a2acd6448",
+        "episode_id": "ep-327429c08d46e616",
+        "entity_id": "ep-327429c08d46e616:object-316",
+        "pts_us": 22800000,
+        "available_us": 22800000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/10d84923c896c1bf9155.png",
+        "sha256": "6a5d644ebcba23f7ff6583c9017267f521c94c6c4bdb05761308581e2f602545"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "87fc2242a69f5117a0f7e760899a29df4baff7f95a411dc8974db6098ef7d884"
+  },
+  {
+    "episode_id": "ep-327429c08d46e616",
+    "entity_id": "ep-327429c08d46e616:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 9100000,
+    "allowed_start_us": 9100000,
+    "allowed_end_us": 9100001,
+    "as_of_us": 9350000,
+    "frames": [
+      {
+        "id": "86c6b26990ac1375ce8949dc",
+        "episode_id": "ep-327429c08d46e616",
+        "entity_id": "ep-327429c08d46e616:object-316",
+        "pts_us": 9100000,
+        "available_us": 9100000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/f6dfff91883c848bec04.png",
+        "sha256": "24fe8ab507f1efb776e0f5d3754d9db6b8ee28c6c760d6eee58cac6d166f5cf1"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "1f23f5e3d93352eb63986abed692bbe5cbbaa08620e89bfe48fb1aff5a05c80a"
+  },
+  {
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "entity_id": "dv-e2244cb1a1000aeb:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 1500000,
+    "allowed_start_us": 1500000,
+    "allowed_end_us": 1500001,
+    "as_of_us": 1750000,
+    "frames": [
+      {
+        "id": "d4ec382c122af4393488253b",
+        "episode_id": "dv-e2244cb1a1000aeb",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "pts_us": 1500000,
+        "available_us": 1500000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/f64bc31c1fc0326c5bc8.png",
+        "sha256": "3ab9d2cabc47f7e9a574627dff5f37f3cbda89484e7abc9f244fa0ccc2271009"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "d04cdbfc1e0b644eca75710ee6ae2e4d0eabccf71f9099fba1129c01591522ea"
+  },
+  {
+    "episode_id": "dv-af669d3e3a486780",
+    "entity_id": "dv-af669d3e3a486780:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 4300000,
+    "allowed_start_us": 4300000,
+    "allowed_end_us": 4300001,
+    "as_of_us": 4550000,
+    "frames": [
+      {
+        "id": "a363454de88fb5a3eaa54131",
+        "episode_id": "dv-af669d3e3a486780",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "pts_us": 4300000,
+        "available_us": 4300000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/6841f9b19a46a0b2fbcf.png",
+        "sha256": "3311f024048ee8c0fc535e4380fc7a2f54ab0535ce8fdd39a9b8d63df83d657a"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "1a74c64838bca357b692e0a5943932eacceb613c530a513666905d44f962d83f"
+  },
+  {
+    "episode_id": "ep-2a420ff714f0a8e5",
+    "entity_id": "ep-2a420ff714f0a8e5:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 2600000,
+    "allowed_start_us": 2600000,
+    "allowed_end_us": 2600001,
+    "as_of_us": 2850000,
+    "frames": [
+      {
+        "id": "eae8a8ab9c4b38391c1bac94",
+        "episode_id": "ep-2a420ff714f0a8e5",
+        "entity_id": "ep-2a420ff714f0a8e5:object-316",
+        "pts_us": 2600000,
+        "available_us": 2600000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/89bfb29f6dd7af4a51c3.png",
+        "sha256": "0888472cb5fb9b88bfc34ba108db3273b193709aee41afb4d844e959b66929b2"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "bd20b2fc0f2e2c50801ca1e599c169f2eb2c0bf6568c46760b4cee042e5d85d9"
+  },
+  {
+    "episode_id": "dv-e1975790e6ee831e",
+    "entity_id": "dv-e1975790e6ee831e:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 5800000,
+    "allowed_start_us": 5800000,
+    "allowed_end_us": 5800001,
+    "as_of_us": 6050000,
+    "frames": [
+      {
+        "id": "f1a8f4dae38967dcb48a799c",
+        "episode_id": "dv-e1975790e6ee831e",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "pts_us": 5800000,
+        "available_us": 5800000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/26b3d6c18008f285898f.png",
+        "sha256": "d6f6795e04c5426444cc07bfca1e98be9590e12099b59cfc5df0e42fdae50802"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "f45343618612aaefeaceb833dbda75f9a4e1f1b5d4af02160de744e82cfbd6de"
+  },
+  {
+    "episode_id": "ep-e614ca27a15019cd",
+    "entity_id": "ep-e614ca27a15019cd:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 6700000,
+    "allowed_start_us": 6700000,
+    "allowed_end_us": 6700001,
+    "as_of_us": 6950000,
+    "frames": [
+      {
+        "id": "9519979e31f9717d2ed1f28f",
+        "episode_id": "ep-e614ca27a15019cd",
+        "entity_id": "ep-e614ca27a15019cd:object-316",
+        "pts_us": 6700000,
+        "available_us": 6700000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/6b7463467c7ad036e74a.png",
+        "sha256": "b1ee4b768d47831dc7ea45fa17b7c73512458be9ae0bb3116dfe838ce79909fb"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "19c8302206a79be9ec51ba140d0e78b18ccca77d6cbbd893310a9e6685ca11eb"
+  },
+  {
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "entity_id": "ep-97a1a39b2e9490b6:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 2500000,
+    "allowed_start_us": 2500000,
+    "allowed_end_us": 2500001,
+    "as_of_us": 2750000,
+    "frames": [
+      {
+        "id": "a19e997abe0988bfff2a4efd",
+        "episode_id": "ep-97a1a39b2e9490b6",
+        "entity_id": "ep-97a1a39b2e9490b6:object-316",
+        "pts_us": 2500000,
+        "available_us": 2500000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/d162eae088fefbb4fe52.png",
+        "sha256": "c6ca2cc7dea5b21d1af775e85e930c035c9a15496578c2b0dad1ecc914328d04"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "43254bdc3b8b21720f59c949501fb55fdf15ebf9d3de058bc5060df4289e0200"
+  },
+  {
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "entity_id": "ep-97a1a39b2e9490b6:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 5100000,
+    "allowed_start_us": 5100000,
+    "allowed_end_us": 5100001,
+    "as_of_us": 5350000,
+    "frames": [
+      {
+        "id": "71ac220e52193adb25d24b7e",
+        "episode_id": "ep-97a1a39b2e9490b6",
+        "entity_id": "ep-97a1a39b2e9490b6:object-316",
+        "pts_us": 5100000,
+        "available_us": 5100000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/77462200587a6d23368b.png",
+        "sha256": "f8c58098f76556ac0ffd3368442fdc5cbb6c3c0242ac86987bd4e13dd5b20efe"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "e6ebe6bf9c7da64adfb38c0dcc7e0252a668a626fadbb9abdb1eacf2bff621df"
+  },
+  {
+    "episode_id": "ep-33fbcce3c63f4265",
+    "entity_id": "ep-33fbcce3c63f4265:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 3600000,
+    "allowed_start_us": 3600000,
+    "allowed_end_us": 3600001,
+    "as_of_us": 3850000,
+    "frames": [
+      {
+        "id": "7c2147aea32f803d7e17db0f",
+        "episode_id": "ep-33fbcce3c63f4265",
+        "entity_id": "ep-33fbcce3c63f4265:object-316",
+        "pts_us": 3600000,
+        "available_us": 3600000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/05e2d0f965ed46b976a7.png",
+        "sha256": "925b104ee8b7c718967ff13d5a050292ad58118a5bbefe24179492db870a9232"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "b78dbbc533ad3bfe2357f7f7e286fc2c41523a98db83fef825a2db834b65b8ac"
+  },
+  {
+    "episode_id": "ep-b3f1b6687fc723ca",
+    "entity_id": "ep-b3f1b6687fc723ca:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 18800000,
+    "allowed_start_us": 18800000,
+    "allowed_end_us": 18800001,
+    "as_of_us": 19050000,
+    "frames": [
+      {
+        "id": "333e06ac9a09c30f29b6e93c",
+        "episode_id": "ep-b3f1b6687fc723ca",
+        "entity_id": "ep-b3f1b6687fc723ca:object-316",
+        "pts_us": 18800000,
+        "available_us": 18800000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/9a182bc921b61fba8177.png",
+        "sha256": "df08a805db666a04d782889a2c25dbe8eff2ea42f39fb0acdd7cf3267ee8b82a"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "67700931e0b9035d6a3abcc687c24934b4c6f61a2624abd41e48a0e8946325b3"
+  },
+  {
+    "episode_id": "ep-1779083be6e7d3b2",
+    "entity_id": "ep-1779083be6e7d3b2:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 8000000,
+    "allowed_start_us": 8000000,
+    "allowed_end_us": 8000001,
+    "as_of_us": 8250000,
+    "frames": [
+      {
+        "id": "b824f435eb7e25f69dbbaf17",
+        "episode_id": "ep-1779083be6e7d3b2",
+        "entity_id": "ep-1779083be6e7d3b2:object-316",
+        "pts_us": 8000000,
+        "available_us": 8000000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/2b0d5ae8a78b38751ebe.png",
+        "sha256": "9bdd0cbc0d99333c47c8182976ce83f27e40f11832ca133856fa17477d23c04c"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "15f29cf9a126f78723a676b9d7a41eeb9bfc296f714fc62dee51251b38a09186"
+  },
+  {
+    "episode_id": "ep-327429c08d46e616",
+    "entity_id": "ep-327429c08d46e616:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 0,
+    "allowed_start_us": 0,
+    "allowed_end_us": 1,
+    "as_of_us": 250000,
+    "frames": [
+      {
+        "id": "ad37e3eaeb651a0772a1d3f3",
+        "episode_id": "ep-327429c08d46e616",
+        "entity_id": "ep-327429c08d46e616:object-316",
+        "pts_us": 0,
+        "available_us": 0,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/49cd8b1fb5df92ed3363.png",
+        "sha256": "55b2c42c7fd93537e65bbc8f1e590c5d27e7d8866c830062af520c956c7c19fc"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "72a5fe7c51c9978eb9113ecdad17a256f1d7e56fe2f924b7d050011abc6cd43d"
+  },
+  {
+    "episode_id": "dv-008b5e55af631629",
+    "entity_id": "dv-008b5e55af631629:object-308",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 6900000,
+    "allowed_start_us": 6900000,
+    "allowed_end_us": 6900001,
+    "as_of_us": 7150000,
+    "frames": [
+      {
+        "id": "b2c68887030d7a09aaafa1f9",
+        "episode_id": "dv-008b5e55af631629",
+        "entity_id": "dv-008b5e55af631629:object-308",
+        "pts_us": 6900000,
+        "available_us": 6900000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/6a5bb4beddd18654115c.png",
+        "sha256": "095955f102309ec2993d528c9b2fb986c36e6512f44ed29e647602ef4a4900e0"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "89643574bac8e7bcd3c712b0c478787fa03b897ccb4af0eba5d2fb2aad826d73"
+  },
+  {
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "entity_id": "dv-e2244cb1a1000aeb:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 3800000,
+    "allowed_start_us": 3800000,
+    "allowed_end_us": 3800001,
+    "as_of_us": 4050000,
+    "frames": [
+      {
+        "id": "0c1c46be91ff4304157cb815",
+        "episode_id": "dv-e2244cb1a1000aeb",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "pts_us": 3800000,
+        "available_us": 3800000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/98f88d29e38ab6467e53.png",
+        "sha256": "0b4b990bc1a0cfceff2bc1945d455d12999173d1090c4179f99a07f78d89004b"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "664ea6e0dbeafe6e8ea169a70b288547a80c14fca02edb025898bf8febde0e84"
+  },
+  {
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "entity_id": "ep-97a1a39b2e9490b6:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 10200000,
+    "allowed_start_us": 10200000,
+    "allowed_end_us": 10200001,
+    "as_of_us": 10450000,
+    "frames": [
+      {
+        "id": "fdf8c4f873e577aa1b93c215",
+        "episode_id": "ep-97a1a39b2e9490b6",
+        "entity_id": "ep-97a1a39b2e9490b6:object-316",
+        "pts_us": 10200000,
+        "available_us": 10200000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/02fbdafff74cd1aa3ef0.png",
+        "sha256": "b270f6754131105c6c1c6f4eb794bc4a7357ce56f84adb353f8fa5d3e486ab1b"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "4f871e174ae0b5cc35f0d3a9e2d7084e189d9439d54a7541de395bb15c775583"
+  },
+  {
+    "episode_id": "dv-d6a1fa73f031c686",
+    "entity_id": "dv-d6a1fa73f031c686:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 2300000,
+    "allowed_start_us": 2300000,
+    "allowed_end_us": 2300001,
+    "as_of_us": 2550000,
+    "frames": [
+      {
+        "id": "f0aed7bffd7fcffe2c38664c",
+        "episode_id": "dv-d6a1fa73f031c686",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "pts_us": 2300000,
+        "available_us": 2300000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/e64b72c881b1ab686b0b.png",
+        "sha256": "51a948046edd0134d923f26375c05ce2c277eea7436c6fbba30c91713b975118"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "df44ecc03c4e7e5e8324a66e33ae36f669a7ed9c6b51dc373b81f10b991dccb4"
+  },
+  {
+    "episode_id": "ep-c1c313b64f579794",
+    "entity_id": "ep-c1c313b64f579794:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 8200000,
+    "allowed_start_us": 8200000,
+    "allowed_end_us": 8200001,
+    "as_of_us": 8450000,
+    "frames": [
+      {
+        "id": "be607800e5bac284719d1ed0",
+        "episode_id": "ep-c1c313b64f579794",
+        "entity_id": "ep-c1c313b64f579794:object-316",
+        "pts_us": 8200000,
+        "available_us": 8200000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/2072981e284caf125d35.png",
+        "sha256": "ed928d74d6c4fbcf319e539650a00b88e23517d93b062c66a07f6ed5f25d774b"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "d99e4892b144c859a8dd3f642b117dd66ae24527bd2c30fb3428216aa0fc90c3"
+  },
+  {
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 13900000,
+    "allowed_start_us": 13900000,
+    "allowed_end_us": 13900001,
+    "as_of_us": 14150000,
+    "frames": [
+      {
+        "id": "4b02546f2a4a11b8a8b0174a",
+        "episode_id": "ep-c2ad5c5f7b67a9a8",
+        "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+        "pts_us": 13900000,
+        "available_us": 13900000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/291a769cc28b8520527f.png",
+        "sha256": "dd26fbf3492473d6e5817346bf699355707f33883a574cfbef5b20e73bfbd4b6"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "146920fb3166f3e5ab2abba70fe3f9c16b24e97f1785b677bdc26312f07855ec"
+  },
+  {
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "entity_id": "dv-e2244cb1a1000aeb:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 0,
+    "allowed_start_us": 0,
+    "allowed_end_us": 1,
+    "as_of_us": 250000,
+    "frames": [
+      {
+        "id": "2e7c40339a3efc2254bde76e",
+        "episode_id": "dv-e2244cb1a1000aeb",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "pts_us": 0,
+        "available_us": 0,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/1bd7e6615b89580c9999.png",
+        "sha256": "acaf034199af4f77fedb17b2a16c52b31196540c5149d95ec8048476e96f9893"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "efadfe55e82d35d736a08af387d72964df9b7960c732678d982ce0483b2648a6"
+  },
+  {
+    "episode_id": "ep-3fc2ecf3a1ed6d99",
+    "entity_id": "ep-3fc2ecf3a1ed6d99:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 2700000,
+    "allowed_start_us": 2700000,
+    "allowed_end_us": 2700001,
+    "as_of_us": 2950000,
+    "frames": [
+      {
+        "id": "9ebc6dd50d1027317ad37b00",
+        "episode_id": "ep-3fc2ecf3a1ed6d99",
+        "entity_id": "ep-3fc2ecf3a1ed6d99:object-316",
+        "pts_us": 2700000,
+        "available_us": 2700000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/5fd318abfff04c8be902.png",
+        "sha256": "11f2e756caa6f0c4716858d6daa6a4b9371fa12693fccb04d709f03c77080940"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "7ab613b3184417aa32ad0160d32df2c68202b46a2a49acbd1ddcf130b2160ead"
+  },
+  {
+    "episode_id": "ep-2a420ff714f0a8e5",
+    "entity_id": "ep-2a420ff714f0a8e5:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 7700000,
+    "allowed_start_us": 7700000,
+    "allowed_end_us": 7700001,
+    "as_of_us": 7950000,
+    "frames": [
+      {
+        "id": "baaa70ffd85c13f77fae5bef",
+        "episode_id": "ep-2a420ff714f0a8e5",
+        "entity_id": "ep-2a420ff714f0a8e5:object-316",
+        "pts_us": 7700000,
+        "available_us": 7700000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/a36102f68a9bdd640786.png",
+        "sha256": "66b6c89a281d0595d5806d8e69bb0da1ea3e20f45b2c78166ea42ca967d56122"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "d0941e38feee96b6a5c7af5ae633798d97dfa23e538a0df6ea8f04fdaef54d69"
+  },
+  {
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "entity_id": "dv-e2244cb1a1000aeb:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 3000000,
+    "allowed_start_us": 3000000,
+    "allowed_end_us": 3000001,
+    "as_of_us": 3250000,
+    "frames": [
+      {
+        "id": "d2b1418591ee1040368ae835",
+        "episode_id": "dv-e2244cb1a1000aeb",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "pts_us": 3000000,
+        "available_us": 3000000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/ebf05194ed012d99b16a.png",
+        "sha256": "1b52e5541426dd6f3c159b8c960c035fb3a25df131691ccbc0f365bbb0a28525"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "ec4259872386d8aa396689ccd9b58ebd1cf7b0ae943e57836cc0f8664bb09a8b"
+  },
+  {
+    "episode_id": "dv-fff8ee5abe309115",
+    "entity_id": "dv-fff8ee5abe309115:object-308",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 2100000,
+    "allowed_start_us": 2100000,
+    "allowed_end_us": 2100001,
+    "as_of_us": 2350000,
+    "frames": [
+      {
+        "id": "8ef09a47749adf6c04ad6c96",
+        "episode_id": "dv-fff8ee5abe309115",
+        "entity_id": "dv-fff8ee5abe309115:object-308",
+        "pts_us": 2100000,
+        "available_us": 2100000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/e9ef76ecc8ce998cfd75.png",
+        "sha256": "35942fdfd567528ea3148e98ee775e4772a7401a7fddec27b8ca7d812801d9b0"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "b7f716d915ff429681a8ed84dc1af3fa38cc24ce424b17ce1094968a0ab50729"
+  },
+  {
+    "episode_id": "dv-af669d3e3a486780",
+    "entity_id": "dv-af669d3e3a486780:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 7200000,
+    "allowed_start_us": 7200000,
+    "allowed_end_us": 7200001,
+    "as_of_us": 7450000,
+    "frames": [
+      {
+        "id": "6a32a0db3b675000dddf892d",
+        "episode_id": "dv-af669d3e3a486780",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "pts_us": 7200000,
+        "available_us": 7200000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/3b2d8850f23d8ee56164.png",
+        "sha256": "0f6b52fddf16550634142a30cc933d34394d8db6dfcee3f022c02f2cfc7f91f2"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "bd177d85011050262806762d144e86af75517fe53e3a23dda7c08aa92b2fed6b"
+  },
+  {
+    "episode_id": "dv-fff8ee5abe309115",
+    "entity_id": "dv-fff8ee5abe309115:object-308",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 1400000,
+    "allowed_start_us": 1400000,
+    "allowed_end_us": 1400001,
+    "as_of_us": 1650000,
+    "frames": [
+      {
+        "id": "31655798773582082e2b7205",
+        "episode_id": "dv-fff8ee5abe309115",
+        "entity_id": "dv-fff8ee5abe309115:object-308",
+        "pts_us": 1400000,
+        "available_us": 1400000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/9b77d2897fc47f7d54fd.png",
+        "sha256": "1886d01ff6c2ba00203f3a82ebd2ad64f2612f8df69c58ef613d89fa35973e96"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "001c3ca672ed45c61d0f9fca5f6903b2b14be4e59591785a83919046dd0f9b41"
+  },
+  {
+    "episode_id": "ep-2a420ff714f0a8e5",
+    "entity_id": "ep-2a420ff714f0a8e5:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 10200000,
+    "allowed_start_us": 10200000,
+    "allowed_end_us": 10200001,
+    "as_of_us": 10450000,
+    "frames": [
+      {
+        "id": "42ad3495178619e8b7ca942f",
+        "episode_id": "ep-2a420ff714f0a8e5",
+        "entity_id": "ep-2a420ff714f0a8e5:object-316",
+        "pts_us": 10200000,
+        "available_us": 10200000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/a3a4ed623a954c350f9a.png",
+        "sha256": "ea248abe8d0dd793863af4ba40be043ebd0046a27917ef2d1ce72d06ffaef765"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "515699b7fff030ab303c0feec469f502fb4d590fd980f446530d00429fdf0319"
+  },
+  {
+    "episode_id": "dv-fff8ee5abe309115",
+    "entity_id": "dv-fff8ee5abe309115:object-308",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 3500000,
+    "allowed_start_us": 3500000,
+    "allowed_end_us": 3500001,
+    "as_of_us": 3750000,
+    "frames": [
+      {
+        "id": "9c2567ab120ee8966997ce5b",
+        "episode_id": "dv-fff8ee5abe309115",
+        "entity_id": "dv-fff8ee5abe309115:object-308",
+        "pts_us": 3500000,
+        "available_us": 3500000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/eec964e944474ac98069.png",
+        "sha256": "dd0567c0d72f7cbbd78485db92d9b302b16a2cabef89f044d9e104d9b5949003"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "0c3b3f0f05cb180554859f9ecd566db75d561c6fb310ad65b58072b573d4c241"
+  },
+  {
+    "episode_id": "dv-e1975790e6ee831e",
+    "entity_id": "dv-e1975790e6ee831e:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 4300000,
+    "allowed_start_us": 4300000,
+    "allowed_end_us": 4300001,
+    "as_of_us": 4550000,
+    "frames": [
+      {
+        "id": "16d0458bc01bef27ccfb2594",
+        "episode_id": "dv-e1975790e6ee831e",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "pts_us": 4300000,
+        "available_us": 4300000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/39256b36b90054852ffc.png",
+        "sha256": "8bdfc25c03a9a91bacce01a0f28d2374b48315d2e1de5940331144f31033578c"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "869f2d19189466ce3f2948cca42e0931c5bf67c59334d91da902a85c3b4f3f20"
+  },
+  {
+    "episode_id": "ep-33fbcce3c63f4265",
+    "entity_id": "ep-33fbcce3c63f4265:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 10700000,
+    "allowed_start_us": 10700000,
+    "allowed_end_us": 10700001,
+    "as_of_us": 10950000,
+    "frames": [
+      {
+        "id": "334f6cadd26301c2265e1897",
+        "episode_id": "ep-33fbcce3c63f4265",
+        "entity_id": "ep-33fbcce3c63f4265:object-316",
+        "pts_us": 10700000,
+        "available_us": 10700000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/857d5369628390c112a3.png",
+        "sha256": "196211f47eb8c6bccf6c2acfb47eaa62e2230b8fc6f3c296c7598dfea46c0a7f"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "d2b42aee4d280867f491ad16aceffe46e2f0f91406255fe0c6d7f28d6c07c770"
+  },
+  {
+    "episode_id": "ep-26448333df96e9bc",
+    "entity_id": "ep-26448333df96e9bc:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 10800000,
+    "allowed_start_us": 10800000,
+    "allowed_end_us": 10800001,
+    "as_of_us": 11050000,
+    "frames": [
+      {
+        "id": "fd529a87289f190fdef8966b",
+        "episode_id": "ep-26448333df96e9bc",
+        "entity_id": "ep-26448333df96e9bc:object-316",
+        "pts_us": 10800000,
+        "available_us": 10800000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/e7cf115774f508b74dc2.png",
+        "sha256": "31f5064276d3cfdea0d0e6e9810834d4724f56b83997efb466639aa41f2aa80e"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "1db1317672a13ed8ecde4c025d3474bc7f158b940aad0b774ff78c32a998f7ae"
+  },
+  {
+    "episode_id": "dv-e1975790e6ee831e",
+    "entity_id": "dv-e1975790e6ee831e:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 7200000,
+    "allowed_start_us": 7200000,
+    "allowed_end_us": 7200001,
+    "as_of_us": 7450000,
+    "frames": [
+      {
+        "id": "fe13f5ff537f0e4293cbb917",
+        "episode_id": "dv-e1975790e6ee831e",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "pts_us": 7200000,
+        "available_us": 7200000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/f9d1139afbf1b488a8ba.png",
+        "sha256": "520a433e1f31c74e93cc3d42a3cf664d4c5770fee0a7dbdbe6fd2b62846b571a"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "6eea1afb0ca5f543eb7e9946e12d02bf8d9088d447e6192371619344fa57a1b4"
+  },
+  {
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 17400000,
+    "allowed_start_us": 17400000,
+    "allowed_end_us": 17400001,
+    "as_of_us": 17650000,
+    "frames": [
+      {
+        "id": "d69a96fa3f322425dd9b79ad",
+        "episode_id": "ep-c2ad5c5f7b67a9a8",
+        "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+        "pts_us": 17400000,
+        "available_us": 17400000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/1e710ab4b57e0b424ce5.png",
+        "sha256": "fbf0295478fc32b1ecdf1d7f0fa4fa2ff362b9805e09999e45ede790aae6dfa0"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "8de82a35ad848b06c20d4985b9f5d06fad859150fdb5989f2adbf4e82e3cbd37"
+  },
+  {
+    "episode_id": "ep-c1c313b64f579794",
+    "entity_id": "ep-c1c313b64f579794:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 5400000,
+    "allowed_start_us": 5400000,
+    "allowed_end_us": 5400001,
+    "as_of_us": 5650000,
+    "frames": [
+      {
+        "id": "11ac9626034d472fc09e52ae",
+        "episode_id": "ep-c1c313b64f579794",
+        "entity_id": "ep-c1c313b64f579794:object-316",
+        "pts_us": 5400000,
+        "available_us": 5400000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/ec87f0b5ff9244ac0ac6.png",
+        "sha256": "b792d80b765e70f1363b55f58b006c06343d2cf9a3c1fe71e6e53f0e7bd89ad9"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "40246ee6af276942e0c50a4cef890e8cd9920f0b8a837999969ac87391bc4491"
+  },
+  {
+    "episode_id": "dv-d6a1fa73f031c686",
+    "entity_id": "dv-d6a1fa73f031c686:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 3000000,
+    "allowed_start_us": 3000000,
+    "allowed_end_us": 3000001,
+    "as_of_us": 3250000,
+    "frames": [
+      {
+        "id": "59e7b08c3f81f0148ee87ecb",
+        "episode_id": "dv-d6a1fa73f031c686",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "pts_us": 3000000,
+        "available_us": 3000000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/f29f72f1b843b07e3f76.png",
+        "sha256": "ea21e5d33a617dceea118dad17f597aafccde24c8f8d492ca3f9abdaaac56f1b"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "915f8c570cff1db67164549b55b1deda12209bc0408107637b83cf88936802a1"
+  },
+  {
+    "episode_id": "dv-e2244cb1a1000aeb",
+    "entity_id": "dv-e2244cb1a1000aeb:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 800000,
+    "allowed_start_us": 800000,
+    "allowed_end_us": 800001,
+    "as_of_us": 1050000,
+    "frames": [
+      {
+        "id": "98e5665dbe96722796e60fcf",
+        "episode_id": "dv-e2244cb1a1000aeb",
+        "entity_id": "dv-e2244cb1a1000aeb:object-174",
+        "pts_us": 800000,
+        "available_us": 800000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/cdda3b070fbff50974e4.png",
+        "sha256": "62afebb844f6dcb4ec7f82b99379b2a77585e8ec8c0f31f8f9d59a15a752a07b"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "da581aab5074be510827b82e608cc493beda66b25f3cd227fd46e9b7c5dc7f89"
+  },
+  {
+    "episode_id": "dv-e1975790e6ee831e",
+    "entity_id": "dv-e1975790e6ee831e:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 0,
+    "allowed_start_us": 0,
+    "allowed_end_us": 1,
+    "as_of_us": 250000,
+    "frames": [
+      {
+        "id": "e4a829e3e877ba63082d37e5",
+        "episode_id": "dv-e1975790e6ee831e",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "pts_us": 0,
+        "available_us": 0,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/48140edf80ae694779b0.png",
+        "sha256": "9dc78f3e30f47307b7bbfbea665d4a87e4485ac087b121ce7bc2a273d0776b1c"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "8266a247719a429ca6aeb629f932cfee9e6b5075bfce4c93cc672c52eab93d63"
+  },
+  {
+    "episode_id": "dv-e1975790e6ee831e",
+    "entity_id": "dv-e1975790e6ee831e:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 1400000,
+    "allowed_start_us": 1400000,
+    "allowed_end_us": 1400001,
+    "as_of_us": 1650000,
+    "frames": [
+      {
+        "id": "7c911cd5d0195c74153ebf85",
+        "episode_id": "dv-e1975790e6ee831e",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "pts_us": 1400000,
+        "available_us": 1400000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/d51b6da035bc72efb9e3.png",
+        "sha256": "571d76ab7172a97af17cb48de0354d18b61abe88595fd1dfc7146bcd851be37c"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "5a34a75c6083bd88cd8dc8e044b7ccda719f9729ca6919e1ba5534b5602d07de"
+  },
+  {
+    "episode_id": "ep-b3f1b6687fc723ca",
+    "entity_id": "ep-b3f1b6687fc723ca:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 9400000,
+    "allowed_start_us": 9400000,
+    "allowed_end_us": 9400001,
+    "as_of_us": 9650000,
+    "frames": [
+      {
+        "id": "9721de47f7714257e00a867a",
+        "episode_id": "ep-b3f1b6687fc723ca",
+        "entity_id": "ep-b3f1b6687fc723ca:object-316",
+        "pts_us": 9400000,
+        "available_us": 9400000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/dd7d4dc3eeef20d0a56a.png",
+        "sha256": "b6257778b2f5ab87773c71afbad9ff8c6dd4477e1cf87f6af11e64dcf9535e31"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "c85fd996bdc207657a504103ea2acd22b2f10d10c33157ffedeee743d54ecfed"
+  },
+  {
+    "episode_id": "dv-008b5e55af631629",
+    "entity_id": "dv-008b5e55af631629:object-308",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 1400000,
+    "allowed_start_us": 1400000,
+    "allowed_end_us": 1400001,
+    "as_of_us": 1650000,
+    "frames": [
+      {
+        "id": "bc0911c401e7875e91061344",
+        "episode_id": "dv-008b5e55af631629",
+        "entity_id": "dv-008b5e55af631629:object-308",
+        "pts_us": 1400000,
+        "available_us": 1400000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/2f135f655694d5340186.png",
+        "sha256": "cc1c538107f953c5f885cfc103fa8697c84bbef88dc27819c8b60026d424d504"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "df9b533572abe0ab5a1957a040eb74b4b4eba63f183b4e065d7725e43a1c73f7"
+  },
+  {
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "entity_id": "ep-97a1a39b2e9490b6:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 0,
+    "allowed_start_us": 0,
+    "allowed_end_us": 1,
+    "as_of_us": 250000,
+    "frames": [
+      {
+        "id": "e91455d1eaf3f4628af54a4d",
+        "episode_id": "ep-97a1a39b2e9490b6",
+        "entity_id": "ep-97a1a39b2e9490b6:object-316",
+        "pts_us": 0,
+        "available_us": 0,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/f58918dba779a9e08a50.png",
+        "sha256": "8ee9cc6915bbee72334df2f780490c9812dcfb7834d9960e2fccfa425479ca27"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "26c4581a13aee6dce015d5d0a9ef55c5cdbfd14c1081fdc66e002aaefdc7ac70"
+  },
+  {
+    "episode_id": "ep-97a1a39b2e9490b6",
+    "entity_id": "ep-97a1a39b2e9490b6:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 7600000,
+    "allowed_start_us": 7600000,
+    "allowed_end_us": 7600001,
+    "as_of_us": 7850000,
+    "frames": [
+      {
+        "id": "52018da30b8135314a7094e9",
+        "episode_id": "ep-97a1a39b2e9490b6",
+        "entity_id": "ep-97a1a39b2e9490b6:object-316",
+        "pts_us": 7600000,
+        "available_us": 7600000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/91d9f797ead94b8b028f.png",
+        "sha256": "213877807123156c3253372ee3c5cc6841166a7c624994895bdbc80cd9301007"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "4005baed3529518506df26e93f59c690789f8d067c89ca9e35bab7b77e972d05"
+  },
+  {
+    "episode_id": "dv-fff8ee5abe309115",
+    "entity_id": "dv-fff8ee5abe309115:object-308",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 2800000,
+    "allowed_start_us": 2800000,
+    "allowed_end_us": 2800001,
+    "as_of_us": 3050000,
+    "frames": [
+      {
+        "id": "e1d2668d7bba742ebe199d63",
+        "episode_id": "dv-fff8ee5abe309115",
+        "entity_id": "dv-fff8ee5abe309115:object-308",
+        "pts_us": 2800000,
+        "available_us": 2800000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/390e7a5585aad6fa0ee5.png",
+        "sha256": "90fad1fa69738c68305fc68b3710d18566b0010d5cc436d64b68c1522278fe24"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "3424d77da35bbf6c44f9affb5e2b1ed93fa90a7f240b198aa20f5305e5078ee7"
+  },
+  {
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 7000000,
+    "allowed_start_us": 7000000,
+    "allowed_end_us": 7000001,
+    "as_of_us": 7250000,
+    "frames": [
+      {
+        "id": "9cbf08cde155468dee424887",
+        "episode_id": "ep-c2ad5c5f7b67a9a8",
+        "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+        "pts_us": 7000000,
+        "available_us": 7000000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/e6c4ef61b658c58ecac8.png",
+        "sha256": "890c292c1e0d8d69b9b19603c989e536d654ae56f992c9c5153ac7e81b113951"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "8611dea5a440e9f9fd6d703ebe4e57b56514c3055e00ff2465370594793554af"
+  },
+  {
+    "episode_id": "ep-26448333df96e9bc",
+    "entity_id": "ep-26448333df96e9bc:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 3600000,
+    "allowed_start_us": 3600000,
+    "allowed_end_us": 3600001,
+    "as_of_us": 3850000,
+    "frames": [
+      {
+        "id": "76f7cd1324d153f29d6fa4ac",
+        "episode_id": "ep-26448333df96e9bc",
+        "entity_id": "ep-26448333df96e9bc:object-316",
+        "pts_us": 3600000,
+        "available_us": 3600000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/0388478d57dc6961ab34.png",
+        "sha256": "44c4fddce32e5aca3709539022a9ac851cf472fabc1f58f35117d9e877a37a76"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "5b98ad5ba0092403072ff8f552f5fc42928fe64167843d54412fa8567ba7ea2a"
+  },
+  {
+    "episode_id": "ep-c1c313b64f579794",
+    "entity_id": "ep-c1c313b64f579794:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 13600000,
+    "allowed_start_us": 13600000,
+    "allowed_end_us": 13600001,
+    "as_of_us": 13850000,
+    "frames": [
+      {
+        "id": "2ba86756722e977e9136f5ec",
+        "episode_id": "ep-c1c313b64f579794",
+        "entity_id": "ep-c1c313b64f579794:object-316",
+        "pts_us": 13600000,
+        "available_us": 13600000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/edd83f0be6d1c91f3928.png",
+        "sha256": "95cd79ac3c931ea11447d6d78cbae781c615608cea43b0e79c6a19abec26f639"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "d570f066d5c1aba125c2f63538692fb8ae58f068ca56259011690a0e8de342c8"
+  },
+  {
+    "episode_id": "ep-327429c08d46e616",
+    "entity_id": "ep-327429c08d46e616:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 18200000,
+    "allowed_start_us": 18200000,
+    "allowed_end_us": 18200001,
+    "as_of_us": 18450000,
+    "frames": [
+      {
+        "id": "9f5c79ae2f428a8ba360368f",
+        "episode_id": "ep-327429c08d46e616",
+        "entity_id": "ep-327429c08d46e616:object-316",
+        "pts_us": 18200000,
+        "available_us": 18200000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/c72b67756777c84b22b6.png",
+        "sha256": "460ce61e574c0486b1f6d48a4b10cea5307815b0b1ae0702836be32a65b683e8"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "6d298a37776d8a619e1128b1735714265d0fe39229cac540e385605cc5b9f33d"
+  },
+  {
+    "episode_id": "ep-26448333df96e9bc",
+    "entity_id": "ep-26448333df96e9bc:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 7200000,
+    "allowed_start_us": 7200000,
+    "allowed_end_us": 7200001,
+    "as_of_us": 7450000,
+    "frames": [
+      {
+        "id": "e009bb95e5d0e2ec8e33e1da",
+        "episode_id": "ep-26448333df96e9bc",
+        "entity_id": "ep-26448333df96e9bc:object-316",
+        "pts_us": 7200000,
+        "available_us": 7200000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/d8e1ea4f2df522577143.png",
+        "sha256": "1ffba10e77eebbfc01c00e003849c2e33062e7b098d828da1c57a112624443a0"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "568080a8db20a24bcb17b555688230734a776d5a4ce55553f54a1b61fb28b5c8"
+  },
+  {
+    "episode_id": "dv-008b5e55af631629",
+    "entity_id": "dv-008b5e55af631629:object-308",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 0,
+    "allowed_start_us": 0,
+    "allowed_end_us": 1,
+    "as_of_us": 250000,
+    "frames": [
+      {
+        "id": "5d4a12e0982680b61cf08bd5",
+        "episode_id": "dv-008b5e55af631629",
+        "entity_id": "dv-008b5e55af631629:object-308",
+        "pts_us": 0,
+        "available_us": 0,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/7f1ae70888f44c1635be.png",
+        "sha256": "6236bb5878b9e161565e95f95ea9242b6c6f90ad6b9feea37450d4db7094df5a"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "428049364668369431b651b22bbb87551374e613a141df4cd3f3000646bd7772"
+  },
+  {
+    "episode_id": "dv-ddf28e0a6b4c30db",
+    "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 6600000,
+    "allowed_start_us": 6600000,
+    "allowed_end_us": 6600001,
+    "as_of_us": 6850000,
+    "frames": [
+      {
+        "id": "6dbc5909141e7ef233eb9ee8",
+        "episode_id": "dv-ddf28e0a6b4c30db",
+        "entity_id": "dv-ddf28e0a6b4c30db:object-155",
+        "pts_us": 6600000,
+        "available_us": 6600000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/e7a35e506e70e5e76205.png",
+        "sha256": "17b26a94ba8f120db951b81ded1367cd4204afb188245803b8051fbd0bb298cb"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "34f105e120f3dff1b19f31ed87670facb3e8127832d5fbe26c1316a60eb62e3c"
+  },
+  {
+    "episode_id": "dv-d6a1fa73f031c686",
+    "entity_id": "dv-d6a1fa73f031c686:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 3800000,
+    "allowed_start_us": 3800000,
+    "allowed_end_us": 3800001,
+    "as_of_us": 4050000,
+    "frames": [
+      {
+        "id": "9b4169dd4eb02e2879e4a67a",
+        "episode_id": "dv-d6a1fa73f031c686",
+        "entity_id": "dv-d6a1fa73f031c686:object-174",
+        "pts_us": 3800000,
+        "available_us": 3800000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/8f9344968d1c0a03f3a4.png",
+        "sha256": "0fa6f2f8312a1613123ee86daf1c301d4f6619748e44ab3cf1504b6579907f9d"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "2eb267d2e7fe8ea13bde98f5b8630348c01edd818b3789e766dea6bb64031caf"
+  },
+  {
+    "episode_id": "dv-af669d3e3a486780",
+    "entity_id": "dv-af669d3e3a486780:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 1400000,
+    "allowed_start_us": 1400000,
+    "allowed_end_us": 1400001,
+    "as_of_us": 1650000,
+    "frames": [
+      {
+        "id": "46c6c0b8d402977e56e70144",
+        "episode_id": "dv-af669d3e3a486780",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "pts_us": 1400000,
+        "available_us": 1400000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/f3d36b8d9db5ad18729b.png",
+        "sha256": "6ba2c45d1bc951e40736919a8609a67d3b0e17896cfd54ade2c5f230e978c008"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "cb6c481ffd57b1d160783808c6b0efe6e503ee8aa91e4c85f16b81f1b5c45258"
+  },
+  {
+    "episode_id": "ep-e614ca27a15019cd",
+    "entity_id": "ep-e614ca27a15019cd:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 3400000,
+    "allowed_start_us": 3400000,
+    "allowed_end_us": 3400001,
+    "as_of_us": 3650000,
+    "frames": [
+      {
+        "id": "9d30132b7c1ec85c1aeedc53",
+        "episode_id": "ep-e614ca27a15019cd",
+        "entity_id": "ep-e614ca27a15019cd:object-316",
+        "pts_us": 3400000,
+        "available_us": 3400000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/8d8d40891305f65df55b.png",
+        "sha256": "cbbf0fd9d215817acf47908b462d758ea7b1eac1b3ddd9ea6e02afd34b403d01"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "8df0b9f1f0f0480aeebbdcc18a75d5329f2d57c1ff7608e0dfb005f7f91f989a"
+  },
+  {
+    "episode_id": "dv-e1975790e6ee831e",
+    "entity_id": "dv-e1975790e6ee831e:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 2900000,
+    "allowed_start_us": 2900000,
+    "allowed_end_us": 2900001,
+    "as_of_us": 3150000,
+    "frames": [
+      {
+        "id": "b6368a94a4f342ec739b7b97",
+        "episode_id": "dv-e1975790e6ee831e",
+        "entity_id": "dv-e1975790e6ee831e:object-174",
+        "pts_us": 2900000,
+        "available_us": 2900000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/325e171c971f4e451886.png",
+        "sha256": "22f268707eec1577e066052596620809e95f9a6d05130e598ca990d55193c670"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "bcce6d36e9cc44965c9f91a26de5aaabf3cb5058163ed0acab052e4a6d62255c"
+  },
+  {
+    "episode_id": "ep-327429c08d46e616",
+    "entity_id": "ep-327429c08d46e616:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 13700000,
+    "allowed_start_us": 13700000,
+    "allowed_end_us": 13700001,
+    "as_of_us": 13950000,
+    "frames": [
+      {
+        "id": "13a8aea687fae1603a1c0d39",
+        "episode_id": "ep-327429c08d46e616",
+        "entity_id": "ep-327429c08d46e616:object-316",
+        "pts_us": 13700000,
+        "available_us": 13700000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/eb622dd7e51d5e36975a.png",
+        "sha256": "29e54ee337e9d438dfe12dbeeb28b1a431558f5b4d718bed6038863f34c10ad5"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "5d0ae26d093433bee5f94c3078e7ea81b2b1f43742f150f52401d2f86dcbb48c"
+  },
+  {
+    "episode_id": "dv-fff8ee5abe309115",
+    "entity_id": "dv-fff8ee5abe309115:object-308",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 700000,
+    "allowed_start_us": 700000,
+    "allowed_end_us": 700001,
+    "as_of_us": 950000,
+    "frames": [
+      {
+        "id": "4b22336a5650d857866aff2c",
+        "episode_id": "dv-fff8ee5abe309115",
+        "entity_id": "dv-fff8ee5abe309115:object-308",
+        "pts_us": 700000,
+        "available_us": 700000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/e974f694eaade3626fd1.png",
+        "sha256": "c167210401a53c4016148f2c90c022443663cefa21b757eac416f18a9487b933"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "979f3394139ba26c3941f00cab851c736f0ac8724475e19a52e1e6ad70e9e32c"
+  },
+  {
+    "episode_id": "dv-af669d3e3a486780",
+    "entity_id": "dv-af669d3e3a486780:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 2900000,
+    "allowed_start_us": 2900000,
+    "allowed_end_us": 2900001,
+    "as_of_us": 3150000,
+    "frames": [
+      {
+        "id": "532173a7365c82cc5f6faed9",
+        "episode_id": "dv-af669d3e3a486780",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "pts_us": 2900000,
+        "available_us": 2900000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/00f9f41f212c8c4f4dad.png",
+        "sha256": "2e7a10ae8710b795bb2d13084c31bf9f57afdb7ed0db9c899c3ba19dd0240307"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "5d3c2742fd6d3424c8c85fdc7a566fd1db7ee85f1decf4ad2f9e16f6fe5a5a9d"
+  },
+  {
+    "episode_id": "ep-327429c08d46e616",
+    "entity_id": "ep-327429c08d46e616:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 4600000,
+    "allowed_start_us": 4600000,
+    "allowed_end_us": 4600001,
+    "as_of_us": 4850000,
+    "frames": [
+      {
+        "id": "ae6bb8596737d5b1e68b9c37",
+        "episode_id": "ep-327429c08d46e616",
+        "entity_id": "ep-327429c08d46e616:object-316",
+        "pts_us": 4600000,
+        "available_us": 4600000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/95e7689388bd9cba5e9e.png",
+        "sha256": "5fdfbe9cd7d036b3973c51b0dbb220eae9a047aaca94eed20b0e0c9621f73700"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "ba5d443b4894bdeaf7ec9a80cf1941694fd1a858ad95b947ef87b534037e853e"
+  },
+  {
+    "episode_id": "dv-008b5e55af631629",
+    "entity_id": "dv-008b5e55af631629:object-308",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 5500000,
+    "allowed_start_us": 5500000,
+    "allowed_end_us": 5500001,
+    "as_of_us": 5750000,
+    "frames": [
+      {
+        "id": "23116bd1d1ff93b8716d67d3",
+        "episode_id": "dv-008b5e55af631629",
+        "entity_id": "dv-008b5e55af631629:object-308",
+        "pts_us": 5500000,
+        "available_us": 5500000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/751121bf00d29dc96926.png",
+        "sha256": "68400eee901371bdc6540839e15475801a567ab3b73a05fcdaa8f8061fcb6099"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "502085e4e0e620d401f435f41e5e4ca9a5fcc6e2cc40268c46311a5a13214119"
+  },
+  {
+    "episode_id": "dv-7726ded72630455a",
+    "entity_id": "dv-7726ded72630455a:object-308",
+    "entity_label": "fridge",
+    "property": "door_open",
+    "question": "Is the fridge door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 5400000,
+    "allowed_start_us": 5400000,
+    "allowed_end_us": 5400001,
+    "as_of_us": 5650000,
+    "frames": [
+      {
+        "id": "cc3f88e1646ce25dd75fe530",
+        "episode_id": "dv-7726ded72630455a",
+        "entity_id": "dv-7726ded72630455a:object-308",
+        "pts_us": 5400000,
+        "available_us": 5400000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/0f41e8aef778f50b7efa.png",
+        "sha256": "e66f60a1c6a2b2bcb2a9f686c89da9254777bd91e18ba54714fc674d7aba85b1"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "3b0a04381f3094ce4d565e259f6502a89fbed0bacc4ab520659d395ae0ddd8f8"
+  },
+  {
+    "episode_id": "dv-af669d3e3a486780",
+    "entity_id": "dv-af669d3e3a486780:object-174",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 0,
+    "allowed_start_us": 0,
+    "allowed_end_us": 1,
+    "as_of_us": 250000,
+    "frames": [
+      {
+        "id": "d83a66c6b218c8b7e32dc0e9",
+        "episode_id": "dv-af669d3e3a486780",
+        "entity_id": "dv-af669d3e3a486780:object-174",
+        "pts_us": 0,
+        "available_us": 0,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/368fad1a2a15f4d014dd.png",
+        "sha256": "d25071c715e652c283c0b7b51b511c012306a466f5aaad9fad43f7b63e087e34"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "373d17971ddffd3552a58f1baa3a59963f17e4f84d0cb05d247beb835f48f757"
+  },
+  {
+    "episode_id": "ep-c2ad5c5f7b67a9a8",
+    "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+    "entity_label": "microwave",
+    "property": "door_open",
+    "question": "Is the microwave door visibly open in the approved frame? Answer unknown if obscured or not identifiable.",
+    "event_us": 0,
+    "allowed_start_us": 0,
+    "allowed_end_us": 1,
+    "as_of_us": 250000,
+    "frames": [
+      {
+        "id": "921e31ffe36166dcac848fd4",
+        "episode_id": "ep-c2ad5c5f7b67a9a8",
+        "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+        "pts_us": 0,
+        "available_us": 0,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/state-workbench/review-v2/79af8669313c04ae7467.png",
+        "sha256": "00ba3b01f01713efe62fb0b558bbc84b4dde08afbfbe6f7c93287656dda03fb9"
+      }
+    ],
+    "max_output_tokens": 256,
+    "deadline_ms": 60000,
+    "request_id": "9dab02382f4fa63ad2a1c2f8598d1dcd1e9db9c4d97c41efbc36649155236b55"
+  }
+]

@@ -12,3 +12,7 @@ Created independent project scope, detailed intern guide, implementation phases,
 ## 2026-09-06
 
 Design source committed as edd3d34. Six-page PDF passed visual review and individual dry-run/upload succeeded; receipts stored. Implementation tasks remain open.
+
+## 2026-09-07
+
+Implemented simplified replay contract (b223fba), core scheduler/history (1deb161), connected rule workload (05ea442), and inspected viewer/live inference/overload (c8edc9c). Twelve core and three API checks passed; screenshots and portable measured run evidence retained.

@@ -28,3 +28,7 @@ Step 6: froze twelve RGB-reviewed camera departures and causal YOLO proposal pol
 ## 2026-09-07
 
 Ticket closed
+
+## 2026-09-07
+
+R4 completed in 51b2f0f: twelve reviewed camera departures, 12/12 matched YOLO candidates, both accepted 8B verifiers at 2/6 violation recall, complete unknown/cost/latency report and RGB evidence. Completion slip printed successfully.

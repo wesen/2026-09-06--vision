@@ -20,12 +20,25 @@ RelatedFiles:
       Note: Visual review and artifact hashes
     - Path: repo://ttmp/2026/09/06/VIDEO-REPLAY-001--project-5-replay-and-incident-workbench/various/remarkable-upload.json
       Note: Successful individual delivery
+    - Path: repo://workbench/README.md
+      Note: User-facing replay reproduction instructions
+    - Path: repo://workbench/src/video_workbench/replay/__main__.py
+      Note: Executable replay and viewer commands
+    - Path: repo://workbench/src/video_workbench/replay/broker.py
+      Note: Released evidence boundary
+    - Path: repo://workbench/src/video_workbench/replay/clock.py
+      Note: Monotonic source/run mapping
+    - Path: repo://workbench/src/video_workbench/replay/store.py
+      Note: Immutable history and as-of pagination
+    - Path: repo://workbench/src/video_workbench/replay/worker.py
+      Note: Fixed recorded/live worker entry point
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T13:13:52.123558-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 

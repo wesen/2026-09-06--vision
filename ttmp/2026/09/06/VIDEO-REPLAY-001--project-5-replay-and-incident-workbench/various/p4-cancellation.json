@@ -1,0 +1,68 @@
+{
+  "run_id": "replay-74c0422360a547c1",
+  "status": "cancelled",
+  "horizon_us": 11096949,
+  "source_end_us": 274000000,
+  "wall_seconds": 5.5484764580614865,
+  "options": {
+    "episode_id": "ep-c1c313b64f579794",
+    "mode": "recorded",
+    "family": "qwen",
+    "speed": 2.0,
+    "repetitions": 20,
+    "max_jobs": 16,
+    "max_bytes": 16777216,
+    "perception_deadline_seconds": 2,
+    "verifier_deadline_seconds": 120,
+    "service_multiplier": 1.0
+  },
+  "scheduler": {
+    "queued": 0,
+    "running": null,
+    "admitted_jobs": 0,
+    "admitted_bytes": 0,
+    "max_jobs": 16,
+    "max_bytes": 16777216,
+    "high_jobs": 6,
+    "high_bytes": 1214867,
+    "counts": {
+      "submitted": 112,
+      "started": 108,
+      "completed": 107,
+      "cancelled": 5
+    }
+  },
+  "counts": {
+    "perception_completed": 107,
+    "candidates": 1,
+    "baseline_UNKNOWN": 1,
+    "perception_cancelled": 4,
+    "verifier_cancelled": 1
+  },
+  "peak_host_and_worker_rss_bytes": 119816192,
+  "error": null,
+  "latency_seconds": {
+    "queue": {
+      "count": 112,
+      "mean": 0.036186671888572164,
+      "p50": 0.013210749952122569,
+      "p95": 0.14871283411048353,
+      "max": 0.5640901669394225
+    },
+    "service": {
+      "count": 112,
+      "mean": 0.049195963161764666,
+      "p50": 0.050904582953080535,
+      "p95": 0.05466199992224574,
+      "max": 0.10770479217171669
+    },
+    "total": {
+      "count": 112,
+      "mean": 0.08538263505033683,
+      "p50": 0.06425345805473626,
+      "p95": 0.19994154199957848,
+      "max": 0.5640901669394225
+    }
+  },
+  "processed_frame_fraction": 0.03905109489051095
+}

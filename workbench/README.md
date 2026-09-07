@@ -110,3 +110,19 @@ Use a fresh destination for each call. `rules.handoff.investigate(..., profile=p
 Profiled calls now recover one observed missing reasoning closing tag when the entire final JSON passes strict validation. `raw`, `normalizations`, `recovery`, and `validation_policy` expose that behavior. Ambiguous boundaries, truncation, wrong answer enums, and invalid citations remain failures. Pass `recover_missing_close=False` to `verify` for strict output validation. Calls without a profile retain their existing visibility parser.
 
 The completed [Qwen/Cosmos reasoning comparison](../ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/reference/08-measured-qwen-and-cosmos-prompted-reasoning-comparison.md) records 384 development and 72 held-out calls. Both direct controls scored 22/24 on test; development-selected Cosmos reasoning scored 20/24. None resolved the two unknown test cases. Keep direct greedy as the practical reference for this task; prompted reasoning remains an explicit experiment option. This result does not evaluate Qwen Thinking weights, multi-image/video verification, or embedding quality.
+
+## Bounded replay and evidence viewer
+
+Replay the measured RULES recordings through a single bounded worker and inspect source video, sampled states, departure candidates, separate verifier decisions, and coverage gaps:
+
+```sh
+PYTHONPATH=workbench/src workbench/.venv/bin/python -m video_workbench.replay serve --port 8779
+PYTHONPATH=workbench/src workbench/.venv/bin/python -m video_workbench.replay run ep-c1c313b64f579794 --mode recorded
+PYTHONPATH=workbench/src workbench/.venv/bin/python -m video_workbench.replay run ep-7d3106fb1cac9776 --mode live_verifier --family qwen
+```
+
+Open <http://127.0.0.1:8779/>. Recorded mode schedules saved results with measured service durations. Live-verifier mode runs the accepted local model on approved exact-time frames; perception remains recorded in both modes. Input job/byte limits include running work, queue time consumes deadlines, and lost work remains visible as gaps. Long verifier calls can block perception with the current one-worker policy.
+
+The API accepts registered episode IDs only. The as-of slider hides results until their actual replay commitment time. Source playback is independent of that evidence horizon. Run files live under `output/replay-workbench/`; interrupted work is inspectable but is not automatically resumed.
+
+See [the measured replay report](../ttmp/2026/09/06/VIDEO-REPLAY-001--project-5-replay-and-incident-workbench/reference/02-measured-replay-viewer-and-bounded-scheduler-report.md) for reproduction, screenshots, measured overload, and limitations.

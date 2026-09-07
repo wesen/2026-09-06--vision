@@ -11,11 +11,12 @@ Intent: long-term
 Owners: []
 RelatedFiles: []
 ExternalSources: []
-Summary: ""
-LastUpdated: 2026-09-06T13:13:51.980005-04:00
+Summary: Implemented bounded recorded-perception replay, optional fresh verifier, immutable as-of history, and evidence viewer; advanced recovery and real-video transfer remain deferred.
+LastUpdated: 2026-09-07T01:28:01.992211-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # Project 5 - Replay and incident workbench
 

@@ -526,3 +526,5 @@ Strict test scores: Qwen 2B 13/24, Qwen 8B 16/24, both Cosmos sizes 0/24 because
 During normalized reporting, the first diagnostic categorizer mislabeled remaining binding failures as fence errors merely because raw text still contained a fence. Corrected categorization to use the post-normalization parser reason when a transformation has already occurred; scores were unchanged. Updated the normalized chart title to distinguish it from the strict plot. Original raw responses and scores remain unchanged.
 
 The original Step 7 no-failure note referred to process/tests during execution, not output correctness. The sweep is now complete, while broader V2/V4 scope remains open. No prompts were tuned and no embedding extraction was repeated. The 18 regression tests and 11 new output-boundary tests passed at their respective feature completion points.
+
+Completed evidence/report commit: `7ffab0b`. Completion slip printed successfully with HTTP 200 at `2026-09-07T01:34:11Z`; receipt archived in `various/rerun-done-print-receipt.json`.

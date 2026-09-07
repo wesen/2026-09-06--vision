@@ -60,3 +60,7 @@ Printed all five native FP32 plan/phase slips after explicit user approval; arch
 ## 2026-09-06
 
 Defer 8B native embedding pilot and matched 792-window comparison; four LATER tasks recorded, active work stays on generative verifiers.
+
+## 2026-09-06
+
+Added docs/playbooks/temporal-native-fp32.md with preflight, pilot, extraction, training, inspection, and recovery; links and command syntax verified, documented inspection passed on v1 without rerunning training.

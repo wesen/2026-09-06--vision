@@ -65,6 +65,8 @@ The first run is an exploratory negative result, with source-reviewed unknowns a
 
 ## Opt-in native video (MLX-VIDEO-FIX-001)
 
+For the frozen-window temporal experiment, see the [native FP32 TEMPORAL playbook](../docs/playbooks/temporal-native-fp32.md): prerequisites, pilot, full extraction, head training, comparison, and failure recovery.
+
 Native video uses the repaired fork at `6452614f6de04694d1e34fd13abaca11f6ffb994`, official Qwen weights at `9f2f7e710d6d81056aa5c0a4f04764fec6bb7bda`, FP32 inference, and pinned official Transformers preprocessing. It has a different feature space and clip cache. The community 4-bit checkpoint has not passed native-video acceptance.
 
 Keep `workbench/.venv` for the existing pooled-image baseline. Install native requirements in a separate environment; never sync both runtime extras into one environment. The existing isolated repair environment is `output/mlx-video-fix/.venv`. For a fresh environment:

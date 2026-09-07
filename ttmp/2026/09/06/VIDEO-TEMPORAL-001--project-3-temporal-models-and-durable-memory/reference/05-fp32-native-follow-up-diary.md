@@ -10,12 +10,16 @@ DocType: reference
 Intent: long-term
 Owners: []
 RelatedFiles:
+    - Path: repo://docs/playbooks/temporal-native-fp32.md
+      Note: Standalone operational guide with validated inspection command
     - Path: repo://ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory/reference/06-native-fp32-temporal-benchmark-measured-findings.md
       Note: Measured findings and experiment limits
     - Path: repo://ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory/various/native-fp32-v1/results.json
       Note: Paired result evidence
     - Path: repo://ttmp/2026/09/06/VIDEO-TEMPORAL-001--project-3-temporal-models-and-durable-memory/various/native-fp32-v1/smoke.json
       Note: Final artifact and causality verification
+    - Path: repo://workbench/README.md
+      Note: Native setup section links to the playbook
     - Path: repo://workbench/src/video_workbench/native_video.py
       Note: Accepted official FP32 runtime and preprocessing gates
     - Path: repo://workbench/src/video_workbench/temporal/benchmark.py
@@ -32,6 +36,7 @@ LastUpdated: 2026-09-06T20:21:56.172291-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -300,3 +305,52 @@ Recorded a separate 8B native embedding proposal and four explicitly deferred ta
 - Candidate: `Qwen/Qwen3-VL-Embedding-8B`.
 - Existing producer and comparison: `temporal/encode_native.py`, `temporal/native_compare.py`.
 - Existing reference commits: `176a300`, `8e59d45`, `209cea4`.
+
+## Step 5: Publish a runnable native comparison playbook
+
+Created `docs/playbooks/temporal-native-fp32.md` to collect the runtime prerequisites, frozen-data checks, optional pilot, full extraction, head training, result inspection, and failure recovery. Linked it from the workbench README and ticket index so operators can find it without reading the experiment history.
+
+### Prompt Context
+
+**User prompt (verbatim):** "Ok, create playbook"
+
+**Additional user prompt (verbatim):** "and commit"
+
+**Assistant interpretation:** Publish and commit a standalone operational guide.
+
+**Inferred user intent:** Make the completed experiment easy for another implementer to reproduce and inspect.
+
+### What I did
+- Added commands using a fresh run destination and the two existing isolated interpreters.
+- Documented incomplete-run recovery, expected artifacts, measured timings, and interpretation limits.
+- Validated local links, all shell blocks with `bash -n`, and embedded Python with `compile`.
+- Executed the documented final inspection command on the existing v1 artifacts.
+
+### Why
+- The previous reproduction section lacked a complete operator sequence and explicit recovery instructions.
+
+### What worked
+- The documented inspection passed population, feature/result/checkpoint hash, preserved pooled source, and causal checks.
+- All playbook links resolve and all command snippets are syntactically valid.
+
+### What didn't work
+- No execution failures. An initially incorrect ticket-relative link was corrected before validation and commit.
+
+### What I learned
+- A completed run can be checked without loading the native model or repeating training.
+
+### What was tricky to build
+- Extraction permits a pilot alongside a fresh full cache, but comparison rejects any existing head-output directories. The playbook distinguishes these destination requirements and documents copying completed features into a new run root after training interruption.
+
+### What warrants a second pair of eyes
+- Ignored local videos, weights, and dataset artifacts are prerequisites; a clone alone is insufficient.
+
+### What should be done in the future
+- N/A.
+
+### Code review instructions
+- Read the playbook from prerequisites through inspection, then follow its links to the producer and comparison implementation.
+- GPU extraction and training were not rerun for this documentation change.
+
+### Technical details
+- The example new destination is `output/temporal-native-fp32-v2`; existing-run inspection uses v1 only.

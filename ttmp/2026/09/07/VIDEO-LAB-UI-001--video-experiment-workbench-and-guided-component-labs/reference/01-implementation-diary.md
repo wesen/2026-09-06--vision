@@ -16,6 +16,8 @@ RelatedFiles:
       Note: Separate searchable project browser
     - Path: repo://workbench/src/video_workbench/lab/handoff.py
       Note: Detector crop resolution and provenance validation (bc4916f)
+    - Path: repo://workbench/src/video_workbench/lab/presentation.py
+      Note: Shared prompt preview and safe highlighted YAML rendering
     - Path: repo://workbench/src/video_workbench/lab/resources.py
       Note: Curated resources and Markdown/source renderer
 ExternalSources: []
@@ -24,6 +26,7 @@ LastUpdated: 2026-09-07T10:05:37.359166-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -745,3 +748,61 @@ Start with lab/handoff.py, follow Manager.start admission and saved request cons
 ### Technical details
 
 Draft endpoint: POST /v1/lab/handoff. The request binding contains parent run/frame/detection IDs plus padding. Submission snapshots parent request/result hashes and verifies evidence-source equality. The selected interval is [10000000,10000001) microseconds; actual crop is [167,94,352,383]. Server was idle before restart; the live service remains on mimimi:8780. Source implementation commit: bc4916f.
+
+## Step 13: Expose editable reasoning prompts and readable YAML
+
+Added an editable pre-run user prompt to the experiment controls and replaced raw-data JSON panels with highlighted YAML. The same default template builder now serves preview and inference, while custom text is snapshotted before model execution.
+
+A real Qwen crop experiment confirmed that the edited textarea, immutable snapshot and runtime prompt were identical. Screenshots preserve the editor and highlighted output for a later report.
+
+### Prompt Context
+
+**User prompt (verbatim):** render raw data as yaml with syntax highliting, not raw json. Display and allow editing prompt in the "choose an experiment" part (if possible).
+
+**Follow-up prompt (verbatim):** also don't forget to ccommit at appropriate intervals and keep a detailed diary as you work (using the diary format from the skill), if you haven't
+
+**Assistant interpretation:** Make model instructions editable and structured evidence easier to inspect while preserving exact experiment provenance.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+**Commit (code):** cab931d
+
+### What I did
+
+Added lab/presentation.py, prompt preview and YAML rendering endpoints, optional validated prompt configuration, pre-run snapshots, a keyword-only worker override, editor/reset/restore controls and lazy YAML views. Declared the already installed PyYAML dependency. Updated the technical guide and measured walkthrough.
+
+### Why
+
+The user should see and experiment with instructions before paying for inference, and read multiline prompt/output evidence without JSON escape clutter.
+
+### What worked
+
+Nine lab tests passed, followed by 38 existing profile/visibility tests. The added null regression test passed after its fix. Browser reset and saved-prompt restoration passed. Qwen run run-805e04781b4846b7 completed in 12.096 seconds; snapshot and runtime prompt matched the edited text exactly. YAML output contained syntax-highlight spans.
+
+### What didn't work
+
+Browser probe POST /v1/lab/render-yaml with body null initially returned HTTP 422 because FastAPI treated the required body as absent. Changed Body(...) to Body(default=None) and added a regression test. Existing Starlette/httpx and AnyIO deprecation warnings remained.
+
+### What I learned
+
+Default prompt generation must be shared with the actual verifier, rather than duplicated in JavaScript. Displaying a user message before execution is distinct from showing the model-specific chat template, which is resolved by the runtime.
+
+### What was tricky to build
+
+Asynchronous default refreshes could overwrite edits; a generation counter invalidates old requests, and custom text is retained literally. Saved-run loading restores custom/default mode explicitly. Optional comparison values require the YAML endpoint to accept null.
+
+### What warrants a second pair of eyes
+
+Custom prompts can violate the expected output schema or ask a different question; the UI explains that parsing and door-state rule semantics remain fixed. The safe YAML dumper and Pygments escaping are covered by a script-tag test.
+
+### What should be done in the future
+
+Gather feedback on prompt editing and record controlled prompt comparisons with independent visual reviews. A successful custom-prompt run is not evidence of improved accuracy.
+
+### Code review instructions
+
+Read presentation.reasoning_prompt, manager prompt_snapshot, and the worker override path first. Then review refreshPrompt/loadRunSettings and viewer.jsonDetails. Inspect p13 screenshots and the saved smoke run.
+
+### Technical details
+
+API: POST /v1/lab/prompt and POST /v1/lab/render-yaml. Optional options.prompt is limited to 16000 characters. Actual input pixels, system message, formatted prompt and raw model output remain recorded. Implementation commit cab931d; source and UI service remain available on mimimi:8780.

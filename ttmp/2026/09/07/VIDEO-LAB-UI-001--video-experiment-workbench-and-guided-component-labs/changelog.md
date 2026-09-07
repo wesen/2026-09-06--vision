@@ -27,3 +27,7 @@
 ## 2026-09-07
 
 Step 12: detector-to-reasoner crop drafts, validated provenance, eight passing lab tests and real Qwen browser smoke (bc4916f).
+
+## 2026-09-07
+
+Step 13: editable pre-run prompts, immutable prompt snapshots and highlighted YAML evidence; real Qwen smoke verified exact text (cab931d).

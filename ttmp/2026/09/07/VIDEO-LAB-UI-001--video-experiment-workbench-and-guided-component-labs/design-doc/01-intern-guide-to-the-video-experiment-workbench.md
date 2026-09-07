@@ -361,3 +361,40 @@ The one-microsecond half-open interval selects the saved timestamp without subst
 - `workbench/tests/test_lab.py::test_detection_handoff_nested_crop_and_binding`: nested crop offsets, unsupported edits, missing detection and unsafe parent identifier rejection.
 
 The UI displays an explicit **Detach detection provenance to edit evidence** control. Detaching creates an ordinary independent experiment; the old parent result remains unchanged. Keeping the binding while editing protected fields produces HTTP 422. Comparisons list differing handoff references alongside other option differences and continue comparing actual image hashes and timestamps. A full-frame versus crop comparison changes visual evidence, so it is an input intervention rather than an isolated model comparison.
+
+## Editable prompts and highlighted YAML
+
+The **Choose an experiment** panel now displays the user message for Reasoning and States before execution. The default template follows the selected target and generation profile. Editing the textarea creates a literal custom prompt; changing target or profile subsequently does not rewrite those edits. **Reset to default prompt** restores the selected template. The system message is visible but fixed by the accepted model profile: Qwen has no explicit system message, while Cosmos uses `You are a helpful assistant.`.
+
+Image F1 is supplied separately from the text and remains the exact selected frame/crop. The textarea contains the user message before chat-template formatting. The runtime's actual `formatted_prompt`, including image placeholders and any system message, remains inspectable after execution. States use the same prompt independently for each frame, not a multi-image conversation. The parser still expects the door-state response schema; editing the task or output format does not create a new parser or change the rule semantics.
+
+```text
+form target/profile → default template → optional literal edit
+                    → prompt preview endpoint
+Run experiment      → immutable prompt snapshot + SHA-256
+                    → existing model chat template + exact image
+                    → raw output + existing visibility/schema validation
+```
+
+`POST /v1/lab/prompt` accepts the experiment configuration and returns `prompt`, `system_prompt`, `custom`, `sha256` and scope. It needs no model loading or image decoding. `Experiment.prompt` is optional, nonblank when supplied, limited to 16,000 characters, and supported only for reasoning/state components. The manager stores `request.prompt_snapshot` before launching inference; the lab worker passes its exact text through the verifier worker's explicit keyword-only override. Other verifier callers retain their existing default prompt behavior. Saved custom prompts restore with **Load settings to modify and rerun**, and comparison differences include the prompt option.
+
+All expandable structured-data panels now render YAML through PyYAML and Pygments. Multiline text uses block scalars so prompts and responses are readable without escaped newline sequences. YAML is a presentation format: persisted artifacts and API transport remain JSON. Highlighting is rendered locally, HTML content is escaped, and code text retains the requested sans-serif font. Panels render on expansion to avoid formatting large results unnecessarily; null values are supported, including unset comparison options.
+
+Implementation references:
+
+- `lab/presentation.py`: default/custom prompt preview, SHA-256 and YAML highlighting.
+- `lab/analysis.js`: prompt editor, default reset, saved prompt restoration and comparison display.
+- `lab/viewer.html::jsonDetails`: lazy highlighted YAML display for structured panels.
+- `lab/manager.py`: pre-inference prompt snapshot.
+- `verifiers/visibility.py`: shared default text builders used by preview and validated verifier requests.
+- `verifiers/worker.py::run`: explicit prompt override before model chat-template formatting.
+
+### Validation and measured execution
+
+Nine lab tests passed after implementation; 38 existing visibility/profile tests passed after extracting the shared default template builder. A subsequent null-body renderer regression test passed after correcting an HTTP 422 response for JSON `null`. Browser checks verified custom prompt restoration and default reset. The runtime/output YAML panel contained 293 highlighted spans.
+
+Qwen run `run-805e04781b4846b7` used the earlier exact refrigerator crop with the default prompt plus `Check visible door edges carefully.`. It completed in 12.096 seconds with a valid `closed` answer. The editor text exactly matched both `request.prompt_snapshot.prompt` and `result.records[0].runtime.prompt`. This checks prompt transmission, not an accuracy improvement.
+
+![Editable user prompt](../various/p13-prompt-editor.png)
+
+![Syntax-highlighted YAML runtime evidence](../various/p13-highlighted-yaml.png)

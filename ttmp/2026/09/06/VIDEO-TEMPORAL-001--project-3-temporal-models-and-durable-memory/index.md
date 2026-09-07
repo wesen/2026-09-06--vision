@@ -1,7 +1,7 @@
 ---
 Title: Project 3 - Temporal models and durable memory
 Ticket: VIDEO-TEMPORAL-001
-Status: complete
+Status: active
 Topics:
     - video
     - embeddings
@@ -50,3 +50,8 @@ Uploaded to `/ai/2026/09/06/VIDEO-TEMPORAL-001/VIDEO-TEMPORAL-001_Intern_Guide.p
 
 - [PDF review and hashes](various/pdf-validation.json)
 - [Upload receipt](various/remarkable-upload.json)
+
+
+## Active native FP32 follow-up
+
+Reopened at the user's request to measure repaired native-video features before drawing conclusions from the pooled TEMPORAL results. The completed initial scope above remains historical. See [comparison design](design-doc/02-fp32-native-temporal-feature-comparison-design.md) and [follow-up diary](reference/05-fp32-native-follow-up-diary.md).

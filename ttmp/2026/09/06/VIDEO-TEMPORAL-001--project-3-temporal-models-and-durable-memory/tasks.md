@@ -37,3 +37,11 @@
 The user requested wrap-up after questioning speculative memory machinery. Closure covers the implemented observation store, exact-sample as-of queries, actual producer replay, and rule handoff. General supersession, retraction, expiry, uncertainty-interval reconciliation, and continuous-state inference are explicitly deferred until a concrete consumer requires them; they are not completed implementation claims. The original intern guide remains an immutable record of the initial design and delivery.
 
 The measured comparisons and observation memory are complete. See `reference/04-observation-memory-and-practical-rule-handoff.md`, the final vault report in `various/vault-report.md`, and diary Step 10 for the closure decision and publication receipt.
+
+
+## Native FP32 follow-up
+
+- [ ] N1: Implement native dense producer and validate an eight-window pixel-sensitive pilot with accepted runtime provenance.
+- [ ] N2: Extract and source-audit all 792 matched native FP32 windows without changing pooled artifacts.
+- [ ] N3: Train fresh ridge and TCN heads under the existing development-selection policy; save matched per-class/paired comparisons.
+- [ ] N4: Publish measured native-versus-pooled findings, figure, diary, commits, and phase-slip receipts.

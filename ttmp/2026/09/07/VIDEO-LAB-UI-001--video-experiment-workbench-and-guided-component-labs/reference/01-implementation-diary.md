@@ -83,3 +83,61 @@ After each significant feature, run the web UI and allow me to play with it to g
 
 - Baseline commit: 881cb1f. Source originals procedural_video_labs.zip and video_understanding_for_procedural_work.md are unrelated and remain untracked.
 - Guide destination: /ai/2026/09/07/VIDEO-LAB-UI-001.
+
+## Step 2: Deliver guide and expose exact evidence workspace
+
+Implemented the first usable laboratory page with 121 corpus-qualified sources, PTS-based sampling, normalized crops, exact PNG previews and component-specific teaching panels. The page is running on port 8780 and the user has been invited to try it before further UI decisions.
+
+### Prompt Context
+
+**User prompt (verbatim):** (see Step 1)
+
+**Assistant interpretation:** Deliver a working evidence-selection feature and ask for feedback while developing independent inference adapters.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+### What I did
+
+- Created lab catalog, contracts, evidence preparation, FastAPI app and responsive HTML UI.
+- Uploaded Video Laboratory Intern Design Guide.pdf to /ai/2026/09/07/VIDEO-LAB-UI-001.
+- Captured various/p2-workspace.png and ran two focused smoke tests.
+
+### Why
+
+Exact inputs and corpus identity must exist before component outputs can be compared.
+
+### What worked
+
+- reMarkable reported OK: uploaded.
+- Browser selected home-v1--ep-7d3106fb1cac9776 and decoded two exact frames without error.
+- pytest workbench/tests/test_lab.py: 2 passed.
+
+### What didn't work
+
+- Initial upload: Error: pandoc failed: xelatex not found. Fixed PATH=/Library/TeX/texbin:$PATH and explicit Helvetica/Menlo fonts using the existing TeX installation.
+- Initial server startup: ValueError: conflicting source identity. Corpus versions reuse episode IDs with different bytes; fixed by dataset-qualified laboratory IDs.
+- Browser initially reported a missing favicon; no application execution failure.
+
+### What I learned
+
+121 model-safe recordings are available across corpus versions, considerably more than the twelve replay measurement recordings.
+
+### What was tricky to build
+
+An episode ID is only unique within a corpus version. The catalog retains original_episode_id for artifact matching but uses dataset--episode_id as the UI identity; hashes remain authoritative.
+
+### What warrants a second pair of eyes
+
+Check crop and timestamp presentation and whether the shared layout leaves enough room for model controls.
+
+### What should be done in the future
+
+Connect immutable run supervision and actual perception/reasoning execution, then review the UI again.
+
+### Code review instructions
+
+Read lab/contracts.py, evidence.py and catalog.py. Run PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_lab.py -q. Try http://127.0.0.1:8780/.
+
+### Technical details
+
+Design commit 37e1019. Server process 28859. Preview maximum 64 actual samples; full-frame evidence unchanged by browser seeking. Plan and P1 start slips printed at 14:06:01Z and 14:06:20Z.

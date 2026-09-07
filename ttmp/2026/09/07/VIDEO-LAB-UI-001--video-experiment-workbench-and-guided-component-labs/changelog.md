@@ -21,3 +21,5 @@
 - Fixed eight-frame preview overflow with shrinkable columns and wrapping thumbnails. Added combined preset/component/model history filters shared by comparison selectors; responsive and filter browser smoke passed.
 
 - Embedding comparisons now overlay both curves on shared time and score axes, with A/B legends, distinct colors/styles and exact-value hover labels. Browser smoke and screenshot archived.
+
+- Comparison selections and filters now persist in the URL, including automatic chart restoration and browser Back/Forward. Added a permalink link, stale-request guards and URL restoration screenshot.

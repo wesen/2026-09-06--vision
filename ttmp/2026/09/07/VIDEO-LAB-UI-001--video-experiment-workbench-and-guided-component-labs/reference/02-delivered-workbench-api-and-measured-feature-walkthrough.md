@@ -145,3 +145,9 @@ Input thumbnails wrap into rows within the evidence column. The parameter column
 Embedding comparisons now show A and B on one chart. Time and similarity bounds are computed from both runs together. The mint solid and orange dashed curves retain their own window membership and raw scores, and hover labels identify the run and interval. Shared axes support direct visual reading; they do not calibrate separate feature spaces or combine their vectors. Per-run ranking lists remain below the chart.
 
 ![Embedding curves overlaid on shared axes](../various/p10-shared-embedding-overlay.png)
+
+## 10. Sharing and refreshing comparisons
+
+The address bar records run A (`a`), run B (`b`), history filters (`history_preset`, `history_component`, `history_model`), selected `tab`, and `compare=1` when a comparison is displayed. Copy the URL or the **Comparison permalink** link. Opening it restores selections and redraws the chart without starting inference. Browser Back/Forward restore earlier comparison choices. The linked run artifacts must still exist on the serving Mac.
+
+[Native versus pooled comparison example](http://mimimi:8780/?tab=history&history_component=embeddings&a=run-c91ef4d1a5c54ed9&b=run-cb3fcc4c7afa4e55&compare=1)

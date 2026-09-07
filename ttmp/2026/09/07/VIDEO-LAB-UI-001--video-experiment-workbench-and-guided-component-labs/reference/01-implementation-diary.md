@@ -629,3 +629,60 @@ Inspect analysis.js addSimilarityPlot and comparison rendering. Compare the save
 ### Technical details
 
 UI-only asset change; no model inference or server restart. Screenshot and diary preserve the comparison evidence.
+
+## Step 11: Restore and share comparison settings through the URL
+
+Added URL state for comparison selections and history filters. A shared URL now restores the selected view and automatically redraws an active comparison, while browser Back and Forward restore previous choices.
+
+### Prompt Context
+
+**User prompt (verbatim):** "Add selected settings for comparison in the URL so we can refresh / share url."
+
+**Assistant interpretation:** Preserve comparison settings across refresh and make comparisons shareable on the existing Tailscale service.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+### What I did
+
+- Added query parameters for run A/B, preset/component/model filters, selected tab and active comparison.
+- Added a Comparison permalink link and browser history updates for user selection changes.
+- Restore state after loading run history; fetch linked runs individually if outside the recent list.
+- Reject invalid IDs, unknown filters and linked runs excluded by filters rather than silently comparing other runs.
+- Guard asynchronous comparisons so older results cannot overwrite a later selection.
+- Captured p11-restored-comparison-url.png.
+
+### Why
+
+Refreshing previously lost selected runs and filters, making it difficult to reproduce or share a comparison.
+
+### What worked
+
+Browser created a URL for native-versus-pooled embeddings with the embeddings component filter. Opening that URL restored the history tab, exact A/B IDs, filter and two overlaid curves with no error. Changing the model filter updated the URL; browser Back restored the original model filter and comparison chart.
+
+### What didn't work
+
+No failure in the URL round-trip or browser-back smoke.
+
+### What I learned
+
+Restoration must wait until filter/select options exist. Links must resolve run IDs directly because shared runs can eventually fall outside the recent-history page.
+
+### What was tricky to build
+
+URL restoration and user selection changes both trigger asynchronous data loading. Restoration suppresses history writes, comparison requests have generation guards, and filter changes invalidate any pending chart to avoid stale output.
+
+### What warrants a second pair of eyes
+
+Open a shared comparison link from the user's other tailnet device and verify the same runs and filters appear. Source run artifacts must remain available on this Mac.
+
+### What should be done in the future
+
+Continue the screenshot trail for the future report; add more URL state only when needed by a concrete workflow.
+
+### Code review instructions
+
+Read saveComparisonUrl, refreshHistory restoration and the comparison request generation guard in analysis.js. Create a filtered comparison, refresh its URL, change a filter and use browser Back.
+
+### Technical details
+
+Query fields: tab, a, b, history_preset, history_component, history_model, compare=1. No inference or server restart was needed; links reference saved runs on mimimi:8780.

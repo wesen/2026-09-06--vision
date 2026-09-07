@@ -1,5 +1,23 @@
 // Comparisons and reviews always bind saved run IDs, never current form values.
 let historyRuns=[];
+let comparisonUrlReady=false, restoringComparisonUrl=false, comparisonRequestGeneration=0;
+const comparisonParams={historyPreset:'history_preset',historyComponent:'history_component',historyModel:'history_model',compareA:'a',compareB:'b'};
+function saveComparisonUrl(rendered=false) {
+    if(!comparisonUrlReady || restoringComparisonUrl)return;
+    const url=new URL(location.href);
+    url.searchParams.set('tab',document.querySelector('[data-tab].active')?.dataset.tab||'history');
+    for(const [id,param] of Object.entries(comparisonParams)) {
+        if($(id).value)url.searchParams.set(param,$(id).value);else url.searchParams.delete(param);
+    }
+    if(rendered)url.searchParams.set('compare','1');else url.searchParams.delete('compare');
+    if(url.href!==location.href)history.pushState(null,'',url);
+    $('comparisonLink').href=url.href;
+}
+function clearComparison() {
+    comparisonRequestGeneration++;
+    $('comparison').replaceChildren();
+}
+
 const experimentPresets = {
     masks: {component:'segmentation',model:'yolo11n-seg',fps:2},
     point: {component:'reasoning',model:'qwen',fps:1},
@@ -36,12 +54,21 @@ function renderHistory() {
     $('compareButton').disabled=filtered.length<2;
 }
 let historyGeneration=0;
-async function refreshHistory() {
+async function refreshHistory(restore=false) {
     const generation=++historyGeneration;
     try {
         const data=await api('/v1/lab/runs');
         if(generation!==historyGeneration)return;
         historyRuns=data.runs;
+        // A shared comparison can refer to runs outside the recent-history page.
+        const params=new URLSearchParams(location.search);
+        const missing=[...new Set(['a','b'].map(key=>params.get(key)).filter(Boolean))].filter(id=>!historyRuns.some(r=>r.run_id===id));
+        for(const id of missing) {
+            if(!/^run-[a-f0-9]{16}$/.test(id))throw Error('Invalid run ID in comparison URL');
+            const run=await api('/v1/lab/runs/'+id);
+            if(generation!==historyGeneration)return;
+            historyRuns.push(run);
+        }
         for(const [id,key] of [['historyComponent','component'],['historyModel','model']]) {
             const previous=$(id).value;
             $(id).replaceChildren(new Option(key==='model'?'All models':'All components',''),
@@ -49,10 +76,38 @@ async function refreshHistory() {
             $(id).value=previous;
         }
         renderHistory();
-    }catch(error){fail(error)}
+        if(!comparisonUrlReady || restore) {
+            restoringComparisonUrl=true;
+            try {
+                $('error').textContent='';
+                clearComparison();
+                for(const id of ['historyPreset','historyComponent','historyModel']) {
+                    const value=params.get(comparisonParams[id])||'';
+                    if(![...$(id).options].some(o=>o.value===value))throw Error('Unknown filter in comparison URL: '+comparisonParams[id]);
+                    $(id).value=value;
+                }
+                renderHistory();
+                for(const id of ['compareA','compareB']) {
+                    const value=params.get(comparisonParams[id]);
+                    if(value) {
+                        if(![...$(id).options].some(o=>o.value===value))throw Error('Linked run is excluded by the URL filters: '+value);
+                        $(id).value=value;
+                    }
+                }
+                const tab=params.get('tab')||(params.has('a')||params.has('b')?'history':'results');
+                if(['results','guide','history'].includes(tab))document.querySelector('[data-tab="'+tab+'"]').click();
+                comparisonUrlReady=true;
+                $('comparisonLink').href=location.href;
+                if(params.get('compare')==='1') {
+                    if(!params.get('a')||!params.get('b'))throw Error('Comparison URL requires both run IDs');
+                    await $('compareButton').onclick();
+                }
+            }finally{restoringComparisonUrl=false;comparisonUrlReady=true;}
+        }
+    }catch(error){comparisonUrlReady=true;fail(error)}
 }
-for(const id of ['historyPreset','historyComponent','historyModel'])$(id).onchange=()=>{$('comparison').replaceChildren();renderHistory()};
-$('clearHistoryFilters').onclick=()=>{for(const id of ['historyPreset','historyComponent','historyModel'])$(id).value='';$('comparison').replaceChildren();renderHistory()};
+for(const id of ['historyPreset','historyComponent','historyModel'])$(id).onchange=()=>{clearComparison();renderHistory();saveComparisonUrl()};
+$('clearHistoryFilters').onclick=()=>{for(const id of ['historyPreset','historyComponent','historyModel'])$(id).value='';clearComparison();renderHistory();saveComparisonUrl()};
 function addSimilarityPlot(container, series, comparison=false) {
     const ns='http://www.w3.org/2000/svg';
     const all=series.flatMap(s=>s.windows);
@@ -103,9 +158,16 @@ function addSimilarityPlot(container, series, comparison=false) {
 function addPlot(container,windows){addSimilarityPlot(container,[{label:'Window similarity',windows}])}
 const oldRenderResult=renderResult;
 renderResult=function(record){oldRenderResult(record);const body=$('resultBody');if(record.result?.windows)addPlot(body,record.result.windows);if(record.result?.action_windows){body.append(node('h3','Fresh action predictions'),node('p',record.result.scope));const table=node('table');for(const row of record.result.action_windows){const tr=node('tr');[`${row.start_us/1e6}–${row.end_us/1e6} s`,row.prediction,'PTS '+row.pts_us.map(t=>t/1e6).join(', ')].forEach(x=>tr.append(node('td',x)));table.append(tr)}body.append(table)}if(record.status==='completed'){const panel=node('div');panel.append(node('h3','Review this saved experiment'));const verdict=node('select');['correct','incorrect','unjudgeable'].forEach(v=>verdict.append(new Option(v,v)));verdict.value='unjudgeable';const note=node('textarea');note.placeholder='Describe the visual evidence and what was right, wrong, or impossible to judge.';note.setAttribute('aria-label','Review explanation');const save=node('button','Save independent review'),status=node('p');save.onclick=async()=>{try{const result=await api('/v1/lab/runs/'+record.run_id+'/reviews',{verdict:verdict.value,note:note.value});status.textContent='Saved '+result.review_id+' · source partition '+result.source.split}catch(e){status.textContent=e.message}};const exp=node('a','Export experiment and reviews');exp.href='/v1/lab/runs/'+record.run_id+'/export';exp.target='_blank';panel.append(verdict,note,save,status,exp,node('p','Reviews are separate annotations. Predictions stay unchanged; exported cases retain their source partition.','muted'));body.append(panel);if(['reasoning','states'].includes(record.result?.kind)){const box=node('details');box.open=true;box.append(node('summary','Evaluate a rule using these exact state samples'));const t=node('input');t.type='number';t.step='.1';t.value=record.request.options.start_us/1e6;const label=node('label','User-selected trigger time (source seconds)');label.append(t);const expected=node('select');expected.append(new Option('Door must be closed','false'),new Option('Door must be open','true'));const run=node('button','Evaluate exact-point rule'),out=node('div');run.onclick=async()=>{try{const r=await api('/v1/lab/runs/'+record.run_id+'/rule',{event_us:Math.round(Number(t.value)*1e6),expected_open:expected.value==='true'});out.replaceChildren(node('h3',r.decision.status),node('p',r.decision.reason),node('p',r.scope),jsonDetails('Rule and supporting evidence',r))}catch(e){out.textContent=e.message}};box.append(node('p','This is a manually selected point, not a detected departure. A known matching state gives PASS, a contradiction gives VIOLATION, and no exact sample gives UNKNOWN. Nearby samples are not substituted.'),label,expected,run,out);body.append(box)}}};
-$('compareButton').onclick=async()=>{try{const a=$('compareA').value,b=$('compareB').value;if(!a||!b)throw Error('Choose two saved runs');const report=await api('/v1/lab/compare?a='+a+'&b='+b),records=await Promise.all([api('/v1/lab/runs/'+a),api('/v1/lab/runs/'+b)]),body=$('comparison');body.replaceChildren(node('h3',report.same_evidence?'Matched visual evidence':'Different visual evidence'),node('p',report.interpretation));if(report.feature_note)body.append(node('p',report.feature_note));const table=node('table');for(const d of report.differences){const tr=node('tr');[d.field,JSON.stringify(d.a),JSON.stringify(d.b)].forEach(x=>tr.append(node('td',x)));table.append(tr)}body.append(table);const embeddingSeries=records.map((r,i)=>r.result?.windows?.length?{label:`${i?'B':'A'} · ${r.request.options.model} · ${r.run_id}`,windows:r.result.windows}:null).filter(Boolean);if(embeddingSeries.length){body.append(node('h3','Embedding similarity overlay'));addSimilarityPlot(body,embeddingSeries,true)}const grid=node('div',undefined,'result-grid');for(const r of records){const col=node('article');col.append(node('h3',r.request.options.model+' · '+r.status));for(const row of r.result?.records||[]){const img=node('img');img.src=artifactUrl(r.run_id,row.overlay||row.frame.file);img.alt='Comparison evidence';col.append(img,node('p',`${row.frame.pts_us/1e6} s · ${row.state||row.detections.length+' detections'}`));if(row.parsed)col.append(node('p',row.parsed.answer?.rationale||row.parsed.reason||''))}if(r.result?.action_windows){for(const w of r.result.action_windows)col.append(node('p',`${w.start_us/1e6}–${w.end_us/1e6} s · ${w.prediction}`))}if(r.result?.windows){for(const i of r.result.ranking){const w=r.result.windows[i];col.append(node('p',`${w.start_us/1e6}–${w.end_us/1e6} s · ${w.score.toFixed(4)}`))}}grid.append(col)}body.append(grid,jsonDetails('Comparison contract',report))}catch(e){fail(e)}};
+$('compareButton').onclick=async()=>{const generation=++comparisonRequestGeneration;try{const a=$('compareA').value,b=$('compareB').value;if(!a||!b)throw Error('Choose two saved runs');saveComparisonUrl(true);const report=await api('/v1/lab/compare?a='+a+'&b='+b),records=await Promise.all([api('/v1/lab/runs/'+a),api('/v1/lab/runs/'+b)]),body=$('comparison');if(generation!==comparisonRequestGeneration)return;body.replaceChildren(node('h3',report.same_evidence?'Matched visual evidence':'Different visual evidence'),node('p',report.interpretation));if(report.feature_note)body.append(node('p',report.feature_note));const table=node('table');for(const d of report.differences){const tr=node('tr');[d.field,JSON.stringify(d.a),JSON.stringify(d.b)].forEach(x=>tr.append(node('td',x)));table.append(tr)}body.append(table);const embeddingSeries=records.map((r,i)=>r.result?.windows?.length?{label:`${i?'B':'A'} · ${r.request.options.model} · ${r.run_id}`,windows:r.result.windows}:null).filter(Boolean);if(embeddingSeries.length){body.append(node('h3','Embedding similarity overlay'));addSimilarityPlot(body,embeddingSeries,true)}const grid=node('div',undefined,'result-grid');for(const r of records){const col=node('article');col.append(node('h3',r.request.options.model+' · '+r.status));for(const row of r.result?.records||[]){const img=node('img');img.src=artifactUrl(r.run_id,row.overlay||row.frame.file);img.alt='Comparison evidence';col.append(img,node('p',`${row.frame.pts_us/1e6} s · ${row.state||row.detections.length+' detections'}`));if(row.parsed)col.append(node('p',row.parsed.answer?.rationale||row.parsed.reason||''))}if(r.result?.action_windows){for(const w of r.result.action_windows)col.append(node('p',`${w.start_us/1e6}–${w.end_us/1e6} s · ${w.prediction}`))}if(r.result?.windows){for(const i of r.result.ranking){const w=r.result.windows[i];col.append(node('p',`${w.start_us/1e6}–${w.end_us/1e6} s · ${w.score.toFixed(4)}`))}}grid.append(col)}body.append(grid,jsonDetails('Comparison contract',report))}catch(e){if(generation===comparisonRequestGeneration)fail(e)}};
 $('inspectActions').onclick=async()=>{try{const r=await api('/v1/lab/actions/inspect',selection()),out=$('actionResults');out.replaceChildren(node('p',r.scope||r.reason));if(r.records.length){const table=node('table'),head=node('tr');['Saved model','Window (s)','Prediction','Actual PTS'].forEach(x=>head.append(node('th',x)));table.append(head);for(const row of r.records){const tr=node('tr');[row.model,`${row.start_us/1e6}–${row.end_us/1e6}`,row.prediction,row.pts_us.map(x=>x/1e6).join(', ')].forEach(x=>tr.append(node('td',x)));table.append(tr)}out.append(table)}out.append(jsonDetails('Frozen action provenance',r))}catch(e){fail(e)}};
 $('preset').onchange=()=>{const value=$('preset').value;if(!value)return;const p=experimentPresets[value];$('component').value=p.component;componentChanged();$('model').value=p.model;$('fps').value=p.fps;if(value==='point')$('end').value=(Number($('start').value)+.1).toFixed(3);modelChanged();$('previewStatus').textContent='Preset applied. Preview the changed selection before running.'};
+for(const id of ['compareA','compareB'])$(id).onchange=()=>{clearComparison();saveComparisonUrl()};
+window.addEventListener('popstate',()=>{clearComparison();refreshHistory(true)});
+document.querySelectorAll('[data-tab]').forEach(button=>button.addEventListener('click',()=>{
+    if(!comparisonUrlReady||restoringComparisonUrl)return;
+    const url=new URL(location.href);url.searchParams.set('tab',button.dataset.tab);
+    if(url.href!==location.href)history.pushState(null,'',url);
+}));
 refreshHistory();
 
 // A saved result has its own player. Seeking it never relabels the editable form.

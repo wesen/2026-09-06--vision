@@ -796,3 +796,63 @@ Added a concrete follow-up design and five implementation tasks. The first exper
 - Proposed common ceiling: 4096 generated tokens, 120-second deadline; existing callers retain their requested budgets.
 - Proposed raw/worker limits: 256 KiB UTF-8 raw text and one MiB serialized worker result; final JSON remains limited to 16000 characters.
 - Sampled seeds: 3407, 3408, 3409. Selection averages per case before comparing arms.
+
+## Step 13: Make the Cosmos reasoning follow-up concrete
+
+Added a dedicated Cosmos experiment design and C1–C4 tasks. It uses the existing 8B conversion and the shared profile/parser implementation from design 02, while freezing NVIDIA-specific prompting and decoding choices explicitly.
+
+### Prompt Context
+
+**User prompt (verbatim):** "and for cosmos reason?"
+
+**Assistant interpretation:** Provide the same concrete follow-up design and implementation breakdown for Cosmos Reason2.
+
+**Inferred user intent:** Ensure both verifier candidates receive equivalent investigation rather than leaving Cosmos as a vague later task.
+
+### What I did
+
+- Added design 03 with four fixed-checkpoint arms, explicit reasoning output grammar, budgets, selection policy, and implementation dependencies.
+- Added C1–C4 and linked the original Cosmos research note to the concrete design.
+- Re-read the archived official inference defaults to specify the reasoning sampling profile accurately.
+
+### Why
+
+- Both prompt and decoding change in a vendor-style reasoning run; controlled arms distinguish their effects.
+- Shared adapter work should be implemented once and used by both model experiments.
+
+### What worked
+
+- Existing local Cosmos weights and conversion provenance support the proposed experiment without another model download.
+- The same final visibility contract and host identity binding can validate Cosmos output after explicit reasoning extraction.
+
+### What didn't work
+
+- No execution failures occurred. No model runs or production changes were made during this design step.
+
+### What I learned
+
+- The direct arm using reasoning sampling must be labeled a control, not the official default direct profile.
+- Shared test cases can leak information across model experiments if the second model's prompt is tuned after viewing the first model's test errors.
+
+### What was tricky to build
+
+- The official minimal system message differs from the historical worker prompt. Applying it to all new arms yields a matched control, but historical-to-new changes cannot be attributed solely to reasoning.
+- Reusing a test population is defensible only when both protocols are frozen before any shared test results are inspected; otherwise collect new Cosmos cases.
+
+### What warrants a second pair of eyes
+
+- Check actual MLX template/output boundaries against the frozen reasoning convention and verify profile parameters are applied rather than ignored.
+
+### What should be done in the future
+
+- Implement shared R1–R2, then C1–C4, keeping semantic abstention acceptance separate from parser/runtime success.
+
+### Code review instructions
+
+- Read design 03 alongside design 02 and the archived `inference.py:get_defaults` source.
+- Validate ticket metadata and diff hygiene; no application tests are needed for these documentation-only changes.
+
+### Technical details
+
+- Reasoning sampling: temperature 0.6, top-p 0.95, top-k 20, repetition penalty 1.0, presence penalty 0.0; seeds 1234–1236.
+- Proposed common ceiling: 4096 tokens and 120 seconds, contingent on the shared contract update and development pilot.

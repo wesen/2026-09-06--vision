@@ -40,3 +40,7 @@ Step 11: archived 16 Qwen primary sources, reviewed Instruct versus Thinking and
 ## 2026-09-06
 
 Step 12: design 02 and R1–R5 specify prompted reasoning on the existing Qwen Instruct checkpoint, crossed with decoding profiles; explicit extraction, resource bounds, fresh evaluation and separate later Thinking comparison.
+
+## 2026-09-06
+
+Step 13: dedicated Cosmos design 03 and C1–C4 tasks specify fixed-checkpoint reasoning/decoding controls, shared adapter reuse, final-answer validation and cross-model test isolation.

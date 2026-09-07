@@ -92,3 +92,7 @@ The repository now also documents a 32B Reason2 model and states that ongoing de
 - [NVIDIA prompting guide](https://nvidia-cosmos.github.io/cosmos-cookbook/getting_started/prompt_guide/reason_guide.html)
 - [Worker safety recipe](https://nvidia-cosmos.github.io/cosmos-cookbook/recipes/inference/reason2/worker_safety/inference.html)
 - Local implementation: `workbench/src/video_workbench/verifiers/worker.py`, `visibility.py`, `adapter.py`; `workbench/src/video_workbench/rules/handoff.py`.
+
+## Concrete follow-up design
+
+See [design 03](../design-doc/03-cosmos-reason2-prompted-reasoning-and-decoding-experiment.md) and tasks C1–C4 for the fixed-checkpoint Cosmos direct/reasoning experiment. It reuses the shared bounded profile/parser implementation from design 02 and explicitly controls decoding, system-message changes, resource limits, and cross-model test leakage.

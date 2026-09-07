@@ -50,7 +50,7 @@ The historical 8B runtime smoke is complete. Subsequent work below accepts the b
 - [x] Later: evaluate visibility-aware abstention and a host-owned request envelope on a separately planned development/evaluation protocol.
 
 These point-state comparisons do not complete multi-image/native-video, temporal-insufficiency, full rationale-support, or end-to-end rule evaluation acceptance.
-- [ ] Follow-up: compare direct versus explicit NVIDIA reasoning configuration on development; freeze prompt, final-answer parser, sampling controls, larger budget and deadline before fresh test evaluation. <!-- t:ln02 -->
+- [ ] Cosmos tracking item (C1–C4 below): compare direct versus explicit NVIDIA reasoning configuration on development; freeze prompt, final-answer parser, sampling controls, larger budget and deadline before fresh test evaluation. <!-- t:ln02 -->
 
 Accepted V2–V4 checkmarks above cover the bounded single-image contract and reviewed point-state comparison only. Multi-image/native-video support, full rationale-support scoring, reliable abstention, and end-to-end rule recall remain open. See references 05 and 06.
 - [ ] Qwen follow-up (implemented through R1–R4 below): compare explicit Instruct decoding and prompted step-by-step reasoning against the greedy direct baseline; record seed, penalty scope and processed image dimensions. <!-- t:9y1n -->
@@ -66,3 +66,11 @@ The existing broad Qwen/Cosmos follow-ups remain tracking items; R1–R5 below a
 - [ ] R3: pilot budgets on development, freeze fresh reviewed dev/test episodes and four Qwen Instruct arms: direct/reasoning crossed with greedy/sampled decoding; keep three predefined sampled seeds. <!-- t:pmfe -->
 - [ ] R4: run frozen development selection and untouched test/control comparison; report abstention, unsupported certainty, final-rationale support, failures and resource costs with visual case galleries. <!-- t:ker0 -->
 - [ ] R5: smoke-test parser/budget/process failure boundaries at feature completion, validate one live selected-style RULES handoff, and publish evidence/diary before separate Cosmos or Qwen Thinking comparisons. <!-- t:ng4c -->
+
+## Cosmos Reason2 experiment — design 03
+
+Reuse shared R1–R2 before C1–C4. Freeze both model protocols before examining a shared test set; otherwise collect fresh Cosmos test cases.
+- [ ] C1: pin the existing Cosmos 8B conversion and add four direct/reasoning x greedy/reasoning-sampling profiles with common minimal system prompt and preserved media-first template. <!-- t:5ce4 -->
+- [ ] C2: smoke the explicit Cosmos reasoning envelope and 4096-token/120-second budget using the shared adapter; freeze profiles, prompts, seeds and reviewed cases before evaluation. <!-- t:b87k -->
+- [ ] C3: run Cosmos development selection and untouched selected/control test comparison; prevent Qwen test feedback from tuning Cosmos; report uncertainty, rationale support, failures and runtime. <!-- t:tu95 -->
+- [ ] C4: retain annotated case galleries and raw outputs, run one live selected-style Cosmos RULES handoff, and publish measured report/diary with explicit semantic acceptance limits. <!-- t:l9u8 -->

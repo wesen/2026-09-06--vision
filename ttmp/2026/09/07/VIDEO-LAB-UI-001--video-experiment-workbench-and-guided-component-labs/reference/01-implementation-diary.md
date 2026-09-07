@@ -398,3 +398,58 @@ Open http://mimimi:8780/ and /resources. Read the delivered walkthrough, inspect
 Final server process 32382, exec session 79936, explicit listeners 127.0.0.1:8780 and 100.113.140.75:8780. Source originals remain untracked. No source push was requested. Meaningful printed receipts: browser done 14:28:37Z; P3/P4 14:33:46Z; P4/P5 14:39:19Z; P5/P6 14:45:09Z, all HTTP 200 printed true. Early code commits: 37e1019 design, eab4b83 workspace, ff06003 project browser, 03eaa80 real model runs, 79f6bd3 comparisons.
 
 Final delivery receipt: P6 completion slip printed successfully at 2026-09-07T14:51:23Z (HTTP 200, printed true). Final project browser indexed 182 Markdown/source resources and rendered the delivered walkthrough over mimimi:8780. Ticket doctor passed; all six implementation tasks are checked. Ticket remains active for user feedback.
+
+## Step 7: Separate source directories and ticket browsing
+
+Applied the user's typography and navigation feedback. The project browser now has separate Code and Tickets sections, and source/Markdown code uses a sans-serif font while preserving syntax highlighting and line anchors.
+
+### Prompt Context
+
+**User prompt (verbatim):** "sans-serif for code. nice directory style browser for the code. Separate section for the tickets."
+
+**Assistant interpretation:** Use a true source directory hierarchy and give ticket documents their own navigation section.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+### What I did
+
+- Replaced the mixed resource list with Code/Tickets navigation, nested directories, folder expansion state, file-type labels and path breadcrumbs.
+- Added source tests and ticket overview/tasks/changelog files to the indexed resources.
+- Changed code fonts in the source reader, Markdown code and experiment JSON views to system-ui sans-serif.
+- Captured p7-code-directory-browser.png and p7-ticket-browser.png.
+
+### Why
+
+Source navigation should follow actual directories; ticket material should be grouped by ticket rather than interleaved with code.
+
+### What worked
+
+Browser smoke found 13 code directories and no ticket entries in Code. The Tickets view contained no source entries and showed all seven matching VIDEO-LAB-UI-001 documents. Computed source font was system-ui, sans-serif and #L42 remained available.
+
+### What didn't work
+
+No failure during this change.
+
+### What I learned
+
+Ticket overview, tasks and changelog belong in the project browser alongside designs and reports, not just the original design/reference index.
+
+### What was tricky to build
+
+Selection, section switching and browser history share URL state. Direct file links infer their section when absent; searches filter within the selected section and folder expansion persists during navigation.
+
+### What warrants a second pair of eyes
+
+Try the directory hierarchy and ticket grouping from the user's device; verify reading comfort with proportional code text.
+
+### What should be done in the future
+
+Incorporate further browsing feedback as needed.
+
+### Code review instructions
+
+Inspect browser.html directoryTree, switchSection and restore; resources.py font styles and explicit catalog expansion. Try /resources?section=code and /resources?section=tickets.
+
+### Technical details
+
+Server restarted only after confirming no active run; now PID 33408, exec session 32592, serving loopback and Tailscale on port 8780. This presentation-only change used browser smoke rather than rerunning model inference.

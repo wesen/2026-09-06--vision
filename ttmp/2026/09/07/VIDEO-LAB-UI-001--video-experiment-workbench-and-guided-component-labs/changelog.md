@@ -13,3 +13,5 @@
 - 79f6bd3: comparisons, similarity plots, review/export, exact-point rules and frozen-action inspection.
 - 21dc706: fresh compatible ridge action inference, per-image verifier deadline and final guided behavior.
 - Final API smoke, seven focused tests, model run identities and browser screenshots archived. Updated guide and measured walkthrough uploaded to reMarkable; UI left running for user feedback.
+
+- User feedback: split Project browser into Code directory tree and Tickets workspaces; use sans-serif for highlighted code and code blocks. Browser smoke and screenshots recorded in diary Step 7.

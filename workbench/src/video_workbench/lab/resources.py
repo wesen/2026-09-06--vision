@@ -46,7 +46,7 @@ TICKETS={
 }
 CODE['actions']=CODE['states']+CODE['embeddings']
 TICKETS['actions']=['VIDEO-TEMPORAL-001','MLX-VIDEO-FIX-001']
-CSS='''body{margin:0;background:#101619;color:#e6eeeb;font:16px/1.7 system-ui}header{position:sticky;top:0;background:#182226;padding:12px 24px;border-bottom:1px solid #334449;z-index:2}main{max-width:1100px;padding:28px;margin:auto}a{color:#a5ebc8}h1,h2,h3{line-height:1.3;scroll-margin-top:90px}pre{overflow:auto;font:13px/1.6 ui-monospace;padding:12px;background:#182226}code{font-family:ui-monospace;font-size:.9em}table{border-collapse:collapse;display:block;overflow:auto}td,th{border:1px solid #334449;padding:8px}img{max-width:100%}blockquote{border-left:3px solid #a5ebc8;padding-left:18px;color:#b0c2bd}.meta{font-size:12px;color:#b0c2bd;overflow-wrap:anywhere}.highlight{overflow:auto}.highlight pre{padding:0}.source-line{display:block;scroll-margin-top:90px}.source-line:target{background:#394b30}.line-number{display:inline-block;width:4em;text-align:right;margin-right:1em;color:#8fa5a0;text-decoration:none;user-select:none}nav a{margin-right:20px}details{border:1px solid #334449;padding:12px;margin:15px 0}summary{cursor:pointer}'''
+CSS='''body{margin:0;background:#101619;color:#e6eeeb;font:16px/1.7 system-ui}header{position:sticky;top:0;background:#182226;padding:12px 24px;border-bottom:1px solid #334449;z-index:2}main{max-width:1100px;padding:28px;margin:auto}a{color:#a5ebc8}h1,h2,h3{line-height:1.3;scroll-margin-top:90px}pre{overflow:auto;font:14px/1.65 system-ui, sans-serif;padding:12px;background:#182226}code{font-family:system-ui, sans-serif;font-size:.9em}table{border-collapse:collapse;display:block;overflow:auto}td,th{border:1px solid #334449;padding:8px}img{max-width:100%}blockquote{border-left:3px solid #a5ebc8;padding-left:18px;color:#b0c2bd}.meta{font-size:12px;color:#b0c2bd;overflow-wrap:anywhere}.highlight{overflow:auto}.highlight pre{padding:0}.source-line{display:block;scroll-margin-top:90px}.source-line:target{background:#394b30}.line-number{display:inline-block;width:4em;text-align:right;margin-right:1em;color:#8fa5a0;text-decoration:none;user-select:none}nav a{margin-right:20px}details{border:1px solid #334449;padding:12px;margin:15px 0}summary{cursor:pointer}'''
 
 class Resources:
     def __init__(self,root):
@@ -54,9 +54,11 @@ class Resources:
         candidates=list((self.root/'workbench/src/video_workbench').rglob('*.py'))
         candidates+=list((self.root/'workbench/src/video_workbench').rglob('*.html'))
         candidates+=list((self.root/'workbench/src/video_workbench').rglob('*.js'))
+        candidates += list((self.root/'workbench/tests').glob('*.py'))
         candidates += [self.root/'workbench/README.md']
         candidates+=[self.root/'workbench/pyproject.toml']
         for ticket in (self.root/'ttmp').glob('*/*/*/*--*'):
+            candidates += [ticket/name for name in ('index.md','tasks.md','changelog.md','README.md')]
             for folder in ('design-doc','reference'):
                 candidates+=list((ticket/folder).glob('*.md'))
             for suffix in ('*.png','*.jpg','*.jpeg'):

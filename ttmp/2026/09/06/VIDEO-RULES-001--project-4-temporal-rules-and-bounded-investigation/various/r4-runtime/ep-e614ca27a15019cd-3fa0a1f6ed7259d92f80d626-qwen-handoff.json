@@ -1,0 +1,184 @@
+{
+  "status": "ok",
+  "source_evaluation_id": "591f20dc3bdda5c855f5f270f77dfb946983334f0a01f88a695ceca446a9c06b",
+  "verifier": {
+    "status": "ok",
+    "returncode": 0,
+    "elapsed_seconds": 7.729419250041246,
+    "request_id": "ee62a774ce2436e9eba03d1330f1da6de04aa48247c61b36624d2c4a857b2748",
+    "entity_id": "ep-e614ca27a15019cd:object-316",
+    "schema_version": "reasoning-image-v3",
+    "mode": "single_image",
+    "prompt": "Inspect only the supplied image. Target appliance: microwave. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+    "model_path": "/Users/manuel/code/wesen/2026-09-06--vision/output/models/qwen3-vl-instruct-8b-8bit",
+    "completed_us": 20529420,
+    "profile": {
+      "id": "qwen-D-G-3407",
+      "model_family": "qwen",
+      "prompt_style": "direct",
+      "system_prompt": "",
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "repetition_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "penalty_context_size": 4096,
+      "seed": 3407,
+      "max_output_tokens": 4096,
+      "deadline_ms": 120000
+    },
+    "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d",
+    "validation_policy": "missing-reasoning-close-v1",
+    "answer": {
+      "request_id": "ee62a774ce2436e9eba03d1330f1da6de04aa48247c61b36624d2c4a857b2748",
+      "entity_id": "ep-e614ca27a15019cd:object-316",
+      "answer": "false",
+      "evidence_ids": [
+        "71ea8e3ace7019883dd27c01"
+      ],
+      "rationale": "The microwave's door is visible and seated against its frame, showing no gap or displacement that would indicate it is open."
+    },
+    "visibility": {
+      "target_identified": true,
+      "door_observable": true
+    },
+    "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"false\", \"evidence\": [\"F1\"], \"rationale\": \"The microwave's door is visible and seated against its frame, showing no gap or displacement that would indicate it is open.\"}",
+    "normalizations": [],
+    "final_text": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"false\", \"evidence\": [\"F1\"], \"rationale\": \"The microwave's door is visible and seated against its frame, showing no gap or displacement that would indicate it is open.\"}",
+    "output_style": "direct",
+    "runtime": {
+      "request_id": "ee62a774ce2436e9eba03d1330f1da6de04aa48247c61b36624d2c4a857b2748",
+      "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"false\", \"evidence\": [\"F1\"], \"rationale\": \"The microwave's door is visible and seated against its frame, showing no gap or displacement that would indicate it is open.\"}",
+      "prompt": "Inspect only the supplied image. Target appliance: microwave. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+      "formatted_prompt": "<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|>Inspect only the supplied image. Target appliance: microwave. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.<|im_end|>\n<|im_start|>assistant\n",
+      "mode": "single_image",
+      "load_seconds": 1.819757416844368,
+      "preparation_seconds": 0.04609291721135378,
+      "generation_seconds": 4.038202332798392,
+      "peak_mlx_bytes": 10857492541,
+      "prompt_tokens": 507,
+      "generation_tokens": 59,
+      "finish_reason": "stop",
+      "versions": {
+        "mlx": "0.32.2",
+        "mlx-vlm": "0.6.17",
+        "transformers": "5.16.1"
+      },
+      "profile": {
+        "id": "qwen-D-G-3407",
+        "model_family": "qwen",
+        "prompt_style": "direct",
+        "system_prompt": "",
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "top_k": 0,
+        "repetition_penalty": 1.0,
+        "presence_penalty": 0.0,
+        "penalty_context_size": 4096,
+        "seed": 3407,
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000
+      },
+      "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d",
+      "schema_version": "reasoning-image-v3",
+      "processed_inputs": {
+        "attention_mask": {
+          "shape": [
+            1,
+            507
+          ],
+          "dtype": "mlx.core.int64"
+        },
+        "input_ids": {
+          "shape": [
+            1,
+            507
+          ],
+          "dtype": "mlx.core.int64"
+        },
+        "pixel_values": {
+          "shape": [
+            1200,
+            1536
+          ],
+          "dtype": "mlx.core.float32"
+        },
+        "image_grid_thw": {
+          "shape": [
+            1,
+            3
+          ],
+          "dtype": "mlx.core.int64",
+          "values": [
+            [
+              1,
+              30,
+              40
+            ]
+          ]
+        },
+        "resized_images_hw": [
+          [
+            480,
+            640
+          ]
+        ]
+      },
+      "resolved_sampling": {
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "top_k": 0,
+        "repetition_penalty": 1.0,
+        "presence_penalty": 0.0,
+        "repetition_context_size": 4096,
+        "presence_context_size": 4096
+      },
+      "penalty_scope": "MLX recent 4096 input/generated tokens; local approximation, not vLLM parity"
+    }
+  },
+  "conditioned": {
+    "status": "ok",
+    "condition": "separate_verifier_evidence",
+    "source_evaluation_id": "591f20dc3bdda5c855f5f270f77dfb946983334f0a01f88a695ceca446a9c06b",
+    "request_id": "ee62a774ce2436e9eba03d1330f1da6de04aa48247c61b36624d2c4a857b2748",
+    "observation": {
+      "observation_id": "a306c3687c818f1f0b7ce74886081d2ee07673e15736b6cb2f205a14ce0ddbe2",
+      "run_id": "rules-camera-exit-v1",
+      "stream_id": "verifier/qwen",
+      "episode_id": "ep-e614ca27a15019cd",
+      "entity": "ep-e614ca27a15019cd:object-316",
+      "property": "door_open",
+      "value": false,
+      "event_us": 12600000,
+      "available_us": 20529420,
+      "committed_us": 20529420,
+      "evidence_ids": [
+        "71ea8e3ace7019883dd27c01"
+      ],
+      "producer": "qwen",
+      "feature_space_id": "visual-verifier/qwen",
+      "mode": "causal",
+      "unknown_reason": null
+    },
+    "decision": {
+      "rule_id": "door-closed-at-camera-exit",
+      "rule_sha256": "4fc213d652ba9feb31cb8c89efe557bcac5f77711171274e4d3389d5964fffb9",
+      "episode_id": "ep-e614ca27a15019cd",
+      "entity_id": "ep-e614ca27a15019cd:object-316",
+      "as_of_us": 20529420,
+      "status": "PASS",
+      "reason": "observed_state_match",
+      "applicability": "observed",
+      "evidence_ids": [
+        "3fa0a1f6ed7259d92f80d626",
+        "a306c3687c818f1f0b7ce74886081d2ee07673e15736b6cb2f205a14ce0ddbe2"
+      ],
+      "evaluator_version": "flat-rules-v1",
+      "evaluation_id": "dae024474129ba6d1cfd6638b59e50537208d7922f0789b0f33d126da73bf255"
+    },
+    "model_citations": [
+      "71ea8e3ace7019883dd27c01"
+    ],
+    "raw": "{\"request_id\": \"ee62a774ce2436e9eba03d1330f1da6de04aa48247c61b36624d2c4a857b2748\", \"entity_id\": \"ep-e614ca27a15019cd:object-316\", \"answer\": \"false\", \"evidence_ids\": [\"71ea8e3ace7019883dd27c01\"], \"rationale\": \"The microwave's door is visible and seated against its frame, showing no gap or displacement that would indicate it is open.\"}"
+  }
+}

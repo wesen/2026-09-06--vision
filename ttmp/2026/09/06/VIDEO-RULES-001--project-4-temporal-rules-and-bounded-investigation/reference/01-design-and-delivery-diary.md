@@ -14,12 +14,20 @@ RelatedFiles:
       Note: Authored project guide
     - Path: repo://ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation/scripts/01-pdf-header.tex
       Note: Per-ticket PDF header
+    - Path: repo://ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation/scripts/05-review-departure-recordings.py
+      Note: RGB review source extraction
+    - Path: repo://ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation/scripts/06-refine-exit-review.py
+      Note: Dense native frame exit review
+    - Path: repo://ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation/scripts/07-detect-departures.py
+      Note: Pinned YOLO full-recording measurement
     - Path: repo://ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation/tasks.md
       Note: Phased implementation breakdown
     - Path: repo://ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation/various/pdf-validation.json
       Note: Visual review and artifact hashes
     - Path: repo://ttmp/2026/09/06/VIDEO-RULES-001--project-4-temporal-rules-and-bounded-investigation/various/remarkable-upload.json
       Note: Successful individual delivery
+    - Path: repo://workbench/src/video_workbench/rules/departure.py
+      Note: Causal candidate extraction frozen in commit 1d3f2c4
     - Path: repo://workbench/src/video_workbench/rules/evaluate.py
       Note: Flat deterministic rule evaluator
     - Path: repo://workbench/src/video_workbench/rules/stored.py
@@ -30,6 +38,7 @@ LastUpdated: 2026-09-06T13:13:51.924897-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -355,3 +364,58 @@ Start with `various/r4-review/protocol.json`, `reviewed-events.json`, and the sa
 
 ### Technical details
 Policy: YOLO person score ≥0.25, three consecutive detections to arm, three consecutive absences to emit, first absent PTS as event time, third absent PTS as availability. Event matching is within episode, maximum one-to-one cardinality followed by minimum absolute timestamp error, tolerance 500,000 us. The no-verifier state baseline requires exact timestamps and otherwise remains UNKNOWN.
+
+## Step 7: Measure real departure candidates through the accepted verifiers
+
+Executed the frozen detector across all 2,134 frames and compared every emitted candidate against the twelve reviewed departures. The candidate stage matched all twelve, but both accepted 8B verifiers detected only two of six violations. The four missed open-fridge cases are retained as false PASS decisions rather than hidden by valid JSON or zero unknowns.
+
+The resulting report distinguishes the sparse exact-time store baseline, detector coverage, visual verification, and offline processing cost. A rendered evidence comparison preserves actual approved frames and their returned decisions for the future replay viewer.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 6)
+
+**Assistant interpretation:** Finish a defensible measured RULES report before proceeding to replay integration.
+
+**Inferred user intent:** Understand failure sources and processing costs in the actual connected system.
+
+**Commit (code):** `1d3f2c4` froze the population and detector policy before execution; this step adds matching, live handoff execution, and reporting.
+
+### What I did
+- Ran script 07 in the perception MPS environment; retained every frame's detections and inference timing.
+- Ran script 08 through the accepted direct-greedy Qwen and Cosmos profiles: 24 bounded local model calls, no retries.
+- Implemented maximum-cardinality/minimum-error matching and metrics that retain missing candidates and UNKNOWN decisions.
+- Queried the existing `state/F__linear_head` stream at each exact event time; all twelve baseline decisions lacked an exact state sample.
+- Saved per-model handoffs, runtime records, portable split metrics, model hashes, and an illustrated evidence comparison.
+- Ran feature smoke for causal prefixes, delayed confirmation, rearming, ordered timestamps, non-greedy matching, missed positives, false alerts, unknowns, episode isolation, and baseline preservation.
+
+### Why
+The final rule decision can fail even when detection and output validation succeed. Separate accounting makes the visual failure explicit and gives REPLAY realistic slow work and incorrect results to expose.
+
+### What worked
+- 12/12 reviewed departures matched within the frozen 500 ms tolerance, with no extra candidates.
+- Both models: 2/6 violation recall, six correct closed-state PASS decisions, four wrong open-fridge PASS decisions, zero unknowns, zero observed false alerts.
+- Qwen median call 7.46 s; Cosmos 8.58 s. Detector total 39.59 s over 213.4 source seconds.
+- Smoke checks passed; reviewed the generated 1120×1590 evidence image for correct frame/result alignment and readable labels.
+
+### What didn't work
+- `cat workbench/src/video_workbench/temporal/events.py` failed with `No such file or directory`; Event is defined in `rules/evaluate.py`.
+- The perception environment printed duplicate Objective-C class warnings for `AVFFrameReceiver` and `AVFAudioReceiver` from PyAV/OpenCV bundled libraries. Extraction nevertheless completed all source frames without failure.
+- Both models failed all four visible open-fridge cases. Validated output did not provide correct visual judgment.
+
+### What I learned
+This workload is currently limited by visual state interpretation, not the candidate matching rate. Sparse state storage also leaves an integration gap at exact departure timestamps. Zero unknowns can conceal confident errors, so the viewer must expose evidence and separate baseline/conditioned decisions.
+
+### What was tricky to build
+Nearest-candidate greedy matching can undercount achievable matches when tolerances overlap. Sorted timestamp dynamic programming maximizes matches first and minimizes error second. Metrics count unknown or absent candidates as missed positives, while an alert with unknown reference truth remains unscorable rather than falsely classified as a false alarm.
+
+### What warrants a second pair of eyes
+Review the RGB fridge state labels and their source geometry independently. The tiny synthetic population supports scoped observed counts only. Call durations include isolated model loads and are not live scheduler latencies; source timestamps in the offline handoff are not evidence of sustained real-time execution.
+
+### What should be done in the future
+Implement the simplified replay clock, broker, bounded scheduler, and viewer with explicit as-of visibility and dropped-work records. Preserve these failures as inspectable cases. Real-video transfer and an independently adjudicated event population remain later work.
+
+### Code review instructions
+Read `reference/03-end-to-end-camera-departure-rule-measurement.md`, `rules/measurement.py`, and scripts 08–11. Recompute metrics using script 09 without rerunning inference. Inspect `various/r4-evidence-comparison.png` alongside native exit review sheets. Raw calls remain in `output/rules-departure-v1/`.
+
+### Technical details
+Development: 105.1 s, six departures, three positives, one true alert per model. Test: 108.3 s, six departures, three positives, one true alert per model. Qwen generated 686 tokens across twelve calls; Cosmos generated 805. Each peaked at approximately 10.86 GB MLX allocation. All results are separate verifier evidence conditions; baseline IDs remain unchanged.

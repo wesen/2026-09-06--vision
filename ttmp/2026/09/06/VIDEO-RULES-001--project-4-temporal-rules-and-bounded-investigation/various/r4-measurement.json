@@ -1,0 +1,1579 @@
+{
+  "protocol_sha256": "f4862d583666b185c075fc29459fd3701069cdff1d5642028bfa59c63bebf200",
+  "reviewed_events_sha256": "b5e948c5a259704c053eb0c838b9ed4bd6368ca2600c5bde2ae7c09441794bf1",
+  "detector": {
+    "checkpoint_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+    "checkpoint_name": "yolo11n.pt",
+    "ultralytics": "8.4.142",
+    "torch": "2.14.0",
+    "device": "mps",
+    "parameters": {
+      "imgsz": 640,
+      "conf": 0.1,
+      "iou": 0.7,
+      "max_det": 100,
+      "rect": false,
+      "augment": false,
+      "verbose": false
+    },
+    "class_map": {
+      "0": "person",
+      "1": "bicycle",
+      "2": "car",
+      "3": "motorcycle",
+      "4": "airplane",
+      "5": "bus",
+      "6": "train",
+      "7": "truck",
+      "8": "boat",
+      "9": "traffic light",
+      "10": "fire hydrant",
+      "11": "stop sign",
+      "12": "parking meter",
+      "13": "bench",
+      "14": "bird",
+      "15": "cat",
+      "16": "dog",
+      "17": "horse",
+      "18": "sheep",
+      "19": "cow",
+      "20": "elephant",
+      "21": "bear",
+      "22": "zebra",
+      "23": "giraffe",
+      "24": "backpack",
+      "25": "umbrella",
+      "26": "handbag",
+      "27": "tie",
+      "28": "suitcase",
+      "29": "frisbee",
+      "30": "skis",
+      "31": "snowboard",
+      "32": "sports ball",
+      "33": "kite",
+      "34": "baseball bat",
+      "35": "baseball glove",
+      "36": "skateboard",
+      "37": "surfboard",
+      "38": "tennis racket",
+      "39": "bottle",
+      "40": "wine glass",
+      "41": "cup",
+      "42": "fork",
+      "43": "knife",
+      "44": "spoon",
+      "45": "bowl",
+      "46": "banana",
+      "47": "apple",
+      "48": "sandwich",
+      "49": "orange",
+      "50": "broccoli",
+      "51": "carrot",
+      "52": "hot dog",
+      "53": "pizza",
+      "54": "donut",
+      "55": "cake",
+      "56": "chair",
+      "57": "couch",
+      "58": "potted plant",
+      "59": "bed",
+      "60": "dining table",
+      "61": "toilet",
+      "62": "tv",
+      "63": "laptop",
+      "64": "mouse",
+      "65": "remote",
+      "66": "keyboard",
+      "67": "cell phone",
+      "68": "microwave",
+      "69": "oven",
+      "70": "toaster",
+      "71": "sink",
+      "72": "refrigerator",
+      "73": "book",
+      "74": "clock",
+      "75": "vase",
+      "76": "scissors",
+      "77": "teddy bear",
+      "78": "hair drier",
+      "79": "toothbrush"
+    },
+    "coordinates": "original-decoded-pixels-half-open",
+    "rgb_input": "PIL-RGB",
+    "adapter_sha256": "19824fa605e1b07a0a9d78342a249b3a44f8bb0490abdfe3ac7284ec2d6caf40"
+  },
+  "splits": {
+    "development": {
+      "baseline": {
+        "reference_events": 6,
+        "candidates": 6,
+        "matching": {
+          "pairs": [
+            [
+              "ep-1ba09e07399f4a30:reviewed-exit",
+              "755581139a417443d2c5888a"
+            ],
+            [
+              "ep-327429c08d46e616:reviewed-exit",
+              "59b913195760c3f914dbbcd2"
+            ],
+            [
+              "ep-368d6331fc690a2c:reviewed-exit",
+              "c61d31a2c0480ae41f3fa70d"
+            ],
+            [
+              "ep-97a1a39b2e9490b6:reviewed-exit",
+              "71bfbcba7c2aaddfdd8672c9"
+            ],
+            [
+              "ep-c2ad5c5f7b67a9a8:reviewed-exit",
+              "6709741a3a8b80956992a57c"
+            ],
+            [
+              "ep-e9c9ef6801285914:reviewed-exit",
+              "7d6b4a9e85167aab62fefa8d"
+            ]
+          ],
+          "missed": [],
+          "unmatched_candidates": []
+        },
+        "candidate_recall": 1.0,
+        "candidate_precision": 1.0,
+        "positive_events": 3,
+        "true_alerts": 0,
+        "missed_positive_events": 3,
+        "violation_recall": 0.0,
+        "false_alerts": 0,
+        "false_alerts_per_source_hour": 0.0,
+        "unscorable_alerts": 0,
+        "unknowns": 6,
+        "unknown_fraction": 1.0,
+        "source_duration_us": 105100000
+      },
+      "qwen": {
+        "reference_events": 6,
+        "candidates": 6,
+        "matching": {
+          "pairs": [
+            [
+              "ep-1ba09e07399f4a30:reviewed-exit",
+              "755581139a417443d2c5888a"
+            ],
+            [
+              "ep-327429c08d46e616:reviewed-exit",
+              "59b913195760c3f914dbbcd2"
+            ],
+            [
+              "ep-368d6331fc690a2c:reviewed-exit",
+              "c61d31a2c0480ae41f3fa70d"
+            ],
+            [
+              "ep-97a1a39b2e9490b6:reviewed-exit",
+              "71bfbcba7c2aaddfdd8672c9"
+            ],
+            [
+              "ep-c2ad5c5f7b67a9a8:reviewed-exit",
+              "6709741a3a8b80956992a57c"
+            ],
+            [
+              "ep-e9c9ef6801285914:reviewed-exit",
+              "7d6b4a9e85167aab62fefa8d"
+            ]
+          ],
+          "missed": [],
+          "unmatched_candidates": []
+        },
+        "candidate_recall": 1.0,
+        "candidate_precision": 1.0,
+        "positive_events": 3,
+        "true_alerts": 1,
+        "missed_positive_events": 2,
+        "violation_recall": 0.3333333333333333,
+        "false_alerts": 0,
+        "false_alerts_per_source_hour": 0.0,
+        "unscorable_alerts": 0,
+        "unknowns": 0,
+        "unknown_fraction": 0.0,
+        "source_duration_us": 105100000,
+        "cost": {
+          "requests": 6,
+          "total_wall_seconds": 44.54709504195489,
+          "median_wall_seconds": 7.432137312483974,
+          "max_wall_seconds": 7.984334792010486,
+          "prompt_tokens": 3042,
+          "generation_tokens": 344,
+          "peak_mlx_bytes": 10857492541
+        }
+      },
+      "cosmos": {
+        "reference_events": 6,
+        "candidates": 6,
+        "matching": {
+          "pairs": [
+            [
+              "ep-1ba09e07399f4a30:reviewed-exit",
+              "755581139a417443d2c5888a"
+            ],
+            [
+              "ep-327429c08d46e616:reviewed-exit",
+              "59b913195760c3f914dbbcd2"
+            ],
+            [
+              "ep-368d6331fc690a2c:reviewed-exit",
+              "c61d31a2c0480ae41f3fa70d"
+            ],
+            [
+              "ep-97a1a39b2e9490b6:reviewed-exit",
+              "71bfbcba7c2aaddfdd8672c9"
+            ],
+            [
+              "ep-c2ad5c5f7b67a9a8:reviewed-exit",
+              "6709741a3a8b80956992a57c"
+            ],
+            [
+              "ep-e9c9ef6801285914:reviewed-exit",
+              "7d6b4a9e85167aab62fefa8d"
+            ]
+          ],
+          "missed": [],
+          "unmatched_candidates": []
+        },
+        "candidate_recall": 1.0,
+        "candidate_precision": 1.0,
+        "positive_events": 3,
+        "true_alerts": 1,
+        "missed_positive_events": 2,
+        "violation_recall": 0.3333333333333333,
+        "false_alerts": 0,
+        "false_alerts_per_source_hour": 0.0,
+        "unscorable_alerts": 0,
+        "unknowns": 0,
+        "unknown_fraction": 0.0,
+        "source_duration_us": 105100000,
+        "cost": {
+          "requests": 6,
+          "total_wall_seconds": 52.25089708180167,
+          "median_wall_seconds": 8.742774458019994,
+          "max_wall_seconds": 8.985697333002463,
+          "prompt_tokens": 3108,
+          "generation_tokens": 404,
+          "peak_mlx_bytes": 10857492728
+        }
+      }
+    },
+    "test": {
+      "baseline": {
+        "reference_events": 6,
+        "candidates": 6,
+        "matching": {
+          "pairs": [
+            [
+              "ep-205a311600c89bf7:reviewed-exit",
+              "c2bb59181ff975b7df9aa328"
+            ],
+            [
+              "ep-37909e041bc956c8:reviewed-exit",
+              "28bf88f242ed9e25edd07982"
+            ],
+            [
+              "ep-7d3106fb1cac9776:reviewed-exit",
+              "5c64068a90582b51c7d10bb2"
+            ],
+            [
+              "ep-c1c313b64f579794:reviewed-exit",
+              "04ef39cb730e6d411e32a49e"
+            ],
+            [
+              "ep-d9e2a612fb2342e2:reviewed-exit",
+              "6ad4ee72b68562565dba02c9"
+            ],
+            [
+              "ep-e614ca27a15019cd:reviewed-exit",
+              "3fa0a1f6ed7259d92f80d626"
+            ]
+          ],
+          "missed": [],
+          "unmatched_candidates": []
+        },
+        "candidate_recall": 1.0,
+        "candidate_precision": 1.0,
+        "positive_events": 3,
+        "true_alerts": 0,
+        "missed_positive_events": 3,
+        "violation_recall": 0.0,
+        "false_alerts": 0,
+        "false_alerts_per_source_hour": 0.0,
+        "unscorable_alerts": 0,
+        "unknowns": 6,
+        "unknown_fraction": 1.0,
+        "source_duration_us": 108300000
+      },
+      "qwen": {
+        "reference_events": 6,
+        "candidates": 6,
+        "matching": {
+          "pairs": [
+            [
+              "ep-205a311600c89bf7:reviewed-exit",
+              "c2bb59181ff975b7df9aa328"
+            ],
+            [
+              "ep-37909e041bc956c8:reviewed-exit",
+              "28bf88f242ed9e25edd07982"
+            ],
+            [
+              "ep-7d3106fb1cac9776:reviewed-exit",
+              "5c64068a90582b51c7d10bb2"
+            ],
+            [
+              "ep-c1c313b64f579794:reviewed-exit",
+              "04ef39cb730e6d411e32a49e"
+            ],
+            [
+              "ep-d9e2a612fb2342e2:reviewed-exit",
+              "6ad4ee72b68562565dba02c9"
+            ],
+            [
+              "ep-e614ca27a15019cd:reviewed-exit",
+              "3fa0a1f6ed7259d92f80d626"
+            ]
+          ],
+          "missed": [],
+          "unmatched_candidates": []
+        },
+        "candidate_recall": 1.0,
+        "candidate_precision": 1.0,
+        "positive_events": 3,
+        "true_alerts": 1,
+        "missed_positive_events": 2,
+        "violation_recall": 0.3333333333333333,
+        "false_alerts": 0,
+        "false_alerts_per_source_hour": 0.0,
+        "unscorable_alerts": 0,
+        "unknowns": 0,
+        "unknown_fraction": 0.0,
+        "source_duration_us": 108300000,
+        "cost": {
+          "requests": 6,
+          "total_wall_seconds": 44.68357004248537,
+          "median_wall_seconds": 7.483302625128999,
+          "max_wall_seconds": 7.729419250041246,
+          "prompt_tokens": 3042,
+          "generation_tokens": 342,
+          "peak_mlx_bytes": 10857492541
+        }
+      },
+      "cosmos": {
+        "reference_events": 6,
+        "candidates": 6,
+        "matching": {
+          "pairs": [
+            [
+              "ep-205a311600c89bf7:reviewed-exit",
+              "c2bb59181ff975b7df9aa328"
+            ],
+            [
+              "ep-37909e041bc956c8:reviewed-exit",
+              "28bf88f242ed9e25edd07982"
+            ],
+            [
+              "ep-7d3106fb1cac9776:reviewed-exit",
+              "5c64068a90582b51c7d10bb2"
+            ],
+            [
+              "ep-c1c313b64f579794:reviewed-exit",
+              "04ef39cb730e6d411e32a49e"
+            ],
+            [
+              "ep-d9e2a612fb2342e2:reviewed-exit",
+              "6ad4ee72b68562565dba02c9"
+            ],
+            [
+              "ep-e614ca27a15019cd:reviewed-exit",
+              "3fa0a1f6ed7259d92f80d626"
+            ]
+          ],
+          "missed": [],
+          "unmatched_candidates": []
+        },
+        "candidate_recall": 1.0,
+        "candidate_precision": 1.0,
+        "positive_events": 3,
+        "true_alerts": 1,
+        "missed_positive_events": 2,
+        "violation_recall": 0.3333333333333333,
+        "false_alerts": 0,
+        "false_alerts_per_source_hour": 0.0,
+        "unscorable_alerts": 0,
+        "unknowns": 0,
+        "unknown_fraction": 0.0,
+        "source_duration_us": 108300000,
+        "cost": {
+          "requests": 6,
+          "total_wall_seconds": 51.77353037614375,
+          "median_wall_seconds": 8.480813833535649,
+          "max_wall_seconds": 9.461545584024861,
+          "prompt_tokens": 3108,
+          "generation_tokens": 401,
+          "peak_mlx_bytes": 10857492728
+        }
+      }
+    },
+    "all": {
+      "baseline": {
+        "reference_events": 12,
+        "candidates": 12,
+        "matching": {
+          "pairs": [
+            [
+              "ep-1ba09e07399f4a30:reviewed-exit",
+              "755581139a417443d2c5888a"
+            ],
+            [
+              "ep-205a311600c89bf7:reviewed-exit",
+              "c2bb59181ff975b7df9aa328"
+            ],
+            [
+              "ep-327429c08d46e616:reviewed-exit",
+              "59b913195760c3f914dbbcd2"
+            ],
+            [
+              "ep-368d6331fc690a2c:reviewed-exit",
+              "c61d31a2c0480ae41f3fa70d"
+            ],
+            [
+              "ep-37909e041bc956c8:reviewed-exit",
+              "28bf88f242ed9e25edd07982"
+            ],
+            [
+              "ep-7d3106fb1cac9776:reviewed-exit",
+              "5c64068a90582b51c7d10bb2"
+            ],
+            [
+              "ep-97a1a39b2e9490b6:reviewed-exit",
+              "71bfbcba7c2aaddfdd8672c9"
+            ],
+            [
+              "ep-c1c313b64f579794:reviewed-exit",
+              "04ef39cb730e6d411e32a49e"
+            ],
+            [
+              "ep-c2ad5c5f7b67a9a8:reviewed-exit",
+              "6709741a3a8b80956992a57c"
+            ],
+            [
+              "ep-d9e2a612fb2342e2:reviewed-exit",
+              "6ad4ee72b68562565dba02c9"
+            ],
+            [
+              "ep-e614ca27a15019cd:reviewed-exit",
+              "3fa0a1f6ed7259d92f80d626"
+            ],
+            [
+              "ep-e9c9ef6801285914:reviewed-exit",
+              "7d6b4a9e85167aab62fefa8d"
+            ]
+          ],
+          "missed": [],
+          "unmatched_candidates": []
+        },
+        "candidate_recall": 1.0,
+        "candidate_precision": 1.0,
+        "positive_events": 6,
+        "true_alerts": 0,
+        "missed_positive_events": 6,
+        "violation_recall": 0.0,
+        "false_alerts": 0,
+        "false_alerts_per_source_hour": 0.0,
+        "unscorable_alerts": 0,
+        "unknowns": 12,
+        "unknown_fraction": 1.0,
+        "source_duration_us": 213400000
+      },
+      "qwen": {
+        "reference_events": 12,
+        "candidates": 12,
+        "matching": {
+          "pairs": [
+            [
+              "ep-1ba09e07399f4a30:reviewed-exit",
+              "755581139a417443d2c5888a"
+            ],
+            [
+              "ep-205a311600c89bf7:reviewed-exit",
+              "c2bb59181ff975b7df9aa328"
+            ],
+            [
+              "ep-327429c08d46e616:reviewed-exit",
+              "59b913195760c3f914dbbcd2"
+            ],
+            [
+              "ep-368d6331fc690a2c:reviewed-exit",
+              "c61d31a2c0480ae41f3fa70d"
+            ],
+            [
+              "ep-37909e041bc956c8:reviewed-exit",
+              "28bf88f242ed9e25edd07982"
+            ],
+            [
+              "ep-7d3106fb1cac9776:reviewed-exit",
+              "5c64068a90582b51c7d10bb2"
+            ],
+            [
+              "ep-97a1a39b2e9490b6:reviewed-exit",
+              "71bfbcba7c2aaddfdd8672c9"
+            ],
+            [
+              "ep-c1c313b64f579794:reviewed-exit",
+              "04ef39cb730e6d411e32a49e"
+            ],
+            [
+              "ep-c2ad5c5f7b67a9a8:reviewed-exit",
+              "6709741a3a8b80956992a57c"
+            ],
+            [
+              "ep-d9e2a612fb2342e2:reviewed-exit",
+              "6ad4ee72b68562565dba02c9"
+            ],
+            [
+              "ep-e614ca27a15019cd:reviewed-exit",
+              "3fa0a1f6ed7259d92f80d626"
+            ],
+            [
+              "ep-e9c9ef6801285914:reviewed-exit",
+              "7d6b4a9e85167aab62fefa8d"
+            ]
+          ],
+          "missed": [],
+          "unmatched_candidates": []
+        },
+        "candidate_recall": 1.0,
+        "candidate_precision": 1.0,
+        "positive_events": 6,
+        "true_alerts": 2,
+        "missed_positive_events": 4,
+        "violation_recall": 0.3333333333333333,
+        "false_alerts": 0,
+        "false_alerts_per_source_hour": 0.0,
+        "unscorable_alerts": 0,
+        "unknowns": 0,
+        "unknown_fraction": 0.0,
+        "source_duration_us": 213400000,
+        "cost": {
+          "requests": 12,
+          "total_wall_seconds": 89.23066508444026,
+          "median_wall_seconds": 7.4555400415556505,
+          "max_wall_seconds": 7.984334792010486,
+          "prompt_tokens": 6084,
+          "generation_tokens": 686,
+          "peak_mlx_bytes": 10857492541
+        }
+      },
+      "cosmos": {
+        "reference_events": 12,
+        "candidates": 12,
+        "matching": {
+          "pairs": [
+            [
+              "ep-1ba09e07399f4a30:reviewed-exit",
+              "755581139a417443d2c5888a"
+            ],
+            [
+              "ep-205a311600c89bf7:reviewed-exit",
+              "c2bb59181ff975b7df9aa328"
+            ],
+            [
+              "ep-327429c08d46e616:reviewed-exit",
+              "59b913195760c3f914dbbcd2"
+            ],
+            [
+              "ep-368d6331fc690a2c:reviewed-exit",
+              "c61d31a2c0480ae41f3fa70d"
+            ],
+            [
+              "ep-37909e041bc956c8:reviewed-exit",
+              "28bf88f242ed9e25edd07982"
+            ],
+            [
+              "ep-7d3106fb1cac9776:reviewed-exit",
+              "5c64068a90582b51c7d10bb2"
+            ],
+            [
+              "ep-97a1a39b2e9490b6:reviewed-exit",
+              "71bfbcba7c2aaddfdd8672c9"
+            ],
+            [
+              "ep-c1c313b64f579794:reviewed-exit",
+              "04ef39cb730e6d411e32a49e"
+            ],
+            [
+              "ep-c2ad5c5f7b67a9a8:reviewed-exit",
+              "6709741a3a8b80956992a57c"
+            ],
+            [
+              "ep-d9e2a612fb2342e2:reviewed-exit",
+              "6ad4ee72b68562565dba02c9"
+            ],
+            [
+              "ep-e614ca27a15019cd:reviewed-exit",
+              "3fa0a1f6ed7259d92f80d626"
+            ],
+            [
+              "ep-e9c9ef6801285914:reviewed-exit",
+              "7d6b4a9e85167aab62fefa8d"
+            ]
+          ],
+          "missed": [],
+          "unmatched_candidates": []
+        },
+        "candidate_recall": 1.0,
+        "candidate_precision": 1.0,
+        "positive_events": 6,
+        "true_alerts": 2,
+        "missed_positive_events": 4,
+        "violation_recall": 0.3333333333333333,
+        "false_alerts": 0,
+        "false_alerts_per_source_hour": 0.0,
+        "unscorable_alerts": 0,
+        "unknowns": 0,
+        "unknown_fraction": 0.0,
+        "source_duration_us": 213400000,
+        "cost": {
+          "requests": 12,
+          "total_wall_seconds": 104.02442745794542,
+          "median_wall_seconds": 8.579669874976389,
+          "max_wall_seconds": 9.461545584024861,
+          "prompt_tokens": 6216,
+          "generation_tokens": 805,
+          "peak_mlx_bytes": 10857492728
+        }
+      }
+    }
+  },
+  "traces": [
+    {
+      "candidate": {
+        "episode_id": "ep-1ba09e07399f4a30",
+        "kind": "camera_exit_candidate",
+        "frame_id": "433f66ea088809f155a2d3f5",
+        "event_us": 8100000,
+        "available_us": 8300000,
+        "confirmation_frame_id": "37c5a5266b1ed4a7bea9741c",
+        "event_id": "755581139a417443d2c5888a"
+      },
+      "split": "development",
+      "baseline": {
+        "rule_id": "door-closed-at-camera-exit",
+        "rule_sha256": "c3a3ac7eae86c8f7a278a8e9e2fe2c9a2c1cefb12c175d1ca4918fc82251fa45",
+        "episode_id": "ep-1ba09e07399f4a30",
+        "entity_id": "ep-1ba09e07399f4a30:object-308",
+        "as_of_us": 8300000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "755581139a417443d2c5888a"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "0d2ba61c3afdc50b8956104e483105a6a13d96994ef4766cda236a9fe012563c",
+        "run_id": "temporal-replay-v1"
+      },
+      "frame": {
+        "id": "433f66ea088809f155a2d3f5",
+        "episode_id": "ep-1ba09e07399f4a30",
+        "entity_id": "ep-1ba09e07399f4a30:object-308",
+        "pts_us": 8100000,
+        "available_us": 8100000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/rules-departure-v1/ep-1ba09e07399f4a30/433f66ea088809f155a2d3f5.png",
+        "sha256": "0bdeaf5eb74012ff289cee448a4b100ad6c7501478d6cfbdee3e05235116b8ea"
+      },
+      "models": {
+        "qwen": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "8945367945ec75e5a142f43879dae82aa89c315b06cd07a362935fb969c069cd",
+          "answer": {
+            "request_id": "8945367945ec75e5a142f43879dae82aa89c315b06cd07a362935fb969c069cd",
+            "entity_id": "ep-1ba09e07399f4a30:object-308",
+            "answer": "false",
+            "evidence_ids": [
+              "433f66ea088809f155a2d3f5"
+            ],
+            "rationale": "The red fridge door is visible and seated against its frame, with no visible gap or displacement indicating it is open."
+          },
+          "elapsed_seconds": 7.494582917075604,
+          "prompt_tokens": 507,
+          "generation_tokens": 58,
+          "peak_mlx_bytes": 10857492541,
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        "cosmos": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "8945367945ec75e5a142f43879dae82aa89c315b06cd07a362935fb969c069cd",
+          "answer": {
+            "request_id": "8945367945ec75e5a142f43879dae82aa89c315b06cd07a362935fb969c069cd",
+            "entity_id": "ep-1ba09e07399f4a30:object-308",
+            "answer": "false",
+            "evidence_ids": [
+              "433f66ea088809f155a2d3f5"
+            ],
+            "rationale": "The red refrigerator door is visible and appears to be closed, with no indication of an open gap or displacement."
+          },
+          "elapsed_seconds": 8.882578250020742,
+          "prompt_tokens": 518,
+          "generation_tokens": 67,
+          "peak_mlx_bytes": 10857492728,
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        }
+      }
+    },
+    {
+      "candidate": {
+        "episode_id": "ep-205a311600c89bf7",
+        "kind": "camera_exit_candidate",
+        "frame_id": "94a65d26fec21d00b373ffa4",
+        "event_us": 14600000,
+        "available_us": 14800000,
+        "confirmation_frame_id": "7933dc99d3b5772be059c7ac",
+        "event_id": "c2bb59181ff975b7df9aa328"
+      },
+      "split": "test",
+      "baseline": {
+        "rule_id": "door-closed-at-camera-exit",
+        "rule_sha256": "916da6ff4ba08ebf31ea231f0cf780e8c916f141e904026fb229cf4b38500412",
+        "episode_id": "ep-205a311600c89bf7",
+        "entity_id": "ep-205a311600c89bf7:object-308",
+        "as_of_us": 14800000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "c2bb59181ff975b7df9aa328"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "2e7762082dc3d1a970c81ba0b3b8b8222642b8c7eee95320ed7b92f38a97ebf4",
+        "run_id": "temporal-replay-v1"
+      },
+      "frame": {
+        "id": "94a65d26fec21d00b373ffa4",
+        "episode_id": "ep-205a311600c89bf7",
+        "entity_id": "ep-205a311600c89bf7:object-308",
+        "pts_us": 14600000,
+        "available_us": 14600000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/rules-departure-v1/ep-205a311600c89bf7/94a65d26fec21d00b373ffa4.png",
+        "sha256": "5813c1453d6e913937fdd271f06b63c4fd447d6636061da820c469a8cdb58efc"
+      },
+      "models": {
+        "qwen": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "fa8b518b5d5cdcd8d4668de94d92b05d81746d6cd7c5de34dcb12dccc0155686",
+          "answer": {
+            "request_id": "fa8b518b5d5cdcd8d4668de94d92b05d81746d6cd7c5de34dcb12dccc0155686",
+            "entity_id": "ep-205a311600c89bf7:object-308",
+            "answer": "false",
+            "evidence_ids": [
+              "94a65d26fec21d00b373ffa4"
+            ],
+            "rationale": "The red fridge's door is visibly seated against its frame with no visible gap or displacement, indicating it is closed."
+          },
+          "elapsed_seconds": 7.262118334183469,
+          "prompt_tokens": 507,
+          "generation_tokens": 58,
+          "peak_mlx_bytes": 10857492541,
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        "cosmos": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "fa8b518b5d5cdcd8d4668de94d92b05d81746d6cd7c5de34dcb12dccc0155686",
+          "answer": {
+            "request_id": "fa8b518b5d5cdcd8d4668de94d92b05d81746d6cd7c5de34dcb12dccc0155686",
+            "entity_id": "ep-205a311600c89bf7:object-308",
+            "answer": "false",
+            "evidence_ids": [
+              "94a65d26fec21d00b373ffa4"
+            ],
+            "rationale": "The red refrigerator has two doors, both of which are visibly closed and aligned with their respective frames, showing no gaps or signs of being open."
+          },
+          "elapsed_seconds": 9.461545584024861,
+          "prompt_tokens": 518,
+          "generation_tokens": 74,
+          "peak_mlx_bytes": 10857492728,
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        }
+      }
+    },
+    {
+      "candidate": {
+        "episode_id": "ep-327429c08d46e616",
+        "kind": "camera_exit_candidate",
+        "frame_id": "914cd2cf3d796e3f82506fae",
+        "event_us": 18400000,
+        "available_us": 18600000,
+        "confirmation_frame_id": "b6f5ab3e8f7680a864fdb1cc",
+        "event_id": "59b913195760c3f914dbbcd2"
+      },
+      "split": "development",
+      "baseline": {
+        "rule_id": "door-closed-at-camera-exit",
+        "rule_sha256": "4401fa1e713e69b22855e2c5e3c015198908a60a1751e5d90c4e7d3f8c26a712",
+        "episode_id": "ep-327429c08d46e616",
+        "entity_id": "ep-327429c08d46e616:object-316",
+        "as_of_us": 18600000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "59b913195760c3f914dbbcd2"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "cc48faf81d81b2485aa8a87f64ab40c07d25672f4d63aeca13da8fe6f8a25d4d",
+        "run_id": "temporal-replay-v1"
+      },
+      "frame": {
+        "id": "914cd2cf3d796e3f82506fae",
+        "episode_id": "ep-327429c08d46e616",
+        "entity_id": "ep-327429c08d46e616:object-316",
+        "pts_us": 18400000,
+        "available_us": 18400000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/rules-departure-v1/ep-327429c08d46e616/914cd2cf3d796e3f82506fae.png",
+        "sha256": "9094a06fe0ebaf601ee1acf40c4217a7da0d8ff7cec4f19d05d39be525421832"
+      },
+      "models": {
+        "qwen": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "d9196c0dfe9ff2f13050f77828b718be5736a2970f5661e109d814471ccbb8a5",
+          "answer": {
+            "request_id": "d9196c0dfe9ff2f13050f77828b718be5736a2970f5661e109d814471ccbb8a5",
+            "entity_id": "ep-327429c08d46e616:object-316",
+            "answer": "false",
+            "evidence_ids": [
+              "914cd2cf3d796e3f82506fae"
+            ],
+            "rationale": "The microwave's door is visible and seated against its frame, showing no gap or displacement that would indicate it is open."
+          },
+          "elapsed_seconds": 7.178006416885182,
+          "prompt_tokens": 507,
+          "generation_tokens": 59,
+          "peak_mlx_bytes": 10857492541,
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        "cosmos": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "d9196c0dfe9ff2f13050f77828b718be5736a2970f5661e109d814471ccbb8a5",
+          "answer": {
+            "request_id": "d9196c0dfe9ff2f13050f77828b718be5736a2970f5661e109d814471ccbb8a5",
+            "entity_id": "ep-327429c08d46e616:object-316",
+            "answer": "false",
+            "evidence_ids": [
+              "914cd2cf3d796e3f82506fae"
+            ],
+            "rationale": "The microwave door is visible and appears to be closed, with no indication of an open gap or displacement."
+          },
+          "elapsed_seconds": 8.75496270810254,
+          "prompt_tokens": 518,
+          "generation_tokens": 66,
+          "peak_mlx_bytes": 10857492728,
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        }
+      }
+    },
+    {
+      "candidate": {
+        "episode_id": "ep-368d6331fc690a2c",
+        "kind": "camera_exit_candidate",
+        "frame_id": "e2a6b443b94dfdb7e7b15753",
+        "event_us": 13500000,
+        "available_us": 13700000,
+        "confirmation_frame_id": "483fe00d893d99317718b598",
+        "event_id": "c61d31a2c0480ae41f3fa70d"
+      },
+      "split": "development",
+      "baseline": {
+        "rule_id": "door-closed-at-camera-exit",
+        "rule_sha256": "c6af64d81fceb7b599c55226fe91e1aaee4cb690b72f31e0b15249004ea38c05",
+        "episode_id": "ep-368d6331fc690a2c",
+        "entity_id": "ep-368d6331fc690a2c:object-308",
+        "as_of_us": 13700000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "c61d31a2c0480ae41f3fa70d"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "1bbd5a4bc77c3fa022b0351693aa0f82b989a047c23c2cd27089cae968417e6a",
+        "run_id": "temporal-replay-v1"
+      },
+      "frame": {
+        "id": "e2a6b443b94dfdb7e7b15753",
+        "episode_id": "ep-368d6331fc690a2c",
+        "entity_id": "ep-368d6331fc690a2c:object-308",
+        "pts_us": 13500000,
+        "available_us": 13500000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/rules-departure-v1/ep-368d6331fc690a2c/e2a6b443b94dfdb7e7b15753.png",
+        "sha256": "b72e21b67beca82aee20bfe8869c057f844f305b1c06ff8aecdef37359739caf"
+      },
+      "models": {
+        "qwen": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "21509d1e3f46e39cb3d750dcc54540774279f5380638a55732e50f4abc87c561",
+          "answer": {
+            "request_id": "21509d1e3f46e39cb3d750dcc54540774279f5380638a55732e50f4abc87c561",
+            "entity_id": "ep-368d6331fc690a2c:object-308",
+            "answer": "false",
+            "evidence_ids": [
+              "e2a6b443b94dfdb7e7b15753"
+            ],
+            "rationale": "The red fridge's door is visibly seated against its frame with no visible gap or displacement, indicating it is closed."
+          },
+          "elapsed_seconds": 7.524090500082821,
+          "prompt_tokens": 507,
+          "generation_tokens": 58,
+          "peak_mlx_bytes": 10857492541,
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        "cosmos": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "21509d1e3f46e39cb3d750dcc54540774279f5380638a55732e50f4abc87c561",
+          "answer": {
+            "request_id": "21509d1e3f46e39cb3d750dcc54540774279f5380638a55732e50f4abc87c561",
+            "entity_id": "ep-368d6331fc690a2c:object-308",
+            "answer": "false",
+            "evidence_ids": [
+              "e2a6b443b94dfdb7e7b15753"
+            ],
+            "rationale": "The red refrigerator has two doors, both of which are visibly closed and aligned with their respective frames, showing no gaps or signs of being open."
+          },
+          "elapsed_seconds": 8.985697333002463,
+          "prompt_tokens": 518,
+          "generation_tokens": 74,
+          "peak_mlx_bytes": 10857492728,
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        }
+      }
+    },
+    {
+      "candidate": {
+        "episode_id": "ep-37909e041bc956c8",
+        "kind": "camera_exit_candidate",
+        "frame_id": "fd543b8a4405cc20a0b67ca6",
+        "event_us": 16600000,
+        "available_us": 16800000,
+        "confirmation_frame_id": "71b6fdd05d54655276a43801",
+        "event_id": "28bf88f242ed9e25edd07982"
+      },
+      "split": "test",
+      "baseline": {
+        "rule_id": "door-closed-at-camera-exit",
+        "rule_sha256": "163bcf838cc194f5f9e564fbec0873ee0c5c4f4e84fa3cafab84496649e3b50c",
+        "episode_id": "ep-37909e041bc956c8",
+        "entity_id": "ep-37909e041bc956c8:object-316",
+        "as_of_us": 16800000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "28bf88f242ed9e25edd07982"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "1d0df7d18e870c940a657b932f5b06c098dec83d6dca5469b9004789f2af812a",
+        "run_id": "temporal-replay-v1"
+      },
+      "frame": {
+        "id": "fd543b8a4405cc20a0b67ca6",
+        "episode_id": "ep-37909e041bc956c8",
+        "entity_id": "ep-37909e041bc956c8:object-316",
+        "pts_us": 16600000,
+        "available_us": 16600000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/rules-departure-v1/ep-37909e041bc956c8/fd543b8a4405cc20a0b67ca6.png",
+        "sha256": "9cb82d2efceb246a8d3275d18c6cbaaa9f279ce18c51d111e09504511f97601a"
+      },
+      "models": {
+        "qwen": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "882f8547849f287528642bef09ae358870b07738fac33b4ffb250de2d609205b",
+          "answer": {
+            "request_id": "882f8547849f287528642bef09ae358870b07738fac33b4ffb250de2d609205b",
+            "entity_id": "ep-37909e041bc956c8:object-316",
+            "answer": "false",
+            "evidence_ids": [
+              "fd543b8a4405cc20a0b67ca6"
+            ],
+            "rationale": "The microwave door is visible and seated against its frame, with no visible gap or displacement indicating it is open."
+          },
+          "elapsed_seconds": 7.04561399994418,
+          "prompt_tokens": 507,
+          "generation_tokens": 57,
+          "peak_mlx_bytes": 10857492541,
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        "cosmos": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "882f8547849f287528642bef09ae358870b07738fac33b4ffb250de2d609205b",
+          "answer": {
+            "request_id": "882f8547849f287528642bef09ae358870b07738fac33b4ffb250de2d609205b",
+            "entity_id": "ep-37909e041bc956c8:object-316",
+            "answer": "false",
+            "evidence_ids": [
+              "fd543b8a4405cc20a0b67ca6"
+            ],
+            "rationale": "The microwave door is visible and appears to be closed, with no indication of an open gap or displacement."
+          },
+          "elapsed_seconds": 8.436092749936506,
+          "prompt_tokens": 518,
+          "generation_tokens": 66,
+          "peak_mlx_bytes": 10857492728,
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        }
+      }
+    },
+    {
+      "candidate": {
+        "episode_id": "ep-7d3106fb1cac9776",
+        "kind": "camera_exit_candidate",
+        "frame_id": "afd1a8c4901ddf6778ba1942",
+        "event_us": 9900000,
+        "available_us": 10100000,
+        "confirmation_frame_id": "7a1634f33ea41a49b1454caf",
+        "event_id": "5c64068a90582b51c7d10bb2"
+      },
+      "split": "test",
+      "baseline": {
+        "rule_id": "door-closed-at-camera-exit",
+        "rule_sha256": "8323f07a4c8ed841e8bf190c5496fe50a5c02bffc4bbf9b11217ff9fbd217484",
+        "episode_id": "ep-7d3106fb1cac9776",
+        "entity_id": "ep-7d3106fb1cac9776:object-308",
+        "as_of_us": 10100000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "5c64068a90582b51c7d10bb2"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "3be1037d6d11c7899502aea92a10edb939d796507bc6e179cd0e8b9e08a0060a",
+        "run_id": "temporal-replay-v1"
+      },
+      "frame": {
+        "id": "afd1a8c4901ddf6778ba1942",
+        "episode_id": "ep-7d3106fb1cac9776",
+        "entity_id": "ep-7d3106fb1cac9776:object-308",
+        "pts_us": 9900000,
+        "available_us": 9900000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/rules-departure-v1/ep-7d3106fb1cac9776/afd1a8c4901ddf6778ba1942.png",
+        "sha256": "006e6e20bf6486709121fb11c10c43a858c62320563a1cc4921074f4fd930d88"
+      },
+      "models": {
+        "qwen": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "4e5dd1c2e29bd42d6231d6d49337294e0146a7175861d832027bb0a7726527d8",
+          "answer": {
+            "request_id": "4e5dd1c2e29bd42d6231d6d49337294e0146a7175861d832027bb0a7726527d8",
+            "entity_id": "ep-7d3106fb1cac9776:object-308",
+            "answer": "false",
+            "evidence_ids": [
+              "afd1a8c4901ddf6778ba1942"
+            ],
+            "rationale": "The red fridge door is visible and seated against its frame, with no visible gap or displacement indicating it is open."
+          },
+          "elapsed_seconds": 7.416497166035697,
+          "prompt_tokens": 507,
+          "generation_tokens": 58,
+          "peak_mlx_bytes": 10857492541,
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        "cosmos": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "4e5dd1c2e29bd42d6231d6d49337294e0146a7175861d832027bb0a7726527d8",
+          "answer": {
+            "request_id": "4e5dd1c2e29bd42d6231d6d49337294e0146a7175861d832027bb0a7726527d8",
+            "entity_id": "ep-7d3106fb1cac9776:object-308",
+            "answer": "false",
+            "evidence_ids": [
+              "afd1a8c4901ddf6778ba1942"
+            ],
+            "rationale": "The red refrigerator has a single door that is visibly closed, with no indication of an open gap or displacement."
+          },
+          "elapsed_seconds": 8.490893916925415,
+          "prompt_tokens": 518,
+          "generation_tokens": 67,
+          "peak_mlx_bytes": 10857492728,
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        }
+      }
+    },
+    {
+      "candidate": {
+        "episode_id": "ep-97a1a39b2e9490b6",
+        "kind": "camera_exit_candidate",
+        "frame_id": "f027d6d3ec876272811edf99",
+        "event_us": 8200000,
+        "available_us": 8400000,
+        "confirmation_frame_id": "9e657bbc22716ffbb71302cd",
+        "event_id": "71bfbcba7c2aaddfdd8672c9"
+      },
+      "split": "development",
+      "baseline": {
+        "rule_id": "door-closed-at-camera-exit",
+        "rule_sha256": "182951314f2b8bc1c8586dc9581a0225721425e97cf90a70d705bc44a7c1d741",
+        "episode_id": "ep-97a1a39b2e9490b6",
+        "entity_id": "ep-97a1a39b2e9490b6:object-316",
+        "as_of_us": 8400000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "71bfbcba7c2aaddfdd8672c9"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "dd4175752d4cbf424461c7a7a86db4cf8411bd02a43be25bd60f0ab7fb4cafc1",
+        "run_id": "temporal-replay-v1"
+      },
+      "frame": {
+        "id": "f027d6d3ec876272811edf99",
+        "episode_id": "ep-97a1a39b2e9490b6",
+        "entity_id": "ep-97a1a39b2e9490b6:object-316",
+        "pts_us": 8200000,
+        "available_us": 8200000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/rules-departure-v1/ep-97a1a39b2e9490b6/f027d6d3ec876272811edf99.png",
+        "sha256": "be14add700ebdf2686e8ddb3a97cc5108fa66fd849663901008d3694cc5d9ca8"
+      },
+      "models": {
+        "qwen": {
+          "decision": "VIOLATION",
+          "runtime_status": "ok",
+          "request_id": "43827f1b80f05eef058fdc4f898b747643dd4d6e72a4e3b1707d2760d9daaff9",
+          "answer": {
+            "request_id": "43827f1b80f05eef058fdc4f898b747643dd4d6e72a4e3b1707d2760d9daaff9",
+            "entity_id": "ep-97a1a39b2e9490b6:object-316",
+            "answer": "true",
+            "evidence_ids": [
+              "f027d6d3ec876272811edf99"
+            ],
+            "rationale": "The microwave's door is visibly open, with a clear gap exposing the interior cavity."
+          },
+          "elapsed_seconds": 6.996388708008453,
+          "prompt_tokens": 507,
+          "generation_tokens": 52,
+          "peak_mlx_bytes": 10857492541,
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        "cosmos": {
+          "decision": "VIOLATION",
+          "runtime_status": "ok",
+          "request_id": "43827f1b80f05eef058fdc4f898b747643dd4d6e72a4e3b1707d2760d9daaff9",
+          "answer": {
+            "request_id": "43827f1b80f05eef058fdc4f898b747643dd4d6e72a4e3b1707d2760d9daaff9",
+            "entity_id": "ep-97a1a39b2e9490b6:object-316",
+            "answer": "true",
+            "evidence_ids": [
+              "f027d6d3ec876272811edf99"
+            ],
+            "rationale": "The microwave door is visibly open, with a clear gap exposing the interior space inside the appliance."
+          },
+          "elapsed_seconds": 8.40060570789501,
+          "prompt_tokens": 518,
+          "generation_tokens": 64,
+          "peak_mlx_bytes": 10857492728,
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        }
+      }
+    },
+    {
+      "candidate": {
+        "episode_id": "ep-c1c313b64f579794",
+        "kind": "camera_exit_candidate",
+        "frame_id": "d8a7a76e4080bb3c52fa7cfe",
+        "event_us": 9300000,
+        "available_us": 9500000,
+        "confirmation_frame_id": "85458192a62e4dc2c2b573bc",
+        "event_id": "04ef39cb730e6d411e32a49e"
+      },
+      "split": "test",
+      "baseline": {
+        "rule_id": "door-closed-at-camera-exit",
+        "rule_sha256": "ba49f6259216540208a251960dfd0c6c60c0e0ec4ab04fddf8535b368c397fcd",
+        "episode_id": "ep-c1c313b64f579794",
+        "entity_id": "ep-c1c313b64f579794:object-316",
+        "as_of_us": 9500000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "04ef39cb730e6d411e32a49e"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "477aef159a05f5d90b8a2a2a63fc0ae7b2d509acb94d1966b2af98d449e1d885",
+        "run_id": "temporal-replay-v1"
+      },
+      "frame": {
+        "id": "d8a7a76e4080bb3c52fa7cfe",
+        "episode_id": "ep-c1c313b64f579794",
+        "entity_id": "ep-c1c313b64f579794:object-316",
+        "pts_us": 9300000,
+        "available_us": 9300000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/rules-departure-v1/ep-c1c313b64f579794/d8a7a76e4080bb3c52fa7cfe.png",
+        "sha256": "e4ebe23e10ba73fb23ee5737ae26bd5806712109d47ac93a8def5a6d665eecf6"
+      },
+      "models": {
+        "qwen": {
+          "decision": "VIOLATION",
+          "runtime_status": "ok",
+          "request_id": "2e0619d311c8675cea5ea0ad2e22643b592d28548bbf419c3a983737f09e786c",
+          "answer": {
+            "request_id": "2e0619d311c8675cea5ea0ad2e22643b592d28548bbf419c3a983737f09e786c",
+            "entity_id": "ep-c1c313b64f579794:object-316",
+            "answer": "true",
+            "evidence_ids": [
+              "d8a7a76e4080bb3c52fa7cfe"
+            ],
+            "rationale": "The microwave's door is visibly open, with a clear gap exposing the interior cavity."
+          },
+          "elapsed_seconds": 7.550108084222302,
+          "prompt_tokens": 507,
+          "generation_tokens": 52,
+          "peak_mlx_bytes": 10857492541,
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        "cosmos": {
+          "decision": "VIOLATION",
+          "runtime_status": "ok",
+          "request_id": "2e0619d311c8675cea5ea0ad2e22643b592d28548bbf419c3a983737f09e786c",
+          "answer": {
+            "request_id": "2e0619d311c8675cea5ea0ad2e22643b592d28548bbf419c3a983737f09e786c",
+            "entity_id": "ep-c1c313b64f579794:object-316",
+            "answer": "true",
+            "evidence_ids": [
+              "d8a7a76e4080bb3c52fa7cfe"
+            ],
+            "rationale": "The microwave door is visibly open, with a clear gap exposing the interior space."
+          },
+          "elapsed_seconds": 8.251391500001773,
+          "prompt_tokens": 518,
+          "generation_tokens": 61,
+          "peak_mlx_bytes": 10857492728,
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        }
+      }
+    },
+    {
+      "candidate": {
+        "episode_id": "ep-c2ad5c5f7b67a9a8",
+        "kind": "camera_exit_candidate",
+        "frame_id": "1ae1cec6d873b1ace3345d5d",
+        "event_us": 13000000,
+        "available_us": 13200000,
+        "confirmation_frame_id": "8ac3f8d49adfe568dc4d1501",
+        "event_id": "6709741a3a8b80956992a57c"
+      },
+      "split": "development",
+      "baseline": {
+        "rule_id": "door-closed-at-camera-exit",
+        "rule_sha256": "452d839243de9e9e6da29bc64655edd562557846e7dfb600a08875d17259bd33",
+        "episode_id": "ep-c2ad5c5f7b67a9a8",
+        "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+        "as_of_us": 13200000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "6709741a3a8b80956992a57c"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "cb0f879bea70c1a038f60cb314ee0bf154aad74dd63844a2534fb7a34327e039",
+        "run_id": "temporal-replay-v1"
+      },
+      "frame": {
+        "id": "1ae1cec6d873b1ace3345d5d",
+        "episode_id": "ep-c2ad5c5f7b67a9a8",
+        "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+        "pts_us": 13000000,
+        "available_us": 13000000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/rules-departure-v1/ep-c2ad5c5f7b67a9a8/1ae1cec6d873b1ace3345d5d.png",
+        "sha256": "87d2ff25ffbc853588cae9789612c306a60bfc2c68122ad255a19cf86e6281ac"
+      },
+      "models": {
+        "qwen": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "3824e2ab26a1e56ffe033972af1b64e8920a4d1becfaa74046ef04a1e6c78f56",
+          "answer": {
+            "request_id": "3824e2ab26a1e56ffe033972af1b64e8920a4d1becfaa74046ef04a1e6c78f56",
+            "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+            "answer": "false",
+            "evidence_ids": [
+              "1ae1cec6d873b1ace3345d5d"
+            ],
+            "rationale": "The microwave's door is visible and seated against its frame, showing no gap or displacement that would indicate it is open."
+          },
+          "elapsed_seconds": 7.984334792010486,
+          "prompt_tokens": 507,
+          "generation_tokens": 59,
+          "peak_mlx_bytes": 10857492541,
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        "cosmos": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "3824e2ab26a1e56ffe033972af1b64e8920a4d1becfaa74046ef04a1e6c78f56",
+          "answer": {
+            "request_id": "3824e2ab26a1e56ffe033972af1b64e8920a4d1becfaa74046ef04a1e6c78f56",
+            "entity_id": "ep-c2ad5c5f7b67a9a8:object-316",
+            "answer": "false",
+            "evidence_ids": [
+              "1ae1cec6d873b1ace3345d5d"
+            ],
+            "rationale": "The microwave door is visible and appears to be closed, with no indication of an open gap or displacement."
+          },
+          "elapsed_seconds": 8.73058620793745,
+          "prompt_tokens": 518,
+          "generation_tokens": 66,
+          "peak_mlx_bytes": 10857492728,
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        }
+      }
+    },
+    {
+      "candidate": {
+        "episode_id": "ep-d9e2a612fb2342e2",
+        "kind": "camera_exit_candidate",
+        "frame_id": "f0b9a201b434f1fa1e8d76e1",
+        "event_us": 19700000,
+        "available_us": 19900000,
+        "confirmation_frame_id": "4c513243b80eac4547632e12",
+        "event_id": "6ad4ee72b68562565dba02c9"
+      },
+      "split": "test",
+      "baseline": {
+        "rule_id": "door-closed-at-camera-exit",
+        "rule_sha256": "b435fb3fee5a92f57b1bacddeb6e02d8ae97ff4308f68fcc1c3492106cd2e4bf",
+        "episode_id": "ep-d9e2a612fb2342e2",
+        "entity_id": "ep-d9e2a612fb2342e2:object-308",
+        "as_of_us": 19900000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "6ad4ee72b68562565dba02c9"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "f6dcc097d9a531f073ae82a5cdc02252374e937551f70b47fd1c4d1724a87d7c",
+        "run_id": "temporal-replay-v1"
+      },
+      "frame": {
+        "id": "f0b9a201b434f1fa1e8d76e1",
+        "episode_id": "ep-d9e2a612fb2342e2",
+        "entity_id": "ep-d9e2a612fb2342e2:object-308",
+        "pts_us": 19700000,
+        "available_us": 19700000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/rules-departure-v1/ep-d9e2a612fb2342e2/f0b9a201b434f1fa1e8d76e1.png",
+        "sha256": "3939b0c5e3fe211bd8b96204279905e4531862469f38d23054caf71b953a4280"
+      },
+      "models": {
+        "qwen": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "19d639c26b617b3718dc3bf45dcf1a93a025df3658c8987b538cccbe20b6df16",
+          "answer": {
+            "request_id": "19d639c26b617b3718dc3bf45dcf1a93a025df3658c8987b538cccbe20b6df16",
+            "entity_id": "ep-d9e2a612fb2342e2:object-308",
+            "answer": "false",
+            "evidence_ids": [
+              "f0b9a201b434f1fa1e8d76e1"
+            ],
+            "rationale": "The red fridge door is visible and seated against its frame, with no visible gap or displacement indicating it is open."
+          },
+          "elapsed_seconds": 7.6798132080584764,
+          "prompt_tokens": 507,
+          "generation_tokens": 58,
+          "peak_mlx_bytes": 10857492541,
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        "cosmos": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "19d639c26b617b3718dc3bf45dcf1a93a025df3658c8987b538cccbe20b6df16",
+          "answer": {
+            "request_id": "19d639c26b617b3718dc3bf45dcf1a93a025df3658c8987b538cccbe20b6df16",
+            "entity_id": "ep-d9e2a612fb2342e2:object-308",
+            "answer": "false",
+            "evidence_ids": [
+              "f0b9a201b434f1fa1e8d76e1"
+            ],
+            "rationale": "The red refrigerator door is visible and appears to be closed, with no indication of an open gap or displacement."
+          },
+          "elapsed_seconds": 8.470733750145882,
+          "prompt_tokens": 518,
+          "generation_tokens": 67,
+          "peak_mlx_bytes": 10857492728,
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        }
+      }
+    },
+    {
+      "candidate": {
+        "episode_id": "ep-e614ca27a15019cd",
+        "kind": "camera_exit_candidate",
+        "frame_id": "71ea8e3ace7019883dd27c01",
+        "event_us": 12600000,
+        "available_us": 12800000,
+        "confirmation_frame_id": "e2cfa95dfa720da18e7ca18f",
+        "event_id": "3fa0a1f6ed7259d92f80d626"
+      },
+      "split": "test",
+      "baseline": {
+        "rule_id": "door-closed-at-camera-exit",
+        "rule_sha256": "649ac5cd80fdb504238d27236c1ddfda47c6e391df7dcb2855a86c4e694e7bd0",
+        "episode_id": "ep-e614ca27a15019cd",
+        "entity_id": "ep-e614ca27a15019cd:object-316",
+        "as_of_us": 12800000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "3fa0a1f6ed7259d92f80d626"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "591f20dc3bdda5c855f5f270f77dfb946983334f0a01f88a695ceca446a9c06b",
+        "run_id": "temporal-replay-v1"
+      },
+      "frame": {
+        "id": "71ea8e3ace7019883dd27c01",
+        "episode_id": "ep-e614ca27a15019cd",
+        "entity_id": "ep-e614ca27a15019cd:object-316",
+        "pts_us": 12600000,
+        "available_us": 12600000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/rules-departure-v1/ep-e614ca27a15019cd/71ea8e3ace7019883dd27c01.png",
+        "sha256": "8d78c6ea5223d2d7ed003ebee1e1391f0a978d406f7e218cc0d20c837adfdf93"
+      },
+      "models": {
+        "qwen": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "ee62a774ce2436e9eba03d1330f1da6de04aa48247c61b36624d2c4a857b2748",
+          "answer": {
+            "request_id": "ee62a774ce2436e9eba03d1330f1da6de04aa48247c61b36624d2c4a857b2748",
+            "entity_id": "ep-e614ca27a15019cd:object-316",
+            "answer": "false",
+            "evidence_ids": [
+              "71ea8e3ace7019883dd27c01"
+            ],
+            "rationale": "The microwave's door is visible and seated against its frame, showing no gap or displacement that would indicate it is open."
+          },
+          "elapsed_seconds": 7.729419250041246,
+          "prompt_tokens": 507,
+          "generation_tokens": 59,
+          "peak_mlx_bytes": 10857492541,
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        "cosmos": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "ee62a774ce2436e9eba03d1330f1da6de04aa48247c61b36624d2c4a857b2748",
+          "answer": {
+            "request_id": "ee62a774ce2436e9eba03d1330f1da6de04aa48247c61b36624d2c4a857b2748",
+            "entity_id": "ep-e614ca27a15019cd:object-316",
+            "answer": "false",
+            "evidence_ids": [
+              "71ea8e3ace7019883dd27c01"
+            ],
+            "rationale": "The microwave door is visible and appears to be closed, with no indication of an open gap or displacement."
+          },
+          "elapsed_seconds": 8.662872875109315,
+          "prompt_tokens": 518,
+          "generation_tokens": 66,
+          "peak_mlx_bytes": 10857492728,
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        }
+      }
+    },
+    {
+      "candidate": {
+        "episode_id": "ep-e9c9ef6801285914",
+        "kind": "camera_exit_candidate",
+        "frame_id": "7ad8cb1f5e87336524cbfe73",
+        "event_us": 16800000,
+        "available_us": 17000000,
+        "confirmation_frame_id": "02d2d866dc01e73c0d1da77a",
+        "event_id": "7d6b4a9e85167aab62fefa8d"
+      },
+      "split": "development",
+      "baseline": {
+        "rule_id": "door-closed-at-camera-exit",
+        "rule_sha256": "8f1f693cb3a2fbcd335b9ed704b39b283181e35223a976c104a46d785a637423",
+        "episode_id": "ep-e9c9ef6801285914",
+        "entity_id": "ep-e9c9ef6801285914:object-308",
+        "as_of_us": 17000000,
+        "status": "UNKNOWN",
+        "reason": "no_exact_state_sample",
+        "applicability": "observed",
+        "evidence_ids": [
+          "7d6b4a9e85167aab62fefa8d"
+        ],
+        "evaluator_version": "flat-rules-v1",
+        "evaluation_id": "d6134a04f974d0d7bbeef2d48e9bbee4b069aed3ed590ab6e4fd2db90aae1aa9",
+        "run_id": "temporal-replay-v1"
+      },
+      "frame": {
+        "id": "7ad8cb1f5e87336524cbfe73",
+        "episode_id": "ep-e9c9ef6801285914",
+        "entity_id": "ep-e9c9ef6801285914:object-308",
+        "pts_us": 16800000,
+        "available_us": 16800000,
+        "path": "/Users/manuel/code/wesen/2026-09-06--vision/output/rules-departure-v1/ep-e9c9ef6801285914/7ad8cb1f5e87336524cbfe73.png",
+        "sha256": "aa7116198c0926c9cc8493b0de187f04774dc7eb85a265f8d007480d87c8d8e8"
+      },
+      "models": {
+        "qwen": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "ff9a8198c3a53273b0d26752262d67745403ba00b18e4a8e187d2d834662e19e",
+          "answer": {
+            "request_id": "ff9a8198c3a53273b0d26752262d67745403ba00b18e4a8e187d2d834662e19e",
+            "entity_id": "ep-e9c9ef6801285914:object-308",
+            "answer": "false",
+            "evidence_ids": [
+              "7ad8cb1f5e87336524cbfe73"
+            ],
+            "rationale": "The red fridge door is visible and seated against its frame, with no visible gap or displacement indicating it is open."
+          },
+          "elapsed_seconds": 7.369691707892343,
+          "prompt_tokens": 507,
+          "generation_tokens": 58,
+          "peak_mlx_bytes": 10857492541,
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        "cosmos": {
+          "decision": "PASS",
+          "runtime_status": "ok",
+          "request_id": "ff9a8198c3a53273b0d26752262d67745403ba00b18e4a8e187d2d834662e19e",
+          "answer": {
+            "request_id": "ff9a8198c3a53273b0d26752262d67745403ba00b18e4a8e187d2d834662e19e",
+            "entity_id": "ep-e9c9ef6801285914:object-308",
+            "answer": "false",
+            "evidence_ids": [
+              "7ad8cb1f5e87336524cbfe73"
+            ],
+            "rationale": "The red refrigerator has a single door that is visibly closed, with no indication of an open gap or displacement."
+          },
+          "elapsed_seconds": 8.496466874843463,
+          "prompt_tokens": 518,
+          "generation_tokens": 67,
+          "peak_mlx_bytes": 10857492728,
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        }
+      }
+    }
+  ]
+}

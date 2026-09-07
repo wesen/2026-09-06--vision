@@ -29,7 +29,7 @@
 
 - [x] Freeze rule/candidate/matching policies and versioned prompts.
 - [x] Compare oracle and predicted/no-verifier conditions; document the accepted-adapter gate for later Qwen/Cosmos integration.
-- [ ] Include missed candidates in end-to-end recall and report unknown/cost/latency.
+- [x] Include missed candidates in end-to-end recall and report unknown/cost/latency.
 - [x] Keep endpoint-world-truth diagnostics separate from reviewed temporal evaluation.
 
 ## Explicit follow-ups outside initial implementation

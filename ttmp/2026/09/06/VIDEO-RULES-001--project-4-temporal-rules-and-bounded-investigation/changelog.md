@@ -20,3 +20,12 @@ Step 4: Revised scope; R1 flat templates and R2 actual sampled-store integration
 ## 2026-09-06
 
 Step 5: Focused verifier handoff and measured report complete; 75 unique actual packets; model execution and full-system recall remain explicit gates (5fecab4).
+
+## 2026-09-07
+
+Step 6: froze twelve RGB-reviewed camera departures and causal YOLO proposal policy before inference (commit 1d3f2c4). Printed plan and P1 start; saved contact sheets and exact exit neighborhoods.
+
+## 2026-09-07
+
+Ticket closed
+

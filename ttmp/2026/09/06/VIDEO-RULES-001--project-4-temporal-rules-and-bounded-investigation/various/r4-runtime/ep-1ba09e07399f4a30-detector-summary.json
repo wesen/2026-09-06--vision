@@ -1,0 +1,17 @@
+{
+  "episode_id": "ep-1ba09e07399f4a30",
+  "frames": 126,
+  "candidates": [
+    {
+      "episode_id": "ep-1ba09e07399f4a30",
+      "kind": "camera_exit_candidate",
+      "frame_id": "433f66ea088809f155a2d3f5",
+      "event_us": 8100000,
+      "available_us": 8300000,
+      "confirmation_frame_id": "37c5a5266b1ed4a7bea9741c",
+      "event_id": "755581139a417443d2c5888a"
+    }
+  ],
+  "wall_seconds": 3.964235292049125,
+  "frames_sha256": "2970d9809c8d10cd2f8bbbd5b5bbefa18c159b50af76336f6a6533fc84e84759"
+}

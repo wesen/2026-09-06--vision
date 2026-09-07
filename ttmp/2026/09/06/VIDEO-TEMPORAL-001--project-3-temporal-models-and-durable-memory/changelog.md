@@ -44,3 +44,7 @@ User-requested wrap-up: temporal comparisons and sampled observation memory comp
 ## 2026-09-06
 
 Step 10: Illustrated textbook report published to go-go-parc da20dfa; plan/completion slips printed after explicit approval; ticket closed with general memory features deferred.
+
+## 2026-09-06
+
+Native follow-up N1: designed matched FP32 experiment and passed eight-window pixel-sensitive pilot; encoder commit 176a300. Full extraction started. External printing approval pending.

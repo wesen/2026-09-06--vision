@@ -41,7 +41,7 @@ The measured comparisons and observation memory are complete. See `reference/04-
 
 ## Native FP32 follow-up
 
-- [ ] N1: Implement native dense producer and validate an eight-window pixel-sensitive pilot with accepted runtime provenance.
-- [ ] N2: Extract and source-audit all 792 matched native FP32 windows without changing pooled artifacts.
+- [x] N1: Implement native dense producer and validate an eight-window pixel-sensitive pilot with accepted runtime provenance.
+- [x] N2: Extract and source-audit all 792 matched native FP32 windows without changing pooled artifacts.
 - [ ] N3: Train fresh ridge and TCN heads under the existing development-selection policy; save matched per-class/paired comparisons.
 - [ ] N4: Publish measured native-versus-pooled findings, figure, diary, commits, and phase-slip receipts.

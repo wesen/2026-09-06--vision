@@ -1,0 +1,123 @@
+{
+  "status": "pilot",
+  "spec": {
+    "encoder": {
+      "artifacts": "b54ff71dd970ab734fdd24dcbe4be01553bf8cb762b8acb1c195669678596e95",
+      "model_id": "Qwen/Qwen3-VL-Embedding-2B",
+      "revision": "9f2f7e710d6d81056aa5c0a4f04764fec6bb7bda",
+      "mode": "native_video",
+      "adapter": "qwen3-vl-native-official-fp32-v1",
+      "quantization": "none-fp32",
+      "instruction": "Represent the user's input.",
+      "image_size": [
+        320,
+        240
+      ],
+      "resize": "PIL-bicubic-320x240-then-official-torchvision-bicubic",
+      "pooling": "last-unmasked-token-then-fp32-l2",
+      "dimension": 2048,
+      "dtype": "float32",
+      "normalization": "l2",
+      "sampling": "first-PTS-at-or-after-grid-v1",
+      "mlx_vlm": "git:6452614f6de04694d1e34fd13abaca11f6ffb994",
+      "transformers": "5.16.1",
+      "runtime": [
+        [
+          "av",
+          "17.1.0"
+        ],
+        [
+          "mlx",
+          "0.32.2"
+        ],
+        [
+          "mlx-metal",
+          "0.32.2"
+        ],
+        [
+          "numpy",
+          "2.4.6"
+        ],
+        [
+          "pillow",
+          "12.3.0"
+        ],
+        [
+          "torch",
+          "2.14.0"
+        ],
+        [
+          "torchvision",
+          "0.29.0"
+        ],
+        [
+          "transformers",
+          "5.16.1"
+        ]
+      ],
+      "processor": "transformers.Qwen3VLProcessor-5.16.1-checkpoint-template",
+      "temporal": "actual-selected-PTS-relative-to-clip-us-repeat-last-frame-and-PTS-v1",
+      "max_frames": 32,
+      "wrapper_sha256": "f265fecc0c4de4d896e7ef14a9e51bfc43f2e20f344c7f6e0d2c3b30c0265a73",
+      "mlx_source": "53c55a9c3831cced6b9651967888a6be13564440a475eec6af70427cae6c1ebf",
+      "adapter_source": "3743f74f704a4b9fa831cc9e5cf6230425be7514ec6cda2684d0ca087021cfa3"
+    },
+    "mode": "dense-trailing-native-video-fp32",
+    "inputs_sha256": "388a556ff3dc53ed05f50e4c21524342006b0e2ae18441e485b5902e587769c3",
+    "policy": {
+      "window_us": 2000000,
+      "stride_us": 500000,
+      "fps": 2,
+      "feature_availability": "trailing end; offline latency excluded",
+      "target": "latest sampled frame inside weak interior",
+      "boundaries": "unlabeled; exact-boundary metrics prohibited"
+    },
+    "code_sha256": {
+      "/Users/manuel/code/wesen/2026-09-06--vision/workbench/src/video_workbench/temporal/encode_native.py": "1a724b55399f8f62da5663899d62294fd0454674c5a5431b38f0a07bc080c49d",
+      "/Users/manuel/code/wesen/2026-09-06--vision/workbench/src/video_workbench/native_video.py": "3743f74f704a4b9fa831cc9e5cf6230425be7514ec6cda2684d0ca087021cfa3",
+      "/Users/manuel/code/wesen/2026-09-06--vision/workbench/src/video_workbench/media.py": "39216c8c92fc86206eee36be5f559e46ef1b0820782a3228f000acf52a3df386"
+    }
+  },
+  "space_id": "3389e9a8efb4cf262b6c3e20051f3418b59e9447f0807f24c9f9e4be15e58e62",
+  "sample_ids": [
+    "988bed041b8cf1b2b9761f0d",
+    "90a9a7f92b413973b2141258",
+    "a26febcc719a5980c6694361",
+    "0ea930e98620463588bbcf79",
+    "e5cd7e73052650df2b30a557",
+    "5f01d388881bbf9eb6cdfa87",
+    "ad6052e4b237035ab1b57984",
+    "108fec652e7301d7b0ce7981"
+  ],
+  "features_sha256": "d891c8b223f00358a5ca86ea9dcd6a30f416ff8e55848602f3af0a2dd1f1af4d",
+  "source_audit": [
+    {
+      "episode_id": "dv-048821a2a2232397",
+      "video_sha256": "edd3379776817e4c512504b6b5705b752e1c849a51211f009d66757fcf7dfbed",
+      "encoded_frames": 8,
+      "windows": 8,
+      "native_mapping_verified": true
+    }
+  ],
+  "timings": [
+    0.3556864170823246,
+    0.14154841704294086,
+    0.14174024993553758,
+    0.4099042909219861,
+    0.23894175002351403,
+    0.23808341706171632,
+    0.2394234579987824,
+    0.24584604217670858,
+    0.23846654198132455
+  ],
+  "labels_read": false,
+  "pixel_probe": {
+    "sample_id": "988bed041b8cf1b2b9761f0d",
+    "black_cosine": 0.4544495642185211,
+    "max_abs_difference": 0.2967677116394043
+  },
+  "wall_seconds": 8.743343333015218,
+  "load_seconds": 6.31398820807226,
+  "peak_mlx_bytes": 9611490824,
+  "limitation": "Native FP32 versus existing four-bit pooled comparison changes both representation and precision; weak labels and offline source clocks."
+}

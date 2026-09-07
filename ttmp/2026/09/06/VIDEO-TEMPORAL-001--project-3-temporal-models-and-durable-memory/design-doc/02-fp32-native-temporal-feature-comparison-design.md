@@ -9,13 +9,20 @@ Topics:
 DocType: design-doc
 Intent: long-term
 Owners: []
-RelatedFiles: []
+RelatedFiles:
+    - Path: repo://workbench/src/video_workbench/native_video.py
+      Note: Accepted native adapter
+    - Path: repo://workbench/src/video_workbench/temporal/encode_native.py
+      Note: Native extraction implementation
+    - Path: repo://workbench/src/video_workbench/temporal/native_compare.py
+      Note: Unchanged-head training and paired comparison
 ExternalSources: []
 Summary: ""
 LastUpdated: 2026-09-06T20:21:56.056952-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 # FP32 native temporal feature comparison
 

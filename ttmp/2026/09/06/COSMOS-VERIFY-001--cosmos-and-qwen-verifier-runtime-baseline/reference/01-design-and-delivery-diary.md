@@ -1225,3 +1225,71 @@ The final report preserves source images, model outputs, runtime metrics, per-re
 - Original strict runtime: `5aa10eb`; helper: `f4f801a`; practical integration: `89c4313`.
 
 Final delivery: report/evidence commit `bb9e4f1`; `docmgr doctor --ticket COSMOS-VERIFY-001 --stale-after 30` passed. Verified report image links, all 24 final PNG artifacts, and the complete 72-response audit. Printed the P3 completion slip at `2026-09-07T04:10:25Z` (HTTP 200, `printed: true`, 384×677); archived its YAML and receipt. The initial plan and P1/P2/P3 start/completion trail remains in the same ticket.
+
+
+## Step 19: Deliver the illustrated technical report to the Obsidian vault
+
+Wrote a new textbook-style technical article for go-go-parc covering the bounded verifier architecture, model profiles, frozen experiment, recovery algorithm, measured outcomes, and separate RULES handoff. Copied six annotated screenshots and four evidence JSON files into the report's dated `_assets` directory, then committed and pushed the vault.
+
+### Prompt Context
+
+**User prompt (verbatim, JSON string):** `"write a detailed project report for the obsidian vault as a deep dive technical analysis blog post using a textbook writing style (no analogies, see skill).      \n Commit and push the bsidian vault when done (go-go-parc vault)."`
+
+**User prompt (verbatim):** "add screenshots / images as well"
+
+**Assistant interpretation:** Publish a detailed, illustrated technical explanation in the vault and deliver it through Git.
+
+**Inferred user intent:** Preserve a self-contained report that teaches the system and its measured limitations to future readers.
+
+**Commit (vault):** `a1f789f` — "Write Qwen and Cosmos verifier deep dive with visual evidence".
+
+### What I did
+
+- Applied the Obsidian vault writing and textbook-authoring skills; matched the existing vision-project article style.
+- Fast-forwarded the clean vault checkout by five remote commits before adding the new note.
+- Wrote approximately 5,250 words with architecture, pseudocode, API/file references, measurement tables, and six captioned screenshots.
+- Copied summary metrics, development selections, the complete 72-response rationale audit, and recovery replay summary alongside the figures.
+- Validated YAML, all asset links, five related-note links, PNG integrity, and reported test counts against the saved measurements.
+- Committed only the new report and its ten assets, pushed `main`, and confirmed the vault was clean and synchronized.
+
+### Why
+
+- A project report should explain the evidence boundary and failure mechanisms, rather than reproduce the implementation log.
+- Copying assets keeps the article readable without cross-repository image dependencies.
+
+### What worked
+
+- The vault accepted the fast-forward and push without conflicts.
+- All six annotated screenshots and supporting evidence links resolve within the vault.
+
+### What didn't work
+
+- No delivery or validation failures. The initial vault checkout was behind the remote, which was resolved by a clean fast-forward.
+
+### What I learned
+
+- The existing vision articles provide useful links for explaining how generative verification relates to embeddings, temporal observations, and localization coverage.
+
+### What was tricky to build
+
+- Preserving the distinction between experimental selection and practical recommendation: Cosmos reasoning remains the development-selected arm, while the held-out evidence supports keeping direct greedy as the practical reference.
+- Explaining internal rationale-audit counts without presenting them as independent human validation.
+
+### What warrants a second pair of eyes
+
+- Review the rationale categories and partial-occlusion examples against the copied screenshots and audit JSON.
+
+### What should be done in the future
+
+- Add future experiment results as dated follow-up notes; preserve this completed evaluation record.
+
+### Code review instructions
+
+- Open the delivered article in the vault and inspect its six figures and linked evidence files.
+- Delivery paths and SHA-256 hashes are recorded in `various/reasoning-vault-delivery.json`.
+
+### Technical details
+
+- Vault: `/Users/manuel/code/wesen/go-go-golems/go-go-parc`.
+- Note: `Projects/2026/09/07/ARTICLE - Bounded Visual Verification - Qwen Cosmos Reasoning and Evidence Validation.md`.
+- Push confirmed: `6f40e1f..a1f789f main -> main`.

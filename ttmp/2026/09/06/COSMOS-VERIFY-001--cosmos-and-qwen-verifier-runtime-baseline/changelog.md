@@ -65,3 +65,7 @@ Step 18 in progress: guard complete comparison populations and archive reviewed 
 ## 2026-09-07
 
 Completed 384 development + 72 held-out calls, all 72 final-rationale reviews, and both live RULES handoffs. Direct controls 22/24; Cosmos reasoning 20/24; unknown recall 0/2 throughout. Enabled traced missing-close recovery after frozen inference (89c4313); 71 completion smoke tests passed.
+
+## 2026-09-07
+
+Published the illustrated textbook-style verifier deep dive to go-go-parc: approximately 5250 words, six screenshots, four evidence files; vault commit a1f789f pushed to main.

@@ -1,0 +1,64 @@
+{
+  "vault": "/Users/manuel/code/wesen/go-go-golems/go-go-parc",
+  "branch": "main",
+  "commit": "a1f789f",
+  "pushed": true,
+  "report": "Projects/2026/09/07/ARTICLE - Bounded Visual Verification - Qwen Cosmos Reasoning and Evidence Validation.md",
+  "files": [
+    {
+      "path": "Projects/2026/09/07/ARTICLE - Bounded Visual Verification - Qwen Cosmos Reasoning and Evidence Validation.md",
+      "sha256": "0081477272368c3484ed75a90c30e0057b01c6993e3f7a88ea6445fa9d81d813",
+      "bytes": 37829
+    },
+    {
+      "path": "Projects/2026/09/07/_assets/cosmos-verify-development-unknown.png",
+      "sha256": "bc8859c7008f34094df31f921d0f1facc536d46b7e7355ef38673d5a86d6e077",
+      "bytes": 324453
+    },
+    {
+      "path": "Projects/2026/09/07/_assets/cosmos-verify-missing-close-recovery.png",
+      "sha256": "75d19b496a36015cecef5a9ad4f798d9b63c4059611c19985f379697a5da7f31",
+      "bytes": 381675
+    },
+    {
+      "path": "Projects/2026/09/07/_assets/cosmos-verify-occluded-microwave.png",
+      "sha256": "562ba59cb89177b0b098404a872f9099c30142aa8e5a56b9a2241652fb0715af",
+      "bytes": 321960
+    },
+    {
+      "path": "Projects/2026/09/07/_assets/cosmos-verify-over-abstention.png",
+      "sha256": "4f77ca942ba475baf189fbe19c56fd03b36760c03cc5f920e596e6e99ebd0cac",
+      "bytes": 358379
+    },
+    {
+      "path": "Projects/2026/09/07/_assets/cosmos-verify-rationale-audit.json",
+      "sha256": "78bc9f8dddb0345829f2d3d0d19e557b3c70c807068bbecf06e2d90647f81a7c",
+      "bytes": 45601
+    },
+    {
+      "path": "Projects/2026/09/07/_assets/cosmos-verify-recovery-summary.json",
+      "sha256": "bdad1a26e9c540efe7b4a53dadd2c6c08ef6961329c17bea2c4f2fd720170f8e",
+      "bytes": 3736
+    },
+    {
+      "path": "Projects/2026/09/07/_assets/cosmos-verify-selection.json",
+      "sha256": "202799466fc6a3bc8295f39d0e800ae09d69f5b29405926c7ae354f5487a68f0",
+      "bytes": 1988
+    },
+    {
+      "path": "Projects/2026/09/07/_assets/cosmos-verify-summary.json",
+      "sha256": "f16b400282e1c89d2756b1859b9662ef4327732844b0f401e9aa33bfd9c0dd09",
+      "bytes": 9489
+    },
+    {
+      "path": "Projects/2026/09/07/_assets/cosmos-verify-unsupported-physical-explanation.png",
+      "sha256": "67d63ddaf2038b2dac2008b766021e4d23600039d9caf37c21fdaad1a8ec59d3",
+      "bytes": 310287
+    },
+    {
+      "path": "Projects/2026/09/07/_assets/cosmos-verify-visible-closed-door.png",
+      "sha256": "21f3bbeaf88ac9f98d71ad62a4f4e590d83775f3300409b3f5c350c7f64619ce",
+      "bytes": 362931
+    }
+  ]
+}

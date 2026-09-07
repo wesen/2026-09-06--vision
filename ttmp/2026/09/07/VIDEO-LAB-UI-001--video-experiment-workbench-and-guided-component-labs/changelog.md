@@ -15,3 +15,5 @@
 - Final API smoke, seven focused tests, model run identities and browser screenshots archived. Updated guide and measured walkthrough uploaded to reMarkable; UI left running for user feedback.
 
 - User feedback: split Project browser into Code directory tree and Tickets workspaces; use sans-serif for highlighted code and code blocks. Browser smoke and screenshots recorded in diary Step 7.
+
+- Continued with saved-run timelines and exact settings restoration; browser verified seeking without changing the form and restoring all options. Added Code/Tickets and timeline screenshots for the future report.

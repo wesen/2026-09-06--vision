@@ -123,3 +123,11 @@ Multi-image and native-video reasoning are not accepted runtime modes. State seq
 The current project browser renders Markdown tables and code but leaves Mermaid fences as source text. Local links are rewritten only for indexed resources. This avoids exposing arbitrary filesystem paths while making the relevant implementation and ticket material readable. Current file hashes help identify changes, but a future historical reader would need an explicit commit selector.
 
 Previews and experiment artifacts remain on disk for the research trail. They are not automatically deleted. Keep representative screenshots and reports in the ticket; large model outputs remain under `output/video-lab`.
+
+## 7. Saved-run timeline and repeatable experiments
+
+Completed results now provide their own video player, exact saved-frame display and clickable timeline lanes. Inputs and state estimates are point samples; action and embedding predictions span their original windows. Transition intervals retain temporal uncertainty. Clicking a timeline item seeks the saved recording and names the exact PNG shown beside it. This inspection does not change the experiment form.
+
+Use **Load settings to modify and rerun** to explicitly restore the saved source, range, sampling, crop, model and component options. The application regenerates the evidence preview but does not automatically launch inference. Edit one option and run a new experiment to preserve the original for comparison.
+
+![Saved-run timeline and exact visual evidence](../various/p8-timeline-detail.png)

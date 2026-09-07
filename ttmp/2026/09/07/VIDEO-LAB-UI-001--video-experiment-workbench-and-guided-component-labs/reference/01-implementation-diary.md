@@ -453,3 +453,63 @@ Inspect browser.html directoryTree, switchSection and restore; resources.py font
 ### Technical details
 
 Server restarted only after confirming no active run; now PID 33408, exec session 32592, serving loopback and Tailscale on port 8780. This presentation-only change used browser smoke rather than rerunning model inference.
+
+## Step 8: Capture report evidence and continue the saved-run workflow
+
+Captured the updated Code and Tickets browser for the future report, then continued with clickable saved-run timelines and settings restoration. The timeline owns a player bound to the saved recording, keeping inspection separate from the editable experiment configuration.
+
+### Prompt Context
+
+**User prompts (verbatim):**
+
+> ok, cool. Take screenshots btw for the diary / a future report.
+
+> then continue
+
+**Assistant interpretation:** Preserve screenshot evidence while continuing practical improvements to experimentation.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+### What I did
+
+- Captured p8-worker-source-browser.png and p8-ticket-report-browser.png.
+- Added exact-input, detection/track, state, transition, action-window and embedding-window timeline lanes.
+- Added a saved-run video player and exact evidence image with explicit timestamp captions.
+- Added Load settings to modify and rerun, restoring all saved options and regenerating the preview.
+- Captured full-page and detailed timeline screenshots.
+
+### Why
+
+The user needs to inspect when a model output applies and rerun an experiment without manually copying every option.
+
+### What worked
+
+Browser smoke verified 12 timeline items for the saved native embedding run. Clicking the 10–12 s window sought the saved player to 10.0 s, displayed the exact 10.0 s PNG, and left the form unchanged. Loading settings restored every option exactly and regenerated eight preview frames without creating another run.
+
+### What didn't work
+
+No failure during browser smoke. No model inference was rerun for this presentation/navigation change.
+
+### What I learned
+
+A result-bound player avoids misleading source changes when browsing historical runs while keeping a different experiment form open.
+
+### What was tricky to build
+
+Point observations and interval windows require different visual semantics. Point-button width does not imply duration; intervals retain actual bounds, overlapping windows occupy separate rows, and captions identify the specific sampled image displayed. Explicit settings loading changes the form; timeline inspection does not.
+
+### What warrants a second pair of eyes
+
+Try dense timelines and settings restoration from another device. Check whether the saved-run player and evidence view make comparisons easier to interpret.
+
+### What should be done in the future
+
+Use this screenshot trail in the future technical report and incorporate further interaction feedback.
+
+### Code review instructions
+
+Read analysis.js loadRunSettings and resultTimeline. Open run-c91ef4d1a5c54ed9, click the 10–12 s window, then load settings and verify start/end/FPS/model/query match the saved request.
+
+### Technical details
+
+UI assets are served directly, so this update required no server restart. Existing service PID 33408 remains available over Tailscale. Screenshots are in the ticket various/ directory.

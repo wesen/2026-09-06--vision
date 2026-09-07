@@ -1,0 +1,287 @@
+{
+  "config": {
+    "run_id": "replay-da07533583334f49",
+    "options": {
+      "episode_id": "ep-c1c313b64f579794",
+      "mode": "recorded",
+      "family": "qwen",
+      "speed": 2.0,
+      "repetitions": 1,
+      "max_jobs": 16,
+      "max_bytes": 16777216,
+      "perception_deadline_seconds": 2,
+      "verifier_deadline_seconds": 120,
+      "service_multiplier": 1.0
+    },
+    "source": {
+      "episode_id": "ep-c1c313b64f579794",
+      "split": "test",
+      "entity_id": "316",
+      "entity_label": "microwave",
+      "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+      "frames": 137,
+      "duration_us": 13700000
+    },
+    "identity": {
+      "recordings_sha256": "850c051fb0dc38632c5be18ddd0d461b081bd77ce6b2f6d0e5aa8f7a31b52810",
+      "trace_run_sha256": "83d73c6ae71ac0491cdbf984b55d28b64359c9bf5e7e9699ab587a08dc09729f",
+      "state_store_sha256": "3a2f5051660eba3dabdd92685e3dd11df4a261e638e7861447b2524e798aa2c3"
+    },
+    "trace_mode": "recorded_perception",
+    "verifier_mode": "recorded",
+    "independent_accuracy_samples": 1,
+    "capacity_repetitions": 1
+  },
+  "summary": {
+    "run_id": "replay-da07533583334f49",
+    "status": "complete",
+    "horizon_us": 29284512,
+    "source_end_us": 13700000,
+    "wall_seconds": 14.642258665990084,
+    "options": {
+      "episode_id": "ep-c1c313b64f579794",
+      "mode": "recorded",
+      "family": "qwen",
+      "speed": 2.0,
+      "repetitions": 1,
+      "max_jobs": 16,
+      "max_bytes": 16777216,
+      "perception_deadline_seconds": 2,
+      "verifier_deadline_seconds": 120,
+      "service_multiplier": 1.0
+    },
+    "scheduler": {
+      "queued": 0,
+      "running": null,
+      "admitted_jobs": 0,
+      "admitted_bytes": 0,
+      "max_jobs": 16,
+      "max_bytes": 16777216,
+      "high_jobs": 7,
+      "high_bytes": 1217125,
+      "counts": {
+        "submitted": 138,
+        "started": 138,
+        "completed": 138
+      }
+    },
+    "counts": {
+      "perception_completed": 137,
+      "candidates": 1,
+      "baseline_UNKNOWN": 1,
+      "verifier_completed": 1,
+      "verifier_VIOLATION": 1
+    },
+    "peak_host_and_worker_rss_bytes": 117178368,
+    "error": null,
+    "latency_seconds": {
+      "queue": {
+        "count": 138,
+        "mean": 0.08679247641112602,
+        "p50": 0.037903582910075784,
+        "p95": 0.1989412079565227,
+        "max": 2.0473759579472244
+      },
+      "service": {
+        "count": 138,
+        "mean": 0.10592238735272616,
+        "p50": 0.05105054099112749,
+        "p95": 0.05943441693671048,
+        "max": 7.589050042210147
+      },
+      "total": {
+        "count": 138,
+        "mean": 0.1927148637638522,
+        "p50": 0.08879029215313494,
+        "p95": 0.2476037919986993,
+        "max": 9.636426000157371
+      }
+    },
+    "processed_frame_fraction": 1.0
+  },
+  "latency_by_kind_and_outcome": {
+    "perception/completed": {
+      "queue_seconds": {
+        "count": 137,
+        "p50": 0.037524000043049455,
+        "p95": 0.19746525003574789,
+        "max": 0.2020472080912441
+      },
+      "service_seconds": {
+        "count": 137,
+        "p50": 0.05098570813424885,
+        "p95": 0.05767079209908843,
+        "max": 0.12406433280557394
+      },
+      "total_seconds": {
+        "count": 137,
+        "p50": 0.08799587492831051,
+        "p95": 0.24709449987858534,
+        "max": 0.252878500148654
+      }
+    },
+    "verifier/completed": {
+      "queue_seconds": {
+        "count": 1,
+        "p50": 2.0473759579472244,
+        "p95": 2.0473759579472244,
+        "max": 2.0473759579472244
+      },
+      "service_seconds": {
+        "count": 1,
+        "p50": 7.589050042210147,
+        "p95": 7.589050042210147,
+        "max": 7.589050042210147
+      },
+      "total_seconds": {
+        "count": 1,
+        "p50": 9.636426000157371,
+        "p95": 9.636426000157371,
+        "max": 9.636426000157371
+      }
+    }
+  },
+  "candidates": [
+    {
+      "seq": 197,
+      "record_id": "dd5483836c3ae6a8196bfa6083a3174fff85093d7e96de3fbdd4d0d6ae852d52",
+      "kind": "candidate",
+      "case_id": "22b80f03f9b7dd59596c713d",
+      "cycle": 0,
+      "event_us": 9300000,
+      "available_us": 9772626,
+      "payload": {
+        "candidate": {
+          "available_us": 9500000,
+          "confirmation_frame_id": "85458192a62e4dc2c2b573bc",
+          "episode_id": "ep-c1c313b64f579794",
+          "event_id": "04ef39cb730e6d411e32a49e",
+          "event_us": 9300000,
+          "frame_id": "d8a7a76e4080bb3c52fa7cfe",
+          "kind": "camera_exit_candidate"
+        },
+        "event": {
+          "available_us": 9771832,
+          "committed_us": 9771832,
+          "entity_id": "ep-c1c313b64f579794:object-316",
+          "episode_id": "ep-c1c313b64f579794",
+          "hi_us": 9300000,
+          "id": "04ef39cb730e6d411e32a49e",
+          "lo_us": 9300000,
+          "name": "camera_exit",
+          "stream_id": "yolo/camera-exit"
+        },
+        "rule": {
+          "event_id": "04ef39cb730e6d411e32a49e",
+          "event_stream": "yolo/camera-exit",
+          "expected": false,
+          "op": "state_at_event",
+          "property": "door_open",
+          "rule_id": "door-closed-at-camera-exit",
+          "schema_version": 1,
+          "state_stream": "state/F__linear_head"
+        }
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "seq": 198,
+      "record_id": "db2e721cc38169420758b0e57acaa812e095462f5f4f67019462b57aebe3cb10",
+      "kind": "decision",
+      "case_id": "22b80f03f9b7dd59596c713d",
+      "cycle": 0,
+      "event_us": 9300000,
+      "available_us": 9772894,
+      "payload": {
+        "condition": "baseline",
+        "decision": {
+          "applicability": "observed",
+          "as_of_us": 9771832,
+          "entity_id": "ep-c1c313b64f579794:object-316",
+          "episode_id": "ep-c1c313b64f579794",
+          "evaluation_id": "19c34bf27ae516525968bfe71625f198ae71a97c315fc81b66b324c45b861b57",
+          "evaluator_version": "flat-rules-v1",
+          "evidence_ids": [
+            "04ef39cb730e6d411e32a49e"
+          ],
+          "reason": "no_exact_state_sample",
+          "rule_id": "door-closed-at-camera-exit",
+          "rule_sha256": "ba49f6259216540208a251960dfd0c6c60c0e0ec4ab04fddf8535b368c397fcd",
+          "status": "UNKNOWN"
+        }
+      }
+    },
+    {
+      "seq": 284,
+      "record_id": "4264a6d799788d2c1e8e217370bbb21b94706817e40e16bbce81488e496dd015",
+      "kind": "decision",
+      "case_id": "22b80f03f9b7dd59596c713d",
+      "cycle": 0,
+      "event_us": 9300000,
+      "available_us": 29272085,
+      "payload": {
+        "answer": {
+          "answer": "true",
+          "entity_id": "ep-c1c313b64f579794:object-316",
+          "evidence_ids": [
+            "a3eb9b9e867f1ff0314e53fa"
+          ],
+          "rationale": "The microwave's door is visibly open, with a clear gap exposing the interior cavity.",
+          "request_id": "942b5c1fb3d520eea5fc63692fe29c48d71f40db50e59d5ac519416a1c37aaa5"
+        },
+        "condition": "qwen",
+        "decision": {
+          "applicability": "observed",
+          "as_of_us": 29271739,
+          "entity_id": "ep-c1c313b64f579794:object-316",
+          "episode_id": "ep-c1c313b64f579794",
+          "evaluation_id": "328f94c32c9d5bb9a4ec4b5953e130252c1900ae933b76d7509c09061d66bfdd",
+          "evaluator_version": "flat-rules-v1",
+          "evidence_ids": [
+            "04ef39cb730e6d411e32a49e",
+            "f418fe76b2c045747a5500af054259c545f8856283dc292d81961f81ab31f8bb"
+          ],
+          "reason": "observed_state_mismatch",
+          "rule_id": "door-closed-at-camera-exit",
+          "rule_sha256": "0f04338c9487e6dca082d41b528fec5be46325383a3e959e117258c83b823858",
+          "status": "VIOLATION"
+        },
+        "mode": "recorded",
+        "observation": {
+          "available_us": 29271739,
+          "committed_us": 29271739,
+          "entity": "ep-c1c313b64f579794:object-316",
+          "episode_id": "ep-c1c313b64f579794",
+          "event_us": 9300000,
+          "evidence_ids": [
+            "a3eb9b9e867f1ff0314e53fa"
+          ],
+          "feature_space_id": "visual-verifier/qwen",
+          "mode": "causal",
+          "observation_id": "f418fe76b2c045747a5500af054259c545f8856283dc292d81961f81ab31f8bb",
+          "producer": "qwen",
+          "property": "door_open",
+          "run_id": "replay-da07533583334f49",
+          "stream_id": "verifier/qwen",
+          "unknown_reason": null,
+          "value": true
+        },
+        "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d",
+        "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"true\", \"evidence\": [\"F1\"], \"rationale\": \"The microwave's door is visibly open, with a clear gap exposing the interior cavity.\"}",
+        "runtime": {
+          "generation_tokens": 52,
+          "peak_mlx_bytes": 10857492541,
+          "prompt_tokens": 507,
+          "versions": {
+            "mlx": "0.32.2",
+            "mlx-vlm": "0.6.17",
+            "transformers": "5.16.1"
+          }
+        }
+      }
+    }
+  ],
+  "gap_records": 0,
+  "source_sqlite_sha256": "28da4adbb50cd3ea2ce96f5d1e84df96603522a11f4e2d35743741403e0712e7"
+}

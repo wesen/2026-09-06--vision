@@ -199,7 +199,7 @@ class ReplayEngine:
             command=(sys.executable,'-m','video_workbench.replay.worker')
         else:
             payload=dict(mode='live_verifier',request=request,profile=profile,model=str(Path(MODELS[self.options.family]).resolve()))
-            command=(str(Path('workbench/verify-env/.venv/bin/python').resolve()),'-m','video_workbench.replay.worker')
+            command=(str(Path('workbench/verify-env/.venv/bin/python').absolute()),'-m','video_workbench.replay.worker')
         job=Job('v-'+case_id,'verifier',payload,command,offset+event.lo_us,cycle=cycle,mandatory=False,budget_seconds=self.options.verifier_deadline_seconds,case_id=case_id,
                 input_bytes=len(json.dumps(payload).encode())+Path(approved['path']).stat().st_size+row['frame']['width']*row['frame']['height']*3)
         self._submit(job,dict(rule=rule,baseline=baseline,event=event,request=request,profile=profile))

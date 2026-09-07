@@ -20,12 +20,12 @@
 
 ## P4 Integration, viewer, and measurement
 
-- [ ] Integrate recorded YOLO traces, exact-time stored states, rule candidates, and recorded or live accepted verifier execution.
-- [ ] Implement the loopback registered-ID run/evidence/video API and one-active-run policy.
-- [ ] Build source/state/event/rule/gap timeline with separate evidence conditions and explicit as-of seeking.
-- [ ] Inspect the browser and retain screenshots of a missed fridge violation, detected microwave violation, and overload gaps.
-- [ ] Complete a normal actual-evidence run and one fresh accepted-verifier run.
-- [ ] Run a separate repeated accelerated slow-worker capacity experiment; report latency, queue/byte bounds, drops, coverage, and memory.
+- [x] Integrate recorded YOLO traces, exact-time stored states, rule candidates, and recorded or live accepted verifier execution.
+- [x] Implement the loopback registered-ID run/evidence/video API and one-active-run policy.
+- [x] Build source/state/event/rule/gap timeline with separate evidence conditions and explicit as-of seeking.
+- [x] Inspect the browser and retain screenshots of a missed fridge violation, detected microwave violation, and overload gaps.
+- [x] Complete a normal actual-evidence run and one fresh accepted-verifier run.
+- [x] Run a separate repeated accelerated slow-worker capacity experiment; report latency, queue/byte bounds, drops, coverage, and memory.
 - [ ] Publish measured report, reproduction commands, diary, and final phase slips.
 
 ## Deferred follow-ups (outside current bounded replay delivery)

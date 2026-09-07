@@ -342,3 +342,62 @@ Read engine source release, candidate packet construction, and completion handli
 
 ### Technical details
 CLI: `PYTHONPATH=workbench/src workbench/.venv/bin/python -m video_workbench.replay run ep-c1c313b64f579794 --speed 1 --max-jobs 16`. The live mode invokes the existing accepted worker's `run` function in the scheduler-owned process group, so its deadline covers loading and inference directly.
+
+## Step 7: Build the viewer and validate fresh inference, history, and overload
+
+Implemented the loopback API and evidence timeline, then inspected actual completed runs in the browser. The viewer displays independent baseline/verifier conditions, approved frames, sparse state samples, source playback, and explicit coverage gaps. Its as-of slider hides later decisions while retaining separately labeled full-run operational totals.
+
+Fresh Qwen inference reproduced the open-fridge false PASS through the scheduler-owned worker. A separate accelerated capacity run stayed bounded while losing most frames and producing no departure candidates. These outcomes are visible in saved screenshots rather than being represented only by summary counters.
+
+### Prompt Context
+**User prompt (verbatim):** (see Step 4)
+
+**Assistant interpretation:** Finish the inspectable application, validate its actual UI and accepted runtime, and retain report evidence.
+
+**Inferred user intent:** Understand both incorrect decisions and processing losses through a working local viewer.
+
+### What I did
+- Added `replay/app.py`, `viewer.html`, and API integration smoke checks.
+- Enforced registered source IDs, one active API run, bounded options/pagination, as-of evidence serving, hash-checked media, and cancellation.
+- Ran a fresh local Qwen verifier on the exact approved open-fridge image.
+- Ran twenty repeated microwave cycles at 10× arrival speed and 4× recorded service duration with eight admitted jobs.
+- Used the available browser-testing surface after the in-app browser runtime reported no connected browsers; inspected screenshots for readability and actual evidence alignment.
+- Verified 11-second history shows only the UNKNOWN baseline; Qwen PASS becomes visible after approximately 17.6 seconds.
+- Started a real replay through the viewer; it completed with all 137 perception frames and a delayed recorded VIOLATION. Also exercised the cancellation control.
+- Archived portable run configurations, summaries, all non-perception event rows, and outcome-specific latency statistics with script 02.
+
+### Why
+The GUI must explain causality and missing coverage, not merely render the final classification. A fresh worker invocation is needed to validate integration with the accepted environment, while repeated recorded workloads establish queue behavior without claiming new accuracy samples.
+
+### What worked
+- Twelve core tests and three API tests passed. The latter used actual live-run evidence to test late-result visibility, evidence cutoff, cursor pagination, and HTTP byte-range video serving.
+- Live run `replay-0adb49ee32254188`: Qwen completed in 7.30 worker-service seconds, returned PASS on the open fridge, and committed after the original UNKNOWN. 103/142 perception frames completed; nine dropped and thirty expired.
+- Capacity run `replay-ea4ed99ac2dc407a`: 306/2,740 perception frames completed, 2,434 dropped, no candidates, eight-job high water, 31,027-byte input high water, 73.53 MB host/worker peak RSS.
+- Browser-started run `replay-da07533583334f49`: all 137 frames completed at speed 2, with verifier work waiting behind mandatory work and then producing VIOLATION.
+- Screenshots saved: live fridge, earlier as-of baseline, recorded microwave, and overload gaps. Final browser console had zero errors and warnings.
+- P3 done slip: HTTP 200, printed true, 384×545 at 2026-09-07T05:12:24Z. P4 start: HTTP 200, printed true, 384×358 at 2026-09-07T05:12:28Z.
+
+### What didn't work
+- The first live replay's verifier exited unsuccessfully. Resolving `workbench/verify-env/.venv/bin/python` followed the symlink to base Python and lost the virtual environment. Preserved its absolute symlink path instead. The subsequent fresh live replay succeeded; the failed run remains inspectable with its gap record.
+- Port 8775 was occupied: `[Errno 48] error while attempting to bind on address ('127.0.0.1', 8775): address already in use`. Left that service untouched and served on 8779.
+- In-app browser setup returned `No browser is available`; documented recovery returned an empty browser list. Used the separately available browser-testing tool for local UI inspection.
+- The first browser visit requested `/favicon.ico` and received 404. Added a data favicon; subsequent browser inspection reported zero console errors.
+- API tests emitted existing Starlette/httpx and AnyIO deprecation warnings; no dependency installation was needed.
+
+### What I learned
+At speed 2, a small perception backlog can keep the optional verifier queued until source ingestion completes, preserving frame coverage but increasing decision latency. At speed 1, an idle moment lets the nonpreemptive verifier start earlier and block later frames. Priority policy and workload timing therefore matter independently of nominal speed.
+
+### What was tricky to build
+SQLite connections must belong to the engine thread. The API constructs and runs the engine inside its dedicated thread and opens separate read-only connections per query. Live workers remain in the scheduler process group and must retain the virtual-environment executable path. Historical aggregate counters are explicitly labeled full-run totals so they are not confused with the selected evidence horizon.
+
+### What warrants a second pair of eyes
+Recorded perception and cached state observations are replayed artifacts; this is not fresh YOLO/native-embedding throughput. The workload is synthetic and correlated. The shared nonpreemptive worker remains unsuitable for guaranteed continuous frame coverage during long verifier calls. Fresh Cosmos replay has not been separately smoke-run; it shares the same accepted worker/profile path, while both families were measured in RULES.
+
+### What should be done in the future
+Publish the measured report and final acceptance matrix, record the completion slip and commits, and retain deferred real-video, live-perception, and recovery tasks. A separate worker or admission policy based on an explicit perception-gap budget is the next capacity experiment if continuous coverage becomes required.
+
+### Code review instructions
+Read `replay/app.py` source/run/evidence routes, engine live-worker command construction, and viewer as-of queries. Inspect the four saved screenshots and `various/p4-measurements/`. Rebuild the portable metrics with script 02. The API smoke is `workbench/tests/test_replay_api.py`.
+
+### Technical details
+Viewer URL: `http://127.0.0.1:8779/`. Recorded microwave run: `replay-5e4499f558614b62`; fresh fridge run: `replay-0adb49ee32254188`; overload run: `replay-ea4ed99ac2dc407a`. The script archives latency by work kind and terminal outcome to avoid interpreting zero-service dropped jobs as fast successful work.

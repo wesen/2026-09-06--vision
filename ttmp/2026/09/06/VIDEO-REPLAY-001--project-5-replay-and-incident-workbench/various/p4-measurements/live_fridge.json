@@ -1,0 +1,331 @@
+{
+  "config": {
+    "run_id": "replay-0adb49ee32254188",
+    "options": {
+      "episode_id": "ep-7d3106fb1cac9776",
+      "mode": "live_verifier",
+      "family": "qwen",
+      "speed": 1.0,
+      "repetitions": 1,
+      "max_jobs": 16,
+      "max_bytes": 16777216,
+      "perception_deadline_seconds": 2.0,
+      "verifier_deadline_seconds": 120.0,
+      "service_multiplier": 1.0
+    },
+    "source": {
+      "episode_id": "ep-7d3106fb1cac9776",
+      "split": "test",
+      "entity_id": "308",
+      "entity_label": "fridge",
+      "video_sha256": "e9f68c403ce40bbe5e1ae609e48587e6f3a7675570cddc55fbcef57690ad41c6",
+      "frames": 142,
+      "duration_us": 14200000
+    },
+    "identity": {
+      "recordings_sha256": "850c051fb0dc38632c5be18ddd0d461b081bd77ce6b2f6d0e5aa8f7a31b52810",
+      "trace_run_sha256": "83d73c6ae71ac0491cdbf984b55d28b64359c9bf5e7e9699ab587a08dc09729f",
+      "state_store_sha256": "3a2f5051660eba3dabdd92685e3dd11df4a261e638e7861447b2524e798aa2c3"
+    },
+    "trace_mode": "recorded_perception",
+    "verifier_mode": "live_verifier",
+    "independent_accuracy_samples": 1,
+    "capacity_repetitions": 1
+  },
+  "summary": {
+    "run_id": "replay-0adb49ee32254188",
+    "status": "complete",
+    "horizon_us": 17601976,
+    "source_end_us": 14200000,
+    "wall_seconds": 17.601977583020926,
+    "options": {
+      "episode_id": "ep-7d3106fb1cac9776",
+      "mode": "live_verifier",
+      "family": "qwen",
+      "speed": 1.0,
+      "repetitions": 1,
+      "max_jobs": 16,
+      "max_bytes": 16777216,
+      "perception_deadline_seconds": 2.0,
+      "verifier_deadline_seconds": 120.0,
+      "service_multiplier": 1.0
+    },
+    "scheduler": {
+      "queued": 0,
+      "running": null,
+      "admitted_jobs": 0,
+      "admitted_bytes": 0,
+      "max_jobs": 16,
+      "max_bytes": 16777216,
+      "high_jobs": 16,
+      "high_bytes": 1248355,
+      "counts": {
+        "submitted": 143,
+        "started": 104,
+        "completed": 104,
+        "dropped": 9,
+        "expired": 30
+      }
+    },
+    "counts": {
+      "perception_completed": 103,
+      "candidates": 1,
+      "baseline_UNKNOWN": 1,
+      "perception_dropped": 9,
+      "perception_expired": 30,
+      "verifier_completed": 1,
+      "verifier_PASS": 1
+    },
+    "peak_host_and_worker_rss_bytes": 10337386496,
+    "error": null,
+    "latency_seconds": {
+      "queue": {
+        "count": 143,
+        "mean": 0.42086403733900896,
+        "p50": 0.00037100003100931644,
+        "p95": 2.0042818340007216,
+        "max": 2.0066184578463435
+      },
+      "service": {
+        "count": 143,
+        "mean": 0.08683912730547827,
+        "p50": 0.048943207832053304,
+        "p95": 0.053959166165441275,
+        "max": 7.2956657079048455
+      },
+      "total": {
+        "count": 143,
+        "mean": 0.5077031646444873,
+        "p50": 0.050888916943222284,
+        "p95": 2.004293708829209,
+        "max": 7.353970707859844
+      }
+    },
+    "processed_frame_fraction": 0.7253521126760564
+  },
+  "latency_by_kind_and_outcome": {
+    "perception/completed": {
+      "queue_seconds": {
+        "count": 103,
+        "p50": 0.0003480000887066126,
+        "p95": 0.00048687495291233063,
+        "max": 0.0033977499697357416
+      },
+      "service_seconds": {
+        "count": 103,
+        "p50": 0.05007433285936713,
+        "p95": 0.054164333967491984,
+        "max": 0.05748462490737438
+      },
+      "total_seconds": {
+        "count": 103,
+        "p50": 0.050373541889712214,
+        "p95": 0.05454099993221462,
+        "max": 0.05789141682907939
+      }
+    },
+    "perception/dropped": {
+      "queue_seconds": {
+        "count": 9,
+        "p50": 1.291697844862938e-05,
+        "p95": 3.370782360434532e-05,
+        "max": 3.370782360434532e-05
+      },
+      "service_seconds": {
+        "count": 9,
+        "p50": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "total_seconds": {
+        "count": 9,
+        "p50": 1.291697844862938e-05,
+        "p95": 3.370782360434532e-05,
+        "max": 3.370782360434532e-05
+      }
+    },
+    "perception/expired": {
+      "queue_seconds": {
+        "count": 30,
+        "p50": 2.0027332089375705,
+        "p95": 2.00660837511532,
+        "max": 2.0066184578463435
+      },
+      "service_seconds": {
+        "count": 30,
+        "p50": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "total_seconds": {
+        "count": 30,
+        "p50": 2.0027332089375705,
+        "p95": 2.00660837511532,
+        "max": 2.0066184578463435
+      }
+    },
+    "verifier/completed": {
+      "queue_seconds": {
+        "count": 1,
+        "p50": 0.05830499995499849,
+        "p95": 0.05830499995499849,
+        "max": 0.05830499995499849
+      },
+      "service_seconds": {
+        "count": 1,
+        "p50": 7.2956657079048455,
+        "p95": 7.2956657079048455,
+        "max": 7.2956657079048455
+      },
+      "total_seconds": {
+        "count": 1,
+        "p50": 7.353970707859844,
+        "p95": 7.353970707859844,
+        "max": 7.353970707859844
+      }
+    }
+  },
+  "candidates": [
+    {
+      "seq": 205,
+      "record_id": "70599e7fca0b5315732227f67edd31146a480574553b9f372b5700626d886cd8",
+      "kind": "candidate",
+      "case_id": "540c72d9f4093cade64c51d6",
+      "cycle": 0,
+      "event_us": 9900000,
+      "available_us": 10157084,
+      "payload": {
+        "candidate": {
+          "available_us": 10100000,
+          "confirmation_frame_id": "7a1634f33ea41a49b1454caf",
+          "episode_id": "ep-7d3106fb1cac9776",
+          "event_id": "5c64068a90582b51c7d10bb2",
+          "event_us": 9900000,
+          "frame_id": "afd1a8c4901ddf6778ba1942",
+          "kind": "camera_exit_candidate"
+        },
+        "event": {
+          "available_us": 10156944,
+          "committed_us": 10156944,
+          "entity_id": "ep-7d3106fb1cac9776:object-308",
+          "episode_id": "ep-7d3106fb1cac9776",
+          "hi_us": 9900000,
+          "id": "5c64068a90582b51c7d10bb2",
+          "lo_us": 9900000,
+          "name": "camera_exit",
+          "stream_id": "yolo/camera-exit"
+        },
+        "rule": {
+          "event_id": "5c64068a90582b51c7d10bb2",
+          "event_stream": "yolo/camera-exit",
+          "expected": false,
+          "op": "state_at_event",
+          "property": "door_open",
+          "rule_id": "door-closed-at-camera-exit",
+          "schema_version": 1,
+          "state_stream": "state/F__linear_head"
+        }
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "seq": 206,
+      "record_id": "175caf7f48fc87e5dfbe37bc2d3bd4f5d601a1bf8cbe5c29876b25efed4d7017",
+      "kind": "decision",
+      "case_id": "540c72d9f4093cade64c51d6",
+      "cycle": 0,
+      "event_us": 9900000,
+      "available_us": 10157218,
+      "payload": {
+        "condition": "baseline",
+        "decision": {
+          "applicability": "observed",
+          "as_of_us": 10156944,
+          "entity_id": "ep-7d3106fb1cac9776:object-308",
+          "episode_id": "ep-7d3106fb1cac9776",
+          "evaluation_id": "3f802cc866e128bd3db30b5d0f893e160a3be67dbdef178af69dc82c77330adf",
+          "evaluator_version": "flat-rules-v1",
+          "evidence_ids": [
+            "5c64068a90582b51c7d10bb2"
+          ],
+          "reason": "no_exact_state_sample",
+          "rule_id": "door-closed-at-camera-exit",
+          "rule_sha256": "8323f07a4c8ed841e8bf190c5496fe50a5c02bffc4bbf9b11217ff9fbd217484",
+          "status": "UNKNOWN"
+        }
+      }
+    },
+    {
+      "seq": 289,
+      "record_id": "2a52163bcd72a7bd5272bb76ec3f1ed164187c77d27c0529510ea66b9d5bd52f",
+      "kind": "decision",
+      "case_id": "540c72d9f4093cade64c51d6",
+      "cycle": 0,
+      "event_us": 9900000,
+      "available_us": 17594328,
+      "payload": {
+        "answer": {
+          "answer": "false",
+          "entity_id": "ep-7d3106fb1cac9776:object-308",
+          "evidence_ids": [
+            "83a41cebc443e31aeaf3e47f"
+          ],
+          "rationale": "The red fridge door is visible and seated against its frame, with no visible gap or displacement indicating it is open.",
+          "request_id": "91149b5292a9690a4ddb959892c214330f4f77f6bcac66d8f1f77a814c5cc257"
+        },
+        "condition": "qwen",
+        "decision": {
+          "applicability": "observed",
+          "as_of_us": 17594136,
+          "entity_id": "ep-7d3106fb1cac9776:object-308",
+          "episode_id": "ep-7d3106fb1cac9776",
+          "evaluation_id": "cbaf1436a4d42570b4ba536d583132b458e4ac056d909168eb035d93e270436a",
+          "evaluator_version": "flat-rules-v1",
+          "evidence_ids": [
+            "2603bf8a6db280f8cfb662c16975e7975c56443ce82bf09116508757ba497766",
+            "5c64068a90582b51c7d10bb2"
+          ],
+          "reason": "observed_state_match",
+          "rule_id": "door-closed-at-camera-exit",
+          "rule_sha256": "a4f5b17c7796252d0d0964a4a8a0f7ec835899180938816847d4873181ab9b76",
+          "status": "PASS"
+        },
+        "mode": "live_verifier",
+        "observation": {
+          "available_us": 17594136,
+          "committed_us": 17594136,
+          "entity": "ep-7d3106fb1cac9776:object-308",
+          "episode_id": "ep-7d3106fb1cac9776",
+          "event_us": 9900000,
+          "evidence_ids": [
+            "83a41cebc443e31aeaf3e47f"
+          ],
+          "feature_space_id": "visual-verifier/qwen",
+          "mode": "causal",
+          "observation_id": "2603bf8a6db280f8cfb662c16975e7975c56443ce82bf09116508757ba497766",
+          "producer": "qwen",
+          "property": "door_open",
+          "run_id": "replay-0adb49ee32254188",
+          "stream_id": "verifier/qwen",
+          "unknown_reason": null,
+          "value": false
+        },
+        "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d",
+        "raw": "{\"target_identified\": true, \"door_observable\": true, \"answer\": \"false\", \"evidence\": [\"F1\"], \"rationale\": \"The red fridge door is visible and seated against its frame, with no visible gap or displacement indicating it is open.\"}",
+        "runtime": {
+          "generation_tokens": 58,
+          "peak_mlx_bytes": 10857492541,
+          "prompt_tokens": 507,
+          "versions": {
+            "mlx": "0.32.2",
+            "mlx-vlm": "0.6.17",
+            "transformers": "5.16.1"
+          }
+        }
+      }
+    }
+  ],
+  "gap_records": 39,
+  "source_sqlite_sha256": "1ab6a65bb1b754a44c77b1477a22c9ee902fd804ba867ce82bcabb684ebae566"
+}

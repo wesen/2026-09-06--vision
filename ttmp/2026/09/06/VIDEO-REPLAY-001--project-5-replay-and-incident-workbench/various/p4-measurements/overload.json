@@ -1,0 +1,146 @@
+{
+  "config": {
+    "run_id": "replay-ea4ed99ac2dc407a",
+    "options": {
+      "episode_id": "ep-c1c313b64f579794",
+      "mode": "recorded",
+      "family": "qwen",
+      "speed": 10.0,
+      "repetitions": 20,
+      "max_jobs": 8,
+      "max_bytes": 2000000,
+      "perception_deadline_seconds": 1.0,
+      "verifier_deadline_seconds": 120.0,
+      "service_multiplier": 4.0
+    },
+    "source": {
+      "episode_id": "ep-c1c313b64f579794",
+      "split": "test",
+      "entity_id": "316",
+      "entity_label": "microwave",
+      "video_sha256": "b1d31cbd4a8c18cbba960ea13e49854250ece75e0b308c622649d459c99bde42",
+      "frames": 137,
+      "duration_us": 13700000
+    },
+    "identity": {
+      "recordings_sha256": "850c051fb0dc38632c5be18ddd0d461b081bd77ce6b2f6d0e5aa8f7a31b52810",
+      "trace_run_sha256": "83d73c6ae71ac0491cdbf984b55d28b64359c9bf5e7e9699ab587a08dc09729f",
+      "state_store_sha256": "3a2f5051660eba3dabdd92685e3dd11df4a261e638e7861447b2524e798aa2c3"
+    },
+    "trace_mode": "recorded_perception",
+    "verifier_mode": "recorded",
+    "independent_accuracy_samples": 1,
+    "capacity_repetitions": 20
+  },
+  "summary": {
+    "run_id": "replay-ea4ed99ac2dc407a",
+    "status": "complete",
+    "horizon_us": 280602873,
+    "source_end_us": 274000000,
+    "wall_seconds": 28.060289958957583,
+    "options": {
+      "episode_id": "ep-c1c313b64f579794",
+      "mode": "recorded",
+      "family": "qwen",
+      "speed": 10.0,
+      "repetitions": 20,
+      "max_jobs": 8,
+      "max_bytes": 2000000,
+      "perception_deadline_seconds": 1.0,
+      "verifier_deadline_seconds": 120.0,
+      "service_multiplier": 4.0
+    },
+    "scheduler": {
+      "queued": 0,
+      "running": null,
+      "admitted_jobs": 0,
+      "admitted_bytes": 0,
+      "max_jobs": 8,
+      "max_bytes": 2000000,
+      "high_jobs": 8,
+      "high_bytes": 31027,
+      "counts": {
+        "submitted": 2740,
+        "started": 306,
+        "dropped": 2434,
+        "completed": 306
+      }
+    },
+    "counts": {
+      "perception_dropped": 2434,
+      "perception_completed": 306
+    },
+    "peak_host_and_worker_rss_bytes": 73531392,
+    "error": null,
+    "latency_seconds": {
+      "queue": {
+        "count": 2740,
+        "mean": 0.06957077117573919,
+        "p50": 8.041039109230042e-06,
+        "p95": 0.6333437080029398,
+        "max": 0.7097820828203112
+      },
+      "service": {
+        "count": 2740,
+        "mean": 0.010236549663891077,
+        "p50": 0.0,
+        "p95": 0.09261308307759464,
+        "max": 0.13334499998018146
+      },
+      "total": {
+        "count": 2740,
+        "mean": 0.07980732083963027,
+        "p50": 8.041039109230042e-06,
+        "p95": 0.7233909168280661,
+        "max": 0.7969815419055521
+      }
+    },
+    "processed_frame_fraction": 0.11167883211678832
+  },
+  "latency_by_kind_and_outcome": {
+    "perception/dropped": {
+      "queue_seconds": {
+        "count": 2434,
+        "p50": 7.874798029661179e-06,
+        "p95": 1.0750023648142815e-05,
+        "max": 5.237502045929432e-05
+      },
+      "service_seconds": {
+        "count": 2434,
+        "p50": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "total_seconds": {
+        "count": 2434,
+        "p50": 7.874798029661179e-06,
+        "p95": 1.0750023648142815e-05,
+        "max": 5.237502045929432e-05
+      }
+    },
+    "perception/completed": {
+      "queue_seconds": {
+        "count": 306,
+        "p50": 0.6302251671440899,
+        "p95": 0.6673493329435587,
+        "max": 0.7097820828203112
+      },
+      "service_seconds": {
+        "count": 306,
+        "p50": 0.09191645891405642,
+        "p95": 0.10432179202325642,
+        "max": 0.13334499998018146
+      },
+      "total_seconds": {
+        "count": 306,
+        "p50": 0.7206537909805775,
+        "p95": 0.7624456249177456,
+        "max": 0.7969815419055521
+      }
+    }
+  },
+  "candidates": [],
+  "decisions": [],
+  "gap_records": 2713,
+  "source_sqlite_sha256": "0601f041c43cfdf4db5c9dadbf519181b336657dbc25a2e5a974af705f6b6a6a"
+}

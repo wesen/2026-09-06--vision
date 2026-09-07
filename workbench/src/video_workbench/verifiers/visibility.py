@@ -64,7 +64,10 @@ def experiment_prompt(request, profile):
     if profile['prompt_style'] == 'reasoning':
         text = text.replace('Return one JSON object, no prose, with these exact fields:',
                             'Your final answer must be one JSON object with these exact fields:')
-        text += '\n' + REASONING_INSTRUCTION
+        instruction = REASONING_INSTRUCTION
+        if profile['model_family'] == 'qwen':
+            instruction = instruction.replace('<think>', '<reasoning>').replace('</think>', '</reasoning>')
+        text += '\n' + instruction
     return text
 
 
@@ -80,9 +83,10 @@ def parse_experiment(request, raw, profile, finish_reason=None):
         final = raw
         if profile['prompt_style'] == 'reasoning':
             value = raw.strip()
-            if not value.startswith('<think>') or value.count('<think>') != 1 or value.count('</think>') != 1:
+            opening, closing = ('<reasoning>', '</reasoning>') if profile['model_family']=='qwen' else ('<think>', '</think>')
+            if not value.startswith(opening) or value.count(opening) != 1 or value.count(closing) != 1:
                 raise ValueError('incomplete or repeated reasoning envelope')
-            body, final = value[len('<think>'):].split('</think>', 1)
+            body, final = value[len(opening):].split(closing, 1)
             if not body.strip() or not final.strip():
                 raise ValueError('empty reasoning or missing final answer')
         checked = parse_visibility(request, final)

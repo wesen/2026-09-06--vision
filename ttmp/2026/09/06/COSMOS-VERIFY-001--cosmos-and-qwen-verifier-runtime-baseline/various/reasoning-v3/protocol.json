@@ -1,0 +1,2597 @@
+{
+  "version": "reasoning-v3",
+  "cases": [
+    {
+      "source": {
+        "id": "dv-31fd8bf573379ba5-0",
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 0,
+        "pts_us": 0,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-0.png",
+        "image_sha256": "dfde4c17bc0bf4bc8db7207e7365edcdaa623687253130e1f4c59eb90d240ae6",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-31fd8bf573379ba5/attempt-0001/video.mp4",
+        "video_sha256": "d79fd8ef68cf99d55877828f3d2f74e57b05639a7e4ae332b3922a6a37c7075a"
+      },
+      "request": {
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 0,
+        "allowed_start_us": 0,
+        "allowed_end_us": 1,
+        "as_of_us": 250000,
+        "frames": [
+          {
+            "id": "dv-31fd8bf573379ba5-0",
+            "episode_id": "dv-31fd8bf573379ba5",
+            "entity_id": "dv-31fd8bf573379ba5:object-155",
+            "pts_us": 0,
+            "available_us": 0,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-0.png",
+            "sha256": "dfde4c17bc0bf4bc8db7207e7365edcdaa623687253130e1f4c59eb90d240ae6"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "6275585f2b34ffb5324f120fe303ce92518a55f066cc1396a29979e2d1a961e8"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-31fd8bf573379ba5-17",
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 17,
+        "pts_us": 1700000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-17.png",
+        "image_sha256": "1a18b7ab9840f4e684d4a3fccfe129172c8aef7a45df91a830d316fdbe8bd542",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-31fd8bf573379ba5/attempt-0001/video.mp4",
+        "video_sha256": "d79fd8ef68cf99d55877828f3d2f74e57b05639a7e4ae332b3922a6a37c7075a"
+      },
+      "request": {
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 1700000,
+        "allowed_start_us": 1700000,
+        "allowed_end_us": 1700001,
+        "as_of_us": 1950000,
+        "frames": [
+          {
+            "id": "dv-31fd8bf573379ba5-17",
+            "episode_id": "dv-31fd8bf573379ba5",
+            "entity_id": "dv-31fd8bf573379ba5:object-155",
+            "pts_us": 1700000,
+            "available_us": 1700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-17.png",
+            "sha256": "1a18b7ab9840f4e684d4a3fccfe129172c8aef7a45df91a830d316fdbe8bd542"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "e374877614a50cb35dba7be64a706dbbdb5b7f21c2422a8712f4d36c7df9d33a"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-31fd8bf573379ba5-33",
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 33,
+        "pts_us": 3300000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-33.png",
+        "image_sha256": "d4d160fb3d79b434a9ae08328fb268be94c05bd59feb25b5302282873dab42c1",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-31fd8bf573379ba5/attempt-0001/video.mp4",
+        "video_sha256": "d79fd8ef68cf99d55877828f3d2f74e57b05639a7e4ae332b3922a6a37c7075a"
+      },
+      "request": {
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 3300000,
+        "allowed_start_us": 3300000,
+        "allowed_end_us": 3300001,
+        "as_of_us": 3550000,
+        "frames": [
+          {
+            "id": "dv-31fd8bf573379ba5-33",
+            "episode_id": "dv-31fd8bf573379ba5",
+            "entity_id": "dv-31fd8bf573379ba5:object-155",
+            "pts_us": 3300000,
+            "available_us": 3300000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-33.png",
+            "sha256": "d4d160fb3d79b434a9ae08328fb268be94c05bd59feb25b5302282873dab42c1"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "f64bff2b8a91ce5ef08fe8b48a4355e8960058a7900241930e3b78b2aea936da"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-31fd8bf573379ba5-46",
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 46,
+        "pts_us": 4600000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-46.png",
+        "image_sha256": "83a1c3d67f5e12c7ea7023e3a9097f6e26308c9ae3c0af5c0ba8c2d8bdd473bb",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-31fd8bf573379ba5/attempt-0001/video.mp4",
+        "video_sha256": "d79fd8ef68cf99d55877828f3d2f74e57b05639a7e4ae332b3922a6a37c7075a"
+      },
+      "request": {
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 4600000,
+        "allowed_start_us": 4600000,
+        "allowed_end_us": 4600001,
+        "as_of_us": 4850000,
+        "frames": [
+          {
+            "id": "dv-31fd8bf573379ba5-46",
+            "episode_id": "dv-31fd8bf573379ba5",
+            "entity_id": "dv-31fd8bf573379ba5:object-155",
+            "pts_us": 4600000,
+            "available_us": 4600000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-46.png",
+            "sha256": "83a1c3d67f5e12c7ea7023e3a9097f6e26308c9ae3c0af5c0ba8c2d8bdd473bb"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "13c51ec38807deae33d5dbb12720cc79f5f10710550dd533a9784fa5419bba39"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-31fd8bf573379ba5-55",
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 55,
+        "pts_us": 5500000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-55.png",
+        "image_sha256": "23fb5071e72949fa282a9d573c50f92080c255c0af491a86c5c6cd05e730a3c6",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-31fd8bf573379ba5/attempt-0001/video.mp4",
+        "video_sha256": "d79fd8ef68cf99d55877828f3d2f74e57b05639a7e4ae332b3922a6a37c7075a"
+      },
+      "request": {
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 5500000,
+        "allowed_start_us": 5500000,
+        "allowed_end_us": 5500001,
+        "as_of_us": 5750000,
+        "frames": [
+          {
+            "id": "dv-31fd8bf573379ba5-55",
+            "episode_id": "dv-31fd8bf573379ba5",
+            "entity_id": "dv-31fd8bf573379ba5:object-155",
+            "pts_us": 5500000,
+            "available_us": 5500000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-55.png",
+            "sha256": "23fb5071e72949fa282a9d573c50f92080c255c0af491a86c5c6cd05e730a3c6"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "ec1510330d6b50fb1d329621015367867ab6d4c95b3158ee017d80ef4087d119"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-31fd8bf573379ba5-59",
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 59,
+        "pts_us": 5900000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-59.png",
+        "image_sha256": "12157c94bd7002c37c7f48341e83bcd4642bf6006cff5f2a6aa9bf18a04ce806",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-31fd8bf573379ba5/attempt-0001/video.mp4",
+        "video_sha256": "d79fd8ef68cf99d55877828f3d2f74e57b05639a7e4ae332b3922a6a37c7075a"
+      },
+      "request": {
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 5900000,
+        "allowed_start_us": 5900000,
+        "allowed_end_us": 5900001,
+        "as_of_us": 6150000,
+        "frames": [
+          {
+            "id": "dv-31fd8bf573379ba5-59",
+            "episode_id": "dv-31fd8bf573379ba5",
+            "entity_id": "dv-31fd8bf573379ba5:object-155",
+            "pts_us": 5900000,
+            "available_us": 5900000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-59.png",
+            "sha256": "12157c94bd7002c37c7f48341e83bcd4642bf6006cff5f2a6aa9bf18a04ce806"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "64c730bd4ef6f8f4e8000ea0e861f66218e7b23eeac003f2aa66ae3d1de012cf"
+      },
+      "expected": "true",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door displacement or opening establishes open state."
+    },
+    {
+      "source": {
+        "id": "dv-31fd8bf573379ba5-63",
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 63,
+        "pts_us": 6300000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-63.png",
+        "image_sha256": "9c734fb17510af14f0e9fd415ebf351fbde6b3e546ff09f9f78b77b9d0ad35e4",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-31fd8bf573379ba5/attempt-0001/video.mp4",
+        "video_sha256": "d79fd8ef68cf99d55877828f3d2f74e57b05639a7e4ae332b3922a6a37c7075a"
+      },
+      "request": {
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 6300000,
+        "allowed_start_us": 6300000,
+        "allowed_end_us": 6300001,
+        "as_of_us": 6550000,
+        "frames": [
+          {
+            "id": "dv-31fd8bf573379ba5-63",
+            "episode_id": "dv-31fd8bf573379ba5",
+            "entity_id": "dv-31fd8bf573379ba5:object-155",
+            "pts_us": 6300000,
+            "available_us": 6300000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-63.png",
+            "sha256": "9c734fb17510af14f0e9fd415ebf351fbde6b3e546ff09f9f78b77b9d0ad35e4"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "e5922233621a85480147db4ed8b3fd71f37346293a95248ca1170a46d37681d9"
+      },
+      "expected": "true",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door displacement or opening establishes open state."
+    },
+    {
+      "source": {
+        "id": "dv-31fd8bf573379ba5-67",
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 67,
+        "pts_us": 6700000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-67.png",
+        "image_sha256": "5f3f540692c590756ae3ba79cdd0741e8c15389327fc2b03cb2b821e2caff225",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-31fd8bf573379ba5/attempt-0001/video.mp4",
+        "video_sha256": "d79fd8ef68cf99d55877828f3d2f74e57b05639a7e4ae332b3922a6a37c7075a"
+      },
+      "request": {
+        "episode_id": "dv-31fd8bf573379ba5",
+        "entity_id": "dv-31fd8bf573379ba5:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 6700000,
+        "allowed_start_us": 6700000,
+        "allowed_end_us": 6700001,
+        "as_of_us": 6950000,
+        "frames": [
+          {
+            "id": "dv-31fd8bf573379ba5-67",
+            "episode_id": "dv-31fd8bf573379ba5",
+            "entity_id": "dv-31fd8bf573379ba5:object-155",
+            "pts_us": 6700000,
+            "available_us": 6700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-31fd8bf573379ba5-67.png",
+            "sha256": "5f3f540692c590756ae3ba79cdd0741e8c15389327fc2b03cb2b821e2caff225"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "889480e6112f0c0282665d69e39432935bb6b850e866c0dea281dc5b25d749ac"
+      },
+      "expected": "true",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door displacement or opening establishes open state."
+    },
+    {
+      "source": {
+        "id": "dv-528d9a75133b1101-7",
+        "episode_id": "dv-528d9a75133b1101",
+        "entity_id": "dv-528d9a75133b1101:object-308",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 0,
+        "frame_index": 7,
+        "pts_us": 700000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-528d9a75133b1101-7.png",
+        "image_sha256": "641ac7a45bd4d35017f3a9459e615e9cb1f3f7a11c4dafc730c2706a22f25c6c",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-528d9a75133b1101/attempt-0001/video.mp4",
+        "video_sha256": "81b4d58a3a4f51ecde51fd5ef465ead40131e4c530c8e803a8c6b37d4f50daa8"
+      },
+      "request": {
+        "episode_id": "dv-528d9a75133b1101",
+        "entity_id": "dv-528d9a75133b1101:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 700000,
+        "allowed_start_us": 700000,
+        "allowed_end_us": 700001,
+        "as_of_us": 950000,
+        "frames": [
+          {
+            "id": "dv-528d9a75133b1101-7",
+            "episode_id": "dv-528d9a75133b1101",
+            "entity_id": "dv-528d9a75133b1101:object-308",
+            "pts_us": 700000,
+            "available_us": 700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-528d9a75133b1101-7.png",
+            "sha256": "641ac7a45bd4d35017f3a9459e615e9cb1f3f7a11c4dafc730c2706a22f25c6c"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "271ed44883d06a2fcdca652edbbbd1f5ff4dc7cbdee2ca1013c2a8b60c5d2230"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-528d9a75133b1101-14",
+        "episode_id": "dv-528d9a75133b1101",
+        "entity_id": "dv-528d9a75133b1101:object-308",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 0,
+        "frame_index": 14,
+        "pts_us": 1400000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-528d9a75133b1101-14.png",
+        "image_sha256": "6e78acd5cbc5407ef52bb4cc55bc4386b93d1b81c36db82550667d9093e15d56",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-528d9a75133b1101/attempt-0001/video.mp4",
+        "video_sha256": "81b4d58a3a4f51ecde51fd5ef465ead40131e4c530c8e803a8c6b37d4f50daa8"
+      },
+      "request": {
+        "episode_id": "dv-528d9a75133b1101",
+        "entity_id": "dv-528d9a75133b1101:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 1400000,
+        "allowed_start_us": 1400000,
+        "allowed_end_us": 1400001,
+        "as_of_us": 1650000,
+        "frames": [
+          {
+            "id": "dv-528d9a75133b1101-14",
+            "episode_id": "dv-528d9a75133b1101",
+            "entity_id": "dv-528d9a75133b1101:object-308",
+            "pts_us": 1400000,
+            "available_us": 1400000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-528d9a75133b1101-14.png",
+            "sha256": "6e78acd5cbc5407ef52bb4cc55bc4386b93d1b81c36db82550667d9093e15d56"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "c7e69205aaa5323d59e5a4e434e4d52d863394f73a2208db8e0be32c6f663664"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-528d9a75133b1101-20",
+        "episode_id": "dv-528d9a75133b1101",
+        "entity_id": "dv-528d9a75133b1101:object-308",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 0,
+        "frame_index": 20,
+        "pts_us": 2000000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-528d9a75133b1101-20.png",
+        "image_sha256": "079fa0f68dc86077f8ad3ae265dbf420675ff7d25763d6a9ea9a8388b839452e",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-528d9a75133b1101/attempt-0001/video.mp4",
+        "video_sha256": "81b4d58a3a4f51ecde51fd5ef465ead40131e4c530c8e803a8c6b37d4f50daa8"
+      },
+      "request": {
+        "episode_id": "dv-528d9a75133b1101",
+        "entity_id": "dv-528d9a75133b1101:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 2000000,
+        "allowed_start_us": 2000000,
+        "allowed_end_us": 2000001,
+        "as_of_us": 2250000,
+        "frames": [
+          {
+            "id": "dv-528d9a75133b1101-20",
+            "episode_id": "dv-528d9a75133b1101",
+            "entity_id": "dv-528d9a75133b1101:object-308",
+            "pts_us": 2000000,
+            "available_us": 2000000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-528d9a75133b1101-20.png",
+            "sha256": "079fa0f68dc86077f8ad3ae265dbf420675ff7d25763d6a9ea9a8388b839452e"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "7353a437cd6429770249066784d3a8c7ca331244bd21e196f28fdb3748dc3de4"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-528d9a75133b1101-27",
+        "episode_id": "dv-528d9a75133b1101",
+        "entity_id": "dv-528d9a75133b1101:object-308",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 0,
+        "frame_index": 27,
+        "pts_us": 2700000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-528d9a75133b1101-27.png",
+        "image_sha256": "4915635989a0962728e9d1c1707743e0f5e6cab9d8c4a2a912756ae60c9d465c",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-528d9a75133b1101/attempt-0001/video.mp4",
+        "video_sha256": "81b4d58a3a4f51ecde51fd5ef465ead40131e4c530c8e803a8c6b37d4f50daa8"
+      },
+      "request": {
+        "episode_id": "dv-528d9a75133b1101",
+        "entity_id": "dv-528d9a75133b1101:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 2700000,
+        "allowed_start_us": 2700000,
+        "allowed_end_us": 2700001,
+        "as_of_us": 2950000,
+        "frames": [
+          {
+            "id": "dv-528d9a75133b1101-27",
+            "episode_id": "dv-528d9a75133b1101",
+            "entity_id": "dv-528d9a75133b1101:object-308",
+            "pts_us": 2700000,
+            "available_us": 2700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-528d9a75133b1101-27.png",
+            "sha256": "4915635989a0962728e9d1c1707743e0f5e6cab9d8c4a2a912756ae60c9d465c"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "c188c42db7340c374e254a12ded1ff06dc7d67fe829c86b71b239d840d0fc47a"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-528d9a75133b1101-34",
+        "episode_id": "dv-528d9a75133b1101",
+        "entity_id": "dv-528d9a75133b1101:object-308",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 0,
+        "frame_index": 34,
+        "pts_us": 3400000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-528d9a75133b1101-34.png",
+        "image_sha256": "103d39d2bf80db2b7872b56f5a20bfae92fb6ba13318763fcc691211ab218464",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-528d9a75133b1101/attempt-0001/video.mp4",
+        "video_sha256": "81b4d58a3a4f51ecde51fd5ef465ead40131e4c530c8e803a8c6b37d4f50daa8"
+      },
+      "request": {
+        "episode_id": "dv-528d9a75133b1101",
+        "entity_id": "dv-528d9a75133b1101:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 3400000,
+        "allowed_start_us": 3400000,
+        "allowed_end_us": 3400001,
+        "as_of_us": 3650000,
+        "frames": [
+          {
+            "id": "dv-528d9a75133b1101-34",
+            "episode_id": "dv-528d9a75133b1101",
+            "entity_id": "dv-528d9a75133b1101:object-308",
+            "pts_us": 3400000,
+            "available_us": 3400000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-528d9a75133b1101-34.png",
+            "sha256": "103d39d2bf80db2b7872b56f5a20bfae92fb6ba13318763fcc691211ab218464"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "9ba74ff9a443e04658dd7ad858456103a5447e167c22541b1137999066f9a515"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-c49ae32814f5899e-0",
+        "episode_id": "dv-c49ae32814f5899e",
+        "entity_id": "dv-c49ae32814f5899e:object-174",
+        "entity_class": "microwave",
+        "split": "development",
+        "view": "right",
+        "scene": 2,
+        "frame_index": 0,
+        "pts_us": 0,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-c49ae32814f5899e-0.png",
+        "image_sha256": "425ec37db23748d56005620c3d75e3a7601f7543d29e1e58600f254d34e66eb8",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-c49ae32814f5899e/attempt-0001/video.mp4",
+        "video_sha256": "a3a4b66acfcc0a0971717721d01e46781b7c9976adc83027ae0387e5188be5fb"
+      },
+      "request": {
+        "episode_id": "dv-c49ae32814f5899e",
+        "entity_id": "dv-c49ae32814f5899e:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 0,
+        "allowed_start_us": 0,
+        "allowed_end_us": 1,
+        "as_of_us": 250000,
+        "frames": [
+          {
+            "id": "dv-c49ae32814f5899e-0",
+            "episode_id": "dv-c49ae32814f5899e",
+            "entity_id": "dv-c49ae32814f5899e:object-174",
+            "pts_us": 0,
+            "available_us": 0,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-c49ae32814f5899e-0.png",
+            "sha256": "425ec37db23748d56005620c3d75e3a7601f7543d29e1e58600f254d34e66eb8"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "69e25260ba8fc2f51dbfba0c3b981f383c6b1f6d95606149bc4607a673c5de07"
+      },
+      "expected": "unknown",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Door state is not distinguishable from the supplied image: small side-facing appliance or actor occlusion."
+    },
+    {
+      "source": {
+        "id": "dv-c49ae32814f5899e-9",
+        "episode_id": "dv-c49ae32814f5899e",
+        "entity_id": "dv-c49ae32814f5899e:object-174",
+        "entity_class": "microwave",
+        "split": "development",
+        "view": "right",
+        "scene": 2,
+        "frame_index": 9,
+        "pts_us": 900000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-c49ae32814f5899e-9.png",
+        "image_sha256": "a34082a9182ea06ac39a5a96c4113662bb4196501bf702e0aa988ee7a67d96d6",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-c49ae32814f5899e/attempt-0001/video.mp4",
+        "video_sha256": "a3a4b66acfcc0a0971717721d01e46781b7c9976adc83027ae0387e5188be5fb"
+      },
+      "request": {
+        "episode_id": "dv-c49ae32814f5899e",
+        "entity_id": "dv-c49ae32814f5899e:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 900000,
+        "allowed_start_us": 900000,
+        "allowed_end_us": 900001,
+        "as_of_us": 1150000,
+        "frames": [
+          {
+            "id": "dv-c49ae32814f5899e-9",
+            "episode_id": "dv-c49ae32814f5899e",
+            "entity_id": "dv-c49ae32814f5899e:object-174",
+            "pts_us": 900000,
+            "available_us": 900000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-c49ae32814f5899e-9.png",
+            "sha256": "a34082a9182ea06ac39a5a96c4113662bb4196501bf702e0aa988ee7a67d96d6"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "1ffcb5aa2080400110386f7d32fcd0025aecc7bc6eb666a38e8a52b5febc679d"
+      },
+      "expected": "unknown",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Door state is not distinguishable from the supplied image: small side-facing appliance or actor occlusion."
+    },
+    {
+      "source": {
+        "id": "dv-c49ae32814f5899e-18",
+        "episode_id": "dv-c49ae32814f5899e",
+        "entity_id": "dv-c49ae32814f5899e:object-174",
+        "entity_class": "microwave",
+        "split": "development",
+        "view": "right",
+        "scene": 2,
+        "frame_index": 18,
+        "pts_us": 1800000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-c49ae32814f5899e-18.png",
+        "image_sha256": "5378cb3363942d4a242191be00742377d90ad783461f596d44b79028d76a57a9",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-c49ae32814f5899e/attempt-0001/video.mp4",
+        "video_sha256": "a3a4b66acfcc0a0971717721d01e46781b7c9976adc83027ae0387e5188be5fb"
+      },
+      "request": {
+        "episode_id": "dv-c49ae32814f5899e",
+        "entity_id": "dv-c49ae32814f5899e:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 1800000,
+        "allowed_start_us": 1800000,
+        "allowed_end_us": 1800001,
+        "as_of_us": 2050000,
+        "frames": [
+          {
+            "id": "dv-c49ae32814f5899e-18",
+            "episode_id": "dv-c49ae32814f5899e",
+            "entity_id": "dv-c49ae32814f5899e:object-174",
+            "pts_us": 1800000,
+            "available_us": 1800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-c49ae32814f5899e-18.png",
+            "sha256": "5378cb3363942d4a242191be00742377d90ad783461f596d44b79028d76a57a9"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "11dd043fdc980999dce8ad8bc0a4c48364dd6be8cc36f8095930014e162ad1ed"
+      },
+      "expected": "unknown",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Door state is not distinguishable from the supplied image: small side-facing appliance or actor occlusion."
+    },
+    {
+      "source": {
+        "id": "dv-c49ae32814f5899e-25",
+        "episode_id": "dv-c49ae32814f5899e",
+        "entity_id": "dv-c49ae32814f5899e:object-174",
+        "entity_class": "microwave",
+        "split": "development",
+        "view": "right",
+        "scene": 2,
+        "frame_index": 25,
+        "pts_us": 2500000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-c49ae32814f5899e-25.png",
+        "image_sha256": "5b9468127e2dd4b2ce483ac5230859f44728a1782143cae9338019c9f818a815",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-c49ae32814f5899e/attempt-0001/video.mp4",
+        "video_sha256": "a3a4b66acfcc0a0971717721d01e46781b7c9976adc83027ae0387e5188be5fb"
+      },
+      "request": {
+        "episode_id": "dv-c49ae32814f5899e",
+        "entity_id": "dv-c49ae32814f5899e:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 2500000,
+        "allowed_start_us": 2500000,
+        "allowed_end_us": 2500001,
+        "as_of_us": 2750000,
+        "frames": [
+          {
+            "id": "dv-c49ae32814f5899e-25",
+            "episode_id": "dv-c49ae32814f5899e",
+            "entity_id": "dv-c49ae32814f5899e:object-174",
+            "pts_us": 2500000,
+            "available_us": 2500000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-c49ae32814f5899e-25.png",
+            "sha256": "5b9468127e2dd4b2ce483ac5230859f44728a1782143cae9338019c9f818a815"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "46037adddd8c55df46e08896f1e9a2f74e1b16dc447b406d199586dd1b00a012"
+      },
+      "expected": "unknown",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Door state is not distinguishable from the supplied image: small side-facing appliance or actor occlusion."
+    },
+    {
+      "source": {
+        "id": "dv-c49ae32814f5899e-34",
+        "episode_id": "dv-c49ae32814f5899e",
+        "entity_id": "dv-c49ae32814f5899e:object-174",
+        "entity_class": "microwave",
+        "split": "development",
+        "view": "right",
+        "scene": 2,
+        "frame_index": 34,
+        "pts_us": 3400000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-c49ae32814f5899e-34.png",
+        "image_sha256": "16bcb0011be0bb3844572f6bd70abee46564504cab625e839feb53917147bf83",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-c49ae32814f5899e/attempt-0001/video.mp4",
+        "video_sha256": "a3a4b66acfcc0a0971717721d01e46781b7c9976adc83027ae0387e5188be5fb"
+      },
+      "request": {
+        "episode_id": "dv-c49ae32814f5899e",
+        "entity_id": "dv-c49ae32814f5899e:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 3400000,
+        "allowed_start_us": 3400000,
+        "allowed_end_us": 3400001,
+        "as_of_us": 3650000,
+        "frames": [
+          {
+            "id": "dv-c49ae32814f5899e-34",
+            "episode_id": "dv-c49ae32814f5899e",
+            "entity_id": "dv-c49ae32814f5899e:object-174",
+            "pts_us": 3400000,
+            "available_us": 3400000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-c49ae32814f5899e-34.png",
+            "sha256": "16bcb0011be0bb3844572f6bd70abee46564504cab625e839feb53917147bf83"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "f97f6c0a2ac0f39dee8ccef2fa2443b61fc128fb0116681a01d807bb31ef9efb"
+      },
+      "expected": "unknown",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Door state is not distinguishable from the supplied image: small side-facing appliance or actor occlusion."
+    },
+    {
+      "source": {
+        "id": "dv-c49ae32814f5899e-43",
+        "episode_id": "dv-c49ae32814f5899e",
+        "entity_id": "dv-c49ae32814f5899e:object-174",
+        "entity_class": "microwave",
+        "split": "development",
+        "view": "right",
+        "scene": 2,
+        "frame_index": 43,
+        "pts_us": 4300000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-c49ae32814f5899e-43.png",
+        "image_sha256": "8d8ca4bb1ee6898d3e8111be8d3c4f3b4f24835eef7b4db948e63fc1ae8d5cf1",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-c49ae32814f5899e/attempt-0001/video.mp4",
+        "video_sha256": "a3a4b66acfcc0a0971717721d01e46781b7c9976adc83027ae0387e5188be5fb"
+      },
+      "request": {
+        "episode_id": "dv-c49ae32814f5899e",
+        "entity_id": "dv-c49ae32814f5899e:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 4300000,
+        "allowed_start_us": 4300000,
+        "allowed_end_us": 4300001,
+        "as_of_us": 4550000,
+        "frames": [
+          {
+            "id": "dv-c49ae32814f5899e-43",
+            "episode_id": "dv-c49ae32814f5899e",
+            "entity_id": "dv-c49ae32814f5899e:object-174",
+            "pts_us": 4300000,
+            "available_us": 4300000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-c49ae32814f5899e-43.png",
+            "sha256": "8d8ca4bb1ee6898d3e8111be8d3c4f3b4f24835eef7b4db948e63fc1ae8d5cf1"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "428755f4f3d1e5617625ebb8e876040f96f009ed8305addb676aaf9defee1b34"
+      },
+      "expected": "unknown",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Door state is not distinguishable from the supplied image: small side-facing appliance or actor occlusion."
+    },
+    {
+      "source": {
+        "id": "dv-dad43880b6994056-0",
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 0,
+        "pts_us": 0,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-0.png",
+        "image_sha256": "45b49c20bd8f7e92a852a81b8f782912351e1dd4ae313d7dfd175af4b8c0feef",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-dad43880b6994056/attempt-0001/video.mp4",
+        "video_sha256": "79b3dccc59e6fdc0acc3fd0c1d0ec89b97cbb1593c2b289991f9b23018ff891d"
+      },
+      "request": {
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 0,
+        "allowed_start_us": 0,
+        "allowed_end_us": 1,
+        "as_of_us": 250000,
+        "frames": [
+          {
+            "id": "dv-dad43880b6994056-0",
+            "episode_id": "dv-dad43880b6994056",
+            "entity_id": "dv-dad43880b6994056:object-308",
+            "pts_us": 0,
+            "available_us": 0,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-0.png",
+            "sha256": "45b49c20bd8f7e92a852a81b8f782912351e1dd4ae313d7dfd175af4b8c0feef"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "dc58645965f263b489c0ee496435d0dc201258593c2adf17898411691f380ee2"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-dad43880b6994056-14",
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 14,
+        "pts_us": 1400000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-14.png",
+        "image_sha256": "f8416ebd03e764790226bbe7c75b8a661c5603effc94160cd48666ad4cd8a819",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-dad43880b6994056/attempt-0001/video.mp4",
+        "video_sha256": "79b3dccc59e6fdc0acc3fd0c1d0ec89b97cbb1593c2b289991f9b23018ff891d"
+      },
+      "request": {
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 1400000,
+        "allowed_start_us": 1400000,
+        "allowed_end_us": 1400001,
+        "as_of_us": 1650000,
+        "frames": [
+          {
+            "id": "dv-dad43880b6994056-14",
+            "episode_id": "dv-dad43880b6994056",
+            "entity_id": "dv-dad43880b6994056:object-308",
+            "pts_us": 1400000,
+            "available_us": 1400000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-14.png",
+            "sha256": "f8416ebd03e764790226bbe7c75b8a661c5603effc94160cd48666ad4cd8a819"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "76468cdb89d73fc212c6ace93618facfe53a81c7d05ff19c6908852a4952d869"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-dad43880b6994056-28",
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 28,
+        "pts_us": 2800000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-28.png",
+        "image_sha256": "9cd494689e5ae3c8aef512ba64feedc9f2f5003d6e8825e3ecec2d9d70867633",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-dad43880b6994056/attempt-0001/video.mp4",
+        "video_sha256": "79b3dccc59e6fdc0acc3fd0c1d0ec89b97cbb1593c2b289991f9b23018ff891d"
+      },
+      "request": {
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 2800000,
+        "allowed_start_us": 2800000,
+        "allowed_end_us": 2800001,
+        "as_of_us": 3050000,
+        "frames": [
+          {
+            "id": "dv-dad43880b6994056-28",
+            "episode_id": "dv-dad43880b6994056",
+            "entity_id": "dv-dad43880b6994056:object-308",
+            "pts_us": 2800000,
+            "available_us": 2800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-28.png",
+            "sha256": "9cd494689e5ae3c8aef512ba64feedc9f2f5003d6e8825e3ecec2d9d70867633"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "00609bbb0c084ddff72223c270ca0cf5e055fa4a50fa0f6e8cefe4b0617d662c"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-dad43880b6994056-38",
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 38,
+        "pts_us": 3800000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-38.png",
+        "image_sha256": "5073f3b1d7f5a69c43809a03ccd0bca333a6911e5ce7ace4ec92cdbf2dcfdcd6",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-dad43880b6994056/attempt-0001/video.mp4",
+        "video_sha256": "79b3dccc59e6fdc0acc3fd0c1d0ec89b97cbb1593c2b289991f9b23018ff891d"
+      },
+      "request": {
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 3800000,
+        "allowed_start_us": 3800000,
+        "allowed_end_us": 3800001,
+        "as_of_us": 4050000,
+        "frames": [
+          {
+            "id": "dv-dad43880b6994056-38",
+            "episode_id": "dv-dad43880b6994056",
+            "entity_id": "dv-dad43880b6994056:object-308",
+            "pts_us": 3800000,
+            "available_us": 3800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-38.png",
+            "sha256": "5073f3b1d7f5a69c43809a03ccd0bca333a6911e5ce7ace4ec92cdbf2dcfdcd6"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "eda3bdaa4df508c17455570627241cbdf4540c93acf86d2bdc8fb14054a014cd"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-dad43880b6994056-46",
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 46,
+        "pts_us": 4600000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-46.png",
+        "image_sha256": "059bdb7127b73390855b8b6805a5bbfdebf48e6b80c457d447010330cbed73b0",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-dad43880b6994056/attempt-0001/video.mp4",
+        "video_sha256": "79b3dccc59e6fdc0acc3fd0c1d0ec89b97cbb1593c2b289991f9b23018ff891d"
+      },
+      "request": {
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 4600000,
+        "allowed_start_us": 4600000,
+        "allowed_end_us": 4600001,
+        "as_of_us": 4850000,
+        "frames": [
+          {
+            "id": "dv-dad43880b6994056-46",
+            "episode_id": "dv-dad43880b6994056",
+            "entity_id": "dv-dad43880b6994056:object-308",
+            "pts_us": 4600000,
+            "available_us": 4600000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-46.png",
+            "sha256": "059bdb7127b73390855b8b6805a5bbfdebf48e6b80c457d447010330cbed73b0"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "06c6bf9ad300ca240dd1662b72687f3d0f450e551746c3b12ae70d6d7b4bb98b"
+      },
+      "expected": "true",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door displacement or opening establishes open state."
+    },
+    {
+      "source": {
+        "id": "dv-dad43880b6994056-49",
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 49,
+        "pts_us": 4900000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-49.png",
+        "image_sha256": "13d576774928f21433209b19239f93ab02b89dc79912a304ab531d51fe4a9872",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-dad43880b6994056/attempt-0001/video.mp4",
+        "video_sha256": "79b3dccc59e6fdc0acc3fd0c1d0ec89b97cbb1593c2b289991f9b23018ff891d"
+      },
+      "request": {
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 4900000,
+        "allowed_start_us": 4900000,
+        "allowed_end_us": 4900001,
+        "as_of_us": 5150000,
+        "frames": [
+          {
+            "id": "dv-dad43880b6994056-49",
+            "episode_id": "dv-dad43880b6994056",
+            "entity_id": "dv-dad43880b6994056:object-308",
+            "pts_us": 4900000,
+            "available_us": 4900000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-49.png",
+            "sha256": "13d576774928f21433209b19239f93ab02b89dc79912a304ab531d51fe4a9872"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "8f973c585185f7a18f111ea0bb735f7c8815612e6f9f06ddddc6601b4aab9bfc"
+      },
+      "expected": "true",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door displacement or opening establishes open state."
+    },
+    {
+      "source": {
+        "id": "dv-dad43880b6994056-52",
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 52,
+        "pts_us": 5200000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-52.png",
+        "image_sha256": "3f670c46c897ab7026728b02eb3a4a3019b14767a00acd43665c2df48f617adc",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-dad43880b6994056/attempt-0001/video.mp4",
+        "video_sha256": "79b3dccc59e6fdc0acc3fd0c1d0ec89b97cbb1593c2b289991f9b23018ff891d"
+      },
+      "request": {
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 5200000,
+        "allowed_start_us": 5200000,
+        "allowed_end_us": 5200001,
+        "as_of_us": 5450000,
+        "frames": [
+          {
+            "id": "dv-dad43880b6994056-52",
+            "episode_id": "dv-dad43880b6994056",
+            "entity_id": "dv-dad43880b6994056:object-308",
+            "pts_us": 5200000,
+            "available_us": 5200000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-52.png",
+            "sha256": "3f670c46c897ab7026728b02eb3a4a3019b14767a00acd43665c2df48f617adc"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "396052e4b323ca3e0fa09cf63803270e18401b56a8d8c3ea8ec9cc54ab10a3e0"
+      },
+      "expected": "true",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door displacement or opening establishes open state."
+    },
+    {
+      "source": {
+        "id": "dv-dad43880b6994056-55",
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 55,
+        "pts_us": 5500000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-55.png",
+        "image_sha256": "8509a2d4c24c3baf55d4adcaa207dd15e2b199a6e8c2905c1a003a1e943564a7",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-dad43880b6994056/attempt-0001/video.mp4",
+        "video_sha256": "79b3dccc59e6fdc0acc3fd0c1d0ec89b97cbb1593c2b289991f9b23018ff891d"
+      },
+      "request": {
+        "episode_id": "dv-dad43880b6994056",
+        "entity_id": "dv-dad43880b6994056:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 5500000,
+        "allowed_start_us": 5500000,
+        "allowed_end_us": 5500001,
+        "as_of_us": 5750000,
+        "frames": [
+          {
+            "id": "dv-dad43880b6994056-55",
+            "episode_id": "dv-dad43880b6994056",
+            "entity_id": "dv-dad43880b6994056:object-308",
+            "pts_us": 5500000,
+            "available_us": 5500000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-dad43880b6994056-55.png",
+            "sha256": "8509a2d4c24c3baf55d4adcaa207dd15e2b199a6e8c2905c1a003a1e943564a7"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "0b9a154026945f5461693ab042910f3c87b663a8d3e9ad4bf24594a777354635"
+      },
+      "expected": "true",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door displacement or opening establishes open state."
+    },
+    {
+      "source": {
+        "id": "dv-503ac41c9f57746a-10",
+        "episode_id": "dv-503ac41c9f57746a",
+        "entity_id": "dv-503ac41c9f57746a:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 10,
+        "pts_us": 1000000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-503ac41c9f57746a-10.png",
+        "image_sha256": "0d73ccdc9364db1a4e29e17c3b89d0dabe5767d480b7d455761876b5c7e323be",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-503ac41c9f57746a/attempt-0001/video.mp4",
+        "video_sha256": "13426f473802153632d0b221801e3fa2c4b0b5ae0f58e378e3260cef7d925e86"
+      },
+      "request": {
+        "episode_id": "dv-503ac41c9f57746a",
+        "entity_id": "dv-503ac41c9f57746a:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 1000000,
+        "allowed_start_us": 1000000,
+        "allowed_end_us": 1000001,
+        "as_of_us": 1250000,
+        "frames": [
+          {
+            "id": "dv-503ac41c9f57746a-10",
+            "episode_id": "dv-503ac41c9f57746a",
+            "entity_id": "dv-503ac41c9f57746a:object-155",
+            "pts_us": 1000000,
+            "available_us": 1000000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-503ac41c9f57746a-10.png",
+            "sha256": "0d73ccdc9364db1a4e29e17c3b89d0dabe5767d480b7d455761876b5c7e323be"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "c71bbb24cefc5c8aa2f718bd3a9c559f57b2cbdbe2471cbc69c4c111a8ff9215"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-503ac41c9f57746a-20",
+        "episode_id": "dv-503ac41c9f57746a",
+        "entity_id": "dv-503ac41c9f57746a:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 20,
+        "pts_us": 2000000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-503ac41c9f57746a-20.png",
+        "image_sha256": "18e30672722453a56dfa432be443e4a7994870576378759f8a81af4f3e1b5da7",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-503ac41c9f57746a/attempt-0001/video.mp4",
+        "video_sha256": "13426f473802153632d0b221801e3fa2c4b0b5ae0f58e378e3260cef7d925e86"
+      },
+      "request": {
+        "episode_id": "dv-503ac41c9f57746a",
+        "entity_id": "dv-503ac41c9f57746a:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 2000000,
+        "allowed_start_us": 2000000,
+        "allowed_end_us": 2000001,
+        "as_of_us": 2250000,
+        "frames": [
+          {
+            "id": "dv-503ac41c9f57746a-20",
+            "episode_id": "dv-503ac41c9f57746a",
+            "entity_id": "dv-503ac41c9f57746a:object-155",
+            "pts_us": 2000000,
+            "available_us": 2000000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-503ac41c9f57746a-20.png",
+            "sha256": "18e30672722453a56dfa432be443e4a7994870576378759f8a81af4f3e1b5da7"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "5f497c9e48c4bf1d0be70fcc34883908714d1399553ff9e261ced687aeed0f11"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-503ac41c9f57746a-27",
+        "episode_id": "dv-503ac41c9f57746a",
+        "entity_id": "dv-503ac41c9f57746a:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 27,
+        "pts_us": 2700000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-503ac41c9f57746a-27.png",
+        "image_sha256": "fbdec1f59770160b35634f2fa5a767950a09061f5261bfb0692e665ba5a72f06",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-503ac41c9f57746a/attempt-0001/video.mp4",
+        "video_sha256": "13426f473802153632d0b221801e3fa2c4b0b5ae0f58e378e3260cef7d925e86"
+      },
+      "request": {
+        "episode_id": "dv-503ac41c9f57746a",
+        "entity_id": "dv-503ac41c9f57746a:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 2700000,
+        "allowed_start_us": 2700000,
+        "allowed_end_us": 2700001,
+        "as_of_us": 2950000,
+        "frames": [
+          {
+            "id": "dv-503ac41c9f57746a-27",
+            "episode_id": "dv-503ac41c9f57746a",
+            "entity_id": "dv-503ac41c9f57746a:object-155",
+            "pts_us": 2700000,
+            "available_us": 2700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-503ac41c9f57746a-27.png",
+            "sha256": "fbdec1f59770160b35634f2fa5a767950a09061f5261bfb0692e665ba5a72f06"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "71ced33ab14a5c7e51e0b14c3392bbdfda24ec4be8dc04ea2a8afa18b8ab3643"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-503ac41c9f57746a-37",
+        "episode_id": "dv-503ac41c9f57746a",
+        "entity_id": "dv-503ac41c9f57746a:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 37,
+        "pts_us": 3700000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-503ac41c9f57746a-37.png",
+        "image_sha256": "0d341c99fdc797ab6c5c8fdbb20638746f031cc4fa56f076e944094e4758b845",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-503ac41c9f57746a/attempt-0001/video.mp4",
+        "video_sha256": "13426f473802153632d0b221801e3fa2c4b0b5ae0f58e378e3260cef7d925e86"
+      },
+      "request": {
+        "episode_id": "dv-503ac41c9f57746a",
+        "entity_id": "dv-503ac41c9f57746a:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 3700000,
+        "allowed_start_us": 3700000,
+        "allowed_end_us": 3700001,
+        "as_of_us": 3950000,
+        "frames": [
+          {
+            "id": "dv-503ac41c9f57746a-37",
+            "episode_id": "dv-503ac41c9f57746a",
+            "entity_id": "dv-503ac41c9f57746a:object-155",
+            "pts_us": 3700000,
+            "available_us": 3700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-503ac41c9f57746a-37.png",
+            "sha256": "0d341c99fdc797ab6c5c8fdbb20638746f031cc4fa56f076e944094e4758b845"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "62733d6b5cff60c9b866f27e6c6019aa8cafadd19cfd08739789cecd10e874d3"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-503ac41c9f57746a-47",
+        "episode_id": "dv-503ac41c9f57746a",
+        "entity_id": "dv-503ac41c9f57746a:object-155",
+        "entity_class": "fridge",
+        "split": "development",
+        "view": "right",
+        "scene": 1,
+        "frame_index": 47,
+        "pts_us": 4700000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-503ac41c9f57746a-47.png",
+        "image_sha256": "fef58eb7b13bb9fed584ac42d9fccc04b64dc51dbb24dea9afdfbfc6befe7a11",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-503ac41c9f57746a/attempt-0001/video.mp4",
+        "video_sha256": "13426f473802153632d0b221801e3fa2c4b0b5ae0f58e378e3260cef7d925e86"
+      },
+      "request": {
+        "episode_id": "dv-503ac41c9f57746a",
+        "entity_id": "dv-503ac41c9f57746a:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 4700000,
+        "allowed_start_us": 4700000,
+        "allowed_end_us": 4700001,
+        "as_of_us": 4950000,
+        "frames": [
+          {
+            "id": "dv-503ac41c9f57746a-47",
+            "episode_id": "dv-503ac41c9f57746a",
+            "entity_id": "dv-503ac41c9f57746a:object-155",
+            "pts_us": 4700000,
+            "available_us": 4700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-503ac41c9f57746a-47.png",
+            "sha256": "fef58eb7b13bb9fed584ac42d9fccc04b64dc51dbb24dea9afdfbfc6befe7a11"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "f392479773b43321c26a37f5be640e832aa831b371b311212c1b11f6221683fd"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-50acf4cb570d5c06-10",
+        "episode_id": "dv-50acf4cb570d5c06",
+        "entity_id": "dv-50acf4cb570d5c06:object-155",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 1,
+        "frame_index": 10,
+        "pts_us": 1000000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-50acf4cb570d5c06-10.png",
+        "image_sha256": "96d5dd4001c22b03aa24e218b63a88ed99f71189384aab9ab0d7785cec1aec75",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-50acf4cb570d5c06/attempt-0001/video.mp4",
+        "video_sha256": "3235195c799e481a6188e0c214c0e687f78937605ca3ec6569fba99f19a5a613"
+      },
+      "request": {
+        "episode_id": "dv-50acf4cb570d5c06",
+        "entity_id": "dv-50acf4cb570d5c06:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 1000000,
+        "allowed_start_us": 1000000,
+        "allowed_end_us": 1000001,
+        "as_of_us": 1250000,
+        "frames": [
+          {
+            "id": "dv-50acf4cb570d5c06-10",
+            "episode_id": "dv-50acf4cb570d5c06",
+            "entity_id": "dv-50acf4cb570d5c06:object-155",
+            "pts_us": 1000000,
+            "available_us": 1000000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-50acf4cb570d5c06-10.png",
+            "sha256": "96d5dd4001c22b03aa24e218b63a88ed99f71189384aab9ab0d7785cec1aec75"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "d2deab6b845bb623289229d611217e18e813dd5bea5516a06ae9effe2fbdcd20"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-50acf4cb570d5c06-20",
+        "episode_id": "dv-50acf4cb570d5c06",
+        "entity_id": "dv-50acf4cb570d5c06:object-155",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 1,
+        "frame_index": 20,
+        "pts_us": 2000000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-50acf4cb570d5c06-20.png",
+        "image_sha256": "dacceaea1dc0ce8844082f9a7407575dd12453a20e4574dc5a62934aaa98826a",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-50acf4cb570d5c06/attempt-0001/video.mp4",
+        "video_sha256": "3235195c799e481a6188e0c214c0e687f78937605ca3ec6569fba99f19a5a613"
+      },
+      "request": {
+        "episode_id": "dv-50acf4cb570d5c06",
+        "entity_id": "dv-50acf4cb570d5c06:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 2000000,
+        "allowed_start_us": 2000000,
+        "allowed_end_us": 2000001,
+        "as_of_us": 2250000,
+        "frames": [
+          {
+            "id": "dv-50acf4cb570d5c06-20",
+            "episode_id": "dv-50acf4cb570d5c06",
+            "entity_id": "dv-50acf4cb570d5c06:object-155",
+            "pts_us": 2000000,
+            "available_us": 2000000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-50acf4cb570d5c06-20.png",
+            "sha256": "dacceaea1dc0ce8844082f9a7407575dd12453a20e4574dc5a62934aaa98826a"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "b1846636613becb9ac26e80701498b9315dd0b53a35e40a618a5227513c6f6d5"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-50acf4cb570d5c06-27",
+        "episode_id": "dv-50acf4cb570d5c06",
+        "entity_id": "dv-50acf4cb570d5c06:object-155",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 1,
+        "frame_index": 27,
+        "pts_us": 2700000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-50acf4cb570d5c06-27.png",
+        "image_sha256": "fa9e51e5f2adffc5c15fb71d496ab7545f04ac164a98febe21d6c190fef29d0a",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-50acf4cb570d5c06/attempt-0001/video.mp4",
+        "video_sha256": "3235195c799e481a6188e0c214c0e687f78937605ca3ec6569fba99f19a5a613"
+      },
+      "request": {
+        "episode_id": "dv-50acf4cb570d5c06",
+        "entity_id": "dv-50acf4cb570d5c06:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 2700000,
+        "allowed_start_us": 2700000,
+        "allowed_end_us": 2700001,
+        "as_of_us": 2950000,
+        "frames": [
+          {
+            "id": "dv-50acf4cb570d5c06-27",
+            "episode_id": "dv-50acf4cb570d5c06",
+            "entity_id": "dv-50acf4cb570d5c06:object-155",
+            "pts_us": 2700000,
+            "available_us": 2700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-50acf4cb570d5c06-27.png",
+            "sha256": "fa9e51e5f2adffc5c15fb71d496ab7545f04ac164a98febe21d6c190fef29d0a"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "596f1e2a80c18622f4753d8089821737261650914dd250794e78d8006b7cc5c9"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-50acf4cb570d5c06-37",
+        "episode_id": "dv-50acf4cb570d5c06",
+        "entity_id": "dv-50acf4cb570d5c06:object-155",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 1,
+        "frame_index": 37,
+        "pts_us": 3700000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-50acf4cb570d5c06-37.png",
+        "image_sha256": "60e34f6aeee8946c15cdd81162cd34d8843640a663102bbd680e2061516cc7b6",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-50acf4cb570d5c06/attempt-0001/video.mp4",
+        "video_sha256": "3235195c799e481a6188e0c214c0e687f78937605ca3ec6569fba99f19a5a613"
+      },
+      "request": {
+        "episode_id": "dv-50acf4cb570d5c06",
+        "entity_id": "dv-50acf4cb570d5c06:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 3700000,
+        "allowed_start_us": 3700000,
+        "allowed_end_us": 3700001,
+        "as_of_us": 3950000,
+        "frames": [
+          {
+            "id": "dv-50acf4cb570d5c06-37",
+            "episode_id": "dv-50acf4cb570d5c06",
+            "entity_id": "dv-50acf4cb570d5c06:object-155",
+            "pts_us": 3700000,
+            "available_us": 3700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-50acf4cb570d5c06-37.png",
+            "sha256": "60e34f6aeee8946c15cdd81162cd34d8843640a663102bbd680e2061516cc7b6"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "420a018172ed43b532f599c506ce7c35e686f2ec3769d58813d42cc7c995fc6f"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-50acf4cb570d5c06-47",
+        "episode_id": "dv-50acf4cb570d5c06",
+        "entity_id": "dv-50acf4cb570d5c06:object-155",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 1,
+        "frame_index": 47,
+        "pts_us": 4700000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-50acf4cb570d5c06-47.png",
+        "image_sha256": "b78a1e28ba89d016ba1329bdb65a6e8af4b569f41755bf9a61d71ee97d382fb9",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-50acf4cb570d5c06/attempt-0001/video.mp4",
+        "video_sha256": "3235195c799e481a6188e0c214c0e687f78937605ca3ec6569fba99f19a5a613"
+      },
+      "request": {
+        "episode_id": "dv-50acf4cb570d5c06",
+        "entity_id": "dv-50acf4cb570d5c06:object-155",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 4700000,
+        "allowed_start_us": 4700000,
+        "allowed_end_us": 4700001,
+        "as_of_us": 4950000,
+        "frames": [
+          {
+            "id": "dv-50acf4cb570d5c06-47",
+            "episode_id": "dv-50acf4cb570d5c06",
+            "entity_id": "dv-50acf4cb570d5c06:object-155",
+            "pts_us": 4700000,
+            "available_us": 4700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-50acf4cb570d5c06-47.png",
+            "sha256": "b78a1e28ba89d016ba1329bdb65a6e8af4b569f41755bf9a61d71ee97d382fb9"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "15de676979b0921910d68fd9d0d9c6fac056083e3e3305488214a8db7b67d955"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-d065ae4a05eb0978-0",
+        "episode_id": "dv-d065ae4a05eb0978",
+        "entity_id": "dv-d065ae4a05eb0978:object-174",
+        "entity_class": "microwave",
+        "split": "test",
+        "view": "left",
+        "scene": 2,
+        "frame_index": 0,
+        "pts_us": 0,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d065ae4a05eb0978-0.png",
+        "image_sha256": "f2ec950a4bf76cffbe40802553f6ec88c2e3f392fccea0d54437e5f26ca58d6b",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-d065ae4a05eb0978/attempt-0001/video.mp4",
+        "video_sha256": "17a5b298c5c7e56ef5c717a6be6f0e1250b3e20a27575dea81d3e0e26f405c0b"
+      },
+      "request": {
+        "episode_id": "dv-d065ae4a05eb0978",
+        "entity_id": "dv-d065ae4a05eb0978:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 0,
+        "allowed_start_us": 0,
+        "allowed_end_us": 1,
+        "as_of_us": 250000,
+        "frames": [
+          {
+            "id": "dv-d065ae4a05eb0978-0",
+            "episode_id": "dv-d065ae4a05eb0978",
+            "entity_id": "dv-d065ae4a05eb0978:object-174",
+            "pts_us": 0,
+            "available_us": 0,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d065ae4a05eb0978-0.png",
+            "sha256": "f2ec950a4bf76cffbe40802553f6ec88c2e3f392fccea0d54437e5f26ca58d6b"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "a71d7cf7aff2e1870e4063cc3d1dc17fa3ba6c74f0d7a8bbc5913f78ed6d1702"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-d065ae4a05eb0978-8",
+        "episode_id": "dv-d065ae4a05eb0978",
+        "entity_id": "dv-d065ae4a05eb0978:object-174",
+        "entity_class": "microwave",
+        "split": "test",
+        "view": "left",
+        "scene": 2,
+        "frame_index": 8,
+        "pts_us": 800000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d065ae4a05eb0978-8.png",
+        "image_sha256": "34ad67e1f9cbb9fba3eb91e4e059ffcb35b16a8c8313303b0aaefc318c152073",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-d065ae4a05eb0978/attempt-0001/video.mp4",
+        "video_sha256": "17a5b298c5c7e56ef5c717a6be6f0e1250b3e20a27575dea81d3e0e26f405c0b"
+      },
+      "request": {
+        "episode_id": "dv-d065ae4a05eb0978",
+        "entity_id": "dv-d065ae4a05eb0978:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 800000,
+        "allowed_start_us": 800000,
+        "allowed_end_us": 800001,
+        "as_of_us": 1050000,
+        "frames": [
+          {
+            "id": "dv-d065ae4a05eb0978-8",
+            "episode_id": "dv-d065ae4a05eb0978",
+            "entity_id": "dv-d065ae4a05eb0978:object-174",
+            "pts_us": 800000,
+            "available_us": 800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d065ae4a05eb0978-8.png",
+            "sha256": "34ad67e1f9cbb9fba3eb91e4e059ffcb35b16a8c8313303b0aaefc318c152073"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "90789c33f69185ed790ae72b5233c74b05b48fceb70c4158ff62160fb1ea87c5"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-d065ae4a05eb0978-16",
+        "episode_id": "dv-d065ae4a05eb0978",
+        "entity_id": "dv-d065ae4a05eb0978:object-174",
+        "entity_class": "microwave",
+        "split": "test",
+        "view": "left",
+        "scene": 2,
+        "frame_index": 16,
+        "pts_us": 1600000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d065ae4a05eb0978-16.png",
+        "image_sha256": "037467705a3d951e6d84f813790e0b93c7797e8f61e2f76d78074c5314f7ba8e",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-d065ae4a05eb0978/attempt-0001/video.mp4",
+        "video_sha256": "17a5b298c5c7e56ef5c717a6be6f0e1250b3e20a27575dea81d3e0e26f405c0b"
+      },
+      "request": {
+        "episode_id": "dv-d065ae4a05eb0978",
+        "entity_id": "dv-d065ae4a05eb0978:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 1600000,
+        "allowed_start_us": 1600000,
+        "allowed_end_us": 1600001,
+        "as_of_us": 1850000,
+        "frames": [
+          {
+            "id": "dv-d065ae4a05eb0978-16",
+            "episode_id": "dv-d065ae4a05eb0978",
+            "entity_id": "dv-d065ae4a05eb0978:object-174",
+            "pts_us": 1600000,
+            "available_us": 1600000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d065ae4a05eb0978-16.png",
+            "sha256": "037467705a3d951e6d84f813790e0b93c7797e8f61e2f76d78074c5314f7ba8e"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "3443293d144623e6727c447fc5aba5657578c216636501840d8c686a28f8b292"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-d065ae4a05eb0978-22",
+        "episode_id": "dv-d065ae4a05eb0978",
+        "entity_id": "dv-d065ae4a05eb0978:object-174",
+        "entity_class": "microwave",
+        "split": "test",
+        "view": "left",
+        "scene": 2,
+        "frame_index": 22,
+        "pts_us": 2200000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d065ae4a05eb0978-22.png",
+        "image_sha256": "3a4c29818c2814b112234397133e8864f4e29bd751fa769ad9aaab5c908bba03",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-d065ae4a05eb0978/attempt-0001/video.mp4",
+        "video_sha256": "17a5b298c5c7e56ef5c717a6be6f0e1250b3e20a27575dea81d3e0e26f405c0b"
+      },
+      "request": {
+        "episode_id": "dv-d065ae4a05eb0978",
+        "entity_id": "dv-d065ae4a05eb0978:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 2200000,
+        "allowed_start_us": 2200000,
+        "allowed_end_us": 2200001,
+        "as_of_us": 2450000,
+        "frames": [
+          {
+            "id": "dv-d065ae4a05eb0978-22",
+            "episode_id": "dv-d065ae4a05eb0978",
+            "entity_id": "dv-d065ae4a05eb0978:object-174",
+            "pts_us": 2200000,
+            "available_us": 2200000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d065ae4a05eb0978-22.png",
+            "sha256": "3a4c29818c2814b112234397133e8864f4e29bd751fa769ad9aaab5c908bba03"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "8d92f4dcb177d288dccc2e5e19ec4d977294abb168f4cd0f0b2adad1368b6400"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-d065ae4a05eb0978-30",
+        "episode_id": "dv-d065ae4a05eb0978",
+        "entity_id": "dv-d065ae4a05eb0978:object-174",
+        "entity_class": "microwave",
+        "split": "test",
+        "view": "left",
+        "scene": 2,
+        "frame_index": 30,
+        "pts_us": 3000000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d065ae4a05eb0978-30.png",
+        "image_sha256": "93ef41f363d339cf814b3528c78c3e22bd30498a01dda5a2205f02d111be332c",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-d065ae4a05eb0978/attempt-0001/video.mp4",
+        "video_sha256": "17a5b298c5c7e56ef5c717a6be6f0e1250b3e20a27575dea81d3e0e26f405c0b"
+      },
+      "request": {
+        "episode_id": "dv-d065ae4a05eb0978",
+        "entity_id": "dv-d065ae4a05eb0978:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 3000000,
+        "allowed_start_us": 3000000,
+        "allowed_end_us": 3000001,
+        "as_of_us": 3250000,
+        "frames": [
+          {
+            "id": "dv-d065ae4a05eb0978-30",
+            "episode_id": "dv-d065ae4a05eb0978",
+            "entity_id": "dv-d065ae4a05eb0978:object-174",
+            "pts_us": 3000000,
+            "available_us": 3000000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d065ae4a05eb0978-30.png",
+            "sha256": "93ef41f363d339cf814b3528c78c3e22bd30498a01dda5a2205f02d111be332c"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "a572a7283d2a43d9ffb79dbd01c5b5992e53b121dfd662a4f8ebbe8d4b33282d"
+      },
+      "expected": "unknown",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Door state is not distinguishable from the supplied image: small side-facing appliance or actor occlusion."
+    },
+    {
+      "source": {
+        "id": "dv-d065ae4a05eb0978-38",
+        "episode_id": "dv-d065ae4a05eb0978",
+        "entity_id": "dv-d065ae4a05eb0978:object-174",
+        "entity_class": "microwave",
+        "split": "test",
+        "view": "left",
+        "scene": 2,
+        "frame_index": 38,
+        "pts_us": 3800000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d065ae4a05eb0978-38.png",
+        "image_sha256": "af94e38815eadd8ff2daa98b1817f91a4795744b12699742eda4539aca53cad5",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-d065ae4a05eb0978/attempt-0001/video.mp4",
+        "video_sha256": "17a5b298c5c7e56ef5c717a6be6f0e1250b3e20a27575dea81d3e0e26f405c0b"
+      },
+      "request": {
+        "episode_id": "dv-d065ae4a05eb0978",
+        "entity_id": "dv-d065ae4a05eb0978:object-174",
+        "entity_label": "microwave",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 3800000,
+        "allowed_start_us": 3800000,
+        "allowed_end_us": 3800001,
+        "as_of_us": 4050000,
+        "frames": [
+          {
+            "id": "dv-d065ae4a05eb0978-38",
+            "episode_id": "dv-d065ae4a05eb0978",
+            "entity_id": "dv-d065ae4a05eb0978:object-174",
+            "pts_us": 3800000,
+            "available_us": 3800000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d065ae4a05eb0978-38.png",
+            "sha256": "af94e38815eadd8ff2daa98b1817f91a4795744b12699742eda4539aca53cad5"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "24536b1ec5164e1470badb8c0bb33b1c4573f446983071db53030f3e583542e9"
+      },
+      "expected": "unknown",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Door state is not distinguishable from the supplied image: small side-facing appliance or actor occlusion."
+    },
+    {
+      "source": {
+        "id": "dv-d3ba7e1944d989fd-7",
+        "episode_id": "dv-d3ba7e1944d989fd",
+        "entity_id": "dv-d3ba7e1944d989fd:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 7,
+        "pts_us": 700000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d3ba7e1944d989fd-7.png",
+        "image_sha256": "fd220ef004d8f979957d0f0bffe98b1b132192fb9bf528226d62944b760c9960",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-d3ba7e1944d989fd/attempt-0001/video.mp4",
+        "video_sha256": "731c8e385c52e5afd302d8e4ca53fcaa1a1eda91f4eabb5cfec73065d25e8cb7"
+      },
+      "request": {
+        "episode_id": "dv-d3ba7e1944d989fd",
+        "entity_id": "dv-d3ba7e1944d989fd:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 700000,
+        "allowed_start_us": 700000,
+        "allowed_end_us": 700001,
+        "as_of_us": 950000,
+        "frames": [
+          {
+            "id": "dv-d3ba7e1944d989fd-7",
+            "episode_id": "dv-d3ba7e1944d989fd",
+            "entity_id": "dv-d3ba7e1944d989fd:object-308",
+            "pts_us": 700000,
+            "available_us": 700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d3ba7e1944d989fd-7.png",
+            "sha256": "fd220ef004d8f979957d0f0bffe98b1b132192fb9bf528226d62944b760c9960"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "95b6aaa61818175d7ed8e2faf65c3efc5634f4d1383b2505669cac04c7e9eb60"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-d3ba7e1944d989fd-14",
+        "episode_id": "dv-d3ba7e1944d989fd",
+        "entity_id": "dv-d3ba7e1944d989fd:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 14,
+        "pts_us": 1400000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d3ba7e1944d989fd-14.png",
+        "image_sha256": "ca357116929aa210cfcf0946693b5d9f104699503d38c8fa002f28e7615c8738",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-d3ba7e1944d989fd/attempt-0001/video.mp4",
+        "video_sha256": "731c8e385c52e5afd302d8e4ca53fcaa1a1eda91f4eabb5cfec73065d25e8cb7"
+      },
+      "request": {
+        "episode_id": "dv-d3ba7e1944d989fd",
+        "entity_id": "dv-d3ba7e1944d989fd:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 1400000,
+        "allowed_start_us": 1400000,
+        "allowed_end_us": 1400001,
+        "as_of_us": 1650000,
+        "frames": [
+          {
+            "id": "dv-d3ba7e1944d989fd-14",
+            "episode_id": "dv-d3ba7e1944d989fd",
+            "entity_id": "dv-d3ba7e1944d989fd:object-308",
+            "pts_us": 1400000,
+            "available_us": 1400000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d3ba7e1944d989fd-14.png",
+            "sha256": "ca357116929aa210cfcf0946693b5d9f104699503d38c8fa002f28e7615c8738"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "405af7f1999bd9dbffe27b07494fa2d4d10257f3c59183d9d9de49b41d06ef53"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-d3ba7e1944d989fd-20",
+        "episode_id": "dv-d3ba7e1944d989fd",
+        "entity_id": "dv-d3ba7e1944d989fd:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 20,
+        "pts_us": 2000000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d3ba7e1944d989fd-20.png",
+        "image_sha256": "57e2354527c50280ee12b71eb7763b5614f0458bee34ea75960d450ba7006668",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-d3ba7e1944d989fd/attempt-0001/video.mp4",
+        "video_sha256": "731c8e385c52e5afd302d8e4ca53fcaa1a1eda91f4eabb5cfec73065d25e8cb7"
+      },
+      "request": {
+        "episode_id": "dv-d3ba7e1944d989fd",
+        "entity_id": "dv-d3ba7e1944d989fd:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 2000000,
+        "allowed_start_us": 2000000,
+        "allowed_end_us": 2000001,
+        "as_of_us": 2250000,
+        "frames": [
+          {
+            "id": "dv-d3ba7e1944d989fd-20",
+            "episode_id": "dv-d3ba7e1944d989fd",
+            "entity_id": "dv-d3ba7e1944d989fd:object-308",
+            "pts_us": 2000000,
+            "available_us": 2000000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d3ba7e1944d989fd-20.png",
+            "sha256": "57e2354527c50280ee12b71eb7763b5614f0458bee34ea75960d450ba7006668"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "9181b64856dbd962e4ea6b5b17a16405f96cf476a7c2870b121fd7deebdd0a8e"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-d3ba7e1944d989fd-27",
+        "episode_id": "dv-d3ba7e1944d989fd",
+        "entity_id": "dv-d3ba7e1944d989fd:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 27,
+        "pts_us": 2700000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d3ba7e1944d989fd-27.png",
+        "image_sha256": "e8538b838728b298204c6b63de5de54abd0d95e62716a2ced411ad1019b2d5de",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-d3ba7e1944d989fd/attempt-0001/video.mp4",
+        "video_sha256": "731c8e385c52e5afd302d8e4ca53fcaa1a1eda91f4eabb5cfec73065d25e8cb7"
+      },
+      "request": {
+        "episode_id": "dv-d3ba7e1944d989fd",
+        "entity_id": "dv-d3ba7e1944d989fd:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 2700000,
+        "allowed_start_us": 2700000,
+        "allowed_end_us": 2700001,
+        "as_of_us": 2950000,
+        "frames": [
+          {
+            "id": "dv-d3ba7e1944d989fd-27",
+            "episode_id": "dv-d3ba7e1944d989fd",
+            "entity_id": "dv-d3ba7e1944d989fd:object-308",
+            "pts_us": 2700000,
+            "available_us": 2700000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d3ba7e1944d989fd-27.png",
+            "sha256": "e8538b838728b298204c6b63de5de54abd0d95e62716a2ced411ad1019b2d5de"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "28a652deb1e9ef83406fa15e6d17d7a9e929e5f59bbe049c66d2d59c81d464e7"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    },
+    {
+      "source": {
+        "id": "dv-d3ba7e1944d989fd-34",
+        "episode_id": "dv-d3ba7e1944d989fd",
+        "entity_id": "dv-d3ba7e1944d989fd:object-308",
+        "entity_class": "fridge",
+        "split": "test",
+        "view": "left",
+        "scene": 0,
+        "frame_index": 34,
+        "pts_us": 3400000,
+        "image": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d3ba7e1944d989fd-34.png",
+        "image_sha256": "6a217a10caffb68acda508d4b2962d994cd908528121bc8571381c46de049786",
+        "video": "output/virtualhome-corpus/paired-actions-v4/episodes/dv-d3ba7e1944d989fd/attempt-0001/video.mp4",
+        "video_sha256": "731c8e385c52e5afd302d8e4ca53fcaa1a1eda91f4eabb5cfec73065d25e8cb7"
+      },
+      "request": {
+        "episode_id": "dv-d3ba7e1944d989fd",
+        "entity_id": "dv-d3ba7e1944d989fd:object-308",
+        "entity_label": "fridge",
+        "property": "door_open",
+        "question": "Is the target door visibly open?",
+        "event_us": 3400000,
+        "allowed_start_us": 3400000,
+        "allowed_end_us": 3400001,
+        "as_of_us": 3650000,
+        "frames": [
+          {
+            "id": "dv-d3ba7e1944d989fd-34",
+            "episode_id": "dv-d3ba7e1944d989fd",
+            "entity_id": "dv-d3ba7e1944d989fd:object-308",
+            "pts_us": 3400000,
+            "available_us": 3400000,
+            "path": "/Users/manuel/code/wesen/2026-09-06--vision/ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/reasoning-v3/dv-d3ba7e1944d989fd-34.png",
+            "sha256": "6a217a10caffb68acda508d4b2962d994cd908528121bc8571381c46de049786"
+          }
+        ],
+        "max_output_tokens": 4096,
+        "deadline_ms": 120000,
+        "request_id": "b12662028e42e984e86a886e847919607eb0968301f539a2cc20723e97eb19a2"
+      },
+      "expected": "false",
+      "reviewer": "codex-assistant-rgb-review",
+      "review_rationale": "Visible door panel is seated against the appliance frame; inspectable surface and boundary."
+    }
+  ],
+  "models": {
+    "qwen": {
+      "pin": {
+        "repo_id": "mlx-community/Qwen3-VL-8B-Instruct-8bit",
+        "revision": "a0093b9b5fda6f76ddd4a462c6830ae7c4fe47ec",
+        "local_path": "output/models/qwen3-vl-instruct-8b-8bit",
+        "files": [
+          {
+            "name": ".gitattributes",
+            "size": 1570,
+            "blob_id": "52373fe24473b1aa44333d318f578ae6bf04b49b"
+          },
+          {
+            "name": "README.md",
+            "size": 572,
+            "blob_id": "54c337b15f660c821d8c01e8fade7911b8fec9bc"
+          },
+          {
+            "name": "added_tokens.json",
+            "size": 707,
+            "blob_id": "b54f9135e44c1e81047e8d05cb027af8bc039eed"
+          },
+          {
+            "name": "chat_template.jinja",
+            "size": 5292,
+            "blob_id": "124386803f142761528f710e77ae483f5f8c4fc4"
+          },
+          {
+            "name": "chat_template.json",
+            "size": 5499,
+            "blob_id": "1081bacf1af7c7c6de4a585ce02cd0fd34e382da"
+          },
+          {
+            "name": "config.json",
+            "size": 7140,
+            "blob_id": "b8620c908dcb52bf3731a6056ce7a6179fa632df"
+          },
+          {
+            "name": "generation_config.json",
+            "size": 269,
+            "blob_id": "e116347d7ef42621c7a5957f82c015c38d939c1f"
+          },
+          {
+            "name": "merges.txt",
+            "size": 1671853,
+            "blob_id": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+          },
+          {
+            "name": "model-00001-of-00002.safetensors",
+            "size": 5343910279,
+            "blob_id": "041f3e8e86b6c7a9d85e3d7185d10b9e2126860d"
+          },
+          {
+            "name": "model-00002-of-00002.safetensors",
+            "size": 4511968734,
+            "blob_id": "2b5a4c52c317a892ac78beec72f46746c340d542"
+          },
+          {
+            "name": "model.safetensors.index.json",
+            "size": 67759,
+            "blob_id": "5857ec62530eb589b1876034dd5386f1d98131a6"
+          },
+          {
+            "name": "preprocessor_config.json",
+            "size": 782,
+            "blob_id": "2fa6553554f69b4e3a6b742a75264ff9dff90ad0"
+          },
+          {
+            "name": "special_tokens_map.json",
+            "size": 613,
+            "blob_id": "ac23c0aaa2434523c494330aeb79c58395378103"
+          },
+          {
+            "name": "tokenizer.json",
+            "size": 11422654,
+            "blob_id": "cd71f61a15a522601badb3dc960d800d9cb3766c"
+          },
+          {
+            "name": "tokenizer_config.json",
+            "size": 5445,
+            "blob_id": "fec7f182135c384a08ea2fc9635566ca79c45afc"
+          },
+          {
+            "name": "video_preprocessor_config.json",
+            "size": 817,
+            "blob_id": "e32b1d90356f74457edbfca27aa1e121dab7cdc7"
+          },
+          {
+            "name": "vocab.json",
+            "size": 2776833,
+            "blob_id": "4783fe10ac3adce15ac8f358ef5462739852c569"
+          }
+        ]
+      },
+      "profiles": [
+        {
+          "profile": {
+            "id": "qwen-D-G-3407",
+            "model_family": "qwen",
+            "prompt_style": "direct",
+            "system_prompt": "",
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "top_k": 0,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "penalty_context_size": 4096,
+            "seed": 3407,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "2feed4df3bc041da08373ebca2481ac65c078fecdf0e4620d4737f6534f1b08d"
+        },
+        {
+          "profile": {
+            "id": "qwen-R-G-3407",
+            "model_family": "qwen",
+            "prompt_style": "reasoning",
+            "system_prompt": "",
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "top_k": 0,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "penalty_context_size": 4096,
+            "seed": 3407,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "adbcb9e5131b86d4e9d46a25bf53f297834abcdc52c72f1d4bdfc3f084e376bf"
+        },
+        {
+          "profile": {
+            "id": "qwen-D-S-3407",
+            "model_family": "qwen",
+            "prompt_style": "direct",
+            "system_prompt": "",
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 1.5,
+            "penalty_context_size": 4096,
+            "seed": 3407,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "3a927dda29d476b862ef0ff4fcf44cfd4c8638e979783b5779106f38f711a8ed"
+        },
+        {
+          "profile": {
+            "id": "qwen-D-S-3408",
+            "model_family": "qwen",
+            "prompt_style": "direct",
+            "system_prompt": "",
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 1.5,
+            "penalty_context_size": 4096,
+            "seed": 3408,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "6fce66a8f588900c9580935f0606434c5c63963799dd043a2530ba85ee6c5a25"
+        },
+        {
+          "profile": {
+            "id": "qwen-D-S-3409",
+            "model_family": "qwen",
+            "prompt_style": "direct",
+            "system_prompt": "",
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 1.5,
+            "penalty_context_size": 4096,
+            "seed": 3409,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "89f28120578ed0241afaf92cc9265902979ca4ebb5f11aff4e42a2bdd110e8a6"
+        },
+        {
+          "profile": {
+            "id": "qwen-R-S-3407",
+            "model_family": "qwen",
+            "prompt_style": "reasoning",
+            "system_prompt": "",
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 1.5,
+            "penalty_context_size": 4096,
+            "seed": 3407,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "9256a036e8a7d121822fd979f01ffa98ed456148190cf31a24823993c3589090"
+        },
+        {
+          "profile": {
+            "id": "qwen-R-S-3408",
+            "model_family": "qwen",
+            "prompt_style": "reasoning",
+            "system_prompt": "",
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 1.5,
+            "penalty_context_size": 4096,
+            "seed": 3408,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "758bf88f5d45b56f7ab0fb036de5a6370660ef128a8adf21576b548bcc51b486"
+        },
+        {
+          "profile": {
+            "id": "qwen-R-S-3409",
+            "model_family": "qwen",
+            "prompt_style": "reasoning",
+            "system_prompt": "",
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 1.5,
+            "penalty_context_size": 4096,
+            "seed": 3409,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "1572ed27e873fd7299cebb8756fa45bac8e478ab7c44c0f85ca0154870a15dcb"
+        }
+      ]
+    },
+    "cosmos": {
+      "pin": {
+        "repo_id": "nvidia/Cosmos-Reason2-8B",
+        "revision": "a9fae2cf89dc64db96b12860417f0eb403013bb9",
+        "local_path": "output/models/cosmos-reason2-8b-8bit-local",
+        "conversion_manifest": "ttmp/2026/09/06/COSMOS-VERIFY-001--cosmos-and-qwen-verifier-runtime-baseline/various/cosmos-8b-conversion.json"
+      },
+      "profiles": [
+        {
+          "profile": {
+            "id": "cosmos-D-G-1234",
+            "model_family": "cosmos",
+            "prompt_style": "direct",
+            "system_prompt": "You are a helpful assistant.",
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "top_k": 0,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "penalty_context_size": 4096,
+            "seed": 1234,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "a78ba1fc48518e5623c1ea3544b83af0b7f0bd98ab82d1957aaedc08accb8a51"
+        },
+        {
+          "profile": {
+            "id": "cosmos-R-G-1234",
+            "model_family": "cosmos",
+            "prompt_style": "reasoning",
+            "system_prompt": "You are a helpful assistant.",
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "top_k": 0,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "penalty_context_size": 4096,
+            "seed": 1234,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "3988fbc4cdf5b3140c792b7be874c63f6ab69a46459bb01d2eba915d2aa40c6d"
+        },
+        {
+          "profile": {
+            "id": "cosmos-D-S-1234",
+            "model_family": "cosmos",
+            "prompt_style": "direct",
+            "system_prompt": "You are a helpful assistant.",
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "penalty_context_size": 4096,
+            "seed": 1234,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "308353d7895695bbb73cf93de22ed5f9bd3f0ca983eacf021999627cfb9cff13"
+        },
+        {
+          "profile": {
+            "id": "cosmos-D-S-1235",
+            "model_family": "cosmos",
+            "prompt_style": "direct",
+            "system_prompt": "You are a helpful assistant.",
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "penalty_context_size": 4096,
+            "seed": 1235,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "0f0daf75e8e7c72baa44a6b8e969f3e1bfe98a57164de9c58d5d44bfbd53e6bf"
+        },
+        {
+          "profile": {
+            "id": "cosmos-D-S-1236",
+            "model_family": "cosmos",
+            "prompt_style": "direct",
+            "system_prompt": "You are a helpful assistant.",
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "penalty_context_size": 4096,
+            "seed": 1236,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "327296ce58cd8dd64aa8d536f105ca1d9e54fbe229a2bf33de7bcf38d30cfc28"
+        },
+        {
+          "profile": {
+            "id": "cosmos-R-S-1234",
+            "model_family": "cosmos",
+            "prompt_style": "reasoning",
+            "system_prompt": "You are a helpful assistant.",
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "penalty_context_size": 4096,
+            "seed": 1234,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "49813d77298b715b891a8f16920548100c0f21e03ac670d65832b64223ac8d17"
+        },
+        {
+          "profile": {
+            "id": "cosmos-R-S-1235",
+            "model_family": "cosmos",
+            "prompt_style": "reasoning",
+            "system_prompt": "You are a helpful assistant.",
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "penalty_context_size": 4096,
+            "seed": 1235,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "c5734e9b0e9b9cb6d0b1257746965e2cf89fe76688d66ff700414cac0466bb9b"
+        },
+        {
+          "profile": {
+            "id": "cosmos-R-S-1236",
+            "model_family": "cosmos",
+            "prompt_style": "reasoning",
+            "system_prompt": "You are a helpful assistant.",
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "repetition_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "penalty_context_size": 4096,
+            "seed": 1236,
+            "max_output_tokens": 4096,
+            "deadline_ms": 120000
+          },
+          "profile_sha256": "906b96ebceb4b6db5b20861017e39d86fc06c9e8c426ace28a9ca03765c68d4b"
+        }
+      ]
+    }
+  },
+  "code_sha256": {
+    "workbench/src/video_workbench/verifiers/worker.py": "7ce6dbd1c01b26ab18ee20a9dc9e5912c0cafccea6f39bbe87f5abb83131dbae",
+    "workbench/src/video_workbench/verifiers/adapter.py": "2e864a4552971af9acf915794d4734bb3b822007b65cb03e938f0a86c46f2c7e",
+    "workbench/src/video_workbench/verifiers/__init__.py": "513ec3cf7853bd2a51ba35f14008644468ed50def9b0878337a264b30d5fe36c",
+    "workbench/src/video_workbench/verifiers/contracts.py": "df5955328b8c6069febede3c7e905cab8420f3c0a8340039f1680806fd048af8",
+    "workbench/src/video_workbench/verifiers/visibility.py": "efcac2ccfe4a9f2d8e668b9b9e119592b3f18c271c51be8f5f5f2c11559723c0",
+    "workbench/src/video_workbench/verifiers/normalization.py": "4d314fd35fe6d9f78eeee0f6840c6557aca078790e9b5f5b0f3f28e1bc8ce5b8",
+    "workbench/src/video_workbench/verifiers/smoke_worker.py": "6dfdb3739dd5465f4c063c7c457003aa02cb7f8254c78362820aa45175e32790",
+    "workbench/src/video_workbench/verifiers/profiles.py": "976c638dce9627969c23a6c4a5e29d8405285ea282e0774a5e25d981feffa22e",
+    "workbench/src/video_workbench/rules/handoff.py": "358ef5f805d96ab66f27452d35708f910a19f25ceb25e905d29869e821c13ef7"
+  },
+  "prompts": {
+    "qwen": {
+      "direct": "Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+      "reasoning": "Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Your final answer must be one JSON object with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.\nReason step by step using only the supplied image. Identify the appliance and its door surface. Examine visible detail and occlusion. Compare direct evidence of an open door with direct evidence of a seated closed door. Choose unknown if neither is established. Do not infer state from the person's activity or an assumed history.\nWrite your reasoning inside <reasoning> and </reasoning>.\nImmediately after </reasoning>, return exactly one final JSON object with the specified visibility fields. Put no additional prose after the final JSON."
+    },
+    "cosmos": {
+      "direct": "Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Return one JSON object, no prose, with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.",
+      "reasoning": "Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Your final answer must be one JSON object with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.\nReason step by step using only the supplied image. Identify the appliance and its door surface. Examine visible detail and occlusion. Compare direct evidence of an open door with direct evidence of a seated closed door. Choose unknown if neither is established. Do not infer state from the person's activity or an assumed history.\nWrite your reasoning inside <think> and </think>.\nImmediately after </think>, return exactly one final JSON object with the specified visibility fields. Put no additional prose after the final JSON."
+    }
+  },
+  "selection": "Average correct-minus-unsupported indicator across seeds per case, then cases. Descending score; ties lower unsupported rate, lower median elapsed, direct then greedy. Choose control if no score gain over direct greedy.",
+  "test_policy": "Both model selections must exist before any test run. Test each selected arm and direct greedy control; control only if selected is control. Sampled selections retain all three predefined seeds.",
+  "limitations": "Assistant RGB review, not independent human ground truth. New episodes relative to prior verifier tests, same synthetic apartments and action families. Actual label imbalance; nearby open frames are correlated. Requested 8/8/8 mix unavailable in remaining episodes. Actor rendering artifacts present in a control episode.",
+  "label_counts": {
+    "development": {
+      "false": 15,
+      "true": 3,
+      "unknown": 6
+    },
+    "test": {
+      "false": 18,
+      "true": 4,
+      "unknown": 2
+    }
+  }
+}

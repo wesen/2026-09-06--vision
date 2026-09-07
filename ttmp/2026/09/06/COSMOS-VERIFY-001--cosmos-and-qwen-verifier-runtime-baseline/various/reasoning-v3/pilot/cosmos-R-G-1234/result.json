@@ -1,0 +1,136 @@
+{
+  "status": "ok",
+  "returncode": 0,
+  "elapsed_seconds": 11.16942120809108,
+  "request_id": "127fee88a384556743becfab22d77c550d4de1c1a24bce0daa6dc0e3b419fec4",
+  "entity_id": "dv-0a0732aef26f3d73:object-308",
+  "schema_version": "reasoning-image-v3",
+  "mode": "single_image",
+  "prompt": "Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Your final answer must be one JSON object with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.\nReason step by step using only the supplied image. Identify the appliance and its door surface. Examine visible detail and occlusion. Compare direct evidence of an open door with direct evidence of a seated closed door. Choose unknown if neither is established. Do not infer state from the person's activity or an assumed history.\nWrite your reasoning inside <think> and </think>.\nImmediately after </think>, return exactly one final JSON object with the specified visibility fields. Put no additional prose after the final JSON.",
+  "model_path": "/Users/manuel/code/wesen/2026-09-06--vision/output/models/cosmos-reason2-8b-8bit-local",
+  "completed_us": 11419422,
+  "profile": {
+    "id": "cosmos-R-G-1234",
+    "model_family": "cosmos",
+    "prompt_style": "reasoning",
+    "system_prompt": "You are a helpful assistant.",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "penalty_context_size": 4096,
+    "seed": 1234,
+    "max_output_tokens": 4096,
+    "deadline_ms": 120000
+  },
+  "profile_sha256": "3988fbc4cdf5b3140c792b7be874c63f6ab69a46459bb01d2eba915d2aa40c6d",
+  "answer": {
+    "request_id": "127fee88a384556743becfab22d77c550d4de1c1a24bce0daa6dc0e3b419fec4",
+    "entity_id": "dv-0a0732aef26f3d73:object-308",
+    "answer": "false",
+    "evidence_ids": [
+      "dv-0a0732aef26f3d73-0"
+    ],
+    "rationale": "The red refrigerator has two doors, both of which are explicitly stated as closed in the video. There is no indication of any movement or interaction with the doors that would suggest they are open."
+  },
+  "visibility": {
+    "target_identified": true,
+    "door_observable": true
+  },
+  "raw": "<think>\n\nOkay, let's see. The user is asking if the fridge's door is open based on the provided environment and the agent's actions. The video shows a red refrigerator with two doors, both closed. The agent's actions don't mention interacting with the fridge door. Since the doors are explicitly stated as closed and there's no indication of any movement or opening, the answer should be that the door is closed. The key points here are the explicit statement about the doors being closed and the lack of any action affecting them.\n</think>\n\n```json\n{\n  \"target_identified\": true,\n  \"door_observable\": true,\n  \"answer\": \"false\",\n  \"evidence\": [\"F1\"],\n  \"rationale\": \"The red refrigerator has two doors, both of which are explicitly stated as closed in the video. There is no indication of any movement or interaction with the doors that would suggest they are open.\"\n}\n```",
+  "normalizations": [
+    "markdown_fence_wrapper"
+  ],
+  "final_text": "\n\n```json\n{\n  \"target_identified\": true,\n  \"door_observable\": true,\n  \"answer\": \"false\",\n  \"evidence\": [\"F1\"],\n  \"rationale\": \"The red refrigerator has two doors, both of which are explicitly stated as closed in the video. There is no indication of any movement or interaction with the doors that would suggest they are open.\"\n}\n```",
+  "output_style": "reasoning",
+  "runtime": {
+    "request_id": "127fee88a384556743becfab22d77c550d4de1c1a24bce0daa6dc0e3b419fec4",
+    "raw": "<think>\n\nOkay, let's see. The user is asking if the fridge's door is open based on the provided environment and the agent's actions. The video shows a red refrigerator with two doors, both closed. The agent's actions don't mention interacting with the fridge door. Since the doors are explicitly stated as closed and there's no indication of any movement or opening, the answer should be that the door is closed. The key points here are the explicit statement about the doors being closed and the lack of any action affecting them.\n</think>\n\n```json\n{\n  \"target_identified\": true,\n  \"door_observable\": true,\n  \"answer\": \"false\",\n  \"evidence\": [\"F1\"],\n  \"rationale\": \"The red refrigerator has two doors, both of which are explicitly stated as closed in the video. There is no indication of any movement or interaction with the doors that would suggest they are open.\"\n}\n```",
+    "prompt": "Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Your final answer must be one JSON object with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.\nReason step by step using only the supplied image. Identify the appliance and its door surface. Examine visible detail and occlusion. Compare direct evidence of an open door with direct evidence of a seated closed door. Choose unknown if neither is established. Do not infer state from the person's activity or an assumed history.\nWrite your reasoning inside <think> and </think>.\nImmediately after </think>, return exactly one final JSON object with the specified visibility fields. Put no additional prose after the final JSON.",
+    "formatted_prompt": "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\n<|vision_start|><|image_pad|><|vision_end|>Inspect only the supplied image. Target appliance: fridge. Is its door open? First establish whether you can identify the target and directly see enough of its door to determine its state. Closed means a visible door seated against its frame, not merely no visible opening. Open means a visible gap or displaced door exposing the opening. If a person blocks the door, the target is too small, outside the image, or its state cannot be distinguished, set door_observable=false and answer=unknown. Never infer closed just because you cannot see an open door. Do not infer state from what a person is doing.\nImage reference: F1. Your final answer must be one JSON object with these exact fields: {\"target_identified\": true, \"door_observable\": true, \"answer\": \"true|false|unknown\", \"evidence\": [\"F1\"], \"rationale\": \"brief description of directly visible evidence\"}\nChoose one answer enum. No IDs or confidence scores are requested.\nReason step by step using only the supplied image. Identify the appliance and its door surface. Examine visible detail and occlusion. Compare direct evidence of an open door with direct evidence of a seated closed door. Choose unknown if neither is established. Do not infer state from the person's activity or an assumed history.\nWrite your reasoning inside <think> and </think>.\nImmediately after </think>, return exactly one final JSON object with the specified visibility fields. Put no additional prose after the final JSON.<|im_end|>\n<|im_start|>assistant\n",
+    "mode": "single_image",
+    "load_seconds": 1.3849480838980526,
+    "preparation_seconds": 0.03857291606254876,
+    "generation_seconds": 8.218090124893934,
+    "peak_mlx_bytes": 10857494411,
+    "prompt_tokens": 617,
+    "generation_tokens": 192,
+    "finish_reason": "stop",
+    "versions": {
+      "mlx": "0.32.2",
+      "mlx-vlm": "0.6.17",
+      "transformers": "5.16.1"
+    },
+    "profile": {
+      "id": "cosmos-R-G-1234",
+      "model_family": "cosmos",
+      "prompt_style": "reasoning",
+      "system_prompt": "You are a helpful assistant.",
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "repetition_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "penalty_context_size": 4096,
+      "seed": 1234,
+      "max_output_tokens": 4096,
+      "deadline_ms": 120000
+    },
+    "profile_sha256": "3988fbc4cdf5b3140c792b7be874c63f6ab69a46459bb01d2eba915d2aa40c6d",
+    "schema_version": "reasoning-image-v3",
+    "processed_inputs": {
+      "attention_mask": {
+        "shape": [
+          1,
+          617
+        ],
+        "dtype": "mlx.core.int64"
+      },
+      "input_ids": {
+        "shape": [
+          1,
+          617
+        ],
+        "dtype": "mlx.core.int64"
+      },
+      "pixel_values": {
+        "shape": [
+          1200,
+          1536
+        ],
+        "dtype": "mlx.core.float32"
+      },
+      "image_grid_thw": {
+        "shape": [
+          1,
+          3
+        ],
+        "dtype": "mlx.core.int64",
+        "values": [
+          [
+            1,
+            30,
+            40
+          ]
+        ]
+      },
+      "resized_images_hw": [
+        [
+          480,
+          640
+        ]
+      ]
+    },
+    "resolved_sampling": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "repetition_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "repetition_context_size": 4096,
+      "presence_context_size": 4096
+    },
+    "penalty_scope": "MLX recent 4096 input/generated tokens; local approximation, not vLLM parity"
+  }
+}

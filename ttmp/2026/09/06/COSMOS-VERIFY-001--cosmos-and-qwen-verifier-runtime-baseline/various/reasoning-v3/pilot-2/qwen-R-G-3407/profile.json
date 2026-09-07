@@ -1,0 +1,15 @@
+{
+  "id": "qwen-R-G-3407",
+  "model_family": "qwen",
+  "prompt_style": "reasoning",
+  "system_prompt": "",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "repetition_penalty": 1.0,
+  "presence_penalty": 0.0,
+  "penalty_context_size": 4096,
+  "seed": 3407,
+  "max_output_tokens": 4096,
+  "deadline_ms": 120000
+}

@@ -146,3 +146,9 @@ Crops, multi-image input, native generative video, fine-tuning, and larger embed
 - Reference 06: Cosmos guidance and configuration differences.
 - Reference 07: Qwen source review and installed runtime audit.
 - `sources/qwen3-vl/README.md`, `provenance.json`, and `local-runtime-audit.json`: archived settings and implementation evidence.
+
+## Pilot and freeze implementation note
+
+P2 pilots completed before the comparison. Qwen Instruct omitted literal `<think>` delimiters in both initial reasoning pilots, producing prose followed by JSON; those outputs remain rejected and archived. A separate development pilot verified `<reasoning>...</reasoning>` for Qwen. Cosmos retains `<think>...</think>`. The declared model-family grammar is frozen before evaluation; no arbitrary-prose extraction was enabled.
+
+Remaining unseen episodes did not yield the target balanced distribution. The frozen 48-case RGB set contains development 15 closed / 3 open / 6 unknown and test 18 closed / 4 open / 2 unknown, with eight new episodes and correlated apartment/action families. Frame sampling was refined through RGB review to include the visible opening interval before labels were frozen; no new-case model outputs informed selection. The few unknown test cases limit uncertainty conclusions.

@@ -78,3 +78,11 @@ def test_host_rejects_worker_profile_substitution(packet,tmp_path,monkeypatch):
     monkeypatch.setattr('video_workbench.verifiers.adapter.supervise',fake_supervise)
     result=verify(packet,model,tmp_path/'run',profile=p)
     assert result['status']=='runtime_error' and 'profile binding' in result['reason']
+
+
+def test_qwen_literal_reasoning_envelope(packet):
+    p=make_profile('qwen',True)
+    raw='<reasoning>Door is visible and seated.</reasoning>'+payload()
+    assert parse_experiment(packet,raw,p)['status']=='ok'
+    assert '<reasoning>' in experiment_prompt(packet,p)
+    assert parse_experiment(packet,raw.replace('</reasoning>',''),p)['status']=='invalid'

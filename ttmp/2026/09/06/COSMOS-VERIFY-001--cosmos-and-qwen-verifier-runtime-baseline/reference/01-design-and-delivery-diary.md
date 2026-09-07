@@ -856,3 +856,133 @@ Added a dedicated Cosmos experiment design and C1–C4 tasks. It uses the existi
 
 - Reasoning sampling: temperature 0.6, top-p 0.95, top-k 20, repetition penalty 1.0, presence penalty 0.0; seeds 1234–1236.
 - Proposed common ceiling: 4096 tokens and 120 seconds, contingent on the shared contract update and development pilot.
+
+## Step 14: Implement the shared reasoning boundary
+
+Implemented explicit immutable experiment profiles, step-by-step prompts, and declared reasoning-block extraction followed by the existing visibility parser. The worker records the actual processed image grid and applies seeded decoding. Existing short-answer callers retain their requested prompts and budgets.
+
+### Prompt Context
+
+**User prompt (verbatim):** "Implement. commit at appropriate intervals and keep a detailed diary as you work (using the diary format from the skill). Print out a brutalist work slip with the plan / different phases for the ticket. then before stsarting a phase, plrint a split about the phase, and print one when the phase is done."
+
+**Assistant interpretation:** Complete the shared feature, real-model pilots, frozen comparisons, and handoff validation with traceable commits and phase slips.
+
+**Inferred user intent:** Turn the approved experiment designs into measured implementation evidence.
+
+**Commit (code):** `4608902` — "Implement bounded reasoning profiles and validated final-answer extraction".
+
+### What I did
+
+- Added `profiles.py`, explicit request/profile limit binding, hashed profile propagation, bounded final-answer extraction, and optional profile support in RULES.
+- Raised the request maximum to 4096 tokens without changing existing requested budgets; experimental raw and worker records have separate bounds.
+- Added feature-completion smoke tests; all 48 selected tests passed in 0.36 seconds.
+- Printed the plan and P1 start slips successfully: HTTP 200 at 02:33:58Z and 02:34:36Z on 2026-09-07. Layouts are archived in `various/reasoning-*`.
+
+### Why
+
+- The comparison needs independent control over prompt and decoding while retaining trusted host identities.
+- Reasoning text may contain candidate answers, so only the explicitly delimited final JSON is validated.
+
+### What worked
+
+- Tests cover invalid profile values, changed seeds/hashes, UTF-8 size bounds, malformed reasoning delimiters, duplicate/trailing answers, and worker profile substitution.
+- Existing visibility, timeout recovery, and raw-output tests still pass.
+
+### What didn't work
+
+- No test failures occurred in this feature batch. Real-model template and runtime acceptance remain for the next phase.
+
+### What I learned
+
+- Installed MLX tracks recent input/generated tokens for penalties. Recorded a 4096-token context and labeled it a local approximation, not vLLM parity.
+
+### What was tricky to build
+
+- Capturing processor output without processing twice: the experimental worker prepares inputs once, records tensor/grid shape, and passes those exact tensors into generation.
+- Larger raw explanations must not weaken the final 16000-character visibility limit. Extraction separates the two bounds.
+
+### What warrants a second pair of eyes
+
+- Inspect prepared tensor forwarding and actual template behavior during pilots.
+- Verify that all failed experimental results preserve profile provenance as well as successful results.
+
+### What should be done in the future
+
+- Complete P2 pilots and fresh RGB review, then freeze both model protocols before any test run.
+
+### Code review instructions
+
+- Start with `profiles.validate_profile`, `visibility.parse_experiment`, and `worker.run`, then inspect host profile checking in `adapter.verify`.
+- Smoke command: `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_reasoning_profiles.py workbench/tests/test_visibility_adapter.py workbench/tests/test_verifier_output.py -q`.
+
+### Technical details
+
+- Profiled runs use 4096 tokens and 120000 ms, one approved image, 256 KiB raw text, one MiB worker JSON.
+- Greedy and sampled profiles preserve distinct IDs and seeds; model family and system-message policy are explicit fields.
+
+## Step 15: Pilot both models and freeze the visual experiment
+
+Ran eight real-model development pilots, corrected the Qwen reasoning delimiter based on those outputs, then ran a separate eight-call pilot. Reviewed fresh images before freezing 48 cases and both model protocols together. No test inference occurred during this phase.
+
+### Prompt Context
+
+**User prompt (verbatim):** (see Step 14)
+
+**Assistant interpretation:** Verify real runtime behavior, preserve failures, and prepare a reviewable comparison before model selection.
+
+**Inferred user intent:** Obtain measured behavior with a clear visual trail and avoid tuning on test outcomes.
+
+### What I did
+
+- Piloted all four arms for both models on an existing development frame. Initial Qwen reasoning responses failed; Cosmos completed the requested format.
+- Changed only Qwen's declared wrapper to `<reasoning>...</reasoning>`, retaining Cosmos `<think>...</think>`, then ran a separate pilot attempt. All eight revised calls passed the output contract in about 7–12 seconds.
+- Added a focused Qwen-envelope test; all 23 reasoning-profile tests passed in 0.13 seconds after the delimiter change.
+- Reviewed eight contact sheets and two refined opening-interval sheets, retaining original frames and separate review layouts.
+- Froze prompts, model pins, profiles, code hashes, 48 frame identities and RGB labels before any comparison inference.
+
+### Why
+
+- A missing wrapper cannot safely be repaired by searching arbitrary explanation text for JSON.
+- Initial uniform sampling underrepresented visible open states. RGB review identified opening intervals for additional reviewed samples before the freeze.
+
+### What worked
+
+- Literal Qwen reasoning tags worked in the second pilot under both decoding modes. Cosmos retained the documented think convention.
+- Processed image provenance showed a 480×640 image, grid [1,30,40], and 1200×1536 patch tensor on the pilot frame.
+- All new case episode IDs and frame hashes differ from earlier verifier populations.
+
+### What didn't work
+
+- Initial Qwen reasoning pilots returned `incomplete or repeated reasoning envelope`; raw responses contained explanations and final JSON but no requested think delimiters. Preserved them in `various/reasoning-v3/pilot`.
+- One valid sampled Cosmos pilot answered open for the reviewed closed frame. Runtime acceptance is not semantic acceptance.
+- Remaining episodes do not meet the proposed 8/8/8 label balance. Frozen development is 15 closed, 3 open, 6 unknown; test is 18 closed, 4 open, 2 unknown. Documented that limitation rather than duplicating cases.
+
+### What I learned
+
+- Explicit nonreserved tags can work for a prompted Instruct explanation without requiring a different checkpoint.
+- The newer paired corpus includes approach-only episodes; an unseen episode is not automatically a diverse state sequence.
+
+### What was tricky to build
+
+- Both model protocols and selections must precede test inference. The runner requires a complete two-model selection manifest before test mode and checks frozen code identities.
+- The experiment retains three seeds for sampled arms and one run for greedy arms; selection averages within each case before comparing arms.
+
+### What warrants a second pair of eyes
+
+- Small side-view microwave labels and near-closed transition frames deserve independent RGB review. This remains assistant-reviewed synthetic evidence.
+- Only two unknown test cases and highly correlated opening frames limit broad quality claims.
+
+### What should be done in the future
+
+- Complete the 384-call development comparison, then selected/control test runs and measured report.
+
+### Code review instructions
+
+- Inspect scripts 21–24 and `various/reasoning-v3/protocol.json`, then the original and revised pilot raw outputs.
+- Reproduce code/frame hashes and label counts before accepting the frozen population.
+
+### Technical details
+
+- Frozen protocol SHA-256: `629d7769ee9f47cf4cc0634d90e94daa3492f98b034a8b7745742953a208ace3`.
+- P1 completion and P2 start printed HTTP 200 at 02:38:51Z and 02:39:23Z on 2026-09-07.
+- Main comparison has 24 development cases × (1+1+3+3) runs × two models = 384 calls; selected/control test size depends on development selection.

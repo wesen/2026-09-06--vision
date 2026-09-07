@@ -1,0 +1,15 @@
+{
+  "id": "cosmos-R-G-1234",
+  "model_family": "cosmos",
+  "prompt_style": "reasoning",
+  "system_prompt": "You are a helpful assistant.",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "repetition_penalty": 1.0,
+  "presence_penalty": 0.0,
+  "penalty_context_size": 4096,
+  "seed": 1234,
+  "max_output_tokens": 4096,
+  "deadline_ms": 120000
+}

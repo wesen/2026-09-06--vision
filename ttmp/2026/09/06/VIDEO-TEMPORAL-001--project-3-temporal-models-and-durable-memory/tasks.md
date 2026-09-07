@@ -46,3 +46,12 @@ The measured comparisons and observation memory are complete. See `reference/04-
 - [x] N3: Train fresh ridge and TCN heads under the existing development-selection policy; save matched per-class/paired comparisons.
 - [x] N4: Publish measured native-versus-pooled findings, figure, diary, commits, and local phase-slip layouts; record the printing blocker.
 - [x] Print saved native follow-up slips after explicit Almanach approval; all five printer responses successful, archived in various/native-print-receipts.json.
+
+## Deferred — 8B embeddings (later, not current VERIFY work)
+
+- [ ] LATER E8-1: Pin official Qwen3-VL-Embedding-8B and validate repaired native runtime, dimensions, pixel sensitivity, and memory with a bounded pilot.
+- [ ] LATER E8-2: Extract the identical 792 windows into separate 8B caches with source/provenance audits.
+- [ ] LATER E8-3: Train fresh ridge and six TCN heads with unchanged splits, seeds, and selection policy.
+- [ ] LATER E8-4: Report paired quality, unresolved actions, memory, latency, and causal smoke checks against native 2B FP32.
+
+See `design-doc/03-deferred-8b-native-embedding-comparison.md`. These are future tasks; the completed 2B comparison remains the accepted measured reference.

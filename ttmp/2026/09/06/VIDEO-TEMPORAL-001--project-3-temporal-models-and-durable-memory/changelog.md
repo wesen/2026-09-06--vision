@@ -56,3 +56,7 @@ Native N2/N3/N4: 792 FP32 windows extracted in 199.09s; encoder/comparison commi
 ## 2026-09-06
 
 Printed all five native FP32 plan/phase slips after explicit user approval; archived successful printer responses and completed the follow-up.
+
+## 2026-09-06
+
+Defer 8B native embedding pilot and matched 792-window comparison; four LATER tasks recorded, active work stays on generative verifiers.

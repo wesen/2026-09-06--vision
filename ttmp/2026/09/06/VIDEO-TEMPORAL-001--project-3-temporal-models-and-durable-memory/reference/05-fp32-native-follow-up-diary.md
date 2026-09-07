@@ -256,3 +256,47 @@ The user explicitly approved printing after the destination blocker was explaine
 ### Technical details
 - Destination: `https://almanach.crib.scapegoat.dev/api/render-and-print`.
 - Experiment commits: `176a300`, `8e59d45`, `209cea4`; no experiment code changed in this printing step.
+
+## Step 5: Defer the 8B embedding experiment
+
+Recorded a separate 8B native embedding proposal and four explicitly deferred tasks. No weights, feature caches, or heads were changed. The completed native 2B FP32 comparison remains the measured reference while active work returns to the 8B generative verifiers in COSMOS-VERIFY.
+
+### Prompt Context
+**User prompt (verbatim):** "ok, add notes and tasks but mark them for later, then go back to the 8B reasoning models"
+
+**Assistant interpretation:** Preserve the larger embedding idea without executing it now; resume the separate reasoning experiment.
+
+**Inferred user intent:** Keep the roadmap precise and avoid confusing representation changes with verifier capacity changes.
+
+### What I did
+- Added `design-doc/03-deferred-8b-native-embedding-comparison.md` and tasks LATER E8-1 through E8-4.
+- Read the colleague's native FP32 measured report and retained its exact comparison population and precision caveats.
+
+### Why
+- Embedding-8B would require new vectors and newly trained heads. It is not an interchangeable checkpoint for the generative verifier.
+
+### What worked
+- The deferred proposal preserves the 792-window population, training policy, and separate artifact identities.
+
+### What didn't work
+- N/A; no runtime experiment was attempted.
+
+### What I learned
+- Default output dimensions differ: 4096 for 8B versus 2048 for 2B. Matching dimensions would still not make feature spaces compatible.
+
+### What was tricky to build
+- The completed ticket now contains future tasks, so each task and the new note explicitly say later; this does not reopen the completed 2B acceptance claim.
+
+### What warrants a second pair of eyes
+- Future FP32 memory requirements and any assumptions that the repaired adapter supports the larger architecture unchanged.
+
+### What should be done in the future
+- Run the bounded pilot and matched comparison only when this work is scheduled.
+
+### Code review instructions
+- Review the new design note and the final deferred section in tasks.md. No model execution or tests are needed for this scheduling change.
+
+### Technical details
+- Candidate: `Qwen/Qwen3-VL-Embedding-8B`.
+- Existing producer and comparison: `temporal/encode_native.py`, `temporal/native_compare.py`.
+- Existing reference commits: `176a300`, `8e59d45`, `209cea4`.

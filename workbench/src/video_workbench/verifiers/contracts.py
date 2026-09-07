@@ -1,6 +1,7 @@
 """Shared RULES/VERIFY boundary. Valid citations do not prove factual support."""
 import json
 from video_workbench.rules.evaluate import digest,integer
+from .normalization import unwrap_json_fence
 
 
 def validate_request(request):
@@ -29,7 +30,7 @@ def validate_request(request):
     return request
 
 
-def parse_answer(request,raw):
+def parse_answer(request,raw,*,allow_markdown_fence=True):
     validate_request(request)
     def pairs(values):
         result={}
@@ -37,9 +38,11 @@ def parse_answer(request,raw):
             if k in result:raise ValueError('duplicate JSON key')
             result[k]=v
         return result
+    normalizations=[]
     try:
         if not isinstance(raw,str) or len(raw)>16000:raise ValueError('response size invalid')
-        value=json.loads(raw,object_pairs_hook=pairs,parse_constant=lambda s:(_ for _ in ()).throw(ValueError('nonfinite JSON')))
+        payload,normalizations=unwrap_json_fence(raw) if allow_markdown_fence else (raw,[])
+        value=json.loads(payload,object_pairs_hook=pairs,parse_constant=lambda s:(_ for _ in ()).throw(ValueError('nonfinite JSON')))
         if not isinstance(value,dict) or set(value)!={'request_id','entity_id','answer','evidence_ids','rationale'}:raise ValueError('response schema')
         if value['request_id']!=request['request_id'] or value['entity_id']!=request['entity_id']:raise ValueError('response binding mismatch')
         if value['answer'] not in ('true','false','unknown'):raise ValueError('invalid answer')
@@ -47,5 +50,5 @@ def parse_answer(request,raw):
         if not isinstance(ids,list) or any(not isinstance(i,str) or i not in approved for i in ids) or len(set(ids))!=len(ids):raise ValueError('invalid evidence citation')
         if value['answer']!='unknown' and not ids:raise ValueError('known answer requires citation')
         if not isinstance(value['rationale'],str) or len(value['rationale'])>2000:raise ValueError('invalid rationale')
-    except (ValueError,TypeError) as exc:return {'status':'invalid','reason':str(exc),'raw':raw}
-    return {'status':'ok','answer':value,'raw':raw}
+    except (ValueError,TypeError) as exc:return {'status':'invalid','reason':str(exc),'raw':raw,'normalizations':normalizations}
+    return {'status':'ok','answer':value,'raw':raw,'normalizations':normalizations}

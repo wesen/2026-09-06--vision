@@ -731,3 +731,5 @@ Reviewed Qwen3-VL documentation with the same source-preserving method used for 
 - Qwen repository revision: `96588727e44c78b25ba03ea03b8e12f7e64fd0da`.
 - Existing MLX Instruct conversion revision: `a0093b9b5fda6f76ddd4a462c6830ae7c4fe47ec`.
 - Archives: scripts 19–20; official model revisions are recorded in each provenance URL.
+
+Research and source archive committed in `0cf74e2`. Ticket doctor and diff checks passed. The research completion slip printed successfully (HTTP 200, 384×586) at `2026-09-07T02:12:09Z`; generated layout and receipt are in `various/qwen-research-done*`.

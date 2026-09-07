@@ -662,3 +662,5 @@ Expanded the requested warehouse review into the official model card, prompting 
 - Official repository revision: `a3b4a1db4065fe13c4b1f4d2fb8605bad647f4b9`.
 - Cookbook revision: `d0857364e8a727be41b181731e03f478213e4558`.
 - Official 8B model-card revision: `a9fae2cf89dc64db96b12860417f0eb403013bb9` (source manifest carries the full authoritative checkpoint revision).
+
+Completed reports, raw evidence, source archive, and bookkeeping in `ccfce45`. Ticket doctor and diff whitespace checks passed. Meaningful completion slip printed successfully (HTTP 200) at `2026-09-07T02:03:08Z`; receipt and generated layout are archived in `various/visibility-done*`.

@@ -1,0 +1,10 @@
+{
+  "layout": "various/v1-done.yaml",
+  "printed": true,
+  "status_code": 200,
+  "rendered_at": "2026-09-07T00:30:36Z",
+  "width": 384,
+  "height": 567,
+  "commit": "a5e01ee",
+  "endpoint": "https://almanach.crib.scapegoat.dev/api/render-and-print"
+}

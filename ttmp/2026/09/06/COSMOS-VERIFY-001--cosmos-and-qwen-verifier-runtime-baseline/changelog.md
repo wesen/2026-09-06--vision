@@ -16,3 +16,7 @@ Design source committed as edd3d34. Six-page PDF passed visual review and indivi
 ## 2026-09-06
 
 Clarify immutable verifier answers and repeated evaluations; no mandatory revision/supersession machinery (26453c0).
+
+## 2026-09-06
+
+Step 4: pinned isolated Qwen/Cosmos single-image runtime gate; both generate, Qwen JSON valid and Cosmos fence rejected; raw outputs and visual audit archived (commit a5e01ee).

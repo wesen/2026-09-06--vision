@@ -9,9 +9,9 @@
 
 ## V1 Runtime gate
 
-- [ ] Pin Cosmos conversion and comparable Qwen checkpoint provenance.
-- [ ] Inspect installed load/template/generate interfaces and run image load smoke.
-- [ ] Record actual frame/token/memory constraints and failed capabilities.
+- [x] Pin Cosmos conversion and comparable Qwen checkpoint provenance.
+- [x] Inspect installed load/template/generate interfaces and run image load smoke.
+- [x] Record actual frame/token/memory constraints and failed capabilities.
 
 ## V2 Evidence adapter
 

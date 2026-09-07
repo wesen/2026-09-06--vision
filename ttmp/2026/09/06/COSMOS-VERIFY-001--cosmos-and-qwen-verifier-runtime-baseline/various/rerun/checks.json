@@ -1,0 +1,14 @@
+{
+  "targeted_regression": "18 passed in 1.19s",
+  "native_features": "reused accepted 792-window cache; no new extraction",
+  "native_heads": "fresh ridge and six TCN heads",
+  "start_print": {
+    "printed": true,
+    "status_code": 200,
+    "rendered_at": "2026-09-07T01:14:19Z"
+  },
+  "verifier_responses": 192,
+  "eight_b_answer_maps_identical": true,
+  "fence_tests": "11 passed in 0.02s",
+  "native_comparison_exact_match": true
+}

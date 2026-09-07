@@ -22,7 +22,7 @@ if args.worker is not None:
   if result.exists():raise ValueError('fresh result required')
   request.write_text(json.dumps(c['request'],indent=2)+'\n');mx.reset_peak_memory()
   print(json.dumps({'event':'start','case':i}),flush=True)
-  bundle=run(pin['local_path'],request,result,model_bundle=bundle)
+  bundle=run(pin['local_path'],request,result,model_bundle=bundle,allow_markdown_fence=False)
   mx.clear_cache()
   print(json.dumps({'event':'complete','case':i}),flush=True)
 else:

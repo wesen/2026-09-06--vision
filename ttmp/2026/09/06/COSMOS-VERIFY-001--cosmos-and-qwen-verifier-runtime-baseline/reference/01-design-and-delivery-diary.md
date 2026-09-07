@@ -404,3 +404,125 @@ The updated local login resolved model access. Downloaded the pinned official Co
 - Selected quantization: affine, eight bits, group size 64, `trust_remote_code=False`.
 
 Phase-completion slip confirmed `printed: true`, HTTP 200 at `2026-09-07T01:07:37Z`; archived in `various/8b-done-print-receipt.json`. Ticket doctor passed.
+
+## Step 7: Rerun reviewed verifier evaluation and native temporal heads
+
+Expanded the single-frame verifier smoke to all 48 existing reviewed development/test state frames, comparing both 2B and both 8B models with unchanged questions and generation budgets. In parallel, retrained the native temporal ridge and six TCN heads from the accepted 792-window native FP32 feature cache, preserving the original heads and pooled artifacts. These are separate component evaluations; there is no new claim that native embeddings feed the reasoning models or that an integrated detector-to-rule system has been validated.
+
+### Prompt Context
+**User prompt (verbatim):** "ok, can we rerun the tests now that we have bigger models and also native embeddings?"
+
+**Assistant interpretation:** Execute meaningful upgraded-model evaluations, preserving populations and reporting representation and reasoning effects separately.
+
+**Inferred user intent:** Determine whether the newly available models improve actual task outcomes beyond runtime smoke success.
+
+**Commit (code):** `f075df7` — "Freeze reviewed verifier evaluation and reuse resident models across bounded requests".
+
+### What I did
+- Froze all 24 development and 24 test reviewed RGB frames in `various/rerun/protocol.json`, including input/label hashes and original reviewer provenance.
+- Added a resident-model evaluation runner: one heavy model process at a time, fresh generation per request, a 60-second active request deadline enforced by the supervising process, and 120 seconds for startup.
+- Preserved raw answers, request/image binding, parser status, runtime and resource measurements for all cases.
+- Created a fresh temporal comparison directory with a link to the unchanged accepted feature cache and trained fresh heads with the existing selection policy.
+- Ran the targeted temporal/native regression selection: 18 passed in 1.19 seconds.
+- Printed the evaluation plan/start successfully at `2026-09-07T01:14:19Z`.
+
+### Why
+- Reusing the model avoids repeatedly loading large weights; each generation has a fresh default cache and the model never receives labels or previous answers.
+- Retaining all existing development/test cases avoids selecting only images where larger models look successful. No prompt changes are selected using these results.
+- Fresh temporal training checks reproducibility without repeating the already accepted costly pixel extraction.
+
+### What worked
+- Native ridge reproduced 24.546% test macro recall; mean native TCN reproduced 24.311%. The selected seed outcomes reproduce the previous comparison.
+- The 18 regression tests cover temporal data, classical models, TCN causality, observation storage, and native cache/time contracts.
+
+### What didn't work
+- No test or runtime failure has occurred at this stage; the verifier sweep is still running. Strict model output failures will be counted separately from process execution failures.
+
+### What I learned
+- This reviewed population is confounded by appliance and split: development is fridge, test is microwave. Test has 15 closed, 2 open, and 7 unknown cases. Development has 22 closed and 2 open cases. Aggregate accuracy requires that context.
+
+### What was tricky to build
+- Existing feature caches and results must remain separate across feature spaces. The fresh temporal directory links only the accepted native features; trained heads and reports are new files.
+- The supervisor records progress independently of model prose and kills the entire worker process group if a request exceeds its deadline. This evaluation runner is not the full V2 production adapter; timeout/restart fixtures remain future acceptance work.
+
+### What warrants a second pair of eyes
+- Reviewed labels were produced previously by an assistant from RGB frames; the dataset is small, repeated within episodes, and not an independent human-labeled benchmark.
+- Strict answer correctness is evaluated against reviewed labels. Full rationale support is not automatically established by a correct enum or a valid citation.
+- Current 256-token direct-answer prompting is frozen for comparability; it does not measure an optimized long-form Cosmos reasoning configuration.
+
+### What should be done in the future
+- Complete the running sweep, inspect the report and visual inputs, record raw counts, and preserve the scope limits.
+- Use a separately frozen evaluation for future development-selected prompt or output-contract changes; do not repeatedly tune against this test set.
+
+### Code review instructions
+- Start with `08-freeze-rerun.py`, the protocol hashes, and `09-rerun-verifiers.py`; inspect `smoke_worker.run`'s optional resident model bundle.
+- Use `10-report-rerun.py` after all four runs finish to verify request bindings and compare the fresh temporal results with the original accepted comparison.
+
+### Technical details
+- Native head rerun: `PYTHONPATH=workbench/src workbench/perception-env/.venv/bin/python -m video_workbench.temporal.native_compare output/temporal-v1/dataset output/temporal-native-fp32-rerun-v1 output/temporal-v1`.
+- Regression command: `PYTHONPATH=workbench/src workbench/perception-env/.venv/bin/python -m pytest workbench/tests/test_temporal_data.py workbench/tests/test_temporal_classical.py workbench/tests/test_temporal_tcn.py workbench/tests/test_temporal_store.py workbench/tests/test_native_video.py -q`.
+- Native extraction timing in the rerun report is inherited provenance from the original extraction, not a fresh extraction measurement.
+
+## Step 8: Normalize Markdown wrappers without changing answer contents
+
+The user asked about JSON errors during the sweep, then requested inspection of the local sanitize project and handling backticks. Inspection showed a dedicated `markdown_fence_wrapper` rule. Implemented that narrow wrapper normalization in Python: preserve raw responses, trace the transformation, then apply the existing strict JSON and semantic checks. The broader sanitizer repairs are not enabled.
+
+### Prompt Context
+**User prompt (verbatim):** "ok, look at ~/code/wesen/go-go-golems/sanitize and maybe the tackle the backticks too."
+
+**Assistant interpretation:** Use the existing sanitizer approach to remove the observed Markdown fence friction.
+
+**Inferred user intent:** Make the output contract practical without confusing formatting failures with visual understanding.
+
+**Commit (code):** `e7b34b0` — "Accept traced outer JSON fences while preserving verifier validation".
+
+### What I did
+- Read sanitize README, JSON heuristic/rule registration, and `pkg/json/fix.go:78` at revision `c142cca399ff596da307d287fceda8de4155a3dd`.
+- Added `verifiers/normalization.py` and `allow_markdown_fence` control to the answer parser, retaining untouched raw output and a normalization trace.
+- Added 11 output-boundary cases and ran them at feature completion: all passed in 0.02 seconds.
+- Added separate normalized replay reporting over saved responses; original strict observations remain preserved.
+
+### Why
+- All 48 Cosmos 2B responses had syntactically valid JSON inside a Markdown fence. Treating these as unusable obscures the semantic comparison.
+- A narrow wrapper transform has different consequences from changing values, removing duplicate keys, or correcting identity fields.
+
+### What worked
+- Bare and json-tagged fences, surrounding whitespace, and CRLF wrappers normalize while preserving literal backticks inside JSON string values.
+- Tests confirm rejection of prose, multiple blocks, truncated JSON, duplicate keys, nonfinite values, wrong IDs, invented citations, and other language fences.
+
+### What didn't work
+- Searching a guessed sanitize `AGENTS.md` returned `No such file or directory`; repository README and source files were available.
+- Three Qwen 2B responses copied the request ID incorrectly. One dropped its final character. This wrapper change intentionally does not repair those identity fields.
+
+### What I learned
+- The observed syntax failures and binding failures require separate reporting. A formatting repair may recover an incorrect answer as well as a correct one.
+
+### What was tricky to build
+- The model sweep was active. Waited until the last model process had imported the original parser and completed requests before changing the parser source, so every baseline result used the original behavior. Future reruns explicitly disable wrapper normalization for the strict condition.
+- Normalized replay operates on saved raw responses and produces separate summary/raw files. It does not rerun generation or overwrite the strict records.
+
+### What warrants a second pair of eyes
+- Request-ID echoing is still brittle. A future host-owned envelope can remove that obligation, but should preserve evidence binding and be measured as another explicit contract change.
+- Post-observation normalization results must be labeled as such, not presented as untouched test evaluation.
+
+### What should be done in the future
+- Finish the sweep and normalized replay, report both score sets, and preserve practical V2/V4 acceptance limits.
+
+### Code review instructions
+- Compare `normalization.unwrap_json_fence` with sanitize's fence-wrapper rule, then inspect `contracts.parse_answer` and `tests/test_verifier_output.py`.
+- Run `PYTHONPATH=workbench/src workbench/.venv/bin/python -m pytest workbench/tests/test_verifier_output.py -q`.
+
+### Technical details
+- Sanitizer source: `/Users/manuel/code/wesen/go-go-golems/sanitize/pkg/json/fix.go:78` and `heuristics.go:10`.
+- No files in sanitize were modified; no Go executable or new runtime dependency was introduced.
+- `parse_answer(..., allow_markdown_fence=False)` retains original strict wrapper behavior.
+
+### Completed sweep and separate normalized replay
+
+All four model processes completed all 48 requests: 192 retained responses, no process timeout or execution failure. The fresh native ridge/TCN comparison structures exactly matched the accepted earlier comparison. Strict and normalized report scripts completed; viewed the outcome chart and both 24-frame contact sheets.
+
+Strict test scores: Qwen 2B 13/24, Qwen 8B 16/24, both Cosmos sizes 0/24 because every Cosmos response was fenced. Separate normalization recovered all 96 Cosmos fences. Cosmos 2B then scored 7/24 test and 2/24 development, retaining three binding failures across splits. Both 8B models scored 24/24 development and 16/24 test with identical answer enums. They got 16/17 visible test labels right but incorrectly called all seven unknown cases closed. Their test score exceeds the always-closed baseline by only one answer; no robust uncertainty handling or 8B Cosmos advantage is established.
+
+During normalized reporting, the first diagnostic categorizer mislabeled remaining binding failures as fence errors merely because raw text still contained a fence. Corrected categorization to use the post-normalization parser reason when a transformation has already occurred; scores were unchanged. Updated the normalized chart title to distinguish it from the strict plot. Original raw responses and scores remain unchanged.
+
+The original Step 7 no-failure note referred to process/tests during execution, not output correctness. The sweep is now complete, while broader V2/V4 scope remains open. No prompts were tuned and no embedding extraction was repeated. The 18 regression tests and 11 new output-boundary tests passed at their respective feature completion points.

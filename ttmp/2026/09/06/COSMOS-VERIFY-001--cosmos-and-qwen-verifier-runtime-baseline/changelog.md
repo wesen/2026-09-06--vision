@@ -24,3 +24,7 @@ Step 4: pinned isolated Qwen/Cosmos single-image runtime gate; both generate, Qw
 ## 2026-09-06
 
 Step 6: completed pinned Cosmos 8B local conversion in 8.63s and matched Qwen/Cosmos image gate; both generate, Cosmos strict JSON still fails; visual audit archived (537ad1e).
+
+## 2026-09-06
+
+Steps 7–8: 192 reviewed verifier responses; native head rerun reproduced; sanitize-inspired fence normalization tested and separately scored. Both 8B models 16/24 test, fail all seven unknown cases; strict and normalized visual evidence retained (f075df7, e7b34b0).

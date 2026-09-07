@@ -40,3 +40,13 @@
 - [x] Publish matched runtime report and visual audit; retain strict Cosmos JSON failure.
 
 This completes the 8B runtime smoke only. V2–V4 acceptance remains open; no full comparison accuracy is claimed.
+
+## Reviewed rerun and practical JSON fences
+
+- [x] Freeze all 48 existing reviewed development/test point-state cases and run four pinned 2B/8B candidates (192 responses).
+- [x] Retrain native temporal heads from the accepted 792-window feature cache and check reproducibility; targeted 18-test regression selection passed.
+- [x] Inspect sanitize and implement traced outer-fence normalization with 11 output-boundary smoke cases.
+- [x] Reparse saved responses separately; report strict versus normalized results and preserve visual evidence.
+- [ ] Later: evaluate visibility-aware abstention and a host-owned request envelope on a separately planned development/evaluation protocol.
+
+These point-state comparisons do not complete multi-image/native-video, temporal-insufficiency, full rationale-support, or end-to-end rule evaluation acceptance.

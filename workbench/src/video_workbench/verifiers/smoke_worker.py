@@ -10,7 +10,7 @@ from video_workbench.registry import file_hash
 from .contracts import validate_request,parse_answer
 
 
-def run(model_path,request_path,output,model_bundle=None):
+def run(model_path,request_path,output,model_bundle=None,*,allow_markdown_fence=True):
     request=json.loads(Path(request_path).read_text());validate_request(request)
     for frame in request['frames']:
         if file_hash(frame['path'])!=frame['sha256']:raise ValueError('approved image bytes changed')
@@ -30,7 +30,7 @@ def run(model_path,request_path,output,model_bundle=None):
     finished=time.perf_counter();raw=result.text
     report={'status':'generated','mode':'single_image','request_id':request['request_id'],'model_path':model_path,
             'model_reused':model_bundle is not None,'model_config_sha256':file_hash(Path(model_path)/'config.json'),'prompt':prompt,'formatted_prompt':formatted,
-            'raw':raw,'parsed':parse_answer(request,raw),'load_seconds':loaded-started,'generation_seconds':finished-loaded,
+            'raw':raw,'parsed':parse_answer(request,raw,allow_markdown_fence=allow_markdown_fence),'load_seconds':loaded-started,'generation_seconds':finished-loaded,
             'peak_mlx_memory_bytes':mx.get_peak_memory(),
             'generation':asdict(result) if is_dataclass(result) else str(result),
             'versions':{n:importlib.metadata.version(n) for n in ('mlx','mlx-vlm','transformers','huggingface-hub')},

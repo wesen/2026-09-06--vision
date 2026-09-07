@@ -30,8 +30,8 @@ class Experiment(Selection):
     reasoning: bool=False
     max_tokens: int=Field(default=512,ge=64,le=4096)
     deadline_seconds: int=Field(default=120,ge=1,le=600)
-    window_seconds: float=Field(default=2,gt=0,le=30)
-    stride_seconds: float=Field(default=1,gt=0,le=30)
+    window_seconds: float=Field(default=2,ge=.1,le=30)
+    stride_seconds: float=Field(default=1,ge=.1,le=30)
     query: str=Field(default='A person opens a refrigerator',min_length=1,max_length=500)
     max_gap_seconds: float=Field(default=2,gt=0,le=30)
 
@@ -41,5 +41,6 @@ class Experiment(Selection):
                 'reasoning':{'qwen','cosmos'},'states':{'qwen','cosmos'},'embeddings':{'pooled_images','native_video'}}
         if self.model not in models[self.component]: raise ValueError('unsupported component/model combination')
         if any(c<0 or c>79 for c in self.classes): raise ValueError('class IDs must be in 0..79')
+        if self.component=='embeddings' and (self.end_us-self.start_us)/(self.stride_seconds*1e6)>128: raise ValueError('selection exceeds 128 window budget')
         if self.component=='embeddings' and not self.query.strip(): raise ValueError('query must not be blank')
         return self

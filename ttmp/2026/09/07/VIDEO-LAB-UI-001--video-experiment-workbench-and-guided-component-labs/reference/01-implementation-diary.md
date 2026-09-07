@@ -216,3 +216,61 @@ Start with lab/resources.py: Resources.path, rewrite, render and attach; inspect
 ### Technical details
 
 Workspace commit eab4b83. Current server has listeners on 127.0.0.1 and 100.113.140.75, port 8780. The Project browser is a separate page; experiment selection remains in its original tab. No new package installation was necessary.
+
+## Step 4: Enable real perception and bounded reasoning experiments
+
+Connected the browser to a one-worker experiment supervisor. Real YOLO segmentation and Qwen inference completed from the UI, preserving exact input images and configuration; Cosmos is being checked on the same image. Same-origin replay routes now work for tailnet clients as well.
+
+### Prompt Context
+
+**User prompt (verbatim):** (see Step 1)
+
+**Assistant interpretation:** Continue the approved component workbench after incorporating the resource-browser request.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+### What I did
+
+- Added manager.py and worker.py for fixed-environment execution, total deadlines, cancellation and saved status.
+- Enabled Run experiment, live progress, run history, structured input/result inspection and mask/box overlays.
+- Connected accepted verifier profiles and parsing directly in the supervised worker.
+- Added cancellation and state-transition boundary tests.
+
+### Why
+
+Model controls are useful only when they execute real adapters and retain enough evidence to diagnose wrong answers.
+
+### What worked
+
+- YOLO11n-seg run-8fda97b444ed459c completed in 4.64 s on two frames; overlays show the target missing at 9.5 s and detected at 10.0 s.
+- Qwen run-86eba27c442048b7 completed in 7.83 s, returning a schema-valid CLOSED answer on the selected fridge frame.
+- Five focused tests passed, including terminating and reaping a real subprocess on cancellation.
+- Saved segmentation and Qwen result screenshots.
+
+### What didn't work
+
+PyAV/OpenCV again emitted duplicate AVFFrameReceiver/AVFAudioReceiver Objective-C class warnings; the YOLO run completed. Qwen's structurally valid answer is not a visual accuracy acceptance result.
+
+### What I learned
+
+The new UI exposes the difference between model output validity and factual visual correctness without needing the replay scheduler.
+
+### What was tricky to build
+
+Worker cancellation must terminate the entire process group while leaving a durable terminal status. The model runtime cannot run in the HTTP thread. Current form edits must not change saved result labels; renderResult uses the immutable request.
+
+### What warrants a second pair of eyes
+
+Review timestamp/crop provenance on saved runs and the distinction between a completed process and a valid/correct model answer.
+
+### What should be done in the future
+
+Finish both-model smoke and enable comparisons, reviews, embedding plots and explicit state/rule experiments.
+
+### Code review instructions
+
+Read lab/manager.py admission/supervision, worker.py perception/reasoning adapters and viewer.html renderResult. Run the five test_lab.py checks; inspect the saved run artifacts and screenshots.
+
+### Technical details
+
+Fixed runtimes retain venv executable paths without resolving symlinks. Admission allows one expensive worker; selections max 64 images and embeddings max 128 windows. The worker has no client-provided executable or checkpoint path.

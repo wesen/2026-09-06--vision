@@ -41,3 +41,33 @@ def test_project_reader_and_resource_boundaries():
         assert client.get('/resources/not-indexed/raw').status_code==404
         assert client.get(source['raw_url']).headers['content-type'].startswith('text/plain')
         assert all('http' in e['url'] for e in entries['external'])
+
+def test_transition_unknown_and_interval_policy():
+    from video_workbench.lab.worker import transitions
+    def sample(t,state):return dict(pts_us=t,state=state,frame={'id':str(t)})
+    assert transitions([sample(0,'closed'),sample(1,'unknown'),sample(2,'open')],3)==[]
+    assert transitions([sample(0,'closed'),sample(4,'open')],3)==[]
+    assert transitions([sample(0,'closed'),sample(2,'open')],3)==[dict(kind='OPEN',start_us=0,end_us=2,interval='(start, end]',evidence_ids=['0','2'])]
+
+
+def test_manager_cancels_real_process_group(tmp_path,monkeypatch):
+    import subprocess,sys,time
+    from video_workbench.lab import manager as module
+    from types import SimpleNamespace
+    root=tmp_path; (root/'checkpoint').write_text('model')
+    monkeypatch.setattr(module,'prepare',lambda *args: {'frames':[]})
+    monkeypatch.setitem(module.MODELS,'yolo11n',('perception',sys.executable,'checkpoint'))
+    original=subprocess.Popen
+    processes=[]
+    def launch(command,**kwargs):
+        p=original([sys.executable,'-c','import time; time.sleep(30)'],**kwargs);processes.append(p);return p
+    monkeypatch.setattr(module.subprocess,'Popen',launch)
+    m=module.Manager(SimpleNamespace(root=root),root)
+    r=m.start(Experiment(episode_id='x'))
+    end=time.monotonic()+3
+    while not processes and time.monotonic()<end:time.sleep(.01)
+    with pytest.raises(RuntimeError):m.start(Experiment(episode_id='x'))
+    m.shutdown()
+    import json
+    assert json.loads((root/r['run_id']/'status.json').read_text())['status']=='cancelled'
+    assert processes[0].poll() is not None

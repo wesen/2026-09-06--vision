@@ -63,4 +63,4 @@ async function loadResources(component){
 $('source').onchange=sourceChanged;$('component').onchange=componentChanged;$('model').onchange=modelChanged;$('preview').onclick=previewInputs;$('setStart').onclick=()=>$('start').value=$('video').currentTime.toFixed(3);$('setEnd').onclick=()=>$('end').value=$('video').currentTime.toFixed(3);
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));['results','guide','history'].forEach(id=>$(id).classList.toggle('hidden',id!==b.dataset.tab))});
 (async()=>{try{catalog=await api('/v1/lab/catalog');$('source').replaceChildren(...catalog.sources.map(s=>new Option(`${s.dataset} / ${s.split} / ${s.episode_id}`,s.episode_id)));const preferred=catalog.sources.find(s=>s.episode_id==='home-v1--ep-7d3106fb1cac9776');if(preferred)$('source').value=preferred.episode_id;componentChanged();await sourceChanged()}catch(e){fail(e)}})();
-</script><script src="/lab/analysis.js"></script></body></html>
+</script><script src="/lab/comparison.js"></script><script src="/lab/analysis.js"></script></body></html>

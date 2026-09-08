@@ -163,6 +163,8 @@ def create_app(root=ROOT):
     app.router.routes.extend(r for r in replay.router.routes if r.path.startswith('/v1/'))
     @app.get('/replay/',response_class=HTMLResponse)
     def replay_home():return (Path(__file__).parents[1]/'replay/viewer.html').read_text()
+    @app.get('/lab/comparison.js')
+    def comparison_script():return FileResponse(Path(__file__).parent/'comparison.js',media_type='text/javascript')
     @app.get('/lab/analysis.js')
     def analysis_script():return FileResponse(Path(__file__).parent/'analysis.js',media_type='text/javascript')
     @app.get('/favicon.ico',status_code=204)

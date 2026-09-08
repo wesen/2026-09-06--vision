@@ -12,13 +12,14 @@ def write(path,value):
 
 class Manager:
     def __init__(self,catalog,output):
-        self.catalog=catalog;self.output=Path(output);self.lock=Lock();self.thread=None;self.active=None;self.cancel=Event()
+        self.catalog=catalog;self.output=Path(output);self.lock=Lock();self.thread=None;self.active=None;self.cancel=Event();self.owner=None
         for p in self.output.glob('run-*/status.json'):
             s=json.loads(p.read_text())
             if s['status'] in ('preparing','running'): write(p,dict(s,status='interrupted'))
 
-    def start(self,request):
+    def start(self,request,*,owner=None,expected_evidence=None):
         with self.lock:
+            if self.owner is not None and owner!=self.owner:raise RuntimeError('worker reserved by an active batch')
             if self.thread and self.thread.is_alive(): raise RuntimeError('one experiment is already running; cancel it or wait')
             provenance=validate(self.output,request)
             run_id='run-'+uuid.uuid4().hex[:16];dest=self.output/run_id;dest.mkdir()
@@ -26,6 +27,9 @@ class Manager:
             # is serialized with admission, so concurrent requests cannot overwrite.
             try:
                 evidence=prepare(self.catalog,request,dest)
+                if expected_evidence is not None:
+                    from .batches import evidence_identity
+                    if evidence_identity(evidence)!=evidence_identity(expected_evidence):raise ValueError('batch evidence changed since preview')
                 if provenance and evidence['source'] != provenance['source']:
                     raise ValueError('handoff source identity changed')
             except Exception:

@@ -8,6 +8,7 @@ from fastapi.responses import HTMLResponse, FileResponse
 from .catalog import Catalog, ROOT
 from .contracts import Selection, Experiment, Handoff
 from .manager import Manager,write
+from .batches import Batches,BatchPlan
 from .configurations import Configurations,SaveConfiguration
 from contextlib import asynccontextmanager
 from .evidence import prepare
@@ -19,9 +20,11 @@ def create_app(root=ROOT):
     root=Path(root); catalog=Catalog(root); output=root/'output/video-lab'; output.mkdir(exist_ok=True,parents=True)
     manager=Manager(catalog,output)
     configurations=Configurations(catalog,output)
+    batches=Batches(manager)
     @asynccontextmanager
     async def lifespan(app):
         yield
+        batches.shutdown()
         manager.shutdown()
         replay.state.manager.shutdown()
     app=FastAPI(title='Video Laboratory',version='0.2',lifespan=lifespan)
@@ -41,6 +44,30 @@ def create_app(root=ROOT):
         try: s=catalog.get(eid)
         except ValueError as e: raise HTTPException(409,str(e))
         return FileResponse(s['video'],media_type='video/mp4')
+    @app.post('/v1/lab/batches/preview')
+    def batch_preview(request:BatchPlan):
+        try:return batches.preview(request)
+        except ValueError as e:raise HTTPException(422,str(e))
+
+    @app.get('/v1/lab/batches')
+    def batch_list():return dict(batches=batches.list())
+
+    @app.get('/v1/lab/batches/{identifier}')
+    def batch_get(identifier:str):
+        try:return batches.get(identifier)
+        except ValueError as e:raise HTTPException(404,str(e))
+
+    @app.post('/v1/lab/batches/{identifier}/start',status_code=202)
+    def batch_start(identifier:str):
+        try:return batches.start(identifier)
+        except RuntimeError as e:raise HTTPException(409,str(e))
+        except ValueError as e:raise HTTPException(422,str(e))
+
+    @app.post('/v1/lab/batches/{identifier}/cancel')
+    def batch_cancel(identifier:str):
+        try:return batches.cancel(identifier)
+        except ValueError as e:raise HTTPException(409,str(e))
+
     @app.get('/v1/lab/configurations')
     def saved_configurations():return dict(configurations=configurations.list())
 
@@ -163,6 +190,8 @@ def create_app(root=ROOT):
     app.router.routes.extend(r for r in replay.router.routes if r.path.startswith('/v1/'))
     @app.get('/replay/',response_class=HTMLResponse)
     def replay_home():return (Path(__file__).parents[1]/'replay/viewer.html').read_text()
+    @app.get('/lab/batches.js')
+    def batches_script():return FileResponse(Path(__file__).parent/'batches.js',media_type='text/javascript')
     @app.get('/lab/comparison.js')
     def comparison_script():return FileResponse(Path(__file__).parent/'comparison.js',media_type='text/javascript')
     @app.get('/lab/analysis.js')

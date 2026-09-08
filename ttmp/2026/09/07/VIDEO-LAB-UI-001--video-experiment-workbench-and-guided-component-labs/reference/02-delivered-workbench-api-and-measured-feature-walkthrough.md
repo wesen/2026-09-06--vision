@@ -262,3 +262,27 @@ API references:
 Eleven lab tests passed. The focused storage test checks prompt freezing, new identities for repeated saves, changed-source rejection, identifier validation, and blank-name rejection. Browser smoke saved `config-bdf08f25ff734afd` from the edited Qwen crop run, reloaded the page, and restored every saved option. The exact preview was one frame at 10 seconds with crop `(167,94,352,383)`. The run count stayed unchanged throughout save/load. Comparing serialized JavaScript objects initially reported a mismatch due to key order; the per-field comparison found no differing values.
 
 ![Saved configuration restored after refresh](../various/p14-saved-configuration.png)
+
+## Exact-time run comparison
+
+The comparison page now adds an evidence inspector between the embedding overlay and the collapsed collection of all outputs. Runs referencing identical video bytes share one source video player. This avoids drift between two browser players while keeping each run's actual image, crop and output separate. Runs with different source hashes retain the ordinary side-by-side outputs and receive an explanation that a shared source clock would be misleading.
+
+The timestamp selector contains the sorted union of both runs' saved frame timestamps. Previous/next buttons and an aligned overview table navigate those samples. At each time, each column searches for an exact saved frame. If there is none, it displays **No sampled input at this exact timestamp** rather than substituting a neighboring answer. Available columns show image dimensions, crop coordinates, state/validation or detector outputs, actual user prompt, raw response and highlighted runtime/frame YAML. Action and embedding windows containing the selected time are listed as intervals, not relabeled as point observations.
+
+```python
+times = sorted(set(frame.pts_us for run in [A, B] for frame in run.frames))
+for run in [A, B]:
+    frame = exact_match(run.frames, selected_time)
+    display(frame) if frame else display_missing_sample()
+    display_windows(w for w in run.windows if w.start <= selected_time < w.end)
+```
+
+The shared player is source context. Playing it does not interpolate predictions or automatically change the exact evidence cards; selecting a sampled timestamp updates those cards and seeks the player. This distinction is stated above the player. The URL stores the selected value as `compare_time_us`; refresh restores it if it belongs to the compared sample union. An unavailable linked timestamp produces a visible explanation and falls back to the first sampled timestamp. Changing run/filter selections clears the saved comparison time.
+
+Implementation is isolated in `workbench/src/video_workbench/lab/comparison.js::comparisonInspector`, served by `lab/app.py` and called by the existing comparison handler in `lab/analysis.js`. The existing embedding overlay and evidence-identity checks remain in place. This adds an exact-sample comparison view; synchronized continuous output timelines and experiment batches remain follow-up work.
+
+Browser smoke compared `run-fc7db205cb284dcd` (full-frame states at 9 and 10 seconds) with `run-805e04781b4846b7` (cropped Qwen reasoning at 10 seconds). At 9 seconds B remained missing. At 10 seconds both saved input images appeared with their respective dimensions and prompts. URL reload restored `compare_time_us=10000000` and sought source playback to 10 seconds. A different-source tracking run produced no shared player. No new inference was run for this UI feature, and the tested viewport had no horizontal overflow.
+
+![Missing exact sample remains missing](../various/p16-missing-sample-comparison.png)
+
+![Matched timestamp with different crops and prompts](../various/p16-aligned-crop-and-prompts.png)

@@ -14,6 +14,8 @@ RelatedFiles:
       Note: Tailscale and loopback listeners
     - Path: repo://workbench/src/video_workbench/lab/browser.html
       Note: Separate searchable project browser
+    - Path: repo://workbench/src/video_workbench/lab/comparison.js
+      Note: Exact timestamp alignment and prompt comparison
     - Path: repo://workbench/src/video_workbench/lab/configurations.py
       Note: Named draft persistence and source identity checks
     - Path: repo://workbench/src/video_workbench/lab/handoff.py
@@ -28,6 +30,7 @@ LastUpdated: 2026-09-07T10:05:37.359166-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -924,3 +927,59 @@ Read the new vault report and inspect its eight local image embeds. Source code 
 ### Technical details
 
 Vault /Users/manuel/code/wesen/go-go-golems/go-go-parc; note Projects/2026/09/07/PROJ - Video Laboratory - Reproducible Experiments from Pixels to Model Evidence.md; assets Projects/2026/09/07/_assets/video-lab-*.png. Vault commit 1d77e78; push confirmed origin/main advanced from 29e8dec to 1d77e78.
+
+## Step 16: Align saved runs by exact time and expose prompt comparisons
+
+Continued the run-comparison UI after the vault report. The new inspector combines shared source playback with exact-time saved evidence columns, prompt/output inspection and explicit missing samples.
+
+The implementation uses existing completed runs for validation. No inference was needed to establish the comparison behavior, and screenshots preserve both the missing-sample case and the full-frame-versus-crop view.
+
+### Prompt Context
+
+**User prompt (verbatim):** Ok continue with the runs now
+
+**Assistant interpretation:** Continue improving run comparisons, the next UI work identified before the report.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+**Commit (code):** de2485b
+
+### What I did
+
+Asked whether runs meant UI comparisons or a new inference batch; after allowing a reply window, stated the UI assumption and implemented task tu3h. Added comparison.js, a shared source player, exact timestamp union, per-side evidence/prompts, interval summaries and URL restoration. Captured two screenshots.
+
+### Why
+
+Comparing saved cards by position can hide different sampling times. Exact alignment makes missing evidence explicit and lets users inspect prompt and crop differences at the same source time.
+
+### What worked
+
+Browser checks: B missing at 9 seconds; two images at 10 seconds; no horizontal overflow; selected time restored on URL reload and player sought to 10 seconds. A different-source pair had no shared player. Existing embedding and option comparison remain available.
+
+### What didn't work
+
+No implementation failures were observed in the browser smoke. No clarification answer arrived before proceeding with the stated comparison-UI assumption. Remote printing remains pending the earlier approval-review block, with no retry.
+
+### What I learned
+
+One source player is sufficient for same-byte recordings, while the authoritative evidence cards must remain independently bound to each run. Playback time and selected evidence timestamp are different controls.
+
+### What was tricky to build
+
+Avoiding inferred point values from nearby samples or containing windows. Frame lookup uses equality; windows use half-open containment and are labeled intervals. URL restoration validates against the union of actual sample timestamps.
+
+### What warrants a second pair of eyes
+
+Continuous playback deliberately does not update evidence cards. The guide explains this, but user feedback should determine whether a future explicit follow-playback mode would help.
+
+### What should be done in the future
+
+Extend comparison timelines and add small controlled sequential experiment batches after feedback. Do not treat this feature as a new model-quality evaluation.
+
+### Code review instructions
+
+Read comparisonInspector in lab/comparison.js and its call from analysis.js. Open the documented pair at 9 and 10 seconds, refresh the shared URL, and compare runs from different sources. Inspect p16 screenshots.
+
+### Technical details
+
+Source commit de2485b. Query parameter compare_time_us=10000000. Run A run-fc7db205cb284dcd; run B run-805e04781b4846b7. Only UI/source-route changes were made; no model artifacts were modified.

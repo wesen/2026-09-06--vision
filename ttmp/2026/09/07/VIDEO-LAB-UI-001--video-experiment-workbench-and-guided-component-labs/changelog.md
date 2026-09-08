@@ -39,3 +39,7 @@ Step 14: named saved configurations freeze prompts and validate source identity;
 ## 2026-09-07
 
 Published the approximately 4600-word lab technical report with eight screenshots to go-go-parc; vault commit 1d77e78 pushed to origin/main.
+
+## 2026-09-07
+
+Step 16: exact-time comparison inspector, shared source playback, prompt/output columns and URL-restored time; browser smoke and screenshots (de2485b).

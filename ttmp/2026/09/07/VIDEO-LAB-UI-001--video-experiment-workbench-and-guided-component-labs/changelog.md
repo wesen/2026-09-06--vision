@@ -43,3 +43,7 @@ Published the approximately 4600-word lab technical report with eight screenshot
 ## 2026-09-07
 
 Step 16: exact-time comparison inspector, shared source playback, prompt/output columns and URL-restored time; browser smoke and screenshots (de2485b).
+
+## 2026-09-07
+
+Step 17: bounded sequential model/prompt/crop batches with frozen evidence, cancellation and summaries; 15 tests and real Qwen/Cosmos batch passed (0bd2fa7).

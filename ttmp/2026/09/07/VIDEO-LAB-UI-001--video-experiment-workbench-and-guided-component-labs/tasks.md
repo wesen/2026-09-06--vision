@@ -9,3 +9,4 @@
 - [x] P7 Connect detector-selected crops to explicit reasoning drafts with validated source/detection provenance, preview, browser smoke and screenshots <!-- t:oxek -->
 - [x] P8 Save and reload named experiment configurations with prompt snapshots, source identity checks, guidance and browser evidence <!-- t:snp5 -->
 - [x] P9 Align run comparison by exact timestamp with shared source playback, prompt/output inspection, URL state and screenshot evidence <!-- t:tu3h -->
+- [x] P10 Bounded sequential experiment batches: preview variants, reserve worker, cancel safely, summarize outcomes and smoke-test matched runs <!-- t:o2nf -->

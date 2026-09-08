@@ -12,6 +12,8 @@ Owners: []
 RelatedFiles:
     - Path: repo://workbench/src/video_workbench/lab/__main__.py
       Note: Tailscale and loopback listeners
+    - Path: repo://workbench/src/video_workbench/lab/batches.py
+      Note: Batch plan validation, worker reservation, sequential execution and cancellation
     - Path: repo://workbench/src/video_workbench/lab/browser.html
       Note: Separate searchable project browser
     - Path: repo://workbench/src/video_workbench/lab/comparison.js
@@ -30,6 +32,7 @@ LastUpdated: 2026-09-07T10:05:37.359166-04:00
 WhatFor: ""
 WhenToUse: ""
 ---
+
 
 
 
@@ -983,3 +986,59 @@ Read comparisonInspector in lab/comparison.js and its call from analysis.js. Ope
 ### Technical details
 
 Source commit de2485b. Query parameter compare_time_us=10000000. Run A run-fc7db205cb284dcd; run B run-805e04781b4846b7. Only UI/source-route changes were made; no model artifacts were modified.
+
+## Step 17: Implement bounded sequential comparison batches
+
+Added the requested controlled-batch workflow: explicit preview, frozen inputs/prompts, sequential child runs, worker reservation, cancellation and a persistent result summary. Each child remains an ordinary inspectable run, preserving the existing comparison and review paths.
+
+A real Qwen/Cosmos batch completed on identical cropped evidence and user-prompt text. Tests separately exercised failure continuation and cancellation with real subprocesses, so the successful smoke was not the only lifecycle evidence.
+
+### Prompt Context
+
+**User prompt (verbatim):** do 1.
+
+**Assistant interpretation:** Implement the previously suggested controlled experiment batches for model, prompt and crop comparisons.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+**Commit (code):** 0bd2fa7
+
+### What I did
+
+Added task o2nf; implemented BatchPlan and Batches orchestration, manager reservation and evidence verification, five batch APIs, Cartesian plan controls, preview/status/history/export UI and run comparison links. Added four orchestration tests and captured preview/result screenshots.
+
+### Why
+
+Users can run small controlled comparisons without manually re-entering settings or losing failures between runs. Reserving the existing worker avoids interleaving independent runs between batch children.
+
+### What worked
+
+`PYTHONPATH=workbench/src workbench/.venv/bin/pytest -q workbench/tests/test_lab.py workbench/tests/test_lab_batches.py`: 15 passed. Real batch batch-1e7aad92527f4c7a completed both children sequentially, with matched pixel identities and user text. Qwen 13.163 s; Cosmos 12.991 s; both closed/ok. Browser summary had no horizontal overflow.
+
+### What didn't work
+
+No test or live-batch failures occurred during this feature implementation. Existing Starlette/httpx and AnyIO deprecation warnings remained. Remote work-slip printing is still pending the earlier approval-review rejection; no retry was made.
+
+### What I learned
+
+Batch ownership must cover preparation and the gaps between children, not merely observe whether a process is currently alive. Preview evidence also needs a normalized tuple/list comparison after JSON persistence.
+
+### What was tricky to build
+
+Cancellation can arrive while child evidence is being prepared. The stop flag is independent of the manager cancel event, then applied once the worker exists; the orchestration loop waits for termination before skipping remaining children and releasing ownership. Tests verify cancellation kills the actual process and starts no second child.
+
+### What warrants a second pair of eyes
+
+The preview freezes pixels/prompts but does not pin checkpoint bytes until execution. Model-specific system messages can differ even with identical user prompts. Child execution status and answer-validation status remain separate, so summaries must not imply accuracy.
+
+### What should be done in the future
+
+Gather feedback on plan expansion and summaries, then run deliberately varied reviewed cases. Large multi-recording matrices and automatic statistical accuracy reports require explicit reviewed labels and are outside this bounded first batch workflow.
+
+### Code review instructions
+
+Read BatchPlan.matched, Batches.preview/start/cancel and the Manager.start owner/evidence checks. Review test_lab_batches.py for failure/cancel traces; inspect p17 screenshots and batch child runs. Use the browser batch selector to reopen the measured batch.
+
+### Technical details
+
+Storage output/video-lab/batches/batch-1e7aad92527f4c7a. Children run-829477413f094ab6 and run-77a981b3ae25461d. Maximum 8 children, 128 aggregate requested samples, per-child deadlines. Frozen preview artifacts use existing preview-* PNG routes. Source implementation commit 0bd2fa7.

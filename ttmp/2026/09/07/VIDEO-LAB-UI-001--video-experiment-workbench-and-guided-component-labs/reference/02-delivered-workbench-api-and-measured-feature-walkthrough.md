@@ -286,3 +286,61 @@ Browser smoke compared `run-fc7db205cb284dcd` (full-frame states at 9 and 10 sec
 ![Missing exact sample remains missing](../various/p16-missing-sample-comparison.png)
 
 ![Matched timestamp with different crops and prompts](../various/p16-aligned-crop-and-prompts.png)
+
+## Controlled sequential experiment batches
+
+The **Controlled experiment batches** section expands the current experiment form into an explicit plan of two to eight child runs. A shortcut below the main run status jumps to the section. Model variants support Qwen/Cosmos for reasoning and states, or pooled/native for embeddings. Crop variants compare the selected crop with the full frame. An optional second complete user prompt adds a prompt axis for reasoning/state runs. The Cartesian product is bounded to eight entries; a plan must contain at least two.
+
+Every child shares source, requested time interval, FPS, component, target and non-variant settings. Only model, prompt, crop and crop handoff may vary. Choosing a full-frame variant explicitly removes the detector-crop binding from that variant. This is an input intervention, and the preview displays every child's image and complete options. A default prompt can differ between model/profile combinations, especially in reasoning-envelope instructions, so the frozen text must be inspected before describing a batch as a model-only comparison. Fixed system messages also remain model-specific.
+
+### Preview and admission
+
+**Preview batch plan** performs no model inference. The backend validates the plan, checks local model/runtime availability, resolves detector bindings, freezes reasoning prompts and decodes each child's selected inputs. It persists a draft manifest containing the exact image hashes, source metadata, timestamps and crop identities. The requested aggregate sample budget is 128, in addition to existing per-run limits.
+
+**Start previewed batch** executes that immutable draft even if the editable form has changed since preview. Each child passes through the ordinary Manager.start path, which prepares its inputs again and compares source, frame timestamps, PNG hashes and crop coordinates against the preview. Changed evidence causes a recorded child failure before model launch. The plan does not pin checkpoint files at preview time; ordinary executed results retain their actual checkpoint/runtime evidence.
+
+```text
+editable form → expand variants → validate + decode → saved draft
+                                                    ↓ explicit Start
+reserve lab worker → child A → child B → … → release reservation
+                     ↓         ↓
+                 normal run  normal run
+                     └──── batch summary ────┘
+```
+
+A reservation on the existing supervisor spans the whole batch, including the gaps between children. Independent run submissions and other batches receive a conflict while that reservation is held. The design retains one worker rather than adding a second scheduler that could race the original manager. This reservation does not coordinate unrelated programs or the separate replay manager on the same Mac.
+
+### Failure, cancellation and restart semantics
+
+Each child keeps its ordinary wall-clock deadline and process-group supervision. A worker failure is recorded and the next child is attempted. A completed batch with any unsuccessful child receives `completed_with_errors`; a valid process completion with an invalid model response remains a completed child whose output validation is shown separately. Summaries are model outputs and runtime evidence, not accuracy scores.
+
+**Cancel active batch** sets a stop flag, cancels the active child's process group through the supervisor, waits for termination, and marks remaining pending children skipped. The reservation is released after the orchestration loop finishes. Service shutdown waits for batch supervision to stop before closing the ordinary manager. Restart marks previously running batches interrupted; it does not automatically resume them. A draft can be started once; repeat execution requires a fresh preview and batch identity.
+
+The displayed worker-deadline sum is an upper bound on the sum of configured child worker budgets, not total elapsed time. Source hashing, decoding, admission and filesystem overhead occur outside those worker budgets. Batch summaries include child statuses, elapsed time, point answers/validation, detection counts, action predictions or the top embedding window as appropriate. Links open each ordinary run and compare later children with the first started child. Saved batches can be reopened from the batch selector after refresh. The export link returns the persisted manifest and current child summary; ordinary child run exports remain separately accessible.
+
+### API and implementation references
+
+| API | Behavior |
+|---|---|
+| `POST /v1/lab/batches/preview` | Accept `{name, entries:[{label,options}]}` and persist a validated draft with decoded evidence. |
+| `POST /v1/lab/batches/{id}/start` | Reserve the supervisor and execute a draft sequentially. |
+| `POST /v1/lab/batches/{id}/cancel` | Cancel the active batch and skip unstarted children. |
+| `GET /v1/lab/batches/{id}` | Return manifest, status and current per-child outcomes. |
+| `GET /v1/lab/batches` | List persisted batches for reopening. |
+
+`lab/batches.py` owns typed plan validation, persistence and orchestration. `lab/manager.py` adds a reservation owner and optional expected-evidence check to ordinary admission. `lab/batches.js` expands the form, displays frozen inputs and polls summaries. `workbench/tests/test_lab_batches.py` exercises process-level failure continuation, cancellation/skipping, reservation exclusion, changed-preview rejection and matched-selection validation.
+
+### Measured batch smoke
+
+Fifteen lab/batch tests passed. The live browser created `batch-1e7aad92527f4c7a` for the existing refrigerator crop at 10 seconds, with identical literal user prompts for Qwen and Cosmos. Both children completed:
+
+| Child | Run | Worker elapsed | State / validation |
+|---|---|---:|---|
+| Qwen 8B 8-bit | `run-829477413f094ab6` | 13.163 s | closed / ok |
+| Cosmos Reason2 8B 8-bit | `run-77a981b3ae25461d` | 12.991 s | closed / ok |
+
+Comparison confirmed identical source pixels and user-prompt text. The second worker's start time followed the first worker's measured completion, confirming serial execution. Model-specific system messages were retained. These two calls validate execution and persistence; they are not evidence that either model improved its door-state accuracy.
+
+![Frozen two-model batch preview](../various/p17-batch-preview.png)
+
+![Completed batch with child outcomes and timings](../various/p17-batch-results.png)

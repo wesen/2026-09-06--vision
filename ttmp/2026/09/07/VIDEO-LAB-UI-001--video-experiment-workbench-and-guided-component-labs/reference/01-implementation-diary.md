@@ -865,3 +865,62 @@ Start with Configurations.save/get in lab/configurations.py, then inspect the th
 ### Technical details
 
 Configuration ID config-bdf08f25ff734afd; source setup copied from run-805e04781b4846b7. Storage output/video-lab/configurations. Range [10000000,10000001) microseconds, actual crop [167,94,352,383]. Code commit c41e899. UI remains served at mimimi:8780.
+
+## Step 15: Publish the Video Laboratory technical report to the vault
+
+Wrote a new, approximately 4,600-word project report explaining the completed lab architecture and its experimental evidence. The article develops timestamp selection, worker supervision, crop provenance, prompt snapshots, comparison mathematics and saved configurations in textbook-style prose with diagrams and concrete examples.
+
+Eight existing implementation screenshots were copied into the dated vault assets directory so the report remains self-contained. Historical notes were preserved.
+
+### Prompt Context
+
+**User prompt (verbatim):**
+
+```text
+First,  write a detailed project report for the obsidian vault as a deep dive technical analysis blog post using a textbook writing style (no analogies, see skill).      
+ Commit and push the bsidian vault when done (go-go-parc vault).
+```
+
+**Assistant interpretation:** Publish a detailed project deep dive in go-go-parc, including figures, then commit and push the vault.
+
+**Inferred user intent:** Make experimental evidence understandable and reproducible.
+
+### What I did
+
+Applied obsidian-vault-writing and textbook-authoring skills; read current implementation, ticket tasks, measured artifacts and related vault report. Created PROJ - Video Laboratory - Reproducible Experiments from Pixels to Model Evidence.md under Projects/2026/09/07 with eight prefixed assets. Vault commit: 1d77e78.
+
+### Why
+
+Preserve a durable technical explanation of the lab, including what its successful experiments establish and which model-quality claims remain unproven.
+
+### What worked
+
+Verified all eight images decode, every relative figure link resolves, all five related vault notes exist, and fenced blocks balance. Reviewed the embedding comparison screenshot. The clean vault fast-forwarded from a1f789f to 29e8dec before the report was committed.
+
+### What didn't work
+
+No report validation failures occurred. The vault remote had advanced, so it was fast-forwarded before adding new files; no merge conflicts or historical-note replacements were needed.
+
+### What I learned
+
+The most useful structure for this report follows evidence identity through execution and interpretation rather than repeating the incremental UI feature chronology.
+
+### What was tricky to build
+
+Keeping scope claims precise: saved configurations freeze text but not model installations, synchronous preparation precedes asynchronous inference, and point-rule files are not part of the current review export. These boundaries are stated explicitly.
+
+### What warrants a second pair of eyes
+
+The report should be read as an implementation snapshot through c41e899, not a new population-level evaluation of model accuracy.
+
+### What should be done in the future
+
+Continue richer comparison work after the requested report delivery; preserve future architectural changes as dated follow-ups.
+
+### Code review instructions
+
+Read the new vault report and inspect its eight local image embeds. Source code was not changed for this reporting step.
+
+### Technical details
+
+Vault /Users/manuel/code/wesen/go-go-golems/go-go-parc; note Projects/2026/09/07/PROJ - Video Laboratory - Reproducible Experiments from Pixels to Model Evidence.md; assets Projects/2026/09/07/_assets/video-lab-*.png. Vault commit 1d77e78; push confirmed origin/main advanced from 29e8dec to 1d77e78.

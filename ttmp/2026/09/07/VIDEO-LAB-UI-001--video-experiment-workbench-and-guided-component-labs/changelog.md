@@ -35,3 +35,7 @@ Step 13: editable pre-run prompts, immutable prompt snapshots and highlighted YA
 ## 2026-09-07
 
 Step 14: named saved configurations freeze prompts and validate source identity; eleven tests and browser reload smoke passed (c41e899).
+
+## 2026-09-07
+
+Published the approximately 4600-word lab technical report with eight screenshots to go-go-parc; vault commit 1d77e78 pushed to origin/main.
